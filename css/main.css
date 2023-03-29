@@ -114,6 +114,9 @@
      letter-spacing: -1%;
  }
 
+ .mt-6{
+    margin-top: 6rem !important;
+ }
  .color-default {
      color: var(--color-default) !important;
  }
