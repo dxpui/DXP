@@ -114,9 +114,10 @@
      letter-spacing: -1%;
  }
 
- .mt-6{
-    margin-top: 6rem !important;
+ .mt-6 {
+     margin-top: 6rem !important;
  }
+
  .color-default {
      color: var(--color-default) !important;
  }
@@ -375,7 +376,7 @@
      border: 1px solid #4f4f4f;
      padding: 15px;
      font-size: 19px;
-     color: var(--black);
+     color: var(--color-default);
      height: 100%;
  }
 
@@ -504,7 +505,24 @@
      margin-right: 10px;
  }
 
+ .search-quick-link .info-card.news-info .date {
+     color: var(--color-white);
+ }
 
+ .search-quick-link .info-card.news-info:hover .date {
+     color: var(--color-default);
+ }
+
+ .gl-search {
+     font-size: 2rem;
+     padding-left: 1rem;
+     padding-right: 0.5rem;
+     cursor: pointer;
+     color: var(--color-white);
+ }
+ .gl-search:hover{
+    color: var(--color-light-gray);
+ }
  /*--------------------------------------------------------------
 # Header 
 --------------------------------------------------------------*/
@@ -659,13 +677,14 @@
  }
 
  .header .menu>ul>li .sub-menu.mega-menu>.list-item>ul>li>a {
-     padding: 10px 0;
+     padding: 7px 0;
      display: inline-block;
      font-size: 14px;
      color: var(--color-white);
      transition: color 0.3s ease;
      text-decoration: none;
      font-weight: 400;
+     line-height: 20px;
  }
 
  .header .menu>ul>li .sub-menu.mega-menu>.list-item>ul>li>a:hover {
@@ -971,6 +990,19 @@
      .menu-social-icons {
          display: none;
      }
+ }
+
+ .sub-topic {
+     margin-left: 10px;
+     margin-right: auto;
+     font-size: 14px;
+     color: var(--color-white);
+
+ }
+
+ .sub-topic:hover {
+     color: var(--color-white);
+     text-decoration: underline;
  }
 
  /*--------------------------------------------------------------
@@ -1361,7 +1393,7 @@
  .info-card .info-card-header {
      font-size: 19px;
      font-weight: 400;
-     padding: 10px 10px 10px 0;
+     padding: 2px 10px 2px 0;
      color: var(--color-default);
      line-height: 24px;
  }
@@ -1420,7 +1452,8 @@
      background-color: transparent;
  }
 
- .info-card.news-info a {
+ .info-card.news-info a,
+ .info-card.news-info .info-card-header {
      margin-bottom: 22px;
      color: var(--color-white);
      font-size: 19px;
@@ -1430,7 +1463,7 @@
      font-size: 14px;
  }
 
- .info-card.news-info span.date::before {
+ .info-card.news-info .date::before {
      border-color: 1px solid var(--color-white);
  }
 
@@ -1449,6 +1482,7 @@
 
  .info-card.news-info .date {
      font-size: 14px;
+     color: var(--color-default);
  }
 
  /*************News Center******************/
@@ -1947,7 +1981,8 @@
      background-color: transparent;
  }
 
- .latest-news-swiper .info-card a {
+ .latest-news-swiper .info-card a,
+ .latest-news-swiper .info-card .info-card-header {
      color: var(--color-default) !important;
      font-size: 19px !important;
  }
@@ -1959,10 +1994,9 @@
  }
 
  .related-news-swiper .info-card.news-info .date,
- .related-news-swiper .info-card.news-info span.date::before {
+ .related-news-swiper .info-card.news-info .date::before {
      border-color: var(--color-white);
      color: var(--color-white);
-     ;
  }
 
  .related-news-swiper .info-card.news-info:hover .date,
@@ -2221,32 +2255,32 @@
  /*--------------------------------------------------------------
 # Search Results
 --------------------------------------------------------------*/
-.serch-result-image {
-    height: 140px;
-    object-fit: cover;
-    width: 100%;
-}
+ .serch-result-image {
+     height: 140px;
+     object-fit: cover;
+     width: 100%;
+ }
 
-.serach-date {
-    font-size: 14px;
-    margin: 10px 0;
-}
+ .serach-date {
+     font-size: 14px;
+     margin: 10px 0;
+ }
 
-/*--------------------------------------------------------------
+ /*--------------------------------------------------------------
 # Callout
 --------------------------------------------------------------*/
-.callout {
-    text-align: center;
-    border-top: 1px solid black;
-    padding: 20px 20px;
-    border-bottom: 1px solid black;
-}
+ .callout {
+     text-align: center;
+     border-top: 1px solid black;
+     padding: 20px 20px;
+     border-bottom: 1px solid black;
+ }
 
-.callout p {
-    font-size: 14px;
-    margin: 20px 0;
-}
+ .callout p {
+     font-size: 14px;
+     margin: 20px 0;
+ }
 
-.callout h1 {
-    color: var(--color-header-6);
-}
+ .callout h1 {
+     color: var(--color-header-6);
+ }

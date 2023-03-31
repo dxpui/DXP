@@ -15,6 +15,49 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link href="css/main.css" rel="stylesheet">
   <title>OFCOM</title>
+
+  <style>
+   
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 300px;
+      margin: 20px auto;
+    }
+
+    .append-buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .append-buttons button {
+      display: inline-block;
+      cursor: pointer;
+      border: 1px solid #007aff;
+      color: #007aff;
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin: 0 10px;
+      font-size: 13px;
+    }
+  </style>
 </head>
 
 <body>
@@ -620,6 +663,111 @@
         </div>
       </div>
     </section>
+    <section class="container my-5">
+      <div class="row">
+        <div class="col-4">
+          <div class="callout">
+            <p>
+              On average, adults in the UK spent almost
+            </p>
+            <h1>
+              4
+            </h1>
+            <p>
+              hours online each day in September 2021
+            </p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="callout">
+            <p>
+              On average, adults in the UK spent almost
+            </p>
+            <h1>
+              4
+            </h1>
+            <p>
+              hours online each day in September 2021
+            </p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="callout">
+            <p>
+              On average, adults in the UK spent almost
+            </p>
+            <h1>
+              4
+            </h1>
+            <p>
+              hours online each day in September 2021
+            </p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="callout">
+            <p>
+              On average, adults in the UK spent almost
+            </p>
+            <h1>
+              4
+            </h1>
+            <p>
+              hours online each day in September 2021
+            </p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="callout">
+            <p>
+              On average, adults in the UK spent almost
+            </p>
+            <h1>
+              4
+            </h1>
+            <p>
+              hours online each day in September 2021
+            </p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="callout">
+            <p>
+              On average, adults in the UK spent almost
+            </p>
+            <h1>
+              4
+            </h1>
+            <p>
+              hours online each day in September 2021
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section>
+      <div #swiperRef="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/img/Media.png" style="height: 300px; object-fit: cover; margin: 0 auto; width: 80%;" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/Media.png" style="height: 300px; object-fit: cover; margin: 0 auto; width: 80%;" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/Media.png" style="height: 300px; object-fit: cover; margin: 0 auto; width: 80%;" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/Media.png" style="height: 300px; object-fit: cover; margin: 0 auto; width: 80%;" alt="">
+          </div>
+          
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section> -->
     <section class="container info my-5">
       <div class="row bg-expend">
         <div class="col-8 mx-auto">
@@ -768,6 +916,62 @@
 
 
   </script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  var appendNumber = 4;
+  var prependNumber = 1;
+  document
+    .querySelector(".prepend-2-slides")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      swiper.prependSlide([
+        '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+        '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+      ]);
+    });
+  document
+    .querySelector(".prepend-slide")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      swiper.prependSlide(
+        '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+      );
+    });
+  document
+    .querySelector(".append-slide")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      swiper.appendSlide(
+        '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+      );
+    });
+  document
+    .querySelector(".append-2-slides")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      swiper.appendSlide([
+        '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+        '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+      ]);
+    });
+</script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
