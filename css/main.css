@@ -272,13 +272,15 @@
          display: block;
      }
  }
+
  @media(max-width: 992px) {
-    .filter-btn {
-        margin: 20px auto;
-        display: block;
-        top: 35px;
-    }
-}
+     .filter-btn {
+         margin: 20px auto;
+         display: block;
+         top: 35px;
+     }
+ }
+
  .btn-primary-white-border {
      background-color: transparent;
      padding: 5px 20px;
@@ -1382,12 +1384,14 @@
  }
 
  .info-card:hover .icon-arrow-hover,
- .recommendation-link:hover .icon-arrow-hover {
+ .recommendation-link:hover .icon-arrow-hover,
+ .title-block-link:hover .icon-arrow-hover {
      display: flex;
  }
 
  .info-card:hover .icon-arrow,
- .recommendation-link:hover .icon-arrow {
+ .recommendation-link:hover .icon-arrow,
+ .title-block-link:hover .icon-arrow {
      display: none;
  }
 
@@ -1718,7 +1722,7 @@
  @media (min-width: 40.0625em) {
      .step-accordion .step-nav-circle--number {
          font-size: 16px;
-         line-height: 29px
+         line-height: 32px
      }
  }
 
@@ -1768,7 +1772,37 @@
      height: 0;
      border-bottom: solid 1px #b1b4b6;
  }
+ .step-accordion .accordion-item{
+    border-radius: 0 !important;
+    border-left: none;
+    border-right: none;
+ }
+ .step-accordion .accordion-item .accordion-button::after {
+     background-image: url("../assets/img/web-icons/Accordion expand.svg");
+     transform: scale(.7) !important;
+     color: #000045;
+     background-size: 48px 48px;
+     padding: 30px 21px 30px 30px;
+ }
 
+ .step-accordion .accordion-item .accordion-button:not(.collapsed)::after {
+     background-image: url("../assets/img/web-icons/Accordion contract.svg");
+     font-size: 40px;
+     color: #000045;
+ }
+.step-accordion .accordion-item .accordion-button{
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 0 !important;
+    font-size: 19px;
+    color: var(--color-default);
+}
+.step-accordion .accordion-item .accordion-button:not(.collapsed){
+    box-shadow: none;
+}
+.step-accordion .accordion-body{
+    text-align: left;
+}
  /**************************************End Step Navigation *************************/
  .blue-bg-expend {
      background-color: var(--color-primary);
@@ -2293,15 +2327,16 @@
      font-size: 14px;
      margin: 10px 0;
  }
- .serach-date span{
-    color: var(--color-default);
-}
+
+ .serach-date span {
+     color: var(--color-default);
+ }
+
  /*--------------------------------------------------------------
 # Callout
 --------------------------------------------------------------*/
  .callout {
      text-align: center;
-     border-top: 1px solid black;
      padding: 20px 20px;
      border-bottom: 1px solid black;
  }
@@ -2314,6 +2349,63 @@
  .callout h1 {
      color: var(--color-header-6);
  }
+
+ .col-4:nth-child(1) .callout,
+ .col-4:nth-child(2) .callout,
+ .col-4:nth-child(3) .callout {
+     border-top: 1px solid black;
+ }
+
+ /*--------------------------------------------------------------
+# Title Block
+--------------------------------------------------------------*/
+ .title-block .title-block-img {
+     width: 100%;
+     min-height: 340px;
+     object-fit: cover;
+ }
+
+ .title-block .card-body {
+     position: relative;
+     padding-left: 40px;
+     padding-right: 40px;
+     height: 100%;
+     display: flex;
+     align-items: center;
+ }
+
+ .title-block .card-body h3 {
+     font-style: normal;
+     font-weight: 400;
+     font-size: 32px;
+     line-height: 135%;
+ }
+
+ .title-block .card-body.gray-bg .hr-line {
+     border-bottom: 1px solid var(--color-default);
+     width: 30px;
+     margin: 20px 0;
+ }
+
+ .title-block .card-body.light-blue-bg .hr-line,
+ .title-block .card-body.blue-bg .hr-line {
+     border-bottom: 1px solid var(--color-white);
+     width: 30px;
+     margin: 20px 0;
+ }
+
+ .title-block .gray-bg h3,
+ .title-block .gray-bg p {
+     color: var(--color-default);
+ }
+
+ .title-block .light-blue-bg h3,
+ .title-block .light-blue-bg p,
+ .title-block .blue-bg h3,
+ .title-block .blue-bg p {
+     color: var(--color-white);
+ }
+
 
  .filter-btn .dropdown-toggle::after {
      display: none;
