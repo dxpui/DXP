@@ -148,7 +148,9 @@
  .green-bg {
      background-color: var(--color-header-1);
  }
-
+ .megenta-bg {
+    background-color: var(--color-header-6);
+}
  /*--------------------------------------------------------------
 # All Buttons
 --------------------------------------------------------------*/
