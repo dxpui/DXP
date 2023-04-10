@@ -130,5 +130,46 @@ $(document).ready(function(){
     $(this).toggleClass("btn-close close-bars");
     $("body").toggleClass("overflow-hidden");
     });
-   
+    if( $(".modal-topic-list li")){
+      showfiltermodal()
+    }
+    if($(".clear-filter-btn")){
+      clearmodalcontent()
+    }
+    $(".filters-content").click(function(){
+
+      $("body").addClass("overflow-x-hidden")
+     
+    });
+    if($('#carousel-count .carousel-item')){
+      carouselCount() 
+      }
   });
+
+  // showfilter code
+function  showfiltermodal(){
+  $(".modal-topic-list li").click(function(){   
+    $(this).find("i").toggleClass("close-li-icon");
+    $(this).find("a").toggleClass("text-decoration-underline");
+  })
+  }
+  function clearmodalcontent(){
+    $(".clear-filter-btn").click(function (){
+  
+      $(".modal-topic-list li i").addClass("close-li-icon");
+       $(".modal-topic-list li a").removeClass("text-decoration-underline");
+    });
+  }
+
+
+  function carouselCount(){
+    var totalItems = $('#carousel-count .carousel-item').length;
+  console.log("totalItems"+totalItems);
+  var currentIndex = $('div.active').index() + 1;
+  $('.carouselnumber').html('' + currentIndex + '/' + totalItems + '');
+  var myCarousel = document.getElementById('carousel-count');
+  myCarousel.addEventListener('slid.bs.carousel', function () {
+    currentIndex = $('div.active').index() + 1; 
+    $('.carouselnumber').html('' + currentIndex + '/' + totalItems + '');
+  })
+  }

@@ -148,9 +148,11 @@
  .green-bg {
      background-color: var(--color-header-1);
  }
+
  .megenta-bg {
-    background-color: var(--color-header-6);
-}
+     background-color: var(--color-header-6);
+ }
+
  /*--------------------------------------------------------------
 # All Buttons
 --------------------------------------------------------------*/
@@ -1164,6 +1166,12 @@
      }
  }
 
+ .light-blue-bg h1,
+ .light-blue-bg p .megenta-bg h1,
+ .megenta-bg p {
+     color: var(--color-white);
+ }
+
  .feedback-block {
      background-color: #e8e7e7;
      padding: 35px;
@@ -1339,6 +1347,11 @@
      color: var(--color-white);
  }
 
+ .breadcrumb-position.white-color li a,
+ .breadcrumb-position.white-color li.active {
+     color: var(--color-white);
+ }
+
  /*--------------------------------------------------------------
 # Teaser Card 
 --------------------------------------------------------------*/
@@ -1469,10 +1482,12 @@
      margin: 15px 0;
  }
 
- .info-card ul li a {
+ .info-card ul li a{
      font-size: 14px;
-     text-decoration: underline;
  }
+ .info-card ul li a:hover {
+    text-decoration: underline;
+}
 
  .info-card.hover-none:hover {
      background-color: transparent;
@@ -1774,11 +1789,13 @@
      height: 0;
      border-bottom: solid 1px #b1b4b6;
  }
- .step-accordion .accordion-item{
-    border-radius: 0 !important;
-    border-left: none;
-    border-right: none;
+
+ .step-accordion .accordion-item {
+     border-radius: 0 !important;
+     border-left: none;
+     border-right: none;
  }
+
  .step-accordion .accordion-item .accordion-button::after {
      background-image: url("../assets/img/web-icons/Accordion expand.svg");
      transform: scale(.7) !important;
@@ -1792,19 +1809,23 @@
      font-size: 40px;
      color: #000045;
  }
-.step-accordion .accordion-item .accordion-button{
-    background: transparent;
-    padding: 10px 20px;
-    border-radius: 0 !important;
-    font-size: 19px;
-    color: var(--color-default);
-}
-.step-accordion .accordion-item .accordion-button:not(.collapsed){
-    box-shadow: none;
-}
-.step-accordion .accordion-body{
-    text-align: left;
-}
+
+ .step-accordion .accordion-item .accordion-button {
+     background: transparent;
+     padding: 10px 20px;
+     border-radius: 0 !important;
+     font-size: 19px;
+     color: var(--color-default);
+ }
+
+ .step-accordion .accordion-item .accordion-button:not(.collapsed) {
+     box-shadow: none;
+ }
+
+ .step-accordion .accordion-body {
+     text-align: left;
+ }
+
  /**************************************End Step Navigation *************************/
  .blue-bg-expend {
      background-color: var(--color-primary);
@@ -2348,8 +2369,16 @@
      margin: 20px 0;
  }
 
- .callout h1 {
+ .callout h1{
      color: var(--color-header-6);
+     min-height: 50px;
+ }
+ .callout.callout-large{
+    border-top: 1px solid black;
+ }
+ .callout.callout-large .counter {
+     font-size: 128px;
+     line-height: 100%;
  }
 
  .col-4:nth-child(1) .callout,
@@ -2408,7 +2437,161 @@
      color: var(--color-white);
  }
 
+ /*--------------------------------------------------------------
+# Image carouse
+--------------------------------------------------------------*/
+ #carousel-count .carousel-item img {
+     width: 100%;
+     height: 438px;
+     object-fit: cover;
+ }
 
+ #carousel-count .img-caption,
+ #carousel-count .carouselnumber {
+     font-family: Sora;
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 21px;
+ }
+
+ #carousel-count .carousel-control-prev-icon,
+ #carousel-count .carousel-control-next-icon {
+     background-image: none;
+     width: 35px;
+     height: 35px;
+     border: 1px solid #000045;
+     border-radius: 50%;
+     color: #000045;
+
+ }
+
+ #carousel-count .fa-chevron-right,
+ #carousel-count .fa-chevron-left {
+     color: #000045;
+     font-size: 22px;
+     margin-top: 7px;
+ }
+
+ #carousel-count .carousel-control-next,
+ #carousel-count .carousel-control-prev {
+     width: 18%;
+ }
+
+ #carousel-count .carousel-control-next {
+     margin-right: -15%;
+ }
+
+ #carousel-count .carousel-control-prev {
+     margin-left: -15%;
+ }
+
+ #carousel-count {
+     margin-left: 16%;
+     margin-right: 16%;
+ }
+
+ /*--------------------------------------------------------------
+#  Showfilters
+--------------------------------------------------------------*/
+
+.filters-content button{
+    background-color:var(--color-default);
+    color: #FFFFFF;
+    font-family: var(--font-family-default);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    padding: 10px 20px;
+    border: 1px solid #000045;
+    }
+    .showfilters button{
+    background-color:#FFFFFF;
+    color: #000045;
+    font-family: var(--font-family-default);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    padding: 10px 20px;
+    border: 1px solid #000045;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    }
+    .showfilters button svg{
+    transform: rotate(180deg);
+    }
+    .showfilters{
+    position:absolute !important; 
+    z-index: 9999;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    padding-right: 0px !important;
+    top:-28px;
+        
+    }
+    
+    .showfilters{--bs-modal-width: 100%;}
+    .modal-topic-list li a{
+    font-family: var(--font-family-default);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    }
+    .modal-topic-list li{
+    cursor: pointer;
+    margin-bottom: 10px;
+    }
+    .modal.show .modal-dialog {
+        transform: none;
+        margin-right: -8px;
+    }
+    .close-clear-btn button{
+     background-color: var(--color-default);
+    font-family: var(--font-family-default);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    padding: 10px 20px;
+    }
+    .close-li-icon{
+    visibility: hidden;
+    
+    }
+    .modal-topic-list li i{
+      color: white;
+    font-size: 21px;
+    position: relative;
+    top: 5px;
+    }
+    
+    .showfilters .modal-content{
+      border-radius: 0px !important;
+      background-color:var(--color-default);
+    }
+    @media  screen and (min-width: 575px) {
+    .modal-content-details{
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    div.modal-content-details:last-child{
+      border-right: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    }
+    @media  screen and (min-width: 992px) {
+    
+    .showfilters .modal-content{
+     padding-left: 12%;
+     padding-right: 12%;
+    }
+    }
+    .overflow-x-hidden{
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+
+    }
+    .showfilters-align{
+        margin-bottom: 80px;
+    }
+    /* show filters style ends here */
  .filter-btn .dropdown-toggle::after {
      display: none;
  }
