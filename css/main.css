@@ -1697,7 +1697,18 @@
      background-color: transparent;
      height: 1px;
  }
-
+ .bg-expend .info-card::before {
+    content: none;
+ }
+ .bg-expend .info-card .search-result-border{
+    border-top:1px solid var(--color-default); 
+    position: absolute; 
+    top:0; 
+    width: 98%;
+ }
+ .bg-expend .info-card:hover .search-result-border{
+    border-top:1px solid transparent; 
+ }
  /************************End Teaser Card***********************/
  .teaser-3>.col {
      min-width: 33.3333333%;
