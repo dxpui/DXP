@@ -131,6 +131,18 @@
      border-color: var(--color-default);
  }
 
+ .form-check-input[type=checkbox] {
+     border-radius: 0;
+ }
+ .form-check-input{
+    height: 14px;
+    width: 14px;
+    border: 1px solid var(--color-default);
+ }
+ .form-check-input:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
  /*--------------------------------------------------------------
 # Background Color
 --------------------------------------------------------------*/
