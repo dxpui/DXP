@@ -126,6 +126,11 @@
      color: var(--color-default) !important;
  }
 
+ .form-control {
+     border-radius: 0;
+     border-color: var(--color-default);
+ }
+
  /*--------------------------------------------------------------
 # Background Color
 --------------------------------------------------------------*/
@@ -194,7 +199,7 @@
  .btn-secondary {
      background-color: var(--color-white);
      color: var(--color-default);
-     border: 1px solid var(--color-white);
+     border: 1px solid var(--color-default);
      border-radius: 30px;
      font-style: normal;
      font-weight: 400;
@@ -211,6 +216,10 @@
 
  .btn-secondary:active {
      background-color: var(--color-secondary);
+ }
+
+ .btn-secondary.hover-none {
+     border: 1px solid transparent;
  }
 
  .btn-secondary.hover-none:hover,
@@ -1186,7 +1195,7 @@
 
  .light-blue-bg h1,
  .light-blue-bg p .megenta-bg h1,
- .megenta-bg p {
+ .megenta-bg p, .megenta-bg h1 {
      color: var(--color-white);
  }
 
@@ -2394,35 +2403,59 @@
  /*--------------------------------------------------------------
 # Callout
 --------------------------------------------------------------*/
- .callout {
+ .callout-light {
      text-align: center;
      padding: 20px 20px;
      border-bottom: 1px solid black;
  }
 
- .callout p {
+ .callout-light p {
      font-size: 14px;
      margin: 20px 0;
  }
 
- .callout h1 {
+ .callout-light h1 {
      color: var(--color-header-6);
      min-height: 50px;
  }
 
- .callout.callout-large {
+ .callout-light.callout-large {
      border-top: 1px solid black;
  }
 
- .callout.callout-large .counter {
+ .callout-light.callout-large .counter {
      font-size: 128px;
      line-height: 100%;
  }
 
- .col-4:nth-child(1) .callout,
- .col-4:nth-child(2) .callout,
- .col-4:nth-child(3) .callout {
+ .col-4:nth-child(1) .callout-light,
+ .col-4:nth-child(2) .callout-light,
+ .col-4:nth-child(3) .callout-light {
      border-top: 1px solid black;
+ }
+
+ .callout-fill {
+     text-align: center;
+     padding: 20px 20px;
+     border-bottom: 1px solid var(--color-white);
+     border-right: 1px solid var(--color-white);
+ }
+
+ .callout-fill p {
+     font-size: 14px;
+     margin: 20px 0;
+     color: var(--color-white);
+ }
+
+ .callout-fill h1 {
+     color: var(--color-white);
+     min-height: 50px;
+ }
+
+ .col-4:nth-child(1) .callout-fill,
+ .col-4:nth-child(2) .callout-fill,
+ .col-4:nth-child(3) .callout-fill {
+     border-top: 1px solid var(--color-white);
  }
 
  /*--------------------------------------------------------------
@@ -2720,4 +2753,40 @@
 
          padding: 20px 30px;
      }
+ }
+
+ /*--------------------------------------------------------------
+#  Membership panel
+--------------------------------------------------------------*/
+
+ .membership-panel hr {
+     margin-top: 0;
+     margin-bottom: 20px;
+ }
+
+
+ .bullet-list ul {
+     list-style: disc;
+     margin-left: 17px;
+ }
+
+
+ .form-container {
+     padding: 60px 100px;
+ }
+
+ @media(max-width: 768px) {
+     .form-container {
+         padding: 20px;
+     }
+ }
+
+ .form-error .form-label,
+ .form-error .form-control,
+ .form-error .form-text {
+     color: red;
+ }
+
+ .form-error .form-control {
+     border-color: red;
  }
