@@ -536,7 +536,7 @@
      font-weight: 400;
  }
 
- .search-quick-link li a:hover {
+ .search-quick-link li a:hover span {
      text-decoration: underline;
  }
 
@@ -544,7 +544,6 @@
      font-size: 22px;
      margin-right: 10px;
  }
-
  .search-quick-link .info-card.news-info .date {
      color: var(--color-white);
  }
