@@ -235,6 +235,16 @@
      background-color: var(--color-default) !important;
  }
 
+ .btn-col {
+     background-color: var(--color-secondary);
+     color: var(--color-default);
+     border: 1px solid var(--color-secondary);
+     border-radius: 30px;
+     font-style: normal;
+     font-weight: 400;
+     padding: 10px 20px;
+ }
+
  .button-subscribe {
      font-size: 20px;
      position: absolute;
@@ -1195,7 +1205,8 @@
 
  .light-blue-bg h1,
  .light-blue-bg p .megenta-bg h1,
- .megenta-bg p, .megenta-bg h1 {
+ .megenta-bg p,
+ .megenta-bg h1 {
      color: var(--color-white);
  }
 
@@ -2758,12 +2769,28 @@
  /*--------------------------------------------------------------
 #  Membership panel
 --------------------------------------------------------------*/
+ .membership-panel {
+     padding: 60px 100px;
+ }
 
  .membership-panel hr {
      margin-top: 0;
      margin-bottom: 20px;
  }
 
+ @media(max-width: 991px) {
+     .membership-panel {
+         padding: 20px;
+     }
+
+     .membership-panel hr {
+         margin-top: 20px;
+     }
+ }
+
+ .membership-panel hr {
+     border-top: 1px solid var(--color-default) !important;
+ }
 
  .bullet-list ul {
      list-style: disc;
