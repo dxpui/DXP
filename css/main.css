@@ -129,6 +129,7 @@
  .form-control {
      border-radius: 0;
      border-color: var(--color-default);
+     line-height: 2;
  }
 
  .form-check-input[type=checkbox] {
@@ -1674,10 +1675,10 @@
      position: relative;
  }
 
- .news-center-form .news-center-input {
+ /* .news-center-form .news-center-input {
      border-radius: 0px !important;
      height: 50px !important;
- }
+ } */
 
  .news-badge {
      position: absolute;
