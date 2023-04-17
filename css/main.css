@@ -790,7 +790,7 @@
 
  .header .menu>ul>li .sub-menu.mega-menu-column-4>.list-item .title {
      color: var(--color-white);
-     font-weight: 600;
+     font-weight: 700;
      line-height: 1;
      padding: 10px 0;
      border-top: 2px solid white;
@@ -817,6 +817,7 @@
 
  .list-item .detail-text {
      line-height: 1.5;
+     font-weight: 400;
  }
 
  .mobile-menu-head,
