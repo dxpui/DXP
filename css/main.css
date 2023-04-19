@@ -103,6 +103,10 @@
      width: 90% !important;
  }
 
+ .f-size-m {
+     font-size: 20px;
+ }
+
  .f-size-xl {
      font-size: 32px;
  }
@@ -135,15 +139,18 @@
  .form-check-input[type=checkbox] {
      border-radius: 0;
  }
- .form-check-input{
-    height: 14px;
-    width: 14px;
-    border: 1px solid var(--color-default);
+
+ .form-check-input {
+     height: 14px;
+     width: 14px;
+     border: 1px solid var(--color-default);
  }
+
  .form-check-input:checked {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-}
+     background-color: var(--color-primary);
+     border-color: var(--color-primary);
+ }
+
  /*--------------------------------------------------------------
 # Background Color
 --------------------------------------------------------------*/
@@ -186,7 +193,7 @@
 
  .btn-primary:hover,
  .btn-primary:focus {
-     background-color: var(--color-white);
+     background-color: var(--color-secondary);
      color: var(--color-default);
      border: 1px solid var(--color-default);
      -webkit-transition: all .3s linear 0s;
@@ -2483,6 +2490,34 @@
      border-top: 1px solid var(--color-white);
  }
 
+ .callout-purple {
+     padding: 50px 100px;
+ }
+
+ .callout-purple.light-blue {
+     background-color: var(--color-primary);
+ }
+
+ .callout-purple.blue {
+     background-color: var(--color-default);
+ }
+
+ .callout-purple.gray {
+     background-color: var(--color-light-gray);
+ }
+
+ .callout-purple.blue h3,
+ .callout-purple.blue p,
+ .callout-purple.light-blue h3,
+ .callout-purple.light-blue p {
+     color: var(--color-white);
+ }
+
+ .callout-purple.gray h3,
+ .callout-purple.gray p {
+     color: var(--color-default);
+ }
+
  /*--------------------------------------------------------------
 # Title Block
 --------------------------------------------------------------*/
@@ -2644,11 +2679,6 @@
      margin-bottom: 10px;
  }
 
- .modal.show .modal-dialog {
-     transform: none;
-     margin-right: -8px;
- }
-
  .close-clear-btn button {
      background-color: var(--color-default);
      font-family: var(--font-family-default);
@@ -2807,8 +2837,7 @@
  }
 
  .bullet-list ul {
-     list-style: disc;
-     margin-left: 17px;
+     list-style: inside;
  }
 
 
@@ -2831,3 +2860,76 @@
  .form-error .form-control {
      border-color: red;
  }
+
+ /*--------------------------------------------------------------
+#  Table Design
+--------------------------------------------------------------*/
+ .table-blue tr th {
+     background-color: var(--color-primary);
+     color: var(--color-white);
+     vertical-align: middle;
+ }
+
+ .table-blue>:not(caption)>*>* {
+     padding: 0.5rem 1rem;
+ }
+
+ .table-lookup tr th:first-child {
+     width: 72px;
+ }
+
+ .table-lookup tr td:first-child {
+     background-color: var(--color-primary);
+     color: var(--color-white);
+ }
+
+ /*--------------------------------------------------------------
+#  Notification Block
+--------------------------------------------------------------*/
+ .notification-block {
+     min-width: 800px;
+     border-radius: 0;
+     border: 1px solid rgba(0, 0, 69, 0.4);
+ }
+
+ .notification-block .toast-header {
+     justify-content: space-between;
+     border-bottom: none;
+     padding-bottom: 0;
+ }
+
+ .notification-block .toast-body {
+     padding: 0 100px 20px 100px;
+ }
+
+ .notification-block .toast-body .body-header {
+     font-style: normal;
+     font-weight: 700;
+     font-size: 19px;
+     line-height: 145%;
+     text-align: center;
+ }
+
+  /*--------------------------------------------------------------
+#  Alerts
+--------------------------------------------------------------*/
+.alerts {
+    position: relative;
+    padding: 18px;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0;
+    text-align: center;
+}
+.alerts.blue{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+.alerts.green{
+    background-color: var(--color-header-1);
+    color: var(--color-default);
+}
+.alerts.orange{
+    background-color: var(--color-secondary);
+    color: var(--color-default);
+}

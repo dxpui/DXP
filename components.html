@@ -1116,36 +1116,116 @@
     </section>
     <section class="container my-5">
       <h3 class="text-center my-5">Table</h3>
+      <div class="col-12 mx-auto">
+        <div class="table-responsive">
+          <table class="table table-bordered table-blue">
+            <thead>
+              <tr>
+                <th scope="col">Official statistic</th>
+                <th scope="col">Date published </th>
+                <th scope="col">Content</th>
+                <th scope="col">Data</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Adults' Media Literacy Tracker</td>
+                <td>19 January 2023</td>
+                <td>Media literacy - adults' surveys: access, use and understanding of internet, television, mobile and
+                  other platforms among the 16+ adult population of the UK</td>
+                <td><a href="">@Adults’ Media Literacy Tracker 2022 data tables and associated documents</a></td>
+              </tr>
+              <tr>
+                <td>Adults' Media Literacy Tracker</td>
+                <td>19 January 2023</td>
+                <td>Media literacy - adults' surveys: access, use and understanding of internet, television, mobile and
+                  other platforms among the 16+ adult population of the UK</td>
+                <td><a href="">@Adults’ Media Literacy Tracker 2022 data tables and associated documents</a></td>
+              </tr>
+              <tr>
+                <td>Adults' Media Literacy Tracker</td>
+                <td>19 January 2023</td>
+                <td>Media literacy - adults' surveys: access, use and understanding of internet, television, mobile and
+                  other platforms among the 16+ adult population of the UK</td>
+                <td><a href="">@Adults’ Media Literacy Tracker 2022 data tables and associated documents</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5">
+      <h3 class="text-center my-5">Lookup Table</h3>
+      <div class="col-10">
+        <form class="row g-3">
+          <div class="col-8">
+            <label for="lookupTable" class="visually-hidden">Enter postcode</label>
+            <input type="text" class="form-control" id="searchInput" onkeyup="searchTable()" id="lookupTable"
+              placeholder="Find a code or area...">
+
+            <!-- <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Submit postcode</button>
+          </div> -->
+        </form>
+        <h3 id="resultCount" class="my-3"></h3>
+        <h3 id="noResults" class="my-3" style="display:none;">No results</h3>
+        <div id="tableData"></div>
+        <!-- <div class="col-12 mx-auto">
+          <table class="table table-bordered table-responsive table-blue" id="myTable">
+            <thead>
+              <tr>
+                <th scope="col" style="width: 72px;">Code</th>
+                <th scope="col">Area</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  0111
+                </th>
+                <td>
+                  Leeds
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  0112
+                </th>
+                <td>
+                  Sheffield
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  0113
+                </th>
+                <td>
+                  Nottingham
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div> -->
+      </div>
+      </div>
+
+    </section>
+
+
+    <section class="container my-5">
+      <h3 class="text-center my-5">Notification block</h3>
       <div class="col-8 mx-auto">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="toast notification-block d-block " data-bs-autohide="false">
+          <div class="toast-header">
+            <i class="fa-solid fa-circle-info f-size-m "></i>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body text-center">
+            <h4 class="body-header">Heading for all to see</h4>
+            This is an example of a standard notification message. They usually aren't that long and might contain a link to a survey. I would say not more than two /three lines.
+          </div>
+        </div>
       </div>
     </section>
     <section class="container my-5">
@@ -1172,6 +1252,20 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3 class="text-center my-5">Alerts</h3>
+      <div>
+        <div class="alerts blue" role="alert">
+          This is an example of a simple alert message!
+        </div>
+        <div class="alerts orange" role="alert">
+          This is an example of a simple alert message!
+        </div>
+        <div class="alerts green" role="alert">
+          This is an example of a simple alert message!
         </div>
       </div>
     </section>
@@ -1228,6 +1322,63 @@
           </div>
         </div>
       </section>
+    </section>
+
+    <section>
+      <h3 class="text-center my-5">Purple Callout</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-10 mx-auto">
+            <div class="callout-purple light-blue">
+              <h3>Subtitle example here</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.<br><br>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.<br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+          <div class="my-5"></div>
+          <div class="col-10 mx-auto">
+            <div class="callout-purple gray">
+              <h3>Subtitle example here</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.<br><br>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.<br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="text-center my-5">List groups</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-10 mx-auto">
+            List groups
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="container mx-auto col-11 col-md-8">
@@ -1357,58 +1508,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      centeredSlides: true,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
 
-    var appendNumber = 4;
-    var prependNumber = 1;
-    document
-      .querySelector(".prepend-2-slides")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        swiper.prependSlide([
-          '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
-          '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
-        ]);
-      });
-    document
-      .querySelector(".prepend-slide")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        swiper.prependSlide(
-          '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
-        );
-      });
-    document
-      .querySelector(".append-slide")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        swiper.appendSlide(
-          '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
-        );
-      });
-    document
-      .querySelector(".append-2-slides")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        swiper.appendSlide([
-          '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
-          '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
-        ]);
-      });
-  </script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

@@ -99,77 +99,157 @@ document.addEventListener('DOMContentLoaded', () => {
   window.onscroll = () => {
     menu.classList.remove('fa-times');
     // navbar.classList.remove('active');
-   // searchIcon.classList.remove('fa-times');
+    // searchIcon.classList.remove('fa-times');
     //searchForm.classList.remove('active');
   }
 });
 
 
 // for main menu 
-$(document).ready(function(){
-  $(".menu-item-has-children").click(function (){
-    if($(this).children(".sub-menu").hasClass("sub-menu-show")){
+$(document).ready(function () {
+  $(".menu-item-has-children").click(function () {
+    if ($(this).children(".sub-menu").hasClass("sub-menu-show")) {
       $(this).children(".sub-menu").removeClass("sub-menu-show");
       $(this).find(".fa-angle-down").removeClass("rotate-arrow");
       //alert("If"+ $(this).children(".fa-angle-down").text("if"));
     }
-    else{   
-    $(".menu-item-has-children .sub-menu").removeClass("sub-menu-show"); 
-     $(this).children(".sub-menu").addClass("sub-menu-show");
-     $(".menu-item-has-children .fa-angle-down").removeClass("rotate-arrow");
-     $(this).find(".fa-angle-down").addClass("rotate-arrow");
-     
+    else {
+      $(".menu-item-has-children .sub-menu").removeClass("sub-menu-show");
+      $(this).children(".sub-menu").addClass("sub-menu-show");
+      $(".menu-item-has-children .fa-angle-down").removeClass("rotate-arrow");
+      $(this).find(".fa-angle-down").addClass("rotate-arrow");
+
     }
   });
-  $("#search-icon").click(function(){
+  $("#search-icon").click(function () {
     $(".menu-item-has-children .sub-menu").removeClass("sub-menu-show");
     $(".menu-item-has-children .fa-angle-down").removeClass("rotate-arrow");
   })
 
-  $(".mobile-nav-toggle").click(function(){
+  $(".mobile-nav-toggle").click(function () {
     $(this).toggleClass("btn-close close-bars");
     $("body").toggleClass("overflow-hidden");
-    });
-    if( $(".modal-topic-list li")){
-      showfiltermodal()
-    }
-    if($(".clear-filter-btn")){
-      clearmodalcontent()
-    }
-    $(".filters-content").click(function(){
-
-      $("body").addClass("overflow-x-hidden")
-     
-    });
-    if($('#carousel-count .carousel-item')){
-      carouselCount() 
-      }
   });
+  if ($(".modal-topic-list li")) {
+    showfiltermodal()
+  }
+  if ($(".clear-filter-btn")) {
+    clearmodalcontent()
+  }
+  $(".filters-content").click(function () {
 
-  // showfilter code
-function  showfiltermodal(){
-  $(".modal-topic-list li").click(function(){   
+    $("body").addClass("overflow-x-hidden")
+
+  });
+  if ($('#carousel-count .carousel-item')) {
+    carouselCount()
+  }
+});
+
+// showfilter code
+function showfiltermodal() {
+  $(".modal-topic-list li").click(function () {
     $(this).find("i").toggleClass("close-li-icon");
     $(this).find("a").toggleClass("text-decoration-underline");
   })
-  }
-  function clearmodalcontent(){
-    $(".clear-filter-btn").click(function (){
-  
-      $(".modal-topic-list li i").addClass("close-li-icon");
-       $(".modal-topic-list li a").removeClass("text-decoration-underline");
-    });
-  }
+}
+function clearmodalcontent() {
+  $(".clear-filter-btn").click(function () {
+
+    $(".modal-topic-list li i").addClass("close-li-icon");
+    $(".modal-topic-list li a").removeClass("text-decoration-underline");
+  });
+}
 
 
-  function carouselCount(){
-    var totalItems = $('#carousel-count .carousel-item').length;
-  console.log("totalItems"+totalItems);
+function carouselCount() {
+  var totalItems = $('#carousel-count .carousel-item').length;
+  console.log("totalItems" + totalItems);
   var currentIndex = $('div.active').index() + 1;
   $('.carouselnumber').html('' + currentIndex + '/' + totalItems + '');
   var myCarousel = document.getElementById('carousel-count');
   myCarousel.addEventListener('slid.bs.carousel', function () {
-    currentIndex = $('div.active').index() + 1; 
+    currentIndex = $('div.active').index() + 1;
     $('.carouselnumber').html('' + currentIndex + '/' + totalItems + '');
   })
+}
+
+/////////////////////////// Lookup Table/////////////////////////////////
+
+//window.onload = function () { searchTable() };
+function searchTable() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  var count = 0;
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td");
+    tr[i].style.display = "";
+    for (var j = 0; j < td.length; j++) {
+      txtValue = td[j].textContent || td[j].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        count++;
+        break;
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
   }
+  document.getElementById("resultCount").textContent = count + " result(s) are shown";
+  var noResults = document.getElementById("noResults");
+  if (count == 0) {
+    noResults.style.display = "";
+    resultCount.style.display = "none";
+  } else {
+    noResults.style.display = "none";
+    resultCount.style.display = "";
+  }
+}
+
+var data = [
+  {
+    "Code": "0114",
+    "Area": "Sheffield",
+  },
+  {
+    "Code": "0115",
+    "Area": "Nottingham",
+  },
+  {
+    "Code": "0116",
+    "Area": "Leicester",
+  },
+  {
+    "Code": "0117",
+    "Area": "Bristol",
+  },
+  {
+    "Code": "01200",
+    "Area": "Clitheroe",
+  },
+  {
+    "Code": "01202",
+    "Area": "Bournemouth",
+  },
+];
+
+$(document).ready(function () {
+  var html = '<table class="table table-bordered table-responsive table-blue table-lookup" id="myTable">';
+  html += '<tr>';
+  var flag = 0;
+  $.each(data[0], function (index, value) {
+    html += '<th>' + index + '</th>';
+  });
+  html += '</tr>';
+  $.each(data, function (index, value) {
+    html += '<tr>';
+    $.each(value, function (index2, value2) {
+      html += '<td>' + value2 + '</td>';
+    });
+    html += '<tr>';
+  });
+  html += '</table>';
+  $('#tableData').html(html);
+});
