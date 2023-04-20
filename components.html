@@ -1216,14 +1216,16 @@
     <section class="container my-5">
       <h3 class="text-center my-5">Notification block</h3>
       <div class="col-8 mx-auto">
-        <div role="alert" aria-live="assertive" aria-atomic="true" class="toast notification-block d-block " data-bs-autohide="false">
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="toast notification-block d-block "
+          data-bs-autohide="false">
           <div class="toast-header">
             <i class="fa-solid fa-circle-info f-size-m "></i>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
           <div class="toast-body text-center">
             <h4 class="body-header">Heading for all to see</h4>
-            This is an example of a standard notification message. They usually aren't that long and might contain a link to a survey. I would say not more than two /three lines.
+            This is an example of a standard notification message. They usually aren't that long and might contain a
+            link to a survey. I would say not more than two /three lines.
           </div>
         </div>
       </div>
@@ -1267,6 +1269,15 @@
         <div class="alerts green" role="alert">
           This is an example of a simple alert message!
         </div>
+      </div>
+    </section>
+    <section>
+      <h3 class="text-center my-5">Tooltip</h3>
+      <div class="col-8 mx-auto tooltip-blue">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+          title="Tooltip text">
+          Tooltip on top
+        </button>
       </div>
     </section>
     <section class="container">
@@ -1375,7 +1386,72 @@
       <div class="container">
         <div class="row">
           <div class="col-10 mx-auto">
-            List groups
+            <div class="container social-list-group gray-bg">
+              <h3 class="mb-3">How a social tariff could help you</h3>
+              <ul>
+                <li class="mb-3">
+                    <p class="fw-bold">It's available to those on a variety of benefits</p>
+                    <span>If you or someone in your household claims Universal Credit, you could switch to any of the tariffs available.</span>
+                </li>
+               <li class="mb-3">
+                    <p class="fw-bold">It's cheaper than a regular package</p>
+                    <span>Current prices range from £10 to £20.</span>
+                </li>
+               <li class="mb-3">
+                    <p class="fw-bold">Fast, unlimited broadband</p>
+                    <span>Most tariffs offer superfast broadband at speeds over 30 Mbit/sfast enough for you to keep in touch with friends and family, stream HD films or shop online.</span>
+                </li>
+               <li class="mb-3">
+                    <p class="fw-bold">You'll pay next-to-nothing to get set up</p>
+                    <span>If you do have to pay any setup costs, these should only be small. Your provider should tell you before you sign up.</span>
+                </li>
+               <li class="mb-3">
+                    <p class="fw-bold">It could cost nothing to switch</p>
+                    <span>If your provider offers a social tariff, you can switch to it at any time, free of charge.</span>
+                </li>
+               <li class="mb-3">
+                    <p class="fw-bold">The price won't go up mid-contract </p>
+                    <span>You won't pay any more than what you agree at the start of the contract.</span>
+                </li>
+               <li class="mb-3">
+                    <p class="fw-bold">It costs nothing to leave </p>
+                    <span>You won't pay a fee to leave the tariff before the end of your contract.</span>
+                </li>
+              </ul>
+           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3 class="text-center my-5">Modal pop up</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-10 mx-auto">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              show modal
+            </button>
+            <div class="modal modal-popup fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                  </div>
+                  <div class="modal-body">
+                      This is an example of a standard modal pop-up message. They usually aren't that long. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Close   
+                    </button>
+                    <button class="btn btn-primary me-3" >
+                   Save changes  
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1504,16 +1580,21 @@
 
 
   </script>
-
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
+  
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+   
 </body>
 
 </html>

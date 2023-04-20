@@ -2691,7 +2691,6 @@
 
  .close-li-icon {
      visibility: hidden;
-
  }
 
  .modal-topic-list li i {
@@ -2911,26 +2910,140 @@
      text-align: center;
  }
 
-  /*--------------------------------------------------------------
+ /*--------------------------------------------------------------
 #  Alerts
 --------------------------------------------------------------*/
-.alerts {
-    position: relative;
-    padding: 18px;
-    margin-bottom: 1rem;
-    border: 1px solid transparent;
-    border-radius: 0;
-    text-align: center;
+ .alerts {
+     position: relative;
+     padding: 18px;
+     margin-bottom: 1rem;
+     border: 1px solid transparent;
+     border-radius: 0;
+     text-align: center;
+ }
+
+ .alerts.blue {
+     background-color: var(--color-primary);
+     color: var(--color-white);
+ }
+
+ .alerts.green {
+     background-color: var(--color-header-1);
+     color: var(--color-default);
+ }
+
+ .alerts.orange {
+     background-color: var(--color-secondary);
+     color: var(--color-default);
+ }
+
+ /*--------------------------------------------------------------
+#  Modal Pop up
+--------------------------------------------------------------*/
+ .modal-popup .modal-header {
+     border-bottom: none;
+     font-family: var(--font-family-default);
+     font-size: 32px;
+     font-weight: 700;
+     line-height: 43px;
+     color: var(--color-default);
+ }
+
+ .modal-popup .modal-content {
+     border-radius: 0px;
+     padding: 20px 80px;
+ }
+
+ .modal-popup .modal-header button i {
+     color: var(--color-default);
+     font-size: 28px;
+ }
+
+ .modal-popup .modal-header button {
+     border: none;
+     background: none;
+     margin-top: -15px;
+     width: 30px;
+     height: 46px;
+     position: absolute;
+     right: 5px;
+     top: 10px;
+ }
+
+ .modal-popup .modal-body {
+     font-family: var(--font-family-default);
+     font-size: var(--font-size-default);
+     font-weight: 400;
+     line-height: var(--line-height-default);
+     color: var(--color-default);
+     /* padding-left: 80px;
+padding-right: 80px; */
+ }
+
+ .modal-popup .modal-footer {
+     border-top: none;
+     justify-content: start;
+     /* padding-left: 80px;
+padding-right: 80px; */
+ }
+
+ .modal.show.modal-popup .modal-dialog {
+     transform: none;
+     margin-right: auto;
+ }
+
+ .modal-popup-close-btn {
+     background-color: white;
+     font-family: var(--font-family-default);
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 21px;
+     padding: 10px 20px;
+     color: var(--color-default);
+     border: 1px solid #000045;
+ }
+
+ .modal-popup .modal-footer .btn-secondary {
+     border: 1px solid #000045;
+ }
+
+ .social-list-group h3 {
+     font-family: var(--font-family-default);
+     font-size: 32px;
+     line-height: 43px;
+     color: var(--color-default);
+ }
+
+ .social-list-group {
+     padding: 50px 100px;
+ }
+
+ .social-list-group ul li {
+     font-family: var(--font-family-default);
+     font-size: var(--font-size-default);
+     line-height: 21px;
+     color: var(--color-default);
+ }
+
+ .social-list-group ul li p::before {
+     content: '✓';
+     margin-right: 10px;
+ }
+
+ .social-list-group ul li p {
+     margin-bottom: 5px;
+ }
+
+ .social-list-group ul li span {
+     display: inline-block;
+     margin-left: 20px;
+ }
+
+.tooltip-inner {
+    background-color: var(--color-default);
+    padding: 10px 20px;
 }
-.alerts.blue{
-    background-color: var(--color-primary);
-    color: var(--color-white);
-}
-.alerts.green{
-    background-color: var(--color-header-1);
-    color: var(--color-default);
-}
-.alerts.orange{
-    background-color: var(--color-secondary);
-    color: var(--color-default);
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color:var(--color-default) !important;
 }
