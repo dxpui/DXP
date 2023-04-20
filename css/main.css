@@ -2135,7 +2135,8 @@
      background: var(--color-default);
  }
 
- .latest-news-swiper .info-card:hover {
+ .latest-news-swiper .info-card:hover,
+ .latest-news-swiper a:focus .info-card {
      background-color: var(--color-white);
  }
 
