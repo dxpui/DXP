@@ -1174,7 +1174,7 @@
  }
 
  .hero-image-carousel img {
-     height: 490px;
+     height: 499px;
      object-fit: cover;
  }
 
@@ -2495,6 +2495,12 @@
      padding: 50px 100px;
  }
 
+ @media(max-width: 991px) {
+     .callout-purple {
+         padding: 20px 20px;
+     }
+ }
+
  .callout-purple.light-blue {
      background-color: var(--color-primary);
  }
@@ -3007,6 +3013,111 @@ padding-right: 80px; */
      border: 1px solid #000045;
  }
 
+ /*--------------------------------------------------------------
+#  Language notification
+--------------------------------------------------------------*/
+
+ .language-notification .modal-header {
+     border-bottom: none;
+     font-family: var(--font-family-default);
+     font-size: 19px;
+     font-weight: 700;
+     line-height: 43px;
+     color: var(--color-default);
+     padding-left: 15px;
+ }
+
+ .language-notification .modal-content {
+     border-radius: 0px;
+     padding: 20px 40px;
+     background-color: #F2F2F2;
+     box-shadow: 0px 6px 10px rgba(0, 0, 69, 0.25);
+
+ }
+
+ .language-notification.show .modal-dialog {
+     transform: none;
+     margin-right: auto;
+ }
+
+ .language-notification .modal-header button i {
+     color: var(--color-default);
+     font-size: 28px;
+ }
+
+ .language-notification .modal-header button {
+     border: none;
+     background: none;
+     width: 30px;
+     height: 46px;
+     position: absolute;
+     right: 10px;
+     top: 0;
+ }
+
+ .language-notification .modal-body {
+     font-family: var(--font-family-default);
+     font-size: var(--font-size-default);
+     font-weight: 400;
+     line-height: var(--line-height-default);
+     color: var(--color-default);
+     padding-top: 0px;
+ }
+
+ .language-notification .modal-footer {
+     border-top: none;
+     justify-content: start;
+     padding-top: 0px;
+
+ }
+
+ .language-notification .modal-footer .btn-secondary::after {
+     display: none;
+
+ }
+
+ .language-notification .modal-footer .btn-secondary {
+     border: 1px solid #000045;
+
+ }
+
+ .language-trans-btn {
+     background-color: var(--color-default);
+     font-family: var(--font-family-default);
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 21px;
+     padding: 9px 20px;
+
+
+ }
+
+ .language-more-select {
+     background-color: white;
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 21px;
+     padding: 10px 36px 10px 25px;
+     border: 1px solid #000045;
+     color: var(--color-default);
+     appearance: none;
+     background: transparent;
+     background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+     background-repeat: no-repeat;
+     background-position-x: 80%;
+     background-position-y: 11px;
+
+ }
+
+ .language-notification .modal-body .languae-opts {
+     width: 63%;
+     padding: 11px 20px;
+ }
+
+ /*--------------------------------------------------------------
+#  Social List
+--------------------------------------------------------------*/
+
  .social-list-group h3 {
      font-family: var(--font-family-default);
      font-size: 32px;
@@ -3016,6 +3127,12 @@ padding-right: 80px; */
 
  .social-list-group {
      padding: 50px 100px;
+ }
+
+ @media(max-width: 991px) {
+     .social-list-group {
+         padding: 20px 20px;
+     }
  }
 
  .social-list-group ul li {
@@ -3039,11 +3156,11 @@ padding-right: 80px; */
      margin-left: 20px;
  }
 
-.tooltip-inner {
-    background-color: var(--color-default);
-    padding: 10px 20px;
-}
+ .tooltip-inner {
+     background-color: var(--color-default);
+     padding: 10px 20px;
+ }
 
-.tooltip.bs-tooltip-top .tooltip-arrow::before {
-    border-top-color:var(--color-default) !important;
-}
+ .tooltip.bs-tooltip-top .tooltip-arrow::before {
+     border-top-color: var(--color-default) !important;
+ }
