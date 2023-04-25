@@ -1117,6 +1117,10 @@
      padding-right: 20px;
  }
 
+ .card-video {
+     height: 499px;
+ }
+
  .carousel-heroimg-cls .carousel-indicators {
      display: block;
      margin-left: 4%;
@@ -1356,11 +1360,13 @@
      top: 10px;
      left: 30px;
  }
+
  @media(max-width: 992px) {
-    .breadcrumb-position {
-       display: none;
-    }
-}
+     .breadcrumb-position {
+         display: none;
+     }
+ }
+
  .breadcrumb-position a {
      color: var(--color-default);
      text-decoration: underline;
