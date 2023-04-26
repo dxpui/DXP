@@ -679,11 +679,17 @@
      transition: color 0.3s ease;
      text-decoration: none;
      padding: 10px;
+     padding-bottom: 18px;
  }
 
  .header .menu>ul>li>a:hover {
+     border-bottom: 15px solid var(--color-secondary);
+ }
+
+ .header a:has(> i.rotate-arrow) {
      padding-bottom: 18px;
      border-bottom: 15px solid var(--color-secondary);
+
  }
 
  @media(max-width: 991px) {
