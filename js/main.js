@@ -51,7 +51,7 @@ function showSubMenu(hasChildren) {
   subMenu.classList.add("active");
   subMenu.style.animation = "slideLeft 0.5s ease forwards";
   const menuTitle = hasChildren.querySelector("i").parentNode.childNodes[0].textContent;
-  menu.querySelector(".mobile-menu-head").classList.add("active");
+  $(".menu .mobile-menu-head").addClass("active");
   $(".menu .current-menu-title").text(menuTitle);
   $(".menu .mobile-menu-head").addClass("active");
 }
