@@ -21,6 +21,7 @@
 
   <!-- header start -->
   <header class="header fixed-top d-flex align-items-center">
+    <a class="skip-to-content-link" href="#skip" tabindex="0">Skip to main content</a>
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
       <div class="logo me-auto me-lg-0">
@@ -660,6 +661,7 @@
     </div>
   </header>
   <main>
+    <div id="skip" class="visually-hidden">Home page features</div>
     <section class="breadcrumb-position text-light">
       <div class="row">
         <div class="col-12">
@@ -726,7 +728,12 @@
         <div class="col-10 mx-auto">
           <div class="row">
             <div class="col-sm-6 col-md-3">
-              <video src="assets/video/video.mp4" class="card-img-top" controls=""></video>
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="https://player.vimeo.com/video/253989945?h=c6db007fe5&color=ef0800&title=0&byline=0&portrait=0"
+                  frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
               <span class="text-white mt-2 d-block">How to forward a scam text to 7726 on Android</span>
             </div>
             <div class="col-sm-6 col-md-3">
@@ -962,6 +969,7 @@
         </div>
       </div>
     </footer>
+    <a class="back-to-top"></a>
   </main>
 
 
