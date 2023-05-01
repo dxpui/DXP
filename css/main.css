@@ -1072,15 +1072,18 @@
      bottom: 60px;
      margin-left: -65px;
  }
+
  .menu-social-icons a {
-    padding: 15px 15px 10px 15px;
-    display: inline;
-    color: var(--color-white);
-}
-.menu-social-icons a:hover {
-    background-color: var(--color-white);
-    color: var(--color-default);
-}
+     padding: 15px 15px 10px 15px;
+     display: inline;
+     color: var(--color-white);
+ }
+
+ .menu-social-icons a:hover {
+     background-color: var(--color-white);
+     color: var(--color-default);
+ }
+
  .menu-social-icons a i {
      font-size: 24px;
  }
@@ -1725,18 +1728,20 @@
      font-size: 11px;
      padding: 5px 7px;
  }
- .news-social-icons{
-    margin-left: 10px;
- }
- .news-social-icons a {
-    color: var(--color-default);
-    padding: 15px 10px 10px 10px;
-}
 
-.news-social-icons a:hover{
-    color: var(--color-white);
-    background-color: var(--color-default);
-}
+ .news-social-icons {
+     margin-left: 10px;
+ }
+
+ .news-social-icons a {
+     color: var(--color-default);
+     padding: 15px 10px 10px 10px;
+ }
+
+ .news-social-icons a:hover {
+     color: var(--color-white);
+     background-color: var(--color-default);
+ }
 
  .news-social-icons i {
      font-size: 20px;
@@ -3276,4 +3281,76 @@ padding-right: 80px; */
 
  .skip-to-content-link:focus {
      transform: translateY(0%);
+ }
+
+ /*--------------------------------------------------------------
+#  Pagination
+--------------------------------------------------------------*/
+ .pagination-block {
+     display: flex;
+     padding-left: 10px;
+     list-style: none;
+ }
+
+ @media(max-width: 991px) {
+     .pagination-block {
+         display: block;
+     }
+ }
+
+ .pagination-block .page-item .round-btn {
+     border: 2px solid var(--color-default);
+     border-radius: 50%;
+     padding: 10px 10px;
+     display: block;
+ }
+
+ .pagination-block .page-item .round-btn:hover {
+     background-color: var(--color-default);
+ }
+
+ .pagination-block .page-item a:hover i {
+     color: var(--color-white);
+ }
+
+ .pagination-block .page-item {
+     margin-left: 5px;
+     margin-right: 5px;
+     margin-bottom: 10px;
+     display: inline-block;
+ }
+
+ .pagination-block .page-item .page-link {
+     position: relative;
+     display: block;
+     padding: 10px;
+     color: var(--color-default);
+     font-size: 18px;
+     text-decoration: none;
+     background-color: transparent;
+     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+ }
+
+ .pagination-block .page-item .page-link.active {
+     border-bottom: 4px solid var(--color-secondary);
+ }
+
+ .pagination-block .page-item a {
+     color: var(--color-default);
+ }
+
+ .pagination-block .page-item a i {
+     font-size: 19px;
+     height: 20px;
+     width: 20px;
+     text-align: center;
+     background-color: transparent;
+ }
+
+ .pagination-count {
+     font-size: 18px;
+ }
+
+ .pagination-count strong {
+     margin: 0 5px;
  }
