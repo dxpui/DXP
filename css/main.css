@@ -2785,6 +2785,13 @@
      margin-bottom: 80px;
  }
 
+ @media screen and (max-width: 768px) {
+     .showfilters-align {
+         display: block !important;
+         text-align: center;
+     }
+ }
+
  /* show filters style ends here */
  .filter-btn .dropdown-toggle::after {
      display: none;
