@@ -296,14 +296,6 @@
      color: var(--color-white);
  }
 
- .btn-primary-latest-news {
-     background-color: transparent;
-     padding: 5px 20px;
-     color: var(--color-default);
-     right: 90px;
-     position: absolute;
- }
-
  .filter-btn {
      background-color: transparent;
      padding: 5px 20px;
@@ -334,6 +326,9 @@
          margin: 20px auto;
          display: block;
          top: 35px;
+         right: auto;
+         width: 100%;
+         text-align: center;
      }
  }
 
@@ -1251,6 +1246,7 @@
  }
 
  .light-blue-bg h1,
+ .light-blue-bg p,
  .light-blue-bg p .megenta-bg h1,
  .megenta-bg p,
  .megenta-bg h1 {
@@ -2163,66 +2159,153 @@
      margin: 0 7px;
  }
 
- /******************* Latest News Home Page ******************************/
- .latest-news-swiper-container-area {
+ /******************* Green Theme Latest News Home Page ******************************/
+ .news-container-area {
      padding-top: 3rem;
      padding-bottom: 2rem;
  }
 
- .latest-news-swiper .swiper-pagination-bullet {
+ .news-green {
+     background-color: var(--color-header-1);
+ }
+
+ .news-green .h2-has-h3 {
+     background-color: var(--color-header-1);
+ }
+
+ .news-green .swiper-pagination-bullet {
      border: 1px solid var(--color-default);
      opacity: 1;
      background: transparent;
  }
 
- .latest-news-swiper .swiper-pagination-bullet-active {
+ .news-green .swiper-pagination-bullet-active {
      background: var(--color-default);
  }
 
- .latest-news-swiper .info-card:hover,
- .latest-news-swiper a:focus .info-card {
+ .news-green .info-card:hover,
+ .news-green a:focus .info-card {
      background-color: var(--color-white);
  }
 
- .latest-news-swiper .info-card::before {
+ .news-green .info-card::before {
      background-color: transparent;
  }
 
- .latest-news-swiper .info-card a,
- .latest-news-swiper .info-card .info-card-header {
+ .news-green .info-card a,
+ .news-green .info-card .info-card-header {
      color: var(--color-default) !important;
      font-size: 19px !important;
  }
-
- /******************* Related News Home Page ******************************/
- .related-news-swiper-container-area {
-     padding-top: 3rem;
-     padding-bottom: 5rem;
+ .news-green  .btn-primary {
+    background-color: transparent;
+    padding: 5px 20px;
+    color: var(--color-default);
+    right: 90px;
+    position: absolute;
+}
+.news-green  .btn-primary:hover{
+    color: var(--color-default);
+    background-color: var(--color-light-gray);
+    border-color: var(--color-default);
+}
+ /******************* Blue Theme Related News Home Page ******************************/
+ .news-blue{
+    background-color: var(--color-default);
  }
+ .news-blue .h2-has-h3 {
+    color: var(--color-white);
+}
 
- .related-news-swiper .info-card.news-info .date,
- .related-news-swiper .info-card.news-info .date::before {
+ .news-blue .info-card.news-info .date,
+ .news-blue .info-card.news-info .date::before {
      border-color: var(--color-white);
      color: var(--color-white);
  }
 
- .related-news-swiper .info-card.news-info:hover .date,
- .related-news-swiper .info-card.news-info:hover span.date::before {
+ .news-blue .info-card.news-info:hover .date,
+ .news-blue .info-card.news-info:hover span.date::before {
      border-color: var(--color-default);
      color: var(--color-default);
  }
 
- .related-news-swiper .swiper-pagination-bullet {
+ .news-blue .swiper-pagination-bullet {
      border: 1px solid var(--color-white);
      opacity: 1;
      background: transparent;
  }
 
- .related-news-swiper .swiper-pagination-bullet-active {
+ .news-blue .swiper-pagination-bullet-active {
      background: var(--color-white);
  }
+ .news-blue  .btn-primary {
+    background-color: transparent;
+    padding: 5px 20px;
+    color: var(--color-white);
+    right: 90px;
+    position: absolute;
+    border-color: var(--color-white);
+}
+.news-blue  .btn-primary:hover{
+    color: var(--color-default);
+    background-color: var(--color-light-gray);
+    border-color: var(--color-default);
+}
+ /******************* Light Blue Theme Related News Home Page ******************************/
+ .news-light-blue{
+    background-color: var(--color-primary);
+ }
+ .news-light-blue .h2-has-h3 {
+    color: var(--color-white);
+}
 
- /*--------------------------------------------------------------
+ .news-light-blue .info-card.news-info .date,
+ .news-light-blue .info-card.news-info .date::before {
+     border-color: var(--color-white);
+     color: var(--color-white);
+ }
+
+ .news-light-blue .info-card.news-info:hover .date,
+ .news-light-blue .info-card.news-info:hover span.date::before {
+     border-color: var(--color-default);
+     color: var(--color-default);
+ }
+
+ .news-light-blue .swiper-pagination-bullet {
+     border: 1px solid var(--color-white);
+     opacity: 1;
+     background: transparent;
+ }
+
+ .news-light-blue .swiper-pagination-bullet-active {
+     background: var(--color-white);
+ }
+ .news-light-blue  .btn-primary {
+    background-color: transparent;
+    padding: 5px 20px;
+    color: var(--color-white);
+    right: 90px;
+    position: absolute;
+    border-color: var(--color-white);
+}
+.news-light-blue  .btn-primary:hover{
+    color: var(--color-default);
+    background-color: var(--color-light-gray);
+    border-color: var(--color-default);
+}
+.news-light-blue .info-card::before {
+    background-color: transparent;
+}
+.news-light-blue .info-card:hover span,
+.news-light-blue .info-card:hover .info-card-header {
+    color: var(--color-default) !important;
+    font-size: 19px !important;
+}
+.news-light-blue .info-card.news-info:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-default);
+}
+/*--------------------------------------------------------------
 # Accordion 
 --------------------------------------------------------------*/
  .destination-accordian .accordion-button::after {
@@ -2781,10 +2864,6 @@
 
  }
 
- .showfilters-align {
-     margin-bottom: 80px;
- }
-
  @media screen and (max-width: 768px) {
      .showfilters-align {
          display: block !important;
@@ -3335,11 +3414,14 @@ padding-right: 80px; */
      font-size: 18px;
      text-decoration: none;
      background-color: transparent;
-     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+     transition: none;
  }
-
+ .pagination-block .page-item .page-link:hover {
+    border-bottom: 4px solid var(--color-secondary);
+ }
  .pagination-block .page-item .page-link.active {
      border-bottom: 4px solid var(--color-secondary);
+     font-weight: 700;
  }
 
  .pagination-block .page-item a {
