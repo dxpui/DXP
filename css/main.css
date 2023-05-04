@@ -3443,3 +3443,28 @@ padding-right: 80px; */
  .pagination-count strong {
      margin: 0 5px;
  }
+ /*--------------------------------------------------------------
+#  Loader
+--------------------------------------------------------------*/
+ .loader {
+    border: 24px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 24px solid var(--color-primary);
+    border-right: 24px solid var(--color-header-1);
+    border-bottom: 24px solid var(--color-secondary);
+    border-left: 24px solid var(--color-pink);
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
