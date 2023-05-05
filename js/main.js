@@ -191,9 +191,9 @@ function carouselCount() {
 
 /////////////////////////// Lookup Table/////////////////////////////////
 
-//window.onload = function () { searchTable() };
+window.onload = function () { searchTable() };
 function searchTable() {
-  var input, filter, table, tr, td, i, txtValue;
+  var input, filter, table, tr, td, i, j, txtValue;
   input = document.getElementById("searchInput");
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
@@ -202,12 +202,12 @@ function searchTable() {
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td");
     tr[i].style.display = "";
-    for (var j = 0; j < td.length; j++) {
+    for (j = 0; j < td.length; j++) {
       txtValue = td[j].textContent || td[j].innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
         count++;
         break;
-      } else {
+      } else if (j == td.length - 1) {
         tr[i].style.display = "none";
       }
     }
@@ -271,7 +271,7 @@ $(document).ready(function () {
 
 var btn = $('.back-to-top');
 
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(window).scrollTop() > 300) {
     btn.addClass('show');
   } else {
@@ -279,7 +279,7 @@ $(window).scroll(function() {
   }
 });
 
-btn.on('click', function(e) {
+btn.on('click', function (e) {
   e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
+  $('html, body').animate({ scrollTop: 0 }, '300');
 });
