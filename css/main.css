@@ -3074,6 +3074,7 @@
  .toast-top-header a{
     color: var(--color-white);
     font-size: 24px;
+    margin-left: 10px;
  }
  .toast-strip{
     height: 28px;
