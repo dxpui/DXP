@@ -154,7 +154,11 @@
      background-color: var(--color-primary);
      border-color: var(--color-primary);
  }
-
+.responsive-image{
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
  /*--------------------------------------------------------------
 # Background Color
 --------------------------------------------------------------*/
@@ -353,7 +357,16 @@
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s;
 } */
-
+.btn-tag {
+    background-color: var(--color-light-gray);
+    color: var(--color-primary);
+    font-size: 11px;
+    margin: 10px;
+    border-radius: 0;
+}
+.btn-tag:hover {
+    border-color: var(--color-default);
+}
  @media(max-width: 992px) {
      .btn-primary-latest-news {
          position: static;
@@ -482,6 +495,7 @@
      margin-left: 40px;
      padding: 10px;
      color: var(--color-default);
+     min-width: 80px;
  }
 
  @media(max-width: 768px) {
@@ -3546,6 +3560,7 @@ padding-right: 80px; */
      font-size: 18px;
      line-height: 1.5em;
      font-weight: 700;
+     font-style: italic;
  }
 
  .standfirst:before {
@@ -3561,7 +3576,8 @@ padding-right: 80px; */
      display: inline-block;
      vertical-align: bottom;
      color: var(--color-secondary);
-     font-size: 4em;
+     font-size: 3em;
      top: .2em;
      position: relative;
+     padding-right: 15px;
  }
