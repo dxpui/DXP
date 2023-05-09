@@ -154,11 +154,13 @@
      background-color: var(--color-primary);
      border-color: var(--color-primary);
  }
-.responsive-image{
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-}
+
+ .responsive-image {
+     width: 100%;
+     object-fit: cover;
+     object-position: top;
+ }
+
  /*--------------------------------------------------------------
 # Background Color
 --------------------------------------------------------------*/
@@ -357,16 +359,18 @@
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s;
 } */
-.btn-tag {
-    background-color: var(--color-light-gray);
-    color: var(--color-primary);
-    font-size: 11px;
-    margin: 10px;
-    border-radius: 0;
-}
-.btn-tag:hover {
-    border-color: var(--color-default);
-}
+ .btn-tag {
+     background-color: var(--color-light-gray);
+     color: var(--color-primary);
+     font-size: 11px;
+     margin: 10px;
+     border-radius: 0;
+ }
+
+ .btn-tag:hover {
+     border-color: var(--color-default);
+ }
+
  @media(max-width: 992px) {
      .btn-primary-latest-news {
          position: static;
@@ -426,7 +430,7 @@
      position: absolute;
      opacity: .9;
      height: 80px;
-     bottom: 38px;
+     bottom: 0;
      left: 0;
      right: 0;
  }
@@ -1219,6 +1223,8 @@
 
  .hero-image-carousel .carousel-caption {
      padding-top: 0;
+     padding-bottom: 0;
+     bottom: 0;
  }
 
  .carousel-btn-position {
@@ -1489,6 +1495,14 @@
      -webkit-transition: all 0.3s ease-in-out;
  }
 
+ .info-card:hover svg {
+     fill: var(--color-default);
+ }
+
+ .info-card:hover svg path {
+     stroke: var(--color-white);
+ }
+
  .info-card span.date::before {
      border: 1px solid #333;
      content: "";
@@ -1551,6 +1565,7 @@
      height: 200px;
      width: 100%;
      object-fit: cover;
+     object-position: top left;
      background-color: #D4D4D4;
  }
 
@@ -2123,15 +2138,6 @@
      height: 100%;
  }
 
- .swiper-slide {
-     text-align: center;
-     font-size: 18px;
-     background: #fff;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
-
  .swiper-outer {
      margin-left: 90px;
  }
@@ -2144,6 +2150,10 @@
      justify-content: center;
      align-items: center;
      color: var(--color-default);
+ }
+
+ .swiper-slide a {
+     width: 100%;
  }
 
  .mySwiper {
