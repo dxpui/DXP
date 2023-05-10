@@ -200,7 +200,7 @@
                         exercitation</span>
                     </li>
                 </div>
-                 <div class="w-100 menu-social-icons">
+                <div class="w-100 menu-social-icons">
                   <a href="#" title="Twitter">
                     <i class="fa-brands fa-twitter"></i>
                   </a>
@@ -325,7 +325,7 @@
                     </li>
                 </div>
 
-                 <div class="w-100 menu-social-icons">
+                <div class="w-100 menu-social-icons">
                   <a href="#" title="Twitter">
                     <i class="fa-brands fa-twitter"></i>
                   </a>
@@ -394,7 +394,7 @@
                   </ul>
 
                 </div>
-                 <div class="w-100 menu-social-icons">
+                <div class="w-100 menu-social-icons">
                   <a href="#" title="Twitter">
                     <i class="fa-brands fa-twitter"></i>
                   </a>
@@ -473,7 +473,7 @@
                 <div class="list-item">
 
                 </div>
-                 <div class="w-100 menu-social-icons">
+                <div class="w-100 menu-social-icons">
                   <a href="#" title="Twitter">
                     <i class="fa-brands fa-twitter"></i>
                   </a>
@@ -735,44 +735,73 @@
         </div>
       </div>
     </section>
-    <section class="blue-bg">
-      <div class="row g-0 mt-5">
-        <div class="col-10 col-sm-8 mx-auto">
-          <div class="ratio ratio-16x9">
-            <iframe title="YouTube video" src="https://www.youtube-nocookie.com/embed/cdVUr-NrXng?start=12"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+    <section>
+      <div class="blue-bg">
+        <div class="row g-0 mt-5">
+          <div class="col-10 col-sm-8 mx-auto tab-content">
+            <div class="ratio ratio-16x9 container tab-pane active" id="video-1">
+              <iframe id="youtube-id" title="YouTube video"
+                src="https://www.youtube-nocookie.com/embed/cdVUr-NrXng?start=12" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+
+            <div class="ratio ratio-16x9 container tab-pane fade" id="video-2">
+              <video src="assets/video/video.mp4" class="card-img-top" controls=""></video>
+            </div>
+            <div class="ratio ratio-16x9 container tab-pane fade" id="video-3">
+              <iframe
+                src="https://player.vimeo.com/video/253989945?h=c6db007fe5&color=ef0800&title=0&byline=0&portrait=0"
+                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="ratio ratio-16x9 container tab-pane fade" id="video-4">
+              <video src="assets/video/video.mp4" class="card-img-top" controls=""></video>
+            </div>
+
           </div>
         </div>
       </div>
-    </section>
-    <section class="light-blue-bg py-5">
-      <div class="row g-0 d-flex justify-content-center">
-        <div class="col-10 mx-auto">
-          <div class="row">
-            <div class="col-sm-6 col-md-3">
-              <div class="ratio ratio-16x9">
-                <iframe
-                  src="https://player.vimeo.com/video/253989945?h=c6db007fe5&color=ef0800&title=0&byline=0&portrait=0"
-                  frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen></iframe>
+      <div class="light-blue-bg py-3">
+        <div class="row g-0 d-flex justify-content-center">
+          <div class="col-10 mx-auto">
+            <div class="row nav video-list">
+              <div class="col-12 col-md-3">
+                <a class="nav-link active" data-bs-toggle="pill" href="#video-1">
+                  <img src="./assets/img/related-news-4.png" alt="video-img" />
+                  <div class="video-text">
+                    <span>How to forward a scam text to 7726 on Android</span>
+                    <i class="fa-solid fa-circle-play"></i>
+                  </div>
+                </a>
               </div>
-              <span class="text-white mt-2 d-block">How to forward a scam text to 7726 on Android</span>
-            </div>
-            <div class="col-sm-6 col-md-3">
-              <video src="assets/video/video.mp4" class="card-img-top" controls=""></video>
-              <span class="text-white mt-2 d-block">How to report a scam mobile call to 7726 on iPhone</span>
-            </div>
-            <div class="col-sm-6 col-md-3">
-              <video src="assets/video/video.mp4" class="card-img-top" controls=""></video>
-              <span class="text-white mt-2 d-block">How to report a scam mobile call to 7726 on Android</span>
-
-            </div>
-            <div class="col-sm-6 col-md-3">
-              <video src="assets/video/video.mp4" class="card-img-top" controls=""></video>
-              <span class="text-white mt-2 d-block">How to report a scam mobile call to 7726 on Android</span>
-
+              <div class="col-12 col-md-3">
+                <a class="nav-link" data-bs-toggle="pill" href="#video-2">
+                  <img src="./assets/img/related-news-1.png" alt="media-img" />
+                  <div class="video-text">
+                    <span>How to forward a scam text to 7726 on Android</span>
+                    <i class="fa-solid fa-circle-play"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-md-3">
+                <a class="nav-link" data-bs-toggle="pill" href="#video-3">
+                  <img src="./assets/img/related-news-2.png" alt="media1-img" />
+                  <div class="video-text">
+                    <span>How to forward a scam text to 7726 on Android</span>
+                    <i class="fa-solid fa-circle-play"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-md-3">
+                <a class="nav-link " data-bs-toggle="pill" href="#video-4">
+                  <img src="./assets/img/related-news-3.png" alt="media2-img" />
+                  <div class="video-text">
+                    <span>How to forward a scam text to 7726 on Android</span>
+                    <i class="fa-solid fa-circle-play"></i>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -999,9 +1028,10 @@
 
   <!-- Optional JavaScript; choose one of the two! -->
   <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="js/main.js"></script>
   <script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="css/bootstrap-ie11.min.css"><script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"><\/script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"><\/script><script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
