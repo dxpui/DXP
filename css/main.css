@@ -3402,11 +3402,15 @@ padding-right: 80px; */
 #  Back to Top
 --------------------------------------------------------------*/
  .back-to-top {
-     display: inline-block;
-     background-color: var(--color-secondary);
-     width: 50px;
-     height: 50px;
+     display: flex;
+     flex-direction: column;
+     background-color: var(--color-default);
+     color: var(--color-white);
+     border: 1px solid var(--color-white);
+     width: 60px;
+     height: 60px;
      text-align: center;
+     padding: 5px;
      position: fixed;
      bottom: 30px;
      right: 30px;
@@ -3416,8 +3420,15 @@ padding-right: 80px; */
      visibility: hidden;
      z-index: 1000;
  }
-
- .back-to-top::after {
+ .back-to-top span{
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+ }
+ .back-to-top i{
+    font-size: 22px;
+ }
+ /* .back-to-top::after {
      content: "\f077";
      font-family: FontAwesome;
      font-weight: normal;
@@ -3425,7 +3436,7 @@ padding-right: 80px; */
      font-size: 2em;
      line-height: 50px;
      color: #fff;
- }
+ } */
 
  .back-to-top:hover::after {
      color: var(--color-default);
@@ -3433,8 +3444,10 @@ padding-right: 80px; */
 
  .back-to-top:hover {
      cursor: pointer;
-     background-color: var(--color-white);
-     border: 1px solid var(--color-default);
+     opacity: 1;
+     background-color: var(--color-secondary);
+     color: var(--color-default);
+     border: 1px solid var(--color-secondary);
  }
 
  .back-to-top:active {
