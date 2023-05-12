@@ -748,7 +748,11 @@
             </div>
 
             <div class="ratio ratio-16x9 container tab-pane fade" id="video-2">
-              <video src="assets/video/video.mp4" class="card-img-top" controls=""></video>
+              <video class="card-img-small" poster="assets/img/Media2.png" controls muted>
+                <source src="assets/video/video.mp4" type="video/mp4" />
+                <track label="English" kind="subtitles" srclang="en" src="caption.vtt" default />
+              </video>
+              <!-- <video src="" class="card-img-top" controls=""></video> -->
             </div>
             <div class="ratio ratio-16x9 container tab-pane fade" id="video-3">
               <iframe id="vimeo-player"
@@ -756,7 +760,10 @@
                 frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="ratio ratio-16x9 container tab-pane fade" id="video-4">
-              <video src="assets/video/video.mp4" class="card-img-top" controls=""></video>
+              <video class="card-img-small" poster="assets/img/Media2.png" controls muted>
+                <source src="assets/video/video.mp4" type="video/mp4" />
+                <track label="English" kind="subtitles" srclang="en" src="caption.vtt" default />
+              </video>
             </div>
 
           </div>
@@ -777,7 +784,7 @@
               </div>
               <div class="col-12 col-md-3">
                 <a class="nav-link" data-bs-toggle="pill" href="#video-2">
-                  <img src="./assets/img/related-news-1.png" alt="media-img" />
+                  <img src="assets/img/Media2.png" alt="media-img" />
                   <div class="video-text">
                     <span>How to forward a scam text to 7726 on Android</span>
                     <i class="fa-solid fa-circle-play"></i>
@@ -795,7 +802,7 @@
               </div>
               <div class="col-12 col-md-3">
                 <a class="nav-link " data-bs-toggle="pill" href="#video-4">
-                  <img src="./assets/img/related-news-3.png" alt="media2-img" />
+                  <img src="assets/img/Media2.png" alt="media2-img" />
                   <div class="video-text">
                     <span>How to forward a scam text to 7726 on Android</span>
                     <i class="fa-solid fa-circle-play"></i>
@@ -1023,7 +1030,7 @@
       </div>
     </footer>
     <a class="back-to-top">
-      <i class="fa-solid fa-chevron-up"></i> 
+      <i class="fa-solid fa-chevron-up"></i>
       <span>Back to top</span>
     </a>
   </main>
