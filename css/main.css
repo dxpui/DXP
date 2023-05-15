@@ -2511,6 +2511,7 @@
      font-weight: 400;
      line-height: var(--line-height-default);
      color: var(--color-default);
+     padding-bottom: 60px;
  }
 
  .topic-header {
