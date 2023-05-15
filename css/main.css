@@ -9,17 +9,17 @@
      /* Often used for hoverstates as well as a colour option for page headers */
      --color-secondary: #FF8A00;
      /* Page headers 1*/
-     --color-header-1: #36C280;
+     --color-green: #36C280;
      /* Page headers 2*/
-     --color-header-2: #FFF057;
+     --color-yellow: #FFF057;
      /* Page headers 3*/
      --color-pink: #FF38D1;
      /* Page headers 4*/
-     --color-header-4: #E30052;
+     --color-red: #E30052;
      /* Page headers 5*/
-     --color-header-5: #8F0057;
+     --color-maroon: #8F0057;
      /* Page headers 6*/
-     --color-header-6: #C400ED;
+     --color-megenta: #C400ED;
      /* Page White colour*/
      --color-white: #FFFFFF;
      --color-light-gray: #F2F2F2;
@@ -181,11 +181,11 @@
  }
 
  .green-bg {
-     background-color: var(--color-header-1);
+     background-color: var(--color-green);
  }
 
  .megenta-bg {
-     background-color: var(--color-header-6);
+     background-color: var(--color-megenta);
  }
 
  /*--------------------------------------------------------------
@@ -393,7 +393,7 @@
  }
 
  .multicolor-strip .bg-megenta {
-     background-color: var(--color-header-6);
+     background-color: var(--color-megenta);
      width: 20%;
  }
 
@@ -408,7 +408,7 @@
  }
 
  .multicolor-strip .bg-green {
-     background-color: var(--color-header-1);
+     background-color: var(--color-green);
      width: 15%;
  }
 
@@ -1501,6 +1501,19 @@
      -webkit-transition: all 0.3s ease-in-out;
  }
 
+ /***************SVG Icons Design ********************/
+ .info-card .svg-arrow {
+     fill: none;
+ }
+
+ .info-card .svg-arrow circle {
+     stroke: var(--color-default);
+ }
+
+ .info-card .svg-arrow path {
+     stroke: var(--color-default);
+ }
+
  .info-card:hover svg {
      fill: var(--color-default);
  }
@@ -1509,6 +1522,7 @@
      stroke: var(--color-white);
  }
 
+ /**************************************************/
  .info-card span.date::before {
      border: 1px solid #333;
      content: "";
@@ -1596,7 +1610,7 @@
  }
 
  .green-bg.info-card-video {
-     background-color: var(--color-header-1);
+     background-color: var(--color-green);
  }
 
  .green-bg.info-card-video .card-text {
@@ -2071,13 +2085,6 @@
      text-decoration: underline;
  }
 
- /* .footer .social-icons-list a:focus {
-    background-color: var(--color-white);
-    color: var(--color-default);
- }
- .footer .social-icons-list a:focus i{
-    background-color: var(--color-default);
- } */
  .copyrights {
      margin-top: -25px;
  }
@@ -2215,54 +2222,114 @@
      margin: 0 7px;
  }
 
- /******************* Green Theme Latest News Home Page ******************************/
+ /******************* News Page ******************************/
  .news-container-area {
      padding-top: 3rem;
      padding-bottom: 2rem;
  }
 
- .news-green {
-     background-color: var(--color-header-1);
- }
-
- .news-green .h2-has-h3 {
-     background-color: var(--color-header-1);
- }
-
- .news-green .swiper-pagination-bullet {
-     border: 1px solid var(--color-default);
+ .news-container-area .swiper-pagination-bullet {
      opacity: 1;
      background: transparent;
  }
 
- .news-green .swiper-pagination-bullet-active {
-     background: var(--color-default);
- }
-
- .news-green .info-card:hover,
- .news-green a:focus .info-card {
-     background-color: var(--color-white);
- }
-
- .news-green .info-card::before {
-     background-color: transparent;
- }
-
- .news-green .info-card a,
- .news-green .info-card .info-card-header {
-     color: var(--color-default) !important;
-     font-size: 19px !important;
- }
-
- .news-green .btn-primary {
+ .news-container-area .btn-primary {
      background-color: transparent;
      padding: 5px 20px;
-     color: var(--color-default);
      right: 90px;
      position: absolute;
  }
 
- .news-green .btn-primary:hover {
+ /******************* Green Theme Latest News Home Page ******************************/
+ .news-green,
+ .news-green .h2-has-h3 {
+     background-color: var(--color-green);
+ }
+
+ .news-pink,
+ .news-pink .h2-has-h3 {
+     background-color: var(--color-pink);
+ }
+
+ .news-orange,
+ .news-orange .h2-has-h3 {
+     background-color: var(--color-secondary);
+ }
+
+ .news-yellow,
+ .news-yellow .h2-has-h3 {
+     background-color: var(--color-yellow);
+ }
+
+ .news-gray,
+ .news-gray .h2-has-h3 {
+     background-color: var(--color-light-gray);
+ }
+
+ .news-green .swiper-pagination-bullet,
+ .news-pink .swiper-pagination-bullet,
+ .news-orange .swiper-pagination-bullet,
+ .news-yellow .swiper-pagination-bullet,
+ .news-gray .swiper-pagination-bullet {
+     border: 1px solid var(--color-default);
+ }
+
+ .news-green .swiper-pagination-bullet-active,
+ .news-pink .swiper-pagination-bullet-active,
+ .news-orange .swiper-pagination-bullet-active,
+ .news-yellow .swiper-pagination-bullet-active,
+ .news-gray .swiper-pagination-bullet-active {
+     background: var(--color-default);
+ }
+
+ .news-green .info-card:hover,
+ .news-green a:focus .info-card,
+ .news-pink .info-card:hover,
+ .news-pink a:focus .info-card,
+ .news-orange .info-card:hover,
+ .news-orange a:focus .info-card,
+ .news-yellow .info-card:hover,
+ .news-yellow a:focus .info-card,
+ .news-gray .info-card:hover,
+ .news-gray a:focus .info-card {
+     background-color: var(--color-white);
+ }
+
+ .news-green .info-card::before,
+ .news-pink .info-card::before,
+ .news-orange .info-card::before,
+ .news-yellow .info-card::before,
+ .news-gray .info-card::before {
+     background-color: transparent;
+ }
+
+ .news-green .info-card a,
+ .news-green .info-card .info-card-header,
+ .news-pink .info-card a,
+ .news-pink .info-card .info-card-header,
+ .news-orange .info-card a,
+ .news-orange .info-card .info-card-header,
+ .news-yellow .info-card a,
+ .news-yellow .info-card .info-card-header,
+ .news-gray .info-card a,
+ .news-gray .info-card .info-card-header {
+     color: var(--color-default) !important;
+     font-size: 19px !important;
+ }
+
+ .news-green .btn-primary,
+ .news-pink .btn-primary,
+ .news-orange .btn-primary,
+ .news-yellow .btn-primary,
+ .news-gray .btn-primary {
+     color: var(--color-default);
+ }
+
+ .news-green .btn-primary:hover,
+ .news-pink .btn-primary:hover,
+ .news-orange .btn-primary:hover,
+ .news-yellow .btn-primary:hover,
+ .news-gray .btn-primary:hover {
      color: var(--color-default);
      background-color: var(--color-light-gray);
      border-color: var(--color-default);
@@ -2289,10 +2356,12 @@
      color: var(--color-default);
  }
 
+ .news-blue .info-card.news-info:hover .info-card-header {
+     color: var(--color-default);
+ }
+
  .news-blue .swiper-pagination-bullet {
      border: 1px solid var(--color-white);
-     opacity: 1;
-     background: transparent;
  }
 
  .news-blue .swiper-pagination-bullet-active {
@@ -2300,11 +2369,7 @@
  }
 
  .news-blue .btn-primary {
-     background-color: transparent;
-     padding: 5px 20px;
      color: var(--color-white);
-     right: 90px;
-     position: absolute;
      border-color: var(--color-white);
  }
 
@@ -2312,6 +2377,30 @@
      color: var(--color-default);
      background-color: var(--color-light-gray);
      border-color: var(--color-default);
+ }
+
+ .news-blue .info-card .svg-arrow {
+     fill: var(--color-default);
+ }
+
+ .news-blue .info-card .svg-arrow circle {
+     stroke: var(--color-white);
+ }
+
+ .news-blue .info-card .svg-arrow path {
+     stroke: var(--color-white);
+ }
+
+ .news-blue .info-card:hover .svg-arrow circle {
+     stroke: var(--color-default);
+ }
+
+ .news-blue .info-card:hover .svg-arrow {
+     fill: transparent;
+ }
+
+ .news-blue .info-card:hover .svg-arrow path {
+     stroke: var(--color-default);
  }
 
  /******************* Light Blue Theme Related News Home Page ******************************/
@@ -2337,7 +2426,6 @@
 
  .news-lightblue .swiper-pagination-bullet {
      border: 1px solid var(--color-white);
-     opacity: 1;
      background: transparent;
  }
 
@@ -2347,10 +2435,7 @@
 
  .news-lightblue .btn-primary {
      background-color: transparent;
-     padding: 5px 20px;
      color: var(--color-white);
-     right: 90px;
-     position: absolute;
      border-color: var(--color-white);
  }
 
@@ -2373,6 +2458,30 @@
  .news-lightblue .info-card.news-info:hover {
      background-color: var(--color-secondary);
      color: var(--color-default);
+ }
+
+ .news-lightblue .info-card .svg-arrow {
+     fill: none;
+ }
+
+ .news-lightblue .info-card .svg-arrow circle {
+     stroke: var(--color-white);
+ }
+
+ .news-lightblue .info-card .svg-arrow path {
+     stroke: var(--color-white);
+ }
+
+ .news-lightblue .info-card:hover .svg-arrow circle {
+     stroke: var(--color-default);
+ }
+
+ .news-lightblue .info-card:hover .svg-arrow {
+     fill: transparent;
+ }
+
+ .news-lightblue .info-card:hover .svg-arrow path {
+     stroke: var(--color-default);
  }
 
  /*--------------------------------------------------------------
@@ -2511,7 +2620,6 @@
      font-weight: 400;
      line-height: var(--line-height-default);
      color: var(--color-default);
-     padding-bottom: 60px;
  }
 
  .topic-header {
@@ -2647,7 +2755,7 @@
  }
 
  .callout-light h1 {
-     color: var(--color-header-6);
+     color: var(--color-megenta);
      min-height: 50px;
  }
 
@@ -3134,6 +3242,12 @@
      text-align: center;
  }
 
+ .toast-notification {
+     width: max-content;
+     position: fixed;
+     top: 88px;
+     right: 0;
+ }
 
  .toast-top-header {
      display: flex;
@@ -3174,7 +3288,7 @@
  }
 
  .alerts.green {
-     background-color: var(--color-header-1);
+     background-color: var(--color-green);
      color: var(--color-default);
  }
 
@@ -3583,7 +3697,7 @@ padding-right: 80px; */
      border: 24px solid #f3f3f3;
      border-radius: 50%;
      border-top: 24px solid var(--color-primary);
-     border-right: 24px solid var(--color-header-1);
+     border-right: 24px solid var(--color-green);
      border-bottom: 24px solid var(--color-secondary);
      border-left: 24px solid var(--color-pink);
      width: 100px;
