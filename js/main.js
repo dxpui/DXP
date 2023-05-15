@@ -99,6 +99,20 @@ window.onscroll = () => {
 // for main menu 
 $(document).ready(function () {
 
+  setTimeout(function () {
+    if ($('.toast-notification').length > 0) {
+      $('.toast-notification').remove();
+    }
+  }, 10000);
+
+  if ($('.toast-notification').length > 0) {
+    $(".toast-notification a").click(function (e) {
+      e.preventDefault();
+      $(".toast-notification").remove();
+    });
+  }
+
+
   $(".menu-item-has-children").click(function () {
 
     if ($(this).children(".sub-menu").hasClass("sub-menu-show")) {
@@ -369,5 +383,6 @@ $("#video-player .nav .nav-link").click(function () {
     }
   }
 
-
+ 
 });
+

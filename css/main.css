@@ -3263,7 +3263,7 @@
  .toast-top-header a {
      color: var(--color-white);
      font-size: 24px;
-     margin-left: 10px;
+     margin-left: 25px;
  }
 
  .toast-strip {
