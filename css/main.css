@@ -22,6 +22,7 @@
      --color-megenta: #C400ED;
      /* Page White colour*/
      --color-white: #FFFFFF;
+     --color-black: #000000;
      --color-light-gray: #F2F2F2;
      --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
      --font-family-default: 'Sora', sans-serif;
@@ -196,6 +197,9 @@
      background-color: var(--color-maroon);
  }
 
+ .yellow-bg {
+     background-color: var(--color-yellow);
+ }
 
  /*--------------------------------------------------------------
 # All Buttons
@@ -377,7 +381,8 @@
  }
 
  .btn-tag:hover {
-     border-color: var(--color-default);
+     color: var(--color-black);
+     background-color: var(--color-secondary);
  }
 
  @media(max-width: 992px) {
@@ -1262,8 +1267,6 @@
  }
 
  .hero-banner-narrow {
-     background-color: var(--color-default);
-     color: var(--color-white);
      padding: 60px 10px 50px 10px;
  }
 
@@ -1279,15 +1282,20 @@
  }
 
  .lightblue-bg h1,
+ .lightblue-bg h2,
  .lightblue-bg p,
  .blue-bg p,
  .blue-bg h1,
+ .blue-bg h2,
  .megenta-bg p,
  .megenta-bg h1,
+ .megenta-bg h2,
  .maroon-bg p,
  .maroon-bg h1,
+ .maroon-bg h2,
  .red-bg p,
- .red-bg h1 {
+ .red-bg h1,
+ .red-bg h2 {
      color: var(--color-white);
  }
 
@@ -3810,18 +3818,22 @@ padding-right: 80px; */
      padding: 0;
  }
 
- .video-list .nav-link img {
+ .video-list .nav-link {
      border: 5px solid transparent;
  }
 
- .video-list .nav-link.active img {
+ .video-list .nav-link.active {
      border: 5px solid var(--color-white);
  }
 
- .video-list .video-text {
+ .video-list .video-text span {
      display: block;
-     margin-top: 10px;
      color: var(--color-white);
+     padding: 10px;
+ }
+
+ .video-list:hover .video-text span {
+     text-decoration: underline;
  }
 
  @media (max-width: 768px) {
