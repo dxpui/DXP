@@ -2068,7 +2068,9 @@
      font-size: 14px !important;
      line-height: 21px;
  }
-
+.footer .list-unstyled a:focus{
+    text-decoration: underline;
+}
  .footer .about-ofcom li {
      font-size: 14px;
      margin-bottom: 14px;
@@ -2078,6 +2080,16 @@
  .footer .follow {
      margin-bottom: 30px;
      margin-top: 26px;
+ }
+
+ .footer .social-icons {
+     display: block;
+     width: 70%;
+ }
+
+ .footer .social-icons .social-icons-list {
+     width: 33%;
+     float: left;
  }
 
  .footer .social-icons-list a {
@@ -2107,9 +2119,9 @@
      text-decoration: underline;
  }
 
- .copyrights {
+ /* .copyrights {
      margin-top: -25px;
- }
+ } */
 
  @media screen and (min-width: 576px) and (max-width: 992px) {
      .footer section.social {
@@ -2144,6 +2156,19 @@
      .footer .social-icons-list a i {
          margin: 0 10px;
      }
+
+ }
+
+ @media(max-width: 992px) {
+     .footer .social-icons {
+         display: flex;
+         margin: 0 auto;
+     }
+
+     .footer .social-icons .social-icons-list {
+         width: 33%;
+         float: left;
+     }
  }
 
  /* For Mobile Portrait View */
@@ -2177,7 +2202,6 @@
 
      .footer .social .social-icons {
          text-align: center;
-
          justify-content: center;
      }
 
@@ -2922,10 +2946,10 @@
      margin: 20px 0;
  }
 
- .title-block .gray-bg h3,
+ /* .title-block .gray-bg h3,
  .title-block .gray-bg p {
      color: var(--color-default);
- }
+ } */
 
  .title-block .lightblue-bg h3,
  .title-block .lightblue-bg p,
