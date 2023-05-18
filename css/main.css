@@ -1298,6 +1298,21 @@
  .red-bg h2 {
      color: var(--color-white);
  }
+ .gray-bg h1,
+ .gray-bg h2,
+ .gray-bg p,
+ .pink-bg p,
+ .pink-bg h1,
+ .pink-bg h2,
+ .green-bg p,
+ .green-bg h1,
+ .green-bg h2,
+ .yellow-bg h1,
+ .yellow-bg h2,
+ .yellow-bg p
+ {
+     color: var(--color-default);
+ }
 
  .feedback-block {
      background-color: #e8e7e7;
