@@ -1245,6 +1245,7 @@
 
  .carousel-btn-position {
      margin-top: 20px;
+     width: fit-content;
  }
 
  @media(max-width: 768px) {
