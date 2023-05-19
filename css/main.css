@@ -1165,13 +1165,15 @@
 
  .carousel-heroimg-cls {
      background-color: var(--color-default);
-     min-height: 499px;
+     min-height: 520px;
      padding-left: 7.5% !important;
+     padding-top: 40px;
      padding-right: 20px;
+     padding-bottom: 180px;
  }
 
  .card-video {
-     height: 499px;
+     height: 545px;
  }
 
  .carousel-heroimg-cls .carousel-indicators {
@@ -1182,7 +1184,7 @@
 
  .homepage-carousel-cls .carousel-indicators {
      position: absolute;
-     bottom: 50px;
+     bottom: 20px;
      left: 0;
      display: block;
      z-index: 2;
@@ -1231,7 +1233,7 @@
  }
 
  .hero-image-carousel img {
-     height: 499px;
+     height: 545px;
      object-fit: cover;
  }
 
