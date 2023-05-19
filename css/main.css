@@ -2276,6 +2276,7 @@
  @media(max-width: 992px) {
      .mySwiper {
          padding-left: 0;
+         padding-top: 30px;
      }
  }
 
@@ -2305,6 +2306,19 @@
      right: 90px;
      position: absolute;
  }
+
+ @media(max-width: 991px) {
+     .news-container-area .btn-primary {
+         top: 50px;
+         right: 0;
+         left: 0;
+         width: fit-content;
+         margin: 0px auto 0 auto;
+         position: absolute;
+         display: block;
+     }
+ }
+
 
  /******************* Green Theme Latest News Home Page ******************************/
  .news-green,
