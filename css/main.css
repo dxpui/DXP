@@ -2150,10 +2150,6 @@
  } */
 
  @media screen and (min-width: 576px) and (max-width: 992px) {
-     .footer section.social {
-         border-bottom: 1px solid white;
-         margin-top: 30px !important;
-     }
 
      .footer section.social h6 {
          float: left;
@@ -2186,6 +2182,10 @@
  }
 
  @media(max-width: 992px) {
+    .footer section.social {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);;
+        margin-top: 30px !important;
+    }
      .footer .social-icons {
          display: flex;
          margin: 0 auto;
