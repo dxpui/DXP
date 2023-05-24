@@ -173,6 +173,12 @@ $(document).ready(function () {
   if ($('#search-icon').length > 0) {
     searchIcon()
   }
+  if ($('#searchInput').length > 0) {
+    lookupTable()
+  }
+  if ($('#video-player').length > 0) {
+    videoPlayer()
+  }
 });
 
 // showfilter code
@@ -204,39 +210,39 @@ function carouselCount() {
 }
 
 /////////////////////////// Lookup Table/////////////////////////////////
-
-window.onload = function () { searchTable() };
-function searchTable() {
-  var input, filter, table, tr, td, i, j, txtValue;
-  input = document.getElementById("searchInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  var count = 0;
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td");
-    tr[i].style.display = "";
-    for (j = 0; j < td.length; j++) {
-      txtValue = td[j].textContent || td[j].innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        count++;
-        break;
-      } else if (j == td.length - 1) {
-        tr[i].style.display = "none";
+function lookupTable() {
+  window.onload = function () { searchTable() };
+  function searchTable() {
+    var input, filter, table, tr, td, i, j, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    var count = 0;
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td");
+      tr[i].style.display = "";
+      for (j = 0; j < td.length; j++) {
+        txtValue = td[j].textContent || td[j].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          count++;
+          break;
+        } else if (j == td.length - 1) {
+          tr[i].style.display = "none";
+        }
       }
     }
-  }
-  document.getElementById("resultCount").textContent = count + " result(s) are shown";
-  var noResults = document.getElementById("noResults");
-  if (count == 0) {
-    noResults.style.display = "";
-    resultCount.style.display = "none";
-  } else {
-    noResults.style.display = "none";
-    resultCount.style.display = "";
+    document.getElementById("resultCount").textContent = count + " result(s) are shown";
+    var noResults = document.getElementById("noResults");
+    if (count == 0) {
+      noResults.style.display = "";
+      resultCount.style.display = "none";
+    } else {
+      noResults.style.display = "none";
+      resultCount.style.display = "";
+    }
   }
 }
-
 var data = [
   {
     "Code": "0114",
@@ -300,89 +306,90 @@ btn.on('click', function (e) {
 
 
 // ********************Video Player**********************
+function videoPlayer() {
+  $("#video-player .nav .nav-link").click(function () {
 
-$("#video-player .nav .nav-link").click(function () {
+    if ($("a[href='#video-1']").not(".active").length > 0) {
 
-  if ($("a[href='#video-1']").not(".active").length > 0) {
-
-    if ($("#video-1 iframe").length > 0) {
-      var x = $("#video-1 iframe").attr("src");
-      if (x.indexOf('youtube') != -1) {
-        var y = "&autoplay=0&mute=0";
-        $("#video-1 iframe").attr("src", x + y);
+      if ($("#video-1 iframe").length > 0) {
+        var x = $("#video-1 iframe").attr("src");
+        if (x.indexOf('youtube') != -1) {
+          var y = "&autoplay=0&mute=0";
+          $("#video-1 iframe").attr("src", x + y);
+        }
+        if (x.indexOf('vimeo') != -1) {
+          var iframe = $('#vimeo-player')[0];
+          var player = $f(iframe);
+          player.api('pause');
+          console.log("Vimeo video");
+        }
       }
-      if (x.indexOf('vimeo') != -1) {
-        var iframe = $('#vimeo-player')[0];
-        var player = $f(iframe);
-        player.api('pause');
-        console.log("Vimeo video");
-      }
-    }
-    if ($("#video-1 video").length > 0) {
-      $("#video-2 video")[0].pause();
-    }
-  }
-
-  if ($("a[href='#video-2']").not(".active").length > 0) {
-
-    if ($("#video-2 iframe").length > 0) {
-      var x = $("#video-2 iframe").attr("src");
-      if (x.indexOf('youtube') != -1) {
-        var y = "&autoplay=0&mute=0";
-        $("#video-2 iframe").attr("src", x + y);
-      }
-      if (x.indexOf('vimeo') != -1) {
-        var iframe = $('#vimeo-player')[0];
-        var player = $f(iframe);
-        player.api('pause');
-        console.log("Vimeo video");
+      if ($("#video-1 video").length > 0) {
+        $("#video-2 video")[0].pause();
       }
     }
-    if ($("#video-2 video").length > 0) {
-      $("#video-2 video")[0].pause();
-    }
-  }
 
-  if ($("a[href='#video-3']").not(".active").length > 0) {
+    if ($("a[href='#video-2']").not(".active").length > 0) {
 
-    if ($("#video-3 iframe").length > 0) {
-      var x = $("#video-3 iframe").attr("src");
-      if (x.indexOf('youtube') != -1) {
-        var y = "&autoplay=0&mute=0";
-        $("#video-3 iframe").attr("src", x + y);
+      if ($("#video-2 iframe").length > 0) {
+        var x = $("#video-2 iframe").attr("src");
+        if (x.indexOf('youtube') != -1) {
+          var y = "&autoplay=0&mute=0";
+          $("#video-2 iframe").attr("src", x + y);
+        }
+        if (x.indexOf('vimeo') != -1) {
+          var iframe = $('#vimeo-player')[0];
+          var player = $f(iframe);
+          player.api('pause');
+          console.log("Vimeo video");
+        }
       }
-      if (x.indexOf('vimeo') != -1) {
-        var iframe = $('#vimeo-player')[0];
-        var player = $f(iframe);
-        player.api('pause');
-        console.log("Vimeo video");
-      }
-    }
-    if ($("#video-3 video").length > 0) {
-      $("#video-3 video")[0].pause();
-    }
-  }
-
-  if ($("a[href='#video-4']").not(".active").length > 0) {
-
-    if ($("#video-4 iframe").length > 0) {
-      var x = $("#video-4 iframe").attr("src");
-      if (x.indexOf('youtube') != -1) {
-        var y = "&autoplay=0&mute=0";
-        $("#video-4 iframe").attr("src", x + y);
-      }
-      if (x.indexOf('vimeo') != -1) {
-        var iframe = $('#vimeo-player')[0];
-        var player = $f(iframe);
-        player.api('pause');
-
+      if ($("#video-2 video").length > 0) {
+        $("#video-2 video")[0].pause();
       }
     }
-    if ($("#video-4 video").length > 0) {
-      $("#video-4 video")[0].pause();
+
+    if ($("a[href='#video-3']").not(".active").length > 0) {
+
+      if ($("#video-3 iframe").length > 0) {
+        var x = $("#video-3 iframe").attr("src");
+        if (x.indexOf('youtube') != -1) {
+          var y = "&autoplay=0&mute=0";
+          $("#video-3 iframe").attr("src", x + y);
+        }
+        if (x.indexOf('vimeo') != -1) {
+          var iframe = $('#vimeo-player')[0];
+          var player = $f(iframe);
+          player.api('pause');
+          console.log("Vimeo video");
+        }
+      }
+      if ($("#video-3 video").length > 0) {
+        $("#video-3 video")[0].pause();
+      }
     }
-  }
 
- 
-});
+    if ($("a[href='#video-4']").not(".active").length > 0) {
 
+      if ($("#video-4 iframe").length > 0) {
+        var x = $("#video-4 iframe").attr("src");
+        if (x.indexOf('youtube') != -1) {
+          var y = "&autoplay=0&mute=0";
+          $("#video-4 iframe").attr("src", x + y);
+        }
+        if (x.indexOf('vimeo') != -1) {
+          var iframe = $('#vimeo-player')[0];
+          var player = $f(iframe);
+          player.api('pause');
+
+        }
+      }
+      if ($("#video-4 video").length > 0) {
+        $("#video-4 video")[0].pause();
+      }
+    }
+
+
+  });
+
+}
