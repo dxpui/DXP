@@ -1570,6 +1570,12 @@
      -webkit-transition: all 0.3s ease-in-out;
  }
 
+ /* a .info-card:focus {
+     background-color: var(--color-secondary);
+     transition: all 0.3s ease-in-out;
+     -webkit-transition: all 0.3s ease-in-out;
+ } */
+
  /***************SVG Icons Design ********************/
  .info-card .svg-arrow {
      fill: none;
@@ -3760,17 +3766,17 @@ padding-right: 80px; */
      color: var(--color-default);
  }
 
- .social-list-group ul li p::before {
+ .social-list-group ul li span::before {
      content: '✓';
      margin-right: 10px;
  }
 
- .social-list-group ul li p {
-     margin-bottom: 5px;
+ .social-list-group ul li span {
+    display: inline-block;
+    margin-bottom: 5px;
  }
 
- .social-list-group ul li span {
-     display: inline-block;
+ .social-list-group ul li div {
      margin-left: 20px;
  }
 
