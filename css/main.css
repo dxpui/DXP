@@ -47,7 +47,8 @@
      max-width: 1800px;
      margin: 0 auto;
  }
-/* *:focus{
+
+ /* *:focus{
     background-color: #FF8A00;
     padding: 10px;
 } */
@@ -231,6 +232,8 @@
  .btn-primary-border:focus {
      outline: 2px dotted var(--color-white);
      outline-offset: 5px;
+     background-color: var(--color-secondary);
+     color: var(--color-default);
  }
 
  .btn-secondary:focus {
@@ -368,6 +371,7 @@
 
  .btn-primary-white-border:hover {
      background-color: var(--color-secondary);
+     color: var(--color-default);
  }
 
  /* .btn:hover .fa-arrow-right{
@@ -541,7 +545,8 @@
      }
  }
 
- .search-icons:hover {
+ .search-icons:hover,
+ .search-icons:focus {
      background-color: var(--color-secondary);
  }
 
@@ -720,7 +725,8 @@
      padding-bottom: 18px;
  }
 
- .header .menu>ul>li>a:hover {
+ .header .menu>ul>li>a:hover,
+ .header .menu>ul>li>a:focus {
      border-bottom: 15px solid var(--color-secondary);
  }
 
@@ -732,7 +738,8 @@
 
  @media(max-width: 991px) {
 
-     .header .menu>ul>li>a:hover {
+     .header .menu>ul>li>a:hover,
+     .header .menu>ul>li>a:focus {
          border-bottom: 2px solid var(--color-secondary);
      }
 
@@ -1178,12 +1185,13 @@
  .card-video {
      height: 545px;
  }
+
  @media(max-width: 992px) {
-    .card-video {
-        height: 100%;
-        width: 100%;
-    }
-}
+     .card-video {
+         height: 100%;
+         width: 100%;
+     }
+ }
 
  .carousel-heroimg-cls .carousel-indicators {
      display: block;
@@ -1231,7 +1239,8 @@
 
  .carousel-indicators button:focus {
      outline: 2px solid var(--color-white);
-     outline-offset: 2px;
+     outline-offset: 4px;
+     opacity: .8;
  }
 
  .hero-image {
@@ -1245,12 +1254,14 @@
      height: 545px;
      object-fit: cover;
  }
+
  @media(max-width: 992px) {
-    .hero-image-carousel img {
-        height: 100%;
-        width: 100%
-    }
-}
+     .hero-image-carousel img {
+         height: 100%;
+         width: 100%
+     }
+ }
+
  .hero-image-carousel .carousel-caption {
      padding-top: 0;
      padding-bottom: 0;
@@ -2136,7 +2147,8 @@
 
  }
 
- .footer .social-icons-list a:hover {
+ .footer .social-icons-list a:hover,
+ .footer .social-icons-list a:focus {
      background-color: var(--color-white);
  }
 
@@ -2145,7 +2157,8 @@
      color: var(--color-white);
  }
 
- .footer .social-icons-list a:hover i {
+ .footer .social-icons-list a:hover i,
+ .footer .social-icons-list a:focus i {
      color: var(--color-default);
  }
 
@@ -2190,10 +2203,12 @@
  }
 
  @media(max-width: 992px) {
-    .footer section.social {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);;
-        margin-top: 30px !important;
-    }
+     .footer section.social {
+         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+         ;
+         margin-top: 30px !important;
+     }
+
      .footer .social-icons {
          display: flex;
          margin: 0 auto;
@@ -2376,6 +2391,12 @@
      background: var(--color-default);
  }
 
+.swiper-pagination-bullet:focus {
+     outline: 2px solid var(--color-white);
+     outline-offset: 4px;
+     opacity: .8;
+ }
+
  .news-green .info-card:hover,
  .news-green a:focus .info-card,
  .news-pink .info-card:hover,
@@ -2420,10 +2441,15 @@
  }
 
  .news-green .btn-primary:hover,
+ .news-green .btn-primary:focus,
  .news-pink .btn-primary:hover,
+ .news-pink .btn-primary:focus,
  .news-orange .btn-primary:hover,
+ .news-orange .btn-primary:focus,
  .news-yellow .btn-primary:hover,
- .news-gray .btn-primary:hover {
+ .news-yellow .btn-primary:focus,
+ .news-gray .btn-primary:hover,
+ .news-gray .btn-primary:focus {
      color: var(--color-default);
      background-color: var(--color-light-gray);
      border-color: var(--color-default);
@@ -2519,10 +2545,15 @@
  }
 
  .news-blue .btn-primary:hover,
+ .news-blue .btn-primary:focus,
  .news-lightblue .btn-primary:hover,
+ .news-lightblue .btn-primary:focus,
  .news-red .btn-primary:hover,
+ .news-red .btn-primary:focus,
  .news-maroon .btn-primary:hover,
- .news-megenta .btn-primary:hover {
+ .news-maroon .btn-primary:focus,
+ .news-megenta .btn-primary:hover,
+ .news-megenta .btn-primary:focus {
      color: var(--color-default);
      background-color: var(--color-light-gray);
      border-color: var(--color-default);
@@ -2982,30 +3013,116 @@
      line-height: 135%;
  }
 
- .title-block .card-body.gray-bg .hr-line {
+ /* .title-block .card-body.gray-bg .hr-line {
      border-bottom: 1px solid var(--color-default);
      width: 30px;
      margin: 20px 0;
- }
+ } */
 
- .title-block .card-body.lightblue-bg .hr-line,
- .title-block .card-body.blue-bg .hr-line {
+ .title-block .card-body .hr-line {
      border-bottom: 1px solid var(--color-white);
      width: 30px;
      margin: 20px 0;
  }
 
- /* .title-block .gray-bg h3,
- .title-block .gray-bg p {
-     color: var(--color-default);
- } */
+ .title-block h3,
+ .title-block p {
+     color: var(--color-white);
+ }
 
- .title-block .lightblue-bg h3,
+ /* .title-block .lightblue-bg h3,
  .title-block .lightblue-bg p,
  .title-block .blue-bg h3,
  .title-block .blue-bg p {
      color: var(--color-white);
+ } */
+
+ .title-block .svg-arrow {
+     fill: none;
  }
+
+ .title-block .svg-arrow circle {
+     stroke: var(--color-default);
+ }
+
+ .title-block .svg-arrow path {
+     stroke: var(--color-default);
+ }
+
+ .title-block:hover svg {
+     fill: var(--color-default);
+ }
+
+ .title-block:hover svg path {
+     stroke: var(--color-white);
+ }
+
+ /* .title-block .blue-bg .svg-arrow {
+     fill: var(--color-default);
+ } */
+ .title-block .blue-bg .svg-arrow circle {
+     stroke: var(--color-white);
+ }
+
+ .title-block .blue-bg .svg-arrow path {
+     stroke: var(--color-white);
+ }
+
+ .title-block:hover .blue-bg svg {
+     fill: var(--color-white);
+ }
+
+ .title-block:hover .blue-bg svg path {
+     stroke: var(--color-default);
+ }
+
+ /* .title-block .blue-bg .svg-arrow,
+ .news-lightblue .info-card .svg-arrow,
+ .news-red .info-card .svg-arrow,
+ .news-maroon .info-card .svg-arrow,
+ .news-megenta .info-card .svg-arrow {
+     fill: var(--color-white);
+ }
+
+ .title-block .blue-bg .svg-arrow circle,
+ .news-lightblue .info-card .svg-arrow circle,
+ .news-red .info-card .svg-arrow circle,
+ .news-maroon .info-card .svg-arrow circle,
+ .news-megenta .info-card .svg-arrow circle {
+     stroke: var(--color-white);
+ }
+
+ .title-block .blue-bg .svg-arrow path,
+ .news-lightblue .info-card .svg-arrow path,
+ .news-red .info-card .svg-arrow path,
+ .news-maroon .info-card .svg-arrow path,
+ .news-megenta .info-card .svg-arrow path {
+     stroke: var(--color-default);
+ }
+
+ .title-block .blue-bg .svg-arrow circle,
+ .news-lightblue .info-card:hover .svg-arrow circle,
+ .news-red .info-card:hover .svg-arrow circle,
+ .news-maroon .info-card:hover .svg-arrow circle,
+ .news-megenta .info-card:hover .svg-arrow circle {
+     stroke: var(--color-white);
+ }
+
+ .title-block .blue-bg .svg-arrow,
+ .news-lightblue .info-card:hover .svg-arrow,
+ .news-red .info-card:hover .svg-arrow,
+ .news-maroon .info-card:hover .svg-arrow,
+ .news-megenta .info-card:hover .svg-arrow {
+     fill: var(--color-default);
+ }
+
+ .title-block .blue-bg .svg-arrow path,
+ .news-lightblue .info-card:hover .svg-arrow path,
+ .news-red .info-card:hover .svg-arrow path,
+ .news-maroon .info-card:hover .svg-arrow path,
+ .news-megenta .info-card:hover .svg-arrow path {
+     stroke: var(--color-white);
+ } */
 
  /*--------------------------------------------------------------
 # Image carouse
