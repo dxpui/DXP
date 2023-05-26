@@ -1582,13 +1582,18 @@
  }
 
  .info-card:hover,
- .info-card:focus,
- .info-card:focus-visible {
+ .info-card:focus {
      background-color: var(--color-secondary);
      transition: all 0.3s ease-in-out;
      -webkit-transition: all 0.3s ease-in-out;
  }
 
+ a:focus .info-card {
+     background-color: var(--color-secondary);
+     transition: all 0.3s ease-in-out;
+     -webkit-transition: all 0.3s ease-in-out;
+     display: block;
+ }
  /***************SVG Icons Design ********************/
  .info-card .svg-arrow {
      fill: none;
