@@ -661,12 +661,13 @@
 --------------------------------------------------------------*/
  .brand-logo {
      height: 24px;
-     width: auto;
+     width: 100%;
  }
 
  @media(min-width: 992px) {
      .brand-logo {
          height: 36px;
+         width: auto;
      }
  }
 
