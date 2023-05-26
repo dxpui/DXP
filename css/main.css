@@ -660,13 +660,13 @@
 # Header 
 --------------------------------------------------------------*/
  .brand-logo {
-     height: 24px;
+     height: 36px;
      width: auto;
  }
 
  @media(max-width: 576px) {
      .brand-logo {
-         height: 36px;
+         height: 24px;
          width: 100%;
      }
  }
