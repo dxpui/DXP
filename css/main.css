@@ -655,7 +655,7 @@
 --------------------------------------------------------------*/
  .brand-logo {
      height: 24px;
-     width: 100%;
+     width: auto;
  }
 
  @media(min-width: 992px) {
@@ -1565,17 +1565,18 @@
  }
 
  .info-card:hover,
- .info-card:focus {
+ .info-card:focus,
+ .info-card:focus-visible {
      background-color: var(--color-secondary);
      transition: all 0.3s ease-in-out;
      -webkit-transition: all 0.3s ease-in-out;
  }
 
- /* a .info-card:focus {
+  .col:focus {
      background-color: var(--color-secondary);
      transition: all 0.3s ease-in-out;
      -webkit-transition: all 0.3s ease-in-out;
- } */
+ } 
 
  /***************SVG Icons Design ********************/
  .info-card .svg-arrow {
