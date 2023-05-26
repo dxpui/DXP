@@ -1589,12 +1589,6 @@
      -webkit-transition: all 0.3s ease-in-out;
  }
 
- .col:focus {
-     background-color: var(--color-secondary);
-     transition: all 0.3s ease-in-out;
-     -webkit-transition: all 0.3s ease-in-out;
- }
-
  /***************SVG Icons Design ********************/
  .info-card .svg-arrow {
      fill: none;
