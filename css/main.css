@@ -236,16 +236,16 @@
  .btn-primary:focus,
  .btn-primary-white-border:focus,
  .btn-primary-border:focus {
-     outline: 2px dotted var(--color-white);
-     outline-offset: 5px;
+     /* outline: 2px dotted var(--color-white);
+     outline-offset: 5px; */
      background-color: var(--color-secondary);
      color: var(--color-default);
  }
 
- .btn-secondary:focus {
+ /* .btn-secondary:focus {
      outline: 2px dotted var(--color-default);
      outline-offset: 10px;
- }
+ } */
 
  .btn-primary:active {
      background-color: var(--color-secondary);
@@ -1312,10 +1312,11 @@
  }
 
  @media(min-width: 992px) {
-    .hero-banner-narrow {
-        padding: 60px 10px 50px 10px;
-    }
-}
+     .hero-banner-narrow {
+         padding: 60px 10px 50px 10px;
+     }
+ }
+
  .hero-banner-full {
      color: var(--color-default);
      padding: 60px 40px 100px 80px;
@@ -1581,8 +1582,7 @@
      background-color: transparent;
  }
 
- .info-card:hover,
- .info-card:focus {
+ .info-card:hover {
      background-color: var(--color-secondary);
      transition: all 0.3s ease-in-out;
      -webkit-transition: all 0.3s ease-in-out;
@@ -1594,6 +1594,7 @@
      -webkit-transition: all 0.3s ease-in-out;
      display: block;
  }
+
  /***************SVG Icons Design ********************/
  .info-card .svg-arrow {
      fill: none;
@@ -1755,6 +1756,9 @@
  .info-card.hover-none:hover:before {
      background-color: var(--color-default);
  }
+ .info-card.news-info {
+     margin-bottom: 0px;
+ }
 
  .info-card.news-info a,
  .info-card.news-info .info-card-header {
@@ -1810,8 +1814,19 @@
      text-decoration: underline;
  }
 
+ .info-card.news-center .info-card-header {
+     margin-bottom: 24px;
+     color: var(--color-default);
+     font-size: 14px;
+ }
+
+ .info-card.news-center .info-card-header:hover {
+     text-decoration: underline;
+ }
+
  .info-card.news-center .date {
      font-size: 14px;
+     color: var(--color-default);
  }
 
  .info-card.news-center:hover {
@@ -1826,7 +1841,17 @@
 
  .info-card.news-center span.date::before {
      border-color: 1px solid var(--color-default);
-     bottom: 35px
+     bottom: 35px;
+     color: var(--color-default);
+ }
+
+ a:focus .info-card.news-center {
+     background-color: transparent;
+     outline-offset: 4px;
+ }
+
+ a:focus .info-card.news-center:before {
+     display: none;
  }
 
  .banner-detail {
