@@ -1680,13 +1680,14 @@
      width: 100%;
      object-fit: cover;
      object-position: top left;
-     background-color: #D4D4D4;
  }
 
  .info-card .card-img-large {
      height: 320px;
      width: 100%;
      object-fit: cover;
+     background-color: var(--color-light-gray);
+     display: block;
  }
 
  .info-card-video {
@@ -1756,6 +1757,7 @@
  .info-card.hover-none:hover:before {
      background-color: var(--color-default);
  }
+
  .info-card.news-info {
      margin-bottom: 0px;
  }
@@ -1802,6 +1804,8 @@
 
  .info-card.news-center .card-img-small {
      height: 150px;
+     background-color: var(--color-light-gray);
+     display: block;
  }
 
  .info-card.news-center a {
