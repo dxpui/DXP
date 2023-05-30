@@ -210,7 +210,9 @@
  .yellow-bg {
      background-color: var(--color-yellow);
  }
-
+ .orange-bg {
+    background-color: var(--color-secondary);
+}
  /*--------------------------------------------------------------
 # All Buttons
 --------------------------------------------------------------*/
@@ -221,11 +223,12 @@
      border-radius: 30px;
      font-style: normal;
      font-weight: 400;
-     padding: 10px 20px;
+     padding: 10px 15px;
  }
 
  .btn-primary:hover,
- .btn-primary:focus {
+ .btn-primary:focus,
+ .btn-primary:active {
      background-color: var(--color-secondary);
      color: var(--color-default);
      border: 1px solid var(--color-default);
@@ -1149,7 +1152,7 @@
      margin-right: auto;
      font-size: 14px;
      color: var(--color-white);
-
+     width: 100%;
  }
 
  .sub-topic:hover {
@@ -1482,7 +1485,7 @@
 # Breadcrumb 
 --------------------------------------------------------------*/
  .breadcrumb-position {
-     margin-bottom: -37px;
+     margin-bottom: -29px;
      position: relative;
      width: 85%;
      top: 10px;
@@ -1501,10 +1504,22 @@
      }
  }
 
+ .breadcrumb-position span,
+ .breadcrumb-position a {
+     display: inline-block;
+     white-space: nowrap;
+     max-width: 100px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }
+
  .breadcrumb-position a {
      color: var(--color-default);
      text-decoration: underline;
-     padding: 5px;
+ }
+
+ .breadcrumb-position span {
+     color: var(--color-default);
  }
 
  .breadcrumb-position.text-light a {
@@ -1514,6 +1529,7 @@
 
  .breadcrumb-position .breadcrumb {
      margin-left: 10px;
+     margin-bottom: 0;
  }
 
  .breadcrumb-position .breadcrumb .breadcrumb-item {
@@ -1657,6 +1673,7 @@
      padding: 2px 10px 2px 0;
      color: var(--color-default);
      line-height: 24px;
+     width: 100%;
  }
 
  .info-card a {
@@ -3058,8 +3075,7 @@
 
  .title-block .card-body {
      position: relative;
-     padding-left: 40px;
-     padding-right: 40px;
+     padding: 40px;
      height: 100%;
      display: flex;
      align-items: center;
@@ -3088,13 +3104,25 @@
  .title-block p {
      color: var(--color-white);
  }
-
- /* .title-block .lightblue-bg h3,
- .title-block .lightblue-bg p,
- .title-block .blue-bg h3,
- .title-block .blue-bg p {
-     color: var(--color-white);
- } */
+ .title-block .yellow-bg h3,
+ .title-block .yellow-bg p,
+ .title-block .pink-bg h3,
+ .title-block .pink-bg p,
+ .title-block .green-bg h3,
+ .title-block .green-bg p,
+ .title-block .orange-bg h3,
+ .title-block .orange-bg p,
+ .title-block .gray-bg h3,
+ .title-block .gray-bg p {
+     color: var(--color-default);
+ }
+ .title-block .yellow-bg.card-body .hr-line,
+ .title-block .pink-bg.card-body .hr-line,
+ .title-block .green-bg.card-body .hr-line,
+ .title-block .orange-bg.card-body .hr-line,
+ .title-block .gray-bg.card-body .hr-line {
+    border-bottom: 1px solid var(--color-default);
+}
 
  .title-block .svg-arrow {
      fill: none;
@@ -3116,22 +3144,51 @@
      stroke: var(--color-white);
  }
 
- /* .title-block .blue-bg .svg-arrow {
-     fill: var(--color-default);
- } */
- .title-block .blue-bg .svg-arrow circle {
+ .title-block .blue-bg .svg-arrow circle,
+ .title-block .lightblue-bg .svg-arrow circle,
+ .title-block .red-bg .svg-arrow circle,
+ .title-block .megenta-bg .svg-arrow circle, 
+ .title-block .maroon-bg .svg-arrow circle{ 
      stroke: var(--color-white);
  }
 
- .title-block .blue-bg .svg-arrow path {
+ .title-block .blue-bg .svg-arrow path,
+ .title-block .lightblue-bg .svg-arrow path,
+ .title-block .red-bg .svg-arrow path,
+ .title-block .megenta-bg .svg-arrow path,
+ .title-block .maroon-bg .svg-arrow path{ 
      stroke: var(--color-white);
  }
 
- .title-block:hover .blue-bg svg {
+ .title-block:hover .blue-bg svg,
+ .title-block:hover .lightblue-bg svg,
+ .title-block:hover .red-bg svg,
+ .title-block:hover .megenta-bg svg,
+ .title-block:hover .maroon-bg svg {
      fill: var(--color-white);
  }
 
- .title-block:hover .blue-bg svg path {
+ .title-block:hover .blue-bg svg path,
+ .title-block:hover .lightblue-bg svg path,
+ .title-block:hover .red-bg svg path,
+ .title-block:hover .megenta-bg svg path,
+ .title-block:hover .maroon-bg svg path { 
+     stroke: var(--color-default);
+ }
+
+ .title-block .red-bg .svg-arrow circle {
+     stroke: var(--color-white);
+ }
+
+ .title-block .red-bg .svg-arrow path {
+     stroke: var(--color-white);
+ }
+
+ .title-block:hover .red-bg svg {
+     fill: var(--color-white);
+ }
+
+ .title-block:hover .red-bg svg path {
      stroke: var(--color-default);
  }
 
