@@ -112,11 +112,11 @@
      }
  }
 
- /* ul {
+ ul {
      list-style: none;
      margin: 0;
      padding: 0;
- } */
+ } 
 
  .w-90 {
      width: 90% !important;
@@ -1518,7 +1518,7 @@
  .breadcrumb-position a {
      display: inline-block;
      white-space: nowrap;
-     max-width: 130px;
+     max-width: 160px;
      overflow: hidden;
      text-overflow: ellipsis;
  }
@@ -3849,7 +3849,11 @@ padding-right: 80px; */
      line-height: 43px;
      color: var(--color-default);
  }
-
+ .social-list-group ul{
+    list-style: disc;
+    margin: auto;
+    padding: unset;
+ }
  .social-list-group {
      padding: 50px 100px;
  }
