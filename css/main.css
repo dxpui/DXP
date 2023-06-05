@@ -423,7 +423,14 @@
      background-color: var(--color-default);
      font-size: 14px;
  }
-
+.blue-bg  .video-btn {
+    background-color: var(--color-white);
+    color: var(--color-default);
+}
+.blue-bg  .video-btn:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-default);
+}
  /*--------------------------------------------------------------
 # Multicolor Line
 --------------------------------------------------------------*/
@@ -1889,6 +1896,7 @@
 
  .banner-detail {
      width: 75%;
+     word-wrap: break-word;
  }
 
  .banner-news-btn {
@@ -2973,6 +2981,7 @@
      height: 140px;
      object-fit: cover;
      width: 100%;
+     background-color: var(--color-light-gray);
  }
 
  .serach-date {
@@ -3090,8 +3099,8 @@
      position: relative;
      padding: 40px;
      height: 100%;
-     display: flex;
-     align-items: center;
+     /* display: flex;
+     align-items: center; */
  }
 
  .title-block .card-body h3 {
@@ -4002,7 +4011,7 @@ padding-right: 80px; */
      list-style: none;
  }
 
- @media(max-width: 991px) {
+ @media(max-width: 768px) {
      .pagination-block {
          display: block;
      }
