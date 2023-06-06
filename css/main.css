@@ -241,7 +241,7 @@
  .btn-primary:hover,
  .btn-primary:focus,
  .btn-primary:active {
-     background-color: var(--color-secondary);
+     background-color: var(--color-secondary) !important;
      color: var(--color-default);
      border: 1px solid var(--color-default);
      -webkit-transition: all .3s linear 0s;
