@@ -966,12 +966,12 @@
                   <input type="text" class="form-control" id="dd">
                 </div>
                 <div class="mb-2 form-check">
-                  <input type="checkbox" class="form-check-input" id="cc">
-                  <label class="form-check-label" for="cc">Default checkbox</label>
+                  <input type="checkbox" class="form-check-input" id="ee" role="checkbox" aria-checked="false" aria-labelledby="chk1-label">
+                  <label class="form-check-label" for="ee">Default checkbox</label>
                 </div>
                 <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="dd">
-                  <label class="form-check-label" for="dd">Default checkbox</label>
+                  <input type="checkbox" class="form-check-input" id="ff" role="checkbox" aria-checked="false" aria-labelledby="chk2-label">
+                  <label class="form-check-label" for="ff">Default checkbox</label>
                 </div>
                 <div class="row">
                   <div class="col-12">
@@ -1528,37 +1528,42 @@
           <div class="col-12 col-md-10 mx-auto">
             <div class="container social-list-group gray-bg">
               <h3 class="mb-3">How a social tariff could help you</h3>
-              <ul>
+              <ul class="ullist">
                 <li class="mb-3">
-                  <span class="fw-bold">It's available to those on a variety of benefits</span>
+                  <span class="li-tick">It's available to those on a variety of benefits</span>
                   <div>If you or someone in your household claims Universal Credit, you could switch to any of the
                     tariffs available.</div>
+
+                    <ul>
+                      <li>ssd</li>
+                      <li>ssd</li>
+                    </ul>
                 </li>
                 <li class="mb-3">
-                  <span class="fw-bold">It's cheaper than a regular package</span>
+                  <span class="li-tick">It's cheaper than a regular package</span>
                   <div>Current prices range from £10 to £20.</div>
                 </li>
                 <li class="mb-3">
-                  <span class="fw-bold">Fast, unlimited broadband</span>
+                  <span class="li-tick">Fast, unlimited broadband</span>
                   <div>Most tariffs offer superfast broadband at speeds over 30 Mbit/sfast enough for you to keep in
                     touch with friends and family, stream HD films or shop online.</div>
                 </li>
                 <li class="mb-3">
-                  <span class="fw-bold">You'll pay next-to-nothing to get set up</span>
+                  <span class="li-tick">You'll pay next-to-nothing to get set up</span>
                   <div>If you do have to pay any setup costs, these should only be small. Your provider should tell you
                     before you sign up.</div>
                 </li>
                 <li class="mb-3">
-                  <span class="fw-bold">It could cost nothing to switch</span>
+                  <span class="li-tick">It could cost nothing to switch</span>
                   <div>If your provider offers a social tariff, you can switch to it at any time, free of
                     charge.</div>
                 </li>
                 <li class="mb-3">
-                  <span class="fw-bold">The price won't go up mid-contract </span>
+                  <span class="li-tick">The price won't go up mid-contract </span>
                   <div>You won't pay any more than what you agree at the start of the contract.</div>
                 </li>
                 <li class="mb-3">
-                  <span class="fw-bold">It costs nothing to leave </span>
+                  <span class="li-tick">It costs nothing to leave </span>
                   <div>You won't pay a fee to leave the tariff before the end of your contract.</div>
                 </li>
               </ul>
@@ -1573,35 +1578,35 @@
         <div class="row">
           <div class="col-12 col-md-10 mx-auto">
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-auto-close="false" id="dropdownMenuButton1"
-                data-bs-toggle="dropdown" aria-expanded="false">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-auto-close="true"
+                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown button
-              </button>
+              </button> 
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="javascript:void(0)">
+                <li><div class="dropdown-item">
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                       <label class="form-check-label" for="flexCheckDefault">
                         Default checkbox
                       </label>
                     </div>
-                  </a></li>
-                <li><a class="dropdown-item" href="javascript:void(0)">
+                  </div></li>
+                <li><div class="dropdown-item">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                      <label class="form-check-label" for="flexCheckDefault1">
                         Default checkbox
                       </label>
                     </div>
-                  </a></li>
-                <li><a class="dropdown-item" href="javascript:void(0)">
+                  </div></li>
+                <li><div class="dropdown-item">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                      <label class="form-check-label" for="flexCheckDefault2">
                         Default checkbox
                       </label>
                     </div>
-                  </a></li>
+                  </div></li>
               </ul>
             </div>
           </div>
