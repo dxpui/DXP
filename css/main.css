@@ -1527,7 +1527,7 @@
  .breadcrumb-position a {
      display: inline-block;
      white-space: nowrap;
-     max-width: 160px;
+     max-width: 165px;
      overflow: hidden;
      text-overflow: ellipsis;
  }
