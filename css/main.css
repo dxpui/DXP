@@ -3875,19 +3875,19 @@ padding-right: 80px; */
      list-style: none;
      margin: 0;
      padding: 0;
- }
+ } 
 
- .social-list-group ul li .li-tick::before {
+ .social-list-group  .li-tick::before {
      content: '✓';
      margin-right: 10px;
  }
 
- .social-list-group ul li .li-tick {
+ .social-list-group .li-tick {
      display: inline-block;
      font-weight: 700;
  }
 
- .social-list-group ul li div {
+ .social-list-group .list-item {
      margin-left: 20px;
  }
 
