@@ -180,7 +180,18 @@ $(document).ready(function () {
     videoPlayer()
   }
 });
+// caroseul count full size img code starts here
+$("#carousel-count .carousel-inner .carousel-item img").click(function () {
+  $("#carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
+});
+$("#carousel-count .carousel-inner .carousel-item").on("keydown", function (event) {
 
+  var id = event.keyCode;
+  if (id == 13) {
+    $("#carousel-count .carousel-inner .carousel-item img").trigger('click');
+    $("#carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
+  }
+});
 // showfilter code
 function showfiltermodal() {
   $(".modal-topic-list li").click(function () {
@@ -393,3 +404,11 @@ function videoPlayer() {
   });
 
 }
+$(".langauge-change").click(function (e) {
+  e.preventDefault();
+  if ($(".back-to-top span").text() == "Back to top") {
+    $(".back-to-top span").text("yn ôl i'r brig");
+  } else {
+    $(".back-to-top span").text("Back to top");
+  }
+});
