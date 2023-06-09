@@ -3071,9 +3071,9 @@
  /*--------------------------------------------------------------
 # Title Block
 --------------------------------------------------------------*/
- /* .title-block {
+  .title-block.two {
     padding: 15px;
-} */
+} 
  .title-block .title-block-img {
      width: 100%;
      height: 100%;
@@ -3083,13 +3083,13 @@
      transition: .3s ease-in-out;
  }
 
- .title-block:hover .title-block-img {
+  .title-block.one:hover .title-block-img {
      transform: scale(1.05);
      -ms-transform: scale(1.05);
      -webkit-transform: scale(1.05);
      -webkit-transition: .3s ease-in-out;
      transition: .3s ease-in-out;
- }
+ } 
 
  .title-block .card-body {
      position: relative;
@@ -3121,14 +3121,13 @@
      color: var(--color-white);
  }
 
- .title-block:hover .blue-bg {
-     background-color: var(--color-secondary);
+ .title-block:hover .card-body {
      transition: all 0.5s ease;
  }
 
- /* .title-block:hover {
+ .title-block.two:hover {
      background-color: var(--color-secondary)
- } */
+ }
 
  .title-block .yellow-bg h3,
  .title-block .yellow-bg p,
@@ -3613,14 +3612,23 @@
      padding: 0.5rem 1rem;
  }
 
- .table-lookup tr th:first-child {
+ .table-search tr th:first-child {
      width: 72px;
  }
 
- .table-lookup tr td:first-child {
+ .table-search tr td:first-child {
      background-color: var(--color-primary);
      color: var(--color-white);
  }
+ .table-search{
+    caption-side: top;
+ }
+ .table-search caption{
+    text-align: center;
+ }
+ /* #allsearch table tbody tr th {
+     width: 72px;
+ } */
 
  /*--------------------------------------------------------------
 #  Notification Block
@@ -4289,4 +4297,46 @@ padding-right: 80px; */
 
  .testimonial-bg .testimonial-name {
      color: var(--color-white);
+ }
+
+ .blur-load {
+     background-size: cover;
+     background-position: center;
+ }
+
+ .blur-load::before {
+     content: "";
+     position: absolute;
+     inset: 0;
+     opacity: 0;
+     animation: pulse 2.5s infinite;
+     background-color: rgba(255, 255, 255, 0.1);
+ }
+
+ @keyframes pulse {
+     0% {
+         opacity: 0;
+     }
+
+     50% {
+         opacity: 0.5;
+     }
+
+     100% {
+         opacity: 0;
+     }
+ }
+
+ .blur-load.loaded::before {
+     animation: none;
+     content: none;
+ }
+
+ .blur-load>img {
+     opacity: 0;
+     transition: opacity 250ms ease-in-out;
+ }
+
+ .blur-load.loaded img {
+     opacity: 1;
  }

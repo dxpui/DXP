@@ -221,85 +221,124 @@ function carouselCount() {
 }
 
 /////////////////////////// Lookup Table/////////////////////////////////
-function lookupTable() {
-  window.onload = function () { searchTable() };
-  function searchTable() {
-    var input, filter, table, tr, td, i, j, txtValue;
-    input = document.getElementById("searchInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-    var count = 0;
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td");
-      tr[i].style.display = "";
-      for (j = 0; j < td.length; j++) {
-        txtValue = td[j].textContent || td[j].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          count++;
-          break;
-        } else if (j == td.length - 1) {
-          tr[i].style.display = "none";
+ 
+
+var phoneSearch = {
+  sel: {
+    targetTable: document.getElementById('allserach'),
+    noResults: document.getElementById('noresults'),
+    input: document.getElementById('SearchInputPhone')
+  },
+  vars: {
+    numberJson: {}
+  },
+  init: function () {
+    // get JSON from table
+    this.vars.numberJson = JSON.stringify(
+      this.tableToObj(this.sel.targetTable)
+    );
+    // event on keyup
+    this.onEnterNumber();
+  },
+  tableToObj: function (table) {
+    var trs = table.rows,
+      trl = trs.length,
+      i = 0,
+      j = 0,
+      keys = [],
+      obj,
+      ret = [];
+
+    for (; i < trl; i++) {
+      if (i == 0) {
+        for (; j < trs[i].children.length; j++) {
+          keys.push(trs[i].children[j].innerHTML);
         }
+      } else {
+        obj = {};
+        for (j = 0; j < trs[i].children.length; j++) {
+          obj[keys[j]] = trs[i].children[j].innerHTML;
+        }
+        ret.push(obj);
       }
     }
-    document.getElementById("resultCount").textContent = count + " result(s) are shown";
-    var noResults = document.getElementById("noResults");
-    if (count == 0) {
-      noResults.style.display = "";
-      resultCount.style.display = "none";
-    } else {
-      noResults.style.display = "none";
-      resultCount.style.display = "";
+
+    return ret;
+  },
+  onEnterNumber: function () {
+    var self = this;
+    this.sel.input.addEventListener('keyup', function (e) {
+      var searchValue = e.currentTarget.value;
+      // only numbers max 6 chars
+      if (/^[0-9]{1,6}$/.test(searchValue)) {
+        self.doNumberSearch(searchValue);
+        // only numbers && more then 6
+      } else if (/^\d+$/.test(searchValue)) {
+        searchValue = searchValue.slice(0, 6);
+        self.doNumberSearch(searchValue);
+      } else {
+        self.doStringSearch(searchValue);
+      }
+    });
+  },
+  prepareTab: function (searchValue) {
+    var regex = new RegExp(searchValue, 'i'),
+      regexNum = new RegExp('^' + searchValue, 'm'),
+      self = this;
+
+    this.sel.targetTable.style.display = "";
+    this.sel.noResults.style.display = "none";
+
+    $.each(JSON.parse(this.vars.numberJson), function (key, val) {
+      // ##### this will break if the Table header rows are changed and the values are different in Welsh #####
+      if ((regexNum.test(val.Code)) || (regex.test(val.Area))) {
+        self.sel.targetTable.rows[key + 1].style.display = "";
+      }
+      else {
+        self.sel.targetTable.rows[key + 1].style.display = "none";
+      }
+    });
+  },
+  doStringSearch: function (searchValue) {
+    this.prepareTab(searchValue);
+
+    var tableLength = $('#allserach tbody > tr:visible').length;
+
+    if (tableLength < 1) {
+      this.sel.noResults.style.display = "";
+      $('#SearchInformation').html('');
+      this.sel.targetTable.style.display = "none";
     }
+    else {
+      $('#SearchInformation').html(tableLength + ' results are shown');
+      $('#resultsinfo').show();
+    }
+  },
+  doNumberSearch: function (searchValue) {
+    this.prepareTab(searchValue);
+    var tableLength = $('#allserach tbody > tr:visible').length;
+
+    if (tableLength < 1) {
+      if (!searchValue.length) {
+        this.sel.noResults.style.display = "";
+        $('#SearchInformation').html('');
+        this.sel.targetTable.style.display = "none";
+      } else {
+        searchValue = searchValue.slice(0, -1);
+        this.doNumberSearch(searchValue);
+      }
+    }
+    else {
+      $('#SearchInformation').html(tableLength + ' results are shown');
+      $('#resultsinfo').show();
+    }
+
   }
 }
-var data = [
-  {
-    "Code": "0114",
-    "Area": "Sheffield",
-  },
-  {
-    "Code": "0115",
-    "Area": "Nottingham",
-  },
-  {
-    "Code": "0116",
-    "Area": "Leicester",
-  },
-  {
-    "Code": "0117",
-    "Area": "Bristol",
-  },
-  {
-    "Code": "01200",
-    "Area": "Clitheroe",
-  },
-  {
-    "Code": "01202",
-    "Area": "Bournemouth",
-  },
-];
 
-$(document).ready(function () {
-  var html = '<table class="table table-bordered table-responsive table-blue table-lookup" id="myTable">';
-  html += '<tr>';
-  var flag = 0;
-  $.each(data[0], function (index, value) {
-    html += '<th>' + index + '</th>';
-  });
-  html += '</tr>';
-  $.each(data, function (index, value) {
-    html += '<tr>';
-    $.each(value, function (index2, value2) {
-      html += '<td>' + value2 + '</td>';
-    });
-    html += '<tr>';
-  });
-  html += '</table>';
-  $('#tableData').html(html);
-});
+phoneSearch.init();
 
+///////////////////////////////Back to top/////////////////////////////////////
 var btn = $('.back-to-top');
 
 $(window).scroll(function () {
