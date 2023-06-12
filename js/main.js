@@ -221,7 +221,7 @@ function carouselCount() {
 }
 
 /////////////////////////// Lookup Table/////////////////////////////////
- 
+
 
 var phoneSearch = {
   sel: {
@@ -269,6 +269,14 @@ var phoneSearch = {
     var self = this;
     this.sel.input.addEventListener('keyup', function (e) {
       var searchValue = e.currentTarget.value;
+      var currentcharcter = this.selectionStart,
+        regx = /[^a-z0-9 .]/gi,
+        currentval = $(this).val();
+      if (regx.test(currentval)) {
+        $(this).val(currentval.replace(regx, ''));
+        currentcharcter--;
+      }
+      this.setSelectionRange(currentcharcter, currentcharcter);
       // only numbers max 6 chars
       if (/^[0-9]{1,6}$/.test(searchValue)) {
         self.doNumberSearch(searchValue);
@@ -337,6 +345,17 @@ var phoneSearch = {
 }
 
 phoneSearch.init();
+
+// $('#SearchInputPhone').on('input', function () {
+//   var c = this.selectionStart,
+//     r = /[^a-z0-9 .]/gi,
+//     v = $(this).val();
+//   if (r.test(v)) {
+//     $(this).val(v.replace(r, ''));
+//     c--;
+//   }
+//   this.setSelectionRange(c, c);
+// });
 
 ///////////////////////////////Back to top/////////////////////////////////////
 var btn = $('.back-to-top');
@@ -450,4 +469,17 @@ $(".langauge-change").click(function (e) {
   } else {
     $(".back-to-top span").text("Back to top");
   }
+});
+
+
+
+$(function () {
+  $(window).on('load', function () {
+    $('[data-src]').each(function () {
+      var $this = $(this),
+        src = $(this).data('src');
+      $this.attr('src', src);
+      console.log(src);
+    });
+  });
 });
