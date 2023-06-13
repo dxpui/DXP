@@ -215,7 +215,7 @@ function carouselCount() {
   $('.carouselnumber').html('' + currentIndex + '/' + totalItems + '');
   var myCarousel = document.getElementById('carousel-count');
   myCarousel.addEventListener('slid.bs.carousel', function () {
-    currentIndex = $('div.active').index() + 1;
+    currentIndex = $('#carousel-count div.active').index() + 1;
     $('.carouselnumber').html('' + currentIndex + '/' + totalItems + '');
   })
 }
@@ -346,16 +346,6 @@ var phoneSearch = {
 
 phoneSearch.init();
 
-// $('#SearchInputPhone').on('input', function () {
-//   var c = this.selectionStart,
-//     r = /[^a-z0-9 .]/gi,
-//     v = $(this).val();
-//   if (r.test(v)) {
-//     $(this).val(v.replace(r, ''));
-//     c--;
-//   }
-//   this.setSelectionRange(c, c);
-// });
 
 ///////////////////////////////Back to top/////////////////////////////////////
 var btn = $('.back-to-top');
