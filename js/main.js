@@ -179,6 +179,10 @@ $(document).ready(function () {
   if ($('#video-player').length > 0) {
     videoPlayer()
   }
+  if ($('#SearchInputPhone').length > 0) {
+    lookupfun()
+  }
+
 });
 // caroseul count full size img code starts here
 $("#carousel-count .carousel-inner .carousel-item img").click(function () {
@@ -343,9 +347,9 @@ var phoneSearch = {
 
   }
 }
-
-phoneSearch.init();
-
+function lookupfun() {
+  phoneSearch.init();
+}
 
 ///////////////////////////////Back to top/////////////////////////////////////
 var btn = $('.back-to-top');
