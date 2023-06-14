@@ -26,6 +26,7 @@
      --color-light-gray: #F2F2F2;
      --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
      --font-family-default: 'Sora', sans-serif;
+     --line-height-default: 1.5;
  }
 
  /* Smooth scroll behavior */
@@ -41,7 +42,7 @@
      font-family: var(--font-family-default);
      font-weight: 500;
      font-size: 14px;
-     line-height: 150%;
+     line-height: var(--line-height-default);
      letter-spacing: -1%;
      overflow-x: hidden;
      max-width: 1800px;
@@ -59,6 +60,10 @@
 
  a:hover {
      color: var(--color-default);
+ }
+
+ p {
+     word-wrap: break-word;
  }
 
  /* Used for: Landing page titles */
@@ -112,7 +117,7 @@
      }
  }
 
- ul {
+ .menu ul {
      list-style: none;
      margin: 0;
      padding: 0;
@@ -1291,6 +1296,7 @@
  .hero-image-carousel img {
      height: 545px;
      object-fit: cover;
+     background-color: var(--color-light-gray);
  }
 
  @media(max-width: 992px) {
@@ -3071,9 +3077,10 @@
  /*--------------------------------------------------------------
 # Title Block
 --------------------------------------------------------------*/
-  .title-block.two {
-    padding: 15px;
-} 
+ /* .title-block.two {
+     padding: 15px;
+ } */
+
  .title-block .title-block-img {
      width: 100%;
      height: 100%;
@@ -3083,13 +3090,13 @@
      transition: .3s ease-in-out;
  }
 
-  .title-block.one:hover .title-block-img {
+ .title-block:hover .title-block-img {
      transform: scale(1.05);
      -ms-transform: scale(1.05);
      -webkit-transform: scale(1.05);
      -webkit-transition: .3s ease-in-out;
      transition: .3s ease-in-out;
- } 
+ }
 
  .title-block .card-body {
      position: relative;
@@ -3125,9 +3132,9 @@
      transition: all 0.5s ease;
  }
 
- .title-block.two:hover {
+ /* .title-block.two:hover {
      background-color: var(--color-secondary)
- }
+ } */
 
  .title-block .yellow-bg h3,
  .title-block .yellow-bg p,
@@ -3608,7 +3615,7 @@
      vertical-align: middle;
  }
 
- .table-blue>:not(caption)>*>* {
+ .table-search>:not(caption)>*>* {
      padding: 0.5rem 1rem;
  }
 
@@ -3620,12 +3627,15 @@
      background-color: var(--color-primary);
      color: var(--color-white);
  }
- .table-search{
-    caption-side: top;
+
+ .table-search {
+     caption-side: top;
  }
- .table-search caption{
-    text-align: center;
+
+ .table-search caption {
+     text-align: center;
  }
+
  /* #allsearch table tbody tr th {
      width: 72px;
  } */

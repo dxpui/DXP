@@ -186,10 +186,7 @@ $(document).ready(function () {
 });
 // caroseul count full size img code starts here
 $("#carousel-count .carousel-inner .carousel-item img").click(function () {
-    $("#carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
-    var myModal = new bootstrap.Modal(document.getElementById('carousel-count-fullsize-img'))
-    myModal.show()
-    
+    $("#carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") }); 
 });
 $("#carousel-count .carousel-inner .carousel-item").on("keydown", function (event) {
 
@@ -218,11 +215,11 @@ function clearmodalcontent() {
 function carouselCount() {
     var totalItems = $('#carousel-count .carousel-item').length;
 
-    var currentIndex = $('div.active').index() + 1;
+    var currentIndex = $('#carousel-count div.active').index() + 1;
     $('.carouselnumber').html('' + currentIndex + '/' + totalItems + '');
     var myCarousel = document.getElementById('carousel-count');
     myCarousel.addEventListener('slid.bs.carousel', function () {
-        currentIndex = $('div.active').index() + 1;
+      currentIndex = $('#carousel-count div.active').index() + 1;
         $('.carouselnumber').html('' + currentIndex + '/' + totalItems + '');
     })
 }
