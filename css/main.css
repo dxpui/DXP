@@ -1700,7 +1700,7 @@
  }
 
  .info-card .card-img-small {
-     height: 200px;
+     /* height: 200px; */
      width: 100%;
      object-fit: cover;
      object-position: top left;
@@ -2991,6 +2991,26 @@
  /*--------------------------------------------------------------
 # Callout
 --------------------------------------------------------------*/
+ .static-callout-block {
+     padding: 20px;
+ }
+
+ .static-callout {
+     text-align: center;
+     padding: 20px 20px;
+     border-bottom: 1px solid black;
+ }
+
+ .static-callout p {
+     font-size: 14px;
+     margin: 20px 0;
+ }
+
+ .static-callout h1 {
+     color: var(--color-megenta);
+     min-height: 50px;
+ }
+
  .callout-light {
      text-align: center;
      padding: 20px 20px;
