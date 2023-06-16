@@ -320,7 +320,7 @@ var phoneSearch = {
   doStringSearch: function (searchValue) {
     this.prepareTab(searchValue);
 
-    var tableLength = $('#allsearch-table table tbody > tr:visible').length -1;
+    var tableLength = $('#allsearch-table table tbody > tr:visible').length - 1;
 
     if (tableLength < 1) {
       this.sel.noResults.style.display = "";
