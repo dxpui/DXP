@@ -2997,6 +2997,33 @@
  /*--------------------------------------------------------------
 # Callout
 --------------------------------------------------------------*/
+
+ .static-callout-block.lightblue-bg .static-callout,
+ .static-callout-block.red-bg .static-callout,
+ .static-callout-block.blue-bg .static-callout,
+ .static-callout-block.megenta-bg .static-callout,
+ .static-callout-block.maroon-bg .static-callout {
+     margin: 0;
+     border-left: 1px solid var(--color-white);
+     border-bottom: 1px solid var(--color-white);
+ }
+
+ .static-callout-block.green-bg .static-callout,
+ .static-callout-block.pink-bg .static-callout,
+ .static-callout-block.orange-bg .static-callout,
+ .static-callout-block.yellow-bg .static-callout,
+ .static-callout-block.gray-bg .static-callout {
+     margin: 0;
+     border-left: 1px solid var(--color-default);
+     border-bottom: 1px solid var(--color-default);
+ }
+
+ .static-callout-block.red-bg .static-callout h1,
+ .static-callout-block.megenta-bg .static-callout h1,
+ .static-callout-block.pink-bg .static-callout h1 {
+     color: var(--color-default);
+ }
+
  .callout-grid {
      width: 100%;
      display: flex;
@@ -3026,18 +3053,6 @@
      color: var(--color-megenta);
      min-height: 50px;
  }
-
- .static-callout-block.lightblue-bg .static-callout,
- .static-callout-block.red-bg .static-callout {
-     margin: 0;
-     border-left: 1px solid var(--color-white);
-     border-bottom: 1px solid var(--color-white);
- }
-
- .static-callout-block.red-bg .static-callout h1 {
-     color: var(--color-default);
- }
-
 
 
 
