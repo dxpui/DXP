@@ -2997,13 +2997,6 @@
  /*--------------------------------------------------------------
 # Callout
 --------------------------------------------------------------*/
-
- .static-callout-block.lightblue-bg  .static-callout {
-    margin: 0;
-    border-left: 1px solid var(--color-white);
-    border-bottom: 1px solid var(--color-white);
-}
-
  .callout-grid {
      width: 100%;
      display: flex;
@@ -3018,7 +3011,7 @@
  .static-callout {
      text-align: center;
      padding: 20px 20px;
-     border-bottom: 1px solid black;
+     border-bottom: 1px solid var(--color-black);
      border-left: 0;
      margin: 20px;
      height: 100%;
@@ -3033,6 +3026,20 @@
      color: var(--color-megenta);
      min-height: 50px;
  }
+
+ .static-callout-block.lightblue-bg .static-callout,
+ .static-callout-block.red-bg .static-callout {
+     margin: 0;
+     border-left: 1px solid var(--color-white);
+     border-bottom: 1px solid var(--color-white);
+ }
+
+ .static-callout-block.red-bg .static-callout h1 {
+     color: var(--color-default);
+ }
+
+
+
 
  .callout-light {
      text-align: center;
