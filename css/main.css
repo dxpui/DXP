@@ -3703,12 +3703,6 @@
      padding: 10px;
  }
 
- /* .table-blue tr th {
-     background-color: var(--color-primary);
-     color: var(--color-white);
-     vertical-align: middle;
- } */
-
  #allsearch-table table>:not(caption)>*>* {
      padding: 0.5rem 1rem;
  }
