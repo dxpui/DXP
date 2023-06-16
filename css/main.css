@@ -2804,7 +2804,6 @@
  .destination-accordian {
      position: relative;
  }
-
  .destination-accordian .accordion-collapse.show::after {
      position: absolute;
      background-color: #F2F2F2;
