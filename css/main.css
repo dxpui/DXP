@@ -1618,6 +1618,12 @@
      display: block;
  }
 
+ .info-card ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+ }
+
  /***************SVG Icons Design ********************/
  .info-card .svg-arrow {
      fill: none;
@@ -2991,14 +2997,31 @@
  /*--------------------------------------------------------------
 # Callout
 --------------------------------------------------------------*/
- .static-callout-block {
-     padding: 20px;
+
+ .static-callout-block.lightblue-bg  .static-callout {
+    margin: 0;
+    border-left: 1px solid var(--color-white);
+    border-bottom: 1px solid var(--color-white);
+}
+
+ .callout-grid {
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .box {
+     flex: 0 0 auto;
+     width: 33.33333333%;
  }
 
  .static-callout {
      text-align: center;
      padding: 20px 20px;
      border-bottom: 1px solid black;
+     border-left: 0;
+     margin: 20px;
+     height: 100%;
  }
 
  .static-callout p {
@@ -3629,36 +3652,56 @@
  /*--------------------------------------------------------------
 #  Table Design
 --------------------------------------------------------------*/
- .table-blue tr th {
+ #allserach-table table {
+     width: 100%;
+ }
+
+ #allserach-table table th,
+ #allserach-table table td {
+     border: 1px solid var(--color-default);
+     padding: 10px;
+ }
+
+ /* .table-blue tr th {
      background-color: var(--color-primary);
      color: var(--color-white);
      vertical-align: middle;
- }
+ } */
 
- .table-search>:not(caption)>*>* {
+ #allserach-table table>:not(caption)>*>* {
      padding: 0.5rem 1rem;
  }
 
- .table-search tr th:first-child {
+ #allserach-table table tr th:first-child {
      width: 72px;
  }
 
- .table-search tr td:first-child {
+ #allserach-table table {
+     caption-side: top;
+ }
+
+ #allserach-table table caption {
+     text-align: center;
+ }
+
+ .blue-theme table tr:first-child td {
      background-color: var(--color-primary);
      color: var(--color-white);
  }
 
- .table-search {
-     caption-side: top;
+ .blue-theme table tr th,
+ .blue-theme table tr td:first-child {
+     background-color: var(--color-primary);
+     color: var(--color-white);
+     border: 1px solid var(--color-white) !important;
  }
 
- .table-search caption {
-     text-align: center;
+ .red-theme table tr th,
+ .red-theme table tr td:first-child {
+     background-color: var(--color-red);
+     color: var(--color-white);
+     border: 1px solid var(--color-white) !important;
  }
-
- /* #allsearch table tbody tr th {
-     width: 72px;
- } */
 
  /*--------------------------------------------------------------
 #  Notification Block
