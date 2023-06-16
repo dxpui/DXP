@@ -111,6 +111,13 @@
      word-wrap: break-word;
  }
 
+ h5 {
+     font-size: 14px;
+     line-height: 145%;
+     letter-spacing: -1%;
+     word-wrap: break-word;
+ }
+
  @media(max-width: 991px) {
      h1 {
          font-size: 29px;
@@ -1618,6 +1625,18 @@
      display: block;
  }
 
+ a:focus .info-card svg {
+     fill: var(--color-default);
+ }
+
+ a:focus .info-card svg path {
+     stroke: var(--color-white);
+ }
+
+ a:focus .info-card .info-card-header {
+     text-decoration: underline;
+ }
+
  .info-card ul {
      list-style: none;
      margin: 0;
@@ -2804,6 +2823,7 @@
  .destination-accordian {
      position: relative;
  }
+
  .destination-accordian .accordion-collapse.show::after {
      position: absolute;
      background-color: #F2F2F2;
