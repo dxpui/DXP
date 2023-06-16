@@ -400,16 +400,6 @@ function videoPlayer() {
   });
 }
 
-$(".langauge-change").click(function (e) {
-  e.preventDefault();
-  if ($(".back-to-top span").text() == "Back to top") {
-    $(".back-to-top span").text("yn ôl i'r brig");
-  } else {
-    $(".back-to-top span").text("Back to top");
-  }
-});
-
-
 $(function () {
   $(window).on('load', function () {
     $('[data-src]').each(function () {
