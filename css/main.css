@@ -626,7 +626,7 @@
      }
 
      .search-icons {
-         padding: 25px;
+         padding: 26px;
      }
  }
 
@@ -3713,7 +3713,7 @@
      padding: 0.5rem 1rem;
  }
 
- #allsearch-table table tr th:first-child {
+ #allsearch-table table tr td:first-child {
      width: 72px;
  }
 
