@@ -235,7 +235,7 @@ function carouselCount() {
 
 var phoneSearch = {
   sel: {
-    targetTable:document.querySelector('#allserach-table table'),
+    targetTable:document.querySelector('#allsearch-table table'),
     noResults: document.getElementById('noresults'),
     input: document.getElementById('SearchInputPhone')
   },

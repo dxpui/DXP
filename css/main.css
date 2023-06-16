@@ -3693,12 +3693,12 @@
  /*--------------------------------------------------------------
 #  Table Design
 --------------------------------------------------------------*/
- #allserach-table table {
+ #allsearch-table table {
      width: 100%;
  }
 
- #allserach-table table th,
- #allserach-table table td {
+ #allsearch-table table th,
+ #allsearch-table table td {
      border: 1px solid var(--color-default);
      padding: 10px;
  }
@@ -3709,19 +3709,19 @@
      vertical-align: middle;
  } */
 
- #allserach-table table>:not(caption)>*>* {
+ #allsearch-table table>:not(caption)>*>* {
      padding: 0.5rem 1rem;
  }
 
- #allserach-table table tr th:first-child {
+ #allsearch-table table tr th:first-child {
      width: 72px;
  }
 
- #allserach-table table {
+ #allsearch-table table {
      caption-side: top;
  }
 
- #allserach-table table caption {
+ #allsearch-table table caption {
      text-align: center;
  }
 
