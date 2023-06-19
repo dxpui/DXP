@@ -179,9 +179,9 @@ $(document).ready(function () {
   if ($('#video-player').length > 0) {
     videoPlayer()
   }
-  if ($('#SearchInputPhone').length > 0) {
-    lookupfun()
-  }
+  // if ($('#searchInput').length > 0) {
+  //   lookupfun()
+  //  }
   if ($('.counter').length > 0) {
     counterNumber()
   }
@@ -234,135 +234,47 @@ function carouselCount() {
 }
 
 //********************Lookup Table**********************
+// function lookupfun(){
 
-var phoneSearch = {
-  sel: {
-    targetTable: document.querySelector('#allsearch-table table'),
-    noResults: document.getElementById('noresults'),
-    input: document.getElementById('SearchInputPhone')
-  },
-  vars: {
-    numberJson: {}
-  },
-  init: function () {
-    // get JSON from table
-    this.vars.numberJson = JSON.stringify(
-      this.tableToObj(this.sel.targetTable)
-    );
-    // event on keyup
-    this.onEnterNumber();
-  },
-  tableToObj: function (table) {
-    var trs = table.rows,
-      trl = trs.length,
-      i = 0,
-      j = 0,
-      keys = [],
-      obj,
-      ret = [];
+$(document).ready(function() {
+  $('#searchInput').keyup(function() {
+    var searchText = $(this).val().toLowerCase();
+    var table = $('#allsearch-table');
+    var rows = table.find('tr').slice(1);
 
-    for (; i < trl; i++) {
-      if (i == 0) {
-        for (; j < trs[i].children.length; j++) {
-          keys.push(trs[i].children[j].innerHTML);
+    var count = 0;
+
+    rows.each(function() {
+      var row = $(this);
+      var found = false;
+
+      row.find('td').each(function() {
+        var cellText = $(this).text().toLowerCase();
+        if (cellText.includes(searchText)) {
+          found = true;
+          return false;
         }
-      } else {
-        obj = {};
-        for (j = 0; j < trs[i].children.length; j++) {
-          obj[keys[j]] = trs[i].children[j].innerHTML;
-        }
-        ret.push(obj);
-      }
-    }
+      });
 
-    return ret;
-  },
-  onEnterNumber: function () {
-    var self = this;
-    this.sel.input.addEventListener('keyup', function (e) {
-      var searchValue = e.currentTarget.value;
-      var currentcharcter = this.selectionStart,
-        regx = /[^a-z0-9 .]/gi,
-        currentval = $(this).val();
-      if (regx.test(currentval)) {
-        $(this).val(currentval.replace(regx, ''));
-        currentcharcter--;
-      }
-      this.setSelectionRange(currentcharcter, currentcharcter);
-      // only numbers max 6 chars
-      if (/^[0-9]{1,6}$/.test(searchValue)) {
-        self.doNumberSearch(searchValue);
-        // only numbers && more then 6
-      } else if (/^\d+$/.test(searchValue)) {
-        searchValue = searchValue.slice(0, 6);
-        self.doNumberSearch(searchValue);
+      if (found) {
+        row.show();
+        count++;
       } else {
-        self.doStringSearch(searchValue);
+        row.hide();
       }
     });
-  },
-  prepareTab: function (searchValue) {
-    var regex = new RegExp(searchValue, 'i'),
-      regexNum = new RegExp('^' + searchValue, 'm'),
-      self = this;
 
-    this.sel.targetTable.style.display = "";
-    this.sel.noResults.style.display = "none";
-
-    $.each(JSON.parse(this.vars.numberJson), function (key, val) {
-      // ##### this will break if the Table header rows are changed and the values are different in Welsh #####
-      if ((regexNum.test(val.Code)) || (regex.test(val.Area))) {
-        self.sel.targetTable.rows[key + 1].style.display = "";
-      }
-      else {
-        self.sel.targetTable.rows[key + 1].style.display = "none";
-      }
-    });
-  },
-  doStringSearch: function (searchValue) {
-    this.prepareTab(searchValue);
-
-    var tableLength = $('#allsearch-table table tbody > tr:visible').length - 1;
-
-    if (tableLength < 1) {
-      this.sel.noResults.style.display = "";
-      $('#SearchInformation').html('');
-      this.sel.targetTable.style.display = "none";
+    if (count === 0) {
+      table.hide();
+      $('#searchResults').text('No results');
+    } else {
+      table.show();
+      $('#searchResults').text(count + ' results are shown');
     }
-    else {
-      $('#SearchInformation').html(tableLength + ' results are shown');
-      $('#resultsinfo').show();
-    }
-  },
-  doNumberSearch: function (searchValue) {
-    this.prepareTab(searchValue);
-    var tableLength = $('#allsearch-table table tbody > tr:visible').length - 1;
+  });
+});
 
-    // if (tableLength < 1) {
-    //   if (!searchValue.length) {
-    //     this.sel.noResults.style.display = "";
-    //     $('#SearchInformation').html('');
-    //     this.sel.targetTable.style.display = "none";
-    //   } else {
-    //     searchValue = searchValue.slice(0, -1);
-    //     this.doNumberSearch(searchValue);
-    //   }
-    // }
-    if (tableLength < 1) {
-      this.sel.noResults.style.display = "";
-      $('#SearchInformation').html('');
-      this.sel.targetTable.style.display = "none";
-    }
-    else {
-      $('#SearchInformation').html(tableLength + ' results are shown');
-      $('#resultsinfo').show();
-    }
-
-  }
-}
-function lookupfun() {
-  phoneSearch.init();
-}
+// }
 
 //********************Back to top**********************
 var btn = $('.back-to-top');
