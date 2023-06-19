@@ -234,47 +234,46 @@ function carouselCount() {
 }
 
 //********************Lookup Table**********************
-// function lookupfun(){
 
-$(document).ready(function() {
-  $('#searchInput').keyup(function() {
-    var searchText = $(this).val().toLowerCase();
-    var table = $('#allsearch-table');
-    var rows = table.find('tr').slice(1);
+function lookupTable() {
+  $(document).ready(function () {
+    $('#searchInput').keyup(function () {
+      var searchText = $(this).val().toLowerCase();
+      var table = $('#allsearch-table');
+      var rows = table.find('tr').slice(1);
 
-    var count = 0;
+      var count = 0;
 
-    rows.each(function() {
-      var row = $(this);
-      var found = false;
+      rows.each(function () {
+        var row = $(this);
+        var found = false;
 
-      row.find('td').each(function() {
-        var cellText = $(this).text().toLowerCase();
-        if (cellText.includes(searchText)) {
-          found = true;
-          return false;
+        row.find('td').each(function () {
+          var cellText = $(this).text().toLowerCase();
+          if (cellText.includes(searchText)) {
+            found = true;
+            return false;
+          }
+        });
+
+        if (found) {
+          row.show();
+          count++;
+        } else {
+          row.hide();
         }
       });
 
-      if (found) {
-        row.show();
-        count++;
+      if (count === 0) {
+        table.hide();
+        $('#searchResults').text('No results');
       } else {
-        row.hide();
+        table.show();
+        $('#searchResults').text(count + ' results are shown');
       }
     });
-
-    if (count === 0) {
-      table.hide();
-      $('#searchResults').text('No results');
-    } else {
-      table.show();
-      $('#searchResults').text(count + ' results are shown');
-    }
   });
-});
-
-// }
+}
 
 //********************Back to top**********************
 var btn = $('.back-to-top');
