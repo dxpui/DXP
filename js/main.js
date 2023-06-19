@@ -182,7 +182,9 @@ $(document).ready(function () {
   if ($('#SearchInputPhone').length > 0) {
     lookupfun()
   }
-
+  if ($('.counter').length > 0) {
+    counterNumber()
+  }
 });
 // caroseul count full size img code starts here
 $("#carousel-count .carousel-inner .carousel-item img").click(function () {
@@ -235,7 +237,7 @@ function carouselCount() {
 
 var phoneSearch = {
   sel: {
-    targetTable:document.querySelector('#allsearch-table table'),
+    targetTable: document.querySelector('#allsearch-table table'),
     noResults: document.getElementById('noresults'),
     input: document.getElementById('SearchInputPhone')
   },
@@ -336,15 +338,20 @@ var phoneSearch = {
     this.prepareTab(searchValue);
     var tableLength = $('#allsearch-table table tbody > tr:visible').length - 1;
 
+    // if (tableLength < 1) {
+    //   if (!searchValue.length) {
+    //     this.sel.noResults.style.display = "";
+    //     $('#SearchInformation').html('');
+    //     this.sel.targetTable.style.display = "none";
+    //   } else {
+    //     searchValue = searchValue.slice(0, -1);
+    //     this.doNumberSearch(searchValue);
+    //   }
+    // }
     if (tableLength < 1) {
-      if (!searchValue.length) {
-        this.sel.noResults.style.display = "";
-        $('#SearchInformation').html('');
-        this.sel.targetTable.style.display = "none";
-      } else {
-        searchValue = searchValue.slice(0, -1);
-        this.doNumberSearch(searchValue);
-      }
+      this.sel.noResults.style.display = "";
+      $('#SearchInformation').html('');
+      this.sel.targetTable.style.display = "none";
     }
     else {
       $('#SearchInformation').html(tableLength + ' results are shown');
@@ -406,7 +413,24 @@ $(function () {
       var $this = $(this),
         src = $(this).data('src');
       $this.attr('src', src);
-      console.log(src);
     });
   });
 });
+
+//********************Counter Number**********************
+function counterNumber() {
+  const counters = document.querySelectorAll(".counter");
+  counters.forEach((counter) => {
+    counter.innerText = "0";
+    const updateCounter = () => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText;
+      const increment = target / 2000;
+      if (count < target) {
+        counter.innerText = `${Math.ceil(count + increment)}`;
+        setTimeout(updateCounter, 1);
+      } else counter.innerText = target;
+    };
+    updateCounter();
+  });
+}
