@@ -4310,7 +4310,7 @@ padding-right: 80px; */
      padding: 10px;
  }
 
- .video-list:hover .video-text span {
+ .video-list .nav-link:hover .video-text span {
      text-decoration: underline;
  }
 
@@ -4334,7 +4334,10 @@ padding-right: 80px; */
          padding-left: 20px;
          font-size: 20px;
      }
-
+     .video-list .nav-link.active {
+        border-radius: 36px;
+    }
+   
      .video-list .nav-link.active .video-text {
          border: 2px solid var(--color-white);
      }
