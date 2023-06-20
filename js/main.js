@@ -266,7 +266,7 @@ function lookupTable() {
 
       if (count === 0) {
         table.hide();
-        $('#searchResults').text('No results');
+        $('#searchResults').show();
       } else {
         table.show();
         $('#searchResults').text(count + ' results are shown');
@@ -276,21 +276,23 @@ function lookupTable() {
 }
 
 //********************Back to top**********************
-var btn = $('.back-to-top');
 
-$(window).scroll(function () {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
+$(document).ready(function() {
+  var scrollTrigger = 4 * $(window).height(); // Calculate the scroll trigger based on four screen lengths
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > scrollTrigger) {
+      $('.back-to-top').addClass('show');
+    } else {
+      $('.back-to-top').removeClass('show');
+    }
+  });
+
+  $('.back-to-top').click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+  });
 });
-
-btn.on('click', function (e) {
-  e.preventDefault();
-  $('html, body').animate({ scrollTop: 0 }, '300');
-});
-
 
 //********************Video Player**********************
 function videoPlayer() {

@@ -2971,6 +2971,10 @@
  /*--------------------------------------------------------------
 # PDF Download
 --------------------------------------------------------------*/
+ .file-download:focus .pdfdownload {
+     background-color: var(--color-secondary);
+ }
+
  .pdfdownload {
      background-color: #F2F2F2;
      font-family: var(--font-family-default);
@@ -3053,11 +3057,13 @@
      flex: 1 0 0%;
      min-width: 33.33333333%;
  }
+
  .box:nth-child(1) .static-callout,
  .box:nth-child(2) .static-callout,
  .box:nth-child(3) .static-callout {
      border-top: 1px solid black;
  }
+
  .static-callout {
      text-align: center;
      padding: 20px 20px;
@@ -4334,10 +4340,11 @@ padding-right: 80px; */
          padding-left: 20px;
          font-size: 20px;
      }
+
      .video-list .nav-link.active {
-        border-radius: 36px;
-    }
-   
+         border-radius: 36px;
+     }
+
      .video-list .nav-link.active .video-text {
          border: 2px solid var(--color-white);
      }
