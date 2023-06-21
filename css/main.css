@@ -4097,21 +4097,12 @@ padding-right: 80px; */
      font-size: 22px;
  }
 
- /* .back-to-top::after {
-     content: "\f077";
-     font-family: FontAwesome;
-     font-weight: normal;
-     font-style: normal;
-     font-size: 2em;
-     line-height: 50px;
-     color: #fff;
- } */
-
  .back-to-top:hover::after {
      color: var(--color-default);
  }
 
- .back-to-top:hover {
+ .back-to-top:hover,
+ .back-to-top:focus {
      cursor: pointer;
      opacity: 1;
      background-color: var(--color-secondary);
