@@ -205,21 +205,28 @@ $("#carousel-count .carousel-inner .carousel-item").on("keydown", function (even
         $("#carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
     }
 });
-// showfilter code
+//showfilter code
 function showfiltermodal() {
     $(".modal-topic-list li").click(function () {
         $(this).find("i").toggleClass("close-li-icon");
-        $(this).find("a").toggleClass("text-decoration-underline");
+        $(this).attr("selected", "true");
+        $(this).toggleAttribute("selected");
     })
 }
 function clearmodalcontent() {
     $(".clear-filter-btn").click(function () {
-
         $(".modal-topic-list li i").addClass("close-li-icon");
-        $(".modal-topic-list li a").removeClass("text-decoration-underline");
+        $(".modal-topic-list li").removeAttr("selected");
     });
 }
 
+$(".modal-topic-list li").click(function () {
+    if ($(this).attr("selected")) {
+        $(this).removeAttr("selected");
+    } else {
+        $(this).attr("selected", "true");
+    }
+});
 
 function carouselCount() {
     var totalItems = $('#carousel-count .carousel-item').length;
@@ -248,7 +255,7 @@ function lookupTable() {
                 var row = $(this);
                 var found = false;
 
-                row.find('td').each(function () {
+                row.find('td, th').each(function() {
                     var cellText = $(this).text().toLowerCase();
                     if (cellText.includes(searchText)) {
                         found = true;

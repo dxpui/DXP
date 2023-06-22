@@ -1307,6 +1307,10 @@
      background-color: var(--color-light-gray);
  }
 
+ .hero-image-carousel picture {
+     width: 100%;
+ }
+
  @media(max-width: 992px) {
      .hero-image-carousel img {
          height: 100%;
@@ -3106,6 +3110,10 @@
  .static-callout p {
      font-size: 14px;
      margin: 20px 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 70px;
  }
 
  .static-callout h1 {
@@ -3445,6 +3453,14 @@
      margin-left: -15%;
  }
 
+ #carousel-count .carousel-control-prev:focus .carousel-control-prev-icon,
+ #carousel-count .carousel-control-next:focus .carousel-control-prev-icon  {
+     color: var(--color-secondary);
+     border: 2px solid var(--color-secondary);
+ }
+ #carousel-count .carousel-item a:focus img{
+    border: 2px solid var(--color-secondary);
+ }
  #carousel-count-fullsize-img .btn-close {
      position: absolute;
      top: 10px;
@@ -4191,11 +4207,13 @@ padding-right: 80px; */
      display: block;
  }
 
- .pagination-block .page-item .round-btn:hover {
+ .pagination-block .page-item .round-btn:hover,
+ .pagination-block .page-item .round-btn:focus {
      background-color: var(--color-default);
  }
 
- .pagination-block .page-item a:hover i {
+ .pagination-block .page-item a:hover i,
+ .pagination-block .page-item a:focus i {
      color: var(--color-white);
  }
 
