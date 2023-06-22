@@ -1523,7 +1523,7 @@
  .breadcrumb-position {
      background-color: var(--color-default);
      width: 100%;
-     padding: 10px 10px 5px 30px;
+     padding: 10px 10px 5px 5px;
  }
 
  @media(max-width: 992px) {
@@ -3051,10 +3051,16 @@
      border-bottom: 1px solid var(--color-default);
  }
 
- .static-callout-block.red-bg .static-callout h1,
+
  .static-callout-block.megenta-bg .static-callout h1,
  .static-callout-block.pink-bg .static-callout h1 {
      color: var(--color-default);
+ }
+
+ .static-callout-block.red-bg .static-callout h1,
+ .static-callout-block.lightblue-bg .static-callout h1,
+ .static-callout-block.maroon-bg .static-callout h1 {
+     color: var(--color-white);
  }
 
  .callout-grid {
@@ -3065,7 +3071,21 @@
 
  .box {
      flex: 1 0 0%;
-     min-width: 33.33333333%;
+     min-width: 100%;
+ }
+
+ @media (min-width: 576px) {
+     .box {
+         flex: 1 0 0%;
+         min-width: 50%;
+     }
+ }
+
+ @media (min-width: 992px) {
+     .box {
+         flex: 1 0 0%;
+         min-width: 33.33333333%;
+     }
  }
 
  .box:nth-child(1) .static-callout,
@@ -3744,7 +3764,6 @@
      color: var(--color-white);
  }
 
- .blue-theme table tr th,
  .blue-theme table tr td:first-child {
      background-color: var(--color-primary);
      color: var(--color-white);
@@ -4332,6 +4351,7 @@ padding-right: 80px; */
      width: 100%;
      object-fit: cover;
      object-position: left top;
+     background-color: var(--color-light-gray);
  }
 
  .video-list .nav-link {
