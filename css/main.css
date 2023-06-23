@@ -2044,6 +2044,7 @@
      top: 15px;
      width: 98%;
  }
+ 
 
  .bg-expend .info-card:hover .search-result-border {
      border-top: 1px solid var(--color-default);
