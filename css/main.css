@@ -195,6 +195,20 @@
      border-radius: 24px;
  }
 
+ .img-fit {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .ratio-10x3 {
+     aspect-ratio: 10/3;
+ }
+
+ .ratio-13x6 {
+     aspect-ratio: 13/6;
+ }
+
  /*--------------------------------------------------------------
 # Background Color
 --------------------------------------------------------------*/
@@ -2044,7 +2058,7 @@
      top: 15px;
      width: 98%;
  }
- 
+
 
  .bg-expend .info-card:hover .search-result-border {
      border-top: 1px solid var(--color-default);
@@ -2813,25 +2827,19 @@
  .destination-accordian .accordion-button:not(.collapsed) {
      color: #000045 !important;
      background-color: #F2F2F2 !important;
-     box-shadow: none !important;
  }
 
  .destination-accordian .card-body {
      color: #000045 !important;
      background-color: #F2F2F2 !important;
-     box-shadow: none !important;
  }
 
  .destination-accordian .accordion-button:focus {
-     background-color: var(--color-secondary) !important;
- }
-
- .destination-accordian .accordion-button:focus {
-     background-color: var(--color-secondary) !important;
-     z-index: 3;
-     border-color: var(--color-secondary);
      outline: 0;
-     box-shadow: var(--btn-focus-box-shadow);
+     -webkit-box-shadow: 0 0 10px var(--color-secondary);
+     box-shadow: 0 0 10px var(--color-secondary);
+     border-radius: 0;
+     outline-offset: 5px;
  }
 
 
@@ -3455,13 +3463,15 @@
  }
 
  #carousel-count .carousel-control-prev:focus .carousel-control-prev-icon,
- #carousel-count .carousel-control-next:focus .carousel-control-prev-icon  {
+ #carousel-count .carousel-control-next:focus .carousel-control-prev-icon {
      color: var(--color-secondary);
      border: 2px solid var(--color-secondary);
  }
- #carousel-count .carousel-item a:focus img{
-    border: 2px solid var(--color-secondary);
+
+ #carousel-count .carousel-item a:focus img {
+     border: 2px solid var(--color-secondary);
  }
+
  #carousel-count-fullsize-img .btn-close {
      position: absolute;
      top: 10px;
