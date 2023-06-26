@@ -1270,20 +1270,24 @@
 
     <section class="container my-5">
       <h3 class="text-center my-5">Lookup Table</h3>
+
       <div class="col-10">
         <label for="SearchInputPhone" class="visually-hidden">Enter postcode</label>
         <input type="text" class="form-control mb-3" id="searchInput" aria-controls="SearchInformation"
-          placeholder="Find a code or area..." maxlength="50">
-        <!-- <div id="resultCount" style="display:none;">
-          <h3 id="SearchInformation" role="status" aria-live="polite">&nbsp;</h3>
-        </div>
-        <div id="noResults" style="display: none;">
-          <h3>No results</h3>
-          <p>Please check your entry or delete it to see the full list. See above for details of what the tool cannot
-            do.</p>
-        </div> -->
-        <h3 id="searchResults" role="status" aria-live="polite"></h3>
-        <p class="mb-0 text-center"> UK telephone number area codes</p>
+          placeholder="Search Code">
+        <h3 id="searchResults" style="display:none;" role="status" aria-live="polite">
+          No result
+        </h3>
+        <input type="hidden" id="hiddenFoundTextValue" value="Results found" />
+        <h3 id="searchResultsFound" style="display:none;" role="status" aria-live="polite">
+
+        </h3>
+        <p class="mb-0 text-center">UK telephone number area codes</p>
+
+        <!-- <input type="text" class="form-control mb-3" id="searchInput" aria-controls="SearchInformation"
+          placeholder="Find a code or area..." maxlength="50"> -->
+
+        <!-- <h3 id="searchResults" role="status" aria-live="polite"></h3> -->
         <div id="allsearch-table" class="blue-theme">
           <table>
             <tbody>
@@ -1323,46 +1327,46 @@
                 <td>01202</td>
                 <td> Bournemouth </td>
               </tr>
-           <tr>
-              <td id="allCodesr10c1" scope="row">01204</td>
-              <td headers="allCodesr10c1 allCodesr1c2"> Bolton </td>
-            </tr>
-            <tr>
-              <td id="allCodesr11c1" scope="row">01205</td>
-              <td headers="allCodesr11c1 allCodesr1c2"> Boston </td>
-            </tr>
-            <tr>
-              <td id="allCodesr12c1" scope="row">01206</td>
-              <td headers="allCodesr12c1 allCodesr1c2"> Colchester </td>
-            </tr>
-            <tr>
-              <td id="allCodesr13c1" scope="row">01207</td>
-              <td headers="allCodesr13c1 allCodesr1c2"> Consett </td>
-            </tr>
-            <tr>
-              <td id="allCodesr14c1" scope="row">01208</td>
-              <td headers="allCodesr14c1 allCodesr1c2"> Bodmin </td>
-            </tr>
-            <tr>
-              <td id="allCodesr15c1" scope="row">01209</td>
-              <td headers="allCodesr15c1 allCodesr1c2"> Redruth </td>
-            </tr>
-            <tr>
-              <td id="allCodesr16c1" scope="row">0121</td>
-              <td headers="allCodesr16c1 allCodesr1c2"> Birmingham </td>
-            </tr>
-            <tr>
-              <td id="allCodesr17c1" scope="row">01223</td>
-              <td headers="allCodesr17c1 allCodesr1c2"> Cambridge </td>
-            </tr>
-            <tr>
-              <td id="allCodesr18c1" scope="row">01224</td>
-              <td headers="allCodesr18c1 allCodesr1c2"> Aberdeen </td>
-            </tr>
-            <tr>
-              <td id="allCodesr19c1" scope="row">01225</td>
-              <td headers="allCodesr19c1 allCodesr1c2"> Bath </td>
-            </tr> 
+              <tr>
+                <td id="allCodesr10c1" scope="row">01204</td>
+                <td headers="allCodesr10c1 allCodesr1c2"> Bolton </td>
+              </tr>
+              <tr>
+                <td id="allCodesr11c1" scope="row">01205</td>
+                <td headers="allCodesr11c1 allCodesr1c2"> Boston </td>
+              </tr>
+              <tr>
+                <td id="allCodesr12c1" scope="row">01206</td>
+                <td headers="allCodesr12c1 allCodesr1c2"> Colchester </td>
+              </tr>
+              <tr>
+                <td id="allCodesr13c1" scope="row">01207</td>
+                <td headers="allCodesr13c1 allCodesr1c2"> Consett </td>
+              </tr>
+              <tr>
+                <td id="allCodesr14c1" scope="row">01208</td>
+                <td headers="allCodesr14c1 allCodesr1c2"> Bodmin </td>
+              </tr>
+              <tr>
+                <td id="allCodesr15c1" scope="row">01209</td>
+                <td headers="allCodesr15c1 allCodesr1c2"> Redruth </td>
+              </tr>
+              <tr>
+                <td id="allCodesr16c1" scope="row">0121</td>
+                <td headers="allCodesr16c1 allCodesr1c2"> Birmingham </td>
+              </tr>
+              <tr>
+                <td id="allCodesr17c1" scope="row">01223</td>
+                <td headers="allCodesr17c1 allCodesr1c2"> Cambridge </td>
+              </tr>
+              <tr>
+                <td id="allCodesr18c1" scope="row">01224</td>
+                <td headers="allCodesr18c1 allCodesr1c2"> Aberdeen </td>
+              </tr>
+              <tr>
+                <td id="allCodesr19c1" scope="row">01225</td>
+                <td headers="allCodesr19c1 allCodesr1c2"> Bath </td>
+              </tr>
             </tbody>
           </table>
 
@@ -1420,7 +1424,7 @@
           </div>
 
           <div class="title-block two mt-5">
-            <a href="" class="title-block-link">
+            <a href="javascript:void(0);" class="title-block-link">
               <div class="row g-0">
                 <div class="col-md-7">
                   <img src="assets/img/title-block-img.png" class="title-block-img" alt="...">
@@ -1915,7 +1919,7 @@
         </div>
       </div>
     </section>
-    <a class="back-to-top">
+    <a href="" class="back-to-top">
       <i class="fa-solid fa-chevron-up"></i>
       <span>Back to top</span>
     </a>
