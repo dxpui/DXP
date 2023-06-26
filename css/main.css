@@ -4662,3 +4662,7 @@ padding-right: 80px; */
  .blur-load.loaded img {
      opacity: 1;
  }
+
+ .accordionpanelblock {
+     overflow-x: hidden;
+ }
