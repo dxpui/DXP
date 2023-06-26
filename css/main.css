@@ -2832,13 +2832,12 @@
      color: #000045 !important;
      background-color: #F2F2F2 !important;
  }
+
  .destination-accordian .accordion-button:focus {
-    outline: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-radius: 0;
-    outline-offset: 5px;
-}
+     -webkit-box-shadow: none;
+     box-shadow: none;
+ }
+
  .destination-accordian .accordion-button:focus-visible {
      outline: 0;
      -webkit-box-shadow: 0 0 10px var(--color-default);
@@ -3217,8 +3216,8 @@
  .callout-purple.lightblue-bg p,
  .callout-purple.red-bg h3,
  .callout-purple.red-bg p,
- .callout-purple.purple-bg h3,
- .callout-purple.purple-bg p,
+ .callout-purple.megenta-bg h3,
+ .callout-purple.megenta-bg p,
  .callout-purple.maroon-bg h3,
  .callout-purple.maroon-bg p {
      color: var(--color-white);
@@ -3795,22 +3794,83 @@
      text-align: center;
  }
 
- .blue-theme table tr:first-child td {
-     background-color: var(--color-primary);
-     color: var(--color-white);
+ .blue-theme table tr th,
+ .blue-theme table tr td:first-child,
+ .red-theme table tr th,
+ .red-theme table tr td:first-child,
+ .megenta-theme table tr th,
+ .megenta-theme table tr td:first-child,
+ .maroon-theme table tr th,
+ .maroon-theme table tr td:first-child,
+ .lightblue-theme table tr th,
+ .lightblue-theme table tr td:first-child {
+     border: 1px solid var(--color-white) !important;
  }
 
+ .blue-theme table tr:first-child td,
+ .blue-theme table tr th,
  .blue-theme table tr td:first-child {
      background-color: var(--color-primary);
      color: var(--color-white);
-     border: 1px solid var(--color-white) !important;
  }
 
  .red-theme table tr th,
+ .red-theme table tr:first-child td,
  .red-theme table tr td:first-child {
      background-color: var(--color-red);
      color: var(--color-white);
-     border: 1px solid var(--color-white) !important;
+ }
+ .megenta-theme table tr:first-child td,
+ .megenta-theme table tr th,
+ .megenta-theme table tr td:first-child {
+     background-color: var(--color-megenta);
+     color: var(--color-white);
+ }
+
+ .lightblue-theme table tr th,
+ .lightblue-theme table tr:first-child td,
+ .lightblue-theme table tr td:first-child {
+     background-color: var(--color-primary);
+     color: var(--color-white);
+ }
+ .maroon-theme table tr:first-child td,
+ .maroon-theme table tr th,
+ .maroon-theme table tr td:first-child {
+     background-color: var(--color-maroon);
+     color: var(--color-white);
+ }
+
+ .pink-theme table tr th,
+ .pink-theme table tr:first-child td,
+ .pink-theme table tr td:first-child {
+     background-color: var(--color-pink);
+     color: var(--color-default);
+ }
+ .green-theme table tr:first-child td,
+ .green-theme table tr th,
+ .green-theme table tr td:first-child {
+     background-color: var(--color-green);
+     color: var(--color-default);
+ }
+
+ .orange-theme table tr th,
+ .orange-theme table tr:first-child td,
+ .orange-theme table tr td:first-child {
+     background-color: var(--color-secondary);
+     color: var(--color-default);
+ }
+ .yellow-theme table tr:first-child td,
+ .yellow-theme table tr th,
+ .yellow-theme table tr td:first-child {
+     background-color: var(--color-yellow);
+     color: var(--color-default);
+ }
+
+ .gray-theme table tr th,
+ .gray-theme table tr:first-child td,
+ .gray-theme table tr td:first-child {
+     background-color: var(--color-light-gray);
+     color: var(--color-default);
  }
 
  /*--------------------------------------------------------------
@@ -4380,7 +4440,7 @@ padding-right: 80px; */
      }
  }
 
- .video-list .nav-link:focus.active {
+ .video-list .nav-link:focus-visible.active {
      outline: var(--color-secondary);
      border-color: var(--color-secondary);
  }
@@ -4415,6 +4475,10 @@ padding-right: 80px; */
  }
 
  @media (max-width: 767px) {
+     .video-list .nav-link {
+         margin-bottom: 10px;
+     }
+
      .video-list .nav-link img {
          display: none;
      }
@@ -4433,6 +4497,7 @@ padding-right: 80px; */
      .video-list .nav-link .video-text .fa-circle-play {
          padding-left: 20px;
          font-size: 20px;
+         color: var(--color-white);
      }
 
      .video-list .nav-link.active {
