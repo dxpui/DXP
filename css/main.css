@@ -24,8 +24,9 @@
      --color-white: #FFFFFF;
      --color-black: #000000;
      --color-light-gray: #F2F2F2;
+     --color-outline-focus: #000045;
      --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-     --btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 138, 0, 1, 0.25);
+     --btn-focus-box-shadow: 0 0 0 0.25rem rgb(0 0 69 / 20%);
      --font-family-default: 'Sora', sans-serif;
      --line-height-default: 1.5;
  }
@@ -61,6 +62,11 @@
 
  a:hover {
      color: var(--color-default);
+ }
+
+ a:focus-visible {
+     outline: var(--color-outline-focus) auto 2px;
+     outline-offset: 4px;
  }
 
  p {
@@ -168,6 +174,13 @@
      line-height: 2;
  }
 
+ .form-control:focus,
+ .form-check-input:focus {
+     border: 1px solid var(--color-default);
+     box-shadow: var(--btn-focus-box-shadow);
+ }
+
+
  .form-check-input[type=checkbox] {
      border-radius: 0;
  }
@@ -255,6 +268,10 @@
  /*--------------------------------------------------------------
 # All Buttons
 --------------------------------------------------------------*/
+ .btn:focus-visible {
+     box-shadow: none;
+ }
+
  .btn-primary {
      background-color: var(--color-default);
      color: var(--color-white);
@@ -278,16 +295,9 @@
  .btn-primary:focus,
  .btn-primary-white-border:focus,
  .btn-primary-border:focus {
-     /* outline: 2px dotted var(--color-white);
-     outline-offset: 5px; */
      background-color: var(--color-secondary);
      color: var(--color-default);
  }
-
- /* .btn-secondary:focus {
-     outline: 2px dotted var(--color-default);
-     outline-offset: 10px;
- } */
 
  .btn-primary:active {
      background-color: var(--color-secondary);
@@ -451,6 +461,13 @@
  .video-btn {
      background-color: var(--color-default);
      font-size: 14px;
+ }
+
+ .btn-close:focus {
+     outline: var(--color-outline-focus) auto 2px !important;
+     outline-offset: 4px;
+     box-shadow: none;
+     border-radius: 0;
  }
 
  .blue-bg .video-btn {
@@ -1303,9 +1320,8 @@
  }
 
  .carousel-indicators button:focus {
-     outline: 2px solid var(--color-white);
+     outline: var(--color-outline-focus) auto 2px;
      outline-offset: 4px;
-     opacity: .8;
  }
 
  .hero-image {
@@ -2240,7 +2256,7 @@
 
  .footer .list-unstyled a:focus {
      text-decoration: underline;
-     outline: 2px solid var(--color-white);
+     outline: var(--color-outline-focus) auto 2px;
      outline-offset: 4px;
      opacity: .8;
  }
@@ -2529,7 +2545,7 @@
  .swiper-pagination-bullet:focus {
      outline: 2px solid var(--color-white);
      outline-offset: 4px;
-     opacity: .8;
+     opacity: 1;
  }
 
  .news-green .info-card:hover,
@@ -2839,11 +2855,8 @@
  }
 
  .destination-accordian .accordion-button:focus-visible {
-     outline: 0;
-     -webkit-box-shadow: 0 0 10px var(--color-default);
-     box-shadow: 0 0 6px var(--color-default);
-     border-radius: 0;
-     outline-offset: 5px;
+     outline: var(--color-outline-focus) auto 2px;
+     outline-offset: 4px;
  }
 
 
@@ -3165,6 +3178,11 @@
      line-height: 100%;
  }
 
+ .callout-light.callout-large .symbol {
+     font-size: 128px;
+     line-height: 100%;
+ }
+
  .col-4:nth-child(1) .callout-light,
  .col-4:nth-child(2) .callout-light,
  .col-4:nth-child(3) .callout-light {
@@ -3226,9 +3244,9 @@
  /*--------------------------------------------------------------
 # Title Block
 --------------------------------------------------------------*/
- /* .title-block.two {
-     padding: 15px;
- } */
+ .title-block {
+     padding: 5px;
+ }
 
  .title-block .title-block-img {
      width: 100%;
@@ -3239,13 +3257,13 @@
      transition: .3s ease-in-out;
  }
 
- .title-block:hover .title-block-img {
+ /* .title-block:hover .title-block-img {
      transform: scale(1.05);
      -ms-transform: scale(1.05);
      -webkit-transform: scale(1.05);
      -webkit-transition: .3s ease-in-out;
      transition: .3s ease-in-out;
- }
+ } */
 
  .title-block .card-body {
      position: relative;
@@ -3281,9 +3299,22 @@
      transition: all 0.5s ease;
  }
 
- /* .title-block.two:hover {
+ .title-block:hover {
      background-color: var(--color-secondary)
- } */
+ }
+
+ .title-block .title-block-link:focus-visible {
+     outline: var(--color-outline-focus) auto 2px;
+     outline-offset: 4px;
+ }
+
+ .title-block .title-block-link:focus-visible h3 {
+     text-decoration: underline;
+ }
+
+ .title-block:hover h3 {
+     text-decoration: underline;
+ }
 
  .title-block .yellow-bg h3,
  .title-block .yellow-bg p,
@@ -3471,13 +3502,18 @@
  }
 
  #carousel-count .carousel-control-prev:focus .carousel-control-prev-icon,
- #carousel-count .carousel-control-next:focus .carousel-control-prev-icon {
-     color: var(--color-secondary);
-     border: 2px solid var(--color-secondary);
+ #carousel-count .carousel-control-next:focus .carousel-control-next-icon {
+     background-color: var(--color-default);
  }
 
- #carousel-count .carousel-item a:focus img {
-     border: 2px solid var(--color-secondary);
+ #carousel-count .carousel-control-prev:focus .carousel-control-prev-icon i,
+ #carousel-count .carousel-control-next:focus .carousel-control-next-icon i {
+     color: var(--color-white);
+ }
+
+ #carousel-count .carousel-item a:focus {
+     outline: var(--color-outline-focus) auto 2px;
+     outline-offset: 4px;
  }
 
  #carousel-count-fullsize-img .btn-close {
@@ -3820,6 +3856,7 @@
      background-color: var(--color-red);
      color: var(--color-white);
  }
+
  .megenta-theme table tr:first-child td,
  .megenta-theme table tr th,
  .megenta-theme table tr td:first-child {
@@ -3833,6 +3870,7 @@
      background-color: var(--color-primary);
      color: var(--color-white);
  }
+
  .maroon-theme table tr:first-child td,
  .maroon-theme table tr th,
  .maroon-theme table tr td:first-child {
@@ -3846,6 +3884,7 @@
      background-color: var(--color-pink);
      color: var(--color-default);
  }
+
  .green-theme table tr:first-child td,
  .green-theme table tr th,
  .green-theme table tr td:first-child {
@@ -3859,6 +3898,7 @@
      background-color: var(--color-secondary);
      color: var(--color-default);
  }
+
  .yellow-theme table tr:first-child td,
  .yellow-theme table tr th,
  .yellow-theme table tr td:first-child {
@@ -4416,6 +4456,7 @@ padding-right: 80px; */
          flex-wrap: nowrap;
          overflow-x: auto;
          padding-bottom: 15px;
+         padding-top: 10px;
      }
 
      .video-list::-webkit-scrollbar {
@@ -4441,8 +4482,8 @@ padding-right: 80px; */
  }
 
  .video-list .nav-link:focus-visible.active {
-     outline: var(--color-secondary);
-     border-color: var(--color-secondary);
+     outline: var(--color-outline-focus) auto 2px;
+     outline-offset: 4px;
  }
 
  .video-list .nav-link img {
