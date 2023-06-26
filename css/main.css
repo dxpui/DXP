@@ -2341,7 +2341,6 @@
  @media(max-width: 992px) {
      .footer section.social {
          border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-         ;
          margin-top: 30px !important;
      }
 
@@ -2833,11 +2832,17 @@
      color: #000045 !important;
      background-color: #F2F2F2 !important;
  }
-
  .destination-accordian .accordion-button:focus {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+    outline-offset: 5px;
+}
+ .destination-accordian .accordion-button:focus-visible {
      outline: 0;
-     -webkit-box-shadow: 0 0 10px var(--color-secondary);
-     box-shadow: 0 0 10px var(--color-secondary);
+     -webkit-box-shadow: 0 0 10px var(--color-default);
+     box-shadow: 0 0 6px var(--color-default);
      border-radius: 0;
      outline-offset: 5px;
  }
@@ -2869,6 +2874,10 @@
      width: 100%;
      left: auto;
      right: 100%;
+ }
+
+ .destination-accordian .card-body p:last-child {
+     margin-bottom: 0;
  }
 
  .quote-text {
