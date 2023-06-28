@@ -24,9 +24,9 @@
      --color-white: #FFFFFF;
      --color-black: #000000;
      --color-light-gray: #F2F2F2;
-     --color-outline-focus: #000045;
+     --color-outline-focus: #FF8A00;
      --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-     --btn-focus-box-shadow: 0 0 0 0.25rem rgb(0 0 69 / 20%);
+     --btn-focus-box-shadow: 0 0 0 0.25rem rgb(255 137 0 / 22%);
      --font-family-default: 'Sora', sans-serif;
      --line-height-default: 1.5;
  }
@@ -65,8 +65,8 @@
  }
 
  a:focus-visible {
-     outline: var(--color-outline-focus) auto 2px;
-     outline-offset: 2px;
+     outline: 3px solid var(--color-outline-focus);
+     outline-offset: 0;
  }
 
  p {
@@ -1320,7 +1320,7 @@
  }
 
  .carousel-indicators button:focus {
-     outline: var(--color-outline-focus) auto 2px;
+     outline: var(--color-outline-focus) auto 3px;
      outline-offset: 2px;
  }
 
@@ -2282,7 +2282,7 @@
 
  .footer .list-unstyled a:focus {
      text-decoration: underline;
-     outline: var(--color-outline-focus) auto 2px;
+     outline: var(--color-outline-focus) auto 3px;
      outline-offset: 2px;
      opacity: .8;
  }
@@ -2881,7 +2881,7 @@
  }
 
  .destination-accordian .accordion-button:focus-visible {
-     outline: var(--color-outline-focus) auto 2px;
+     outline: var(--color-outline-focus) auto 3px;
      outline-offset: 2px;
  }
 
@@ -3270,10 +3270,6 @@
  /*--------------------------------------------------------------
 # Title Block
 --------------------------------------------------------------*/
- .title-block {
-     padding: 5px;
- }
-
  .title-block .title-block-img {
      width: 100%;
      height: 100%;
@@ -3283,24 +3279,47 @@
      transition: .3s ease-in-out;
  }
 
- /* .title-block:hover .title-block-img {
+ .title-block a:focus-visible {
+     outline: var(--color-outline-focus) auto 3px;
+     outline-offset: 4px;
+ }
+
+ .title-block:focus-visible h3 {
+     text-decoration: underline;
+ }
+
+ /* for demo */
+ .title-block.one {
+     padding: 5px;
+ }
+
+ .title-block.two:hover .title-block-img {
      transform: scale(1.05);
      -ms-transform: scale(1.05);
      -webkit-transform: scale(1.05);
      -webkit-transition: .3s ease-in-out;
      transition: .3s ease-in-out;
- } */
+ }
+
+ .title-block.two {
+     overflow: hidden;
+     padding: 1;
+ }
+
+ .title-block.two:hover {
+     background-color: transparent
+ }
+
+ .title-block.two:hover .blue-bg {
+     background-color: #000045e8;
+ }
+
+ /* end for demo */
 
  .title-block .card-body {
      position: relative;
      padding: 40px;
      height: 100%;
-     /* display: flex;
-     align-items: center; */
- }
-
- .title-block {
-     overflow: hidden;
  }
 
  .title-block .card-body h3 {
@@ -3327,11 +3346,6 @@
 
  .title-block:hover {
      background-color: var(--color-secondary)
- }
-
- .title-block .title-block-link:focus-visible {
-     outline: var(--color-outline-focus) auto 2px;
-     outline-offset: 2px;
  }
 
  .title-block .title-block-link:focus-visible h3 {
@@ -3486,7 +3500,8 @@
      width: 100%;
      height: 438px;
      object-fit: cover;
- }
+     padding: 2px;
+}
 
  #carousel-count .img-caption,
  #carousel-count .carouselnumber {
@@ -3538,8 +3553,8 @@
  }
 
  #carousel-count .carousel-item a:focus {
-     outline: var(--color-outline-focus) auto 2px;
-     outline-offset: 2px;
+     outline: var(--color-outline-focus) auto 3px;
+     outline-offset: -1px;
  }
 
  #carousel-count-fullsize-img .btn-close {
@@ -3713,7 +3728,7 @@
      text-align: center;
  }
 
- .logo-list span {
+ .logo-list a {
      padding: 20px;
      display: inline-block;
  }
@@ -4453,13 +4468,11 @@ padding-right: 80px; */
  }
 
  .standfirst {
-     font-size: 18px;
      line-height: 1.5em;
      font-weight: 700;
-     font-style: italic;
  }
 
- .standfirst:before {
+ /* .standfirst:before {
      content: open-quote;
  }
 
@@ -4476,7 +4489,7 @@ padding-right: 80px; */
      top: .2em;
      position: relative;
      padding-right: 15px;
- }
+ } */
 
  @media (min-width: 767px) {
      .video-list {
@@ -4509,7 +4522,7 @@ padding-right: 80px; */
  }
 
  .video-list .nav-link:focus-visible.active {
-     outline: var(--color-outline-focus) auto 2px;
+     outline: var(--color-outline-focus) auto 3px;
      outline-offset: 2px;
  }
 
