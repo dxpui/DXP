@@ -19,10 +19,10 @@
 </head>
 
 <body>
-
+  <a class="skip-to-content-link" href="#skip" tabindex="0">Skip to main content</a>
   <!-- header start -->
   <header class="header fixed-top d-flex align-items-center">
-    <a class="skip-to-content-link" href="#skip" tabindex="0">Skip to main content</a>
+    
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
       <div class="logo me-auto me-lg-0">
@@ -522,88 +522,45 @@
         <h4 class="text-center mt-4">Quick Links:</h4>
 
         <hr>
-        <div class="search-quick-link mx-auto mt-4">
-
+                <div class="search-quick-link mx-auto mt-4">
           <div class="row">
             <div class="col-6 col-md-3">
-              <ul>
-                <li class="serach-link">
-                  <a href="" class="w-100">
-                    <div class="d-flex justify-content-between align-items-start align-items-center">
-                      <span>Complaints</span>
-                      <i class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                  </a>
-                </li>
-                <li class="serach-link">
-                  <a href="" class="w-100">
-                    <div class="d-flex justify-content-between align-items-start align-items-center">
-                      <span>Mobile and Broadband checker</span>
-                      <i class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                  </a>
-                </li>
-              </ul>
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
+                <span>Complaints</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
             </div>
             <div class="col-6 col-md-3">
-              <ul>
-                <li class="serach-link">
-                  <a href="" class="w-100">
-                    <div class="d-flex justify-content-between align-items-start align-items-center">
-                      <span>What is Ofcom</span>
-                      <i class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                  </a>
-                </li>
-                <li class="serach-link">
-                  <a href="" class="w-100">
-                    <div class="d-flex justify-content-between align-items-start align-items-center">
-                      <span>Licences</span>
-                      <i class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                  </a>
-                </li>
-              </ul>
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
+                <span>Mobile and Broadband checker </span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+
             </div>
             <div class="col-6 col-md-3">
-              <ul>
-                <li class="serach-link">
-                  <a href="" class="w-100">
-                    <div class="d-flex justify-content-between align-items-start align-items-center">
-                      <span>Newsroom</span>
-                      <i class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                  </a>
-                </li>
-                <li class="serach-link">
-                  <a href="" class="w-100">
-                    <div class="d-flex justify-content-between align-items-start align-items-center">
-                      <span>Consultations</span>
-                      <i class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                  </a>
-                </li>
-              </ul>
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
+                <span>What is Ofcom</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+
             </div>
             <div class="col-6 col-md-3">
-              <ul>
-                <li class="serach-link">
-                  <a href="" class="w-100">
-                    <div class="d-flex justify-content-between align-items-start align-items-center">
-                      <span>How to Ofcom is run</span>
-                      <i class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                  </a>
-                </li>
-                <li class="serach-link">
-                  <a href="" class="w-100">
-                    <div class="d-flex justify-content-between align-items-start align-items-center">
-                      <span>Reports and Data</span>
-                      <i class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                  </a>
-                </li>
-              </ul>
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
+                <span>Licences</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-center">
+                <span>Newsroom</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-center">
+                <span>Consultations</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -714,9 +671,10 @@
           </div>
         </div>
         <div class="col-md-6 order-first order-md-last">
-          <div class="blur-load" style="background-image: url(assets/img/hd-small.png);">
+          <!-- <div class="blur-load" style="background-image: url(assets/img/hd-small.png);">
             <img src="assets/img/hd.jpg" class="w-100 hero-banner-img blur-load" alt="" />
-          </div>
+          </div> -->
+          <img class="w-100 hero-banner-img blur-load" data-src="assets/img/hd.jpg" src="assets/img/hd-small.png" alt="" />
         </div>
       </div>
       <div class="row g-0">
@@ -730,8 +688,11 @@
                 <a href="">
                   <div class="recommendation-link d-flex justify-content-between align-items-start align-items-center">
                     <span class="ps-2"> Quick link here</span>
-                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle - white.svg" alt="">
-                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle - ora.svg" alt="">
+                    <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                    </svg>
                   </div>
                 </a>
               </div>
@@ -1223,20 +1184,20 @@
       },
     });
   </script>
-  <script>
-    const blurredImageDiv = document.querySelector(".blur-load")
-    const img = blurredImageDiv.querySelector("img")
-    function loaded() {
-      blurredImageDiv.classList.add("loaded")
-    }
-
-    if (img.complete) {
-      loaded()
-    } else {
-      img.addEventListener("load", loaded)
-    }
-  </script>
+  
   <script src="vendor/jquery/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(window).on('load', function () {
+        $('[data-src]').each(function () {
+          var $this = $(this),
+            src = $(this).data('src');
+          $this.attr('src', src);
+          console.log(src);
+        });
+      });
+    });
+  </script>
   <script src="js/main.js"></script>
   <script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="css/bootstrap-ie11.min.css"><script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"><\/script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"><\/script><script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
