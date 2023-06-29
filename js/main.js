@@ -246,10 +246,13 @@ function lookupTable() {
     $(document).ready(function () {
         $('#searchInput').keyup(function () {
             var searchText = $(this).val().toLowerCase();
-            var pattern = /^[A-Za-z0-9 '.-]+$/;
+            var pattern = /^[A-Za-z0-9]*$/;
             var table = $('#allsearch-table');
             var rows = table.find('tr').slice(1);
-
+            if (!pattern.test(searchText)) {
+                $(this).val("");
+                return;
+            }
             var count = 0;
             rows.each(function () {
                 var row = $(this);
@@ -275,18 +278,18 @@ function lookupTable() {
                 table.show();
                 $('#searchResults').hide();
                 $('#searchResultsFound').hide();
-            }
-            else if (!pattern.test(searchText)) {
-                $(this).val("");
+                $('#LookUpTableTitle').show();
             }
             else if (count === 0) {
                 table.hide();
                 $('#searchResults').show();
                 $('#searchResultsFound').hide();
+                $('#LookUpTableTitle').hide();
             } else {
                 table.show();
                 $('#searchResults').hide();
                 $('#searchResultsFound').show();
+                $('#LookUpTableTitle').show();
                 $('#searchResultsFound').text(count + " " + $("#hiddenFoundTextValue").val());
             }
         });
@@ -350,18 +353,30 @@ $(function () {
 
 //********************Counter Number**********************
 function counterNumber() {
-  const counters = document.querySelectorAll(".counter");
-  counters.forEach((counter) => {
-    counter.innerText = "0";
-    const updateCounter = () => {
-      const target = +counter.getAttribute("data-target");
-      const count = +counter.innerText;
-      const increment = target / 2000;
-      if (count < target) {
-        counter.innerText = `${Math.ceil(count + increment)}`;
-        setTimeout(updateCounter, 1);
-      } else counter.innerText = target;
-    };
-    updateCounter();
-  });
+    $('.counter').each(function () {
+        var $this = $(this),
+            countTo = $this.attr('data-target');
+        $({
+            countNum: $this.text()
+        }).animate({
+            countNum: countTo
+        },
+            {
+                duration: 5000,
+                easing: 'linear',
+                step: function () {
+                    $this.text(commaSeparateNumber(Math.floor(this.countNum)));
+                },
+                complete: function () {
+                    $this.text(commaSeparateNumber(this.countNum));
+                }
+            }
+        );
+    });
+}
+function commaSeparateNumber(val) {
+    while (/(\d+)(\d{3})/.test(val.toString())) {
+        val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+    }
+    return val;
 }

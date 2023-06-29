@@ -3202,9 +3202,9 @@
      min-height: 50px;
  }
 
- .callout-light.callout-large {
+ /* .callout-light.callout-large {
      border-top: 1px solid var(--color-default);
- }
+ } */
 
  .box:nth-child(1) .callout-light.callout-large {
      border-top: 1px solid var(--color-default);
