@@ -26,7 +26,7 @@
      --color-light-gray: #F2F2F2;
      --color-outline-focus: #FF8A00;
      --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-     --btn-focus-box-shadow: 0 0 0 0.25rem rgb(255 137 0 / 22%);
+     --btn-focus-box-shadow: 0 0 0 0.25rem rgb(255 137 0 / 35%);
      --font-family-default: 'Sora', sans-serif;
      --line-height-default: 1.5;
  }
@@ -313,7 +313,8 @@
      padding: 10px 20px;
  }
 
- .btn-secondary:hover {
+ .btn-secondary:hover,
+ .btn-secondary:focus {
      background-color: var(--color-default);
      color: var(--color-white);
      border: 1px solid var(--color-white);
@@ -620,9 +621,14 @@
      }
  }
 
- .search-icons:hover,
+ .search-icons:hover {
+     background-color: var(--color-secondary);
+ }
+
  .search-icons:focus {
      background-color: var(--color-secondary);
+     outline: none;
+     outline-offset: 0;
  }
 
  .search-icons .fas {
@@ -2878,6 +2884,7 @@
  .destination-accordian .accordion-button:focus {
      -webkit-box-shadow: none;
      box-shadow: none;
+     margin-top: 2px;
  }
 
  .destination-accordian .accordion-button:focus-visible {
@@ -3196,7 +3203,11 @@
  }
 
  .callout-light.callout-large {
-     border-top: 1px solid black;
+     border-top: 1px solid var(--color-default);
+ }
+
+ .box:nth-child(1) .callout-light.callout-large {
+     border-top: 1px solid var(--color-default);
  }
 
  .callout-light.callout-large .counter {
@@ -3270,6 +3281,11 @@
  /*--------------------------------------------------------------
 # Title Block
 --------------------------------------------------------------*/
+ .title-block {
+     margin: 2px;
+     padding: 2px;
+ }
+
  .title-block .title-block-img {
      width: 100%;
      height: 100%;
@@ -3281,7 +3297,8 @@
 
  .title-block a:focus-visible {
      outline: var(--color-outline-focus) auto 3px;
-     outline-offset: 4px;
+     /* box-shadow: 0 0 0 3px var(--color-outline-focus); */
+     outline-offset: 2px;
  }
 
  .title-block:focus-visible h3 {
@@ -3303,7 +3320,6 @@
 
  .title-block.two {
      overflow: hidden;
-     padding: 1;
  }
 
  .title-block.two:hover {
@@ -3389,11 +3405,13 @@
      stroke: var(--color-default);
  }
 
- .title-block:hover svg {
+ .title-block:hover svg,
+ .title-block a:focus svg {
      fill: var(--color-default);
  }
 
- .title-block:hover svg path {
+ .title-block:hover svg path,
+ .title-block a:focus svg path {
      stroke: var(--color-white);
  }
 
@@ -3417,7 +3435,12 @@
  .title-block:hover .lightblue-bg svg,
  .title-block:hover .red-bg svg,
  .title-block:hover .megenta-bg svg,
- .title-block:hover .maroon-bg svg {
+ .title-block:hover .maroon-bg svg,
+ .title-block a:focus .blue-bg svg,
+ .title-block a:focus .lightblue-bg svg,
+ .title-block a:focus .red-bg svg,
+ .title-block a:focus .megenta-bg svg,
+ .title-block a:focus .maroon-bg svg {
      fill: var(--color-white);
  }
 
@@ -3425,7 +3448,12 @@
  .title-block:hover .lightblue-bg svg path,
  .title-block:hover .red-bg svg path,
  .title-block:hover .megenta-bg svg path,
- .title-block:hover .maroon-bg svg path {
+ .title-block:hover .maroon-bg svg path,
+ .title-block a:focus .blue-bg svg path,
+ .title-block a:focus .lightblue-bg svg path,
+ .title-block a:focus .red-bg svg path,
+ .title-block a:focus .megenta-bg svg path,
+ .title-block a:focus .maroon-bg svg path {
      stroke: var(--color-default);
  }
 
@@ -3500,8 +3528,7 @@
      width: 100%;
      height: 438px;
      object-fit: cover;
-     padding: 2px;
-}
+ }
 
  #carousel-count .img-caption,
  #carousel-count .carouselnumber {
@@ -3552,9 +3579,13 @@
      color: var(--color-white);
  }
 
- #carousel-count .carousel-item a:focus {
-     outline: var(--color-outline-focus) auto 3px;
-     outline-offset: -1px;
+ #carousel-count .carousel-item a {
+     display: block;
+     margin: 3px;
+ }
+
+ #carousel-count .carousel-item a:focus-visible {
+     box-shadow: 0 0 0 3px var(--color-outline-focus);
  }
 
  #carousel-count-fullsize-img .btn-close {
@@ -3644,12 +3675,20 @@
 
  .close-clear-btn button {
      background-color: var(--color-default);
-     font-family: var(--font-family-default);
+     border: 1px solid var(--color-white);
+     color: var(--color-white);
      font-size: 14px;
      font-weight: 400;
      line-height: 21px;
      padding: 10px 20px;
  }
+ .close-clear-btn button:hover,
+ .close-clear-btn button:focus {
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+    color: var(--color-default);
+    outline: none;
+}
 
  .close-li-icon {
      visibility: hidden;
