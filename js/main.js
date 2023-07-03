@@ -106,7 +106,7 @@ $(document).ready(function () {
     }, 10000);
 
     if ($('.toast-notification').length > 0) {
-        $(".toast-notification a").click(function (e) {
+        $(".toast-notification .close-toast").click(function (e) {
             e.preventDefault();
             $(".toast-notification").remove();
         });
@@ -258,7 +258,7 @@ function lookupTable() {
                 var row = $(this);
                 var found = false;
 
-                row.find('td, th').each(function() {
+                row.find('td, th').each(function () {
                     var cellText = $(this).text().toLowerCase();
                     if (cellText.includes(searchText)) {
                         found = true;
@@ -273,7 +273,7 @@ function lookupTable() {
                     row.hide();
                 }
             });
-            
+
             if (searchText.length == 0) {
                 table.show();
                 $('#searchResults').hide();
@@ -380,3 +380,14 @@ function commaSeparateNumber(val) {
     }
     return val;
 }
+
+$(document).ready(function () {
+    $('.breadcrumb li').each(function () {
+        var content = $(this).text();
+        var maxLength = 10;
+
+        if (content.length > maxLength) {
+            $(this).addClass('ellipsis');
+        }
+    });
+});
