@@ -65,8 +65,8 @@
  }
 
  a:focus-visible {
-     outline: 3px solid var(--color-outline-focus);
-     outline-offset: 0;
+    outline: 3px solid var(--color-outline-focus);
+    outline-offset: 0;
  }
 
  p {
@@ -1226,7 +1226,7 @@
 # Main Hero Carousel 
 --------------------------------------------------------------*/
 
- .carousel-indicators button.active {
+.homepage-carousel-cls .carousel-indicators button.active {
      height: 13px !important;
      width: 13px !important;
      margin: 0 5px !important;
@@ -1306,7 +1306,7 @@
      line-height: var(--line-height-default);
  }
 
- .carousel-indicators button {
+ .homepage-carousel-cls .carousel-indicators button {
      height: 13px !important;
      width: 13px !important;
      margin: 0 5px !important;
@@ -1315,9 +1315,13 @@
      border: 1.5px solid white !important;
  }
 
- .carousel-indicators button:focus {
-     outline: var(--color-outline-focus) auto 3px;
-     outline-offset: 2px;
+ .homepage-carousel-cls .carousel-indicators button:focus {
+    outline-style: none;
+    box-shadow: 0 0 0 3px var(--color-outline-focus);
+ }
+
+ .homepage-carousel-cls .carousel-indicators [data-bs-target] {
+     opacity: 1;
  }
 
  .hero-image {
@@ -1553,7 +1557,7 @@
  .breadcrumb-position {
      background-color: var(--color-default);
      width: 100%;
-     padding: 10px 10px 5px 5px;
+     padding: 10px 10px 10px 5px;
  }
 
  @media(max-width: 992px) {
@@ -1568,14 +1572,14 @@
      }
  }
 
- .breadcrumb-position span,
- .breadcrumb-position a {
-     display: inline-block;
-     white-space: nowrap;
-     max-width: 165px;
-     overflow: hidden;
-     text-overflow: ellipsis;
- }
+ /* .breadcrumb-position span,
+.breadcrumb-position a {
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 165px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
 
  .breadcrumb-position a {
      color: var(--color-white);
@@ -1589,10 +1593,16 @@
  .breadcrumb-position .breadcrumb {
      margin-left: 10px;
      margin-bottom: 0;
+     display: flex;
+     flex-wrap: nowrap;
+     overflow-x: auto;
  }
 
  .breadcrumb-position .breadcrumb .breadcrumb-item {
      font-size: 11px;
+     white-space: nowrap;
+     overflow: hidden;
+     min-width: 45px;
  }
 
  @media(max-width: 992px) {
@@ -1613,6 +1623,10 @@
  .breadcrumb-position.white-color li a,
  .breadcrumb-position.white-color li.active {
      color: var(--color-white);
+ }
+
+ .ellipsis {
+     text-overflow: ellipsis;
  }
 
  /*--------------------------------------------------------------
@@ -2276,12 +2290,12 @@
      line-height: 21px;
  }
 
- .footer .list-unstyled a:focus {
+ /* .footer .list-unstyled a:focus {
      text-decoration: underline;
      outline: var(--color-outline-focus) auto 3px;
      outline-offset: 2px;
      opacity: .8;
- }
+ } */
 
  .footer .about-ofcom li {
      font-size: 14px;
@@ -2565,9 +2579,8 @@
  }
 
  .swiper-pagination-bullet:focus {
-     outline: 2px solid var(--color-white);
-     outline-offset: 4px;
-     opacity: 1;
+     outline-style: none;
+     box-shadow: 0 0 0 3px var(--color-outline-focus);
  }
 
  .news-green .info-card:hover,
@@ -3287,7 +3300,6 @@
 
  .title-block a:focus-visible {
      outline: var(--color-outline-focus) auto 3px;
-     /* box-shadow: 0 0 0 3px var(--color-outline-focus); */
      outline-offset: 2px;
  }
 
@@ -3763,6 +3775,10 @@
      display: inline-block;
  }
 
+ .logo-list a:hover {
+     background-color: var(--color-secondary);
+ }
+
  .logo-list img {
      max-height: 100px;
      max-width: 200px;
@@ -3920,6 +3936,7 @@
  .blue-theme table tr td:first-child {
      background-color: var(--color-primary);
      color: var(--color-white);
+     border: 1px solid var(--color-white) !important;
  }
 
  .red-theme table tr th,
@@ -3927,6 +3944,7 @@
  .red-theme table tr td:first-child {
      background-color: var(--color-red);
      color: var(--color-white);
+     border: 1px solid var(--color-white) !important;
  }
 
  .megenta-theme table tr:first-child td,
@@ -3934,6 +3952,7 @@
  .megenta-theme table tr td:first-child {
      background-color: var(--color-megenta);
      color: var(--color-white);
+     border: 1px solid var(--color-white) !important;
  }
 
  .lightblue-theme table tr th,
@@ -3941,6 +3960,7 @@
  .lightblue-theme table tr td:first-child {
      background-color: var(--color-primary);
      color: var(--color-white);
+     border: 1px solid var(--color-white) !important;
  }
 
  .maroon-theme table tr:first-child td,
@@ -3948,6 +3968,7 @@
  .maroon-theme table tr td:first-child {
      background-color: var(--color-maroon);
      color: var(--color-white);
+     border: 1px solid var(--color-white) !important;
  }
 
  .pink-theme table tr th,
