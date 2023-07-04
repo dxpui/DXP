@@ -65,8 +65,8 @@
  }
 
  a:focus-visible {
-    outline: 3px solid var(--color-outline-focus);
-    outline-offset: 0;
+     outline: 3px solid var(--color-outline-focus);
+     outline-offset: 0;
  }
 
  p {
@@ -1226,7 +1226,7 @@
 # Main Hero Carousel 
 --------------------------------------------------------------*/
 
-.homepage-carousel-cls .carousel-indicators button.active {
+ .homepage-carousel-cls .carousel-indicators button.active {
      height: 13px !important;
      width: 13px !important;
      margin: 0 5px !important;
@@ -1316,8 +1316,8 @@
  }
 
  .homepage-carousel-cls .carousel-indicators button:focus {
-    outline-style: none;
-    box-shadow: 0 0 0 3px var(--color-outline-focus);
+     outline-style: none;
+     box-shadow: 0 0 0 3px var(--color-outline-focus);
  }
 
  .homepage-carousel-cls .carousel-indicators [data-bs-target] {
@@ -1584,6 +1584,11 @@
  .breadcrumb-position a {
      color: var(--color-white);
      text-decoration: underline;
+ }
+
+ .breadcrumb-position a:focus-visible {
+     outline-style: none;
+     border-bottom: 5px solid var(--color-outline-focus);
  }
 
  .breadcrumb-position span {
@@ -3475,60 +3480,12 @@
      stroke: var(--color-default);
  }
 
- /* .title-block .blue-bg .svg-arrow,
- .news-lightblue .info-card .svg-arrow,
- .news-red .info-card .svg-arrow,
- .news-maroon .info-card .svg-arrow,
- .news-megenta .info-card .svg-arrow {
-     fill: var(--color-white);
- }
-
- .title-block .blue-bg .svg-arrow circle,
- .news-lightblue .info-card .svg-arrow circle,
- .news-red .info-card .svg-arrow circle,
- .news-maroon .info-card .svg-arrow circle,
- .news-megenta .info-card .svg-arrow circle {
-     stroke: var(--color-white);
- }
-
- .title-block .blue-bg .svg-arrow path,
- .news-lightblue .info-card .svg-arrow path,
- .news-red .info-card .svg-arrow path,
- .news-maroon .info-card .svg-arrow path,
- .news-megenta .info-card .svg-arrow path {
-     stroke: var(--color-default);
- }
-
- .title-block .blue-bg .svg-arrow circle,
- .news-lightblue .info-card:hover .svg-arrow circle,
- .news-red .info-card:hover .svg-arrow circle,
- .news-maroon .info-card:hover .svg-arrow circle,
- .news-megenta .info-card:hover .svg-arrow circle {
-     stroke: var(--color-white);
- }
-
- .title-block .blue-bg .svg-arrow,
- .news-lightblue .info-card:hover .svg-arrow,
- .news-red .info-card:hover .svg-arrow,
- .news-maroon .info-card:hover .svg-arrow,
- .news-megenta .info-card:hover .svg-arrow {
-     fill: var(--color-default);
- }
-
- .title-block .blue-bg .svg-arrow path,
- .news-lightblue .info-card:hover .svg-arrow path,
- .news-red .info-card:hover .svg-arrow path,
- .news-maroon .info-card:hover .svg-arrow path,
- .news-megenta .info-card:hover .svg-arrow path {
-     stroke: var(--color-white);
- } */
-
  /*--------------------------------------------------------------
 # Image carouse
 --------------------------------------------------------------*/
  #carousel-count .carousel-item img {
      width: 100%;
-     height: 438px;
+     aspect-ratio: 16/9;
      object-fit: cover;
  }
 
@@ -3615,6 +3572,17 @@
  #carousel-count {
      margin-left: 16%;
      margin-right: 16%;
+ }
+
+ .modal-backdrop {
+     height: 100%;
+     width: 100%;
+ }
+
+ @media screen and (max-width: 1024px) {
+     #carousel-count-fullsize-img .modal-dialog {
+         max-width: 100%;
+     }
  }
 
  /*--------------------------------------------------------------
