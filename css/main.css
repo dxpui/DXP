@@ -2930,6 +2930,7 @@
      box-shadow: none;
      margin-top: 2px;
  }
+ 
 
  .accordion-button:focus-visible {
      outline: var(--color-outline-focus) auto 3px;
