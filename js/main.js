@@ -98,12 +98,12 @@ window.onscroll = () => {
 
 // for main menu 
 $(document).ready(function () {
-
+    var timeVal = $("#ToastTime").val();
     setTimeout(function () {
         if ($('.toast-notification').length > 0) {
             $('.toast-notification').remove();
         }
-    }, 10000);
+    }, parseInt(timeVal) * 100);
 
     if ($('.toast-notification').length > 0) {
         $(".toast-notification .close-toast").click(function (e) {
@@ -385,9 +385,109 @@ $(document).ready(function () {
     $('.breadcrumb li').each(function () {
         var content = $(this).text();
         var maxLength = 10;
-
         if (content.length > maxLength) {
             $(this).addClass('ellipsis');
         }
     });
 });
+
+//TOAST BLOCK COOKIES
+$(document).ready(function () {
+    if (document.cookie.indexOf("ToastPopupBlocked") < 0) {
+        $("#exampleModal").show();
+        $(".modal-backbg").show();
+        $("#exampleModal").addClass("show");
+    }
+    else {
+        $("#exampleModal").hide();
+        $(".modal-backbg").hide();
+    }
+});
+
+function getCookie(name) {
+    let cookie = {};
+    document.cookie.split(';').forEach(function (el) {
+        let [k, v] = el.split('=');
+        cookie[k.trim()] = v;
+    })
+    return cookie[name];
+}
+
+$("#AllowToastPopup").click(function () {
+    document.cookie = "ToastPopupBlocked=false; expires=Wed, 05 Aug 2028 23:00:00 UTC";
+    $("#exampleModal").hide();
+    $(".modal-backbg").hide();
+});
+
+$("#BlockToastPopup").click(function () {
+    document.cookie = "ToastPopupBlocked=true; expires=Wed, 05 Aug 2028 23:00:00 UTC";
+    $("#exampleModal").hide();
+    $(".modal-backbg").hide();
+});
+
+$("#CloseToast").click(function () {
+    $("#exampleModal").hide();
+    $(".modal-backbg").hide();
+});
+
+//********************Auto Complete Serach**********************
+
+document.addEventListener("DOMContentLoaded", function () {
+    var suggestions = [
+      "Apple",
+      "Ab",
+      "Ac",
+      "Banana",
+      "Cherry",
+      "Grapes",
+      "Lemon",
+      "Orange",
+      "Peach",
+      "Strawberry",
+      "Watermelon"
+    ];
+
+    var input = document.getElementById("myInput");
+    var dropdown = document.getElementById("autocomplete-dropdown");
+
+    input.addEventListener("input", function () {
+      var value = input.value;
+      clearDropdown();
+
+      if (value.length > 0) {
+        var regex = new RegExp("^" + value, "i");
+        var matchingSuggestions = suggestions.filter(function (item) {
+          return regex.test(item);
+        });
+
+        matchingSuggestions.forEach(function (item) {
+          var listItem = document.createElement("li");
+          listItem.classList.add("dropdown-item");
+          listItem.textContent = item;
+          listItem.addEventListener("click", function () {
+            input.value = item;
+            clearDropdown();
+          });
+
+          dropdown.appendChild(listItem);
+        });
+
+        if (matchingSuggestions.length > 0) {
+          dropdown.classList.add("show");
+        }
+      }
+    });
+
+    function clearDropdown() {
+      while (dropdown.firstChild) {
+        dropdown.removeChild(dropdown.firstChild);
+      }
+      dropdown.classList.remove("show");
+    }
+
+    document.addEventListener("click", function (event) {
+      if (!input.contains(event.target)) {
+        clearDropdown();
+      }
+    });
+  });
