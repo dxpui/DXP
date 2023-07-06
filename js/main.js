@@ -430,7 +430,7 @@ $("#CloseToast").click(function () {
     $(".modal-backbg").hide();
 });
 
-/************************************** */
+/********************************************************* */
 $(document).ready(function () {
     $(".toggle-text").click(function () {
         var hiddenText = $(this).siblings(".hidden-text");
