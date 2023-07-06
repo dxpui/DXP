@@ -62,6 +62,7 @@
 
  a:hover {
      color: var(--color-default);
+     text-decoration: underline;
  }
 
  a:focus-visible {
@@ -223,7 +224,8 @@
  }
 
  video:focus-visible {
-     outline: var(--color-outline-focus) auto 3px;
+     outline: none;
+     box-shadow: 0 0 0 3px var(--color-outline-focus);
  }
 
  /*--------------------------------------------------------------
@@ -294,6 +296,7 @@
      border: 1px solid var(--color-default);
      -webkit-transition: all .3s linear 0s;
      transition: all .3s linear 0s;
+     text-decoration: none;
  }
 
  .btn-primary:focus,
@@ -324,6 +327,7 @@
      border: 1px solid var(--color-white);
      -webkit-transition: all .3s linear 0s;
      transition: all .3s linear 0s;
+     text-decoration: none;
  }
 
  .btn-secondary:active {
@@ -340,6 +344,7 @@
      background-color: transparent;
      color: var(--color-default);
      border: 1px solid transparent;
+     text-decoration: none;
  }
 
  .btn-secondary.hover-none .dropdown-item.active,
@@ -386,6 +391,7 @@
  .btn-primary-border:hover {
      background-color: var(--color-default);
      color: var(--color-white);
+     text-decoration: none;
  }
 
  .filter-btn {
@@ -435,6 +441,7 @@
  .btn-primary-white-border:hover {
      background-color: var(--color-secondary);
      color: var(--color-default);
+     text-decoration: none;
  }
 
  /* .btn:hover .fa-arrow-right{
@@ -453,6 +460,7 @@
  .btn-tag:hover {
      color: var(--color-black);
      background-color: var(--color-secondary);
+     text-decoration: none;
  }
 
  @media(max-width: 992px) {
@@ -483,6 +491,7 @@
  .blue-bg .video-btn:hover {
      background-color: var(--color-secondary);
      color: var(--color-default);
+     text-decoration: none;
  }
 
  /*--------------------------------------------------------------
@@ -593,6 +602,7 @@
 
  header .search-form label:hover {
      color: var(--orange);
+     text-decoration: none;
  }
 
  .langauge-change {
@@ -627,6 +637,7 @@
 
  .search-icons:hover {
      background-color: var(--color-secondary);
+     text-decoration: none;
  }
 
  .search-icons:focus {
@@ -723,6 +734,7 @@
 
  .gl-search:hover {
      color: var(--color-light-gray);
+     text-decoration: none;
  }
 
  /*--------------------------------------------------------------
@@ -805,6 +817,7 @@
  .header .menu>ul>li>a:hover,
  .header .menu>ul>li>a:focus {
      border-bottom: 15px solid var(--color-secondary);
+     text-decoration: none;
  }
 
  .header a:has(> i.rotate-arrow) {
@@ -1200,6 +1213,7 @@
  .menu-social-icons a:hover {
      background-color: var(--color-white);
      color: var(--color-default);
+     text-decoration: none;
  }
 
  .menu-social-icons a i {
@@ -1502,10 +1516,17 @@
 
  .recommendation-block a {
      color: var(--color-white);
+     display: block;
  }
 
  .recommendation-block a:hover {
      text-decoration: underline;
+ }
+
+ .recommendation-block a:focus-visible {
+     text-decoration: underline;
+     outline: 3px solid var(--color-outline-focus);
+     outline-offset: 0;
  }
 
  .recommendation-block img {
@@ -1540,13 +1561,14 @@
  }
 
  .social-icons-box a:hover,
- .social-icons-box a:focus {
+ .social-icons-box a:focus-visible {
      background-color: var(--color-default);
      color: var(--color-white);
+     text-decoration: none;
  }
 
  .social-icons-box a:hover i,
- .social-icons-box a:focus i {
+ .social-icons-box a:focus-visible i {
      color: var(--color-white);
  }
 
@@ -1670,6 +1692,7 @@
      background-color: var(--color-secondary);
      transition: all 0.3s ease-in-out;
      -webkit-transition: all 0.3s ease-in-out;
+     text-decoration: none;
  }
 
  a:focus .info-card {
@@ -1732,16 +1755,19 @@
      stroke: var(--color-white);
  }
 
- .recommendation-block .recommendation-link:hover svg {
-     fill: var(--color-secondary);
+ .recommendation-block .recommendation-link:hover svg,
+ .recommendation-block a:focus svg {
+     fill: var(--color-secondary) !important;
  }
 
- .recommendation-block .recommendation-link:hover .svg-arrow circle {
-     stroke: var(--color-default);
+ .recommendation-block .recommendation-link:hover .svg-arrow circle,
+ .recommendation-block a:focus .svg-arrow circle {
+     stroke: var(--color-default) !important;
  }
 
- .recommendation-block .recommendation-link:hover svg path {
-     stroke: var(--color-default);
+ .recommendation-block .recommendation-link:hover svg path,
+ .recommendation-block a:focus svg path {
+     stroke: var(--color-default) !important;
  }
 
  /**************************************************/
@@ -2885,21 +2911,25 @@
 
  .destination-accordian .accordion-button:not(.collapsed) {
      color: #000045 !important;
-     background-color: #F2F2F2 !important;
+     animation: colorChange1 1s forwards;
  }
 
  .destination-accordian .card-body {
      color: #000045 !important;
-     background-color: #F2F2F2 !important;
+     animation: colorChange1 1s forwards;
+ }
+
+ .destination-accordian :not(.show) .card-body {
+     background-color: #fff !important;
  }
 
  .destination-accordian {
      position: relative;
  }
 
- .destination-accordian .accordion-collapse.show::after {
+ .destination-accordian:has(.show)::after {
      position: absolute;
-     background-color: #F2F2F2;
+     animation: colorChange .5s forwards;
      display: block;
      content: '';
      top: 0;
@@ -2909,9 +2939,9 @@
      right: auto;
  }
 
- .destination-accordian .accordion-collapse.show::before {
+ .destination-accordian:has(.show)::before {
      position: absolute;
-     background-color: #F2F2F2;
+     animation: colorChange .5s forwards;
      display: block;
      content: '';
      top: 0;
@@ -2919,6 +2949,33 @@
      width: 100%;
      left: auto;
      right: 100%;
+ }
+
+ @keyframes colorChange {
+     0% {
+         background-color: transparent;
+     }
+
+     100% {
+         background-color: #f2f2f2;
+         /* Change this to your desired background color */
+     }
+ }
+
+ @keyframes colorChange1 {
+     0% {
+         background-color: transparent;
+     }
+
+     30% {
+         background-color: transparent;
+     }
+
+
+     100% {
+         background-color: #f2f2f2;
+         /* Change this to your desired background color */
+     }
  }
 
  .destination-accordian .card-body p:last-child {
@@ -2930,7 +2987,7 @@
      box-shadow: none;
      margin-top: 2px;
  }
- 
+
 
  .accordion-button:focus-visible {
      outline: var(--color-outline-focus) auto 3px;
@@ -3762,7 +3819,8 @@
      display: inline-block;
  }
 
- .logo-list a:hover {
+ .logo-list a:hover,
+ .logo-list a:focus-visible {
      background-color: var(--color-secondary);
  }
 
@@ -4101,6 +4159,13 @@
  .modal-popup .modal-content {
      border-radius: 0px;
      padding: 20px 80px;
+ }
+
+ @media(max-width: 768px) {
+     .modal-popup .modal-content {
+         border-radius: 0px;
+         padding: 20px 20px;
+     }
  }
 
  .modal-popup .modal-header button i {
