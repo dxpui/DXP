@@ -431,7 +431,7 @@ $("#CloseToast").click(function () {
 });
 
 
-//********************aAutocomplete**********************
+//********************aAutocomplete****************************
 
     function autocomplete(inp, arr) {
       /*the autocomplete function takes two arguments,

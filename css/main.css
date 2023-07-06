@@ -705,7 +705,7 @@
      font-weight: 400;
      margin-bottom: 20px;
  }
- .search-quick-link a:hover {
+ .search-quick-link a:hover { 
     text-decoration: none;
 }
  .search-quick-link a i {
