@@ -428,20 +428,40 @@ $("#CloseToast").click(function () {
 });
 
 /********************************************************* */
-$(document).ready(function () {
-    $(".toggle-text").click(function () {
-        var hiddenText = $(this).siblings(".hidden-text");
-        var toggleIcon = $(this).siblings(".toggle-icon");
+$(".toggle-text").click(function () {
+    var hiddenText = $(this).siblings(".hidden-text");
+    var toggleIcon = $(this).siblings(".toggle-icon");
 
-        hiddenText.slideToggle();
-        toggleIcon.toggleClass("fa-angle-down fa-angle-up");
+ 
 
-        if (toggleIcon.hasClass("fa-angle-down")) {
-            $(this).text("Show All Steps");
-        } else {
-            $(this).text("Hide All Steps");
-        }
-    });
+    hiddenText.slideToggle();
+    toggleIcon.toggleClass("fa-angle-down fa-angle-up");
+
+ 
+
+    if (toggleIcon.hasClass("fa-angle-down")) {
+        $(this).text($('#showAllText').val()); //Show All Steps
+        $('.collapse').each(function () {
+            $(this).removeClass('show');
+        });
+        $('.accordion-button').each(function () {
+            $(this).attr('aria-expanded', 'false');
+            $(this).addClass('collapsed');
+        });
+    }
+    else {
+        $(this).text($('#hideAllText').val()); //Hide All Steps
+
+ 
+
+        $('.collapse').each(function () {
+            $(this).addClass('show');
+        });
+        $('.accordion-button').each(function () {
+            $(this).attr('aria-expanded', 'true');
+            $(this).removeClass('collapsed');
+        });
+    }
 });
 //********************aAutocomplete****************************
 
