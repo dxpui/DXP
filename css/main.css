@@ -274,6 +274,10 @@
      background-color: var(--color-secondary);
  }
 
+ .text-red {
+     color: var(--color-red);
+ }
+
  /*--------------------------------------------------------------
 # All Buttons
 --------------------------------------------------------------*/
@@ -487,14 +491,20 @@
      color: var(--color-default);
  }
 
- .blue-bg .video-btn:hover {
+ .blue-bg .video-btn:hover,
+ .blue-bg .video-btn:focus {
      background-color: var(--color-secondary);
      color: var(--color-default);
      text-decoration: none !important;
  }
- .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
-    background-color: var(--color-secondary);
-    color: var(--color-default);
+
+ .btn-check:checked+.btn,
+ .btn.active,
+ .btn.show,
+ .btn:first-child:active,
+ :not(.btn-check)+.btn:active {
+     background-color: var(--color-secondary);
+     color: var(--color-default);
  }
 
  /*--------------------------------------------------------------
@@ -609,11 +619,16 @@
  }
 
  .langauge-change {
-     font-size: 11px;
+     font-size: 12px;
      margin-left: 40px;
      padding: 10px;
      color: var(--color-default);
      min-width: 80px;
+     font-weight: 500;
+ }
+
+ .langauge-change:hover {
+     text-decoration: underline;
  }
 
  @media(max-width: 768px) {
@@ -723,9 +738,10 @@
      text-decoration: underline;
  }
 
+ /* 
  .search-quick-link .info-card.news-info .date {
      color: var(--color-white);
- }
+ } */
 
  .search-quick-link .info-card.news-info:hover .date {
      color: var(--color-default);
@@ -1540,6 +1556,17 @@
      height: 24px;
  }
 
+ .recommendation-block .pay-btn {
+     position: relative;
+     padding-right: 40px;
+ }
+
+ .recommendation-block a .recommendation-block-arrow {
+     position: absolute;
+     right: 15px;
+     top: 30%;
+ }
+
  .social-icons-box {
      background-color: white;
      padding: 10px;
@@ -1702,7 +1729,7 @@
      text-decoration: none;
  }
 
- a:focus .info-card {
+ a:focus-visible .info-card {
      background-color: var(--color-secondary);
      transition: all 0.3s ease-in-out;
      -webkit-transition: all 0.3s ease-in-out;
@@ -1842,6 +1869,7 @@
      aspect-ratio: 16/9;
      object-fit: cover;
      object-position: top left;
+     background-color: var(--color-light-gray);
  }
 
  .info-card .card-img-large {
@@ -2297,10 +2325,13 @@
 
  .step-accordion .accordion-item .accordion-button:not(.collapsed) {
      box-shadow: none;
+     background-color: var(--color-light-gray);
  }
 
  .step-accordion .accordion-body {
      text-align: left;
+     padding-top: 0;
+     background-color: var(--color-light-gray);
  }
 
  /**************************************End Step Navigation *************************/
@@ -2373,7 +2404,7 @@
 
  .footer .social-icons-list a:hover,
  .footer .social-icons-list a:focus {
-     background-color: var(--color-white);
+     background-color: var(--color-secondary);
  }
 
  .footer .social-icons-list a i {
@@ -2497,9 +2528,9 @@
      height: 100%;
  }
 
- .swiper-outer {
+ /* .swiper-outer {
      margin-left: 90px;
- }
+ } */
 
  .swiper-slide {
      text-align: center;
@@ -2518,7 +2549,8 @@
  .mySwiper {
      width: 100%;
      height: 100%;
-     padding: 15px 75px 60px 15px;
+     padding: 15px 0px 60px 0px;
+     overflow: unset;
  }
 
  .mySwiper a:hover {
@@ -2555,6 +2587,7 @@
  .news-container-area {
      padding-top: 3rem;
      padding-bottom: 2rem;
+     overflow: hidden;
  }
 
  .news-container-area .swiper-pagination-bullet {
@@ -2980,7 +3013,7 @@
      }
 
      100% {
-         background-color: #f2f2f2;
+         background-color: var(--color-light-gray);
          /* Change this to your desired background color */
      }
  }
@@ -2996,7 +3029,7 @@
 
 
      100% {
-         background-color: #f2f2f2;
+         background-color: var(--color-light-gray);
          /* Change this to your desired background color */
      }
  }
@@ -3030,7 +3063,7 @@
 # News Carousal
 --------------------------------------------------------------*/
  .topics {
-     background-color: #F2F2F2;
+     background-color: var(--color-light-gray);
  }
 
  .topics-btn {
@@ -3145,7 +3178,7 @@
  }
 
  .pdfdownload {
-     background-color: #F2F2F2;
+     background-color: var(--color-light-gray);
      font-family: var(--font-family-default);
      font-size: 14px;
      font-weight: 400;
@@ -3696,6 +3729,54 @@
  /*--------------------------------------------------------------
 #  Showfilters
 --------------------------------------------------------------*/
+ .filter-dropdown select {
+     background-color: var(--color-default);
+     overflow-y: auto;
+     width: 100%;
+     height: 400px;
+     border: none;
+ }
+
+ .filter-dropdown select:focus-visible {
+     outline: none;
+ }
+
+ .filter-dropdown select option {
+     color: var(--color-white);
+     padding-top: 5px;
+     padding-bottom: 5px;
+     margin-right: 10px;
+ }
+
+ .filter-dropdown select option:hover {
+     color: var(--color-default);
+     background-color: var(--color-light-gray)
+ }
+
+ /* .filter-dropdown select option:active,
+ .filter-dropdown select option:focus,
+ .filter-dropdown select option:checked {
+     color: var(--color-white);
+     background-color: var(--color-default) !important
+ } */
+
+ .filter-dropdown ::-webkit-scrollbar {
+     width: 10px;
+ }
+
+ .filter-dropdown ::-webkit-scrollbar-track {
+     box-shadow: inset 0 0 5px grey;
+     border-radius: 10px;
+ }
+
+ .filter-dropdown ::-webkit-scrollbar-thumb {
+     background: var(--color-secondary);
+     border-radius: 10px;
+ }
+
+ /* select:-internal-list-box option {
+     background-color: #000045 !important;
+ } */
 
  .filters-content button {
      background-color: var(--color-default);
@@ -3878,11 +3959,12 @@
      line-height: var(--line-height-default);
      color: var(--color-default);
      padding: 10px, 28px, 10px, 28px;
+     border-radius: 0;
  }
 
  .dynamictabs .nav-tabs .nav-item a:hover,
  .dynamictabs .nav-tabs .nav-item a:focus {
-     background-color: #D9D9D9;
+     background-color: var(--color-light-gray);
      text-decoration: none;
  }
 
@@ -3893,7 +3975,7 @@
  }
 
  .dynamictabs .tab-content {
-     background-color: #D9D9D9;
+     background-color: var(--color-light-gray);
 
  }
 
@@ -4156,27 +4238,39 @@
  /*--------------------------------------------------------------
 #  Alerts
 --------------------------------------------------------------*/
- .alerts {
-     position: relative;
-     padding: 18px;
-     margin-bottom: 1rem;
-     border: 1px solid transparent;
+ .alert {
      border-radius: 0;
      text-align: center;
  }
 
- .alerts.blue {
+ .alert .alert-close svg {
+     height: 1rem;
+     width: 1rem;
+     fill: var(--color-default);
+ }
+
+ .alert .alert-close {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     z-index: 2;
+     padding: 5px;
+ }
+
+ .alert.blue-bg {
      background-color: var(--color-primary);
      color: var(--color-white);
  }
 
- .alerts.green {
-     background-color: var(--color-green);
+ .alert.blue-bg svg {
+     fill: var(--color-white);
+ }
+
+ .alert.green-bg {
      color: var(--color-default);
  }
 
- .alerts.orange {
-     background-color: var(--color-secondary);
+ .alert.orange-bg {
      color: var(--color-default);
  }
 
@@ -4274,7 +4368,7 @@ padding-right: 80px; */
  .language-notification .modal-content {
      border-radius: 0px;
      padding: 20px 40px;
-     background-color: #F2F2F2;
+     background-color: var(--color-light-gray);
      box-shadow: 0px 6px 10px rgba(0, 0, 69, 0.25);
 
  }
