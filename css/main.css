@@ -613,7 +613,7 @@
      color: var(--color-white);
  }
 
- header .search-form label:hover {
+ .search-form label:hover {
      color: var(--orange);
      text-decoration: none;
  }
@@ -1234,7 +1234,7 @@
  }
 
  .menu-social-icons a:hover {
-     background-color: var(--color-white);
+     background-color: var(--color-secondary);
      color: var(--color-default);
      text-decoration: none;
  }
@@ -1262,7 +1262,44 @@
      color: var(--color-white);
      text-decoration: underline;
  }
+ 
+ .sub-menu-link {
+    color: var(--color-white);
+    display: block;
+    width: 100%;
+}
 
+.sub-menu-link:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+.sub-menu-link .sub-topic-text {
+   width: 100%;
+}
+.sub-menu-link .sub-topic-text .svg-arrow {
+    fill: none !important;
+}
+
+.sub-menu-link .sub-topic-text .svg-arrow circle {
+    stroke: var(--color-white);
+}
+
+.sub-menu-link .sub-topic-text .svg-arrow path {
+    stroke: var(--color-white);
+}
+
+.sub-menu-link:hover .sub-topic-text .svg-arrow {
+   fill: var(--color-outline-focus) !important;
+}
+
+.sub-menu-link:hover .sub-topic-text .svg-arrow circle {
+   stroke: var(--color-default);
+}
+
+.sub-menu-link:hover .sub-topic-text .svg-arrow path {
+   stroke: var(--color-default);
+}
  /*--------------------------------------------------------------
 # Main Hero Carousel 
 --------------------------------------------------------------*/
@@ -2384,7 +2421,7 @@
 
  .footer .social-icons {
      display: block;
-     width: 70%;
+     width: 80%;
  }
 
  .footer .social-icons .social-icons-list {
@@ -2394,12 +2431,10 @@
 
  .footer .social-icons-list a {
      font-size: 20px;
-     margin-right: 10px;
+     margin-inline: 0;
      margin-bottom: 9px;
      padding: 10px 10px 10px 10px;
      display: inline-block;
-     margin-left: -10px;
-
  }
 
  .footer .social-icons-list a:hover,
@@ -2477,6 +2512,7 @@
      .footer .social-icons .social-icons-list {
          width: 33%;
          float: left;
+         text-align: center;
      }
  }
 
@@ -4241,6 +4277,7 @@
  .alert {
      border-radius: 0;
      text-align: center;
+     margin-top: 15px;
  }
 
  .alert .alert-close svg {
