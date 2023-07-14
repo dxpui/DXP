@@ -1844,15 +1844,41 @@
      stroke: var(--color-default);
  }
 
- .info-card:hover svg {
+ .info-card:hover .svg-arrow {
      fill: var(--color-default);
  }
 
- .info-card:hover svg path {
+ .info-card .svg-arrow-info {
+     fill: none;
+ }
+
+ .info-card .svg-arrow-info circle {
+     stroke: var(--color-default);
+ }
+
+ .info-card .svg-arrow-info path {
+     stroke: var(--color-default);
+ }
+
+ .info-card .info-link:hover .svg-arrow-info path {
      stroke: var(--color-white);
  }
 
+ .info-card .info-link:hover .svg-arrow-info {
+     fill: var(--color-default);
+ }
 
+ .info-card a:focus-visible .info-link .svg-arrow-info path {
+     stroke: var(--color-white);
+ }
+
+ .info-card a:focus-visible .info-link .svg-arrow-info {
+     fill: var(--color-default);
+ }
+
+ .info-card:hover .svg-arrow path {
+     stroke: var(--color-white);
+ }
 
  .recommendation-block .recommendation-link .svg-arrow {
      fill: none;
@@ -2015,6 +2041,11 @@
 
  .info-card ul li a:hover {
      text-decoration: underline;
+ }
+
+ .info-card ul li a:focus-visible .info-link {
+     outline: 3px solid var(--color-outline-focus);
+     outline-offset: 0;
  }
 
  .info-card.hover-none:hover {
@@ -2561,9 +2592,10 @@
  }
 
  @media(max-width: 576px) {
-    .footer section {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-    }
+     .footer section {
+         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+     }
+
      .footer section.social {
          margin-bottom: 30px !important;
      }
