@@ -1789,7 +1789,7 @@
  .info-card::before {
      content: '';
      display: block;
-     height: 1px;
+     height: .5px;
      background-color: var(--color-default);
      position: relative;
      top: -15px;
