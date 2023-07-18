@@ -3860,74 +3860,9 @@
  /*--------------------------------------------------------------
 #  Showfilters
 --------------------------------------------------------------*/
- /* .filter-dropdown select {
-     background-color: var(--color-default);
-     overflow-y: auto;
-     width: 100%;
-     height: 400px;
-     border: none;
- }
-
- .filter-dropdown select:focus-visible {
-     outline: none;
- }
-
- .filter-dropdown select option {
-     color: var(--color-white);
-     padding-top: 5px;
-     padding-bottom: 5px;
-     margin-right: 10px;
- }
-
- .filter-dropdown select option:hover {
-     color: var(--color-default);
-     background-color: var(--color-light-gray)
- }
-
-
-
- .filter-dropdown ::-webkit-scrollbar {
-     width: 10px;
- }
-
- .filter-dropdown ::-webkit-scrollbar-track {
-     box-shadow: inset 0 0 5px grey;
-     border-radius: 10px;
- }
-
- .filter-dropdown ::-webkit-scrollbar-thumb {
-     background: var(--color-secondary);
-     border-radius: 10px;
- } */
-
-
-
- .filters-content button {
-     background-color: var(--color-default);
-     color: #FFFFFF;
-     font-family: var(--font-family-default);
-     font-size: 14px;
-     font-weight: 400;
-     line-height: 19px;
-     padding: 10px 20px;
-     border: 1px solid var(--color-default);
- }
 
  .showfilters button {
-     background-color: #FFFFFF;
-     color: var(--color-default);
-     font-family: var(--font-family-default);
-     font-size: 14px;
-     font-weight: 400;
-     line-height: 19px;
-     padding: 10px 20px;
-     border: 1px solid var(--color-default);
-     margin-top: 20px;
      margin-bottom: 40px;
- }
-
- .showfilters button svg {
-     transform: rotate(180deg);
  }
 
  .showfilters {
@@ -3940,8 +3875,43 @@
 
  }
 
+ .showfilters .close-btn {
+     position: absolute;
+     right: 10px;
+     top: 10px;
+     font-size: 24px;
+     color: var(--color-white);
+     box-sizing: content-box;
+     width: 1em;
+     height: 1em;
+     margin-left: auto;
+ }
+
  .showfilters {
      --bs-modal-width: 100%;
+ }
+
+ .showfilters .modal-content .col {
+     max-width: 500px;
+     margin: 0 auto;
+ }
+
+ @media(max-width: 1024px) {
+     .showfilters .modal-content .col {
+         min-width: 50%;
+     }
+ }
+
+ @media(max-width: 768px) {
+     .showfilters .modal-content .col {
+         min-width: 100%;
+     }
+ }
+
+ .modal-topic-list li {
+     cursor: pointer;
+     margin-bottom: 10px;
+     display: flex;
  }
 
  .modal-topic-list li a {
@@ -3951,9 +3921,8 @@
      line-height: 21px;
  }
 
- .modal-topic-list li {
-     cursor: pointer;
-     margin-bottom: 10px;
+ .close-clear-btn button {
+     margin-top: 30px;
  }
 
  .close-clear-btn button {
@@ -3982,7 +3951,7 @@
      color: white;
      font-size: 21px;
      position: relative;
-     top: 5px;
+     left: -5px;
  }
 
  .showfilters .modal-content {
@@ -5088,10 +5057,6 @@ padding-right: 80px; */
 
  .blur-load.loaded img {
      opacity: 1;
- }
-
- .accordionpanelblock {
-     overflow-x: hidden;
  }
 
  .autocomplete-items {
