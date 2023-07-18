@@ -231,6 +231,10 @@
      box-shadow: 0 0 0 3px var(--color-outline-focus);
  }
 
+ .rich-text-block {
+     overflow: hidden;
+ }
+
  /*--------------------------------------------------------------
 # Background Color
 --------------------------------------------------------------*/
@@ -2424,12 +2428,24 @@
      color: var(--color-default);
  }
 
+ .step-accordion .accordion-header:hover .accordion-button::after {
+     background-image: url("../assets/img/web-icons/Accordion\ expand\ -\ orange.svg");
+ }
+
+ .step-accordion .accordion-header:hover .accordion-button:not(.collapsed)::after {
+     background-image: url("../assets/img/web-icons/Accordion\ contract\ -\ orange.svg");
+ }
+
  .step-accordion .accordion-item .accordion-button {
      background: transparent;
      padding: 10px 20px;
      border-radius: 0 !important;
      font-size: 19px;
      color: var(--color-default);
+ }
+
+ .step-accordion .accordion-header:hover .accordion-button {
+     text-decoration: underline;
  }
 
  .step-accordion .accordion-item .accordion-button:not(.collapsed) {
@@ -3051,6 +3067,14 @@
      color: var(--color-default);
  }
 
+ .destination-accordian .accordion-header:hover .accordion-button::after {
+     background-image: url("../assets/img/web-icons/Accordion\ expand\ -\ orange.svg");
+ }
+
+ .destination-accordian .accordion-header:hover .accordion-button:not(.collapsed)::after {
+     background-image: url("../assets/img/web-icons/Accordion\ contract\ -\ orange.svg");
+ }
+
  /* .destination-accordian .accordion-button.collapsed {
      background-color: var(--color-secondary);
  } */
@@ -3100,6 +3124,10 @@
      color: #000045 !important;
      animation: colorChange1 1s forwards;
      box-shadow: none;
+ }
+
+ .destination-accordian .accordion-header:hover .accordion-button {
+     text-decoration: underline;
  }
 
  .destination-accordian .card-body {
@@ -3754,8 +3782,8 @@
  #carousel-count .carousel-control-prev-icon,
  #carousel-count .carousel-control-next-icon {
      background-image: none;
-     width: 35px;
-     height: 35px;
+     width: 50px;
+     height: 50px;
      border: 1px solid var(--color-default);
      border-radius: 50%;
      color: var(--color-default);
@@ -3765,8 +3793,8 @@
  #carousel-count .fa-chevron-right,
  #carousel-count .fa-chevron-left {
      color: var(--color-default);
-     font-size: 22px;
-     margin-top: 7px;
+     font-size: 28px;
+     margin-top: 11px;
  }
 
  #carousel-count .carousel-control-next,
@@ -3775,11 +3803,11 @@
  }
 
  #carousel-count .carousel-control-next {
-     margin-right: -14%;
+     margin-right: -16%;
  }
 
  #carousel-count .carousel-control-prev {
-     margin-left: -14%;
+     margin-left: -16%;
  }
 
  #carousel-count .carousel-control-prev .carousel-control-prev-icon:hover,
@@ -3817,25 +3845,43 @@
      border-bottom: 0px !important;
  }
 
- @media screen and (max-width: 992px) {
-     #carousel-count .carousel-control-next {
-         margin-right: -22%;
-     }
-
-     #carousel-count .carousel-control-prev {
-         margin-left: -22%;
-     }
- }
-
  #carousel-count {
-     margin-left: 12%;
-     margin-right: 12%;
+     margin-left: 9%;
+     margin-right: 9%;
  }
 
  .modal-backdrop {
      height: 100%;
      width: 100%;
  }
+
+ @media screen and (max-width: 992px) {
+     #carousel-count {
+         margin-left: 12%;
+         margin-right: 12%;
+     }
+
+     #carousel-count .carousel-control-next {
+         margin-right: -18%;
+     }
+
+     #carousel-count .carousel-control-prev {
+         margin-left: -18%;
+     }
+
+     #carousel-count .carousel-control-prev-icon,
+     #carousel-count .carousel-control-next-icon {
+         width: 35px;
+         height: 35px;
+     }
+
+     #carousel-count .fa-chevron-right,
+     #carousel-count .fa-chevron-left {
+         font-size: 20px;
+         margin-top: 7px;
+     }
+ }
+
 
  @media screen and (max-width: 1024px) {
      #carousel-count-fullsize-img .modal-dialog {
@@ -3877,14 +3923,21 @@
 
  .showfilters .close-btn {
      position: absolute;
-     right: 10px;
-     top: 10px;
+     right: 0px;
+     top: 0px;
      font-size: 24px;
      color: var(--color-white);
      box-sizing: content-box;
-     width: 1em;
-     height: 1em;
+     width: 20px;
+     height: 20px;
      margin-left: auto;
+     padding: 10px;
+     margin-right: 5px;
+ }
+
+ .showfilters .close-btn:hover,
+ .showfilters .close-btn:focus {
+     color: var(--color-secondary);
  }
 
  .showfilters {
