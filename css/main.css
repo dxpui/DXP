@@ -348,7 +348,7 @@
  .btn-secondary.hover-none:hover,
  .btn-secondary.hover-none:active,
  .btn-secondary.hover-none.btn.show {
-     background-color: transparent;
+     background-color: transparent !important;
      color: var(--color-default);
      border: 1px solid transparent;
      text-decoration: none !important;
@@ -1994,6 +1994,12 @@
      padding: 20px;
  }
 
+ @media(max-width: 1024px) {
+     .info-card-video {
+         margin-bottom: 70px;
+     }
+ }
+
  .info-card-video .card-text {
      font-style: normal;
      font-weight: 300;
@@ -2438,7 +2444,7 @@
 
  .step-accordion .accordion-item .accordion-button {
      background: transparent;
-     padding: 10px 20px;
+     padding: 10px;
      border-radius: 0 !important;
      font-size: 19px;
      color: var(--color-default);
@@ -2456,6 +2462,11 @@
  .step-accordion .accordion-body {
      text-align: left;
      padding-top: 0;
+     background-color: var(--color-light-gray);
+     padding-inline: 10px;
+ }
+
+ .step-accordion .accordion-header:hover .accordion-button.collapsed {
      background-color: var(--color-light-gray);
  }
 
@@ -3111,12 +3122,8 @@
  }
 
  .destination-accordian .acc-description {
-     font-family: Sora;
-     font-size: 14px;
-     font-weight: 400;
-     line-height: 21px;
-     color: var(--color-default);
      padding-bottom: 40px;
+     padding-left: 10px;
      width: 85%;
  }
 
@@ -3141,6 +3148,14 @@
 
  .destination-accordian {
      position: relative;
+ }
+
+ .destination-accordian .accordion-header .accordion-button {
+     padding-left: 10px;
+ }
+
+ .destination-accordian .accordion-header:hover .accordion-button.collapsed {
+     background-color: var(--color-light-gray);
  }
 
  .destination-accordian:has(.show)::after {
@@ -4034,7 +4049,7 @@
  .overflow-x-hidden {
      overflow-x: hidden !important;
      overflow-y: auto !important;
-
+     padding-right: 0 !important;
  }
 
  .showfilters-align {
@@ -4046,6 +4061,17 @@
      position: absolute;
      margin-top: 0;
  }
+
+ .showfilters-align .filter-btn .sorting {
+     width: auto;
+     margin: 0 auto;
+     border: none;
+ }
+
+ .showfilters-align .filter-btn .sorting:focus {
+     box-shadow: none;
+ }
+
 
  @media (max-width: 1366px) {
      .showfilters-align .filter-btn {
@@ -4069,7 +4095,29 @@
  /*--------------------------------------------------------------
 #  Logo list
 --------------------------------------------------------------*/
- .logo-list {
+ .logo-list .img-logo {
+     transition: all 0.4s ease-in-out;
+     display: inline-block;
+     filter: grayscale(100);
+     min-height: 200px;
+     height: 100%;
+     width: 100%;
+     object-fit: contain;
+ }
+
+ .logo-list picture {
+     width: 100%;
+     padding: 30px;
+     border: 1px solid var(--color-light-gray);
+     height: 100%;
+ }
+
+ .logo-list .img-logo:hover {
+     filter: none;
+     transform: scale(1.1);
+ }
+
+ /* .logo-list {
      text-align: center;
      padding: 5px;
  }
@@ -4100,7 +4148,7 @@
  .logo-list img {
      max-height: 100px;
      max-width: 200px;
- }
+ } */
 
  /*--------------------------------------------------------------
 #  Dynamic Tabs
