@@ -4123,13 +4123,13 @@
 #  Logo list
 --------------------------------------------------------------*/
  .logo-list .img-logo {
-    transition: all 0.4s ease-in-out;
-    display: inline-block;
-    filter: grayscale(100);
-    width: 100%;
-    object-fit: contain;
-    max-height: 100px;
-    max-width: 200px;
+     transition: all 0.4s ease-in-out;
+     display: inline-block;
+     /* filter: grayscale(100); */
+     width: 100%;
+     object-fit: contain;
+     max-height: 100px;
+     max-width: 200px;
  }
 
  .logo-list picture {
@@ -4143,8 +4143,18 @@
  }
 
  .logo-list .img-logo:hover {
-     filter: none;
+     /* filter: none; */
      transform: scale(1.1);
+ }
+
+ .logo-list a {
+     display: inline-block;
+     border: 3px solid transparent;
+ }
+
+ .logo-list a:hover,
+ .logo-list a:focus-visible {
+     border: 3px solid var(--color-secondary);
  }
 
  /* .logo-list {
