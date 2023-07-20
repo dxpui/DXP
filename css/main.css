@@ -248,42 +248,52 @@
 --------------------------------------------------------------*/
  .gray-bg {
      background-color: var(--color-light-gray);
+     color: var(--color-default);
  }
 
  .pink-bg {
      background-color: var(--color-pink);
+     color: var(--color-default);
  }
 
  .blue-bg {
      background-color: var(--color-default);
+     color: var(--color-white);
  }
 
  .lightblue-bg {
      background-color: var(--color-primary);
+     color: var(--color-white);
  }
 
  .green-bg {
      background-color: var(--color-green);
+     color: var(--color-default);
  }
 
  .megenta-bg {
      background-color: var(--color-megenta);
+     color: var(--color-white);
  }
 
  .red-bg {
      background-color: var(--color-red);
+     color: var(--color-white);
  }
 
  .maroon-bg {
      background-color: var(--color-maroon);
+     color: var(--color-white);
  }
 
  .yellow-bg {
      background-color: var(--color-yellow);
+     color: var(--color-default);
  }
 
  .orange-bg {
      background-color: var(--color-secondary);
+     color: var(--color-default);
  }
 
  .text-red {
@@ -4968,6 +4978,8 @@ padding-right: 80px; */
  .standfirst {
      line-height: 1.5em;
      font-weight: 700;
+     font-size: 1.3rem;
+     color: var(--color-default);
  }
 
  /* .standfirst:before {
@@ -5235,4 +5247,41 @@ padding-right: 80px; */
      margin-bottom: 20px;
      display: block;
      font-size: 16px;
+ }
+
+ .listing-item img {
+     width: 65%;
+ }
+
+ .listing-item .listing-item-desc {
+     padding: 20px 10px;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     height: 100%;
+ }
+
+ .listing-item .listing-item-desc-top {
+     padding: 20px 10px;
+     margin-top: 10px;
+     margin-bottom: 20px;
+     height: 100%;
+     font-style: italic;
+ }
+
+ .listing-item .listing-item-desc-top:before {
+     content: open-quote;
+ }
+
+ .listing-item .listing-item-desc-top:after {
+     content: close-quote;
+ }
+
+ .listing-item .listing-item-desc-top::before,
+ .listing-item .listing-item-desc-top::after {
+     display: inline-block;
+     vertical-align: bottom;
+     color: var(--color-default);
+     top: 2px;
+     position: relative;
+     padding-right: 5px;
  }
