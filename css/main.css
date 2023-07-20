@@ -69,6 +69,11 @@
      outline-offset: 0;
  }
 
+ /* :focus-visible {
+     box-shadow: 0 0 0 3px var(--color-outline-focus);
+     outline: 0;
+ } */
+
  p {
      word-wrap: break-word;
  }
@@ -174,7 +179,16 @@
      line-height: 2;
  }
 
+ .form-select {
+     padding-top: 10px;
+     padding-bottom: 10px;
+     border-color: var(--color-default);
+     border-radius: 0;
+     /* border-radius: 24px; */
+ }
+
  .form-control:focus,
+ .form-select:focus,
  .form-check-input:focus {
      border: 1px solid var(--color-default);
      box-shadow: var(--btn-focus-box-shadow);
@@ -204,12 +218,6 @@
      width: 100%;
      object-fit: cover;
      object-position: top;
- }
-
- .form-select {
-     padding-top: 10px;
-     padding-bottom: 10px;
-     border-radius: 24px;
  }
 
  .img-fit {
@@ -1525,33 +1533,51 @@
 
  .lightblue-bg h1,
  .lightblue-bg h2,
+ .lightblue-bg h3,
+ .lightblue-bg h4,
  .lightblue-bg p,
  .blue-bg p,
  .blue-bg h1,
  .blue-bg h2,
+ .blue-bg h3,
+ .blue-bg h4,
  .megenta-bg p,
  .megenta-bg h1,
  .megenta-bg h2,
+ .megenta-bg h3,
+ .megenta-bg h4,
  .maroon-bg p,
  .maroon-bg h1,
  .maroon-bg h2,
+ .maroon-bg h3,
+ .maroon-bg h4,
  .red-bg p,
  .red-bg h1,
- .red-bg h2 {
+ .red-bg h2,
+ .red-bg h3,
+ .red-bg h4 {
      color: var(--color-white);
  }
 
  .gray-bg h1,
  .gray-bg h2,
+ .gray-bg h3,
+ .gray-bg h4,
  .gray-bg p,
  .pink-bg p,
  .pink-bg h1,
  .pink-bg h2,
+ .pink-bg h3,
+ .pink-bg h4,
  .green-bg p,
  .green-bg h1,
  .green-bg h2,
+ .green-bg h3,
+ .green-bg h4,
  .yellow-bg h1,
  .yellow-bg h2,
+ .yellow-bg h3,
+ .yellow-bg h4,
  .yellow-bg p {
      color: var(--color-default);
  }
@@ -3154,7 +3180,8 @@
      padding-left: 10px;
  }
 
- .destination-accordian .accordion-header:hover .accordion-button.collapsed {
+ .destination-accordian .accordion-header:hover .accordion-button.collapsed,
+ .destination-accordian .accordion-header .accordion-button.collapsed:focus {
      background-color: var(--color-light-gray);
  }
 
@@ -4096,20 +4123,23 @@
 #  Logo list
 --------------------------------------------------------------*/
  .logo-list .img-logo {
-     transition: all 0.4s ease-in-out;
-     display: inline-block;
-     filter: grayscale(100);
-     min-height: 200px;
-     height: 100%;
-     width: 100%;
-     object-fit: contain;
+    transition: all 0.4s ease-in-out;
+    display: inline-block;
+    filter: grayscale(100);
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    max-width: 200px;
  }
 
  .logo-list picture {
      width: 100%;
+     height: 100%;
      padding: 30px;
      border: 1px solid var(--color-light-gray);
-     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
  }
 
  .logo-list .img-logo:hover {
@@ -4217,6 +4247,8 @@
  .membership-panel hr {
      margin-top: 0;
      margin-bottom: 20px;
+     border-top: 1px solid var(--color-default) !important;
+     opacity: 1;
  }
 
  @media(max-width: 991px) {
@@ -4229,13 +4261,12 @@
      }
  }
 
- .membership-panel hr {
-     border-top: 1px solid var(--color-default) !important;
+ :is(.lightblue-bg, .blue-bg, .megenta-bg, .maroon-bg, .red-bg) hr {
+     border-top: 1px solid var(--color-white) !important;
  }
 
  .membership-panel .membership-image {
      width: 100%;
-     height: 100%;
      aspect-ratio: 1/1;
      object-fit: contain;
  }

@@ -1003,7 +1003,14 @@
 
         <div class="filter-btn">
           <div class="dropdown-center">
-            <button class="btn btn-secondary hover-none dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            <select class="form-select sorting" aria-label="Default select example">
+              <option selected>Sort by: Publication date</option>
+              <option value="1">most recent</option>
+              <option value="2">most popular</option>
+              <option value="3">A-Z</option>
+            </select>
+
+            <!-- <button class="btn btn-secondary hover-none dropdown-toggle" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Sort by: Publication date <i class="fa-solid fa-chevron-down ms-2"></i>
             </button>
@@ -1011,7 +1018,7 @@
               <li><a class="dropdown-item" href="#">most recent</a></li>
               <li><a class="dropdown-item" href="#">most popular</a></li>
               <li><a class="dropdown-item" href="#">A-Z</a></li>
-            </ul>
+            </ul> -->
           </div>
         </div>
       </div>
