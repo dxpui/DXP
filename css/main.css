@@ -36,6 +36,10 @@
      scroll-behavior: smooth;
  }
 
+ .abc {
+     --bs-gutter-x: 0;
+ }
+
  /*--------------------------------------------------------------
 # Common
 --------------------------------------------------------------*/
@@ -3839,7 +3843,6 @@
 
  #carousel-count .img-caption,
  #carousel-count .carouselnumber {
-     font-family: Sora;
      font-size: 14px;
      font-weight: 400;
      line-height: 21px;
@@ -4154,7 +4157,7 @@
      object-fit: contain;
      max-height: 100px;
      max-width: 200px;
-     
+
  }
 
  .logo-list picture {
@@ -4165,14 +4168,14 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     box-shadow: 0px 0px 8px rgba(0,0,142,.1098039216);
+     box-shadow: 0px 0px 8px rgba(0, 0, 142, .1098039216);
      min-height: 160px
  }
 
- .logo-list .no-link{
-    height: 100%;
-    width: 100%;
-    border: 3px solid transparent;
+ .logo-list .no-link {
+     height: 100%;
+     width: 100%;
+     border: 3px solid transparent;
  }
 
  .logo-list .img-logo:hover {
@@ -4340,30 +4343,34 @@
  /*--------------------------------------------------------------
 #  Table Design
 --------------------------------------------------------------*/
- #allsearch-table table {
-     width: 100%;
- }
+ table {
+    width: 100%;
+}
 
- #allsearch-table table th,
- #allsearch-table table td {
-     border: 1px solid var(--color-default);
-     padding: 10px;
- }
+ table th,
+ table td {
+    border: 1px solid var(--color-default);
+    padding: 10px;
+}
 
- #allsearch-table table>:not(caption)>*>* {
-     padding: 0.5rem 1rem;
- }
+ table>:not(caption)>*>* {
+    padding: 0.5rem 1rem;
+}
+
+ table tr td:first-child {
+    width: 150px;
+}
+
+ table {
+    caption-side: top;
+}
+
+ table caption {
+    text-align: center;
+}
 
  #allsearch-table table tr td:first-child {
      width: 72px;
- }
-
- #allsearch-table table {
-     caption-side: top;
- }
-
- #allsearch-table table caption {
-     text-align: center;
  }
 
  .blue-theme table tr th,
@@ -4385,6 +4392,7 @@
      background-color: var(--color-primary);
      color: var(--color-white);
      border: 1px solid var(--color-white) !important;
+     vertical-align: middle;
  }
 
  .red-theme table tr th,
