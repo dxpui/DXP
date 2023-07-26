@@ -170,7 +170,7 @@
  }
 
  .container-p-0 .container-xl{
-     --bs-gutter-x: 0;
+     --bs-gutter-x: 0; 
  }
 
  .color-default {
