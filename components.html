@@ -859,7 +859,7 @@
       <h3 class="text-center my-5">Membership Panel</h3>
       <div class="row">
         <div class="col-11 col-md-8 mx-auto">
-          <div class="gray-bg membership-panel">
+          <div class="red-bg membership-panel">
             <div class="row">
               <div class="col-md-3 text-center">
                 <picture>
@@ -867,9 +867,9 @@
                 </picture>
               </div>
               <div class="col-md-9">
-                <hr class="border border-secondary border-top">
+                <hr class="border border-secondary border-top my-0 d-sm-none d-md-block">
                 </hr>
-                <h3>Lord Grade of Yarmouth</h3>
+                <h3 class="mt-3">Lord Grade of Yarmouth</h3>
                 <h4>
                   Chair
                 </h4>
@@ -1249,7 +1249,7 @@
           </div>
 
         </form>
-        <p>
+        <p class="mt-4">
           The speeds indicated on the checker are the fastest estimated speeds predicted by the network operator(s)
           providing services in this area. Actual service availability at a property or speeds received may be
           different. The table shows the predicted broadband services in your area.
@@ -1268,7 +1268,7 @@
                 <td scope="col">Content</td>
                 <td scope="col">Data</td>
               </tr>
-           
+
               <tr>
                 <td>Adults' Media Literacy Tracker</td>
                 <td>19 January 2023</td>
@@ -1298,120 +1298,119 @@
                 <td><a href="">@Adults’ Media Literacy Tracker 2022 data tables and associated documents</a></td>
               </tr>
               <tr>
-                <td>Adults' Media Literacy Tracker</td>
-                <td>19 January 2023</td>
-                <td>Media literacy - adults' surveys: access, use and understanding of internet, television, mobile and
-                  other platforms among the 16+ adult population of the UK</td>
-                <td><a href="">@Adults’ Media Literacy Tracker 2022 data tables and associated documents</a></td>
+                <td>Adults' Media </td>
+                <td>19 Jan</td>
+                <td>Media literacy - adults' </td>
+                <td><i class="fa-regular fa-circle-xmark f-size-xl"></i></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
     </section>
+    <h3 class="text-center my-5">Lookup Table</h3>
+    <section class="container-xl my-5">
+      <div class="gray-bg p-4">
+        <div class="col-12">
+          <p class="mb-2">UK telephone number area codes</p>
+          <label for="SearchInputPhone" class="visually-hidden">Enter postcode</label>
+          <input type="text" class="form-control mb-3" id="searchInput" aria-controls="SearchInformation"
+            placeholder="Search Code">
+          <h3 id="searchResults" style="display:none;" role="status" aria-live="polite">
+            No result
+          </h3>
+          <input type="hidden" id="hiddenFoundTextValue" value="Results found" />
+          <h3 id="searchResultsFound" style="display:none;" role="status" aria-live="polite">
 
-    <section class="container my-5">
-      <h3 class="text-center my-5">Lookup Table</h3>
+          </h3>
+          
 
-      <div class="col-10">
-        <label for="SearchInputPhone" class="visually-hidden">Enter postcode</label>
-        <input type="text" class="form-control mb-3" id="searchInput" aria-controls="SearchInformation"
-          placeholder="Search Code">
-        <h3 id="searchResults" style="display:none;" role="status" aria-live="polite">
-          No result
-        </h3>
-        <input type="hidden" id="hiddenFoundTextValue" value="Results found" />
-        <h3 id="searchResultsFound" style="display:none;" role="status" aria-live="polite">
-
-        </h3>
-        <p class="mb-0 text-center">UK telephone number area codes</p>
-
-        <!-- <input type="text" class="form-control mb-3" id="searchInput" aria-controls="SearchInformation"
+          <!-- <input type="text" class="form-control mb-3" id="searchInput" aria-controls="SearchInformation"
           placeholder="Find a code or area..." maxlength="50"> -->
 
-        <!-- <h3 id="searchResults" role="status" aria-live="polite"></h3> -->
-        <div id="allsearch-table" class="blue-theme">
-          <table>
-            <tbody>
-              <tr>
-                <td>Code</td>
-                <td>Area</td>
-              </tr>
-              <tr>
-                <td>0113</td>
-                <td> Leeds </td>
-              </tr>
-              <tr>
-                <td>0114</td>
-                <td> Sheffield </td>
-              </tr>
-              <tr>
-                <td>0115</td>
-                <td> Nottingham </td>
-              </tr>
-              <tr>
-                <td>0116</td>
-                <td> Leicester </td>
-              </tr>
-              <tr>
-                <td>0117</td>
-                <td> Bristol </td>
-              </tr>
-              <tr>
-                <td>0118</td>
-                <td> Reading </td>
-              </tr>
-              <tr>
-                <td>01200</td>
-                <td> Clitheroe </td>
-              </tr>
-              <tr>
-                <td>01202</td>
-                <td> Bournemouth </td>
-              </tr>
-              <tr>
-                <td id="allCodesr10c1" scope="row">01204</td>
-                <td headers="allCodesr10c1 allCodesr1c2"> Bolton </td>
-              </tr>
-              <tr>
-                <td id="allCodesr11c1" scope="row">01205</td>
-                <td headers="allCodesr11c1 allCodesr1c2"> Boston </td>
-              </tr>
-              <tr>
-                <td id="allCodesr12c1" scope="row">01206</td>
-                <td headers="allCodesr12c1 allCodesr1c2"> Colchester </td>
-              </tr>
-              <tr>
-                <td id="allCodesr13c1" scope="row">01207</td>
-                <td headers="allCodesr13c1 allCodesr1c2"> Consett </td>
-              </tr>
-              <tr>
-                <td id="allCodesr14c1" scope="row">01208</td>
-                <td headers="allCodesr14c1 allCodesr1c2"> Bodmin </td>
-              </tr>
-              <tr>
-                <td id="allCodesr15c1" scope="row">01209</td>
-                <td headers="allCodesr15c1 allCodesr1c2"> Redruth </td>
-              </tr>
-              <tr>
-                <td id="allCodesr16c1" scope="row">0121</td>
-                <td headers="allCodesr16c1 allCodesr1c2"> Birmingham </td>
-              </tr>
-              <tr>
-                <td id="allCodesr17c1" scope="row">01223</td>
-                <td headers="allCodesr17c1 allCodesr1c2"> Cambridge </td>
-              </tr>
-              <tr>
-                <td id="allCodesr18c1" scope="row">01224</td>
-                <td headers="allCodesr18c1 allCodesr1c2"> Aberdeen </td>
-              </tr>
-              <tr>
-                <td id="allCodesr19c1" scope="row">01225</td>
-                <td headers="allCodesr19c1 allCodesr1c2"> Bath </td>
-              </tr>
-            </tbody>
-          </table>
-
+          <!-- <h3 id="searchResults" role="status" aria-live="polite"></h3> -->
+          <div id="allsearch-table" class="blue-theme">
+            <table>
+              <tbody>
+                <tr>
+                  <td>Code</td>
+                  <td>Area</td>
+                </tr>
+                <tr>
+                  <td>0113</td>
+                  <td> Leeds </td>
+                </tr>
+                <tr>
+                  <td>0114</td>
+                  <td> Sheffield </td>
+                </tr>
+                <tr>
+                  <td>0115</td>
+                  <td> Nottingham </td>
+                </tr>
+                <tr>
+                  <td>0116</td>
+                  <td> Leicester </td>
+                </tr>
+                <tr>
+                  <td>0117</td>
+                  <td> Bristol </td>
+                </tr>
+                <tr>
+                  <td>0118</td>
+                  <td> Reading </td>
+                </tr>
+                <tr>
+                  <td>01200</td>
+                  <td> Clitheroe </td>
+                </tr>
+                <tr>
+                  <td>01202</td>
+                  <td> Bournemouth </td>
+                </tr>
+                <tr>
+                  <td id="allCodesr10c1" scope="row">01204</td>
+                  <td headers="allCodesr10c1 allCodesr1c2"> Bolton </td>
+                </tr>
+                <tr>
+                  <td id="allCodesr11c1" scope="row">01205</td>
+                  <td headers="allCodesr11c1 allCodesr1c2"> Boston </td>
+                </tr>
+                <tr>
+                  <td id="allCodesr12c1" scope="row">01206</td>
+                  <td headers="allCodesr12c1 allCodesr1c2"> Colchester </td>
+                </tr>
+                <tr>
+                  <td id="allCodesr13c1" scope="row">01207</td>
+                  <td headers="allCodesr13c1 allCodesr1c2"> Consett </td>
+                </tr>
+                <tr>
+                  <td id="allCodesr14c1" scope="row">01208</td>
+                  <td headers="allCodesr14c1 allCodesr1c2"> Bodmin </td>
+                </tr>
+                <tr>
+                  <td id="allCodesr15c1" scope="row">01209</td>
+                  <td headers="allCodesr15c1 allCodesr1c2"> Redruth </td>
+                </tr>
+                <tr>
+                  <td id="allCodesr16c1" scope="row">0121</td>
+                  <td headers="allCodesr16c1 allCodesr1c2"> Birmingham </td>
+                </tr>
+                <tr>
+                  <td id="allCodesr17c1" scope="row">01223</td>
+                  <td headers="allCodesr17c1 allCodesr1c2"> Cambridge </td>
+                </tr>
+                <tr>
+                  <td id="allCodesr18c1" scope="row">01224</td>
+                  <td headers="allCodesr18c1 allCodesr1c2"> Aberdeen </td>
+                </tr>
+                <tr>
+                  <td id="allCodesr19c1" scope="row">01225</td>
+                  <td headers="allCodesr19c1 allCodesr1c2"> Bath </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
     </section>
 
@@ -2086,7 +2085,7 @@
             <div class="col-lg-4">
               <div class="d-flex flex-column justify-content-center align-items-center h-100">
                 <h4 class="mb-0">The basic browsers</h4>
-                <p class="listing-item-desc-top gray-bg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
+                <p class="listing-item-desc-top gray-bg">Lorem ipsum dolor sit amet, <a href="">adipisicing elit. Atque</a> 
                   fugiat officia et ea non
                 </p>
                 <img src="assets/img/scams-report.png" alt="" />
@@ -2100,7 +2099,7 @@
                   fugiat officia et ea non
                 </p>
                 <img src="assets/img/scams-dont-click.png" alt="" />
-                <p class="listing-item-desc blue-bg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p class="listing-item-desc blue-bg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="">adipisicing elit. Atque</a>  </p>
               </div>
             </div>
           </div>
