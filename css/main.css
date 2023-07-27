@@ -701,6 +701,9 @@
  .langauge-change:hover {
      text-decoration: underline;
  }
+ .langauge-change:focus-visible {
+    text-decoration: underline;
+}
 
  @media(max-width: 768px) {
      .langauge-change {
@@ -2575,7 +2578,8 @@
      font-weight: 300;
  }
 
- .footer .footer-link:hover {
+ .footer .footer-link:hover,
+ .footer .footer-link:focus-visible {
      text-decoration: underline;
  }
 
@@ -2600,9 +2604,10 @@
          margin-bottom: 14px;
      }
 
-     /* .social .social-icons {
-         justify-content: center;
-     } */
+     .footer section {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        margin-bottom: 20px;
+    }
 
      .footer .social-icons-list a i {
          margin: 0 10px;
@@ -2618,10 +2623,6 @@
          margin-bottom: 0;
          margin-left: -20px;
      }
-
-     .footer .copyrights {
-         margin-top: 25px;
-     }
  }
 
  @media(min-width: 992px) {
@@ -2633,10 +2634,6 @@
  }
 
  @media(max-width: 576px) {
-     .footer section {
-         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-     }
-
      .footer section.social {
          margin-bottom: 30px !important;
      }
@@ -4163,39 +4160,6 @@
  .logo-list a:focus-visible {
      border: 3px solid var(--color-secondary);
  }
-
- /* .logo-list {
-     text-align: center;
-     padding: 5px;
- }
-
- .logo-list a {
-     padding: 5px;
-     margin: 15px;
-     display: inline-block;
-     border: 5px solid transparent;
- }
-
- .logo-list a:hover,
- .logo-list a:focus-visible {
-     border: 5px solid var(--color-secondary);
- }
-
- .logo-list .logo-item {
-     display: inline;
- }
-
- .logo-list .logo-item.no-link a:hover,
- .logo-list .logo-item.no-link a:focus-visible,
- .logo-list .logo-item.no-link a:focus {
-     border: 5px solid transparent !important;
-     cursor: default;
- }
-
- .logo-list img {
-     max-height: 100px;
-     max-width: 200px;
- } */
 
  /*--------------------------------------------------------------
 #  Dynamic Tabs
