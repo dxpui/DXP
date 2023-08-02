@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 
 /* Colors */
+
 :root {
     /* Most text and often a background colour (eg menus, footer, page headers) */
     --color-default: #000045;
@@ -31,14 +32,18 @@
     --line-height-default: 1.5;
 }
 
+
 /* Smooth scroll behavior */
+
 :root {
     scroll-behavior: smooth;
 }
 
+
 /*--------------------------------------------------------------
 # Common
 --------------------------------------------------------------*/
+
 body {
     color: var(--color-default);
     font-family: var(--font-family-default);
@@ -69,6 +74,7 @@ a:focus-visible {
     outline-offset: 0;
 }
 
+
 /* :focus-visible {
     box-shadow: 0 0 0 3px var(--color-outline-focus);
     outline: 0;
@@ -78,7 +84,9 @@ p {
     word-wrap: break-word;
 }
 
+
 /* Used for: Landing page titles */
+
 h1 {
     font-size: 48px;
     line-height: 135%;
@@ -87,7 +95,9 @@ h1 {
     word-wrap: break-word;
 }
 
+
 /* Used for: Homepage carousel, destination page titles */
+
 h2 {
     font-size: 40px;
     line-height: 135%;
@@ -106,7 +116,9 @@ h1.font-size-h2 {
     font-size: 40px;
 }
 
+
 /* Used for: Page subtitles */
+
 h3 {
     font-size: 32px;
     line-height: 135%;
@@ -115,7 +127,9 @@ h3 {
     word-wrap: break-word;
 }
 
+
 /* Used for: Card titles, pull quotes etc */
+
 h4 {
     font-size: 19px;
     line-height: 145%;
@@ -247,9 +261,11 @@ video:focus-visible {
     overflow: hidden;
 }
 
+
 /*--------------------------------------------------------------
 # Background Color
 --------------------------------------------------------------*/
+
 .gray-bg {
     background-color: var(--color-light-gray);
     color: var(--color-default);
@@ -304,9 +320,11 @@ video:focus-visible {
     color: var(--color-red);
 }
 
+
 /*--------------------------------------------------------------
 # All Buttons
 --------------------------------------------------------------*/
+
 .btn:focus-visible {
     box-shadow: none;
 }
@@ -479,11 +497,13 @@ video:focus-visible {
     text-decoration: none !important;
 }
 
+
 /* .btn:hover .fa-arrow-right{
    padding-left: 3px;
    -webkit-transition: all .3s linear 0s;
    transition: all .3s linear 0s;
 } */
+
 .btn-tag {
     background-color: var(--color-light-gray);
     color: var(--color-primary);
@@ -554,9 +574,11 @@ video:focus-visible {
     right: 15px;
 }
 
+
 /*--------------------------------------------------------------
 # Multicolor Line
 --------------------------------------------------------------*/
+
 .multicolor-strip .bg-blue {
     background-color: var(--color-primary);
     width: 25%;
@@ -605,9 +627,11 @@ video:focus-visible {
     right: 0;
 }
 
+
 /*--------------------------------------------------------------
 # Header Search
 --------------------------------------------------------------*/
+
 header .search-form {
     position: absolute;
     background: var(--color-default);
@@ -813,6 +837,7 @@ header .search-box {
     text-decoration: underline;
 }
 
+
 /* 
 .search-quick-link .info-card.news-info .date {
     color: var(--color-white);
@@ -835,9 +860,11 @@ header .search-box {
     text-decoration: none !important;
 }
 
+
 /*--------------------------------------------------------------
 # Header 
 --------------------------------------------------------------*/
+
 .brand-logo {
     height: 36px;
     width: auto;
@@ -890,9 +917,11 @@ header .search-box {
     transition: color 0.3s ease;
 }
 
+
 /*--------------------------------------------------------------
 # Menu 
 --------------------------------------------------------------*/
+
 .header .menu>ul>li {
     display: inline-block;
     line-height: 84px;
@@ -918,7 +947,7 @@ header .search-box {
     text-decoration: none;
 }
 
-.header a:has(> i.rotate-arrow) {
+.header a:has(>i.rotate-arrow) {
     padding-bottom: 18px;
     border-bottom: 15px solid var(--color-secondary);
 }
@@ -1070,9 +1099,10 @@ header .search-box {
     display: none;
 }
 
-/*responsive*/
-@media(max-width: 1024px) {
 
+/*responsive*/
+
+@media(max-width: 1024px) {
     .header .menu>ul>li .sub-menu.mega-menu-column-4 {
         padding-left: 5px;
         padding-right: 5px;
@@ -3792,7 +3822,7 @@ a:focus .info-card.news-center:before {
 /*--------------------------------------------------------------
 # Image carouse
 --------------------------------------------------------------*/
-#carousel-count .carousel-item img {
+.carousel-count .carousel-item img {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
@@ -3800,19 +3830,19 @@ a:focus .info-card.news-center:before {
     border: 3px solid transparent;
 }
 
-#carousel-count .carousel-item img:hover {
+.carousel-count .carousel-item img:hover {
     border: 3px solid var(--color-secondary);
 }
 
-#carousel-count .img-caption,
-#carousel-count .carouselnumber {
+.carousel-count .img-caption,
+.carousel-count .carouselnumber {
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
 }
 
-#carousel-count .carousel-control-prev-icon,
-#carousel-count .carousel-control-next-icon {
+.carousel-count .carousel-control-prev-icon,
+.carousel-count .carousel-control-next-icon {
     background-image: none;
     width: 50px;
     height: 50px;
@@ -3821,46 +3851,46 @@ a:focus .info-card.news-center:before {
     color: var(--color-default);
 }
 
-#carousel-count .fa-chevron-right,
-#carousel-count .fa-chevron-left {
+.carousel-count .fa-chevron-right,
+.carousel-count .fa-chevron-left {
     color: var(--color-default);
     font-size: 28px;
     margin-top: 11px;
 }
 
-#carousel-count .carousel-control-next,
-#carousel-count .carousel-control-prev {
+.carousel-count .carousel-control-next,
+.carousel-count .carousel-control-prev {
     width: 18%;
 }
 
-#carousel-count .carousel-control-next {
+.carousel-count .carousel-control-next {
     margin-right: -16%;
 }
 
-#carousel-count .carousel-control-prev {
+.carousel-count .carousel-control-prev {
     margin-left: -16%;
 }
 
-#carousel-count .carousel-control-prev .carousel-control-prev-icon:hover,
-#carousel-count .carousel-control-next .carousel-control-next-icon:hover,
-#carousel-count .carousel-control-prev:focus .carousel-control-prev-icon,
-#carousel-count .carousel-control-next:focus .carousel-control-next-icon {
+.carousel-count .carousel-control-prev .carousel-control-prev-icon:hover,
+.carousel-count .carousel-control-next .carousel-control-next-icon:hover,
+.carousel-count .carousel-control-prev:focus .carousel-control-prev-icon,
+.carousel-count .carousel-control-next:focus .carousel-control-next-icon {
     background-color: var(--color-default);
 }
 
-#carousel-count .carousel-control-prev .carousel-control-prev-icon:hover i,
-#carousel-count .carousel-control-next .carousel-control-next-icon:hover i,
-#carousel-count .carousel-control-prev:focus .carousel-control-prev-icon i,
-#carousel-count .carousel-control-next:focus .carousel-control-next-icon i {
+.carousel-count .carousel-control-prev .carousel-control-prev-icon:hover i,
+.carousel-count .carousel-control-next .carousel-control-next-icon:hover i,
+.carousel-count .carousel-control-prev:focus .carousel-control-prev-icon i,
+.carousel-count .carousel-control-next:focus .carousel-control-next-icon i {
     color: var(--color-white);
 }
 
-#carousel-count .carousel-item a {
+.carousel-count .carousel-item a {
     display: block;
     margin: 3px;
 }
 
-#carousel-count .carousel-item a:focus-visible {
+.carousel-count .carousel-item a:focus-visible {
     box-shadow: 0 0 0 3px var(--color-outline-focus);
 }
 
@@ -3876,7 +3906,7 @@ a:focus .info-card.news-center:before {
     border-bottom: 0px !important;
 }
 
-#carousel-count {
+.carousel-count {
     margin-left: 9%;
     margin-right: 9%;
 }
@@ -3887,27 +3917,27 @@ a:focus .info-card.news-center:before {
 }
 
 @media screen and (max-width: 992px) {
-    #carousel-count {
+    .carousel-count {
         margin-left: 12%;
         margin-right: 12%;
     }
 
-    #carousel-count .carousel-control-next {
+    .carousel-count .carousel-control-next {
         margin-right: -18%;
     }
 
-    #carousel-count .carousel-control-prev {
+    .carousel-count .carousel-control-prev {
         margin-left: -18%;
     }
 
-    #carousel-count .carousel-control-prev-icon,
-    #carousel-count .carousel-control-next-icon {
+    .carousel-count .carousel-control-prev-icon,
+    .carousel-count .carousel-control-next-icon {
         width: 35px;
         height: 35px;
     }
 
-    #carousel-count .fa-chevron-right,
-    #carousel-count .fa-chevron-left {
+    .carousel-count .fa-chevron-right,
+    .carousel-count .fa-chevron-left {
         font-size: 20px;
         margin-top: 7px;
     }
@@ -4123,13 +4153,12 @@ a:focus .info-card.news-center:before {
     object-fit: contain;
     max-height: 100px;
     max-width: 200px;
-
 }
 
 .logo-list picture {
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid var(--color-light-gray);
     display: flex;
     justify-content: center;
@@ -5247,4 +5276,12 @@ padding-right: 80px; */
 
 .extra-margin.row {
     margin-inline: -20px;
+}
+
+.extra-margin .half:nth-last-child(-n + 2) .info-card {
+    margin-bottom: -10px;
+}
+
+.extra-margin .onethird:nth-last-child(-n + 3) .info-card {
+    margin-bottom: -10px;
 }
