@@ -1,4 +1,7 @@
 "use strict";
+
+const menu = document.querySelector(".menu");
+
 let subMenu;
 
 function menuMain() {
@@ -130,17 +133,20 @@ $(document).ready(function () {
     });
 
     $(".menu-item-has-children").click(function () {
-        if ($(this).children(".sub-menu").hasClass("sub-menu-show")) {
-            $(this).children(".sub-menu").removeClass("sub-menu-show");
-            $(this).find(".fa-angle-down").removeClass("rotate-arrow");
-        }
-        else {
+        var subMenu = $(this).children(".sub-menu");
+        var downArrow = $(this).find(".fa-angle-down");
+
+        if (subMenu.hasClass("sub-menu-show")) {
+            subMenu.removeClass("sub-menu-show");
+            downArrow.removeClass("rotate-arrow");
+        } else {
             $(".menu-item-has-children .sub-menu").removeClass("sub-menu-show");
-            $(this).children(".sub-menu").addClass("sub-menu-show");
+            subMenu.addClass("sub-menu-show");
             $(".menu-item-has-children .fa-angle-down").removeClass("rotate-arrow");
-            $(this).find(".fa-angle-down").addClass("rotate-arrow");
+            downArrow.addClass("rotate-arrow");
         }
     });
+
     $("#search-icon").click(function () {
         $(".menu-item-has-children .sub-menu").removeClass("sub-menu-show");
         $(".menu-item-has-children .fa-angle-down").removeClass("rotate-arrow");
@@ -239,7 +245,7 @@ $(document).ready(function () {
     })
 });
 // caroseul count full size img code starts here
-$("#carousel-count .carousel-inner .carousel-item img").click(function () {
+$(".carousel-count .carousel-inner .carousel-item img").click(function () {
     var myModal = new bootstrap.Modal(document.getElementById('carousel-count-fullsize-img'))
     myModal.show();
     $("#carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
@@ -250,10 +256,10 @@ $("#carousel-count-fullsize-img .btn-close").click(function () {
     myModal.hide();
 });
 
-$("#carousel-count .carousel-inner .carousel-item").on("keydown", function (event) {
+$(".carousel-count .carousel-inner .carousel-item").on("keydown", function (event) {
     var id = event.keyCode;
     if (id == 13) {
-        $("#carousel-count .carousel-inner .carousel-item img").trigger('click');
+        $(".carousel-count .carousel-inner .carousel-item img").trigger('click');
         $("#carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
     }
 });
@@ -349,7 +355,7 @@ function clearmodalcontent() {
             return "Close";
         })
     });
-   
+
 }
 
 //$(".modal-topic-list li").click(function () {
@@ -357,13 +363,13 @@ function clearmodalcontent() {
 //});
 
 function carouselCount() {
-    var totalItems = $('#carousel-count .carousel-item').length;
+    var totalItems = $('.carousel-count .carousel-item').length;
 
-    var currentIndex = $('#carousel-count div.active').index() + 1;
+    var currentIndex = $('.carousel-count div.active').index() + 1;
     $('.carouselnumber').html('' + currentIndex + '/' + totalItems + '');
     var myCarousel = document.getElementById('carousel-count');
     myCarousel.addEventListener('slid.bs.carousel', function () {
-        currentIndex = $('#carousel-count div.active').index() + 1;
+        currentIndex = $('.carousel-count div.active').index() + 1;
         $('.carouselnumber').html('' + currentIndex + '/' + totalItems + '');
     })
 }
@@ -389,7 +395,7 @@ function autoCompleteSearch(inp, pagelink, formid) {
         this.parentNode.appendChild(a);
         var contentId = "";
         if ($('#contentTypeId').val() != undefined)
-            contentId = $('#contentTypeId').val();             
+            contentId = $('#contentTypeId').val();
         $.ajax({
             type: "POST",
             url: pagelink.value + 'GetAutocomplete?term=' + val + '&id=' + contentId,
@@ -826,7 +832,14 @@ $(document).ready(function () {
         $("#divChangeLocation").hide();
     }
 
-
+    $(".info-card").each(function () {
+        var closestRow = $(this).closest(".row");
+        closestRow.addClass("extra-margin");
+    });
+    $(".info-card.news-center").each(function () {
+        var closestRow = $(this).closest(".row");
+        closestRow.addClass("news-center-spacing");
+    });
 });
 
 $("#PostCodeSubmit").click(function () {
