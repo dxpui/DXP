@@ -1,5 +1,5 @@
 "use strict";
-
+alert('Welcome')
 const menu = document.querySelector(".menu");
 
 let subMenu;
@@ -133,20 +133,17 @@ $(document).ready(function () {
     });
 
     $(".menu-item-has-children").click(function () {
-        var subMenu = $(this).children(".sub-menu");
-        var downArrow = $(this).find(".fa-angle-down");
-
-        if (subMenu.hasClass("sub-menu-show")) {
-            subMenu.removeClass("sub-menu-show");
-            downArrow.removeClass("rotate-arrow");
-        } else {
+        if ($(this).children(".sub-menu").hasClass("sub-menu-show")) {
+            $(this).children(".sub-menu").removeClass("sub-menu-show");
+            $(this).find(".fa-angle-down").removeClass("rotate-arrow");
+        }
+        else {
             $(".menu-item-has-children .sub-menu").removeClass("sub-menu-show");
-            subMenu.addClass("sub-menu-show");
+            $(this).children(".sub-menu").addClass("sub-menu-show");
             $(".menu-item-has-children .fa-angle-down").removeClass("rotate-arrow");
-            downArrow.addClass("rotate-arrow");
+            $(this).find(".fa-angle-down").addClass("rotate-arrow");
         }
     });
-
     $("#search-icon").click(function () {
         $(".menu-item-has-children .sub-menu").removeClass("sub-menu-show");
         $(".menu-item-has-children .fa-angle-down").removeClass("rotate-arrow");
