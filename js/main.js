@@ -133,7 +133,6 @@ $(document).ready(function () {
     });
 
     $(".menu-item-has-children").click(function () {
-        alert("hi")
         var subMenu = $(this).children(".sub-menu");
         var downArrow = $(this).find(".fa-angle-down");
 
