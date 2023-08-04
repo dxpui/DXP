@@ -386,6 +386,7 @@ video:focus-visible {
 }
 
 .btn-secondary.hover-none:hover,
+.btn-secondary.hover-none:focus,
 .btn-secondary.hover-none:active,
 .btn-secondary.hover-none.btn.show {
     background-color: transparent !important;
@@ -1062,6 +1063,10 @@ header .search-box {
     margin: 15px 0;
 }
 
+.header .menu>ul>li :not(.sub-menu-show) .list-item {
+    display: none;
+}
+
 .header .menu>ul>li .sub-menu.mega-menu-column-4>.list-item .title {
     color: var(--color-white);
     font-weight: 700;
@@ -1220,10 +1225,10 @@ header .search-box {
         width: 50px;
         border-right: 1px solid rgba(0, 0, 0, 0.4);
         cursor: pointer;
-        line-height: 50px;
+        line-height: 55px;
         text-align: center;
         color: var(--color-white);
-        font-size: 16px;
+        font-size: 22px;
         display: none;
     }
 
@@ -4122,15 +4127,12 @@ a:focus .info-card.news-center:before {
     box-shadow: none;
 }
 
-
-@media (max-width: 1366px) {
+@media screen and (max-width: 1024px) {
     .showfilters-align .filter-btn {
         width: 100%;
         position: unset;
     }
-}
 
-@media screen and (max-width: 1366px) {
     .showfilters-align {
         display: block !important;
         text-align: center;
@@ -5270,12 +5272,19 @@ padding-right: 80px; */
     padding-right: 5px;
 }
 
-/* .articleteaserblock .info-card{
-    margin-inline: -15px
-} */
+.postcode-number {
+    font-size: 32px;
+    line-height: 135%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
 .extra-margin.row {
     margin-inline: -20px;
+}
+
+.news-center-spacing.row {
+    margin-inline: -10px;
 }
 
 .extra-margin .half:nth-last-child(-n + 2) .info-card {
