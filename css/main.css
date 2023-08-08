@@ -50,7 +50,6 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: var(--line-height-default);
-    letter-spacing: -1%;
     overflow-x: hidden;
     max-width: 1800px;
     margin: 0 auto;
@@ -90,7 +89,6 @@ p {
 h1 {
     font-size: 48px;
     line-height: 135%;
-    letter-spacing: -1%;
     font-weight: 900;
     word-wrap: break-word;
 }
@@ -101,7 +99,6 @@ h1 {
 h2 {
     font-size: 40px;
     line-height: 135%;
-    letter-spacing: -1%;
     font-weight: 500;
     word-wrap: break-word;
 }
@@ -123,7 +120,6 @@ h3 {
     font-size: 32px;
     line-height: 135%;
     font-weight: 700;
-    letter-spacing: -1%;
     word-wrap: break-word;
 }
 
@@ -133,14 +129,12 @@ h3 {
 h4 {
     font-size: 19px;
     line-height: 145%;
-    letter-spacing: -1%;
     word-wrap: break-word;
 }
 
 h5 {
     font-size: 14px;
     line-height: 145%;
-    letter-spacing: -1%;
     word-wrap: break-word;
 }
 
@@ -172,7 +166,6 @@ h5 {
     font-size: 32px;
     line-height: 135%;
     font-weight: 700;
-    letter-spacing: -1%;
 }
 
 .mtop-5 {
@@ -181,6 +174,14 @@ h5 {
 
 .mtop-6 {
     margin-top: 6rem !important;
+}
+
+.no-focus:focus,
+.no-focus:focus-visible {
+    outline: none;
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent;
 }
 
 .container-p-0 .container-xl {
@@ -488,7 +489,7 @@ video:focus-visible {
     background-color: transparent;
     padding: 5px 20px;
     color: var(--color-white);
-    border-color: 1px solid var(--color-default);
+    border: 1px solid var(--color-white);
     border-radius: 30px;
 }
 
@@ -643,7 +644,6 @@ header .search-form {
     width: 100%;
     transition: color 0.3s ease;
     display: none;
-    counter-reset: var(--color-white);
     color: var(--color-white);
 }
 
@@ -780,7 +780,7 @@ header .search-form.active {
     width: 100%;
     display: flex;
     align-items: center;
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 
 @media(min-width: 1024px) {
@@ -1504,8 +1504,12 @@ header .search-box {
     width: 13px !important;
     margin: 0 5px !important;
     border-radius: 100%;
-    background-color: #000045 !important;
+    background-color: var(--color-default);
     border: 1.5px solid white !important;
+}
+
+.homepage-carousel-cls .carousel-indicators button:hover {
+    background-color: var(--color-white);
 }
 
 .homepage-carousel-cls .carousel-indicators button:focus {
@@ -1619,13 +1623,17 @@ header .search-box {
     }
 }
 
-.recommendation-block {
-    background-color: var(--color-default);
-    padding: 28px 40px;
-    color: var(--color-white);
+.recommendation-block-outer {
     margin-top: -80px;
     margin-left: 40px;
     margin-right: 40px;
+}
+
+.recommendation-block {
+    background-color: var(--color-default);
+    padding: 40px 40px;
+    color: var(--color-white);
+
 }
 
 .recommendation-block .recommendation-header {
@@ -1639,13 +1647,18 @@ header .search-box {
         min-height: 260px;
     }
 
-    .recommendation-block {
+    .recommendation-block-outer {
         margin-top: -40px;
+    }
+
+    .recommendation-block {
+        padding: 30px;
+
     }
 }
 
 @media(max-width: 768px) {
-    .recommendation-block {
+    .recommendation-block-outer {
         margin-top: -60px;
         margin-left: 25px;
         margin-right: 25px;
@@ -1661,7 +1674,7 @@ header .search-box {
 .recommendation-block .recommendation-link {
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
+    margin: 12px 0px;
 }
 
 .recommendation-block .recommendation-link-block {
@@ -1679,9 +1692,9 @@ header .search-box {
     outline-offset: 0;
 }
 
-.recommendation-block img {
+/* .recommendation-block img {
     height: 24px;
-}
+} */
 
 .recommendation-block .pay-btn {
     position: relative;
@@ -1752,21 +1765,6 @@ header .search-box {
         display: none;
     }
 }
-
-@media all and (device-width: 1180px) and (device-height: 820px) and (orientation:landscape) {
-    .breadcrumb-position {
-        display: none;
-    }
-}
-
-/* .breadcrumb-position span,
-.breadcrumb-position a {
-   display: inline-block;
-   white-space: nowrap;
-   max-width: 165px;
-   overflow: hidden;
-   text-overflow: ellipsis;
-} */
 
 .breadcrumb-position a {
     color: var(--color-white);
@@ -2128,10 +2126,6 @@ a:focus .info-card .info-card-header {
     font-size: 14px;
 }
 
-.info-card.news-info .date::before {
-    border-color: 1px solid var(--color-white);
-}
-
 .info-card.news-info:hover {
     background-color: var(--color-white);
     color: var(--color-default);
@@ -2199,7 +2193,7 @@ a:focus .info-card .info-card-header {
 }
 
 .info-card.news-center span.date::before {
-    border-color: 1px solid var(--color-default);
+    border: 1px solid var(--color-default);
     bottom: 35px;
     color: var(--color-default);
 }
@@ -2774,7 +2768,9 @@ a:focus .info-card.news-center:before {
 .mySwiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 7px;
 }
-
+.mySwiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:hover {
+    background-color: var(--color-default);
+}
 /******************* News Page ******************************/
 .news-container-area {
     padding-top: 3rem;
@@ -3211,7 +3207,7 @@ a:focus .info-card.news-center:before {
     background-color: var(--color-light-gray);
 }
 
-.destination-accordian:has(.show)::after {
+.destination-accordian .show::after {
     position: absolute;
     animation: colorChange .5s forwards;
     display: block;
@@ -3223,7 +3219,7 @@ a:focus .info-card.news-center:before {
     right: auto;
 }
 
-.destination-accordian:has(.show)::before {
+.destination-accordian .show::before {
     position: absolute;
     animation: colorChange .5s forwards;
     display: block;
@@ -3866,6 +3862,8 @@ a:focus .info-card.news-center:before {
 .carousel-count .carousel-control-next,
 .carousel-count .carousel-control-prev {
     width: 18%;
+    height: 50px;
+    top: 45%;
 }
 
 .carousel-count .carousel-control-next {
@@ -4295,11 +4293,11 @@ a:focus .info-card.news-center:before {
 .form-error .form-label,
 .form-error .form-control,
 .form-error .form-text {
-    color: red;
+    color: var(--color-red);
 }
 
 .form-error .form-control {
-    border-color: red;
+    border-color: var(--color-red);
 }
 
 /*--------------------------------------------------------------
@@ -4845,15 +4843,10 @@ padding-right: 80px; */
 #  Pagination
 --------------------------------------------------------------*/
 .pagination-block {
-    display: flex;
-    padding-left: 10px;
+    display: block;
+    text-align: center;
     list-style: none;
-}
-
-@media(max-width: 768px) {
-    .pagination-block {
-        display: block;
-    }
+    padding-left: 0;
 }
 
 .pagination-block .page-item .round-btn {
@@ -5011,10 +5004,6 @@ padding-right: 80px; */
         border-radius: 10px;
         background: var(--color-light-gray);
         -webkit-box-shadow: inset 0 0 6px var(--color-light-gray);
-    }
-
-    .video-list::-webkit-scrollbar-thumb:window-inactive {
-        background: var(--color-light-gray);
     }
 }
 
