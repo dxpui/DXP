@@ -1,5 +1,5 @@
 "use strict";
-const menu = document.querySelector(".menu");
+const menu = document.querySelector(".menu"); 
 let subMenu;
 
 function menuMain() {
