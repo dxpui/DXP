@@ -714,6 +714,11 @@ header .search-form.active {
     text-decoration: none;
 }
 
+.search-results-block em {
+    font-style: normal;
+    font-weight: bold;
+}
+
 .langauge-change {
     font-size: 12px;
     margin-left: 40px;
@@ -2768,9 +2773,11 @@ a:focus .info-card.news-center:before {
 .mySwiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 7px;
 }
+
 .mySwiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:hover {
     background-color: var(--color-default);
 }
+
 /******************* News Page ******************************/
 .news-container-area {
     padding-top: 3rem;
