@@ -3521,7 +3521,7 @@ a:focus .info-card.news-center:before {
     padding: 20px 20px;
     border-bottom: 1px solid var(--color-black);
     border-left: 0;
-    margin: 20px;
+    margin-inline: 20px;
     height: 100%;
 }
 
@@ -4031,9 +4031,24 @@ a:focus .info-card.news-center:before {
     }
 }
 
+.filter-list {
+    padding-left: 10px;
+}
+
+@media(max-width: 992px) {
+    .filter-list {
+        padding-left: 25px;
+    }
+}
+
+.filter-list li[select="true"] span {
+    text-decoration: underline;
+}
+
 .modal-topic-list li,
 .modal-status-list li,
-.modal-time-list li {
+.modal-time-list li,
+.modal-content-list li {
     cursor: pointer;
     margin-bottom: 10px;
     display: flex;
@@ -4041,11 +4056,22 @@ a:focus .info-card.news-center:before {
 
 .modal-topic-list li a,
 .modal-status-list li a,
-.modal-time-list li a {
+.modal-time-list li a,
+.modal-content-list li a {
     font-family: var(--font-family-default);
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
+}
+
+.modal-topic-list li i,
+.modal-status-list li i,
+.modal-time-list li i,
+.modal-content-list li i {
+    color: white;
+    font-size: 21px;
+    position: relative;
+    left: -5px;
 }
 
 .close-clear-btn button {
@@ -4074,15 +4100,6 @@ a:focus .info-card.news-center:before {
     visibility: hidden;
 }
 
-.modal-topic-list li i,
-.modal-status-list li i,
-.modal-time-list li i {
-    color: white;
-    font-size: 21px;
-    position: relative;
-    left: -5px;
-}
-
 .showfilters .modal-content {
     border-radius: 0px !important;
     background-color: var(--color-default);
@@ -4090,11 +4107,11 @@ a:focus .info-card.news-center:before {
 
 @media screen and (min-width: 575px) {
     .modal-content-details {
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     div.modal-content-details:last-child {
-        border-right: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
     }
 }
 
