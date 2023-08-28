@@ -47,7 +47,7 @@
 body {
     color: var(--color-default);
     font-family: var(--font-family-default);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     line-height: var(--line-height-default);
     overflow-x: hidden;
@@ -86,7 +86,8 @@ p {
 
 /* Used for: Landing page titles */
 
-h1 {
+h1,
+.h1 {
     font-size: 48px;
     line-height: 135%;
     font-weight: 900;
@@ -96,7 +97,8 @@ h1 {
 
 /* Used for: Homepage carousel, destination page titles */
 
-h2 {
+h2,
+.h2 {
     font-size: 40px;
     line-height: 135%;
     font-weight: 500;
@@ -104,7 +106,9 @@ h2 {
 }
 
 @media(max-width: 992px) {
-    h2 {
+
+    h2,
+    .h2 {
         font-size: 29px;
     }
 }
@@ -113,33 +117,36 @@ h1.font-size-h2 {
     font-size: 40px;
 }
 
-
 /* Used for: Page subtitles */
 
-h3 {
+h3,
+.h3 {
     font-size: 32px;
     line-height: 135%;
     font-weight: 700;
     word-wrap: break-word;
 }
 
-
 /* Used for: Card titles, pull quotes etc */
 
-h4 {
+h4,
+.h4 {
     font-size: 19px;
     line-height: 145%;
     word-wrap: break-word;
 }
 
-h5 {
+h5,
+.h5 {
     font-size: 14px;
     line-height: 145%;
     word-wrap: break-word;
 }
 
 @media(max-width: 991px) {
-    h1 {
+
+    h1,
+    .h1 {
         font-size: 29px;
     }
 }
@@ -2811,44 +2818,44 @@ a:focus .info-card.news-center:before {
 
 
 /******************* Green Theme Latest News Home Page ******************************/
-.news-green,
-.news-green .h2-has-h3 {
+.news-green-bg,
+.news-green-bg .h2-has-h3 {
     background-color: var(--color-green);
 }
 
-.news-pink,
-.news-pink .h2-has-h3 {
+.news-pink-bg,
+.news-pink-bg .h2-has-h3 {
     background-color: var(--color-pink);
 }
 
-.news-orange,
-.news-orange .h2-has-h3 {
+.news-orange-bg,
+.news-orange-bg .h2-has-h3 {
     background-color: var(--color-secondary);
 }
 
-.news-yellow,
-.news-yellow .h2-has-h3 {
+.news-yellow-bg,
+.news-yellow-bg .h2-has-h3 {
     background-color: var(--color-yellow);
 }
 
-.news-gray,
-.news-gray .h2-has-h3 {
+.news-gray-bg,
+.news-gray-bg .h2-has-h3 {
     background-color: var(--color-light-gray);
 }
 
-.news-green .swiper-pagination-bullet,
-.news-pink .swiper-pagination-bullet,
-.news-orange .swiper-pagination-bullet,
-.news-yellow .swiper-pagination-bullet,
-.news-gray .swiper-pagination-bullet {
+.news-green-bg .swiper-pagination-bullet,
+.news-pink-bg .swiper-pagination-bullet,
+.news-orange-bg .swiper-pagination-bullet,
+.news-yellow-bg .swiper-pagination-bullet,
+.news-gray-bg .swiper-pagination-bullet {
     border: 1px solid var(--color-default);
 }
 
-.news-green .swiper-pagination-bullet-active,
-.news-pink .swiper-pagination-bullet-active,
-.news-orange .swiper-pagination-bullet-active,
-.news-yellow .swiper-pagination-bullet-active,
-.news-gray .swiper-pagination-bullet-active {
+.news-green-bg .swiper-pagination-bullet-active,
+.news-pink-bg .swiper-pagination-bullet-active,
+.news-orange-bg .swiper-pagination-bullet-active,
+.news-yellow-bg .swiper-pagination-bullet-active,
+.news-gray-bg .swiper-pagination-bullet-active {
     background: var(--color-default);
 }
 
@@ -2857,122 +2864,122 @@ a:focus .info-card.news-center:before {
     box-shadow: 0 0 0 3px var(--color-outline-focus);
 }
 
-.news-green .info-card::before,
-.news-pink .info-card::before,
-.news-orange .info-card::before,
-.news-yellow .info-card::before,
-.news-gray .info-card::before {
+.news-green-bg .info-card::before,
+.news-pink-bg .info-card::before,
+.news-orange-bg .info-card::before,
+.news-yellow-bg .info-card::before,
+.news-gray-bg .info-card::before {
     background-color: transparent;
 }
 
-.news-green .info-card a,
-.news-green .info-card .info-card-header,
-.news-pink .info-card a,
-.news-pink .info-card .info-card-header,
-.news-orange .info-card a,
-.news-orange .info-card .info-card-header,
-.news-yellow .info-card a,
-.news-yellow .info-card .info-card-header,
-.news-gray .info-card a,
-.news-gray .info-card .info-card-header {
+.news-green-bg .info-card a,
+.news-green-bg .info-card .info-card-header,
+.news-pink-bg .info-card a,
+.news-pink-bg .info-card .info-card-header,
+.news-orange-bg .info-card a,
+.news-orange-bg .info-card .info-card-header,
+.news-yellow-bg .info-card a,
+.news-yellow-bg .info-card .info-card-header,
+.news-gray-bg .info-card a,
+.news-gray-bg .info-card .info-card-header {
     color: var(--color-default) !important;
     font-size: 19px !important;
 }
 
-.news-green .btn-primary,
-.news-pink .btn-primary,
-.news-orange .btn-primary,
-.news-yellow .btn-primary,
-.news-gray .btn-primary {
+.news-green-bg .btn-primary,
+.news-pink-bg .btn-primary,
+.news-orange-bg .btn-primary,
+.news-yellow-bg .btn-primary,
+.news-gray-bg .btn-primary {
     color: var(--color-default);
 }
 
-.news-green .btn-primary:hover,
-.news-green .btn-primary:focus,
-.news-pink .btn-primary:hover,
-.news-pink .btn-primary:focus,
-.news-orange .btn-primary:hover,
-.news-orange .btn-primary:focus,
-.news-yellow .btn-primary:hover,
-.news-yellow .btn-primary:focus,
-.news-gray .btn-primary:hover,
-.news-gray .btn-primary:focus {
+.news-green-bg .btn-primary:hover,
+.news-green-bg .btn-primary:focus,
+.news-pink-bg .btn-primary:hover,
+.news-pink-bg .btn-primary:focus,
+.news-orange-bg .btn-primary:hover,
+.news-orange-bg .btn-primary:focus,
+.news-yellow-bg .btn-primary:hover,
+.news-yellow-bg .btn-primary:focus,
+.news-gray-bg .btn-primary:hover,
+.news-gray-bg .btn-primary:focus {
     color: var(--color-default);
     background-color: var(--color-secondary);
     border-color: var(--color-default);
 }
 
-.news-orange .btn-primary:hover,
-.news-orange .btn-primary:focus {
+.news-orange-bg .btn-primary:hover,
+.news-orange-bg .btn-primary:focus {
     color: var(--color-default);
     background-color: var(--color-light-gray);
     border-color: var(--color-default);
 }
 
-.news-blue .btn-primary,
-.news-lightblue .btn-primary,
-.news-red .btn-primary,
-.news-maroon .btn-primary,
-.news-megenta .btn-primary {
+.news-blue-bg .btn-primary,
+.news-lightblue-bg .btn-primary,
+.news-red-bg .btn-primary,
+.news-maroon-bg .btn-primary,
+.news-megenta-bg .btn-primary {
     background-color: transparent;
     color: var(--color-white);
     border-color: var(--color-white);
 }
 
-.news-blue .btn-primary:hover,
-.news-blue .btn-primary:focus,
-.news-lightblue .btn-primary:hover,
-.news-lightblue .btn-primary:focus,
-.news-red .btn-primary:hover,
-.news-red .btn-primary:focus,
-.news-maroon .btn-primary:hover,
-.news-maroon .btn-primary:focus,
-.news-megenta .btn-primary:hover,
-.news-megenta .btn-primary:focus {
+.news-blue-bg .btn-primary:hover,
+.news-blue-bg .btn-primary:focus,
+.news-lightblue-bg .btn-primary:hover,
+.news-lightblue-bg .btn-primary:focus,
+.news-red-bg .btn-primary:hover,
+.news-red-bg .btn-primary:focus,
+.news-maroon-bg .btn-primary:hover,
+.news-maroon-bg .btn-primary:focus,
+.news-megenta-bg .btn-primary:hover,
+.news-megenta-bg .btn-primary:focus {
     color: var(--color-default);
     background-color: var(--color-secondary);
     border-color: var(--color-default);
 }
 
 /******************* Blue Theme Related News Home Page ******************************/
-.news-blue {
+.news-blue-bg {
     background-color: var(--color-default);
 }
 
-.news-lightblue {
+.news-lightblue-bg {
     background-color: var(--color-primary);
 }
 
-.news-red {
+.news-red-bg {
     background-color: var(--color-red);
 }
 
-.news-maroon {
+.news-maroon-bg {
     background-color: var(--color-maroon);
 }
 
-.news-megenta {
+.news-megenta-bg {
     background-color: var(--color-megenta);
 }
 
-.news-blue .h2-has-h3,
-.news-lightblue .h2-has-h3,
-.news-red .h2-has-h3,
-.news-maroon .h2-has-h3,
-.news-megenta .h2-has-h3 {
+.news-blue-bg .h2-has-h3,
+.news-lightblue-bg .h2-has-h3,
+.news-red-bg .h2-has-h3,
+.news-maroon-bg .h2-has-h3,
+.news-megenta-bg .h2-has-h3 {
     color: var(--color-white);
 }
 
-.news-blue .info-card.news-info .date,
-.news-blue .info-card.news-info .date::before,
-.news-lightblue .info-card.news-info .date,
-.news-lightblue .info-card.news-info .date::before,
-.news-red .info-card.news-info .date,
-.news-red .info-card.news-info .date::before,
-.news-maroon .info-card.news-info .date,
-.news-maroon .info-card.news-info .date::before,
-.news-megenta .info-card.news-info .date,
-.news-megenta .info-card.news-info .date::before {
+.news-blue-bg .info-card.news-info .date,
+.news-blue-bg .info-card.news-info .date::before,
+.news-lightblue-bg .info-card.news-info .date,
+.news-lightblue-bg .info-card.news-info .date::before,
+.news-red-bg .info-card.news-info .date,
+.news-red-bg .info-card.news-info .date::before,
+.news-maroon-bg .info-card.news-info .date,
+.news-maroon-bg .info-card.news-info .date::before,
+.news-megenta-bg .info-card.news-info .date,
+.news-megent-bg .info-card.news-info .date::before {
     border-color: var(--color-white);
     color: var(--color-white);
 }
@@ -2981,133 +2988,133 @@ a:focus .info-card.news-center:before {
     color: var(--color-white);
 }
 
-.news-green .info-card.news-info:hover,
-.news-green a:focus .info-card.news-info,
-.news-pink .info-card.news-info:hover,
-.news-pink a:focus .info-card.news-info,
-.news-yellow .info-card.news-info:hover,
-.news-yellow a:focus .info-card.news-info,
-.news-orange .info-card.news-info:hover,
-.news-orange a:focus .info-card.news-info {
+.news-green-bg .info-card.news-info:hover,
+.news-green-bg a:focus .info-card.news-info,
+.news-pink-bg .info-card.news-info:hover,
+.news-pink-bg a:focus .info-card.news-info,
+.news-yellow-bg .info-card.news-info:hover,
+.news-yellow-bg a:focus .info-card.news-info,
+.news-orange-bg .info-card.news-info:hover,
+.news-orange-bg a:focus .info-card.news-info {
     background-color: var(--color-white);
 }
 
-.news-blue .info-card.news-info:hover .date,
-.news-blue .info-card.news-info:hover .date::before,
-.news-blue a:focus .info-card.news-info .date,
-.news-blue a:focus .info-card.news-info .date::before,
-.news-lightblue .info-card.news-info:hover .date,
-.news-lightblue .info-card.news-info:hover span.date::before,
-.news-lightblue a:focus .info-card.news-info .date,
-.news-lightblue a:focus .info-card.news-info span.date::before,
-.news-red .info-card.news-info:hover .date,
-.news-red .info-card.news-info:hover span.date::before,
-.news-red a:focus .info-card.news-info .date,
-.news-red a:focus .info-card.news-info span.date::before,
-.news-maroon .info-card.news-info:hover .date,
-.news-maroon .info-card.news-info:hover span.date::before,
-.news-maroon a:focus .info-card.news-info .date,
-.news-maroon a:focus .info-card.news-info span.date::before,
-.news-megenta .info-card.news-info:hover .date,
-.news-megenta .info-card.news-info:hover span.date::before,
-.news-megenta a:focus .info-card.news-info .date,
-.news-megenta a:focus .info-card.news-info span.date::before {
+.news-blue-bg .info-card.news-info:hover .date,
+.news-blue-bg .info-card.news-info:hover .date::before,
+.news-blue-bg a:focus .info-card.news-info .date,
+.news-blue-bg a:focus .info-card.news-info .date::before,
+.news-lightblue-bg .info-card.news-info:hover .date,
+.news-lightblue-bg .info-card.news-info:hover span.date::before,
+.news-lightblue-bg a:focus .info-card.news-info .date,
+.news-lightblue-bg a:focus .info-card.news-info span.date::before,
+.news-red-bg .info-card.news-info:hover .date,
+.news-red-bg .info-card.news-info:hover span.date::before,
+.news-red-bg a:focus .info-card.news-info .date,
+.news-red-bg a:focus .info-card.news-info span.date::before,
+.news-maroon-bg .info-card.news-info:hover .date,
+.news-maroon-bg .info-card.news-info:hover span.date::before,
+.news-maroon-bg a:focus .info-card.news-info .date,
+.news-maroon-bg a:focus .info-card.news-info span.date::before,
+.news-megenta-bg .info-card.news-info:hover .date,
+.news-megenta-bg .info-card.news-info:hover span.date::before,
+.news-megenta-bg a:focus .info-card.news-info .date,
+.news-megenta-bg a:focus .info-card.news-info span.date::before {
     border-color: var(--color-default);
     color: var(--color-default);
 }
 
-.news-blue .info-card.news-info:hover .info-card-header,
-.news-blue a:focus .info-card.news-info .info-card-header,
-.news-lightblue .info-card.news-info:hover .info-card-header,
-.news-lightblue a:focus .info-card.news-info .info-card-header,
-.news-red .info-card.news-info:hover .info-card-header,
-.news-red a:focus .info-card.news-info .info-card-header,
-.news-maroon .info-card.news-info:hover .info-card-header,
-.news-maroon a:focus .info-card.news-info .info-card-header,
-.news-megenta .info-card.news-info:hover .info-card-header,
-.news-megenta a:focus .info-card.news-info .info-card-header {
+.news-blue-bg .info-card.news-info:hover .info-card-header,
+.news-blue-bg a:focus .info-card.news-info .info-card-header,
+.news-lightblue-bg .info-card.news-info:hover .info-card-header,
+.news-lightblue-bg a:focus .info-card.news-info .info-card-header,
+.news-red-bg .info-card.news-info:hover .info-card-header,
+.news-red-bg a:focus .info-card.news-info .info-card-header,
+.news-maroon-bg .info-card.news-info:hover .info-card-header,
+.news-maroon-bg a:focus .info-card.news-info .info-card-header,
+.news-megenta-bg .info-card.news-info:hover .info-card-header,
+.news-megenta-bg a:focus .info-card.news-info .info-card-header {
     color: var(--color-default);
 }
 
-.news-blue .swiper-pagination-bullet,
-.news-lightblue .swiper-pagination-bullet,
-.news-red .swiper-pagination-bullet,
-.news-maroon .swiper-pagination-bullet,
-.news-megenta .swiper-pagination-bullet {
+.news-blue-bg .swiper-pagination-bullet,
+.news-lightblue-bg .swiper-pagination-bullet,
+.news-red-bg .swiper-pagination-bullet,
+.news-maroon-bg .swiper-pagination-bullet,
+.news-megenta-bg .swiper-pagination-bullet {
     border: 1px solid var(--color-white);
 }
 
-.news-blue .swiper-pagination-bullet-active,
-.news-lightblue .swiper-pagination-bullet-active,
-.news-red .swiper-pagination-bullet-active,
-.news-maroon .swiper-pagination-bullet-active,
-.news-megenta .swiper-pagination-bullet-active {
+.news-blue-bg .swiper-pagination-bullet-active,
+.news-lightblue-bg .swiper-pagination-bullet-active,
+.news-red-bg .swiper-pagination-bullet-active,
+.news-maroon-bg .swiper-pagination-bullet-active,
+.news-megenta-bg .swiper-pagination-bullet-active {
     background: var(--color-white);
 }
 
-.news-blue .info-card::before,
-.news-lightblue .info-card::before,
-.news-red .info-card::before,
-.news-maroon .info-card::before,
-.news-megenta .info-card::before {
+.news-blue-bg .info-card::before,
+.news-lightblue-bg .info-card::before,
+.news-red-bg .info-card::before,
+.news-maroon-bg .info-card::before,
+.news-megenta-bg .info-card::before {
     background-color: transparent;
 }
 
-.news-blue .info-card.news-info:hover,
-.news-lightblue .info-card.news-info:hover,
-.news-red .info-card.news-info:hover,
-.news-maroon .info-card.news-info:hover,
-.news-megenta .info-card.news-info:hover,
-.news-gray .info-card.news-info:hover {
+.news-blue-bg .info-card.news-info:hover,
+.news-lightblue-bg .info-card.news-info:hover,
+.news-red-bg .info-card.news-info:hover,
+.news-maroon-bg .info-card.news-info:hover,
+.news-megenta-bg .info-card.news-info:hover,
+.news-gray-bg .info-card.news-info:hover {
     background-color: var(--color-secondary);
     color: var(--color-default);
 }
 
-.news-blue .info-card .svg-arrow,
-.news-lightblue .info-card .svg-arrow,
-.news-red .info-card .svg-arrow,
-.news-maroon .info-card .svg-arrow,
-.news-megenta .info-card .svg-arrow {
+.news-blue-bg .info-card .svg-arrow,
+.news-lightblue-bg .info-card .svg-arrow,
+.news-red-bg .info-card .svg-arrow,
+.news-maroon-bg .info-card .svg-arrow,
+.news-megenta-bg .info-card .svg-arrow {
     fill: var(--color-white);
 }
 
-.news-blue .info-card .svg-arrow circle,
-.news-lightblue .info-card .svg-arrow circle,
-.news-red .info-card .svg-arrow circle,
-.news-maroon .info-card .svg-arrow circle,
-.news-megenta .info-card .svg-arrow circle {
+.news-blue-bg .info-card .svg-arrow circle,
+.news-lightblue-bg .info-card .svg-arrow circle,
+.news-red-bg .info-card .svg-arrow circle,
+.news-maroon-bg .info-card .svg-arrow circle,
+.news-megenta-bg .info-card .svg-arrow circle {
     stroke: var(--color-white);
 }
 
-.news-blue .info-card .svg-arrow path,
-.news-lightblue .info-card .svg-arrow path,
-.news-red .info-card .svg-arrow path,
-.news-maroon .info-card .svg-arrow path,
-.news-megenta .info-card .svg-arrow path {
+.news-blue-bg .info-card .svg-arrow path,
+.news-lightblue-bg .info-card .svg-arrow path,
+.news-red-bg .info-card .svg-arrow path,
+.news-maroon-bg .info-card .svg-arrow path,
+.news-megenta-bg .info-card .svg-arrow path {
     stroke: var(--color-default);
 }
 
-.news-blue .info-card:hover .svg-arrow circle,
-.news-lightblue .info-card:hover .svg-arrow circle,
-.news-red .info-card:hover .svg-arrow circle,
-.news-maroon .info-card:hover .svg-arrow circle,
-.news-megenta .info-card:hover .svg-arrow circle {
+.news-blue-bg .info-card:hover .svg-arrow circle,
+.news-lightblue-bg .info-card:hover .svg-arrow circle,
+.news-red-bg .info-card:hover .svg-arrow circle,
+.news-maroon-bg .info-card:hover .svg-arrow circle,
+.news-megenta-bg .info-card:hover .svg-arrow circle {
     stroke: var(--color-default);
 }
 
-.news-blue .info-card:hover .svg-arrow,
-.news-lightblue .info-card:hover .svg-arrow,
-.news-red .info-card:hover .svg-arrow,
-.news-maroon .info-card:hover .svg-arrow,
-.news-megenta .info-card:hover .svg-arrow {
+.news-blue-bg .info-card:hover .svg-arrow,
+.news-lightblue-bg .info-card:hover .svg-arrow,
+.news-red-bg .info-card:hover .svg-arrow,
+.news-maroon-bg .info-card:hover .svg-arrow,
+.news-megenta-bg .info-card:hover .svg-arrow {
     fill: var(--color-default);
 }
 
-.news-blue .info-card:hover .svg-arrow path,
-.news-lightblue .info-card:hover .svg-arrow path,
-.news-red .info-card:hover .svg-arrow path,
-.news-maroon .info-card:hover .svg-arrow path,
-.news-megenta .info-card:hover .svg-arrow path {
+.news-blue-bg .info-card:hover .svg-arrow path,
+.news-lightblue-bg .info-card:hover .svg-arrow path,
+.news-red-bg .info-card:hover .svg-arrow path,
+.news-maroon-bg .info-card:hover .svg-arrow path,
+.news-megenta-bg .info-card:hover .svg-arrow path {
     stroke: var(--color-white);
 }
 
@@ -4182,7 +4189,7 @@ a:focus .info-card.news-center:before {
 .logo-list picture {
     width: 100%;
     height: 100%;
-    padding: 30px;
+    padding: 20px;
     border: 1px solid var(--color-light-gray);
     display: flex;
     justify-content: center;
@@ -4481,10 +4488,10 @@ table caption {
 }
 
 .toast-notification {
-    /* width: max-content; */
     position: fixed;
     bottom: 0;
     right: 0;
+    z-index: 999;
 }
 
 .toast-top-header {
@@ -4496,6 +4503,16 @@ table caption {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: 400;
+}
+
+.toast-top-header a {
+    color: var(--color-white);
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+.toast-top-header a:hover {
+    color: var(--color-light-gray);
 }
 
 .toast-top-header .toast-page-link {
@@ -4979,31 +4996,13 @@ padding-right: 80px; */
     }
 }
 
-.standfirst {
+.standfirst,
+.lead {
     line-height: 1.5em;
     font-weight: 700;
     font-size: 1.3rem;
     color: var(--color-default);
 }
-
-/* .standfirst:before {
-    content: open-quote;
-}
-
-.standfirst:after {
-    content: close-quote;
-}
-
-.standfirst:before,
-.standfirst:after {
-    display: inline-block;
-    vertical-align: bottom;
-    color: var(--color-secondary);
-    font-size: 3em;
-    top: .2em;
-    position: relative;
-    padding-right: 15px;
-} */
 
 @media (min-width: 767px) {
     .video-list {
@@ -5294,6 +5293,10 @@ padding-right: 80px; */
 
 .extra-margin.row {
     margin-inline: -20px;
+}
+
+.standared-page .extra-margin.row {
+    margin-inline: -25px;
 }
 
 .news-center-spacing.row {
