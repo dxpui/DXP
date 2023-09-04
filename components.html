@@ -924,6 +924,195 @@
                 have.
               </li>
             </ul>
+
+
+
+
+            <div class="block  formcontainerblock  ">
+
+
+
+
+              <form method="post" novalidate="novalidate" data-f-metadata=""
+                aria-labelledby="32120e44-a598-4783-b8a5-00bc6fe52057_label" enctype="multipart/form-data"
+                class="EPiServerForms ValidationSuccess" data-f-type="form" id="32120e44-a598-4783-b8a5-00bc6fe52057">
+
+                <script type="text/javascript">
+                  // This view acts as a rendering template to render InitScript(and server-side Form's descriptor) in FormContainerBlock's client-side for Form[32120e44-a598-4783-b8a5-00bc6fe52057].
+                  // TECHNOTE: all serverside (paths, dynamic values) of EPiServerForms will be transfered to client side here in this section.
+                  (function initializeOnRenderingFormDescriptor() {
+                    // each workingFormInfo is store inside epi.EPiServer.Forms, lookup by its FormGuid
+                    var workingFormInfo = epi.EPiServer.Forms["32120e44-a598-4783-b8a5-00bc6fe52057"] = {
+                      Id: "32120e44-a598-4783-b8a5-00bc6fe52057",
+                      Name: "Contact Digital Team",
+                      // whether this Form can be submitted which relates to the visitor's data (cookie, identity) and Form's settings (AllowAnonymous, AllowXXX)
+                      SubmittableStatus: { "submittable": true, "message": "" },
+                      ConfirmMessage: "submission confirmed",
+                      ResetConfirmMessage: "Reset Please",
+                      ShowNavigationBar: true,
+                      ShowSummarizedData: false,
+                      // serialize the dependency configuration of this form to clientside
+                      DependenciesInfo: JSON.parse("[]"),
+                      // keep all fieldName which are not satisfied the field dependency conditions
+                      DependencyInactiveElements: [],
+                      // Validation info, for executing validating on client side
+                      ValidationInfo: JSON.parse("[{\"targetElementName\":\"__field_205\",\"targetElementId\":\"19e68d6f-ae8c-47ca-893b-ab8f6b7dcfb2\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_209\",\"targetElementId\":\"5eaa527f-9857-4277-ba14-b6c7c0dc3163\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"Comments is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_210\",\"targetElementId\":\"4f5ef270-7176-4f17-88e5-5c3385dab676\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.EmailValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^((([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+(\\\\.([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+)*)|((\\\\x22)((((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(([\\\\x01-\\\\x08\\\\x0b\\\\x0c\\\\x0e-\\\\x1f\\\\x7f]|\\\\x21|[\\\\x23-\\\\x5b]|[\\\\x5d-\\\\x7e]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(\\\\\\\\([\\\\x01-\\\\x09\\\\x0b\\\\x0c\\\\x0d-\\\\x7f]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF]))))*(((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(\\\\x22)))@((([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.)+(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.?$\",\"dotNetPattern\":\"^((([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+(\\\\.([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+)*)|((\\\\x22)((((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(([\\\\x01-\\\\x08\\\\x0b\\\\x0c\\\\x0e-\\\\x1f\\\\x7f]|\\\\x21|[\\\\x23-\\\\x5b]|[\\\\x5d-\\\\x7e]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(\\\\\\\\([\\\\x01-\\\\x09\\\\x0b\\\\x0c\\\\x0d-\\\\x7f]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF]))))*(((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(\\\\x22)))@((([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.)+(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.?$\",\"message\":\"Enter a valid email address.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_207\",\"targetElementId\":\"cffef24e-51c0-4b04-9b57-f344a77c9f48\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.CaptchaValidator\",\"description\":null,\"model\":{\"message\":\"Enter the characters you see in the picture.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]}]"),
+                      // Steps information for driving multiple-step Forms.
+                      StepsInfo: {
+                        Steps: [{ "index": 0, "attachedUrl": "", "dependField": null, "dependCondition": null, "isActive": true, "attachedContentLink": "", "dependValue": "", "elementName": "__field_", "guid": "00000000-0000-0000-0000-000000000000" }]
+                      },
+                      FieldsExcludedInSubmissionSummary: [],
+                      ElementsInfo: JSON.parse("{\"__field_204\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ParagraphTextElementBlock\",\"friendlyName\":\"RTE\",\"customBinding\":false},\"__field_205\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Name\",\"customBinding\":false},\"__field_209\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"Comment\",\"customBinding\":false},\"__field_210\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Email\",\"customBinding\":false},\"__field_211\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Web address (URL)\",\"customBinding\":false},\"__field_206\":{\"type\":\"EPiServer.Forms.Implementation.Elements.SubmitButtonElementBlock\",\"friendlyName\":\"Submit Button\",\"customBinding\":false}}"),
+                      DataSubmitController: "/EPiServer.Forms/DataSubmit"
+                    };
+                    /// TECHNOTE: Calculation at FormInfo level, and these values will be static input for later processing.
+                    workingFormInfo.StepsInfo.FormHasNoStep_VirtualStepCreated = true; // this FLAG will be true, if Editor does not put any FormStep. Engine will create a virtual step, with empty GUID
+                    workingFormInfo.StepsInfo.FormHasNothing = false; // this FLAG will be true if FormContainer has no element at all
+                    workingFormInfo.StepsInfo.AllStepsAreNotLinked = true; // this FLAG will be true, if all steps all have contentLink= ="" (emptyString)
+                  })();
+                </script>
+                <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                  name="__FormGuid" value="32120e44-a598-4783-b8a5-00bc6fe52057" data-f-type="hidden"
+                  autocomplete="off">
+                <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                  name="__FormHostedPage" value="7" data-f-type="hidden" autocomplete="off">
+                <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                  name="__FormLanguage" value="en" data-f-type="hidden" autocomplete="off">
+                <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                  name="__FormCurrentStepIndex" value="0" data-f-type="hidden" autocomplete="off">
+                <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                  name="__FormSubmissionId" value="" data-f-type="hidden" autocomplete="off">
+                <input name="__RequestVerificationToken" type="hidden"
+                  value="CfDJ8FsyejV9zMlIhojUxellYDzUbx0k1eMKaj74bDpFx-KDs0oyXM9d51X3h0NdnG-i7qwHHt9DCzL4Db6_Xey26cBlqtaLu7-9VhFlHGdtQLZy4sC67-xkktyAJcUgiKuuvAIzzrbhMr4oKb1pJnA5DHQ">
+                <h2 class="Form__Title" id="32120e44-a598-4783-b8a5-00bc6fe52057_label">Contact Digital Team Form</h2>
+                <aside class="Form__Description">Testing Description</aside>
+                <div class="Form__Status">
+                  <div role="status" class="Form__Status__Message hide" data-f-form-statusmessage="">
+
+                  </div>
+                </div>
+                <div data-f-mainbody="" class="Form__MainBody">
+                  <section id="__field_" data-f-type="step" data-f-element-name="__field_"
+                    class="Form__Element FormStep Form__Element--NonData " data-f-stepindex="0"
+                    data-f-element-nondata="">
+                    <!-- Each FormStep groups the elements below it til the next FormStep -->
+
+
+
+
+                    <div class="Form__Element FormParagraphText Form__Element--NonData"
+                      data-f-element-name="__field_204" data-f-element-nondata="">
+                      <div id="13a8b718-e7b2-49f0-9801-d7bbafb4c617">
+                        <p>You can use this form to tell us about:</p>
+                        <ul>
+                          <li>broken links;</li>
+                          <li>accessibility concerns or request for alternative formats;</li>
+                          <li>other issues you find on our website.</li>
+                        </ul>
+                        <p>In your response, please can you provide the following if they are relevant:</p>
+                        <ul>
+                          <li>The link address (URL)</li>
+                          <li>The date and time you noticed the issue</li>
+                          <li>What browser you are using (and version)</li>
+                          <li>What device you are using (iPhone, Android etc.)</li>
+                          <li>Your contact details, so we can reply</li>
+                        </ul>
+                        <p>We will only use your name and email address to respond to your query, and will delete them
+                          once we have.</p>
+                      </div>
+                    </div>
+
+
+                    <div class="Form__Element FormTextbox ValidationRequired" data-f-element-name="__field_205"
+                      data-f-type="textbox"> <label for="19e68d6f-ae8c-47ca-893b-ab8f6b7dcfb2"
+                        class="Form__Element__Caption">Name</label>
+                      <input name="__field_205" id="19e68d6f-ae8c-47ca-893b-ab8f6b7dcfb2" type="text"
+                        class="FormTextbox__Input" aria-describedby="__field_205_desc" placeholder="add name"
+                        title="Enter Name" required="" aria-required="true" data-f-datainput="" aria-invalid="false"
+                        autocomplete="off">
+                      <span class="Form__Element__ValidationError" data-f-linked-name="__field_205"
+                        data-f-validationerror="" id="__field_205_desc" role="alert" style="display:none"></span>
+                    </div>
+
+                    <div class="Form__Element FormTextbox FormTextbox--Textarea ValidationRequired"
+                      data-f-element-name="__field_209" data-f-modifier="textarea" data-f-type="textbox"> <label
+                        for="5eaa527f-9857-4277-ba14-b6c7c0dc3163" class="Form__Element__Caption">Comments</label>
+                      <textarea name="__field_209" id="5eaa527f-9857-4277-ba14-b6c7c0dc3163" class="FormTextbox__Input"
+                        placeholder="" data-f-label="Comments" data-f-datainput="" required="" aria-required="true"
+                        aria-describedby="__field_209_desc" aria-invalid="false" autocomplete="off"></textarea>
+                      <span class="Form__Element__ValidationError" data-f-linked-name="__field_209"
+                        data-f-validationerror="" id="__field_209_desc" role="alert" style="display:none"></span>
+                    </div>
+
+
+                    <div class="Form__Element FormTextbox" data-f-element-name="__field_210" data-f-type="textbox">
+                      <label for="4f5ef270-7176-4f17-88e5-5c3385dab676" class="Form__Element__Caption">Email</label>
+                      <input name="__field_210" id="4f5ef270-7176-4f17-88e5-5c3385dab676" type="text"
+                        class="FormTextbox__Input" aria-describedby="__field_210_desc" placeholder=""
+                        data-f-datainput="" aria-invalid="false" autocomplete="off">
+                      <span class="Form__Element__ValidationError" data-f-linked-name="__field_210"
+                        data-f-validationerror="" id="__field_210_desc" role="alert" style="display:none"></span>
+                    </div>
+
+
+                    <div class="Form__Element FormTextbox" data-f-element-name="__field_211" data-f-type="textbox">
+                      <label for="1f2c373a-e8d3-4458-98c5-9cb1d91fc65e" class="Form__Element__Caption">Web address (URL)
+                        Note: This field is not required, but will help us identify where the issue is on our
+                        site.</label>
+                      <input name="__field_211" id="1f2c373a-e8d3-4458-98c5-9cb1d91fc65e" type="text"
+                        class="FormTextbox__Input" aria-describedby="__field_211_desc" placeholder=""
+                        data-f-datainput="" aria-invalid="false" autocomplete="off">
+                      <span class="Form__Element__ValidationError" data-f-linked-name="__field_211"
+                        data-f-validationerror="" id="__field_211_desc" role="alert" style="display:none"></span>
+                    </div>
+
+
+                    <div class="Form__Element FormCaptcha ValidationRequired" data-f-element-name="__field_207"
+                      data-f-type="captcha"> <label class="Form__Element__Caption"
+                        for="cffef24e-51c0-4b04-9b57-f344a77c9f48 ">
+                        Are you human?
+                      </label>
+                      <button name="submit" type="submit"
+                        data-f-captcha-image-handler="cffef24e-51c0-4b04-9b57-f344a77c9f48" value="RefreshCaptcha"
+                        class="FormExcludeDataRebind FormCaptcha__Refresh" data-f-captcha-refresh="">
+                        Refresh captcha
+                      </button>
+                      <img
+                        src="/EPiServer.Forms/DataSubmit/GetCaptchaImage?elementGuid=cffef24e-51c0-4b04-9b57-f344a77c9f48"
+                        alt="An error has occurred while getting captcha image" class="FormCaptcha__Image"
+                        title="Enter the character you see in captcha image." data-f-captcha-image="">
+                      <input id="cffef24e-51c0-4b04-9b57-f344a77c9f48" name="__field_207" type="text"
+                        class="FormTextbox__Input FormCaptcha__Input FormHideInSummarized"
+                        title="Enter the character you see in captcha image." data-f-datainput=""
+                        aria-describedby="__field_207_desc" aria-invalid="false">
+                      <span class="Form__Element__ValidationError" data-f-linked-name="__field_207"
+                        data-f-validationerror="" id="__field_207_desc" role="alert" style="display:none"></span>
+                    </div>
+
+
+                    <button id="2c0f133e-5f72-4c4c-b5bf-1ec735bfcee2" name="submit" type="submit"
+                      value="2c0f133e-5f72-4c4c-b5bf-1ec735bfcee2" data-f-is-finalized="false"
+                      data-f-is-progressive-submit="true" data-f-type="submitbutton" data-f-element-name="__field_206"
+                      class="Form__Element FormExcludeDataRebind FormSubmitButton ">
+                      Submit</button>
+                  </section>
+
+                </div>
+              </form>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="mt-5">
               <form>
                 <div class="mb-3 form-error">
@@ -1960,7 +2149,7 @@
         </div>
       </div>
     </section>
-    <section class="container mx-auto col-11 col-md-8">
+    <!-- <section class="container mx-auto col-11 col-md-8">
       <h3 class="text-center my-5">Step by Step Navigation</h3>
       <div class="my-5 step-accordion">
         <a class="show-hide-text" href="javascript:void(0)">
@@ -2055,7 +2244,143 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+    <div class="block  stepnavigationblock  ">
+
+      <section class="container-xl mx-auto col-12 my-5">
+        <h3 class="text-center mb-5">Applying spectrum pricing to the Maritime and Aeronautical sectors</h3>
+        <div class="my-5 step-accordion">
+          <a href="javascript:void(0);" class="show-hide-text" id="abc">
+            <i class="fas toggle-icon fa-angle-up"></i>
+            <span class="toggle-text">Hide All Steps</span>
+          </a>
+          <div class="accordion position-relative" style="padding-left: 50px;" id="accordion101">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading101">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse101"
+                  aria-expanded="true" aria-controls="collapse101">
+                  Heading 1
+                </button>
+                <span class="step-nav-circle step-nav-circle--number">
+                  <span class="step-nav-circle-inner">
+                    <span class="step-nav-circle-background">
+                      1
+                    </span>
+                  </span>
+                </span>
+              </h2>
+              <div id="collapse101" class="accordion-collapse collapse show" aria-labelledby="heading101"
+                data-bs-parent="#accordion101">
+                <div class="accordion-body">
+
+                  <div class="acc-description">
+                    <p><span>Ofcom’s initial consultation on proposals to revise its fees for using maritime and
+                        aeronautical radio spectrum closed on 30 October 2008. The purpose of this note is to give
+                        stakeholders further information about the next steps that Ofcom is planning to take.</span></p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion position-relative" style="padding-left: 50px;" id="accordion102">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading102">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse102"
+                  aria-expanded="true" aria-controls="collapse102">
+                  Heading 2
+                </button>
+                <span class="step-nav-circle step-nav-circle--number">
+                  <span class="step-nav-circle-inner">
+                    <span class="step-nav-circle-background">
+                      2
+                    </span>
+                  </span>
+                </span>
+              </h2>
+              <div id="collapse102" class="accordion-collapse collapse show" aria-labelledby="heading102"
+                data-bs-parent="#accordion102">
+                <div class="accordion-body">
+
+                  <div class="acc-description">
+                    <p><span>At present, Ofcom is continuing to consider carefully the responses received from
+                        stakeholders. We are also considering a number of issues in more detail, working closely with
+                        consultants with expertise in the maritime and aeronautical sectors, and we will be discussing
+                        these issues with the Civil Aviation Authority and the Maritime and Coastguard Agency.</span>
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion position-relative" style="padding-left: 50px;" id="accordion103">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading103">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse103"
+                  aria-expanded="true" aria-controls="collapse103">
+                  Heading 3
+                </button>
+                <span class="step-nav-circle step-nav-circle--number">
+                  <span class="step-nav-circle-inner">
+                    <span class="step-nav-circle-background">
+                      3
+                    </span>
+                  </span>
+                </span>
+              </h2>
+              <div id="collapse103" class="accordion-collapse collapse show" aria-labelledby="heading103"
+                data-bs-parent="#accordion103">
+                <div class="accordion-body">
+
+                  <div class="acc-description">
+                    <p><span>We have no plans to change the fees for VHF communications channels before April 2010 at
+                        the earliest, and we will give stakeholders as much notice as possible of any specific changes.
+                        We will provide further information on the next steps we plan in this area in spring
+                        2009.</span></p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion position-relative" style="padding-left: 50px;" id="accordion104">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading104">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse104"
+                  aria-expanded="true" aria-controls="collapse104">
+                  Heading 4
+                </button>
+                <span class="step-nav-circle step-nav-circle--number">
+                  <span class="step-nav-circle-inner">
+                    <span class="step-nav-circle-background">
+                      4
+                    </span>
+                  </span>
+                </span>
+              </h2>
+              <div id="collapse104" class="accordion-collapse collapse show" aria-labelledby="heading104"
+                data-bs-parent="#accordion104">
+                <div class="accordion-body">
+
+                  <div class="acc-description">
+                    <p><span>We do not expect fees for radar and aeronautical navigation aids to be subject to any
+                        change related to this policy until some time after 2010. There will be a further full
+                        consultation before any changes are made to these fees, including an impact assessment.</span>
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <input type="hidden" id="showAllText" value="Show All Steps">
+      <input type="hidden" id="hideAllText" value="Hide All Steps">
+
+    </div>
     <section>
       <h3 class="text-center my-5">Video Block</h3>
       <div class="container-xl">
@@ -2063,7 +2388,7 @@
           <div class="col-10 mx-auto">
             <div class="video-block">
               <div class="ratio ratio-16x9 ">
-                <iframe src="assets/video/video2.mp4" frameborder="0"
+                <iframe class="iframe-video" src="assets/video/video2.mp4" frameborder="0"
                   allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen="">
                 </iframe>
