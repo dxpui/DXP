@@ -927,15 +927,19 @@
 
 
 
-
             <div class="block  formcontainerblock  ">
+
+
+
 
 
 
 
               <form method="post" novalidate="novalidate" data-f-metadata=""
                 aria-labelledby="32120e44-a598-4783-b8a5-00bc6fe52057_label" enctype="multipart/form-data"
-                class="EPiServerForms ValidationSuccess" data-f-type="form" id="32120e44-a598-4783-b8a5-00bc6fe52057">
+                class="EPiServerForms ValidationFail" data-f-type="form" id="32120e44-a598-4783-b8a5-00bc6fe52057">
+
+
 
                 <script type="text/javascript">
                   // This view acts as a rendering template to render InitScript(and server-side Form's descriptor) in FormContainerBlock's client-side for Form[32120e44-a598-4783-b8a5-00bc6fe52057].
@@ -983,7 +987,7 @@
                 <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
                   name="__FormSubmissionId" value="" data-f-type="hidden" autocomplete="off">
                 <input name="__RequestVerificationToken" type="hidden"
-                  value="CfDJ8FsyejV9zMlIhojUxellYDzUbx0k1eMKaj74bDpFx-KDs0oyXM9d51X3h0NdnG-i7qwHHt9DCzL4Db6_Xey26cBlqtaLu7-9VhFlHGdtQLZy4sC67-xkktyAJcUgiKuuvAIzzrbhMr4oKb1pJnA5DHQ">
+                  value="CfDJ8FsyejV9zMlIhojUxellYDxSTc0Trd1w7IuoOwqNdjIvmaQo0PhUJAZxtuwlDNSsrkuiUGMm4yL3jO-qC83aXa-SSlsG3P3S46acvv7oCG9Svtj9BhwatwTiwKgH0YR_wK63znd_t9F5UOFjreGN2dKZ1D2UbhDwwpYQafxETWDkvuE_7czMM4iT-HT5jtTnEA">
                 <h2 class="Form__Title" id="32120e44-a598-4783-b8a5-00bc6fe52057_label">Contact Digital Team Form</h2>
                 <aside class="Form__Description">Testing Description</aside>
                 <div class="Form__Status">
@@ -996,6 +1000,9 @@
                     class="Form__Element FormStep Form__Element--NonData " data-f-stepindex="0"
                     data-f-element-nondata="">
                     <!-- Each FormStep groups the elements below it til the next FormStep -->
+
+
+
 
 
 
@@ -1023,36 +1030,50 @@
                     </div>
 
 
-                    <div class="Form__Element FormTextbox ValidationRequired" data-f-element-name="__field_205"
-                      data-f-type="textbox"> <label for="19e68d6f-ae8c-47ca-893b-ab8f6b7dcfb2"
-                        class="Form__Element__Caption">Name</label>
+
+
+
+                    <div class="Form__Element FormTextbox ValidationRequired ValidationFail"
+                      data-f-element-name="__field_205" data-f-type="textbox"> <label
+                        for="19e68d6f-ae8c-47ca-893b-ab8f6b7dcfb2" class="Form__Element__Caption">Name</label>
                       <input name="__field_205" id="19e68d6f-ae8c-47ca-893b-ab8f6b7dcfb2" type="text"
                         class="FormTextbox__Input" aria-describedby="__field_205_desc" placeholder="add name"
-                        title="Enter Name" required="" aria-required="true" data-f-datainput="" aria-invalid="false"
+                        title="Enter Name" required="" aria-required="true" data-f-datainput="" aria-invalid="true"
                         autocomplete="off">
                       <span class="Form__Element__ValidationError" data-f-linked-name="__field_205"
-                        data-f-validationerror="" id="__field_205_desc" role="alert" style="display:none"></span>
+                        data-f-validationerror="" id="__field_205_desc" role="alert" style="">This field is
+                        required.</span>
                     </div>
 
-                    <div class="Form__Element FormTextbox FormTextbox--Textarea ValidationRequired"
+
+
+                    <div class="Form__Element FormTextbox FormTextbox--Textarea ValidationRequired ValidationFail"
                       data-f-element-name="__field_209" data-f-modifier="textarea" data-f-type="textbox"> <label
                         for="5eaa527f-9857-4277-ba14-b6c7c0dc3163" class="Form__Element__Caption">Comments</label>
                       <textarea name="__field_209" id="5eaa527f-9857-4277-ba14-b6c7c0dc3163" class="FormTextbox__Input"
                         placeholder="" data-f-label="Comments" data-f-datainput="" required="" aria-required="true"
-                        aria-describedby="__field_209_desc" aria-invalid="false" autocomplete="off"></textarea>
+                        aria-describedby="__field_209_desc" aria-invalid="true" autocomplete="off"></textarea>
                       <span class="Form__Element__ValidationError" data-f-linked-name="__field_209"
-                        data-f-validationerror="" id="__field_209_desc" role="alert" style="display:none"></span>
+                        data-f-validationerror="" id="__field_209_desc" role="alert" style="">Comments is
+                        required.</span>
                     </div>
 
 
-                    <div class="Form__Element FormTextbox" data-f-element-name="__field_210" data-f-type="textbox">
-                      <label for="4f5ef270-7176-4f17-88e5-5c3385dab676" class="Form__Element__Caption">Email</label>
+
+
+
+                    <div class="Form__Element FormTextbox ValidationSuccess" data-f-element-name="__field_210"
+                      data-f-type="textbox"> <label for="4f5ef270-7176-4f17-88e5-5c3385dab676"
+                        class="Form__Element__Caption">Email</label>
                       <input name="__field_210" id="4f5ef270-7176-4f17-88e5-5c3385dab676" type="text"
                         class="FormTextbox__Input" aria-describedby="__field_210_desc" placeholder=""
                         data-f-datainput="" aria-invalid="false" autocomplete="off">
                       <span class="Form__Element__ValidationError" data-f-linked-name="__field_210"
                         data-f-validationerror="" id="__field_210_desc" role="alert" style="display:none"></span>
                     </div>
+
+
+
 
 
                     <div class="Form__Element FormTextbox" data-f-element-name="__field_211" data-f-type="textbox">
@@ -1067,8 +1088,11 @@
                     </div>
 
 
-                    <div class="Form__Element FormCaptcha ValidationRequired" data-f-element-name="__field_207"
-                      data-f-type="captcha"> <label class="Form__Element__Caption"
+
+
+
+                    <div class="Form__Element FormCaptcha ValidationRequired ValidationFail"
+                      data-f-element-name="__field_207" data-f-type="captcha"> <label class="Form__Element__Caption"
                         for="cffef24e-51c0-4b04-9b57-f344a77c9f48 ">
                         Are you human?
                       </label>
@@ -1078,16 +1102,20 @@
                         Refresh captcha
                       </button>
                       <img
-                        src="/EPiServer.Forms/DataSubmit/GetCaptchaImage?elementGuid=cffef24e-51c0-4b04-9b57-f344a77c9f48"
+                        src="/EPiServer.Forms/DataSubmit/GetCaptchaImage?elementGuid=cffef24e-51c0-4b04-9b57-f344a77c9f48&amp;d=0.1951483361480284&amp;d=0.31547795874721496&amp;d=0.02030329593387359&amp;d=0.172322280956543"
                         alt="An error has occurred while getting captcha image" class="FormCaptcha__Image"
                         title="Enter the character you see in captcha image." data-f-captcha-image="">
                       <input id="cffef24e-51c0-4b04-9b57-f344a77c9f48" name="__field_207" type="text"
                         class="FormTextbox__Input FormCaptcha__Input FormHideInSummarized"
                         title="Enter the character you see in captcha image." data-f-datainput=""
-                        aria-describedby="__field_207_desc" aria-invalid="false">
+                        aria-describedby="__field_207_desc" aria-invalid="true">
                       <span class="Form__Element__ValidationError" data-f-linked-name="__field_207"
-                        data-f-validationerror="" id="__field_207_desc" role="alert" style="display:none"></span>
+                        data-f-validationerror="" id="__field_207_desc" role="alert" style="">Enter the characters you
+                        see in the picture.</span>
                     </div>
+
+
+
 
 
                     <button id="2c0f133e-5f72-4c4c-b5bf-1ec735bfcee2" name="submit" type="submit"
@@ -1097,11 +1125,11 @@
                       Submit</button>
                   </section>
 
+
+
                 </div>
               </form>
             </div>
-
-
 
 
 
@@ -2250,7 +2278,7 @@
       <section class="container-xl mx-auto col-12 my-5">
         <h3 class="text-center mb-5">Applying spectrum pricing to the Maritime and Aeronautical sectors</h3>
         <div class="my-5 step-accordion">
-          <a href="javascript:void(0);" class="show-hide-text" id="abc">
+          <a href="javascript:void(0);" class="show-hide-text" >
             <i class="fas toggle-icon fa-angle-up"></i>
             <span class="toggle-text">Hide All Steps</span>
           </a>
@@ -2383,6 +2411,21 @@
     </div>
     <section>
       <h3 class="text-center my-5">Video Block</h3>
+
+      <div class="container-xl">
+        <div class="row g-0 my-5">
+          <div class="col-12 mx-auto tab-content">
+            <h4>What does Ofcom do</h4>
+              <div class="video-block">
+                  <div class="ratio ratio-16x9 ">
+                    <iframe src="assets/video/video.mp4" frameborder="0" allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+                    </iframe>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
       <div class="container-xl">
         <div class="row">
           <div class="col-10 mx-auto">
