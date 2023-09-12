@@ -64,7 +64,7 @@ a:hover {
     color: var(--color-default);
 }
 
-a:has(i, .info-card, .recommendation-link, .info-link, .card-body, .pdfdownload) {
+a:has(i, .info-card, .recommendation-link, .info-link, .card-body, .pdfdownload, .topics-carousel-text) {
     text-decoration: none;
 }
 
@@ -3325,14 +3325,16 @@ a:focus .info-card.news-center:before {
 }
 
 .topics-txt {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding-top: 40px;
+    text-decoration: none;
 }
 
 .topics-date {
     font-weight: 400;
     line-height: var(--line-height-default);
     color: var(--color-default);
+    text-decoration: none;
 }
 
 @media(max-width: 991px) {
@@ -3352,7 +3354,7 @@ a:focus .info-card.news-center:before {
 .topic-hr-line {
     border-bottom: 1px solid var(--color-default);
     width: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .blue-bg .topic-hr-line,
@@ -3372,9 +3374,10 @@ a:focus .info-card.news-center:before {
 }
 
 .news-carousel .hero-image-carousel img {
-    height: 380px;
+    height: 100%;
     object-fit: cover;
     object-position: top;
+    aspect-ratio: 16/9;
 }
 
 .news-carousel .carousel-control-prev-icon,
@@ -3414,14 +3417,14 @@ a:focus .info-card.news-center:before {
 }
 
 .news-carousel .carousel-control-prev {
-    top: 80%;
+    top: 40%;
     height: 50px;
 }
 
 .news-carousel .carousel-control-next {
-    top: 80%;
+    top: 40%;
     height: 50px;
-    left: 90px;
+    /* left: 90px; */
 }
 
 @media(max-width: 991px) {
@@ -3459,6 +3462,37 @@ a:focus .info-card.news-center:before {
     color: var(--color-white) !important;
 }
 
+.news-carousel-link {
+    margin-inline: 80px;
+    padding: 15px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.news-carousel-link:hover {
+    background-color: var(--color-white);
+}
+
+.news-carousel-link:hover .topics-txt {
+    text-decoration: underline;
+}
+
+.red-bg .news-carousel-link:hover :is(.topics-txt, .topics-date),
+.blue-bg .news-carousel-link:hover :is(.topics-txt, .topics-date),
+.lightblue-bg .news-carousel-link:hover :is(.topics-txt, .topics-date),
+.maroon-bg .news-carousel-link:hover :is(.topics-txt, .topics-date),
+.megenta-bg .news-carousel-link:hover :is(.topics-txt, .topics-date) {
+    color: var(--color-default);
+}
+
+.red-bg .news-carousel-link:hover .topic-hr-line,
+.blue-bg .news-carousel-link:hover .topic-hr-line,
+.lightblue-bg .news-carousel-link:hover .topic-hr-line,
+.maroon-bg .news-carousel-link:hover .topic-hr-line,
+.megenta-bg .news-carousel-link:hover .topic-hr-line{
+    color: var(--color-default);
+    border-bottom: 1px solid var(--color-default);
+}
 
 /*--------------------------------------------------------------
 # PDF Download
