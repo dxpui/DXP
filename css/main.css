@@ -3387,19 +3387,10 @@ a:focus .info-card.news-center:before {
     height: 50px;
     border: 1px solid var(--color-default);
     border-radius: 50%;
-    opacity: 1;
 }
 
-.blue-bg .news-carousel .carousel-control-prev-icon,
-.lightblue-bg .news-carousel .carousel-control-prev-icon,
-.red-bg .news-carousel .carousel-control-prev-icon,
-.megenta-bg .news-carousel .carousel-control-prev-icon,
-.maroon-bg .news-carousel .carousel-control-prev-icon,
-.blue-bg .news-carousel .carousel-control-next-icon,
-.lightblue-bg .news-carousel .carousel-control-next-icon,
-.red-bg .news-carousel .carousel-control-next-icon,
-.megenta-bg .news-carousel .carousel-control-next-icon,
-.maroon-bg .news-carousel .carousel-control-next-icon {
+:is(.blue-bg, .lightblue-bg, .red-bg, .megenta-bg, .maroon-bg) .news-carousel .carousel-control-prev-icon,
+:is(.blue-bg, .lightblue-bg, .red-bg, .megenta-bg, .maroon-bg) .news-carousel .carousel-control-next-icon {
     border: 1px solid var(--color-white);
 }
 
@@ -3414,6 +3405,7 @@ a:focus .info-card.news-center:before {
 .news-carousel .carousel-control-next,
 .news-carousel .carousel-control-prev {
     width: 50px;
+    opacity: 1;
 }
 
 .news-carousel .carousel-control-prev {
@@ -3449,16 +3441,8 @@ a:focus .info-card.news-center:before {
     color: var(--color-white);
 }
 
-.blue-bg .news-carousel .carousel-control-prev-icon i,
-.lightblue-bg .news-carousel .carousel-control-prev-icon i,
-.red-bg .news-carousel .carousel-control-prev-icon i,
-.megenta-bg .news-carousel .carousel-control-prev-icon i,
-.maroon-bg .news-carousel .carousel-control-prev-icon i,
-.blue-bg .news-carousel .carousel-control-next-icon i,
-.lightblue-bg .news-carousel .carousel-control-next-icon i,
-.red-bg .news-carousel .carousel-control-next-icon i,
-.megenta-bg .news-carousel .carousel-control-next-icon i,
-.maroon-bg .news-carousel .carousel-control-next-icon i {
+:is(.blue-bg, .lightblue-bg, .red-bg, .megenta-bg, .maroon-bg) .news-carousel .carousel-control-prev-icon i,
+:is(.blue-bg, .lightblue-bg, .red-bg, .megenta-bg, .maroon-bg) .news-carousel .carousel-control-next-icon i {
     color: var(--color-white) !important;
 }
 
@@ -3478,6 +3462,14 @@ a:focus .info-card.news-center:before {
     text-decoration: underline;
 }
 
+.red-bg .news-carousel-link:hover,
+.blue-bg .news-carousel-link:hover,
+.lightblue-bg .news-carousel-link:hover,
+.maroon-bg .news-carousel-link:hover,
+.megenta-bg .news-carousel-link:hover {
+    background-color: var(--color-secondary);
+}
+
 .red-bg .news-carousel-link:hover :is(.topics-txt, .topics-date),
 .blue-bg .news-carousel-link:hover :is(.topics-txt, .topics-date),
 .lightblue-bg .news-carousel-link:hover :is(.topics-txt, .topics-date),
@@ -3490,7 +3482,7 @@ a:focus .info-card.news-center:before {
 .blue-bg .news-carousel-link:hover .topic-hr-line,
 .lightblue-bg .news-carousel-link:hover .topic-hr-line,
 .maroon-bg .news-carousel-link:hover .topic-hr-line,
-.megenta-bg .news-carousel-link:hover .topic-hr-line{
+.megenta-bg .news-carousel-link:hover .topic-hr-line {
     color: var(--color-default);
     border-bottom: 1px solid var(--color-default);
 }
