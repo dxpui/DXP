@@ -1612,7 +1612,7 @@ header .search-box {
 
 .hero-banner-full {
     color: var(--color-default);
-    padding: 40px 40px 100px 80px;
+    padding: 40px 40px 120px 80px;
 }
 
 @media(max-width: 768px) {
@@ -1647,7 +1647,7 @@ header .search-box {
 }
 
 .recommendation-block-outer {
-    margin-top: -80px;
+    margin-top: -60px;
     margin-left: 40px;
     margin-right: 40px;
 }
@@ -2229,6 +2229,7 @@ a:focus .info-card.news-center:before {
 
 .banner-news-btn {
     margin-left: auto;
+    margin-bottom: 40px !important;
 }
 
 @media(max-width: 768px) {
@@ -2255,7 +2256,7 @@ a:focus .info-card.news-center:before {
     flex-wrap: wrap;
 }
 
-@media(max-width: 992px) {
+@media(max-width: 1024px) {
     .news-social-block {
         display: block;
         text-align: center;
@@ -2303,6 +2304,7 @@ a:focus .info-card.news-center:before {
 .news-social-icons a {
     color: var(--color-default);
     padding: 15px 10px 10px 10px;
+    margin-left: 10px;
 }
 
 .news-social-icons a:hover {
