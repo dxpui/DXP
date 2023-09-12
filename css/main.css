@@ -3467,6 +3467,7 @@ a:focus .info-card.news-center:before {
     padding: 15px;
     display: block;
     margin-bottom: 20px;
+    margin-top: 2px;
 }
 
 .news-carousel-link:hover {
