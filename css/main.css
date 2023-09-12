@@ -2170,7 +2170,8 @@ a:focus .info-card .info-card-header {
 /*************News Center******************/
 .info-card.news-center {
     border-top: none;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: -15px;
 }
 
 .info-card.news-center .card-img-small {
