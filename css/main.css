@@ -1612,7 +1612,7 @@ header .search-box {
 
 .hero-banner-full {
     color: var(--color-default);
-    padding: 40px 40px 120px 80px;
+    padding: 40px 40px 100px 80px;
 }
 
 @media(max-width: 768px) {
@@ -1654,7 +1654,7 @@ header .search-box {
 
 .recommendation-block {
     background-color: var(--color-default);
-    padding: 40px 40px;
+    padding: 20px 40px;
     color: var(--color-white);
 
 }
