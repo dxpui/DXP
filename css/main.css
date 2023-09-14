@@ -84,7 +84,6 @@ h3,
 h4,
 h5,
 h6 {
-    padding-top: 0.5rem;
     margin-bottom: 0;
 }
 
@@ -798,7 +797,7 @@ header .search-form.active {
     width: 100%;
     display: flex;
     align-items: center;
-    /* margin-top: 25px; */
+    margin-top: 25px;
 }
 
 @media(min-width: 1024px) {
@@ -827,7 +826,7 @@ header .search-box {
     width: 90%;
     display: flex;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
 @media(min-width: 992px) {
@@ -880,7 +879,7 @@ header .search-box {
 }
 
 .gl-search:hover {
-    color: var(--color-secondary);
+    color: var(--color-secondary) !important;
     text-decoration: none !important;
 }
 
@@ -1611,7 +1610,6 @@ header .search-box {
 }
 
 .hero-banner-full {
-    color: var(--color-default);
     padding: 40px 40px 100px 80px;
 }
 
@@ -1623,6 +1621,17 @@ header .search-box {
 
 :is(.lightblue-bg, .blue-bg, .megenta-bg, .maroon-bg, .red-bg) :is(h1, h2, h3, h4, h5, h6, p) {
     color: var(--color-white);
+}
+
+:is(.lightblue-bg, .blue-bg, .megenta-bg, .maroon-bg, .red-bg) :is(.btn-primary) {
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+
+:is(.lightblue-bg, .blue-bg, .megenta-bg, .maroon-bg, .red-bg) :is(.btn-primary):hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-default);
+    color: var(--color-default);
 }
 
 :is(.gray-bg, .pink-bg, .green-bg, .yellow-bg, .orange-bg) :is(h1, h2, h3, h4, h5, h6, p) {
@@ -1654,11 +1663,13 @@ header .search-box {
 
 .recommendation-block {
     background-color: var(--color-default);
-    padding: 20px 40px;
+    padding: 30px 40px;
     color: var(--color-white);
 
 }
-
+.recommendation-block .search-box {
+    margin-top: 0;
+}
 .recommendation-block .recommendation-header {
     font-size: 19px;
     font-weight: 700;
@@ -4956,6 +4967,7 @@ padding-right: 80px; */
     transform: translateY(-100%);
     transition: transform .3s;
     z-index: 9999;
+    text-decoration: none;
 }
 
 .skip-to-content-link:hover {
@@ -5372,9 +5384,9 @@ padding-right: 80px; */
 }
 
 .postcode-number {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 135%;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -5641,4 +5653,94 @@ padding-right: 80px; */
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#feedbackform {
+    background-color: var(--color-light-gray);
+    color: var(--color-default);
+    margin-top: 3rem!important;
+    margin-bottom: 3rem!important;
+}
+
+#feedbackform fieldset {
+    display: flex;
+}
+
+@media(max-width: 1024px) {
+    #feedbackform fieldset {
+        display: block;
+    }
+
+    #feedbackform fieldset .Form__Element__Caption {
+        margin-bottom: 20px;
+    }
+}
+
+#feedbackform fieldset .Form__Element__Caption {
+    width: 60%;
+}
+
+#feedbackform fieldset div {
+    float: left;
+    margin-inline: 10px;
+    width: 70px;
+    height: 40px;
+    position: relative;
+}
+
+#feedbackform fieldset div label,
+#feedbackform fieldset div input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    padding: 7px 20px;
+    color: var(--color-default);
+    border: 1px solid var(--color-default);
+    border-radius: 30px;
+}
+
+#feedbackform fieldset div label:hover,
+#feedbackform fieldset div label:focus-visible {
+    background-color: var(--color-default) !important;
+    color: var(--color-white);
+}
+
+/* #feedbackform fieldset div label:focus-visible {
+    outline: 3px solid var(--color-outline-focus);
+    outline-offset: 0;
+} */
+#feedbackform fieldset div input[type="radio"] {
+    opacity: 0.011;
+}
+
+#feedbackform fieldset div input[type="radio"]:checked+label {
+    background-color: var(--color-default);
+    padding: 7px 20px;
+    color: var(--color-white);
+    border: 1px solid var(--color-default);
+    border-radius: 30px;
+}
+
+#feedbackform fieldset div label {
+    cursor: pointer;
+    z-index: 90;
+    line-height: 1.8em;
+    text-align: center;
+    line-height: 25px;
+}
+
+#feedbackform .Form__Title {
+    padding: 20px 0 0 20px;
+}
+
+#feedbackform .Form__Status {
+    display: none;
+}
+
+.ccc-panel #skip {
+    font-size: 1.2em !important;
 }
