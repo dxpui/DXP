@@ -521,7 +521,7 @@
         <h4 class="text-center mt-4">Quick Links:</h4>
 
         <hr>
-                <div class="search-quick-link mx-auto mt-4">
+        <div class="search-quick-link mx-auto mt-4">
           <div class="row">
             <div class="col-6 col-md-3">
               <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
@@ -706,8 +706,8 @@
             <img src="assets/img/susan.jpg" class="img-fit my-4" alt="..." />
           </div>
 
-            <!-- <img src="assets/img/destination.png" class="w-100 my-4" alt="..." /> -->
-          
+          <!-- <img src="assets/img/destination.png" class="w-100 my-4" alt="..." /> -->
+
         </div>
       </div>
     </section>
@@ -939,7 +939,8 @@
               </div>
               <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
                 <div class="card-body">
-                  <div class="acc-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  <div class="acc-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -950,14 +951,14 @@
             </div>
             <div class="accordion-item destination-accordian">
               <div class="accordion-header" id="headingTwo">
-                <button type="button" class="accordion-button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo">
-                 <h1>Accordion example open</h1> 
+                <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                  <h1>Accordion example open</h1>
                 </button>
               </div>
               <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
                 <div class="card-body">
-                  <div class="acc-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  <div class="acc-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -970,12 +971,13 @@
               <div class="accordion-header" id="headingThree">
                 <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
                   data-bs-target="#collapseThree">
-                  <h2>Accordion example open</h2> 
+                  <h2>Accordion example open</h2>
                 </button>
               </div>
               <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
                 <div class="card-body">
-                  <div class="acc-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  <div class="acc-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -1006,6 +1008,133 @@
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="feedbackform">
+      <div class="row g-0 mt-5">
+        <div class="col-10 col-sm-8 mx-auto">
+          <div class="feedback-block1">
+            <form method="post" novalidate="novalidate" data-f-metadata=""
+              aria-labelledby="1093fb0e-d00b-4aa4-b0e8-aeaa46de6c38_label" enctype="multipart/form-data"
+              class="EPiServerForms ValidationSuccess" data-f-type="form" id="1093fb0e-d00b-4aa4-b0e8-aeaa46de6c38">
+
+
+
+              <script type="text/javascript">
+                // This view acts as a rendering template to render InitScript(and server-side Form's descriptor) in FormContainerBlock's client-side for Form[1093fb0e-d00b-4aa4-b0e8-aeaa46de6c38].
+                // TECHNOTE: all serverside (paths, dynamic values) of EPiServerForms will be transfered to client side here in this section.
+                (function initializeOnRenderingFormDescriptor() {
+                  // each workingFormInfo is store inside epi.EPiServer.Forms, lookup by its FormGuid
+                  var workingFormInfo = epi.EPiServer.Forms["1093fb0e-d00b-4aa4-b0e8-aeaa46de6c38"] = {
+                    Id: "1093fb0e-d00b-4aa4-b0e8-aeaa46de6c38",
+                    Name: "Page Feedback Form",
+                    // whether this Form can be submitted which relates to the visitor's data (cookie, identity) and Form's settings (AllowAnonymous, AllowXXX)
+                    SubmittableStatus: { "submittable": true, "message": "" },
+                    ConfirmMessage: "",
+                    ResetConfirmMessage: "",
+                    ShowNavigationBar: true,
+                    ShowSummarizedData: false,
+                    // serialize the dependency configuration of this form to clientside
+                    DependenciesInfo: JSON.parse("[{\"fieldName\":\"__field_227\",\"action\":{\"displayName\":\"Shown\",\"name\":\"EPiServer.Forms.Core.Internal.Dependency.ShowAction\",\"order\":1,\"clientsideAction\":\"show\"},\"conditionCombination\":\"All\",\"conditions\":[{\"fieldName\":\"__field_226\",\"operator\":\"Equals\",\"fieldValue\":\"0\"}]}]"),
+                    // keep all fieldName which are not satisfied the field dependency conditions
+                    DependencyInactiveElements: [],
+                    // Validation info, for executing validating on client side
+                    ValidationInfo: JSON.parse("[{\"targetElementName\":\"__field_226\",\"targetElementId\":\"78a74f52-5f2c-4dd6-832e-aee5813e7d72\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]}]"),
+                    // Steps information for driving multiple-step Forms.
+                    StepsInfo: {
+                      Steps: [{ "index": 0, "attachedUrl": "", "dependField": null, "dependCondition": null, "isActive": true, "attachedContentLink": "", "dependValue": "", "elementName": "__field_", "guid": "00000000-0000-0000-0000-000000000000" }]
+                    },
+                    FieldsExcludedInSubmissionSummary: [],
+                    ElementsInfo: JSON.parse("{\"__field_226\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ChoiceElementBlock\",\"friendlyName\":\"Radio Buttons\",\"customBinding\":false},\"__field_227\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"Comment\",\"customBinding\":false},\"__field_228\":{\"type\":\"EPiServer.Forms.Implementation.Elements.SubmitButtonElementBlock\",\"friendlyName\":\"Submit Button\",\"customBinding\":false}}"),
+                    DataSubmitController: "/EPiServer.Forms/DataSubmit"
+                  };
+                  /// TECHNOTE: Calculation at FormInfo level, and these values will be static input for later processing.
+                  workingFormInfo.StepsInfo.FormHasNoStep_VirtualStepCreated = true; // this FLAG will be true, if Editor does not put any FormStep. Engine will create a virtual step, with empty GUID
+                  workingFormInfo.StepsInfo.FormHasNothing = false; // this FLAG will be true if FormContainer has no element at all
+                  workingFormInfo.StepsInfo.AllStepsAreNotLinked = true; // this FLAG will be true, if all steps all have contentLink= ="" (emptyString)
+                })();
+              </script>
+              <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                name="__FormGuid" value="1093fb0e-d00b-4aa4-b0e8-aeaa46de6c38" data-f-type="hidden" autocomplete="off">
+              <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                name="__FormHostedPage" value="7" data-f-type="hidden" autocomplete="off">
+              <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                name="__FormLanguage" value="en" data-f-type="hidden" autocomplete="off">
+              <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                name="__FormCurrentStepIndex" value="0" data-f-type="hidden" autocomplete="off">
+              <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                name="__FormSubmissionId" value="" data-f-type="hidden" autocomplete="off">
+              <input name="__RequestVerificationToken" type="hidden"
+                value="CfDJ8FsyejV9zMlIhojUxellYDyYKIUIy3iDBcDC-H-R2n7OiAX46-mfcKwgIJQYXodKxZefIkQmKhpC1u91pv-FBV7g_O1DfzF0uf2sz0n_TVc6zqzySst7Zp1gWRZ_EwJ0qEaLRyF2E7FNPvALGlH4BVePysbMvrVqlV0kbQk8MySmKxtnfrO2f2ro8OydqaY7wQ">
+              <h2 class="Form__Title" id="1093fb0e-d00b-4aa4-b0e8-aeaa46de6c38_label">Rate this page</h2>
+              <div class="Form__Status">
+                <div role="status" class="Form__Status__Message hide" data-f-form-statusmessage="">
+
+                </div>
+              </div>
+              <div data-f-mainbody="" class="Form__MainBody">
+                <section id="__field_" data-f-type="step" data-f-element-name="__field_"
+                  class="Form__Element FormStep Form__Element--NonData " data-f-stepindex="0" data-f-element-nondata="">
+                  <!-- Each FormStep groups the elements below it til the next FormStep -->
+
+
+
+
+
+                  <div aria-invalid="false" aria-required="true" class="Form__Element FormChoice ValidationRequired"
+                    data-f-element-name="__field_226" data-f-type="choice" id="78a74f52-5f2c-4dd6-832e-aee5813e7d72"
+                    required="">
+                    <fieldset aria-describedby="__field_226_desc">
+                      <legend class="Form__Element__Caption">Was this page helpful?</legend>
+                      <div>
+                        <input type="radio" id="78a74f52-5f2c-4dd6-832e-aee5813e7d72_0" name="__field_226" value="1"
+                          class="FormChoice__Input FormChoice__Input--Radio" data-f-datainput="">
+                        <label for="78a74f52-5f2c-4dd6-832e-aee5813e7d72_0" class="FormChoice__Label">
+                          Yes
+                        </label>
+                      </div>
+                      <div>
+                        <input type="radio" id="78a74f52-5f2c-4dd6-832e-aee5813e7d72_1" name="__field_226" value="0"
+                          class="FormChoice__Input FormChoice__Input--Radio" data-f-datainput="">
+                        <label for="78a74f52-5f2c-4dd6-832e-aee5813e7d72_1" class="FormChoice__Label">
+                          No
+                        </label>
+                      </div>
+                    </fieldset>
+                    <span class="Form__Element__ValidationError" data-f-linked-name="__field_226"
+                      data-f-validationerror="" id="__field_226_desc" role="alert" style="display:none"></span>
+                  </div>
+
+
+
+                  <div class="Form__Element FormTextbox FormTextbox--Textarea" data-f-element-name="__field_227"
+                    data-f-modifier="textarea" data-f-type="textbox" style="display: block;"> <label
+                      for="30205c73-bd65-4f46-abee-1ab11019d000" class="Form__Element__Caption">What can we do to
+                      improve pages like this? </label>
+                    <textarea name="__field_227" id="30205c73-bd65-4f46-abee-1ab11019d000" class="FormTextbox__Input"
+                      placeholder="" data-f-label="What can we do to improve pages like this? " data-f-datainput=""
+                      aria-describedby="__field_227_desc" aria-invalid="false" autocomplete="off"></textarea>
+                    <span class="Form__Element__ValidationError" data-f-linked-name="__field_227"
+                      data-f-validationerror="" id="__field_227_desc" role="alert" style="display:none"></span>
+                  </div>
+
+
+
+
+
+                  <button id="d9832d0b-9f7a-4a4c-967e-5a2265d24d13" name="submit" type="submit"
+                    value="d9832d0b-9f7a-4a4c-967e-5a2265d24d13" data-f-is-finalized="false"
+                    data-f-is-progressive-submit="true" data-f-type="submitbutton" data-f-element-name="__field_228"
+                    class="Form__Element FormExcludeDataRebind FormSubmitButton ">
+                    Submit</button>
+                </section>
+
+
+
+              </div>
+            </form>
           </div>
         </div>
       </div>
