@@ -410,6 +410,11 @@ video:focus-visible {
     border: 1px solid transparent;
 }
 
+.btn-secondary.hover-none:focus-visible {
+    outline: 3px solid var(--color-outline-focus);
+    outline-offset: 0;
+}
+
 .btn-secondary.hover-none:hover,
 .btn-secondary.hover-none:focus,
 .btn-secondary.hover-none:active,
@@ -861,7 +866,7 @@ header .search-box {
 
 .search-quick-link a i {
     font-size: 22px;
-    margin-right: 8px;
+    margin-left: 20px;
 }
 
 .search-quick-link a:hover i {
@@ -1962,6 +1967,7 @@ a:focus .info-card .info-card-header {
 
 .info-card .info-link span {
     text-decoration: underline;
+    width: 90%;
 }
 
 .info-card .info-link:hover .svg-arrow-info path {
@@ -2394,7 +2400,7 @@ a:focus .info-card.news-center:before {
 .bg-expend .info-card .search-result-border {
     border-top: 1px solid var(--color-default);
     position: absolute;
-    top: 15px;
+    top: 0px;
     width: 98%;
 }
 
@@ -4268,7 +4274,7 @@ a:focus .info-card.news-center:before {
     box-shadow: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .showfilters-align .filter-btn {
         width: 100%;
         position: unset;
@@ -4574,6 +4580,10 @@ table caption {
     width: 100%;
     border-radius: 0;
     border: 1px solid rgba(0, 0, 69, 0.4);
+}
+
+.notification-block.red {
+    border: 1px solid var(--color-red);
 }
 
 .notification-block .toast-header {
@@ -5003,45 +5013,61 @@ padding-right: 80px; */
 #  Pagination
 --------------------------------------------------------------*/
 .pagination-block {
-    display: block;
+    display: flex;
     text-align: center;
     list-style: none;
     padding-left: 0;
 }
 
-.pagination-block .page-item .round-btn {
-    border: 2px solid var(--color-default);
-    border-radius: 50%;
-    padding: 10px 10px;
-    display: block;
+.pagination-icon {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-size: cover;
 }
 
-.pagination-block .pagination-btn {
-    display: block;
+.pagination-block .next-arrow,
+.pagination-block .next-arrow-end {
+    rotate: 180deg;
+    outline: none;
 }
 
-.pagination-block .pagination-btn:hover svg {
-    fill: var(--color-default);
+.pagination-block .single-arrow-clear {
+    background-image: url(/assets/img/web-icons/single-arrow-clear.svg);
 }
 
-.pagination-block .pagination-btn svg:hover path {
-    stroke: var(--color-white);
+.pagination-block .double-arrow-clear {
+    background-image: url(/assets/img/web-icons/double-arrow-clear.svg);
 }
 
-.pagination-block .page-item .round-btn.disabled {
+.pagination-block .single-arrow-clear.disabled,
+.pagination-block .single-arrow-clear.disabled:hover,
+.pagination-block .single-arrow-clear.disabled:focus-visible {
+    background-image: url(/assets/img/web-icons/single-arrow-clear-dis.svg);
     pointer-events: none;
-    opacity: .65;
-    background-color: var(--color-light-gray);
 }
 
-.pagination-block .page-item .round-btn:hover,
-.pagination-block .page-item .round-btn:focus {
-    background-color: var(--color-default);
+.pagination-block .double-arrow-clear.disabled,
+.pagination-block .double-arrow-clear.disabled:hover,
+.pagination-block .double-arrow-clear.disabled:focus-visible {
+    background-image: url(/assets/img/web-icons/double-arrow-clear-dis.svg);
+    pointer-events: none;
 }
 
-.pagination-block .page-item a:hover i,
-.pagination-block .page-item a:focus i {
-    color: var(--color-white);
+.pagination-block .single-arrow-clear:hover,
+.pagination-block .single-arrow-clear:focus-visible {
+    background-image: url(/assets/img/web-icons/single-arrow-blue.svg);
+}
+
+.pagination-block .double-arrow-clear:hover,
+.pagination-block .double-arrow-clear:focus-visible {
+    background-image: url(/assets/img/web-icons/double-arrow-blue.svg);
+}
+
+@media (max-width: 557px) {
+    .double-arrow-clear {
+        display: none;
+    }
 }
 
 .pagination-block .page-item {
@@ -5049,6 +5075,7 @@ padding-right: 80px; */
     margin-right: 5px;
     margin-bottom: 10px;
     display: inline-block;
+    padding: 2px;
 }
 
 .pagination-block .page-item .page-link {
@@ -5452,12 +5479,12 @@ padding-right: 80px; */
 }
 
 .mt-standared-page {
-    margin-top: -20px;
+    margin-top: -20px !important;
 }
 
 @media (max-width: 1024px) {
     .mt-standared-page {
-        margin-top: 20px;
+        margin-top: 20px !important;
     }
 }
 
@@ -5476,6 +5503,7 @@ padding-right: 80px; */
 
 .Form__Element {
     margin-bottom: 1rem;
+    padding-inline: 2px;
 }
 
 .Form__Element__Caption {
@@ -5598,6 +5626,10 @@ padding-right: 80px; */
     background-color: var(--color-light-gray);
     padding: 1.5rem;
     padding-bottom: 0;
+
+}
+
+.Form__MainBody .Form__Element--NonData {
     overflow: hidden;
 }
 
@@ -5680,6 +5712,11 @@ padding-right: 80px; */
 .js-cm-form {
     padding: 60px 100px;
     background-color: var(--color-light-gray);
+}
+
+.news-center-subs .js-cm-form {
+    padding: 0;
+    background-color: transparent;
 }
 
 @media (max-width: 768px) {
@@ -5768,6 +5805,44 @@ padding-right: 80px; */
     float: right;
 }
 
+#red {
+    background: #D93361;
+}
+
+#purple {
+    background: #581067;
+}
+
+#yellow {
+    background: #F5A43A;
+    color: #000000;
+}
+
+.csq-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.csq-btn {
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+    float: left;
+    margin: auto;
+    color: #FFFFFF;
+    padding: 25px;
+    font-size: 16px;
+    margin: 10px;
+    display: inline;
+    text-align: center;
+    border-radius: 300px;
+    box-shadow: 0 2.5px 2.5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.csq-btn img {
+    height: 72px;
+}
+
 .button-container {
     display: flex;
     justify-content: left;
@@ -5825,7 +5900,7 @@ padding-right: 80px; */
 }
 
 #feedbackform fieldset .Form__Element__Caption {
-    width: 60%;
+    width: 50%;
 }
 
 #feedbackform fieldset div {
@@ -5834,45 +5909,8 @@ padding-right: 80px; */
     width: 70px;
     height: 40px;
     position: relative;
-}
-
-#feedbackform fieldset div label,
-#feedbackform fieldset div input {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: transparent;
-    padding: 7px 20px;
-    color: var(--color-default);
-    border: 1px solid var(--color-default);
-    border-radius: 30px;
-}
-
-#feedbackform fieldset div label:hover {
-    background-color: var(--color-default);
-    color: var(--color-white);
-}
-
-#feedbackform fieldset div input:focus-visible+label {
-    background-color: var(--color-secondary);
-    color: var(--color-default);
-    outline: 3px solid var(--color-outline-focus);
-    outline-offset: 0;
-}
-
-#feedbackform fieldset div input[type="radio"] {
-    opacity: 0.011;
-}
-
-#feedbackform fieldset div input[type="radio"]:checked+label {
-    background-color: var(--color-default);
-    padding: 7px 20px;
-    color: var(--color-white);
-    border: 1px solid var(--color-default);
-    border-radius: 30px;
+    align-items: center;
+    display: flex;
 }
 
 #feedbackform fieldset div label {
@@ -5881,8 +5919,11 @@ padding-right: 80px; */
     line-height: 1.8em;
     text-align: center;
     line-height: 25px;
+    margin-left: 10px;
 }
-
+#feedbackform fieldset div input[type="radio"]{
+    scale: 1.8;
+}
 #feedbackform .Form__Title {
     padding: 20px 0 0 20px;
 }
