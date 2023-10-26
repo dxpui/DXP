@@ -87,6 +87,12 @@ h6 {
     margin-bottom: 0;
 }
 
+@media screen and (min-width: 640px) {
+    h2 {
+        margin-bottom: 0.5rem;
+    }
+}
+
 /* Used for: Landing page titles */
 
 h1,
@@ -4328,7 +4334,7 @@ a:focus .info-card.news-center:before {
     justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 8px rgba(0, 0, 142, .1098039216);
-    min-width: 110px;
+    aspect-ratio: 1/1;
 }
 
 .logo-list .no-link {
@@ -4352,6 +4358,34 @@ a:focus .info-card.news-center:before {
 .logo-list a:hover,
 .logo-list a:focus-visible {
     border: 3px solid var(--color-secondary);
+}
+
+.logo-list .logo-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 992px) {
+    .logo-list .logo-list-item {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .logo-list .logo-list-item {
+        flex: 0 0 auto;
+        width: 33.3333%;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .logo-list .logo-list-item {
+        flex: 0 0 auto;
+        width: 50%;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -5036,7 +5070,6 @@ padding-right: 80px; */
 
 .pagination-icon {
     display: inline-block;
-    background-size: cover;
 }
 
 .pagination-block .next-arrow,
@@ -5518,6 +5551,12 @@ padding-right: 80px; */
 
 .extra-margin .onethird:nth-last-child(-n + 3) .info-card {
     margin-bottom: -20px;
+}
+
+@media (max-width: 576px) {
+    .extra-margin .onethird:nth-last-child(-n + 3) .info-card {
+        margin-bottom: 20px;
+    }
 }
 
 /*--------------------------------------------------------------
