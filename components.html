@@ -672,7 +672,27 @@
           <img src="assets/img/components.jpg" class="w-100 hero-banner-img" alt="" />
         </div>
       </div>
-
+      <div class="row g-0">
+        <div class="col-12">
+          <div class="recommendation-block-outer">
+            <div class="row g-0">
+              <div class="col-md-12 col-lg-7 d-flex align-items-center search-form blue-bg recommendation-block">
+                <div class="row">
+                  <div class="col-12 col-md-7">
+                    <p class="">
+                      Received an invoice? Then use our secure payment portal to pay for your licence in a few easy steps.
+                    </p>
+                  </div>
+                  <div class="col-12 col-md-5 justify-content-end d-flex align-items-center">
+                    <a href="" class="btn btn-primary-white-border pay-btn">Pay online<i class="fa-solid fa-arrow-right recommendation-block-arrow"></i></a>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class=" my-5">
@@ -1335,103 +1355,318 @@
         </div>
       </div>
     </section>
-<section>
-  <h3 class="text-center my-5">Latest News Carousel</h3>
-  <div class="green-bg my-5">
+    <h3 class="text-center my-5">Page Feedback Form</h3>
+    <div id="feedbackform" class="col-8 mx-auto">
 
-    <div class="container-xl">
-      <div class="row">
-        <div class="col-12">
-          <h3 class="topic-header text-center my-5">Our picks</h3>
-          <div id="topics-carousel" class="carousel news-carousel slide homepage-carousel-cls" data-bs-ride="false">
+      <div>
+        <div class="block  formcontainerblock  ">
 
-            <div class="carousel-inner">
-              <div class="carousel-item active hero-image-carousel ">
-                <a class="news-carousel-link" href="">
-                  <div class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
-                    <div class="col-md-12 col-lg-5 order-lg-0 order-sm-1">
-                      <div class="topics-carousel-text">
-                        <div class="news-carousal-badge">
-                          <span class="news-carousal-tag lightblue-bg">TV and on-demand</span>
-                          <span class="news-carousal-tag lightblue-bg">topic</span>
-                          <span class="news-carousal-tag lightblue-bg">Radio</span>
-                        </div>
-                        <h3 class="topics-txt">
-                          Selected stories and the latest campaigns promoted here
-                        </h3>
-                        <div class="topic-hr-line"></div>
-                        <div class="topics-date"> 01/02/2023</div>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-lg-7 d-flex order-lg-1 order-sm-0">
-                      <img src="assets/img/hero-img.PNG" class="w-100" alt="">
-                    </div>
-                  </div>
-                </a>
+
+
+
+          <form method="post" novalidate="novalidate" data-f-metadata=""
+            aria-labelledby="4078f3df-4b94-46ce-9ebd-e2b5903bfb68_label" enctype="multipart/form-data"
+            class="EPiServerForms ValidationSuccess" data-f-type="form" id="4078f3df-4b94-46ce-9ebd-e2b5903bfb68">
+
+            <script type="text/javascript">
+              // This view acts as a rendering template to render InitScript(and server-side Form's descriptor) in FormContainerBlock's client-side for Form[4078f3df-4b94-46ce-9ebd-e2b5903bfb68].
+              // TECHNOTE: all serverside (paths, dynamic values) of EPiServerForms will be transfered to client side here in this section.
+              (function initializeOnRenderingFormDescriptor() {
+                // each workingFormInfo is store inside epi.EPiServer.Forms, lookup by its FormGuid
+                var workingFormInfo = epi.EPiServer.Forms["4078f3df-4b94-46ce-9ebd-e2b5903bfb68"] = {
+                  Id: "4078f3df-4b94-46ce-9ebd-e2b5903bfb68",
+                  Name: "Page Feedback Form",
+                  // whether this Form can be submitted which relates to the visitor's data (cookie, identity) and Form's settings (AllowAnonymous, AllowXXX)
+                  SubmittableStatus: { "submittable": true, "message": "" },
+                  ConfirmMessage: "Successfully Submitted Confirmation Message",
+                  ResetConfirmMessage: "",
+                  ShowNavigationBar: true,
+                  ShowSummarizedData: false,
+                  // serialize the dependency configuration of this form to clientside
+                  DependenciesInfo: JSON.parse("[{\"fieldName\":\"__field_72719\",\"action\":{\"displayName\":\"Shown\",\"name\":\"EPiServer.Forms.Core.Internal.Dependency.ShowAction\",\"order\":1,\"clientsideAction\":\"show\"},\"conditionCombination\":\"Any\",\"conditions\":[{\"fieldName\":\"__field_72718\",\"operator\":\"Equals\",\"fieldValue\":\"No\"}]},{\"fieldName\":\"__field_72720\",\"action\":{\"displayName\":\"Shown\",\"name\":\"EPiServer.Forms.Core.Internal.Dependency.ShowAction\",\"order\":1,\"clientsideAction\":\"show\"},\"conditionCombination\":\"Any\",\"conditions\":[{\"fieldName\":\"__field_72718\",\"operator\":\"Equals\",\"fieldValue\":\"No\"},{\"fieldName\":\"__field_72718\",\"operator\":\"Equals\",\"fieldValue\":\"Yes\"}]}]"),
+                  // keep all fieldName which are not satisfied the field dependency conditions
+                  DependencyInactiveElements: [],
+                  // Validation info, for executing validating on client side
+                  ValidationInfo: JSON.parse("[{\"targetElementName\":\"__field_72719\",\"targetElementId\":\"f592d84e-befd-49d2-9c31-b9b5ed8268dd\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]}]"),
+                  // Steps information for driving multiple-step Forms.
+                  StepsInfo: {
+                    Steps: [{ "index": 0, "attachedUrl": "", "dependField": null, "dependCondition": null, "isActive": true, "attachedContentLink": "", "dependValue": "", "elementName": "__field_", "guid": "00000000-0000-0000-0000-000000000000" }]
+                  },
+                  FieldsExcludedInSubmissionSummary: [],
+                  ElementsInfo: JSON.parse("{\"__field_72718\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ChoiceElementBlock\",\"friendlyName\":\"Options\",\"customBinding\":false},\"__field_72719\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"comments\",\"customBinding\":false},\"__field_72720\":{\"type\":\"EPiServer.Forms.Implementation.Elements.SubmitButtonElementBlock\",\"friendlyName\":\"Submit\",\"customBinding\":false}}"),
+                  DataSubmitController: "/EPiServer.Forms/DataSubmit"
+                };
+                /// TECHNOTE: Calculation at FormInfo level, and these values will be static input for later processing.
+                workingFormInfo.StepsInfo.FormHasNoStep_VirtualStepCreated = true; // this FLAG will be true, if Editor does not put any FormStep. Engine will create a virtual step, with empty GUID
+                workingFormInfo.StepsInfo.FormHasNothing = false; // this FLAG will be true if FormContainer has no element at all
+                workingFormInfo.StepsInfo.AllStepsAreNotLinked = true; // this FLAG will be true, if all steps all have contentLink= ="" (emptyString)
+              })();
+            </script>
+            <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+              name="__FormGuid" value="4078f3df-4b94-46ce-9ebd-e2b5903bfb68" data-f-type="hidden" autocomplete="off">
+            <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+              name="__FormHostedPage" value="70285" data-f-type="hidden" autocomplete="off">
+            <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+              name="__FormLanguage" value="en" data-f-type="hidden" autocomplete="off">
+            <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+              name="__FormCurrentStepIndex" value="0" data-f-type="hidden" autocomplete="off">
+            <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+              name="__FormSubmissionId" value="" data-f-type="hidden" autocomplete="off">
+            <input name="__RequestVerificationToken" type="hidden"
+              value="CfDJ8K52XzGSUE5AnhZHb4iPp1Ukg6_sR_tpGoVatmlUbDAhHcZ3T3LPOWHVOBKb0YOEKKY3AhoM_HFZP71VbIw19ixbj90jjcQt9XOpw6dPPQgswbcKX61vonBQQlJqKHxPXw6O3jQFm0UI9W6fisoN-Lk">
+            <h2 class="Form__Title" id="4078f3df-4b94-46ce-9ebd-e2b5903bfb68_label">Rate this page</h2>
+
+            <div class="Form__Status">
+              <div role="status" class="Form__Status__Message hide" data-f-form-statusmessage="">
+
               </div>
-              <div class="carousel-item hero-image-carousel ">
-                <a class="news-carousel-link" href="">
-                  <div class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
-                    <div class="col-md-12 col-lg-5 order-lg-0 order-sm-1">
-                      <div class="topics-carousel-text">
-                        <div class="news-carousal-badge">
-                          <span class="news-carousal-tag lightblue-bg">TV and on-demand</span>
-                          <span class="news-carousal-tag lightblue-bg">topic</span>
-                          <span class="news-carousal-tag lightblue-bg">Radio</span>
-                        </div>
-                        <h3 class="topics-txt">
-                          Selected stories and the latest
-                        </h3>
-                        <div class="topic-hr-line"></div>
-                        <div class="topics-date"> 01/02/2023</div>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-lg-7 d-flex order-lg-1 order-sm-0">
-                      <img src="assets/img/hero-women.PNG" class="w-100" alt="">
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="carousel-item hero-image-carousel ">
-                <a class="news-carousel-link" href="">
-                  <div class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
-                    <div class="col-md-12 col-lg-5 order-lg-0 order-sm-1">
-                      <div class="topics-carousel-text">
-                        <div class="news-carousal-badge">
-                          <span class="news-carousal-tag lightblue-bg">TV and on-demand</span>
-                          <span class="news-carousal-tag lightblue-bg">Topic</span>
-                          <span class="news-carousal-tag lightblue-bg">Radio</span>
-                        </div>
-                        <h3 class="topics-txt">
-                          Selected stories and the latest campaigns promoted here
-                        </h3>
-                        <div class="topic-hr-line"></div>
-                        <div class="topics-date"> 01/02/2023</div>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-lg-7 d-flex order-lg-1 order-sm-0">
-                      <img src="assets/img/related-news-4.png" class="w-100" alt="">
-                    </div>
-                  </div>
-                </a>
-              </div>
+            </div>
+            <div data-f-mainbody="" class="Form__MainBody">
+              <section id="__field_" data-f-type="step" data-f-element-name="__field_"
+                class="Form__Element FormStep Form__Element--NonData " data-f-stepindex="0" data-f-element-nondata="">
+                <!-- Each FormStep groups the elements below it til the next FormStep -->
 
-              <button class="carousel-control-prev" type="button" data-bs-target="#topics-carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#topics-carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
-                <span class="visually-hidden">Next</span>
-              </button>
 
+
+                <div aria-invalid="false" class="Form__Element FormChoice" data-f-element-name="__field_72718"
+                  data-f-type="choice" id="c2ee3143-73e4-46e6-9298-3708bd1947c3">
+                  <fieldset aria-describedby="__field_72718_desc">
+                    <legend class="Form__Element__Caption">Was this page helpful?</legend>
+                    <div>
+                      <input type="radio" id="c2ee3143-73e4-46e6-9298-3708bd1947c3_0" name="__field_72718" value="Yes"
+                        class="FormChoice__Input FormChoice__Input--Radio" data-f-datainput="">
+                      <label for="c2ee3143-73e4-46e6-9298-3708bd1947c3_0" class="FormChoice__Label">
+                        Yes
+                      </label>
+                    </div>
+                    <div>
+                      <input type="radio" id="c2ee3143-73e4-46e6-9298-3708bd1947c3_1" name="__field_72718" value="No"
+                        class="FormChoice__Input FormChoice__Input--Radio" data-f-datainput="">
+                      <label for="c2ee3143-73e4-46e6-9298-3708bd1947c3_1" class="FormChoice__Label">
+                        No
+                      </label>
+                    </div>
+                  </fieldset>
+                  <span class="Form__Element__ValidationError" data-f-linked-name="__field_72718"
+                    data-f-validationerror="" id="__field_72718_desc" role="alert" style="display:none"></span>
+                </div>
+
+                <div class="Form__Element FormTextbox FormTextbox--Textarea ValidationRequired hide"
+                  data-f-element-name="__field_72719" data-f-modifier="textarea" data-f-type="textbox"> <label
+                    for="f592d84e-befd-49d2-9c31-b9b5ed8268dd" class="Form__Element__Caption">What can we do to improve
+                    pages like this?</label>
+                  <textarea name="__field_72719" id="f592d84e-befd-49d2-9c31-b9b5ed8268dd" class="FormTextbox__Input"
+                    placeholder="" data-f-label="What can we do to improve pages like this?" data-f-datainput=""
+                    title="Tooltip text resolved the aria label issue" required="" aria-required="true"
+                    aria-describedby="__field_72719_desc" aria-invalid="false" autocomplete="off"></textarea>
+                  <span class="Form__Element__ValidationError" data-f-linked-name="__field_72719"
+                    data-f-validationerror="" id="__field_72719_desc" role="alert" style="display:none"></span>
+                </div>
+
+
+                <button id="fe98d66c-adbf-4f60-b418-70b1b7b32a3a" name="submit" type="submit"
+                  value="fe98d66c-adbf-4f60-b418-70b1b7b32a3a" data-f-is-finalized="false"
+                  data-f-is-progressive-submit="true" data-f-type="submitbutton" data-f-element-name="__field_72720"
+                  class="Form__Element FormExcludeDataRebind FormSubmitButton hide">
+                  Submit</button>
+              </section>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section>
+      <section>
+        <h3 class="text-center my-5">File Download List</h3>
+        <div class="row g-0 my-5">
+          <div class="col-10 col-sm-8 mx-auto">
+
+
+            <a href="" class="file-download">
+              <div class="pdfdownload">
+                <img src="assets/img/web-icons/Download.svg" class="me-3" alt="">
+                <div>
+                  <span>Example name of file here</span>
+                  <span class="mx-2">•</span><span>PDF</span> <span class="mx-2">•</span> <span>310 KB</span>
+                </div>
+              </div>
+            </a>
+
+
+
+          </div>
+        </div>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h3 class="text-center my-5">Video Playlist</h3>
+        <div class="blue-bg video-playlist-cls">
+          <div class="row g-0 mt-5">
+            <div class="col-10 col-sm-8 mx-auto tab-content">
+              <div class="ratio ratio-16x9 container-xl tab-pane active" id="video-1">
+                <iframe id="youtube-id" src="assets/video/video.mp4" title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen=""></iframe>
+              </div>
+              <div class="ratio ratio-16x9 container-xl tab-pane fade" id="video-2">
+                <video class="card-img-small" poster="assets/img/news-center-small-10.png" controls="" muted=""
+                  controlslist="nodownload">
+                  <source src="assets/video/video.mp4">
+                  <track label="English" kind="subtitles" srclang="en" src="" default="">
+                </video>
+              </div>
+              <div class="ratio ratio-16x9 container-xl tab-pane fade" id="video-3">
+                <iframe title="video" id="vimeo-player" src="/siteassets/ofcom.jpeg" frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lightblue-bg py-3" id="video-player">
+          <div class="row g-0 d-flex justify-content-center">
+            <div class="col-10 mx-auto">
+              <div class="row nav video-list" role="tablist">
+                <div class="col-12 col-md-3">
+                  <a class="nav-link active" data-bs-toggle="pill" href="#video-1" aria-selected="true" role="tab">
+                    <img src="/assets/img/fallback-img.png" class="image-fluid" alt="Fallback Image">
+                    <div class="video-text">
+                      <span>Video Playlist Block - Descriptiomn</span>
+                      <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-md-3">
+                  <a class="nav-link " data-bs-toggle="pill" href="#video-2" aria-selected="false" tabindex="-1"
+                    role="tab">
+                    <img src="/assets/img/fallback-img.png" class="image-fluid" alt="Fallback Image">
+                    <div class="video-text">
+                      <span>Testing</span>
+                      <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-md-3">
+                  <a class="nav-link " data-bs-toggle="pill" href="#video-3" aria-selected="false" tabindex="-1"
+                    role="tab">
+                    <img src="/assets/img/fallback-img.png" class="image-fluid" alt="Fallback Image">
+                    <div class="video-text">
+                      <span>Video Playlist Image</span>
+                      <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section>
+      <h3 class="text-center my-5">Latest News Carousel</h3>
+      <div class="green-bg my-5">
+
+        <div class="container-xl">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="topic-header text-center my-5">Our picks</h3>
+              <div id="topics-carousel" class="carousel news-carousel slide homepage-carousel-cls" data-bs-ride="false">
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active hero-image-carousel ">
+                    <a class="news-carousel-link" href="">
+                      <div
+                        class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
+                        <div class="col-md-12 col-lg-5 order-lg-0 order-sm-1">
+                          <div class="topics-carousel-text">
+                            <div class="news-carousal-badge">
+                              <span class="news-carousal-tag lightblue-bg">TV and on-demand</span>
+                              <span class="news-carousal-tag lightblue-bg">topic</span>
+                              <span class="news-carousal-tag lightblue-bg">Radio</span>
+                            </div>
+                            <h3 class="topics-txt">
+                              Selected stories and the latest campaigns promoted here
+                            </h3>
+                            <div class="topic-hr-line"></div>
+                            <div class="topics-date"> 01/02/2023</div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-lg-7 d-flex order-lg-1 order-sm-0">
+                          <img src="assets/img/hero-img.PNG" class="w-100" alt="">
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item hero-image-carousel ">
+                    <a class="news-carousel-link" href="">
+                      <div
+                        class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
+                        <div class="col-md-12 col-lg-5 order-lg-0 order-sm-1">
+                          <div class="topics-carousel-text">
+                            <div class="news-carousal-badge">
+                              <span class="news-carousal-tag lightblue-bg">TV and on-demand</span>
+                              <span class="news-carousal-tag lightblue-bg">topic</span>
+                              <span class="news-carousal-tag lightblue-bg">Radio</span>
+                            </div>
+                            <h3 class="topics-txt">
+                              Selected stories and the latest
+                            </h3>
+                            <div class="topic-hr-line"></div>
+                            <div class="topics-date"> 01/02/2023</div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-lg-7 d-flex order-lg-1 order-sm-0">
+                          <img src="assets/img/hero-women.PNG" class="w-100" alt="">
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item hero-image-carousel ">
+                    <a class="news-carousel-link" href="">
+                      <div
+                        class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
+                        <div class="col-md-12 col-lg-5 order-lg-0 order-sm-1">
+                          <div class="topics-carousel-text">
+                            <div class="news-carousal-badge">
+                              <span class="news-carousal-tag lightblue-bg">TV and on-demand</span>
+                              <span class="news-carousal-tag lightblue-bg">Topic</span>
+                              <span class="news-carousal-tag lightblue-bg">Radio</span>
+                            </div>
+                            <h3 class="topics-txt">
+                              Selected stories and the latest campaigns promoted here
+                            </h3>
+                            <div class="topic-hr-line"></div>
+                            <div class="topics-date"> 01/02/2023</div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-lg-7 d-flex order-lg-1 order-sm-0">
+                          <img src="assets/img/related-news-4.png" class="w-100" alt="">
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <button class="carousel-control-prev" type="button" data-bs-target="#topics-carousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"><i
+                        class="fa-solid fa-chevron-left"></i></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#topics-carousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"><i
+                        class="fa-solid fa-chevron-right"></i></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
     <section>
       <h3 class="text-center my-5">Image carousel block</h3>
       <div class="container-xl">
@@ -1917,7 +2152,345 @@
           </div>
         </div>
     </section>
+    <section>
+      <h3 class="text-center my-5">Decision Tree</h3>
+      <div class="row">
+        <div class="col-8 mx-auto">
+          <div class="block  decisiontreeblock  ">
 
+            <section class="container-xl mx-auto col-12 my-5">
+                    <h4 class="my-3">What do you need help with?</h4>
+                        <p>Choose from the options below to reveal the right information.</p>
+                        <div class="tree-start my-3">
+                                <div class="form-check">
+                                    <input class="form-check-input tree-question" type="radio" name="radiogroup-1" id="question-1">
+                                    <label class="form-check-label" for="question-1">
+                                        Paying fees
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input tree-question" type="radio" name="radiogroup-1" id="question-2">
+                                    <label class="form-check-label" for="question-2">
+                                        Radio or TV licences
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input tree-question" type="radio" name="radiogroup-1" id="question-3">
+                                    <label class="form-check-label" for="question-3">
+                                        Notifying an on-demand service or video-sharing platform
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input tree-question" type="radio" name="radiogroup-1" id="question-4">
+                                    <label class="form-check-label" for="question-4">
+                                        Something else
+                                    </label>
+                                </div>
+                        </div>
+                                <div class="tree-answer my-3" id="answer-1" style="display: none;">
+                                    
+            <h3>I am having trouble using the online payment portal to pay my invoice</h3>
+            <p>If the online payment portal is down for maintenance, our IT department will be aware of this and will be working to get it online as quickly as possible. If this delay could cause you to be late in paying your fees,&nbsp;<strong>you must tell Ofcom before your payment deadline</strong>. You can do this by emailing&nbsp;<a href="mailto:BroadcastingLicenceFees@ofcom.org.uk" target="_blank">BroadcastingLicenceFees@ofcom.org.uk</a><span>&nbsp;</span>with a screen shot of the online portal page and the error message displayed. Please only do this if your payment will be late because of this issue. Our invoices also give details of how to pay by bank transfer.</p>
+                                </div>
+                                <div class="tree-answer my-3" id="answer-2" style="display: none;">
+                                    <h4 class="my-3">What kind of licence do you need help with?</h4>
+                                        <p>Choose from the options below to reveal the right information.</p>
+            
+                                            <div class="form-check nested">
+                                                <input class="form-check-input tree-question" type="radio" name="radiogroup-10" id="question-20">
+                                                <label class="form-check-label" for="question-20">
+                                                    Radio licence
+                                                </label>
+                                            </div>
+                                            <div class="form-check nested">
+                                                <input class="form-check-input tree-question" type="radio" name="radiogroup-10" id="question-21">
+                                                <label class="form-check-label" for="question-21">
+                                                    TV licence
+                                                </label>
+                                            </div>
+                                </div>
+                                            <div class="tree-answer my-3" id="answer-20" style="display: none;">
+                                                
+            <h3>How do I apply for a licence to start a community radio station?</h3>
+            <p>You can only apply for a community radio analogue licence when Ofcom advertises a licensing round. We do not have any rounds currently open for community radio analogue licensing, and have no plans to do so in the foreseeable future as we focus on the rollout of small-scale Digital Audio Broadcasting (DAB), which includes the Community Digital Sound Programme (C-DSP) licence. For information about C-DSP licences, please read the information below about broadcasting on DAB.</p>
+            <p>To be kept informed about updates on broadcasting matters, you can&nbsp;<a href="https://www.ofcom.org.uk/email-updates" target="_blank">sign up for our broadcasting email updates</a><span>&nbsp;</span>via our website.</p>
+                                            </div>
+                                            <div class="tree-answer my-3" id="answer-21" style="display: none;">
+                                                
+            <h3>Do I need a licence to launch a ‘linear’ internet TV service?</h3>
+            <p>A ‘linear’ internet TV service is a service that is streamed continuously so that a viewer accessing it will join the stream of content at the point it has reached at that time. This is different from&nbsp;&nbsp;an on-demand service where viewers can access the content at their leisure, as the content is not scheduled.</p>
+            <p>Any linear TV service, whether or not it is provided via the internet, requires an Ofcom licence if it appears on a<span>&nbsp;</span><a href="https://www.ofcom.org.uk/manage-your-licence/tv-broadcast-licences/guidance-for-tv-broadcast-licensees/regulated-epgs" target="_blank">UK-regulated EPG</a>. The exceptions to this are TV services from countries party to the European Convention on Transfrontier Television (ECTT) and Irish services: TG4, RTÉ1 and RTÉ2. See our<span>&nbsp;</span><a href="https://www.ofcom.org.uk/__data/assets/pdf_file/0019/190342/faq-television-on-demand-services-after-brexit.pdf" target="_blank">frequently asked questions on linear television services and video on demand services after Brexit (PDF, 230.9 KB)</a><span>&nbsp;</span>for further details.</p>
+                                            </div>
+                                <div class="tree-answer my-3" id="answer-3" style="display: none;">
+                                    <h4 class="my-3">What kind of service do you need help with?</h4>
+                                        <p>Choose from the options below to reveal the right information.</p>
+            
+                                            <div class="form-check nested">
+                                                <input class="form-check-input tree-question" type="radio" name="radiogroup-20" id="question-30">
+                                                <label class="form-check-label" for="question-30">
+                                                    On-demand service
+                                                </label>
+                                            </div>
+                                            <div class="form-check nested">
+                                                <input class="form-check-input tree-question" type="radio" name="radiogroup-20" id="question-31">
+                                                <label class="form-check-label" for="question-31">
+                                                    Video-sharing platform
+                                                </label>
+                                            </div>
+                                </div>
+                                            <div class="tree-answer my-3" id="answer-30" style="display: none;">
+                                                
+            <h3>Do I need to tell Ofcom about a video on demand service I wish to provide?</h3>
+            <p>There are specific criteria for determining whether a service falls within the definition of an on-demand programme service (ODPS) and is therefore required to notify Ofcom and comply with our rules.</p>
+            <p>If you intend to provide an on-demand service, you should refer to section 368A of the Communications Act, which lists the criteria for what constitutes an ODPS that must be notified to Ofcom. You should also read Ofcom’s detailed&nbsp;<a href="https://www.ofcom.org.uk/__data/assets/pdf_file/0021/224148/odps-scope-guidance.pdf" target="_blank">guidance on this subject (PDF, 299.3 KB)</a>.</p>
+            <p>It is for the provider of the service to determine whether or not an ODPS notification is required, and you might wish to seek independent legal advice before notifying Ofcom.</p>
+                                            </div>
+                                            <div class="tree-answer my-3" id="answer-31" style="display: none;">
+                                                
+            <p>Information about<span>&nbsp;</span><a href="https://www.ofcom.org.uk/online-safety/information-for-industry/vsp-regulation" target="_blank">video-sharing platforms (VSP)</a><span>&nbsp;</span>is available on our website. Our guide to<span>&nbsp;</span><a href="https://www.ofcom.org.uk/online-safety/advice-for-consumers/video-sharing-platforms" target="_blank">Ofcom's regulation of VSPs</a><span>&nbsp;</span>explains:</p>
+            <ul>
+            <li>what a VSP is;</li>
+            <li>what platforms must notify to Ofcom, and how to notify;</li>
+            <li>what rules platforms must follow; and</li>
+            <li>how to complain about content on a VSP.</li>
+            </ul>
+                                            </div>
+                                <div class="tree-answer my-3" id="answer-4" style="">
+                                    
+            <h4>Get in touch</h4>
+            <p>If you haven't found the answer to your question, please<span>&nbsp;</span><strong><a href="https://ofcomforms.secure.force.com/formentry/BLEPWebform" target="_blank">contact the Broadcast Licensing team</a></strong>. We will try to respond to you within five working days.</p>
+                                </div>
+                        <button type="reset" class="btn btn-secondary tree-reset mt-3">
+                            Reset
+                        </button>
+            </section>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3 class="text-center my-5">Accordion Block/Panel</h3>
+      <div class="row">
+        <div class="col-8 mx-auto">
+          <div class="block accordionpanelblock">
+
+            <div class="mt-5">
+              <div class="container-xl">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="accordion-item destination-accordian">
+                      <div class="accordion-header" id="headingOne">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                          data-bs-target="#collapse32" aria-expanded="false">
+                          <h3>
+                            <p class="accordion-head">
+                              Update - 29 September 2023
+                            </p>
+                          </h3>
+                        </button>
+                      </div>
+                      <div id="collapse32" class="accordion-collapse collapse" data-bs-parent="#myAccordion" style="">
+                        <div class="card-body">
+
+                          <p>We are still assessing the age assurance measures of certain notified and non-notified
+                            adult VSPs and have therefore extended the <strong>enforcement programme for a further 3
+                              months. </strong></p>
+                          <p>During this time, we intend to:</p>
+                          <ul>
+                            <li>conclude our assessments of&nbsp;<strong>notified&nbsp;smaller adult VSPs </strong>and,
+                              where necessary, take steps to drive improvements to their age assurance measures;</li>
+                            <li>continue our <a
+                                href="/topic-and-subtopics/online-safety/protecting-children/enforcement/cw_01272/"><strong>investigation
+                                  into Secure Live Media Ltd</strong></a><strong>;</strong></li>
+                            <li>conclude our assessments of certain other potentially in scope <strong>non-notified
+                                VSPs</strong>; and</li>
+                            <li>aim to understand any further challenges faced by these platforms in implementing
+                              sufficiently robust age assurance measures on their sites.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item destination-accordian">
+                      <div class="accordion-header" id="headingOne">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                          data-bs-target="#collapse33" aria-expanded="false">
+                          <h3>
+                            <p class="accordion-head">
+                              Update – 15 June 2023
+                            </p>
+                          </h3>
+                        </button>
+                      </div>
+                      <div id="collapse33" class="accordion-collapse collapse" data-bs-parent="#myAccordion" style="">
+                        <div class="card-body">
+
+                          <p>Since opening the Enforcement Programme, Ofcom has undertaken extensive engagement and
+                            information gathering to understand age assurance measures in use across the adult VSP
+                            sector and to determine if there are compliance concerns that merit further action to
+                            address potential harm.</p>
+                          <p>Key updates to this work include:</p>
+                          <h3>Notified smaller adult VSP providers</h3>
+                          <ul>
+                            <li>we have been engaging with some of the <strong>notified smaller adult VSP
+                                providers</strong> to understand the measures they have in place to protect underage
+                              users from adult content and identify required improvements;</li>
+                            <li>several have already taken steps to improve their access controls for underage users;
+                            </li>
+                            <li>where we identify a need for further improvements, we will set a deadline by which these
+                              providers must bring themselves into compliance. Should they fail to meet this deadline,
+                              we may consider further enforcement action.</li>
+                          </ul>
+                          <h3>Non-notified adult platforms</h3>
+                          <ul>
+                            <li>we have <strong>identified a number of non-notified adult platforms</strong> that may
+                              fall in-scope of the UK <a
+                                href="/topic-and-subtopics/online-safety/illegal-and-harmful-content/information-for-industry/guidance-who-to-notify-to-ofcom/"
+                                title="VSP regime">VSP regime </a> and appear not to have appropriate age assurance
+                              measures in place;</li>
+                            <li>we opened an <a
+                                href="/topic-and-subtopics/online-safety/protecting-children/enforcement/cw_01272/"
+                                title="investigation into Secure Live Media Ltd">investigation into Secure Live Media
+                                Ltd </a> (believed to be the provider of adult VSP CamSoda) on 16 May 2023 to determine
+                              whether they have failed to notify Ofcom and take appropriate measures to protect
+                              under-18s from videos containing pornographic content on their site;</li>
+                            <li>we are continuing to engage with a number of other sites to determine whether or not
+                              they are required to comply with the UK VSP regime. One platform we contacted, which
+                              appeared to have insufficient access control measures, chose to close down the service
+                              following our engagement.</li>
+                          </ul>
+                          <h3>General understanding</h3>
+                          <ul>
+                            <li>we are engaging with adult platforms across the sector, which has developed our
+                              understanding of the challenges platforms face when considering implementing any age
+                              assurance measures and the respective merits of different methods available to them;</li>
+                            <li>these learnings will be instrumental as we assess further platforms in the VSP regime
+                              and within the Online Safety Regime when the new legislation comes into force.</li>
+                          </ul>
+                          <p>Next steps: As one of Ofcom’s key priorities is to make sure that people live a safer life
+                            online, we will continue to address potential harms arising from age assurance concerns.
+                            With this in mind, Ofcom will extend the current programme of monitoring and enforcement for
+                            a further three months. During that time, we will continue:</p>
+                          <ul>
+                            <li>ongoing engagement with notified adult platforms;</li>
+                            <li>our enforcement investigation into Secure Live Media Ltd;</li>
+                            <li>further engagement with other non-notified adult platforms, with possible enforcement
+                              action for non-compliance; and</li>
+                            <li>driving improvements ahead of the Online Safety regime within the adult sector.</li>
+                          </ul>
+                          <p>We intend to publish an update following that period.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item destination-accordian">
+                      <div class="accordion-header" id="headingOne">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                          data-bs-target="#collapse34" aria-expanded="false">
+                          <h3>
+                            <p class="accordion-head">
+                              Opening text – 10 January 2023
+                            </p>
+                          </h3>
+                        </button>
+                      </div>
+                      <div id="collapse34" class="accordion-collapse collapse" data-bs-parent="#myAccordion" style="">
+                        <div class="card-body">
+
+                          <p>From time-to-time Ofcom may open a programme of work, or “enforcement programme”, to
+                            examine a problem or concern that relates to a particular group of stakeholders, or to a
+                            whole sector.</p>
+                          <p>One of our priorities for the second year of the VSP regime is to promote the
+                            implementation of robust age assurance, so that children are protected from the most harmful
+                            content. In October 2022, we published our <a
+                              href="/topic-and-subtopics/online-safety/illegal-and-harmful-content/information-for-industry/first-year-report/">report
+                              on the first year of VSP regulation</a>. The report highlighted that many platforms that
+                            specialise in videos containing pornographic material (or “adult VSPs”) do not appear to
+                            have measures that are robust enough to stop children accessing pornographic material.</p>
+                          <p>Today Ofcom is opening an enforcement programme into age assurance measures across the
+                            adult VSP sector.</p>
+                          <p>Our objectives for this programme are:</p>
+                          <ol>
+                            <li>to assess the age assurance measures implemented by notified adult VSPs, to ensure they
+                              are sufficiently robust to prevent under-18s from accessing videos containing pornographic
+                              material;</li>
+                            <li>to identify whether there are other platforms in the adult VSP sector that may fall in
+                              scope of the VSP regime but:<ul>
+                                <li>have not yet notified their service to Ofcom, as required under the VSP framework
+                                  (see more below); and</li>
+                                <li>may not have appropriate measures in place to protect under-18s from pornographic
+                                  content; and</li>
+                              </ul>
+                            </li>
+                            <li>to understand from providers of adult VSP services the challenges they have faced when
+                              considering implementing any age assurance measures. This will also help us build a
+                              picture of what measures work and are proportionate to expect from different VSPs, in line
+                              with our strategic priority of driving forward the implementation of robust age assurance.
+                            </li>
+                          </ol>
+                          <p>The programme will seek to determine the scale of any compliance concerns in respect of
+                            notified and non-notified adult VSPs. We will then decide whether any further action
+                            (including enforcement) is needed, and how best to address potential harm.</p>
+                          <h3>Regulatory framework</h3>
+                          <p>Since 1 November 2020, Ofcom has had powers to regulate UK-established VSPs under the
+                            framework set out in Part 4B of the Communications Act 2003. This framework sets out to
+                            protect users of VSP services from specific types of harmful material in videos, including
+                            safeguarding under-18s from potentially harmful material, such as pornographic content.</p>
+                          <p>Under the framework, providers are legally obliged to submit a formal notification of their
+                            service to Ofcom should they meet the definition of a VSP and fall within UK jurisdiction.
+                            Providers are responsible for self-assessing whether they need to notify their services to
+                            Ofcom as a VSP based on specific legal criteria. More information is available in our <a
+                              href="/siteassets/resources/documents/consultations/category-2/207661-vsp-notifying-ofcom/associated-documents/guidance-video-sharing-platforms-who-needs-to-notify.pdf">published
+                              guidance (PDF, 541.3 KB)</a> on notification.</p>
+                          <p>Ofcom has developed <a
+                              href="/siteassets/resources/documents/consultations/category-1/216479-vsp-harm-guidance/associated-documents/vsp-harms-guidance.pdf">regulatory
+                              guidance (PDF, 860.3 KB)</a> for VSP providers on measures to protect users from harmful
+                            material, which include systems for obtaining assurance as to the age of potential viewers.
+                            Our guidance recognises there may be different means of achieving age assurance, but
+                            platforms are required to apply the principle that material with the most potential to harm
+                            the physical, mental, or moral development of under-18s must be subject to the strictest
+                            access control measures. The guidance also describes several forms of age verification that
+                            we would <em>not</em> consider to provide appropriate protection from pornographic content
+                            (such as self-declaration tick-boxes).</p>
+                          <h3>Ofcom's enforcement programme</h3>
+                          <p>Following our review of responses to formal information requests issued to all notified
+                            VSPs, we highlighted in our VSP report that age assurance measures currently implemented by
+                            many adult VSPs may not be sufficiently robust in stopping children from accessing
+                            pornographic material. We are also concerned that there may be other adult VSPs within UK
+                            jurisdiction that:</p>
+                          <ol type="a">
+                            <li>have not notified to date; and</li>
+                            <li>may not have taken appropriate measures to protect children from harmful content.</li>
+                          </ol>
+                          <p>Ofcom’s priority is to make sure that people live a safer life online. We need to address
+                            potential harm arising from our concerns around age assurance, and foster improvements
+                            across the adult VSP sector. One of our main objectives for the second year of the VSP
+                            regime is to promote the implementation of robust age assurance, thereby protecting children
+                            from the most harmful content online (including pornography). The enforcement programme we
+                            have opened today will help us meet this objective.</p>
+                          <p>If Ofcom becomes aware of a platform within UK jurisdiction that is not protecting its
+                            users appropriately, we could take enforcement action even if it has already notified to us.
+                            Failing to notify when in scope of the VSP framework could also lead to enforcement action.
+                            We therefore encourage all providers to review the guidance we published on 10 March 2021,
+                            <a
+                              href="/topic-and-subtopics/online-safety/illegal-and-harmful-content/consultations-and-statements/video-sharing-platforms-notifying-ofcom/">Video-sharing
+                              platform – who needs to notify to Ofcom?</a></p>
+                          <p>Video-sharing platforms that are not currently regulated in the UK are likely to be
+                            ‘user-to-user services’ (as defined in the Online Safety Bill), and so would be subject to
+                            regulation when the new legislation comes into force if they have a significant number of UK
+                            users, or if the UK is one of their target markets.</p>
+                          <p>We expect this programme to run for four months initially. We will assess the level of
+                            compliance across the adult VSP sector, and publish an update on progress at the end of the
+                            period. We may decide to open formal investigations following our assessment.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="container my-5">
       <h3 class="text-center my-5">Notification block</h3>
@@ -1937,7 +2510,7 @@
       </div>
     </section>
     <section class="container my-5">
-      <h3 class="text-center my-5">Title block</h3>
+      <h3 class="text-center my-5">Call out with image</h3>
       <div class="row">
         <div class="col-12">
           <div class="title-block one">
@@ -2059,67 +2632,151 @@
         </button>
       </div>
     </section>
+    <section>
+      <h3 class="text-center my-5">Column Block (Related Content)</h3>
+      <section class="container-xl info">
+        <h3 class="text-center my-5">More from Ofcom</h3>
+        <div class="row">
+          <div class="col-md-12 col-lg-12">
+            <div class="row g-2 teaser-3 extra-margin">
+              <div class="col">
+                <a href="">
+                  <div class="info-card">
+                    <div class="d-flex justify-content-between align-items-start align-items-center">
+                      <span class="info-card-header">Lorem ipsum dolor sit amet</span>
+                      <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                      <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="">
+                  <div class="info-card">
+                    <div class="d-flex justify-content-between align-items-start align-items-center">
+                      <span class="info-card-header">Lorem ipsum dolor sit amet</span>
+                      <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                      <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="">
+                  <div class="info-card">
+                    <div class="d-flex justify-content-between align-items-start align-items-center">
+                      <span class="info-card-header">Lorem ipsum dolor sit amet</span>
+                      <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                      <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
+                </a>
+              </div>
+               
+              
+              
+              
+              
+            </div>
+          </div>
+          <!-- <div class="col-md-12 col-lg-4">
+            <div class="col">
+              <a href="">
+                <div class="info-card info-card-image">
+                  <img src="assets/img/more-ofcom.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div> -->
+  
+      </div></section>
+    </section>
 
     <section>
       <h3 class="text-center my-5">Article Panel/Article Teaser</h3>
 
       <section class="gray-bg  py-4 pb-5">
         <div class="container-xl">
-            <h3 class="text-center mb-5 mt-2">Advice for Individuals</h3>
-            <div class="row extra-margin">
-                    <div class="col-md-4 onethird">
-                        <a href="/about-us/abouts-us/advice-for-business/">
-                            <div class="info-card">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <span class="info-card-header"> Advice for Business </span>
-                                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                                        <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                                        <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                                    </svg>
-                                </div>
-                                <p>
-                                    Advice for Business
-                                </p>
-                            </div>
-                        </a>
-                    </div>
+          <h3 class="text-center mb-5 mt-2">Advice for Individuals</h3>
+          <div class="row extra-margin">
             <div class="col-md-4 onethird">
-                        <a href="/about-us/abouts-us/advice-for-business/">
-                            <div class="info-card">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <span class="info-card-header"> Advice for Business </span>
-                                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                                        <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                                        <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                                    </svg>
-                                </div>
-                                <p>
-                                    Advice for Business
-                                </p>
-                            </div>
-                        </a>
-                    </div><div class="col-md-4 onethird">
-                        <a href="/about-us/abouts-us/advice-for-business/">
-                            <div class="info-card">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <span class="info-card-header"> Advice for Business </span>
-                                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                                        <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                                        <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                                    </svg>
-                                </div>
-                                <p>
-                                    Advice for Business
-                                </p>
-                            </div>
-                        </a>
-                    </div></div>
-           
+              <a href="/about-us/abouts-us/advice-for-business/">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header"> Advice for Business </span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel"></path>
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                    </svg>
+                  </div>
+                  <p>
+                    Advice for Business
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 onethird">
+              <a href="/about-us/abouts-us/advice-for-business/">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header"> Advice for Business </span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel"></path>
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                    </svg>
+                  </div>
+                  <p>
+                    Advice for Business
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 onethird">
+              <a href="/about-us/abouts-us/advice-for-business/">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header"> Advice for Business </span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel"></path>
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                    </svg>
+                  </div>
+                  <p>
+                    Advice for Business
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
         </div>
-    </section>
+      </section>
     </section>
 
     <section>
@@ -2141,7 +2798,17 @@
         </div>
       </div>
     </section>
+    <section>
+      <h3 class="text-center my-5">Image Block</h3>
 
+      <section class="container-xl">
+        <div class="row">
+          <div class="col-lg-12">
+            <img src="assets/img/destination.png" class="w-100 my-4" alt="...">
+          </div>
+        </div>
+      </section>
+    </section>
     <section>
       <h3 class="text-center my-5">Testimonial</h3>
       <div class="row">
