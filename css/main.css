@@ -5143,12 +5143,6 @@ padding-right: 80px; */
     background-image: url(/assets/img/web-icons/double-arrow-blue.svg);
 }
 
-@media (max-width: 557px) {
-    .double-arrow-clear {
-        display: none;
-    }
-}
-
 .pagination-block .page-item {
     margin-left: 5px;
     margin-right: 5px;
@@ -5197,6 +5191,16 @@ padding-right: 80px; */
 
 .pagination-count strong {
     margin: 0 5px;
+}
+
+@media (max-width: 557px) {
+    .double-arrow-clear {
+        display: none;
+    }
+
+    .pagination-block .page-item .page-link {
+        padding: 10px 2px;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -5562,11 +5566,11 @@ blockquote p::before,
     margin-inline: -25px;
 }
 
-.teaser-bg-padding .extra-margin.row
-{
+.teaser-bg-padding .extra-margin.row {
     margin-inline: auto;
     padding: 30px 0;
 }
+
 /* @media(min-width: 1024px) {
     .extra-margin.row,
     .standared-page .extra-margin.row {
