@@ -69,7 +69,7 @@ window.onresize = function () {
 
 function searchIcon() {
     $('#search-icon').click(function () {
-        $('#search-icon').toggleClass("fa-times");
+        $('#search-icon i').toggleClass("fa-times");
         $('.search-form').toggleClass("active");
         $(".menu").removeClass("fa-times");
     })
@@ -103,7 +103,7 @@ $(document).ready(function () {
     }
 
     //Filter and Sorting
-    $("#btnsubmit").on("click", function () {
+    $("#btnsubmit").on("click", function () {        
         var topicarr = [];
         for (var i = 0; i < $(".modal-topic-list li[select='true']").length; i++) {
             var x = document.querySelectorAll(".modal-topic-list li[select='true']")[i].getAttribute("data-value");
@@ -131,6 +131,12 @@ $(document).ready(function () {
             $("#SelectedTimeFilter").val(timearr.toString());
             $("#contentTypeForm").trigger("submit");
         }
+        if ($("#newsCentreForm").length > 0) {
+            $("#SelectedTopicFilter").val(topicarr.toString());
+            $("#SelectedContentFilter").val(contentarr.toString());
+            $("#SelectedTimeFilter").val(timearr.toString());
+            $("#newsCentreForm").trigger("submit");
+        }
         if ($("#subTopicForm").length > 0) {
             $("#SelectedContentFilter").val(contentarr.toString());
             $("#subTopicForm").trigger("submit");
@@ -141,6 +147,14 @@ $(document).ready(function () {
             $("#SelectedTimeFilter").val(timearr.toString());
             $("#searchForm").trigger("submit");
         }
+        if ($("#collectionForm").length > 0) {
+            if ($('.collection-focus')[0] !== undefined) {
+                localStorage["ScrollPositionX"] = $('.collection-focus').offset().top;
+            }
+            $("#SelectedContentFilter").val(contentarr.toString());
+            $("#SelectedTimeFilter").val(timearr.toString());
+            $("#collectionForm").trigger("submit");
+        }
     });
 
     $('ul.dropdown-menu li').on("click", function () {
@@ -149,11 +163,17 @@ $(document).ready(function () {
         if ($("#contentTypeForm").length > 0) {
             $("#contentTypeForm").trigger("submit");
         }
+        if ($("#newsCentreForm").length > 0) {
+            $("#newsCentreForm").trigger("submit");
+        }
         if ($("#subTopicForm").length > 0) {
             $("#subTopicForm").trigger("submit");
         }
         if ($("#searchForm").length > 0) {
             $("#searchForm").trigger("submit");
+        }
+        if ($("#collectionForm").length > 0) {
+            $("#collectionForm").trigger("submit");
         }
     });
 
@@ -166,10 +186,13 @@ $(document).ready(function () {
     }
 
     var urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('PageNo') || urlParams.has('SelectedSortType')) {
-        $('html, body').animate({
-            scrollTop: $(".results-top").offset().top
-        }, 10);
+    if (urlParams.has('PageNo') || urlParams.has('SelectedSortType') || urlParams.has('SelectedContentFilter') || urlParams.has('SelectedTopicFilter') || urlParams.has('SelectedTimeFilter')) {
+        let resultsTop = $('.results-top')[0];
+        if (resultsTop !== undefined) {
+            $('html, body').animate({
+                scrollTop: $('.results-top').offset().top
+            }, 10);
+        }
     }
 
     $(".menu-item-has-children").click(function () {
@@ -263,6 +286,10 @@ $(document).ready(function () {
 
     if ($('#searchForm').length > 0) {
         autoCompleteSearch(document.getElementById("query"), document.getElementById("pageLink"), "#searchForm")
+    }
+
+    if ($('#newsCentreForm').length > 0) {
+        autoCompleteSearch(document.getElementById("query"), document.getElementById("pageLink"), "#newsCentreForm")
     }
 
     //Filter and Sorting
@@ -411,6 +438,10 @@ function updatePageQuery(value) {
     var url = window.location.href;
     var key = 'PageNo';
     var re = new RegExp("([?&])" + key + "=.*?(&|#|$)(.*)", "gi"), hash;
+
+    if ($('.collection-focus')[0] !== undefined) {
+        localStorage["ScrollPositionX"] = $('.collection-focus').offset().top;
+    }
 
     if (re.test(url)) {
         if (typeof value !== 'undefined' && value !== null) {
@@ -604,7 +635,7 @@ function lookupTable() {
 //********************Back to top**********************
 
 $(document).ready(function () {
-    var scrollTrigger = 4 * $(window).height(); // Calculate the scroll trigger based on four screen lengths
+    var scrollTrigger = 1 * $(window).height(); // Calculate the scroll trigger based on four screen lengths
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > scrollTrigger) {
@@ -628,7 +659,7 @@ function videoPlayer() {
                 if ($(this).find("iframe").length > 0) {
                     var x = $(this).find("iframe").attr("src");
                     if (x.indexOf("youtube") != -1) {
-                        var y = "&autoplay=0&mute=0";
+                        var y = "?autoplay=0&mute=0";
                         $(this).find("iframe").attr("src", x + y);
                     }
 
@@ -792,7 +823,7 @@ $(".show-hide-text").click(function () {
         });
     }
     else {
-       $(".toggle-text").text($('#hideAllText').val());
+        $(".toggle-text").text($('#hideAllText').val());
         $('.step-accordion .collapse').each(function () {
             $(this).addClass('show');
         });
@@ -910,11 +941,15 @@ function LanguageBanner() {
 }
 /* PostCode Checker Block */
 $(document).ready(function () {
+    if (localStorage['ScrollPositionX'] !== "null") {
+        $(document).scrollTop(localStorage['ScrollPositionX']);
+        localStorage['ScrollPositionX'] = "null";
+        $(".back-drop-bg").hide();
+        $(".loader").hide();
+    }
+
     if ($("#ListAddressVal").val() != null && $("#ListAddressVal").val() != "") {
         $("#divChangeLocation").show();
-        $('html, body').animate({
-            scrollTop: $("#PostCodeCheckerFocus").offset().top
-        }, 10);
         $("#PostCodeSubmit").hide();
         $("#postcode-form").hide();
     }
@@ -926,7 +961,6 @@ $(document).ready(function () {
         $("#PostCodeSubmit").show();
         $("#postcode-form").show();
     }
-
     $(".info-card").each(function () {
         var closestRow = $(this).closest(".row");
         closestRow.addClass("extra-margin");
@@ -941,11 +975,11 @@ var postcodeRegex = /^[a-z]{1,2}\d[a-z\d]?\s*\d[a-z]{2}$/i;
 $("#PostCodeSubmit").click(function () {
     if ($("#PostCode").val() != "") {
         if (postcodeRegex.test($("#PostCode").val())) {
+            $(".back-drop-bg").show();
+            $(".loader").show();
             $("#postcode-form").removeClass("form-error");
             $("#divChangeLocation").show();
-            $('html, body').animate({
-                scrollTop: $("#PostCodeCheckerFocus").offset().top
-            }, 10);
+            localStorage["ScrollPositionX"] = $(this).parents('section:first').offset().top;
             $("#divInvalidPostCodeMessage").hide();
             $("#PostCodeSubmit").hide();
             $("#postcode-form").hide();
@@ -978,7 +1012,6 @@ $("#ChangeLocation").click(function () {
         var clean_uri = uri.substring(0, uri.indexOf("?"));
         window.history.replaceState({}, document.title, clean_uri);
     }
-
 });
 
 $("#SelectAddressDrpDn").change(function () {
@@ -1120,3 +1153,7 @@ function pageInfo() {
 function pageInfoBanner() {
     $("#page-banner").hide();
 }
+
+$(document).ready(function () {
+    $('blockquote p:has(cite)').contents().unwrap();
+  });
