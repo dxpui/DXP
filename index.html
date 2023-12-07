@@ -517,14 +517,15 @@
         </nav>
       </div>
       <!-- menu end here -->
-      <div class="search-icons d-flex align-items-center order-2 order-lg-1" tabindex="0" >
-        <i class="fas fa-search" id="search-icon" ></i>
+      <div id="search-icon" class="search-icons d-flex align-items-center order-2 order-lg-1" tabindex="0">
+        <i class="fas fa-search"></i>
+        <span class="visually-hidden-focusable">Global Search</span>
       </div>
       <form action="" class="search-form">
         <div class="search-box mx-auto position-relative">
           <input type="search" class="search-box-input" name="" placeholder="What are looking for?" id="myInput">
 
-          <label for="myInput" class="fas fa-search d-none"><span class="d-none">Serach</span></label>
+          <label for="myInput" class="visually-hidden-focusable"><span class="d-none">Serach</span></label>
           <a href="javascript:void(0)" class="fas fa-search gl-search"><span class="d-none">Serach</span></a>
         </div>
 
@@ -734,7 +735,7 @@
                 </a>
               </div>
               <div class="col-md-12 col-lg-7 d-flex order-lg-1 order-sm-0">
-                <img src="assets/img/demo-image.jpg" class="w-100" alt="" />
+                <img src="https://dummyimage.com/1280x720/000/fff" class="w-100" alt="" />
               </div>
             </div>
           </div>
@@ -872,7 +873,7 @@
             <div class="swiper-slide">
               <a href="destination-with-image.html">
                 <div class="info-card news-info ">
-                  <img src="https://dummyimage.com/1280x720/000/fff" class="card-img-small mb-3" alt="...">
+                  <img src="https://dummyimage.com/640x360/000/fff" class="card-img-small mb-3" alt="...">
                   <div class="d-flex justify-content-between align-items-start">
                     <span class="info-card-header">Destination</span>
                     <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
@@ -1197,10 +1198,11 @@
     </section>
     <footer class="footer">
       <div class="container-xl">
+        <h2 class="visually-hidden text-white" >Footer</h2>
         <div class="row">
           <div class="col-md-12 col-lg-3">
             <section class="mt-0 mt-lg-5  social">
-              <div class="follow fw-bold">Follow us </div>
+              <h3 class="follow fw-bold">Follow us </h3>
               <ul class="list-unstyled social-icons">
                 <li class="social-icons-list">
                   <a class="" href="#" title="Twitter">
@@ -1238,7 +1240,7 @@
           </div>
           <div class="col-md-12 col-lg-3">
             <section class="mt-0 mt-lg-5  about-ofcom">
-              <div class="follow fw-bold">About Ofcom </div>
+              <h3 class="follow fw-bold">About Ofcom </h3>
               <ul class="list-unstyled">
                 <li class="">
                   <a class="footer-link" href="#">What is Ofcom?</a>
@@ -1269,7 +1271,7 @@
           </div>
           <div class="col-md-12 col-lg-3">
             <section class="mt-0 mt-lg-5 about-ofcom">
-              <div class="follow fw-bold">Aout this website</div>
+              <h3 class="follow fw-bold">Aout this website</h3>
               <ul class="list-unstyled">
                 <li class="">
                   <a class="footer-link" href="#">Accessability</a>
@@ -1288,7 +1290,7 @@
           </div>
           <div class="col-md-12 col-lg-3">
             <section class="mt-0 mt-lg-5 about-ofcom">
-              <div class="follow fw-bold">Advice for business</div>
+              <h3 class="follow fw-bold">Advice for business</h3>
               <ul class="list-unstyled">
                 <li class="">
                   <a class="footer-link" href="#">A starter pack for business</a>
