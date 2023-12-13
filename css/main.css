@@ -23,6 +23,8 @@
     --color-megenta: #C400ED;
     /* Page White colour*/
     --color-white: #FFFFFF;
+    /* Anchor Text Color */
+    --color-anchor: #4100C2;
     --color-black: #000000;
     --color-light-gray: #F2F2F2;
     --color-outline-focus: #FF8A00;
@@ -56,7 +58,7 @@ body {
 }
 
 a {
-    color: var(--color-primary);
+    color: var(--color-anchor);
     text-decoration: underline;
 }
 
@@ -110,6 +112,7 @@ h1,
     line-height: 135%;
     font-weight: 800;
     word-wrap: break-word;
+    letter-spacing: -0.48px;
 }
 
 
@@ -121,6 +124,7 @@ h2,
     line-height: 135%;
     font-weight: 700;
     word-wrap: break-word;
+    letter-spacing: -0.4px;
 }
 
 @media(max-width: 992px) {
@@ -143,6 +147,7 @@ h3,
     line-height: 135%;
     font-weight: 700;
     word-wrap: break-word;
+    letter-spacing: -0.32px;
 }
 
 /* Used for: Card titles, pull quotes etc */
@@ -153,11 +158,19 @@ h4,
     line-height: 145%;
     font-weight: 400;
     word-wrap: break-word;
+    letter-spacing: -0.19px;
 }
 
 h5,
 .h5 {
     font-size: 14px;
+    line-height: 145%;
+    word-wrap: break-word;
+}
+
+h6,
+.h6 {
+    font-size: 13px;
     line-height: 145%;
     word-wrap: break-word;
 }
@@ -188,7 +201,7 @@ h5,
     font-size: 32px;
 }
 
-.h2-has-h3 {
+.news-slider-header {
     font-size: 32px;
     line-height: 135%;
     font-weight: 700;
@@ -359,6 +372,21 @@ video:focus-visible {
 }
 
 .text-blue {
+    color: var(--color-default);
+}
+
+.red-bg a,
+.lightblue-bg a {
+    color: var(--color-white);
+}
+
+.red-bg a:hover,
+.lightblue-bg a:hover {
+    color: var(--color-light-gray);
+}
+
+.orange-bg a,
+.orange-bg a:hover {
     color: var(--color-default);
 }
 
@@ -544,13 +572,6 @@ video:focus-visible {
     text-decoration: none !important;
 }
 
-
-/* .btn:hover .fa-arrow-right{
-padding-left: 3px;
--webkit-transition: all .3s linear 0s;
-transition: all .3s linear 0s;
-} */
-
 .btn-tag {
     background-color: var(--color-light-gray);
     color: var(--color-primary);
@@ -566,6 +587,54 @@ transition: all .3s linear 0s;
     color: var(--color-black);
     background-color: var(--color-secondary);
     text-decoration: none !important;
+}
+
+.btn-tag.blue-bg {
+    background-color: var(--color-default);
+    color: var(--color-white);
+}
+
+.btn-tag.blue-bg:hover,
+.btn-tag.blue-bg:focus-visible {
+    background-color: var(--color-light-gray);
+    color: var(--color-default);
+}
+
+.btn-tag.light-blue-bg {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-tag.light-blue-bg:hover,
+.btn-tag.light-blue-bg:focus-visible {
+    background-color: var(--color-light-gray);
+    color: var(--color-primary);
+}
+
+.btn-tag.maroon-bg {
+    background-color: var(--color-maroon);
+    color: var(--color-white);
+}
+
+.btn-tag.maroon-bg:hover,
+.btn-tag.maroon-bg:focus-visible {
+    background-color: var(--color-light-gray);
+    color: var(--color-maroon);
+}
+
+.btn-tag.megenta-bg {
+    background-color: var(--color-megenta);
+    color: var(--color-white);
+}
+
+.btn-tag.megenta-bg:hover,
+.btn-tag.megenta-bg:focus-visible {
+    background-color: var(--color-light-gray);
+    color: var(--color-megenta);
+}
+
+.btn-tag:active {
+    background-color: var(--color-light-gray) !important;
 }
 
 @media(max-width: 992px) {
@@ -792,6 +861,7 @@ header .search-form.active {
     background-color: var(--color-default);
     color: var(--color-white);
     margin-left: auto;
+    cursor: pointer;
 }
 
 @media(max-width: 1024px) {
@@ -1904,7 +1974,7 @@ header .search-box {
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
-    min-height: 180px;
+    /* min-height: 180px; */
     position: relative;
     width: 100%;
     text-align: left;
@@ -2654,7 +2724,11 @@ a:focus .info-card.news-center:before {
     margin-left: -10px;
 }
 
-.footer h3 {
+/* .footer h3 {
+    font-size: 14px;
+} */
+
+:is(.footer) :is(h1, h2, h3, h4, h5, h6) {
     font-size: 14px;
 }
 
@@ -2860,27 +2934,27 @@ a:focus .info-card.news-center:before {
 
 /******************* Green Theme Latest News Home Page ******************************/
 .news-green-bg,
-.news-green-bg .h2-has-h3 {
+.news-green-bg .news-slider-header {
     background-color: var(--color-green);
 }
 
 .news-pink-bg,
-.news-pink-bg .h2-has-h3 {
+.news-pink-bg .news-slider-header {
     background-color: var(--color-pink);
 }
 
 .news-orange-bg,
-.news-orange-bg .h2-has-h3 {
+.news-orange-bg .news-slider-header {
     background-color: var(--color-secondary);
 }
 
 .news-yellow-bg,
-.news-yellow-bg .h2-has-h3 {
+.news-yellow-bg .news-slider-header {
     background-color: var(--color-yellow);
 }
 
 .news-gray-bg,
-.news-gray-bg .h2-has-h3 {
+.news-gray-bg .news-slider-header {
     background-color: var(--color-light-gray);
 }
 
@@ -3003,11 +3077,11 @@ a:focus .info-card.news-center:before {
     background-color: var(--color-megenta);
 }
 
-.news-blue-bg .h2-has-h3,
-.news-lightblue-bg .h2-has-h3,
-.news-red-bg .h2-has-h3,
-.news-maroon-bg .h2-has-h3,
-.news-megenta-bg .h2-has-h3 {
+.news-blue-bg .news-slider-header,
+.news-lightblue-bg .news-slider-header,
+.news-red-bg .news-slider-header,
+.news-maroon-bg .news-slider-header,
+.news-megenta-bg .news-slider-header {
     color: var(--color-white);
 }
 
@@ -3292,6 +3366,7 @@ a:focus .info-card.news-center:before {
     font-size: 19px;
     font-weight: 400;
     margin-bottom: 0;
+    line-height: 28px;
 }
 
 
@@ -3692,7 +3767,7 @@ a:focus .info-card.news-center:before {
 }
 
 .static-callout span {
-    color: var(--color-megenta);
+    color: var(--color-default);
     min-height: 50px;
 }
 
@@ -4518,7 +4593,8 @@ a:focus .info-card.news-center:before {
 --------------------------------------------------------------*/
 table {
     width: 100%;
-    margin: 8px 0;
+    /* margin: 8px 0; */
+    margin-bottom: 10px;
 }
 
 table th,
@@ -5403,6 +5479,7 @@ blockquote p,
 .testimonial-text {
     font-size: 19px;
     line-height: 30px;
+    padding-inline: 10%;
 }
 
 blockquote p::before,
@@ -5422,14 +5499,25 @@ blockquote p::before,
     display: inline-block;
     vertical-align: bottom;
     color: var(--color-default);
-    font-size: 2em;
-    top: 0.1em;
+    font-size: 19px;
+    top: 0;
     position: relative;
     padding-right: 2px;
 }
 
+.testimonial-text,
+blockquote cite {
+    padding-inline: 10%;
+}
+
+blockquote p:has(cite) p::after,
+blockquote p:has(cite) p::before {
+    content: none;
+}
+
 .testimonial-name {
     margin-top: 15px;
+    padding-inline: 10%;
 }
 
 .testimonial-bg .testimonial-name {
@@ -5564,6 +5652,10 @@ blockquote p::before,
 
 .standared-page .extra-margin.row {
     margin-inline: -25px;
+}
+
+.gray-bg .extra-margin.row {
+    margin-inline: auto;
 }
 
 .teaser-bg-padding .extra-margin.row {
@@ -5756,8 +5848,17 @@ blockquote p::before,
     color: var(--color-default) !important;
 }
 
+.EPiServerForms .Form__Status .Form__Warning__Message {
+    background-color: var(--color-yellow) !important;
+    color: var(--color-default) !important;
+}
+
 .EPiServerForms .Form__Status .Form__Success__Message p {
     margin-bottom: 0;
+}
+
+.EPiServerForms .Form__Description {
+    padding-left: 1rem;
 }
 
 /******************************************************/
@@ -6060,3 +6161,31 @@ blockquote p::before,
     min-height: 2.5em;
     padding-left: 2.5em;
 }
+
+/*********************** About Ofcom page Contact and Case reference section ********************/
+
+.cceb-section {
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.cceb-section .title-box {
+    text-align: center;
+}
+
+.cceb-section .content-box {
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    color: var(--color-default);
+    background-color: var(--color-white);
+}
+
+.cceb-section .content-box p {
+    color: var(--color-default);
+}
+
+.cceb-contact {
+    margin-top: 10px;
+}
+
+/*********************** About Ofcom page Contact and Case reference section ********************/

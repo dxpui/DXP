@@ -1,88 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-
-
-  <title>Home - Ofcom</title>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <meta name="MetaTitle" content="Home" />
-  <meta name="MetaDescription" />
-  <meta name="MetaKeywords" />
-  <meta name="MetaAuthor" />
-  <meta name="MetaCopyright" />
-  <meta name="MetaRobots" />
-  <meta property="article:published_time" content="4/5/2023 12:33:09 PM" />
-  <meta property="og:url" content="https://www-int1.ofcom.org.uk/" />
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Home" />
-  <meta property="og:image" content="https://www-int1.ofcom.org.uk/siteassets/ofcom.jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="675" />
-  <meta property="og:image:alt" content="Ofcom" />
-  <meta property="og:locale" content="en" />
-  <meta property="og:site_name" content="www-int1.ofcom.org.uk" />
-
-
-  <link href="https://www-int1.ofcom.org.uk/" rel="canonical" />
-  <link href="https://www-int1.ofcom.org.uk/" hreflang="en" rel="alternate" />
-  <link href="https://www-int1.ofcom.org.uk/cy/" hreflang="cy" rel="alternate" />
-
-  <link rel="icon" href="/assets/img/favicon.gif" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OFCOM website</title>
+  <link rel="icon" href="assets/img/favicon.gif" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-  <link href="css/CivicIntegration.css?v=WU_V4_n1bj_4WAAGgT99QnGEgNs" rel="stylesheet" />
-  <link href="css/main.css" rel="stylesheet" />
-
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-MMQPTMD');</script>
-
-  <!-- End Google Tag Manager -->
-
-  <script>
-    !function (T, l, y) { var S = T.location, k = "script", D = "instrumentationKey", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), iKey: e, name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, { src: "https://js.monitor.azure.com/scripts/b/ai.2.gbl.min.js", crossOrigin: "anonymous", cfg: { instrumentationKey: '08cb0c86-1e05-4450-9095-789dc255728e' } });
-  </script>
-  <script>
-    _iaq = [['client', '1234567890000'], ['track', 'consume']]; !function (d, s) { var ia = d.createElement(s); ia.async = 1, s = d.getElementsByTagName(s)[0], ia.src = '//s.instance.episerver.net/ia.js', s.parentNode.insertBefore(ia, s) }(document, 'script');
-  </script>
-
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+ 
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MMQPTMD" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
-
-
-  <a class="skip-to-content-link" href="#skip" tabindex="0">Skip To Content</a>
-
-
+  <!-- header start hare-->
   <header class="header fixed-top d-flex align-items-center">
+    <a class="skip-to-content-link" href="#skip" tabindex="0">Skip to main content</a>
     <div class="container-fluid d-flex align-items-center justify-content-between">
+
       <div class="logo me-auto me-lg-0">
-        <a href="/" title="Logonostrap.svg"> <img class="brand-logo" src="assets/img/logo2023_2.svg"
-            alt="Logonostrap.svg" /></a>
+        <a href="index.html"> <img class="brand-logo" src="assets/img/logo2023_2.svg" alt="OfCom Logo" /></a>
       </div>
 
-
+      <!-- menu start here -->
       <div class="header-item ms-auto">
         <div class="menu-overlay">
         </div>
@@ -93,374 +44,191 @@
             <div class="mobile-menu-close">&times;</div>
           </div>
           <ul class="menu-main">
-
-            <li class="block menu-item-has-children topicmenublock  ">
-
-
-              <a href="#">Topics <i class="fa fa-angle-down"></i></a>
+            <li class="menu-item-has-children">
+              <a href="javascript:void(0);">Topics <i class="fa fa-angle-down"></i></a>
               <div class="sub-menu mega-menu mega-menu-column-4">
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="phone-int.html" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span> Phones and broadband</span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964"  stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Phones and broadband Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit,
+                        sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="#" class="sub-topic">TV, radio and on-demand</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">TV, radio and on-demand Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Post</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
 
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/phones-and-broadband/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> Phone and Internet </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
                   <ul>
                     <li>
-                      <span class="detail-text">
-                        Ofcom is committed to a thriving telecoms sector where companies can compete fairly and
-                        customers benefit from a broad range of services.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/online-safety/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> Online safety </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Ofcom regulates editorial content (programming) on UK &#x2018;video-on-demand&#x2019; services
-                        (or ODPS). Video-on-demand services include TV catch-up, online film services and those
-                        providing a library of archive content.&#xA;&#xA;
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/about-ofcom/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> About Ofcom </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/media-use-and-attitudes/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> Media use and attitudes </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Media use and attitudes Descriptions
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/digital-services/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> Digital services </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Digital services Descriptions
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/post/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> Post </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Ofcom regulates editorial content (programming) on UK &#x2018;video-on-demand&#x2019; services
-                        (or ODPS). Video-on-demand services include TV catch-up, online film services and those
-                        providing a library of archive content.&#xA;&#xA;
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/tv-radio-and-on-demand/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> TV, radio and on-demand </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        TV, radio and on-demand Descriptions
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/managing-the-airwaves/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> Managing the Airwaves </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Ofcom&#x27;s Spectrum Information System provides information on how radio spectrum is issued in
-                        the UK, including the types of Wireless Telegraphy (WT) Act licences available from Ofcom and
-                        details of tradable licences.&#xA;&#xA;
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/landing-page_spectrum-feature/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> Landing Page_Spectrum Feature </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Ofcom&#x27;s Spectrum Information System provides information on how radio spectrum is issued in
-                        the UK, including the types of Wireless Telegraphy (WT) Act licences available from Ofcom and
-                        details of tradable licences.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/online-safety-testing/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> Online Safety Testing </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Online Safety Testing
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/landing-page-online-safety/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> Landing Page-Online safety </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Ofcom regulates editorial content (programming) on UK &#x2018;video-on-demand&#x2019; services
-                        (or ODPS). Video-on-demand services include TV catch-up, online film services and those
-                        providing a library of archive content.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/landing-page-post/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> Postal Services </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Ofcom regulates editorial content (programming) on UK &#x2018;video-on-demand&#x2019; services
-                        (or ODPS). Video-on-demand services include TV catch-up, online film services and those
-                        providing a library of archive content.&#xA;&#xA;
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/landing-page-spectrum/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> Landing Page-Managing the Airwaves </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Ofcom&#x27;s Spectrum Information System provides information on how radio spectrum is issued in
-                        the UK, including the types of Wireless Telegraphy (WT) Act license&#x27;s available from Ofcom
-                        and details of tradable license&#x27;s.&#xA;&#xA;
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/topics/jack-topic-page/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span> Jack topic page </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-
-                      </span>
+                      <span class="detail-text">Post Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
                     </li>
                   </ul>
                 </div>
 
-
-
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Radio</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Radio Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Managing the airwaves</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Managing the airwaves Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Online safety</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Online safety Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Digital services</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Digital services Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Media use and attitudes</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Media use and attitudes Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                </div>
                 <div class="w-100 menu-social-icons">
-                  <a href="https://www.facebook.com/ofcom/" title="facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                  </a>
-                  <a href="https://www.youtube.com/ofcom" title="youtube">
-                    <i class="fa-brands fa-youtube"></i>
-                  </a>
-                  <a href="https://twitter.com/Ofcom/" title="twitter">
+                  <a href="#" title="Twitter">
                     <i class="fa-brands fa-twitter"></i>
                   </a>
-                  <a href="https://www.linkedin.com/company/ofcom" title="linkedin">
+                  <a href="#" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#" title="LinkedIn">
                     <i class="fa-brands fa-linkedin"></i>
                   </a>
-                  <a href="https://www.instagram.com/ofcom.org.uk/" title="instagram">
-                    <i class="fa-brands fa-instagram"></i>
+                  <a href="#" title="Youtube">
+                    <i class="fa-brands fa-youtube"></i>
                   </a>
-                  <a href="https://www.tiktok.com/@ofcom.org.uk" title="tiktok">
+                  <a href="#" title="Instagram">
+                    <i class="fa-brands fa-square-instagram"></i>
+                  </a>
+                  <a href="#" title="Tiktok">
                     <i class="fa-brands fa-tiktok"></i>
                   </a>
                 </div>
-
                 <div class="multicolor-banner">
                   <div class="row row-cols-auto g-0 multicolor-strip menu-strip-height">
                     <div class="bg-blue"></div>
@@ -473,361 +241,119 @@
 
               </div>
             </li>
-            <li class="block menu-item-has-children contenttypemenublock  ">
-
-
-              <a href="#">Ofcom&#x27;s Work <i class="fa fa-angle-down"></i></a>
+            <li class="menu-item-has-children">
+              <a href="#"> Ofcom’s work <i class="fa fa-angle-down"></i></a>
               <div class="sub-menu mega-menu mega-menu-column-4">
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="news-center.html" class="sub-topic">News centre</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">News centre Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit,
+                        sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Licences</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Licences Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit,
+                        sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Reports and data</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
 
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/advice-for-consumers/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Advice for consumers </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
                   <ul>
                     <li>
-                      <span class="detail-text">
-                        Advice for consumers Description
+                      <span class="detail-text">Reports and data Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit,
+                        sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
                       </span>
                     </li>
                   </ul>
                 </div>
                 <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/news-and-updates/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>News and updates </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="consultations-statements.html" class="sub-topic">Consultations and statements</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
                   <ul>
                     <li>
-                      <span class="detail-text">
-                        News and updates Descriptions&#xA;
+                      <span class="detail-text">Consultations and statements and data Lorem ipsum dolor sit amet,
+                        consectetur adipiscing
+                        elit,
+                        sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
                       </span>
                     </li>
-                  </ul>
                 </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/policies-guidance-and-codes/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Policies, guidance and codes </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Policies, guidance and codes Descriptions&#xA;
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/licence-information/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Licence information </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Licence information Descriptions&#xA;
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/information-for-industry/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Information for Industry </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Information for Industry Descriptions
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/advice-for-individuals/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Advice for Individuals </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Advice for Individuals
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/advice-for-corporates/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Advice for Corporates </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Advice for Corporates
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/consultations-and-statements/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Consultations and Statements </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Consultations are ... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sit sed do
-                        eiusmod.&#xA;
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/test/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Advice for business </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Advice on staying safe online and what you should do if you come across harmful content.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/landing-page-consultation/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Landing page Consultation </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Landing page Consultation
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/landing-page-research/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Research </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Ofcom&#x2019;s research and data collection programme
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/landing-page-license/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Landing Page License </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        To use any radio transmitting device in the UK, it will need to either be licensed, or have a
-                        specific licence exemption.&#xA;&#xA;
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/news--updates/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>News &amp; Updates </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-                        Welcome to our news centre, where you&#x2019;ll find our latest news, features, views and
-                        information relating to our work.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-item">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/content/jack-content-type/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Jack content type </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <ul>
-                    <li>
-                      <span class="detail-text">
-
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-
-
 
                 <div class="w-100 menu-social-icons">
-                  <a href="https://www.facebook.com/ofcom/" title="facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                  </a>
-                  <a href="https://www.youtube.com/ofcom" title="youtube">
-                    <i class="fa-brands fa-youtube"></i>
-                  </a>
-                  <a href="https://twitter.com/Ofcom/" title="twitter">
+                  <a href="#" title="Twitter">
                     <i class="fa-brands fa-twitter"></i>
                   </a>
-                  <a href="https://www.linkedin.com/company/ofcom" title="linkedin">
+                  <a href="#" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#" title="LinkedIn">
                     <i class="fa-brands fa-linkedin"></i>
                   </a>
-                  <a href="https://www.instagram.com/ofcom.org.uk/" title="instagram">
-                    <i class="fa-brands fa-instagram"></i>
+                  <a href="#" title="Youtube">
+                    <i class="fa-brands fa-youtube"></i>
                   </a>
-                  <a href="https://www.tiktok.com/@ofcom.org.uk" title="tiktok">
+                  <a href="#" title="Instagram">
+                    <i class="fa-brands fa-square-instagram"></i>
+                  </a>
+                  <a href="#" title="Tiktok">
                     <i class="fa-brands fa-tiktok"></i>
                   </a>
                 </div>
-
                 <div class="multicolor-banner">
                   <div class="row row-cols-auto g-0 multicolor-strip menu-strip-height">
                     <div class="bg-blue"></div>
@@ -840,72 +366,142 @@
 
               </div>
             </li>
-            <li class="block menu-item-has-children menublock  ">
-
+            <li class="menu-item-has-children">
               <a href="#"> Complaints <i class="fa fa-angle-down"></i></a>
+
+              <div class="sub-menu mega-menu mega-menu-column-4">
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="complaints.html" class="sub-topic">Complaints</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li class="mb-3">Compliants About:</li>
+                    <li><a href="complaints-about.html">TV, radio or on demand services</a></li>
+                    <li><a href="">Mobile, phone or internet services</a></li>
+                    <li><a href="#">Postal services</a></li>
+                    <li><a href="#">Wireless interference</a></li>
+                    <li><a href="#">Video-sharing platform (VSP)</a></li>
+                    <li><a href="#">Complain about something else</a></li>
+                  </ul>
+                </div>
+                <div class="list-item">
+                  <ul>
+                    <li class="mb-3"><span class="detail-text">
+                        We may be able to help you complain about or report issues relating to phone, broadband and
+                        postal services, TV, radio and on-demand programmes, interference to wireless devices, or
+                        something you have seen on a video-sharing platform.
+                      </span></li>
+                    <li><a href="#">Text Text</a></li>
+                    <li><a href="#">Text Text</a></li>
+                  </ul>
+
+                </div>
+                <div class="w-100 menu-social-icons">
+                  <a href="#" title="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="#" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="#" title="Youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="#" title="Instagram">
+                    <i class="fa-brands fa-square-instagram"></i>
+                  </a>
+                  <a href="#" title="Tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </div>
+                <div class="multicolor-banner">
+                  <div class="row row-cols-auto g-0 multicolor-strip menu-strip-height">
+                    <div class="bg-blue"></div>
+                    <div class="bg-megenta"></div>
+                    <div class="bg-pink"></div>
+                    <div class="bg-yellow"></div>
+                    <div class="bg-green"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#"> About Ofcom <i class="fa fa-angle-down"></i></a>
               <div class="sub-menu mega-menu mega-menu-column-4">
                 <div class="list-item ">
-                  <div class="title d-flex justify-content-between align-items-center">
-                    <a href="/complaints/complaints/" class="sub-menu-link">
-                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
-                        <span>Complaints </span>
-                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                            stroke-linejoin="bevel"></path>
-                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">About Ofcom</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40"
+                      style="fill: white;">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
                   <ul>
-                    <li><a href="/complaints/complaints/testing-complaints-sub-landing-page/">Testing complaints Sub
-                        landing page</a></li>
-                    <li><a href="/complaints/complaints/ba-pdf-test/">BA PDF Test</a></li>
-                    <li><a href="/complaints/complaints/complaints-sub-landing-page-testing/">Testing Complaints Sub
-                        Landing Page</a></li>
-                    <li><a href="/complaints/complaints/complaints-sub-landing-page/">Complaints Sub Landing Page</a>
-                    </li>
+                    <li><a href="#">What is Ofcom?</a></li>
+                    <li><a href="#">How Ofcom is run</a></li>
+                    <li><a href="#">News and updates</a></li>
+                    <li><a href="#">International work</a></li>
+                    <li><a href="#">Contacting Ofcom</a></li>
+                    <li><a href="#">Supplying Ofcom</a></li>
+                    <li><a href="#">Policies and guidelines</a></li>
                   </ul>
                 </div>
+                <div class="list-item">
+                  <h4 class="title visually-hidden">Accessibility</h4>
+                  <ul>
+                    <li><a href="#">Accessibility and diversity</a></li>
+                    <li><a href="#">Annual reports and plans</a></li>
+                    <li><a href="#">Freedom of Information and Data Protection</a></li>
+                    <li><a href="#">About this website</a></li>
+                    <li><a href="#">Copyright and information re-use</a></li>
+                  </ul>
 
-
+                </div>
                 <div class="list-item">
                   <ul>
-                    <li class="mb-3">
-                      <span class="detail-text">
-
-                      </span>
-                    </li>
+                    <li class="mb-3"><span class="detail-text">
+                        Optional explanatory text here and / or quick links to popular or topical content. <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur.</li>
 
                   </ul>
                 </div>
+                <div class="list-item">
 
-
-
+                </div>
                 <div class="w-100 menu-social-icons">
-                  <a href="https://www.facebook.com/ofcom/" title="facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                  </a>
-                  <a href="https://www.youtube.com/ofcom" title="youtube">
-                    <i class="fa-brands fa-youtube"></i>
-                  </a>
-                  <a href="https://twitter.com/Ofcom/" title="twitter">
+                  <a href="#" title="Twitter">
                     <i class="fa-brands fa-twitter"></i>
                   </a>
-                  <a href="https://www.linkedin.com/company/ofcom" title="linkedin">
+                  <a href="#" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#" title="LinkedIn">
                     <i class="fa-brands fa-linkedin"></i>
                   </a>
-                  <a href="https://www.instagram.com/ofcom.org.uk/" title="instagram">
-                    <i class="fa-brands fa-instagram"></i>
+                  <a href="#" title="Youtube">
+                    <i class="fa-brands fa-youtube"></i>
                   </a>
-                  <a href="https://www.tiktok.com/@ofcom.org.uk" title="tiktok">
+                  <a href="#" title="Instagram">
+                    <i class="fa-brands fa-square-instagram"></i>
+                  </a>
+                  <a href="#" title="Tiktok">
                     <i class="fa-brands fa-tiktok"></i>
                   </a>
                 </div>
-
                 <div class="multicolor-banner">
                   <div class="row row-cols-auto g-0 multicolor-strip menu-strip-height">
                     <div class="bg-blue"></div>
@@ -917,134 +513,96 @@
                 </div>
               </div>
             </li>
-
           </ul>
         </nav>
       </div>
-
-
-
-
+      <!-- menu end here -->
       <div id="search-icon" class="search-icons d-flex align-items-center order-2 order-lg-1" tabindex="0">
         <i class="fas fa-search"></i>
         <span class="visually-hidden-focusable">Global Search</span>
       </div>
+      <form action="" class="search-form">
+        <div class="search-box mx-auto position-relative">
+          <input type="search" class="search-box-input" name="" placeholder="What are looking for?" id="myInput">
 
-      <form action="/search-results/" class="search-form" id="globalSearch">
-        <div class="search-box mx-auto mb-3 position-relative">
-          <input type="search" class="search-box-input" name="query" aria-label="Global Search"
-            placeholder="What are you looking for?" id="globalquery" autocomplete="off">
-          <label for="globalquery" class="fas fa-search d-none"><span class="d-none">Search</span></label>
-          <a href="javascript:void(0)" class="fas fa-search gl-search" onClick="globalSearch()"><span
-              class="d-none">Search</span></a>
+          <label for="myInput" class="visually-hidden-focusable"><span class="d-none">Serach</span></label>
+          <a href="javascript:void(0)" class="fas fa-search gl-search"><span class="d-none">Serach</span></a>
         </div>
 
         <h4 class="text-center mt-4">Quick Links:</h4>
+
         <hr>
         <div class="search-quick-link mx-auto mt-4">
+
           <div class="row">
             <div class="col-6 col-md-3">
-              <a href="/qa-testing/standard-page-consultation/"
-                class="w-100 d-flex align-items-start align-items-start">
-                <span>About Ofcom</span>
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
+                <span>Complaints</span>
                 <i class="fa-solid fa-circle-arrow-right"></i>
               </a>
             </div>
             <div class="col-6 col-md-3">
-              <a href="/topics/online-safety/" class="w-100 d-flex align-items-start align-items-start">
-                <span>Online safety</span>
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
+                <span>Mobile and Broadband checker </span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
+                <span>What is Ofcom</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
+                <span>Licences</span>
                 <i class="fa-solid fa-circle-arrow-right"></i>
               </a>
             </div>
             <div class="col-6 col-md-3">
-              <a href="/about-us/abouts-us/" class="w-100 d-flex align-items-start align-items-start">
-                <span>Enforcement</span>
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-center">
+                <span>Newsroom</span>
                 <i class="fa-solid fa-circle-arrow-right"></i>
               </a>
             </div>
             <div class="col-6 col-md-3">
-              <a href="/topics/post/" class="w-100 d-flex align-items-start align-items-start">
-                <span>Post</span>
-                <i class="fa-solid fa-circle-arrow-right"></i>
-              </a>
-            </div>
-            <div class="col-6 col-md-3">
-              <a href="/about-us/abouts-us/" class="w-100 d-flex align-items-start align-items-start">
-                <span>About Us</span>
-                <i class="fa-solid fa-circle-arrow-right"></i>
-              </a>
-            </div>
-            <div class="col-6 col-md-3">
-              <a href="/about-us/abouts-us/reports/" class="w-100 d-flex align-items-start align-items-start">
-                <span>Reports</span>
-                <i class="fa-solid fa-circle-arrow-right"></i>
-              </a>
-            </div>
-            <div class="col-6 col-md-3">
-              <a href="/about-us/abouts-us/make-a-complaint/" class="w-100 d-flex align-items-start align-items-start">
-                <span>Make a complaint</span>
-                <i class="fa-solid fa-circle-arrow-right"></i>
-              </a>
-            </div>
-            <div class="col-6 col-md-3">
-              <a href="/about-us/abouts-us/policies/" class="w-100 d-flex align-items-start align-items-start">
-                <span>Policies</span>
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-center">
+                <span>Consultations</span>
                 <i class="fa-solid fa-circle-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
         <hr>
-
         <div class="w-75 mx-auto mt-4">
-          <h4 class="text-center mt-4 mb-5">Suggested Searches:</h4>
-          <div class="row my-3">
-            <div class="col-12 col-sm-6 col-md-3 mb-2">
-              <a href="/search-results/?query=advice" class="btn btn-primary-white-border w-100 mb-2 px-4 text-truncate"
-                title="advice">
-                advice
-              </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-2">
-              <a href="/search-results/?query=media" class="btn btn-primary-white-border w-100 mb-2 px-4 text-truncate"
-                title="media">
-                media
-              </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-2">
-              <a href="/search-results/?query=complaints"
-                class="btn btn-primary-white-border w-100 mb-2 px-4 text-truncate" title="complaints">
-                complaints
-              </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-2">
-              <a href="/search-results/?query=post" class="btn btn-primary-white-border w-100 mb-2 px-4 text-truncate"
-                title="post">
-                post
-              </a>
-            </div>
+          <h4 class="text-center mt-4 mb-5">Suggested searches</h4>
+          <div class="row my-3 d-flex align-items-center">
+            <div class="col-12 col-sm-6 col-md-3 mb-2"><button
+                class="btn btn-primary-white-border w-100 mb-2 px-4">Example
+                search</button></div>
+            <div class="col-12 col-sm-6 col-md-3 mb-2"><button
+                class="btn btn-primary-white-border w-100 mb-2 px-4">Example
+                search</button></div>
+            <div class="col-12 col-sm-6 col-md-3 mb-2"><button
+                class="btn btn-primary-white-border w-100 mb-2 px-4">Example
+                search</button></div>
+            <div class="col-12 col-sm-6 col-md-3 mb-2"><button
+                class="btn btn-primary-white-border w-100 mb-2 px-4">Example
+                search</button></div>
           </div>
         </div>
         <hr>
-
-        <div class="search-quick-link news-blue-bg mx-auto mt-4 mb-5">
-          <h4 class="text-center mt-4 mb-3">News &amp; Updates:</h4>
+        <div class="search-quick-link mx-auto mt-4 mb-5 news-blue">
+          <h4 class="text-center mt-4 mb-3">Latest</h4>
           <div class="row">
             <div class="col-12 col-md-6 col-lg-3">
-              <a href="/qa-testing/standard_page_Research/">
+              <a href="" class="">
                 <div class="info-card news-info">
-                  <picture>
-                    <source
-                      srcset="/siteassets/home/1300_600.png?format=webp&width=640&height=362&quality=80 640w, /siteassets/home/1300_600.png?format=webp&width=720&height=407&quality=80 720w, /siteassets/home/1300_600.png?format=webp&width=1024&height=579&quality=80 1024w, /siteassets/home/1300_600.png?format=webp&width=1280&height=723&quality=80 1280w, /siteassets/home/1300_600.png?format=webp&width=1536&height=868&quality=80 1536w, /siteassets/home/1300_600.png?format=webp&width=1920&height=1085&quality=80 1920w"
-                      sizes="100vw" type="image/webp" />
-                    <source
-                      srcset="/siteassets/home/1300_600.png?width=640&height=362&quality=80 640w, /siteassets/home/1300_600.png?width=720&height=407&quality=80 720w, /siteassets/home/1300_600.png?width=1024&height=579&quality=80 1024w, /siteassets/home/1300_600.png?width=1280&height=723&quality=80 1280w, /siteassets/home/1300_600.png?width=1536&height=868&quality=80 1536w, /siteassets/home/1300_600.png?width=1920&height=1085&quality=80 1920w"
-                      sizes="100vw" /><img alt="Bridge Image"
-                      src="/siteassets/home/1300_600.png?width=1920&height=1085&quality=80" loading="lazy"
-                      decoding="async" class="w-100 mb-3" />
-                  </picture>
+                  <img src="assets/img/latest-1.png" class="card-img-small mb-3" alt="...">
                   <div class="d-flex justify-content-between align-items-start">
-                    <span class="info-card-header">Standard Page - Research</span>
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
                     <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
                       xmlns="http://www.w3.org/2000/svg">
                       <circle cx="20.2449" cy="19.7964" r="19" />
@@ -1053,25 +611,16 @@
                       <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
                     </svg>
                   </div>
-                  <span class="date">22 November 2023</span>
+                  <span class="date">12/12/2022</span>
                 </div>
               </a>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
-              <a href="/qa-testing/complaints-ba/mobile-phone-and-internet-services-test/">
+              <a href="">
                 <div class="info-card news-info">
-                  <picture>
-                    <source
-                      srcset="/siteassets/home/1920_1280.png?format=webp&width=640&height=362&quality=80 640w, /siteassets/home/1920_1280.png?format=webp&width=720&height=407&quality=80 720w, /siteassets/home/1920_1280.png?format=webp&width=1024&height=579&quality=80 1024w, /siteassets/home/1920_1280.png?format=webp&width=1280&height=723&quality=80 1280w, /siteassets/home/1920_1280.png?format=webp&width=1536&height=868&quality=80 1536w, /siteassets/home/1920_1280.png?format=webp&width=1920&height=1085&quality=80 1920w"
-                      sizes="100vw" type="image/webp" />
-                    <source
-                      srcset="/siteassets/home/1920_1280.png?width=640&height=362&quality=80 640w, /siteassets/home/1920_1280.png?width=720&height=407&quality=80 720w, /siteassets/home/1920_1280.png?width=1024&height=579&quality=80 1024w, /siteassets/home/1920_1280.png?width=1280&height=723&quality=80 1280w, /siteassets/home/1920_1280.png?width=1536&height=868&quality=80 1536w, /siteassets/home/1920_1280.png?width=1920&height=1085&quality=80 1920w"
-                      sizes="100vw" /><img alt="1920_1280_Modify"
-                      src="/siteassets/home/1920_1280.png?width=1920&height=1085&quality=80" loading="lazy"
-                      decoding="async" class="w-100 mb-3" />
-                  </picture>
+                  <img src="assets/img/latest-2.png" class="card-img-small mb-3" alt="...">
                   <div class="d-flex justify-content-between align-items-start">
-                    <span class="info-card-header">Mobile, phone and internet services test</span>
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
                     <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
                       xmlns="http://www.w3.org/2000/svg">
                       <circle cx="20.2449" cy="19.7964" r="19" />
@@ -1080,25 +629,16 @@
                       <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
                     </svg>
                   </div>
-                  <span class="date">1 June 2023</span>
+                  <span class="date">12/12/2022</span>
                 </div>
               </a>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
-              <a href="/about-us/abouts-us/supplying-to-ofcom/">
+              <a href="">
                 <div class="info-card news-info">
-                  <picture>
-                    <source
-                      srcset="/siteassets/ofcom/news-center/news-center-small-4.png?format=webp&width=640&height=362&quality=80 640w, /siteassets/ofcom/news-center/news-center-small-4.png?format=webp&width=720&height=407&quality=80 720w, /siteassets/ofcom/news-center/news-center-small-4.png?format=webp&width=1024&height=579&quality=80 1024w, /siteassets/ofcom/news-center/news-center-small-4.png?format=webp&width=1280&height=723&quality=80 1280w, /siteassets/ofcom/news-center/news-center-small-4.png?format=webp&width=1536&height=868&quality=80 1536w, /siteassets/ofcom/news-center/news-center-small-4.png?format=webp&width=1920&height=1085&quality=80 1920w"
-                      sizes="100vw" type="image/webp" />
-                    <source
-                      srcset="/siteassets/ofcom/news-center/news-center-small-4.png?width=640&height=362&quality=80 640w, /siteassets/ofcom/news-center/news-center-small-4.png?width=720&height=407&quality=80 720w, /siteassets/ofcom/news-center/news-center-small-4.png?width=1024&height=579&quality=80 1024w, /siteassets/ofcom/news-center/news-center-small-4.png?width=1280&height=723&quality=80 1280w, /siteassets/ofcom/news-center/news-center-small-4.png?width=1536&height=868&quality=80 1536w, /siteassets/ofcom/news-center/news-center-small-4.png?width=1920&height=1085&quality=80 1920w"
-                      sizes="100vw" /><img alt="News Canter Small"
-                      src="/siteassets/ofcom/news-center/news-center-small-4.png?width=1920&height=1085&quality=80"
-                      loading="lazy" decoding="async" class="w-100 mb-3" />
-                  </picture>
+                  <img src="assets/img/latest-3.png" class="card-img-small mb-3" alt="...">
                   <div class="d-flex justify-content-between align-items-start">
-                    <span class="info-card-header">Supplying to Ofcom</span>
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
                     <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
                       xmlns="http://www.w3.org/2000/svg">
                       <circle cx="20.2449" cy="19.7964" r="19" />
@@ -1107,16 +647,16 @@
                       <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
                     </svg>
                   </div>
-                  <span class="date">8 May 2023</span>
+                  <span class="date">12/12/2022</span>
                 </div>
               </a>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
-              <a href="/about-us/abouts-us/news-and-information/">
+              <a href="">
                 <div class="info-card news-info">
-                  <img src="/assets/img/fallback-img.png" class="card-img-small mb-3" alt="Latest section image">
+                  <img src="assets/img/latest-1.png" class="card-img-small mb-3" alt="...">
                   <div class="d-flex justify-content-between align-items-start">
-                    <span class="info-card-header">News and information</span>
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
                     <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
                       xmlns="http://www.w3.org/2000/svg">
                       <circle cx="20.2449" cy="19.7964" r="19" />
@@ -1125,113 +665,528 @@
                       <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
                     </svg>
                   </div>
-                  <span class="date">8 May 2023</span>
+                  <span class="date">12/12/2022</span>
                 </div>
               </a>
             </div>
           </div>
         </div>
       </form>
-
-      <input type="hidden" id="searchLink" value="https://www-int1.ofcom.org.uk/search-results/" />
-
-
-      <a class="langauge-change order-1 order-lg-3" href="/cy/?language=cy" title="Switch to Welsh 1">Cymraeg</a>
-
+      <a href="" class="langauge-change order-1 order-lg-3">Cymraeg</a>
+      <!-- mobile menu trigger -->
       <div class="mobile-menu-trigger order-3 order-lg-2">
         <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none fa-solid fa-xmark"></i>
       </div>
     </div>
-  </header>
-
-
-  <main role="main">
-
-
-
-
-
-    <div id="SiteWideAlertBanner" style="display:none;" class="alert alert-dismissible fade show text-center
-     red-bg role=" alert">
-
-      <p>The website is working well. Here's a <a href="https://www.gov.uk/" target="_blank" rel="noopener">link</a>.
-      </p>
-      <a href="" id="alert-close" class="alert-close" data-bs-dismiss="alert" aria-label="Close">
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#000'>
-          <path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0
-						0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z' />
-        </svg>
-      </a>
     </div>
-
-
-
-
-
-
-
-
-
-
-    <div>
-      <div class="block  herocarouselblock  ">
-
-        <div id="carouselExampleCaptions" class="carousel slide homepage-carousel-cls">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-              class="active border border-white" aria-current=&quot;true&quot; aria-label="Slide 0">
-            </button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-              class="border border-white" aria-label="Slide 1">
-            </button>
-          </div>
-          <div class="carousel-inner text-white">
-            <div class="carousel-item active hero-image-carousel">
-
-
-              <div
-                class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
-                <div class="col-md-12 col-lg-5 carousel-heroimg-cls order-lg-0 order-sm-1">
-                  <h1 class="carousel-header-cls fw-bold">This is Carousel Item Block</h1>
-                  <p class="carousel-txt-cls">
-                    Struggling to afford your phone or broadband? Check if you could qualify for a cheaper package
-                  </p>
-                  <a class="btn btn-primary-white-border carousel-btn-position" href="/">
-                    Find more
-                    <i class="ms-2 fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-                <div class="col-md-12 col-lg-7 d-flex order-lg-1 order-sm-0">
-                  <video src="/siteassets/ofcom/home/video/people-on-computers.mp4" class="card-video" autoplay muted
-                    loop></video>
-                </div>
+  </header>
+  <main>
+    <div class="visually-hidden">Home page features</div>
+    <section class="position-relative">
+      <div id="carouselExampleCaptions" class="carousel slide homepage-carousel-cls">
+       
+        <div class="carousel-inner text-white">
+          <div class="carousel-item active hero-image-carousel">
+            <div
+              class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
+              <div class="col-md-12 col-lg-5 carousel-heroimg-cls order-lg-0 order-sm-1">
+                <h1 class="carousel-header-cls fw-bold">Slider feature title goes here Slider feature titl</h1>
+                <p class="carousel-txt-cls">Slider feature title goes here Slider feature titlSlider feature title goes
+                  here Slider feature titlSlider feature title goes here Slider feature titlSlider feature title goes
+                  here Slider feature titl</p>
+                <a href="" class="btn btn-primary-white-border carousel-btn-position">
+                  Find out more <i class="ms-2 fa-solid fa-arrow-right"></i>
+                </a>
               </div>
-            </div>
-            <div class="carousel-item hero-image-carousel">
-
-
-              <div
-                class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
-                <div class="col-md-12 col-lg-5 carousel-heroimg-cls order-lg-0 order-sm-1">
-                  <h1 class="carousel-header-cls fw-bold">Home page features</h1>
-                  <p class="carousel-txt-cls">
-                    Social tariffs are cheaper broadband and phone packages for people claiming Universal Credit,
-                    Pension Credit and some other benefits. Some providers call them &#x2018;essential&#x2019; or
-                    &#x2018;basic&#x2019; broadband.
-                  </p>
-                  <a class="btn btn-primary-white-border carousel-btn-position" href="/qa-testing/SIS/technology/">
-                    Find out more
-                    <i class="ms-2 fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-                <div class="col-md-12 col-lg-7 d-flex order-lg-1 order-sm-0">
-                  <video src="/siteassets/home/web-m-video-sample.webm" class="card-video" autoplay muted loop></video>
-                </div>
+              <div class="col-md-12 col-lg-7 d-flex order-lg-1 order-sm-0">
+                <!-- <img src="assets/img/hero-img.PNG" class="w-100" alt="" /> -->
+                <video src="assets/video/video.mp4" class="card-video" autoplay muted loop></video>
               </div>
             </div>
           </div>
-          <div class="row row-cols-auto g-0 hero-multicolor-banner multicolor-strip">
+
+          <div class="carousel-item hero-image-carousel">
+            <div
+              class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
+              <div class="col-md-12 col-lg-5 carousel-heroimg-cls order-lg-0 order-sm-1">
+                <h1 class="carousel-header-cls fw-bold">Slider feature title goes here Slider feature titl</h1>
+                <p class="carousel-txt-cls">Slider feature title goes here Slider feature titlSlider feature title goes
+                  here Slider feature titlSlider feature title goes here Slider feature titlSlider feature title goes
+                  here Slider feature titl</p>
+                <a href="" class="btn btn-primary-white-border carousel-btn-position">
+                  Find out more <i class="ms-2 fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="col-md-12 col-lg-7 d-flex order-lg-1 order-sm-0">
+                <img src="assets/img/laptop gif.gif" class="w-100" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item hero-image-carousel">
+            <div
+              class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
+              <div class="col-md-12 col-lg-5 carousel-heroimg-cls order-lg-0 order-sm-1">
+                <h1 class="carousel-header-cls fw-bold">Slider3 feature title goes here</h1>
+                <p class="carousel-txt-cls">lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod
+                  tempor incididunt ut labor.</p>
+                <a href="" class="btn btn-primary-white-border carousel-btn-position">
+                  Find out more <i class="ms-2 fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="col-md-12 col-lg-7 d-flex order-lg-1 order-sm-0">
+                <img src="https://dummyimage.com/1280x720/000/fff" class="w-100" alt="" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+            class="active border border-white" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"
+            class="border border-white"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"
+            class="border border-white"></button>
+        </div>
+      </div>
+      <div class="row row-cols-auto g-0 hero-multicolor-banner multicolor-strip">
+        <div class="col bg-blue"></div>
+        <div class="col bg-megenta"></div>
+        <div class="col bg-pink"></div>
+        <div class="col bg-yellow"></div>
+        <div class="col bg-green"></div>
+      </div>
+    </section>
+
+    <section class="container-xl my-5 twocolumnblock">
+      <div class="row">
+        <div class="col-md-12 col-lg-4">
+          <div class="card info-card-video lightblue-bg">
+             <div class="ratio ratio-16x9">
+              <iframe title="YouTube video" src="https://www.youtube-nocookie.com/embed/cdVUr-NrXng?start=12"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+
+               <!-- <iframe
+                src="https://player.vimeo.com/video/253989945?h=c6db007fe5&color=ef0800&title=0&byline=0&portrait=0"
+                frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen></iframe>  -->
+
+            </div>
+            <!-- <div class="ratio ratio-16x9">
+              <video class="card-img-small" poster="assets/img/fallback-img.png" controls muted>
+                <source src="assets/video/MOV_1280_1_4MB.mov" type="video/mp4" />
+                <track label="English" kind="subtitles" srclang="en" src="caption.vtt" default />
+              </video>
+            </div> -->
+            <div class="card-body p-0">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a href="https://www.youtube-nocookie.com/embed/cdVUr-NrXng?start=12" target="_blank"
+                class="btn btn-primary position-absolute video-btn">What
+                does OfCom
+                do </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-8">
+          <div class="row g-2 teaser-2 onethird">
+            <div class="col">
+              <a href="javascript:void(0);">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header">Lorem ipsum dolor sit amet</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header"> Lorem ipsum dolor sit amet</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header">Lorem ipsum dolor sit amet</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header">Lorem ipsum dolor sit amet</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="news-green-bg news-container-area">
+      <h2 class="text-center my-3 h2-has-h3 position-relative">Latest news
+        <button class="btn btn-primary">
+          Find out more <i class="ms-2 fa-solid fa-arrow-right"></i>
+        </button>
+      </h2>
+      <div class="swiper-outer container-xl">
+        <div class="swiper mySwiper latest-news-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="destination-with-image.html">
+                <div class="info-card news-info ">
+                  <img src="https://dummyimage.com/640x360/000/fff" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Destination</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date d-flex">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <div class="info-card news-info ">
+                  <img src="assets/img/Media.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date d-flex">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <div class="info-card news-info ">
+                  <img src="assets/img/news-center-small-7.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date d-flex">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <div class="info-card news-info ">
+                  <img src="assets/img/news-center-small-5.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date d-flex">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <div class="info-card news-info ">
+                  <img src="assets/img/latest-c-2.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date d-flex">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <div class="info-card news-info ">
+                  <img src="assets/img/news-center-small-4.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date d-flex">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <div class="info-card news-info ">
+                  <img src="assets/img/news-center-small-3.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <span class="date d-flex">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <div class="info-card news-info ">
+                  <img src="assets/img/news-center-small-2.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <span class="date d-flex">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <div class="info-card news-info ">
+                  <img src="assets/img/news-center-small-1.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <span class="date d-flex">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+      </div>
+
+    </section>
+
+    <section class="container-xl info">
+      <h3 class="text-center my-5">More from Ofcom</h3>
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="row g-2 teaser-3">
+            <div class="col">
+              <a href="">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header">Lorem ipsum dolor sit amet</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header">Lorem ipsum dolor sit amet</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header">Lorem ipsum dolor sit amet</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header">Lorem ipsum dolor sit amet</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div> <div class="col">
+              <a href="">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header">Lorem ipsum dolor sit amet</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header">Lorem ipsum dolor sit amet</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="">
+                <div class="info-card">
+                  <div class="d-flex justify-content-between align-items-start align-items-center">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                    <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-12 col-lg-4">
+          <div class="col">
+            <a href="">
+              <div class="info-card info-card-image">
+                <img src="assets/img/more-ofcom.png" class="card-img-small mb-3" alt="...">
+                <div class="d-flex justify-content-between align-items-start">
+                  <span class="info-card-header">Lorem ipsum dolor sit</span>
+                  <img class="icon-arrow" src="assets/img/web-icons/Arrow circle.svg" alt="">
+                  <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                </p>
+              </div>
+            </a>
+          </div>
+        </div> -->
+
+    </section>
+   
+    <section class="mt-5">
+      <div class="row g-0">
+        <div class="col-12 d-flex justify-content-center position-relative">
+          <button class="btn btn-primary button-subscribe">
+            Subscribe to our mailing list <i class="ms-4 fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="col-12">
+          <div class="row row-cols-auto g-0 multicolor-strip">
             <div class="col bg-blue"></div>
             <div class="col bg-megenta"></div>
             <div class="col bg-pink"></div>
@@ -1240,666 +1195,179 @@
           </div>
         </div>
       </div>
-      <div class="block  twocolumnblock  ">
+    </section>
+    <footer class="footer">
+      <div class="container-xl">
+        <h2 class="visually-hidden text-white" >Footer</h2>
+        <div class="row">
+          <div class="col-md-12 col-lg-3">
+            <section class="mt-0 mt-lg-5  social">
+              <h3 class="follow fw-bold">Follow us </h3>
+              <ul class="list-unstyled social-icons">
+                <li class="social-icons-list">
+                  <a class="" href="#" title="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="social-icons-list">
+                  <a class="" href="#" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="social-icons-list">
+                  <a class="" href="#" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="social-icons-list">
+                  <a class="" href="#" title="Youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+                <li class="social-icons-list">
+                  <a class="" href="#" title="Instagram">
+                    <i class="fa-brands fa-square-instagram"></i>
+                  </a>
+                </li>
+                <li class="social-icons-list">
+                  <a class="" href="#" title="Tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </li>
+              </ul>
 
-        <div class="">
-          <section class="container-xl">
-            <div class="row mt-5">
-              <div class="col-md-12 col-lg-4">
-                <div class="row">
-
-                  <div class="block  videotileblock  ">
-                    <section>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="card info-card-video lightblue-bg">
-                            <div class="ratio ratio-16x9">
-                              <iframe src="https://www.youtube.com/embed/cdVUr-NrXng" title="video" frameborder="0"
-                                allowfullscreen
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-                              </iframe>
-                            </div>
-                            <div class="card-body p-0">
-                              <p class="card-text">
-                                Ofcom&#x27;s Board provides strategic direction for the organisation.
-                              </p>
-                              <a href="/link/57588fe161b44581a7b43a6e977c588c.aspx" target="_blank"
-                                class="btn btn-primary position-absolute video-btn">
-                                What does Ofcom do
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-8">
-                <div class="row">
-
-                  <div class="block  standardpage col-12 col-md-6 half">
-
-                    <a href="/about-us/abouts-us/advice-for-business/">
-                      <div class="info-card">
-                        <div class="d-flex justify-content-between align-items-start">
-                          <span class="info-card-header">Advice for Business</span>
-                          <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="20.2449" cy="19.7964" r="19" />
-                            <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                              stroke-linejoin="bevel" />
-                            <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                          </svg>
-                        </div>
-                        <p>
-                          Advice for Business
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="block  standardpage col-12 col-md-6 half">
-
-                    <a href="/about-us/abouts-us/make-a-complaint/">
-                      <div class="info-card">
-                        <div class="d-flex justify-content-between align-items-start">
-                          <span class="info-card-header">Make a complaint</span>
-                          <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="20.2449" cy="19.7964" r="19" />
-                            <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                              stroke-linejoin="bevel" />
-                            <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                          </svg>
-                        </div>
-                        <p>
-                          Make a complaint
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="block  standardpage col-12 col-md-6 half">
-
-                    <a href="/about-us/abouts-us/guidelines/">
-                      <div class="info-card">
-                        <div class="d-flex justify-content-between align-items-start">
-                          <span class="info-card-header">Guidelines</span>
-                          <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="20.2449" cy="19.7964" r="19" />
-                            <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                              stroke-linejoin="bevel" />
-                            <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                          </svg>
-                        </div>
-                        <p>
-                          Lorem ipsum doloro eiusmod tempor incididunt sit amet, consectetur adipiscing elit, sed.
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="block  standardpage col-12 col-md-6 half">
-
-                    <a href="/about-us/abouts-us/career-at-ofcom/">
-                      <div class="info-card">
-                        <div class="d-flex justify-content-between align-items-start">
-                          <span class="info-card-header">Careers at Ofcom</span>
-                          <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="20.2449" cy="19.7964" r="19" />
-                            <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                              stroke-linejoin="bevel" />
-                            <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                          </svg>
-                        </div>
-                        <p>
-                          Join our exceptional team and find out why Ofcom is a brilliant place to wo rk
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+            </section>
+          </div>
+          <div class="col-md-12 col-lg-3">
+            <section class="mt-0 mt-lg-5  about-ofcom">
+              <h3 class="follow fw-bold">About Ofcom </h3>
+              <ul class="list-unstyled">
+                <li class="">
+                  <a class="footer-link" href="#">What is Ofcom?</a>
+                </li>
+                <li class="">
+                  <a class="footer-link" href="#">Contact us</a>
+                </li>
+                <li class="">
+                  <a class="footer-link" href="#">Nations and regions</a>
+                </li>
+                <li class="">
+                  <a class="footer-link" href="#">Jobs</a>
+                </li>
+                <li class="">
+                  <a class="footer-link" href="#">Media Center</a>
+                </li>
+                <li class="">
+                  <a class="footer-link" href="#">General privacy statement</a>
+                </li>
+                <li class="">
+                  <a class="footer-link" href="#">Modern slavery statement</a>
+                </li>
+                <li class="">
+                  <a class="footer-link" href="#">Our work in Welsh</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="col-md-12 col-lg-3">
+            <section class="mt-0 mt-lg-5 about-ofcom">
+              <h3 class="follow fw-bold">Aout this website</h3>
+              <ul class="list-unstyled">
+                <li class="">
+                  <a class="footer-link" href="#">Accessability</a>
+                </li>
+                <li class="">
+                  <a class="footer-link" href="#">Cookiespolicy</a>
+                </li>
+                <li class="">
+                  <a class="footer-link" href="#">Terms of use</a>
+                </li>
+                <li class="">
+                  <a class="footer-link" href="#">Copyright and information re-use</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="col-md-12 col-lg-3">
+            <section class="mt-0 mt-lg-5 about-ofcom">
+              <h3 class="follow fw-bold">Advice for business</h3>
+              <ul class="list-unstyled">
+                <li class="">
+                  <a class="footer-link" href="#">A starter pack for business</a>
+                </li>
+                <li class="">
+                  <a class="footer-link" href="#">Knowing your rights</a>
+                </li>
+                <li class="">
+                  <a class="footer-link" href="#">All our advise for business</a>
+                </li>
+              </ul>
+            </section>
+          </div>
         </div>
       </div>
-      <div class="block  latestnewsblock  ">
-
-        <section class="news-green-bg news-container-area mt-5">
-          <h2 class="text-center news-slider-header my-3 position-relative h3">Latest News</h2> <a href=""
-            class="btn btn-primary btn-primary-latest-news">
-            Find out more
-            <i class="ms-2 fa-solid fa-arrow-right"></i>
-          </a>
-          <div class="container-xl">
-            <div class="row">
-              <div class="col-12">
-                <div class="swiper-outer">
-                  <div class="swiper mySwiper latest-news-swiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <a href="/dev-testing/standard-page2/license-page/">
-                          <div class="info-card news-info ">
-                            <img src="/assets/img/news_carousel.png" class="card-img-small mb-3" alt="fallback image">
-                            <div class="d-flex justify-content-between align-items-start">
-                              <span class="info-card-header">license page</span>
-                              <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20.2449" cy="19.7964" r="19" />
-                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                                  stroke-linejoin="bevel" />
-                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                              </svg>
-                            </div>
-                            <span class="date d-flex">4 December 2023</span>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a href="/dev-testing/standard-page-2/">
-                          <div class="info-card news-info ">
-                            <img src="/assets/img/news_carousel.png" class="card-img-small mb-3" alt="fallback image">
-                            <div class="d-flex justify-content-between align-items-start">
-                              <span class="info-card-header">Standard Page 2</span>
-                              <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20.2449" cy="19.7964" r="19" />
-                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                                  stroke-linejoin="bevel" />
-                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                              </svg>
-                            </div>
-                            <span class="date d-flex">1 December 2023</span>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a href="/dev-testing/standard-page2/">
-                          <div class="info-card news-info ">
-                            <img src="/assets/img/news_carousel.png" class="card-img-small mb-3" alt="fallback image">
-                            <div class="d-flex justify-content-between align-items-start">
-                              <span class="info-card-header">Standard Page</span>
-                              <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20.2449" cy="19.7964" r="19" />
-                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                                  stroke-linejoin="bevel" />
-                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                              </svg>
-                            </div>
-                            <span class="date d-flex">27 November 2023</span>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a href="/dev-testing/standard-page/">
-                          <div class="info-card news-info ">
-                            <img src="/assets/img/news_carousel.png" class="card-img-small mb-3" alt="fallback image">
-                            <div class="d-flex justify-content-between align-items-start">
-                              <span class="info-card-header">Standard Page</span>
-                              <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20.2449" cy="19.7964" r="19" />
-                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                                  stroke-linejoin="bevel" />
-                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                              </svg>
-                            </div>
-                            <span class="date d-flex">23 November 2023</span>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a href="/qa-testing/standard_page_Research/">
-                          <div class="info-card news-info ">
-                            <picture>
-                              <source
-                                srcset="/siteassets/home/1300_600.png?format=webp&width=640&height=362&quality=80 640w, /siteassets/home/1300_600.png?format=webp&width=720&height=407&quality=80 720w, /siteassets/home/1300_600.png?format=webp&width=1024&height=579&quality=80 1024w, /siteassets/home/1300_600.png?format=webp&width=1280&height=723&quality=80 1280w, /siteassets/home/1300_600.png?format=webp&width=1536&height=868&quality=80 1536w, /siteassets/home/1300_600.png?format=webp&width=1920&height=1085&quality=80 1920w"
-                                sizes="100vw" type="image/webp" />
-                              <source
-                                srcset="/siteassets/home/1300_600.png?width=640&height=362&quality=80 640w, /siteassets/home/1300_600.png?width=720&height=407&quality=80 720w, /siteassets/home/1300_600.png?width=1024&height=579&quality=80 1024w, /siteassets/home/1300_600.png?width=1280&height=723&quality=80 1280w, /siteassets/home/1300_600.png?width=1536&height=868&quality=80 1536w, /siteassets/home/1300_600.png?width=1920&height=1085&quality=80 1920w"
-                                sizes="100vw" /><img alt="Bridge Image"
-                                src="/siteassets/home/1300_600.png?width=1920&height=1085&quality=80" loading="lazy"
-                                decoding="async" class="card-img-small mb-3" />
-                            </picture>
-                            <div class="d-flex justify-content-between align-items-start">
-                              <span class="info-card-header">Standard Page - Research</span>
-                              <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20.2449" cy="19.7964" r="19" />
-                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                                  stroke-linejoin="bevel" />
-                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                              </svg>
-                            </div>
-                            <span class="date d-flex">22 November 2023</span>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a href="/ba-test-pages/meta-data-test/">
-                          <div class="info-card news-info ">
-                            <picture>
-                              <source
-                                srcset="/siteassets/ofcom/home/100x80.png?format=webp&width=640&height=362&quality=80 640w, /siteassets/ofcom/home/100x80.png?format=webp&width=720&height=407&quality=80 720w, /siteassets/ofcom/home/100x80.png?format=webp&width=1024&height=579&quality=80 1024w, /siteassets/ofcom/home/100x80.png?format=webp&width=1280&height=723&quality=80 1280w, /siteassets/ofcom/home/100x80.png?format=webp&width=1536&height=868&quality=80 1536w, /siteassets/ofcom/home/100x80.png?format=webp&width=1920&height=1085&quality=80 1920w"
-                                sizes="100vw" type="image/webp" />
-                              <source
-                                srcset="/siteassets/ofcom/home/100x80.png?width=640&height=362&quality=80 640w, /siteassets/ofcom/home/100x80.png?width=720&height=407&quality=80 720w, /siteassets/ofcom/home/100x80.png?width=1024&height=579&quality=80 1024w, /siteassets/ofcom/home/100x80.png?width=1280&height=723&quality=80 1280w, /siteassets/ofcom/home/100x80.png?width=1536&height=868&quality=80 1536w, /siteassets/ofcom/home/100x80.png?width=1920&height=1085&quality=80 1920w"
-                                sizes="100vw" /><img alt=""
-                                src="/siteassets/ofcom/home/100x80.png?width=1920&height=1085&quality=80" loading="lazy"
-                                decoding="async" class="card-img-small mb-3" />
-                            </picture>
-                            <div class="d-flex justify-content-between align-items-start">
-                              <span class="info-card-header">Meta Data Test</span>
-                              <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20.2449" cy="19.7964" r="19" />
-                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                                  stroke-linejoin="bevel" />
-                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                              </svg>
-                            </div>
-                            <span class="date d-flex">12 October 2023</span>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a href="/topics/phones-and-broadband/allocating-phone-numbers/demo-standard-page/">
-                          <div class="info-card news-info ">
-                            <img src="/assets/img/news_carousel.png" class="card-img-small mb-3" alt="fallback image">
-                            <div class="d-flex justify-content-between align-items-start">
-                              <span class="info-card-header">Demo Standard page</span>
-                              <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20.2449" cy="19.7964" r="19" />
-                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                                  stroke-linejoin="bevel" />
-                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                              </svg>
-                            </div>
-                            <span class="date d-flex">5 October 2023</span>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a href="/complaint/complain-about-a-video-sharing-platform-vsp/">
-                          <div class="info-card news-info ">
-                            <img src="/assets/img/news_carousel.png" class="card-img-small mb-3" alt="fallback image">
-                            <div class="d-flex justify-content-between align-items-start">
-                              <span class="info-card-header">Complain about a video-sharing platform (VSP)</span>
-                              <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20.2449" cy="19.7964" r="19" />
-                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                                  stroke-linejoin="bevel" />
-                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                              </svg>
-                            </div>
-                            <span class="date d-flex">20 September 2023</span>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a href="/complaints/testing-standard-page/">
-                          <div class="info-card news-info ">
-                            <picture>
-                              <source
-                                srcset="/siteassets/home/1920_1280.png?format=webp&width=640&height=362&quality=80 640w, /siteassets/home/1920_1280.png?format=webp&width=720&height=407&quality=80 720w, /siteassets/home/1920_1280.png?format=webp&width=1024&height=579&quality=80 1024w, /siteassets/home/1920_1280.png?format=webp&width=1280&height=723&quality=80 1280w, /siteassets/home/1920_1280.png?format=webp&width=1536&height=868&quality=80 1536w, /siteassets/home/1920_1280.png?format=webp&width=1920&height=1085&quality=80 1920w"
-                                sizes="100vw" type="image/webp" />
-                              <source
-                                srcset="/siteassets/home/1920_1280.png?width=640&height=362&quality=80 640w, /siteassets/home/1920_1280.png?width=720&height=407&quality=80 720w, /siteassets/home/1920_1280.png?width=1024&height=579&quality=80 1024w, /siteassets/home/1920_1280.png?width=1280&height=723&quality=80 1280w, /siteassets/home/1920_1280.png?width=1536&height=868&quality=80 1536w, /siteassets/home/1920_1280.png?width=1920&height=1085&quality=80 1920w"
-                                sizes="100vw" /><img alt="1920_1280_Modify"
-                                src="/siteassets/home/1920_1280.png?width=1920&height=1085&quality=80" loading="lazy"
-                                decoding="async" class="card-img-small mb-3" />
-                            </picture>
-                            <div class="d-flex justify-content-between align-items-start">
-                              <span class="info-card-header">Testing Standard page</span>
-                              <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20.2449" cy="19.7964" r="19" />
-                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                                  stroke-linejoin="bevel" />
-                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
-                              </svg>
-                            </div>
-                            <span class="date d-flex">17 September 2023</span>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      <div class=" container-xl">
+        <div class="row copyrights ">
+          <div class="copyright-text text-lg-start text-start text-sm-end">© Ofcom 2023</div>
+        </div>
       </div>
-    </div>
-    <a href="/top" class="back-to-top" id="page-top">
+    </footer>
+    <a class="back-to-top">
       <i class="fa-solid fa-chevron-up"></i>
-      <span title="Back To Top">Back To Top</span>
+      <span>Back to top</span>
     </a>
   </main>
 
 
-
-
-
-  <section class="mtop-5" aria-label="subscription">
-    <div class="row g-0">
-      <div class="col-12 d-flex justify-content-center position-relative">
-        <a href="https://www-int1.ofcom.org.uk/subscription-forms/email-subscription-pagede-testing/"
-          class="btn btn-primary button-subscribe">
-          Subscribe to our mailing list <i class="ms-4 fa-solid fa-arrow-right"></i>
-        </a>
-      </div>
-      <div class="col-12">
-        <div class="row row-cols-auto g-0 multicolor-strip">
-          <div class="col bg-blue"></div>
-          <div class="col bg-megenta"></div>
-          <div class="col bg-pink"></div>
-          <div class="col bg-yellow"></div>
-          <div class="col bg-green"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script defer="defer" src="/Util/Find/epi-util/find.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () { if (typeof FindApi === 'function') { var api = new FindApi(); api.setApplicationUrl('/'); api.setServiceApiBaseUrl('/find_v2/'); api.processEventFromCurrentUri(); api.bindWindowEvents(); api.bindAClickEvent(); api.sendBufferedEvents(); } })
-  </script>
-
-
-  <footer class="footer">
-    <div class="container-xl">
-      <div class="row">
-
-        <div class="block col-md-12 col-lg-3 socialiconsblock  ">
-
-          <section class="mt-0 mt-lg-5 social">
-            <div class="follow fw-bold">
-              <h3> Follow us </h3>
-            </div>
-            <ul class="list-unstyled social-icons">
-              <li class="social-icons-list">
-                <a class="" href="https://www.facebook.com/ofcom/" title="facebook">
-                  <i class="fa-brands fa-facebook"></i>
-                </a>
-              </li>
-              <li class="social-icons-list">
-                <a class="" href="https://www.youtube.com/ofcom" title="youtube">
-                  <i class="fa-brands fa-youtube"></i>
-                </a>
-              </li>
-              <li class="social-icons-list">
-                <a class="" href="https://twitter.com/Ofcom/" title="twitter">
-                  <i class="fa-brands fa-twitter"></i>
-                </a>
-              </li>
-              <li class="social-icons-list">
-                <a class="" href="https://www.linkedin.com/company/ofcom" title="linkedin">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-              </li>
-              <li class="social-icons-list">
-                <a class="" href="https://www.instagram.com/ofcom.org.uk/" title="instagram">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-              </li>
-              <li class="social-icons-list">
-                <a class="" href="https://www.tiktok.com/@ofcom.org.uk" title="tiktok">
-                  <i class="fa-brands fa-tiktok"></i>
-                </a>
-              </li>
-            </ul>
-          </section>
-
-        </div>
-        <div class="block col-md-12 col-lg-3 linklistblock  ">
-
-          <section class="mt-0 mt-lg-5 about-ofcom">
-            <div class="follow fw-bold">
-              <h2 class="h5"> Advice for business </h2>
-            </div>
-            <ul class="list-unstyled">
-              <li>
-                <a class="footer-link"
-                  href="https://www.ofcom.org.uk/advice-for-businesses/inexperienced-digital-users">
-                  A starter pack for businesses
-                </a>
-              </li>
-              <li>
-                <a class="footer-link" href="https://www.ofcom.org.uk/advice-for-businesses/knowing-your-rights">
-                  Knowing your rights
-                </a>
-              </li>
-              <li>
-                <a class="footer-link" href="https://www.ofcom.org.uk/advice-for-businesses">
-                  Read all our advice for businesses
-                </a>
-              </li>
-            </ul>
-          </section>
-        </div>
-        <div class="block col-md-12 col-lg-3 linklistblock  ">
-
-          <section class="mt-0 mt-lg-5 about-ofcom">
-            <div class="follow fw-bold">
-              <h2 class="h5"> What is Ofcom? </h2>
-            </div>
-            <ul class="list-unstyled">
-              <li>
-                <a class="footer-link" href="https://www.ofcom.org.uk/about-ofcom/what-is-ofcom">
-                  What is Ofcom?
-                </a>
-              </li>
-              <li>
-                <a class="footer-link" href="https://www.ofcom.org.uk/about-ofcom/contact-us">
-                  Contact us
-                </a>
-              </li>
-              <li>
-                <a class="footer-link" href="https://www.ofcom.org.uk/about-ofcom/how-ofcom-is-run/nations-and-regions">
-                  Nations and regions
-                </a>
-              </li>
-              <li>
-                <a class="footer-link"
-                  href="https://careers.ofcom.org.uk/?_gl=1*1ll1k4j*_ga*MTAyMjQzNTQ5NS4xNjg4OTkwNzM0*_ga_KZEZZFSE15*MTY5MzA3MzY3Ny4xLjAuMTY5MzA3MzY3Ny42MC4wLjA.">
-                  Jobs
-                </a>
-              </li>
-              <li>
-                <a class="footer-link" href="https://www.ofcom.org.uk/about-ofcom/foi-dp/general-privacy-statement">
-                  General Privacy Statement
-                </a>
-              </li>
-              <li>
-                <a class="footer-link"
-                  href="https://www.ofcom.org.uk/about-ofcom/policies-and-guidelines/supplying-ofcom/modern-slavery-statement">
-                  Modern slavery statement
-                </a>
-              </li>
-              <li>
-                <a class="footer-link"
-                  href="https://www.ofcom.org.uk/about-ofcom/how-ofcom-is-run/nations-and-regions/wales/welsh-language">
-                  Our work in Welsh
-                </a>
-              </li>
-            </ul>
-          </section>
-        </div>
-        <div class="block col-md-12 col-lg-3 linklistblock  ">
-
-          <section class="mt-0 mt-lg-5 about-ofcom">
-            <div class="follow fw-bold">
-              <h2 class="h5"> About this website </h2>
-            </div>
-            <ul class="list-unstyled">
-              <li>
-                <a class="footer-link" href="/">
-                  Accessibility
-                </a>
-              </li>
-              <li>
-                <a class="footer-link" href="/">
-                  Cookies Policy
-                </a>
-              </li>
-              <li>
-                <a class="footer-link" href="/">
-                  Terms of Use
-                </a>
-              </li>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </div>
-    <div class="container-xl">
-      <div class="row copyrights">
-        <div class="copyright-text text-lg-start text-start text-sm-end"> &#169; Ofcom 2023 </div>
-      </div>
-    </div>
-  </footer>
-
-
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-10 mx-auto">
-          <div class="modal-backbg"></div>
-          <div class="modal modal-popup fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            style="" aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-md">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h3 class="modal-title" id="exampleModalLabel">
-                    Toast Notification
-                  </h3>
-                  <button type="button" id="CloseToast" data-bs-dismiss="modal" aria-label="Close"><i
-                      class="fa fa-times" aria-hidden="true"></i></button>
-                </div>
-                <div class="modal-body">
-                  Do you want to allow Toast notifications ?
-                </div>
-                <div class="modal-footer">
-                  <button class="btn btn-secondary me-3" id="BlockToastPopup" onclick="BlockToastPopup">
-                    Block
-                  </button>
-                  <button class="btn btn-primary me-3" id="AllowToastPopup" onclick="AllowToastPopup">
-                    Allow
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/vimeo-play.js?v=FuPXV2GV19crJaVoap9jZ_UMWcI"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="css/bootstrap-ie11.min.css"><script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"><\/script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"><\/script><script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
 
-  <script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js" type="text/javascript"></script>
+  <!-- Initialize Swiper -->
   <script>
-    var config = {
-      apiKey: '67cad53ee493e0027f225973170d54f9176a8ebb',
-      product: 'PRO_MULTISITE',
-      consentCookieExpiry: 729,
-      acceptBehaviour: "recommended",
-      initialState: "open",
-      closeOnGlobalChange: true,
-      closeStyle: 'button',
-      accessibility: {
-        highlightFocus: false,
-        outline: true,
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
-      onLoad: function () {
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+          slidesPerGroup: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          slidesPerGroup: 3,
+        },
       },
-      text: {
-        title: 'This website uses cookies to store information on your device.',
-        intro: 'Some are necessary to make the site work. Others are optional, and help us understand how people interact with our website and content so that we can make them better. Using this tool will set a cookie to remember your preferences. You can update them by clicking on the cookie control icon in the bottom corner. For more information on the cookies we use, <a href="https://www-int1.ofcom.org.uk/" title="Cookie policy">see our cookies policy</a>. The two buttons that follow allow you to accept all cookies and close the tool, or reject all optional cookies and close the tool. If you would like more details on our necessary cookies or would like to choose your optional cookies then the following sections detail how to do this.',
-        necessaryTitle: 'Necessary cookies',
-        necessaryDescription: 'These make our website work as it should. You can disable them via your browser settings, but this may prevent certain functionality from working.',
-        closeLabel: 'Save and close',
-        acceptSettings: 'Accept recomemended Settings',
-        rejectSettings: 'Reject optional cookies and close',
-        acceptRecommended: 'Accept Recommended Settings',
-      },
-      necessaryCookies: ['PageSpecCookie', 'SiteWideAlertBanner', 'SQ_SYSTEM_SESSION', 'pages', 'MSCC', 'ARRAffinity', 'WFESessionId', 'AI_buffer', 'AI_sentBuffer', 'ai_session', 'ToastPopupBlocked'],
-      optionalCookies: [
-        {
-          name: 'performance',
-          label: 'Optional - Performance cookies',
-          description: 'These help us understand how people use our website, which helps us improve it.',
-          cookies: ['_dc_gtm_UA-#', '_ga', '_gat', '_gid', '_fv', '_ss', '_hjid', '_hjTLDTest', 'collect', '_hjIncludedInSample', 'ai_user', 'aiuser'],
-          onAccept: function () {
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { window.dataLayer.push(arguments); }
-            gtag('consent', 'update', {
-              ad_storage: 'denied',
-              analytics_storage: 'denied',
-              personalization_storage: 'denied',
-              functionality_storage: 'denied',
-              wait_for_update: 400
-            });
-          },
-          onRevoke: function () {
-            gtag('consent', 'update', {
-              'ad_storage': 'denied',
-              'analytics_storage': 'denied',
-              'personalization_storage': 'denied',
-              'functionality_storage': 'denied'
-            });
-          },
-          recommendedState: true,
-        }, {
-          name: 'communications',
-          label: 'Optional - Marketing cookies',
-          description: 'These allow us to deliver and measure the performance of our communications through other channels. We use online advertising to help consumers get the best from their phone and broadband services. Marketing cookies enable us to target advertising on third party websites and services towards groups of people who have previously visited our website, based on their demographics or content interests.',
-          cookies: ['lang', '_at.hist.#', '__atuvc', '__atuvs', '_at.cww', 'ads/ga-audiences', 'at-lojson-cache-#', 'at-rand', 'bcookie', 'bscookie', 'fr', 'lidc', 'lissc', 'loc', 'UserMatchHistory', 'uvc', 'xtc'],
-          recommendedState: true,
-        }
-      ],
-
-      position: 'LEFT',
-      setInnerHTML: true,
-      theme: 'light',
-      branding: {
-        fontColor: "#333",
-        fontSizeTitle: "1.2em",
-        fontSizeIntro: "1em",
-        fontSizeHeaders: "1em",
-        fontSize: "0.8em",
-        backgroundColor: "#fff",
-        toggleText: "#fff",
-        toggleColor: "#fff",
-        toggleBackground: "#642566",
-        acceptText: '#fff',
-        acceptBackground: "#642566",
-        rejectText: "#642566",
-        buttonIcon: null,
-        buttonIconWidth: "64px",
-        buttonIconHeight: "64px",
-        removeIcon: false,
-        removeAbout: true,
-      }
-    };
-    CookieControl.load(config);
+    });
   </script>
 
+  
+  <script>
+    var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua & Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia & Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central Arfrican Republic", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauro", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre & Miquelon", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "St Kitts & Nevis", "St Lucia", "St Vincent", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks & Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
 
+    autocomplete(document.getElementById("myInput"), countries);
+  </script>
+  <script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="css/bootstrap-ie11.min.css"><script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"><\/script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"><\/script><script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
+ 
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
 </body>
 
 </html>
