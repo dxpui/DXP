@@ -375,9 +375,30 @@ video:focus-visible {
     color: var(--color-default);
 }
 
+
+.blue-bg a,
+.lightblue-bg a,
+.megenta-bg a,
 .red-bg a,
-.lightblue-bg a {
+.maroon-bg a {
     color: var(--color-white);
+}
+
+.pink-bg a,
+.orange-bg a {
+    color: var(--color-dark);
+}
+
+.gray-bg a,
+.green-bg a,
+.yellow-bg a {
+    color: var(--color-anchor);
+}
+
+.gray-bg a,
+.green-bg a,
+.yellow-bg a {
+    color: var(--color-anchor);
 }
 
 .red-bg a:hover,
@@ -385,10 +406,6 @@ video:focus-visible {
     color: var(--color-light-gray);
 }
 
-.orange-bg a,
-.orange-bg a:hover {
-    color: var(--color-default);
-}
 
 /*--------------------------------------------------------------
 # All Buttons
@@ -1586,6 +1603,10 @@ header .search-box {
 }
 
 @media(max-width: 992px) {
+    .carousel-heroimg-cls {
+        min-height: auto;
+    }
+
     .card-video {
         height: 100%;
         width: 100%;
@@ -1668,7 +1689,7 @@ header .search-box {
 
 @media(max-width: 992px) {
     .hero-image-carousel img {
-        height: 100%;
+        height: 400px;
         width: 100%
     }
 }
@@ -1703,6 +1724,12 @@ header .search-box {
     height: 100%;
     object-fit: cover;
     min-height: 400px;
+}
+
+@media(max-width: 992px) {
+    .hero-banner-img {
+        min-height: auto;
+    }
 }
 
 .hero-banner-narrow {
@@ -1741,6 +1768,17 @@ header .search-box {
 }
 
 :is(.gray-bg, .pink-bg, .green-bg, .yellow-bg, .orange-bg) :is(h1, h2, h3, h4, h5, h6, p) {
+    color: var(--color-default);
+}
+
+:is(.gray-bg, .pink-bg, .green-bg, .yellow-bg, .orange-bg) :is(.btn-primary) {
+    border-color: var(--color-default);
+    color: var(--color-default);
+}
+
+:is(.gray-bg, .pink-bg, .green-bg, .yellow-bg, .orange-bg) :is(.btn-primary):hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-default);
     color: var(--color-default);
 }
 
@@ -1787,7 +1825,7 @@ header .search-box {
 @media(max-width: 992px) {
     .hero-banner {
         padding: 25px 25px 50px 25px;
-        min-height: 260px;
+        /* min-height: 260px; */
     }
 
     .recommendation-block-outer {
@@ -2444,6 +2482,16 @@ a:focus .info-card.news-center:before {
 .news-social-icons i {
     font-size: 20px;
 }
+
+:is(.lightblue-bg, .blue-bg, .megenta-bg, .maroon-bg, .red-bg) :is(.news-social-icons) :is(a) {
+    color: var(--color-white);
+}
+
+:is(.lightblue-bg, .blue-bg, .megenta-bg, .maroon-bg, .red-bg) :is(.news-social-icons) :is(a):hover {
+    color: var(--color-default);
+    background-color: var(--color-white);
+}
+
 
 .bg-expend .info-card:hover:after,
 .bg-expend .info-card:hover:before {
@@ -3311,6 +3359,7 @@ a:focus .info-card.news-center:before {
 }
 
 .destination-accordian .card-body {
+    display: flow-root;
     color: #000045 !important;
     animation: colorChange1 1s forwards;
     padding: 0 20px 40px 10px;
@@ -5510,11 +5559,6 @@ blockquote cite {
     padding-inline: 10%;
 }
 
-blockquote p:has(cite) p::after,
-blockquote p:has(cite) p::before {
-    content: none;
-}
-
 .testimonial-name {
     margin-top: 15px;
     padding-inline: 10%;
@@ -5684,7 +5728,7 @@ blockquote p:has(cite) p::before {
     margin-bottom: -20px;
 }
 
-.extra-margin .onethird:nth-last-child(-n + 3) .info-card {
+/* .extra-margin .onethird:nth-last-child(-n + 3) .info-card {
     margin-bottom: -20px;
 }
 
@@ -5692,7 +5736,7 @@ blockquote p:has(cite) p::before {
     .extra-margin .onethird:nth-last-child(-n + 3) .info-card {
         margin-bottom: 20px;
     }
-}
+} */
 
 /*--------------------------------------------------------------
 #  Custom form controls
@@ -6141,6 +6185,7 @@ blockquote p:has(cite) p::before {
 
 #feedbackform .Form__Title {
     padding: 20px 0 0 20px;
+    font-size: 32px;
 }
 
 #feedbackform .Form__Status .hide {
@@ -6189,3 +6234,26 @@ blockquote p:has(cite) p::before {
 }
 
 /*********************** About Ofcom page Contact and Case reference section ********************/
+
+/*********************** For Print ********************/
+
+@media print {
+    .hero-image-carousel img {
+        height: 300px;
+    }
+
+    .card.info-card-video {
+        height: 300px;
+    }
+
+    .card.info-card-video .ratio {
+        position: static;
+        margin-inline: auto;
+    }
+
+    .showfilters-align .filter-btn {
+        top: 50px
+    }
+}
+
+/*********************** End For Print ********************/
