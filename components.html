@@ -513,13 +513,11 @@
         <i class="fas fa-search" id="search-icon"></i>
       </div>
       <form action="" class="search-form">
-        <div class="search-box mx-auto position-relative">
-          <input type="search" class="search-box-input" name="" placeholder="What are looking for?" id="myInput1">
-
-          <label for="myInput1" class="fas fa-search d-none"><span class="d-none">Serach</span></label>
-          <a href="javascript:void(0)" class="fas fa-search gl-search"><span class="d-none">Serach</span></a>
-        </div>
-
+        <div class="search-box mx-auto mb-3 position-relative">
+          <input type="search" class="search-box-input" name="query" aria-label="Global Search" placeholder="What are you looking for?" id="globalquery" autocomplete="off">
+          <label for="globalquery" class="fas fa-search d-none"><span class="d-none">Search</span></label>
+          <a href="javascript:void(0)" class="fas fa-search gl-search" onclick="globalSearch()"><span class="d-none">Search</span></a>
+      </div>
         <h4 class="text-center mt-4">Quick Links:</h4>
 
         <hr>
@@ -1573,11 +1571,9 @@
     </div>
     <section>
       <section>
-        <h3 class="text-center my-5">File Download List</h3>
+        <h3 class="text-center my-5">Key Documents</h3>
         <div class="row g-0 my-5">
           <div class="col-10 col-sm-8 mx-auto">
-
-
             <a href="" class="file-download">
               <div class="pdfdownload">
                 <img src="assets/img/web-icons/Download.svg" class="me-3" alt="">
@@ -1587,9 +1583,6 @@
                 </div>
               </div>
             </a>
-
-
-
           </div>
         </div>
       </section>
@@ -2353,9 +2346,9 @@
             No result
           </h3>
           <input type="hidden" id="hiddenFoundTextValue" value="Results found" />
-          <h3 id="searchResultsFound" style="display:none;" role="status" aria-live="polite">
+          <p class="h3" id="searchResultsFound" style="display:none;" role="status" aria-live="polite">
 
-          </h3>
+          </p>
 
 
           <!-- <input type="text" class="form-control mb-3" id="searchInput" aria-controls="SearchInformation"
@@ -2609,7 +2602,7 @@
               <div class="container-xl">
                 <div class="row">
                   <div class="col-12">
-                    <div class="accordion" id="accordionExample">
+                    <div class="accordion">
                       <div class="accordion-item destination-accordian">
                         <div class="accordion-header" id="headingOne">
                           <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
@@ -3292,9 +3285,9 @@
                 <p>
                   On average, adults in the UK spent almost
                 </p>
-                <h1>
+                <h2>
                   <div class="counter" data-target="50"></div>
-                </h1>
+                </h2>
                 <p>
                   hours online each day in September 2021
                 </p>
@@ -4029,22 +4022,16 @@
   </script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Retrieve the active accordion item index from sessionStorage
+  $(document).ready(function() {
     var activeAccordionItemIndex = sessionStorage.getItem('activeAccordionItemIndex');
 
-    // Set the active accordion item based on the retrieved index
     if (activeAccordionItemIndex !== null) {
-      var accordion = new bootstrap.Collapse(document.getElementById('collapse' + activeAccordionItemIndex));
+      $('#collapse' + activeAccordionItemIndex).collapse('show');
     }
 
-    // Listen for the accordion shown event and update sessionStorage
-    var accordionElements = document.querySelectorAll('.accordion');
-    accordionElements.forEach(function (accordionElement) {
-      accordionElement.addEventListener('shown.bs.collapse', function (event) {
-        var activeItemIndex = event.target.id.replace('collapse', '');
-        sessionStorage.setItem('activeAccordionItemIndex', activeItemIndex);
-      });
+    $('.accordion').on('shown.bs.collapse', function (event) {
+      var activeItemIndex = event.target.id.replace('collapse', '');
+      sessionStorage.setItem('activeAccordionItemIndex', activeItemIndex);
     });
   });
 </script>
