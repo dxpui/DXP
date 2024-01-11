@@ -522,7 +522,7 @@
         <h4 class="text-center mt-4">Quick Links:</h4>
 
         <hr>
-                <div class="search-quick-link mx-auto mt-4">
+        <div class="search-quick-link mx-auto mt-4">
           <div class="row">
             <div class="col-6 col-md-3">
               <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
@@ -693,7 +693,7 @@
         </div>
       </div>
     </section>
-    <section class="container info my-5 pt-3">
+    <!-- <section class="container info my-5 pt-3">
       <div class="row bg-expend">
         <div class="col-12 col-md-8 mx-auto">
           <a href="">
@@ -1012,11 +1012,102 @@
               </li>
             </ul>
             <p class="d-flex justify-content-center mt-3 pagination-count">Displaying <strong> 1 - 5</strong> of
-              <strong> 300</strong></p>
+              <strong> 300</strong>
+            </p>
           </nav>
         </div>
       </div>
-    </section>
+    </section> -->
+    <div class="block  tablesearchblock col-12 full">
+
+      <section class="container-xl my-5">
+        <div class="gray-bg p-4">
+          <div class="col-12">
+            <label for="searchInput" class="visually-hidden">Enter postcode</label>
+            <input type="text" class="form-control mb-3" id="searchInput" aria-label="search"
+              placeholder="Search Here ">
+            <input type="hidden" id="hiddenFoundTextValue" value="Matched record Found ">
+            <input type="hidden" id="hiddenNotFoundTextValue" value="No Result found">
+            <p class="h3" id="searchResults" style="display:none;" role="status" aria-live="polite">
+            </p>
+          </div>
+
+          <div id="allsearch-table" class="table-responsive yellow-theme ">
+
+            <div class="acc-description">
+              <table style="border-collapse: collapse; width: 100%; height: 223.958px;">
+                <colgroup>
+                  <col style="width: 12.1365%;">
+                  <col style="width: 87.8075%;">
+                </colgroup>
+                <tbody>
+                  <tr style="height: 22.3958px;">
+                    <td style="height: 22.3958px;"><strong>Code</strong></td>
+                    <td style="height: 22.3958px;"><strong>Area</strong></td>
+                  </tr>
+                  <tr style="height: 22.3958px;">
+                    <td style="height: 22.3958px;">0113</td>
+                    <td style="height: 22.3958px;">Leeds</td>
+                  </tr>
+                  <tr style="height: 22.3958px;">
+                    <td style="height: 22.3958px;">0114</td>
+                    <td style="height: 22.3958px;">Sheffield</td>
+                  </tr>
+                  <tr style="height: 22.3958px;">
+                    <td style="height: 22.3958px;">0115</td>
+                    <td style="height: 22.3958px;">Nottingham</td>
+                  </tr>
+                  <tr style="height: 22.3958px;">
+                    <td style="height: 22.3958px;">0116</td>
+                    <td style="height: 22.3958px;">Leicester</td>
+                  </tr>
+                  <tr style="height: 22.3958px;">
+                    <td style="height: 22.3958px;">0117</td>
+                    <td style="height: 22.3958px;">Bristol</td>
+                  </tr>
+                  <tr style="height: 22.3958px;">
+                    <td style="height: 22.3958px;">0118</td>
+                    <td style="height: 22.3958px;">Reading</td>
+                  </tr>
+                  <tr style="height: 22.3958px;">
+                    <td style="height: 22.3958px;">01200</td>
+                    <td style="height: 22.3958px;">Clitheroe</td>
+                  </tr>
+                  <tr style="height: 22.3958px;">
+                    <td style="height: 22.3958px;">01202</td>
+                    <td style="height: 22.3958px;">Bournemouth</td>
+                  </tr>
+                  <tr style="height: 22.3958px;">
+                    <td style="height: 22.3958px;"></td>
+                    <td style="height: 22.3958px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="page-banner" style="">
+      <section class="container-xl my-5">
+          <div class="col-md-12 col-lg-8 mx-auto">
+              <div role="alert" aria-live="assertive" aria-atomic="true" class="toast notification-block d-block " data-bs-autohide="true">
+                  <div class="toast-header">
+                      <i class="fa-solid f-size-m text-blue fa-circle-info"></i>
+                          <button type="button" class="btn-close" id="hide-model" data-bs-dismiss="toast" aria-label="Close"  onclick="pageInfo();"></button>
+                  </div>
+                  <div class="toast-body text-center">
+                      <h4 class="body-header">Page Specific Information Banner</h4>
+                      
+<div class="acc-description"> 
+<p>Sample alert message........!</p></div>
+
+                  </div>
+              </div>
+          </div>
+      </section>
+  </div>
     <section>
       <div class="row g-0">
         <div class="col-12 d-flex justify-content-center position-relative">
