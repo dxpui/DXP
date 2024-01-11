@@ -483,11 +483,6 @@ function autoCompleteSearch(inp, pagelink, formid) {
     inp.addEventListener("input", function (e) {
         var a, b, i, val = this.value;
         closeAllLists();
-        var pattern = /^[A-Za-z0-9 ]*$/;
-        if (!pattern.test(val)) {
-            $(this).val("");
-            return;
-        }
 
         if (val.length < 3) { return; }
         currentFocus = -1;
@@ -635,7 +630,7 @@ function lookupTable() {
 //********************Back to top**********************
 
 $(document).ready(function () {
-    var scrollTrigger = 1 * $(window).height(); // Calculate the scroll trigger based on four screen lengths
+    var scrollTrigger = 4 * $(window).height(); // Calculate the scroll trigger based on four screen lengths
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > scrollTrigger) {
@@ -1156,4 +1151,32 @@ function pageInfoBanner() {
 
 $(document).ready(function () {
     $('blockquote p:has(cite)').contents().unwrap();
+});
+
+$(document).ready(function() {
+    var storedAccordions = JSON.parse(sessionStorage.getItem('openAccordions')) || [];
+    storedAccordions.forEach(function(item) {
+      $('#' + item).addClass('show');
+      $('#' + item).prev('.accordion-header').find('.accordion-button').removeClass('collapsed');
+    });
+    $('.accordion').on('shown.bs.collapse', function (e) {
+      var accordionId = $(e.target).attr('id');
+      if ($.inArray(accordionId, storedAccordions) === -1) {
+        storedAccordions.push(accordionId);
+        sessionStorage.setItem('openAccordions', JSON.stringify(storedAccordions));
+      }
+    });
+    $('.accordion').on('hidden.bs.collapse', function (e) {
+      var accordionId = $(e.target).attr('id');
+      storedAccordions = $.grep(storedAccordions, function(value) {
+        return value !== accordionId;
+      });
+      sessionStorage.setItem('openAccordions', JSON.stringify(storedAccordions));
+    });
   });
+
+$(document).ready(function () {
+    $(document).on('DOMNodeInserted', '#CookiebotSessionPixel', function () {
+        $(this).attr('alt', 'CookiebotSessionImg');
+    });
+});
