@@ -2,7 +2,7 @@
 const menu = document.querySelector(".menu");
 let subMenu;
 
-function menuMain() {
+function menuMain() { 
     $(".menu-main").click(function (e) {
         if (e.target.closest(".menu-item-has-children")) {
             const hasChildren = e.target.closest(".menu-item-has-children");
@@ -317,13 +317,13 @@ $(document).ready(function () {
 
 // caroseul count full size img code starts here
 $(".carousel-count .carousel-inner .carousel-item img").click(function () {
-    var myModal = new bootstrap.Modal(document.getElementById('carousel-count-fullsize-img'))
+    var myModal = new bootstrap.Modal(document.getElementsByClassName('carousel-count-fullsize-img'))
     myModal.show();
-    $("#carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
+    $(".carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
 });
 
-$("#carousel-count-fullsize-img .btn-close").click(function () {
-    var myModal = new bootstrap.Modal(document.getElementById('carousel-count-fullsize-img'))
+$(".carousel-count-fullsize-img .btn-close").click(function () {
+    var myModal = new bootstrap.Modal(document.getElementsByClassName('carousel-count-fullsize-img'))
     myModal.hide();
 });
 
@@ -331,7 +331,7 @@ $(".carousel-count .carousel-inner .carousel-item").on("keydown", function (even
     var id = event.keyCode;
     if (id == 13) {
         $("#carousel-count .carousel-inner .carousel-item img").trigger('click');
-        $("#carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
+        $(".carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
     }
 });
 
@@ -842,7 +842,7 @@ $("#alert-close").click(function () {
 });
 
 $(document).ready(function () {
-    $('h1:first').attr('id', 'skip');
+    $('h1:first').attr('id', 'skipToContent');
 });
 
 $(document).ready(function () {
