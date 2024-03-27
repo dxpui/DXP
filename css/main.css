@@ -79,9 +79,17 @@ a:focus-visible {
     text-decoration: underline;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 p {
     word-wrap: break-word;
     margin-bottom: 1rem;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
 }
 
 h1,
@@ -1848,6 +1856,19 @@ header .search-box {
     position: relative;
 }
 
+.news-centre-page .recommendation-block-outer {
+    position: absolute;
+    width: 90%;
+}
+
+.news-centre-page .showfilters-align {
+    margin-top: 90px;
+}
+
+.news-centre-page:has(.newscarouselblock) .showfilters-align {
+    margin-top: 30px;
+}
+
 .recommendation-block {
     background-color: var(--color-default);
     padding: 30px 40px;
@@ -3473,7 +3494,7 @@ a:focus .info-card.news-center:before {
     font-size: 1.188rem;
     font-weight: 400;
     margin-bottom: 0;
-    line-height: 1.75rem;
+    line-height: 1.5;
 }
 
 
@@ -3942,6 +3963,10 @@ a:focus .info-card.news-center:before {
     padding: 50px 100px;
 }
 
+.callout-purple h2 {
+    font-size: 2rem;
+}
+
 @media(max-width: 991px) {
     .callout-purple {
         padding: 20px 20px;
@@ -4261,7 +4286,7 @@ a:focus .info-card.news-center:before {
     box-shadow: 0 0 0 3px var(--color-outline-focus);
 }
 
-#carousel-count-fullsize-img .btn-close {
+.carousel-count-fullsize-img-class .btn-close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -4269,7 +4294,7 @@ a:focus .info-card.news-center:before {
     background-color: #FFFFFF;
 }
 
-#carousel-count-fullsize-img .modal-header {
+.carousel-count-fullsize-img-class .modal-header {
     border-bottom: 0px !important;
 }
 
@@ -4312,7 +4337,7 @@ a:focus .info-card.news-center:before {
 
 
 @media screen and (max-width: 1024px) {
-    #carousel-count-fullsize-img .modal-dialog {
+    .carousel-count-fullsize-img-class .modal-dialog {
         max-width: 100%;
     }
 }
@@ -4760,6 +4785,11 @@ table td {
     background-color: var(--color-white);
 }
 
+table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
 table> :not(caption)>*>* {
     padding: 0.5rem 1rem;
 }
@@ -4777,7 +4807,7 @@ table caption {
     color: var(--color-default);
 }
 
-#allsearch-table table tr td:first-child {
+.allsearch-table table tr td:first-child {
     width: 72px;
 }
 
@@ -4794,7 +4824,6 @@ table caption {
     border: 1px solid var(--color-white) !important;
 }
 
-.blue-theme table tr td:first-child,
 .blue-theme table tr th,
 .blue-theme table thead tr td {
     background-color: var(--color-primary);
@@ -4803,7 +4832,6 @@ table caption {
     vertical-align: middle;
 }
 
-.red-theme table tr td:first-child,
 .red-theme table tr th,
 .red-theme table thead tr td {
     background-color: var(--color-red);
@@ -4811,7 +4839,6 @@ table caption {
     border: 1px solid var(--color-white) !important;
 }
 
-.megenta-theme table tr td:first-child,
 .megenta-theme table tr th,
 .megenta-theme table thead tr td {
     background-color: var(--color-megenta);
@@ -4819,7 +4846,6 @@ table caption {
     border: 1px solid var(--color-white) !important;
 }
 
-.lightblue-theme table tr td:first-child,
 .lightblue-theme table tr th,
 .lightblue-theme table thead tr td {
     background-color: var(--color-primary);
@@ -4827,7 +4853,6 @@ table caption {
     border: 1px solid var(--color-white) !important;
 }
 
-.maroon-theme table tr td:first-child,
 .maroon-theme table tr th,
 .maroon-theme table thead tr td {
     background-color: var(--color-maroon);
@@ -4835,35 +4860,30 @@ table caption {
     border: 1px solid var(--color-white) !important;
 }
 
-.pink-theme table tr td:first-child,
 .pink-theme table tr th,
 .pink-theme table thead tr td {
     background-color: var(--color-pink);
     color: var(--color-default);
 }
 
-.green-theme table tr td:first-child,
 .green-theme table tr th,
 .green-theme table thead tr td {
     background-color: var(--color-green);
     color: var(--color-default);
 }
 
-.orange-theme table tr td:first-child,
 .orange-theme table tr th,
 .orange-theme table thead tr td {
     background-color: var(--color-secondary);
     color: var(--color-default);
 }
 
-.yellow-theme table tr td:first-child,
 .yellow-theme table tr th,
 .yellow-theme table thead tr td {
     background-color: var(--color-yellow);
     color: var(--color-default);
 }
 
-.gray-theme table tr td:first-child,
 .gray-theme table tr th,
 .gray-theme table thead tr td {
     background-color: var(--color-light-gray);
@@ -6010,7 +6030,6 @@ blockquote cite {
 
 .Form__MainBody {
     background-color: var(--color-light-gray);
-    padding: 1.5rem;
     padding-bottom: 0;
 
 }
@@ -6298,6 +6317,7 @@ a#purple {
     color: var(--color-default);
     margin-top: 3rem !important;
     margin-bottom: 3rem !important;
+    padding: 1.5rem 1.5rem .5rem 1.5rem;
 }
 
 #feedbackform fieldset {
@@ -6314,8 +6334,15 @@ a#purple {
     }
 }
 
+
 #feedbackform fieldset .Form__Element__Caption {
     width: 50%;
+}
+
+@media(max-width: 1024px) {
+    #feedbackform fieldset .Form__Element__Caption {
+        width: 100%;
+    }
 }
 
 #feedbackform fieldset div {
@@ -6347,7 +6374,6 @@ a#purple {
 }
 
 #feedbackform .Form__Title {
-    padding: 20px 0 0 20px;
     font-size: 2rem;
 }
 

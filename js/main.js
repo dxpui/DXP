@@ -2,7 +2,7 @@
 const menu = document.querySelector(".menu");
 let subMenu;
 
-function menuMain() { 
+function menuMain() {
     $(".menu-main").click(function (e) {
         if (e.target.closest(".menu-item-has-children")) {
             const hasChildren = e.target.closest(".menu-item-has-children");
@@ -103,7 +103,7 @@ $(document).ready(function () {
     }
 
     //Filter and Sorting
-    $("#btnsubmit").on("click", function () {        
+    $("#btnsubmit").on("click", function () {
         var topicarr = [];
         for (var i = 0; i < $(".modal-topic-list li[select='true']").length; i++) {
             var x = document.querySelectorAll(".modal-topic-list li[select='true']")[i].getAttribute("data-value");
@@ -295,14 +295,12 @@ $(document).ready(function () {
     //Filter and Sorting
     $(".filter-list li").click(function () {
         if ($(".filter-list li[select='true']").length > 0) {
-            $("#btnsubmit").text(function (i, text) {
-                return $('#applyLabel').val();
-            })
+            $(".btnfilterclose").addClass("d-none");
+            $(".btnfilterapply").removeClass("d-none");
         }
         else {
-            $("#btnsubmit").text(function (i, text) {
-                return $('#closeLabel').val();
-            })
+            $(".btnfilterapply").addClass("d-none");
+            $(".btnfilterclose").removeClass("d-none");
         }
     })
 
@@ -317,13 +315,13 @@ $(document).ready(function () {
 
 // caroseul count full size img code starts here
 $(".carousel-count .carousel-inner .carousel-item img").click(function () {
-    var myModal = new bootstrap.Modal(document.getElementsByClassName('carousel-count-fullsize-img'))
+    var myModal = new bootstrap.Modal(document.getElementById('carousel-count-fullsize-img'))
     myModal.show();
-    $(".carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
+    $("#carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
 });
 
-$(".carousel-count-fullsize-img .btn-close").click(function () {
-    var myModal = new bootstrap.Modal(document.getElementsByClassName('carousel-count-fullsize-img'))
+$("#carousel-count-fullsize-img .btn-close").click(function () {
+    var myModal = new bootstrap.Modal(document.getElementById('carousel-count-fullsize-img'))
     myModal.hide();
 });
 
@@ -331,7 +329,7 @@ $(".carousel-count .carousel-inner .carousel-item").on("keydown", function (even
     var id = event.keyCode;
     if (id == 13) {
         $("#carousel-count .carousel-inner .carousel-item img").trigger('click');
-        $(".carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
+        $("#carousel-count-fullsize-img img").attr({ src: $(this).attr("src"), alt: $(this).attr("alt") });
     }
 });
 
@@ -388,14 +386,12 @@ function showModalFilter() {
     })
     $(".filter-list li").click(function () {
         if ($(".filter-list li[select='true']").length > 0) {
-            $("#btnsubmit").text(function (i, text) {
-                return $('#applyLabel').val();
-            })
+            $(".btnfilterclose").addClass("d-none");
+            $(".btnfilterapply").removeClass("d-none");
         }
         else {
-            $("#btnsubmit").text(function (i, text) {
-                return $('#closeLabel').val();
-            })
+            $(".btnfilterapply").addClass("d-none");
+            $(".btnfilterclose").removeClass("d-none");
         }
     })
 }
@@ -423,9 +419,8 @@ function clearModalFilter() {
         }
 
         $("#SelectedSortType").val('');
-        $("#btnsubmit").text(function (i, text) {
-            return "Close";
-        })
+        $(".btnfilterclose").addClass("d-none");
+        $(".btnfilterapply").removeClass("d-none");
     });
 }
 
@@ -841,9 +836,9 @@ $("#alert-close").click(function () {
     createCookie(30, "SiteWideAlertBanner", "SiteWideAlertBanner");
 });
 
-$(document).ready(function () {
-    $('h1:first').attr('id', 'skipToContent');
-});
+// $(document).ready(function () {
+//     $('h1:first').attr('id', 'skipToContent');
+// });
 
 $(document).ready(function () {
     if ($("#CTAShowInRightId").val()) {
@@ -1057,11 +1052,11 @@ function SetValuesForAvailability(upload, download, id) {
 
 //EXTERNAL LINK IN NEW TAB
 $(document).ready(function () {
-    for (var links = document.links, i = 0, a; a = links[i]; i++) {
-        if (a.host !== location.host && a.href.indexOf('javascript:void(0)') < 0) {
-            a.target = '_blank';
+    $(document.links).not(".rich-text-block a").each(function (r, k) {
+        if (k.host !== location.host && k.href.indexOf('javascript:void(0)') < 0) {
+            k.target = '_blank';
         }
-    }
+    });
 });
 
 //Swiper
@@ -1153,30 +1148,78 @@ $(document).ready(function () {
     $('blockquote p:has(cite)').contents().unwrap();
 });
 
-$(document).ready(function() {
-    var storedAccordions = JSON.parse(sessionStorage.getItem('openAccordions')) || [];
-    storedAccordions.forEach(function(item) {
-      $('#' + item).addClass('show');
-      $('#' + item).prev('.accordion-header').find('.accordion-button').removeClass('collapsed');
-    });
-    $('.accordion').on('shown.bs.collapse', function (e) {
-      var accordionId = $(e.target).attr('id');
-      if ($.inArray(accordionId, storedAccordions) === -1) {
-        storedAccordions.push(accordionId);
-        sessionStorage.setItem('openAccordions', JSON.stringify(storedAccordions));
-      }
-    });
-    $('.accordion').on('hidden.bs.collapse', function (e) {
-      var accordionId = $(e.target).attr('id');
-      storedAccordions = $.grep(storedAccordions, function(value) {
-        return value !== accordionId;
-      });
-      sessionStorage.setItem('openAccordions', JSON.stringify(storedAccordions));
-    });
-  });
+$(document).ready(function () {
+
+    //1=Refresh,2=backurl,0=firsttimeload
+    if (performance.navigation.type != 1) {
+        var storedAccordions = JSON.parse(sessionStorage.getItem('openAccordions')) || [];
+        storedAccordions.forEach(function (item) {
+            $('#' + item).addClass('show');
+            $('#' + item).prev('.accordion-header').find('.accordion-button').removeClass('collapsed');
+        });
+        $('.accordion').on('shown.bs.collapse', function (e) {
+            var accordionId = $(e.target).attr('id');
+            if ($.inArray(accordionId, storedAccordions) === -1) {
+                storedAccordions.push(accordionId);
+                sessionStorage.setItem('openAccordions', JSON.stringify(storedAccordions));
+            }
+        });
+        $('.accordion').on('hidden.bs.collapse', function (e) {
+            var accordionId = $(e.target).attr('id');
+            storedAccordions = $.grep(storedAccordions, function (value) {
+                return value !== accordionId;
+            });
+            sessionStorage.setItem('openAccordions', JSON.stringify(storedAccordions));
+        });
+    }
+});
 
 $(document).ready(function () {
     $(document).on('DOMNodeInserted', '#CookiebotSessionPixel', function () {
         $(this).attr('alt', 'CookiebotSessionImg');
     });
 });
+
+// For remove footer top margin
+$(document).ready(function () {
+    var lastBlock = $("main .block.latestnewsblock:last");
+    var allBlocks = $("main .block");
+
+    if (lastBlock.length > 0 && lastBlock.is(":last-child") && lastBlock.hasClass("block")) {
+        $("#footer-subscription").removeClass("mtop-5");
+    }
+});
+
+//This will trim the end 'forward slash' in all hyperlinks
+$(document).ready(function () {
+    $("a").each(function () {
+        var href = $(this).attr("href");
+        if (href && href.length > 1 && href.endsWith('/')) {
+            $(this).attr("href", href.slice(0, -1));
+        }
+    });
+});
+
+$(document).ready(function () {
+    checkTouch();
+    $(window).resize(function () {
+        checkTouch();
+    });
+});
+
+function checkTouch() {
+    var centeredDiv = $(".filters-content:last");
+    var absoluteDiv = $(".filter-btn");
+
+    var centeredDivRect = centeredDiv[0].getBoundingClientRect();
+    var absoluteDivRect = absoluteDiv[0].getBoundingClientRect();
+
+    if (
+        absoluteDivRect.left < centeredDivRect.right &&
+        absoluteDivRect.right > centeredDivRect.left
+    ) {
+        absoluteDiv.addClass("touched-class");
+    } else {
+        absoluteDiv.removeClass("touched-class");
+    }
+}
