@@ -509,7 +509,7 @@
         </nav>
       </div>
       <!-- menu end here -->
-      <div class="search-icons d-flex align-items-center order-2 order-lg-1" tabindex="0">
+      <div class="search-icons d-flex align-items-center order-2 order-lg-1">
         <i class="fas fa-search" id="search-icon"></i>
       </div>
       <form action="" class="search-form">
@@ -1131,13 +1131,13 @@
     <section class="container-xl">
       <div class="col-11 col-md-8 mx-auto my-5">
         <h3 class="text-center my-5">All Headings</h3>
-        <h1>
+        <h4 class="h1">
           Phones and internet
-        </h1>
-        <h2>
+        </h4>
+        <h4 class="h2">
           Slider feature title goes here
         </h2>
-        <h3>
+        <h4 class="h3">
           Latest news
         </h3>
         <h4>
@@ -1179,209 +1179,7 @@
 
 
 
-            <div class="block  formcontainerblock  ">
-
-
-
-
-
-
-
-              <form method="post" novalidate="novalidate" data-f-metadata=""
-                aria-labelledby="32120e44-a598-4783-b8a5-00bc6fe52057_label" enctype="multipart/form-data"
-                class="EPiServerForms ValidationFail" data-f-type="form" id="32120e44-a598-4783-b8a5-00bc6fe52057">
-
-
-
-                <script type="text/javascript">
-                  // This view acts as a rendering template to render InitScript(and server-side Form's descriptor) in FormContainerBlock's client-side for Form[32120e44-a598-4783-b8a5-00bc6fe52057].
-                  // TECHNOTE: all serverside (paths, dynamic values) of EPiServerForms will be transfered to client side here in this section.
-                  (function initializeOnRenderingFormDescriptor() {
-                    // each workingFormInfo is store inside epi.EPiServer.Forms, lookup by its FormGuid
-                    var workingFormInfo = epi.EPiServer.Forms["32120e44-a598-4783-b8a5-00bc6fe52057"] = {
-                      Id: "32120e44-a598-4783-b8a5-00bc6fe52057",
-                      Name: "Contact Digital Team",
-                      // whether this Form can be submitted which relates to the visitor's data (cookie, identity) and Form's settings (AllowAnonymous, AllowXXX)
-                      SubmittableStatus: { "submittable": true, "message": "" },
-                      ConfirmMessage: "submission confirmed",
-                      ResetConfirmMessage: "Reset Please",
-                      ShowNavigationBar: true,
-                      ShowSummarizedData: false,
-                      // serialize the dependency configuration of this form to clientside
-                      DependenciesInfo: JSON.parse("[]"),
-                      // keep all fieldName which are not satisfied the field dependency conditions
-                      DependencyInactiveElements: [],
-                      // Validation info, for executing validating on client side
-                      ValidationInfo: JSON.parse("[{\"targetElementName\":\"__field_205\",\"targetElementId\":\"19e68d6f-ae8c-47ca-893b-ab8f6b7dcfb2\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_209\",\"targetElementId\":\"5eaa527f-9857-4277-ba14-b6c7c0dc3163\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"Comments is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_210\",\"targetElementId\":\"4f5ef270-7176-4f17-88e5-5c3385dab676\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.EmailValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^((([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+(\\\\.([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+)*)|((\\\\x22)((((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(([\\\\x01-\\\\x08\\\\x0b\\\\x0c\\\\x0e-\\\\x1f\\\\x7f]|\\\\x21|[\\\\x23-\\\\x5b]|[\\\\x5d-\\\\x7e]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(\\\\\\\\([\\\\x01-\\\\x09\\\\x0b\\\\x0c\\\\x0d-\\\\x7f]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF]))))*(((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(\\\\x22)))@((([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.)+(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.?$\",\"dotNetPattern\":\"^((([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+(\\\\.([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+)*)|((\\\\x22)((((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(([\\\\x01-\\\\x08\\\\x0b\\\\x0c\\\\x0e-\\\\x1f\\\\x7f]|\\\\x21|[\\\\x23-\\\\x5b]|[\\\\x5d-\\\\x7e]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(\\\\\\\\([\\\\x01-\\\\x09\\\\x0b\\\\x0c\\\\x0d-\\\\x7f]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF]))))*(((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(\\\\x22)))@((([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.)+(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.?$\",\"message\":\"Enter a valid email address.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_207\",\"targetElementId\":\"cffef24e-51c0-4b04-9b57-f344a77c9f48\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.CaptchaValidator\",\"description\":null,\"model\":{\"message\":\"Enter the characters you see in the picture.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]}]"),
-                      // Steps information for driving multiple-step Forms.
-                      StepsInfo: {
-                        Steps: [{ "index": 0, "attachedUrl": "", "dependField": null, "dependCondition": null, "isActive": true, "attachedContentLink": "", "dependValue": "", "elementName": "__field_", "guid": "00000000-0000-0000-0000-000000000000" }]
-                      },
-                      FieldsExcludedInSubmissionSummary: [],
-                      ElementsInfo: JSON.parse("{\"__field_204\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ParagraphTextElementBlock\",\"friendlyName\":\"RTE\",\"customBinding\":false},\"__field_205\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Name\",\"customBinding\":false},\"__field_209\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"Comment\",\"customBinding\":false},\"__field_210\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Email\",\"customBinding\":false},\"__field_211\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Web address (URL)\",\"customBinding\":false},\"__field_206\":{\"type\":\"EPiServer.Forms.Implementation.Elements.SubmitButtonElementBlock\",\"friendlyName\":\"Submit Button\",\"customBinding\":false}}"),
-                      DataSubmitController: "/EPiServer.Forms/DataSubmit"
-                    };
-                    /// TECHNOTE: Calculation at FormInfo level, and these values will be static input for later processing.
-                    workingFormInfo.StepsInfo.FormHasNoStep_VirtualStepCreated = true; // this FLAG will be true, if Editor does not put any FormStep. Engine will create a virtual step, with empty GUID
-                    workingFormInfo.StepsInfo.FormHasNothing = false; // this FLAG will be true if FormContainer has no element at all
-                    workingFormInfo.StepsInfo.AllStepsAreNotLinked = true; // this FLAG will be true, if all steps all have contentLink= ="" (emptyString)
-                  })();
-                </script>
-                <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
-                  name="__FormGuid" value="32120e44-a598-4783-b8a5-00bc6fe52057" data-f-type="hidden"
-                  autocomplete="off">
-                <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
-                  name="__FormHostedPage" value="7" data-f-type="hidden" autocomplete="off">
-                <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
-                  name="__FormLanguage" value="en" data-f-type="hidden" autocomplete="off">
-                <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
-                  name="__FormCurrentStepIndex" value="0" data-f-type="hidden" autocomplete="off">
-                <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
-                  name="__FormSubmissionId" value="" data-f-type="hidden" autocomplete="off">
-                <input name="__RequestVerificationToken" type="hidden"
-                  value="CfDJ8FsyejV9zMlIhojUxellYDxSTc0Trd1w7IuoOwqNdjIvmaQo0PhUJAZxtuwlDNSsrkuiUGMm4yL3jO-qC83aXa-SSlsG3P3S46acvv7oCG9Svtj9BhwatwTiwKgH0YR_wK63znd_t9F5UOFjreGN2dKZ1D2UbhDwwpYQafxETWDkvuE_7czMM4iT-HT5jtTnEA">
-                <h2 class="Form__Title" id="32120e44-a598-4783-b8a5-00bc6fe52057_label">Contact Digital Team Form</h2>
-                <aside class="Form__Description">Testing Description</aside>
-                <div class="Form__Status">
-                  <div role="status" class="Form__Status__Message hide" data-f-form-statusmessage="">
-
-                  </div>
-                </div>
-                <div data-f-mainbody="" class="Form__MainBody">
-                  <section id="__field_" data-f-type="step" data-f-element-name="__field_"
-                    class="Form__Element FormStep Form__Element--NonData " data-f-stepindex="0"
-                    data-f-element-nondata="">
-                    <!-- Each FormStep groups the elements below it til the next FormStep -->
-
-
-
-
-
-
-
-                    <div class="Form__Element FormParagraphText Form__Element--NonData"
-                      data-f-element-name="__field_204" data-f-element-nondata="">
-                      <div id="13a8b718-e7b2-49f0-9801-d7bbafb4c617">
-                        <p>You can use this form to tell us about:</p>
-                        <ul>
-                          <li>broken links;</li>
-                          <li>accessibility concerns or request for alternative formats;</li>
-                          <li>other issues you find on our website.</li>
-                        </ul>
-                        <p>In your response, please can you provide the following if they are relevant:</p>
-                        <ul>
-                          <li>The link address (URL)</li>
-                          <li>The date and time you noticed the issue</li>
-                          <li>What browser you are using (and version)</li>
-                          <li>What device you are using (iPhone, Android etc.)</li>
-                          <li>Your contact details, so we can reply</li>
-                        </ul>
-                        <p>We will only use your name and email address to respond to your query, and will delete them
-                          once we have.</p>
-                      </div>
-                    </div>
-
-
-
-
-
-                    <div class="Form__Element FormTextbox ValidationRequired ValidationFail"
-                      data-f-element-name="__field_205" data-f-type="textbox"> <label
-                        for="19e68d6f-ae8c-47ca-893b-ab8f6b7dcfb2" class="Form__Element__Caption">Name</label>
-                      <input name="__field_205" id="19e68d6f-ae8c-47ca-893b-ab8f6b7dcfb2" type="text"
-                        class="FormTextbox__Input" aria-describedby="__field_205_desc" placeholder="add name"
-                        title="Enter Name" required="" aria-required="true" data-f-datainput="" aria-invalid="true"
-                        autocomplete="off">
-                      <span class="Form__Element__ValidationError" data-f-linked-name="__field_205"
-                        data-f-validationerror="" id="__field_205_desc" role="alert" style="">This field is
-                        required.</span>
-                    </div>
-
-
-
-                    <div class="Form__Element FormTextbox FormTextbox--Textarea ValidationRequired ValidationFail"
-                      data-f-element-name="__field_209" data-f-modifier="textarea" data-f-type="textbox"> <label
-                        for="5eaa527f-9857-4277-ba14-b6c7c0dc3163" class="Form__Element__Caption">Comments</label>
-                      <textarea name="__field_209" id="5eaa527f-9857-4277-ba14-b6c7c0dc3163" class="FormTextbox__Input"
-                        placeholder="" data-f-label="Comments" data-f-datainput="" required="" aria-required="true"
-                        aria-describedby="__field_209_desc" aria-invalid="true" autocomplete="off"></textarea>
-                      <span class="Form__Element__ValidationError" data-f-linked-name="__field_209"
-                        data-f-validationerror="" id="__field_209_desc" role="alert" style="">Comments is
-                        required.</span>
-                    </div>
-
-
-
-
-
-                    <div class="Form__Element FormTextbox ValidationSuccess" data-f-element-name="__field_210"
-                      data-f-type="textbox"> <label for="4f5ef270-7176-4f17-88e5-5c3385dab676"
-                        class="Form__Element__Caption">Email</label>
-                      <input name="__field_210" id="4f5ef270-7176-4f17-88e5-5c3385dab676" type="text"
-                        class="FormTextbox__Input" aria-describedby="__field_210_desc" placeholder=""
-                        data-f-datainput="" aria-invalid="false" autocomplete="off">
-                      <span class="Form__Element__ValidationError" data-f-linked-name="__field_210"
-                        data-f-validationerror="" id="__field_210_desc" role="alert" style="display:none"></span>
-                    </div>
-
-
-
-
-
-                    <div class="Form__Element FormTextbox" data-f-element-name="__field_211" data-f-type="textbox">
-                      <label for="1f2c373a-e8d3-4458-98c5-9cb1d91fc65e" class="Form__Element__Caption">Web address (URL)
-                        Note: This field is not required, but will help us identify where the issue is on our
-                        site.</label>
-                      <input name="__field_211" id="1f2c373a-e8d3-4458-98c5-9cb1d91fc65e" type="text"
-                        class="FormTextbox__Input" aria-describedby="__field_211_desc" placeholder=""
-                        data-f-datainput="" aria-invalid="false" autocomplete="off">
-                      <span class="Form__Element__ValidationError" data-f-linked-name="__field_211"
-                        data-f-validationerror="" id="__field_211_desc" role="alert" style="display:none"></span>
-                    </div>
-
-
-
-
-
-                    <div class="Form__Element FormCaptcha ValidationRequired ValidationFail"
-                      data-f-element-name="__field_207" data-f-type="captcha"> <label class="Form__Element__Caption"
-                        for="cffef24e-51c0-4b04-9b57-f344a77c9f48 ">
-                        Are you human?
-                      </label>
-                      <button name="submit" type="submit"
-                        data-f-captcha-image-handler="cffef24e-51c0-4b04-9b57-f344a77c9f48" value="RefreshCaptcha"
-                        class="FormExcludeDataRebind FormCaptcha__Refresh" data-f-captcha-refresh="">
-                        Refresh captcha
-                      </button>
-                      <img
-                        src="/EPiServer.Forms/DataSubmit/GetCaptchaImage?elementGuid=cffef24e-51c0-4b04-9b57-f344a77c9f48&amp;d=0.1951483361480284&amp;d=0.31547795874721496&amp;d=0.02030329593387359&amp;d=0.172322280956543"
-                        alt="An error has occurred while getting captcha image" class="FormCaptcha__Image"
-                        title="Enter the character you see in captcha image." data-f-captcha-image="">
-                      <input id="cffef24e-51c0-4b04-9b57-f344a77c9f48" name="__field_207" type="text"
-                        class="FormTextbox__Input FormCaptcha__Input FormHideInSummarized"
-                        title="Enter the character you see in captcha image." data-f-datainput=""
-                        aria-describedby="__field_207_desc" aria-invalid="true">
-                      <span class="Form__Element__ValidationError" data-f-linked-name="__field_207"
-                        data-f-validationerror="" id="__field_207_desc" role="alert" style="">Enter the characters you
-                        see in the picture.</span>
-                    </div>
-
-
-
-
-
-                    <button id="2c0f133e-5f72-4c4c-b5bf-1ec735bfcee2" name="submit" type="submit"
-                      value="2c0f133e-5f72-4c4c-b5bf-1ec735bfcee2" data-f-is-finalized="false"
-                      data-f-is-progressive-submit="true" data-f-type="submitbutton" data-f-element-name="__field_206"
-                      class="Form__Element FormExcludeDataRebind FormSubmitButton ">
-                      Submit</button>
-                  </section>
-
-
-
-                </div>
-              </form>
-            </div>
+            
 
 
 
@@ -1594,7 +1392,7 @@
           <div class="row g-0 mt-5">
             <div class="col-10 col-sm-8 mx-auto tab-content">
               <div class="ratio ratio-16x9 container-xl tab-pane active" id="video-1">
-                <iframe id="youtube-id" src="assets/video/video.mp4" title="YouTube video player" frameborder="0"
+                <iframe title="video 2" id="youtube-id" src="assets/video/video.mp4" title="YouTube video player" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen=""></iframe>
               </div>
@@ -2083,58 +1881,7 @@
         </p>
       </div>
     </section>
-    <section class="container my-5">
-      <h3 class="text-center my-5">Table</h3>
-      <div class="col-12 mx-auto">
-        <div class="table-responsive blue-theme">
-          <table class="table">
-            <tbody>
-              <tr>
-                <td scope="col">Official statistic</td>
-                <td scope="col">Date published </td>
-                <td scope="col">Content</td>
-                <td scope="col">Data</td>
-              </tr>
-
-              <tr>
-                <td>Adults' Media Literacy Tracker</td>
-                <td>19 January 2023</td>
-                <td>Media literacy - adults' surveys: access, use and understanding of internet, television, mobile and
-                  other platforms among the 16+ adult population of the UK</td>
-                <td><a href="">@Adults’ Media Literacy Tracker 2022 data tables and associated documents</a></td>
-              </tr>
-              <tr>
-                <td>Adults' Media Literacy Tracker</td>
-                <td>19 January 2023</td>
-                <td>Media literacy - adults' surveys: access, use and understanding of internet, television, mobile and
-                  other platforms among the 16+ adult population of the UK</td>
-                <td><a href="">@Adults’ Media Literacy Tracker 2022 data tables and associated documents</a></td>
-              </tr>
-              <tr>
-                <td>Adults' Media Literacy Tracker</td>
-                <td>19 January 2023</td>
-                <td>Media literacy - adults' surveys: access, use and understanding of internet, television, mobile and
-                  other platforms among the 16+ adult population of the UK</td>
-                <td><a href="">@Adults’ Media Literacy Tracker 2022 data tables and associated documents</a></td>
-              </tr>
-              <tr>
-                <td>Adults' Media Literacy Tracker</td>
-                <td>19 January 2023</td>
-                <td>Media literacy - adults' surveys: access, use and understanding of internet, television, mobile and
-                  other platforms among the 16+ adult population of the UK</td>
-                <td><a href="">@Adults’ Media Literacy Tracker 2022 data tables and associated documents</a></td>
-              </tr>
-              <tr>
-                <td>Adults' Media </td>
-                <td>19 Jan</td>
-                <td>Media literacy - adults' </td>
-                <td><i class="fa-regular fa-circle-xmark f-size-xl"></i></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    
     <h3 class="text-center my-5">Lookup Table</h3>
     <section class="container-xl my-5">
       <div class="gray-bg p-4">
@@ -2544,7 +2291,7 @@
                         </div>
                       </div>
                       <div class="accordion-item destination-accordian">
-                        <div class="accordion-header" id="headingOne">
+                        <div class="accordion-header" id="heading2">
                           <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
                             data-bs-target="#collapse60" aria-expanded="false">
                             <h2>
@@ -2573,7 +2320,7 @@
                         </div>
                       </div>
                       <div class="accordion-item destination-accordian">
-                        <div class="accordion-header" id="headingOne">
+                        <div class="accordion-header" id="heading3">
                           <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
                             data-bs-target="#collapse61">
                             <h2>
@@ -2613,7 +2360,7 @@
                         </div>
                       </div>
                       <div class="accordion-item destination-accordian">
-                        <div class="accordion-header" id="headingOne">
+                        <div class="accordion-header" id="heading4">
                           <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
                             data-bs-target="#collapse62">
                             <h2>
@@ -2991,7 +2738,7 @@
             <h4>Video Block Title</h4>
             <div class="video-block">
               <div class="ratio ratio-16x9 ">
-                <iframe src="assets/video/video.mp4" frameborder="0" title="video"
+                <iframe title="video 1" src="assets/video/video.mp4" frameborder="0" 
                   allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen="">
                 </iframe>
