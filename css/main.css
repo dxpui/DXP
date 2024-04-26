@@ -1861,19 +1861,14 @@ header .search-box {
     width: 90%;
 }
 
-.news-centre-page .showfilters-align {
-    margin-top: 90px;
-}
-
-.news-centre-page:has(.newscarouselblock) .showfilters-align {
-    margin-top: 30px;
+.no-news-carousel {
+    margin-top: 90px !important;
 }
 
 .recommendation-block {
     background-color: var(--color-default);
     padding: 30px 40px;
     color: var(--color-white);
-
 }
 
 .recommendation-block .search-box {
@@ -5429,9 +5424,13 @@ padding-right: 80px; */
     transition: none;
 }
 
-.pagination-block .page-item .page-link:hover,
+.pagination-block .page-item .page-link:hover {
+    border-bottom: 4px solid var(--color-secondary);
+}
+
 .pagination-block .page-item .page-link:focus {
     border-bottom: 4px solid var(--color-secondary);
+    outline: 3px solid var(--color-outline-focus);
 }
 
 .pagination-block .page-item .page-link.active {
