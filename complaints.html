@@ -877,19 +877,14 @@
 
                     <div class="col-lg-3">
                       <label class="py-2">Date Range</label>
-                      <form class="row">
-                        <label for="date" class="col-1 col-form-label">Date</label>
-                        <div class="col-5">
-                          <div class="input-group date" id="datepicker">
-                            <input type="text" class="form-control" id="date"/>
-                            <span class="input-group-append">
-                              <span class="input-group-text bg-light d-block">
-                                <i class="fa fa-calendar"></i>
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </form>
+                      <select id="example-select" placeholder="Select Topics" name="native-select"
+                        aria-label="Default select example">
+                        <option value="1">Past week</option>
+                        <option value="2">Past month</option>
+                        <option value="3">Past year</option>
+                        <option value="4">Custom date range</option>
+
+                      </select>
                     </div>
                   </div>
                   <div class="text-center mt-4">
