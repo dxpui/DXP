@@ -18,6 +18,8 @@
   <link href="  https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css"
     rel="stylesheet">
   <link href="css/virtual-select.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
   <link href="css/main.css" rel="stylesheet">
 </head>
 
@@ -849,6 +851,7 @@
                       <label class="py-2">Topics</label>
                       <select id="example-select" placeholder="Select Topics" name="native-select"
                         aria-label="Default select example">
+                        <option selected>Select Topic</option>
                         <option value="1">About Ofcom</option>
                         <option value="2">Broadband</option>
                         <option value="3">Post</option>
@@ -866,7 +869,7 @@
                     </div>
                     <div class="col-lg-3">
                       <label class="py-2">Content Type</label>
-                      <select id="example-select" multiple name="native-select" placeholder="Select Content Type"
+                      <select id="example-select-2" multiple name="native-select" placeholder="Select Content Type"
                         data-search="false" data-silent-initial-value-set="true">
                         <option value="1">Advice for consumers </option>
                         <option value="2">Enforcement</option>
@@ -876,15 +879,18 @@
                     </div>
 
                     <div class="col-lg-3">
-                      <label class="py-2">Date Range</label>
-                      <select id="example-select" placeholder="Select Topics" name="native-select"
-                        aria-label="Default select example">
-                        <option value="1">Past week</option>
-                        <option value="2">Past month</option>
-                        <option value="3">Past year</option>
-                        <option value="4">Custom date range</option>
+                      <div class="row">
+                        <div class="col-6">
+                          <label class="py-2">Updated after</label>
+                          <input type="date" class="form-control" name="updatedafter" id="updatedafter">
+                        </div>
+                        <div class="col-6">
+                          <label class="py-2">Updated before</label>
+                          <input type="date" class="form-control" name="updatedbefore" id="updatedbefore">
+                        </div>
+                      </div>
 
-                      </select>
+
                     </div>
                   </div>
                   <div class="text-center mt-4">
@@ -911,18 +917,18 @@
         <div class="col-12">
           <p class="text-center my-4" role="status" aria-live="polite">
             Displaying 1 - 27 of 184 results for "About Ofcom"
-        </p>
+          </p>
         </div>
       </div>
       <div class="row">
         <div class="col-xl-9 col-md-12">
           <div class="showfilters-align results-top pt-2">
             <strong>About</strong>
-            <a href="javascript:void(0);" class="btn btn-secondary mx-2 filters-content btn-small">
+            <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
               <i class="me-2 fa fa-close"></i> About Ofcom
             </a>
             <strong>in</strong>
-            <a href="javascript:void(0);" class="btn btn-secondary mx-2 filters-content btn-small">
+            <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
               <i class="me-2 fa fa-close"></i> Mobile Phones
             </a>
             <a href="javascript:void(0);" class="ms-3 filters-content">
@@ -1242,6 +1248,13 @@
   <script>
     VirtualSelect.init({
       ele: '#example-select',
+      hideClearButton: true,
+      disableSelectAll: true,
+    });
+  </script>
+  <script>
+    VirtualSelect.init({
+      ele: '#example-select-2',
       hideClearButton: true,
       disableSelectAll: true,
     });

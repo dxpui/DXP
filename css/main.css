@@ -4558,6 +4558,9 @@ a:focus .info-card.news-center:before {
     }
 }
 
+.filters-content{
+    margin:5px;
+}
 .filter-list {
     padding-left: 10px;
 }
@@ -4668,7 +4671,7 @@ a:focus .info-card.news-center:before {
 .filter-btn {
     background-color: transparent;
     padding: 0px;
-    margin-top: 15px;
+    margin-top: 0px;
     margin-bottom: 10px;
     color: var(--color-default);
     display: flex;
@@ -4677,7 +4680,7 @@ a:focus .info-card.news-center:before {
 
 
 .showfilters-align {
-    margin-top: 15px;
+    margin-top: 0px;
     margin-bottom: 10px;
     text-align: right;
     /* display: flex;
