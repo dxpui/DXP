@@ -2097,16 +2097,17 @@ header .search-box {
     box-shadow: none;
 }
 
-.accordion-button span {
+.accordion-button .apply-f {
     display: inline
 }
 
-.accordion-button:not(.collapsed) span {
+.accordion-button:not(.collapsed) .apply-f {
     display: none
 }
 
-.accordion-button.collapsed b {
-    display: none
+.accordion-button.collapsed .collaspe {
+    display: none;
+    font-weight: 300;
 }
 
 /*****************************************************************************/
