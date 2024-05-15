@@ -847,7 +847,7 @@
               <div class="accordion-body">
                 <div class="">
                   <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-xxl-3 col-xl-4 col-md-6">
                       <label class="py-2">Topics</label>
                       <select id="example-select" placeholder="Select Topics" name="native-select"
                         aria-label="Default select example">
@@ -857,7 +857,7 @@
                         <option value="3">Post</option>
                       </select>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-xxl-3 col-xl-4 col-md-6">
                       <label class="py-2">Sub Topics</label>
                       <select id="example-select" multiple name="native-select" placeholder="Select Sub Topics"
                         data-search="false" data-silent-initial-value-set="true">
@@ -867,7 +867,7 @@
                         <option value="4">Mobile phones</option>
                       </select>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-xxl-3 col-xl-4 col-md-6">
                       <label class="py-2">Content Type</label>
                       <select id="example-select-2" multiple name="native-select" placeholder="Select Content Type"
                         data-search="false" data-silent-initial-value-set="true">
@@ -878,13 +878,13 @@
                       </select>
                     </div>
 
-                    <div class="col-lg-3">
+                    <div class="col-xxl-3 col-xl-4 col-md-6">
                       <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-md-6">
                           <label class="py-2">Updated after</label>
                           <input type="date" class="form-control" name="updatedafter" id="updatedafter">
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-md-6">
                           <label class="py-2">Updated before</label>
                           <input type="date" class="form-control" name="updatedbefore" id="updatedbefore">
                         </div>
@@ -894,16 +894,11 @@
                     </div>
                   </div>
                   <div class="text-center mt-4">
-                    <button type="submit" id="btnsubmit" class="btn btn-primary me-4" data-bs-dismiss="modal"
+                    <button type="submit" id="btnsubmit" class="btn btn-secondary" data-bs-dismiss="modal"
                       aria-label="Apply">
                       Apply
                     </button>
-                    <!-- <button type="button" class="btn btn-primary btnfilterclose me-4" data-bs-dismiss="modal" aria-label="Close">
-                        Close
-                    </button> -->
-                    <!-- <button type="button" class="btn btn-secondary" aria-label=" Clear">
-                      Clear
-                    </button> -->
+                  
                   </div>
                 </div>
               </div>
@@ -931,13 +926,28 @@
             <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
               <i class="me-2 fa fa-close"></i> Mobile Phones
             </a>
-            <a href="javascript:void(0);" class="ms-3 filters-content">
+            <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
+              <i class="me-2 fa fa-close"></i> About Ofcom
+            </a>
+            <strong>and</strong>
+            <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
+              <i class="me-2 fa fa-close"></i> Mobile Phones
+            </a>
+            <strong>and</strong>
+            <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
+              <i class="me-2 fa fa-close"></i> About Ofcom
+            </a>
+            <strong>in</strong>
+            <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
+              <i class="me-2 fa fa-close"></i> Mobile Phones
+            </a>
+            <a href="javascript:void(0);" class="filters-content text-nowrap search-filter-clear">
               <i class="me-1 fa fa-close"></i> Clear all filter
             </a>
           </div>
         </div>
 
-        <div class="col">
+        <div class="col-xl-3 col-md-12">
           <div class="filter-btn">
             <div class="dropdown-center sort-list">
               <button class="btn btn-secondary hover-none dropdown-toggle" type="button" data-bs-toggle="dropdown"

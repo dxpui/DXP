@@ -879,6 +879,13 @@ header .search-form.active {
     font-weight: bold;
 }
 
+.search-filter-clear {
+    white-space: nowrap;
+    text-decoration: underline !important;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 .langauge-change {
     font-size: 0.75rem;
     margin-left: 40px;
@@ -1912,17 +1919,17 @@ header .search-box {
     }
 
     .recommendation-block {
-        padding: 0px 30px 20px 30px;
+        padding: 20px 30px 20px 30px;
     }
 }
 
-@media(max-width: 768px) {
+/* @media(max-width: 768px) {
     .recommendation-block-outer {
         margin-top: -60px;
         margin-left: 25px;
         margin-right: 25px;
     }
-}
+} */
 
 /* @media(max-width: 391px) {
     .recommendation-block {
@@ -1983,13 +1990,13 @@ header .search-box {
     --bs-accordion-border-color: var(--color-light-gray)
 }
 
-@media(max-width: 768px) {
+/* @media(max-width: 768px) {
     .search-filter {
         margin-left: 25px;
         margin-right: 25px;
         position: relative;
     }
-}
+} */
 
 .search-filter .accordion-body {
     padding-top: 0;
@@ -2030,13 +2037,16 @@ header .search-box {
 
 @media(max-width: 1024px) {
     .search-filter .accordion-button {
-        padding: 10px 20px;
+        padding: 10px 30px;
+    }
+
+    .search-filter .accordion-body {
+        padding-inline: 30px;
     }
 }
 
 .search-filter .accordion-button::after {
     margin-left: 15px;
-    rotate: 180deg;
     background-image: var(--bs-accordion-btn-icon);
 }
 
@@ -2087,7 +2097,7 @@ header .search-box {
     box-shadow: none;
 }
 
-.accordion-button b {
+.accordion-button span {
     display: inline
 }
 
@@ -4558,9 +4568,10 @@ a:focus .info-card.news-center:before {
     }
 }
 
-.filters-content{
-    margin:5px;
+.filters-content {
+    margin: 10px 5px;
 }
+
 .filter-list {
     padding-left: 10px;
 }
@@ -4671,7 +4682,7 @@ a:focus .info-card.news-center:before {
 .filter-btn {
     background-color: transparent;
     padding: 0px;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 10px;
     color: var(--color-default);
     display: flex;
@@ -4688,7 +4699,7 @@ a:focus .info-card.news-center:before {
     align-items: center; */
 }
 
-@media(max-width: 1400px) {
+@media(max-width: 1200px) {
     .showfilters-align {
         text-align: center;
     }
@@ -6290,6 +6301,17 @@ blockquote cite {
     padding: 0;
     padding-inline: 4px;
     background-color: transparent;
+}
+
+.standard-content-area .js-cm-form {
+    padding: 0;
+    padding-inline: 4px;
+    background-color: transparent;
+}
+
+.standard-content-area .news-center-form {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
 
 @media (max-width: 768px) {
