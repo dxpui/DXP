@@ -22,38 +22,50 @@
   <a class="skip-to-content-link" href="#skip" tabindex="0">Skip to main content</a>
   <!-- header start -->
   <header class="header fixed-top d-flex align-items-center">
-
+    <a class="skip-to-content-link" href="#skipToContent" tabindex="0">Skip to main content</a>
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
       <div class="logo me-auto me-lg-0">
-        <a href="index.html"> <img class="brand-logo" src="assets/img/Logonostrap.svg" alt="OfCom" /></a>
+        <a href="index.html"> <img class="brand-logo" src="assets/img/logo2023_2.svg" alt="OfCom Logo" /></a>
       </div>
-
+      <a href="javascript:void(0);" id="mobile-menu-trigger" class="mobile-menu-trigger order-3 order-lg-2">
+        <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none fa-solid fa-xmark"></i>
+      </a>
       <!-- menu start here -->
       <div class="header-item ms-auto">
         <div class="menu-overlay">
         </div>
         <nav class="menu">
           <div class="mobile-menu-head">
-            <div class="go-back"><i class="fa fa-angle-left"></i></div>
+            <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
             <div class="current-menu-title"></div>
             <div class="mobile-menu-close">&times;</div>
           </div>
           <ul class="menu-main">
             <li class="menu-item-has-children">
-              <a href="#">Topics <i class="fa fa-angle-down"></i></a>
+              <a href="javascript:void(0);">Topics <i class="fa fa-angle-down"></i></a>
               <div class="sub-menu mega-menu mega-menu-column-4">
+                <!-- <div class="mobile-menu-head">
+                  <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
+                  <div class="current-menu-title"></div>
+                  <div class="mobile-menu-close">&times;</div>
+                </div> -->
                 <div class="list-item">
-                  <h4 class="title d-flex justify-content-between align-items-center">
-                    <a href="phone-int.html" class="sub-topic">Phones and broadband </a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
-                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
-                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
-                        stroke-linejoin="bevel" />
-                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
-                        stroke-linejoin="bevel" />
-                    </svg>
-                  </h4>
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="phone-int.html" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span> Phones and broadband</span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
                   <ul>
                     <li>
                       <span class="detail-text">Phones and broadband Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -236,6 +248,11 @@
             <li class="menu-item-has-children">
               <a href="#"> Ofcom’s work <i class="fa fa-angle-down"></i></a>
               <div class="sub-menu mega-menu mega-menu-column-4">
+                <!-- <div class="mobile-menu-head">
+                  <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
+                  <div class="current-menu-title"></div>
+                  <div class="mobile-menu-close">&times;</div>
+                </div> -->
                 <div class="list-item">
                   <h4 class="title d-flex justify-content-between align-items-center">
                     <a href="news-center.html" class="sub-topic">News centre</a>
@@ -362,6 +379,11 @@
               <a href="#"> Complaints <i class="fa fa-angle-down"></i></a>
 
               <div class="sub-menu mega-menu mega-menu-column-4">
+                <!-- <div class="mobile-menu-head">
+                  <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
+                  <div class="current-menu-title"></div>
+                  <div class="mobile-menu-close">&times;</div>
+                </div> -->
                 <div class="list-item">
                   <h4 class="title d-flex justify-content-between align-items-center">
                     <a href="complaints.html" class="sub-topic">Complaints</a>
@@ -429,6 +451,11 @@
             <li class="menu-item-has-children">
               <a href="#"> About Ofcom <i class="fa fa-angle-down"></i></a>
               <div class="sub-menu mega-menu mega-menu-column-4">
+                <!-- <div class="mobile-menu-head">
+                  <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
+                  <div class="current-menu-title"></div>
+                  <div class="mobile-menu-close">&times;</div>
+                </div> -->
                 <div class="list-item ">
                   <h4 class="title d-flex justify-content-between align-items-center">
                     <a href="" class="sub-topic">About Ofcom</a>
@@ -509,20 +536,23 @@
         </nav>
       </div>
       <!-- menu end here -->
-      <div class="search-icons d-flex align-items-center order-2 order-lg-1" tabindex="0">
-        <i class="fas fa-search" id="search-icon"></i>
-      </div>
+      <a href="javascript:void(0);" id="search-icon" class="search-icons d-flex align-items-center order-2 order-lg-1">
+        <i class="fas fa-search"></i>
+        <span class="visually-hidden-focusable">Global Search</span>
+      </a>
       <form action="" class="search-form">
-        <div class="search-box mx-auto">
-          <input type="search" class="search-box-input" name="" placeholder="What are looking for?" id="search-box">
-          <label for="search-box" class="fas fa-search d-none"><span class="d-none">Serach</span></label>
-          <a href="search-results.html" class="fas fa-search gl-search"><span class="d-none">Serach</span></a>
+        <div class="search-box mx-auto position-relative">
+          <input type="search" class="search-box-input" name="" placeholder="What are looking for?" id="myInput">
+
+          <label for="myInput" class="visually-hidden-focusable"><span class="d-none">Serach</span></label>
+          <a href="javascript:void(0)" class="fas fa-search gl-search"><span class="d-none">Serach</span></a>
         </div>
 
         <h4 class="text-center mt-4">Quick Links:</h4>
 
         <hr>
         <div class="search-quick-link mx-auto mt-4">
+
           <div class="row">
             <div class="col-6 col-md-3">
               <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
@@ -567,7 +597,7 @@
         <hr>
         <div class="w-75 mx-auto mt-4">
           <h4 class="text-center mt-4 mb-5">Suggested searches</h4>
-          <div class="row my-3">
+          <div class="row my-3 d-flex align-items-center">
             <div class="col-12 col-sm-6 col-md-3 mb-2"><button
                 class="btn btn-primary-white-border w-100 mb-2 px-4">Example
                 search</button></div>
@@ -583,62 +613,87 @@
           </div>
         </div>
         <hr>
-        <div class="search-quick-link mx-auto mt-4 mb-5">
+        <div class="search-quick-link mx-auto mt-4 mb-5 news-blue">
           <h4 class="text-center mt-4 mb-3">Latest</h4>
           <div class="row">
             <div class="col-12 col-md-6 col-lg-3">
-              <div class="info-card news-info">
-                <img src="assets/img/latest-1.png" class="card-img-small mb-3" alt="...">
-                <div class="d-flex justify-content-between align-items-start">
-                  <a href="">Lorem ipsum dolor sit</a>
-                  <img class="icon-arrow" src="assets/img/web-icons/Arrow circle - white.svg" alt="">
-                  <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+              <a href="" class="">
+                <div class="info-card news-info">
+                  <img src="assets/img/latest-1.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date">12/12/2022</span>
                 </div>
-                <span class="date">12/12/2022</span>
-              </div>
+              </a>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
-              <div class="info-card news-info">
-                <img src="assets/img/latest-2.png" class="card-img-small mb-3" alt="...">
-                <div class="d-flex justify-content-between align-items-start">
-                  <a href="">Lorem ipsum dolor sit</a>
-                  <img class="icon-arrow" src="assets/img/web-icons/Arrow circle - white.svg" alt="">
-                  <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+              <a href="">
+                <div class="info-card news-info">
+                  <img src="assets/img/latest-2.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date">12/12/2022</span>
                 </div>
-                <span class="date">12/12/2022</span>
-              </div>
+              </a>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
-              <div class="info-card news-info">
-                <img src="assets/img/latest-3.png" class="card-img-small mb-3" alt="...">
-                <div class="d-flex justify-content-between align-items-start">
-                  <a href="">Lorem ipsum dolor sit</a>
-                  <img class="icon-arrow" src="assets/img/web-icons/Arrow circle - white.svg" alt="">
-                  <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+              <a href="">
+                <div class="info-card news-info">
+                  <img src="assets/img/latest-3.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date">12/12/2022</span>
                 </div>
-                <span class="date">12/12/2022</span>
-              </div>
+              </a>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
-              <div class="info-card news-info">
-                <img src="assets/img/latest-4.png" class="card-img-small mb-3" alt="...">
-                <div class="d-flex justify-content-between align-items-start">
-                  <a href="">Lorem ipsum dolor sit</a>
-                  <img class="icon-arrow" src="assets/img/web-icons/Arrow circle - white.svg" alt="">
-                  <img class="icon-arrow-hover" src="assets/img/web-icons/Arrow circle fill.svg" alt="">
+              <a href="">
+                <div class="info-card news-info">
+                  <img src="assets/img/latest-1.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date">12/12/2022</span>
                 </div>
-                <span class="date">12/12/2022</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>
       </form>
       <a href="" class="langauge-change order-1 order-lg-3">Cymraeg</a>
       <!-- mobile menu trigger -->
-      <div class="mobile-menu-trigger order-3 order-lg-2">
-        <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none fa-solid fa-xmark"></i>
-      </div>
+
     </div>
     </div>
   </header>
@@ -652,9 +707,9 @@
               <li class="breadcrumb-item"><a href="index.html">Ofcom</a></li>
               <li class="breadcrumb-item"><a href="index.html">Ofcom is the regulator for the communication 1</a></li>
               <li class="breadcrumb-item"><a href="index.html">Ofcom is the regulator for the communication 2</a></li>
-              <li class="breadcrumb-item"><a href="index.html">Ofcom is the regulator for the communication 3</a></li>
+              <!-- <li class="breadcrumb-item"><a href="index.html">Ofcom is the regulator for the communication 3</a></li>
               <li class="breadcrumb-item"><a href="index.html">Ofcom is the regulator for the communication 4</a></li>
-              <li class="breadcrumb-item"><a href="index.html">Ofcom is the regulator for the communication 5</a></li>
+              <li class="breadcrumb-item"><a href="index.html">Ofcom is the regulator for the communication 5</a></li> -->
               <li class="breadcrumb-item"><a href="index.html">Ofcom is the regulator for the communication 6</a></li>
               <li class="breadcrumb-item active" aria-current="page"><span>Ofcom is the regulator for the communication
                   7</span></li>
@@ -668,7 +723,8 @@
         <div class="col-md-6 order-last order-md-first">
           <div class="hero-banner pink-bg h-100">
             <h1>Slider feature title goes here Slider feature Phones and internet Phon</h1>
-            <p>Slider feature title goes here Slider feature Phones and internet Phones and internetSlider feature title
+            <p>Slider feature title goes <a href="">Slider feature Phones</a> Slider feature Phones and internet Phones
+              and internetSlider feature title
               goes here Slider feature Phones and internet Phones and internetSlider Phones and internetSlid</p>
           </div>
         </div>
@@ -680,101 +736,289 @@
             alt="" />
         </div>
       </div>
-      <div class="row g-0">
-        <div class="col-12 col-lg-8">
-          <div class="recommendation-block">
-            <div class="row">
-              <div class="col-12 mb-4">
-                <h2 class="recommendation-header">Recommendation for you</h2>
-              </div>
-              <div class="col-md-4">
-                <a href="" class="recommendation-link-block">
-                  <div class="recommendation-link d-flex justify-content-between align-items-start align-items-center">
-                    <span class="ps-2"> Quick link here</span>
-                    <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                        stroke-linejoin="bevel"></path>
-                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                    </svg>
+      <form action="" class="w-100 show-modal-filter" id="contentTypeForm" method="get">
+        <div class="row g-0">
+          <div class="col-12">
+            <div class="recommendation-block-outer">
+              <div class="row g-0">
+                <div class="col-md-12 col-lg-6 d-flex align-items-center search-form blue-bg recommendation-block">
+                  <div class="search-box position-relative">
+                    <input type="search" class="search-box-input results-input" name="query"
+                      placeholder="What are you looking for?" id="query" autocomplete="off" value="">
+                    <label for="query" class="visually-hidden-focusable"><span class="d-none">Search</span></label>
+                    <button type="submit" class="serach-icon-btn" aria-label="What are you looking for?">
+                      <i class="fas fa-search page-search"></i>
+                    </button>
                   </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                 <a href="" class="recommendation-link-block">
-                  <div class="recommendation-link d-flex justify-content-between align-items-start align-items-center">
-                    <span class="ps-2"> Quick link here</span>
-                    <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                        stroke-linejoin="bevel"></path>
-                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                    </svg>
+                  <a href="">Show filter</a>
+                </div>
+                <div class="col-md-12 col-lg-6">
+
+                  <div>
+                    <div class="block  ctaquicklinksblock  ">
+
+                      <div class="blue-bg recommendation-block">
+                        <div class="row">
+                          <div class="col-12 mb-1">
+                            <h2 class="recommendation-header"> Popular links </h2>
+                          </div>
+                          <div class="col-md-6">
+                            <a href="/advice-for-consumers" class="recommendation-link-block">
+                              <div
+                                class="recommendation-link d-flex justify-content-between align-items-start align-items-start">
+                                <span> Advice for consumers </span>
+                                <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                                    stroke-linejoin="bevel"></path>
+                                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel">
+                                  </path>
+                                </svg>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-md-6">
+                            <a href="/advice-for-corporates" class="recommendation-link-block">
+                              <div
+                                class="recommendation-link d-flex justify-content-between align-items-start align-items-start">
+                                <span> Advice for Corporates </span>
+                                <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                                    stroke-linejoin="bevel"></path>
+                                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel">
+                                  </path>
+                                </svg>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-md-6">
+                            <a href="/policies-guidance-and-codes" class="recommendation-link-block">
+                              <div
+                                class="recommendation-link d-flex justify-content-between align-items-start align-items-start">
+                                <span> Policies, guidance and codes </span>
+                                <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                                    stroke-linejoin="bevel"></path>
+                                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel">
+                                  </path>
+                                </svg>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-md-6">
+                            <a href="/licence-information" class="recommendation-link-block">
+                              <div
+                                class="recommendation-link d-flex justify-content-between align-items-start align-items-start">
+                                <span> Licence information </span>
+                                <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                                    stroke-linejoin="bevel"></path>
+                                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel">
+                                  </path>
+                                </svg>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="" class="recommendation-link-block">
-                  <div class="recommendation-link d-flex justify-content-between align-items-start align-items-center">
-                    <span class="ps-2"> Quick link here</span>
-                    <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                        stroke-linejoin="bevel"></path>
-                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                 <a href="" class="recommendation-link-block">
-                  <div class="recommendation-link d-flex justify-content-between align-items-start align-items-center">
-                    <span class="ps-2"> Quick link here</span>
-                    <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                        stroke-linejoin="bevel"></path>
-                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                 <a href="" class="recommendation-link-block">
-                  <div class="recommendation-link d-flex justify-content-between align-items-start align-items-center">
-                    <span class="ps-2"> Quick link here</span>
-                    <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                        stroke-linejoin="bevel"></path>
-                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                 <a href="" class="recommendation-link-block">
-                  <div class="recommendation-link d-flex justify-content-between align-items-start align-items-center">
-                    <span class="ps-2"> Quick link here</span>
-                    <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
-                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
-                        stroke-linejoin="bevel"></path>
-                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
-                    </svg>
-                  </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <div class="position-relative">
+          <div class="showfilters modal fade" id="filterModal" tabindex="0" aria-labelledby="filterModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog ">
+              <div class="modal-content" id="filterModalLabel">
+                <a href="" class="close-btn" data-bs-dismiss="modal" aria-label="Close"><i
+                    class="fa-solid fa-xmark"></i></a>
+                <div class="row">
+                  <div class="col mt-5 modal-content-details">
+                    <div class="text-center ">
+                      <button type="button" name="Topic" class="btn btn-secondary me-3" data-bs-dismiss="modal">
+                        Topics
+                        <i class="fa-solid fa-angle-up ms-2"></i>
+                      </button>
+                    </div>
+                    <input data-val="true"
+                      data-val-required="Ofcom.Cms.Ofc.Pages.ContentTypes.ContentTypesPageViewModel.SelectedTopicFilter-Required"
+                      id="SelectedTopicFilter" name="SelectedTopicFilter" type="hidden" value="">
+
+                    <div class="topic-facet">
+                      <ul class="list-unstyled filter-list modal-topic-list">
+                        <li class="text-white" data-value="0">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);"></a>
+                        </li>
+                        <li class="text-white" data-value="377">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Digital services</a>
+                        </li>
+                        <li class="text-white" data-value="2651">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Landing Page_Spectrum Feature</a>
+                        </li>
+                        <li class="text-white" data-value="3090">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Landing Page-Managing the Airwaves</a>
+                        </li>
+                        <li class="text-white" data-value="3059">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Landing Page-Online safety</a>
+                        </li>
+                        <li class="text-white" data-value="379">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Media use and attitudes</a>
+                        </li>
+                        <li class="text-white" data-value="373">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Online safety</a>
+                        </li>
+                        <li class="text-white" data-value="262">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Phone and Internet (Changed)</a>
+                        </li>
+                        <li class="text-white" data-value="3073">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Postal Services</a>
+                        </li>
+                        <li class="text-white" data-value="319">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">TV, radio and on-demand</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="col mt-5 modal-content-details">
+                    <div class="text-center">
+                      <button type="button" name="Status" class="btn btn-secondary me-3" data-bs-dismiss="modal">
+                        Status
+                        <i class="fa-solid fa-angle-up ms-2"></i>
+                      </button>
+                    </div>
+                    <input data-val="true"
+                      data-val-required="Ofcom.Cms.Ofc.Pages.ContentTypes.ContentTypesPageViewModel.SelectedStatusFilter-Required"
+                      id="SelectedStatusFilter" name="SelectedStatusFilter" type="hidden" value="">
+
+                    <div class="status-facet">
+                      <ul class="list-unstyled filter-list modal-status-list">
+                        <li class="text-white" data-value="Open">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Open</a>
+                        </li>
+                        <li class="text-white" data-value="Pending">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Closed (pending statement)</a>
+                        </li>
+                        <li class="text-white" data-value="Published">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Closed (statement published)</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="col mt-5 modal-content-details">
+                    <div class="text-center">
+                      <button type="button" name="Time" class="btn btn-secondary me-3" data-bs-dismiss="modal">
+                        Time Range
+                        <i class="fa-solid fa-angle-up ms-2"></i>
+                      </button>
+                    </div>
+                    <input data-val="true"
+                      data-val-required="Ofcom.Cms.Ofc.Pages.ContentTypes.ContentTypesPageViewModel.SelectedTimeFilter-Required"
+                      id="SelectedTimeFilter" name="SelectedTimeFilter" type="hidden" value="">
+
+                    <div class="time-facet">
+                      <ul class="list-unstyled filter-list modal-time-list">
+                        <li class="text-white" data-value="Anytime">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Any time</a>
+                        </li>
+                        <li class="text-white" data-value="PastWeek">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Past week</a>
+                        </li>
+                        <li class="text-white" data-value="PastMonth">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Past month</a>
+                        </li>
+                        <li class="text-white" data-value="PastYear">
+                          <i class="fa fa-thin fa-circle-xmark close-li-icon me-1"></i>
+                          <a href="javascript:void(0);">Past year</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center close-clear-btn">
+                  <button type="submit" id="btnsubmit" class="btn btn-primary btnfilterapply me-4 d-none"
+                    data-bs-dismiss="modal" aria-label="Apply">
+                    Apply
+                  </button>
+                  <button type="button" class="btn btn-primary btnfilterclose me-4" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary clear-filter-btn" aria-label="Clear">
+                    Clear
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center showfilters-align position-relative results-top pt-2">
+          <a href="javascript:void(0);" class="btn btn-primary me-3 filters-content mb-3" data-bs-toggle="modal"
+            data-bs-target="#filterModal">
+            Topics<i class="ms-2 fa fa-angle-down"></i>
+          </a>
+          <a href="javascript:void(0);" class="btn btn-primary me-3 filters-content mb-3" data-bs-toggle="modal"
+            data-bs-target="#filterModal">
+            Status<i class="ms-2 fa fa-angle-down"></i>
+          </a>
+          <a href="javascript:void(0);" class="btn btn-primary me-3 filters-content mb-3" data-bs-toggle="modal"
+            data-bs-target="#filterModal">
+            Time Range<i class="ms-2 fa fa-angle-down"></i>
+          </a>
+
+          <input data-val="true"
+            data-val-required="Ofcom.Cms.Ofc.Pages.ContentTypes.ContentTypesPageViewModel.SelectedSortType-Required"
+            id="SelectedSortType" name="SelectedSortType" type="hidden" value="NewestFirst">
+          <div class="filter-btn">
+            <div class="dropdown-center sort-list">
+              <button class="btn btn-secondary hover-none dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Sort by: Newest to oldest
+
+                <i class="fa-solid fa-chevron-down ms-2"></i>
+              </button>
+              <ul class="dropdown-menu" id="ddsort">
+                <li data-value="NewestFirst" select="true"><a href="javascript:void(0);" class="dropdown-item">Newest to
+                    oldest
+
+                  </a></li>
+                <li data-value="OldestFirst"><a href="javascript:void(0);" class="dropdown-item">Oldest to newest</a>
+                </li>
+                <li data-value="AZ"><a href="javascript:void(0);" class="dropdown-item">A to Z</a></li>
+                <li data-value="ZA"><a href="javascript:void(0);" class="dropdown-item">Z to A</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </form>
     </section>
     <section class="container">
       <h3 class="text-center my-5">Sub Topics</h3>

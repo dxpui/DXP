@@ -37,9 +37,9 @@
 
 /* Smooth scroll behavior */
 
-:root {
+/*:root {
     scroll-behavior: smooth;
-}
+}*/
 
 
 /*--------------------------------------------------------------
@@ -106,7 +106,9 @@ h6 {
 }
 
 @media screen and (min-width: 640px) {
-    h2 {
+
+    h2,
+    h3 {
         margin-bottom: 0.5rem;
     }
 }
@@ -127,26 +129,18 @@ h1,
 
 h2,
 .h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 135%;
     font-weight: 700;
     word-wrap: break-word;
     letter-spacing: -0.4px;
 }
 
-@media(max-width: 992px) {
-
-    h2,
-    .h2 {
-        font-size: 1.5rem;
-    }
-}
-
 /* Used for: Page subtitles */
 
 h3,
 .h3 {
-    font-size: 2rem;
+    font-size: 1.625rem;
     line-height: 135%;
     font-weight: 700;
     word-wrap: break-word;
@@ -183,6 +177,31 @@ h6,
     h1,
     .h1 {
         font-size: 1.8rem;
+    }
+
+    h2,
+    .h2 {
+        font-size: 1.5rem;
+    }
+
+    h3,
+    .h3 {
+        font-size: 1.25rem;
+    }
+
+    h4,
+    .h4 {
+        font-size: 1.125rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 0.813rem;
+    }
+
+    h6,
+    .h6 {
+        font-size: 0.688rem;
     }
 }
 
@@ -444,7 +463,7 @@ video:focus-visible {
     border: 1px solid var(--color-default);
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s;
-    text-decoration: none !important;
+    text-decoration: underline !important;
 }
 
 .btn-primary:focus,
@@ -471,7 +490,7 @@ video:focus-visible {
     border: 1px solid var(--color-white);
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s;
-    text-decoration: none !important;
+    text-decoration: underline !important;
 }
 
 .btn-secondary:active {
@@ -545,7 +564,7 @@ video:focus-visible {
 .btn-primary-border:hover {
     background-color: var(--color-default);
     color: var(--color-white);
-    text-decoration: none !important;
+    text-decoration: underline !important;
 }
 
 .ar-btn {
@@ -608,10 +627,11 @@ a.purple-btn:focus-visible {
     border-radius: 30px;
 }
 
-.btn-primary-white-border:hover {
+.btn-primary-white-border:hover,
+.btn-primary-white-border:focus {
     background-color: var(--color-secondary);
     color: var(--color-default);
-    text-decoration: none !important;
+    text-decoration: underline !important;
 }
 
 .btn-tag {
@@ -628,7 +648,7 @@ a.purple-btn:focus-visible {
 .btn-tag:focus-visible {
     color: var(--color-black);
     background-color: var(--color-secondary);
-    text-decoration: none !important;
+    text-decoration: underline !important;
 }
 
 .btn-tag:focus-visible {
@@ -713,7 +733,7 @@ a.purple-btn:focus-visible {
 .blue-bg .video-btn:focus {
     background-color: var(--color-secondary);
     color: var(--color-default);
-    text-decoration: none !important;
+    text-decoration: underline !important;
 }
 
 .btn-check:checked+.btn,
@@ -1204,7 +1224,8 @@ header .search-box {
     max-width: 350px;
 }
 
-.header .menu>ul>li .sub-menu.mega-menu>.list-item>ul>li {
+.header .menu>ul>li .sub-menu.mega-menu>.list-item>ul>li,
+.header .menu>ul>li .sub-menu.mega-menu>.list-item>p {
     line-height: 1;
     display: block;
     color: var(--color-white);
@@ -1263,6 +1284,7 @@ header .search-box {
 .header .menu>ul>li .sub-menu.mega-menu-column-4>.list-item .title span {
     font-size: 0.875rem;
     width: 90%;
+    line-height: 150%;
 }
 
 .header .menu>ul>li .sub-menu.mega-menu-column-4>.list-item .title svg {
@@ -1293,7 +1315,7 @@ header .search-box {
 
 /*responsive*/
 
-@media(max-width: 1024px) {
+@media(max-width: 992px) {
     .header .menu>ul>li .sub-menu.mega-menu-column-4 {
         padding-left: 5px;
         padding-right: 5px;
@@ -1575,6 +1597,7 @@ header .search-box {
     font-size: 0.875rem;
     color: var(--color-white);
     width: 100%;
+    line-height: 150%;
 }
 
 .sub-topic:hover {
@@ -1819,7 +1842,8 @@ header .search-box {
     color: var(--color-white);
 }
 
-:is(.lightblue-bg, .blue-bg, .megenta-bg, .maroon-bg, .red-bg) :is(.btn-primary):hover {
+:is(.lightblue-bg, .blue-bg, .megenta-bg, .maroon-bg, .red-bg) :is(.btn-primary):hover,
+:is(.lightblue-bg, .blue-bg, .megenta-bg, .maroon-bg, .red-bg) :is(.btn-primary):focus {
     background-color: var(--color-secondary);
     border-color: var(--color-default);
     color: var(--color-default);
@@ -1843,7 +1867,8 @@ header .search-box {
     color: var(--color-default);
 }
 
-:is(.gray-bg, .pink-bg, .green-bg, .yellow-bg, .orange-bg) :is(.btn-primary):hover {
+:is(.gray-bg, .pink-bg, .green-bg, .yellow-bg, .orange-bg) :is(.btn-primary):hover,
+:is(.gray-bg, .pink-bg, .green-bg, .yellow-bg, .orange-bg) :is(.btn-primary):focus {
     background-color: var(--color-secondary);
     border-color: var(--color-default);
     color: var(--color-default);
@@ -1971,6 +1996,15 @@ header .search-box {
     padding-right: 40px;
 }
 
+.recommendation-block.blue-bg .pay-btn {
+    color: var(--color-white);
+}
+
+.recommendation-block.blue-bg .pay-btn:hover,
+.recommendation-block.blue-bg .pay-btn:focus {
+    color: var(--color-default);
+}
+
 .recommendation-block a .recommendation-block-arrow {
     position: absolute;
     right: 15px;
@@ -2001,6 +2035,7 @@ header .search-box {
 .search-filter .accordion-body {
     padding-top: 0;
     padding-bottom: 20px;
+    padding-inline: 0;
 }
 
 /* .search-filter .accordion {
@@ -2014,7 +2049,7 @@ header .search-box {
 .search-filter .accordion-item {
     border-radius: 0;
     box-shadow: none;
-    padding-inline: 60px;
+    padding-inline: 40px;
     background-color: var(--color-light-gray);
 }
 
@@ -2024,13 +2059,23 @@ header .search-box {
     }
 }
 
+.search-filter .accordion-header {
+    width: 30%;
+}
+
+@media (max-width: 992px) {
+    .search-filter .accordion-header {
+        width: 100%;
+    }
+}
+
 .search-filter .accordion-button:not(.collapsed) {
     background-color: var(--color-light-gray);
     color: var(--color-default);
 }
 
 .search-filter .accordion-button {
-    padding: 0 20px;
+    padding: 0;
     border-radius: 0;
     background-color: var(--color-light-gray);
 }
@@ -2067,16 +2112,19 @@ header .search-box {
 .search-filter .vscomp-wrapper:focus-visible {
     outline: 4px solid var(--color-outline-focus);
     outline-offset: 0;
-
 }
 
 .search-filter .vscomp-option:focus-visible {
     outline: 2px solid var(--color-outline-focus);
     outline-offset: 0;
-
 }
 
 .search-filter .vscomp-option.focused {
+    background-color: var(--color-white);
+    color: var(--color-default);
+}
+
+.search-filter .vscomp-option:hover {
     background-color: var(--color-light-gray);
     color: var(--color-default);
 }
@@ -2368,13 +2416,18 @@ a:focus .info-card .info-card-header {
 }
 
 /**************************************************/
-.info-card span.date::before {
+.info-card .date::before {
     border: 1px solid #333;
     content: "";
-    margin: 0 auto;
+    margin-top: -10px !important;
     position: absolute;
     width: 30px;
-    bottom: 50px;
+    bottom: auto;
+}
+
+.info-card .date .date-label {
+    display: block;
+    margin-bottom: 5px;
 }
 
 .icon-arrow-hover,
@@ -2597,9 +2650,9 @@ a:focus .info-card .info-card-header {
     display: none;
 }
 
-.info-card.news-center span.date::before {
+.info-card.news-center .date::before {
     border: 1px solid var(--color-default);
-    bottom: 50px;
+    /* bottom: 50px; */
     color: var(--color-default);
 }
 
@@ -2676,6 +2729,10 @@ a:focus .info-card.news-center:before {
 .news-center-form {
     padding: 60px 0;
     position: relative;
+}
+
+.news-center-form .subscribe-form .js-cm-form {
+    background-color: transparent;
 }
 
 .news-badge {
@@ -3403,23 +3460,23 @@ a:focus .info-card.news-center:before {
 .news-blue-bg a:focus .info-card.news-info .date,
 .news-blue-bg a:focus .info-card.news-info .date::before,
 .news-lightblue-bg .info-card.news-info:hover .date,
-.news-lightblue-bg .info-card.news-info:hover span.date::before,
+.news-lightblue-bg .info-card.news-info:hover .date::before,
 .news-lightblue-bg a:focus .info-card.news-info .date,
-.news-lightblue-bg a:focus .info-card.news-info span.date::before,
+.news-lightblue-bg a:focus .info-card.news-info .date::before,
 .news-red-bg .info-card.news-info:hover .date,
-.news-red-bg .info-card.news-info:hover span.date::before,
+.news-red-bg .info-card.news-info:hover .date::before,
 .news-red-bg a:focus .info-card.news-info .date,
-.news-red-bg a:focus .info-card.news-info span.date::before,
+.news-red-bg a:focus .info-card.news-info .date::before,
 .news-maroon-bg .info-card.news-info:hover .date,
-.news-maroon-bg .info-card.news-info:hover span.date::before,
+.news-maroon-bg .info-card.news-info:hover .date::before,
 .news-maroon-bg a:focus .info-card.news-info .date,
-.news-maroon-bg a:focus .info-card.news-info span.date::before,
+.news-maroon-bg a:focus .info-card.news-info .date::before,
 .news-megenta-bg .info-card.news-info:hover .date,
-.news-megenta-bg .info-card.news-info:hover span.date::before,
+.news-megenta-bg .info-card.news-info:hover .date::before,
 .news-megenta-bg a:focus .info-card.news-info .date,
-.news-megenta-bg a:focus .info-card.news-info span.date::before {
-    border-color: var(--color-default);
-    color: var(--color-default);
+.news-megenta-bg a:focus .info-card.news-info .date::before {
+    border-color: var(--color-default) !important;
+    color: var(--color-default) !important;
 }
 
 .news-blue-bg .info-card.news-info:hover .info-card-header,
@@ -3943,8 +4000,10 @@ a:focus .info-card.news-center:before {
     width: 24px;
 }
 
-.pdfdownload:hover {
+.pdfdownload:hover,
+a:focus .pdfdownload {
     background-color: var(--color-secondary);
+    text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -4571,6 +4630,7 @@ a:focus .info-card.news-center:before {
 
 .filters-content {
     margin: 10px 5px;
+    display: inline-block;
 }
 
 .filter-list {
@@ -4683,7 +4743,7 @@ a:focus .info-card.news-center:before {
 .filter-btn {
     background-color: transparent;
     padding: 0px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
     color: var(--color-default);
     display: flex;
@@ -4693,8 +4753,8 @@ a:focus .info-card.news-center:before {
 
 .showfilters-align {
     margin-top: 0px;
-    margin-bottom: 10px;
-    text-align: right;
+    margin-bottom: 30px;
+    text-align: center;
     /* display: flex;
     justify-content: flex-end;
     align-items: center; */
@@ -4729,6 +4789,11 @@ a:focus .info-card.news-center:before {
 .showfilters-align:has(.touched-class) .filter-btn {
     width: 100%;
     position: unset;
+}
+
+.filter-btn .btn-secondary {
+    padding: 5px 0;
+    border-radius: 0;
 }
 
 .showfilters-align:has(.touched-class) {
@@ -5536,7 +5601,6 @@ padding-right: 80px; */
 .pagination-block .next-arrow,
 .pagination-block .next-arrow-end {
     rotate: 180deg;
-    outline: none;
 }
 
 .pagination-block .single-arrow-clear {
@@ -5983,7 +6047,6 @@ blockquote cite {
     margin-top: 10px;
     margin-bottom: 20px;
     height: 100%;
-    font-style: italic;
 }
 
 .listing-item .listing-item-desc-top:before {
@@ -6289,7 +6352,7 @@ blockquote cite {
     border: 1px solid var(--color-default);
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s;
-    text-decoration: none !important;
+    text-decoration: underline !important;
 }
 
 /******************************************************/

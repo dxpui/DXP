@@ -5,17 +5,20 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="assets/img/favicon.gif" />
+  <title>OFCOM website</title>
+  <link rel="icon" href="assets/img/favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="css/virtual-select.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
   <link href="css/main.css" rel="stylesheet">
-  <title>OFCOM</title>
-
 </head>
 
 <body>
@@ -26,7 +29,7 @@
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
       <div class="logo me-auto me-lg-0">
-        <a href="index.html"> <img class="brand-logo" src="assets/img/Logonostrap.svg" alt="OfCom" /></a>
+        <a href="index.html"> <img class="brand-logo" src="assets/img/logo2023_2.svg" alt="OfCom" /></a>
       </div>
 
       <!-- menu start here -->
@@ -514,10 +517,12 @@
       </div>
       <form action="" class="search-form">
         <div class="search-box mx-auto mb-3 position-relative">
-          <input type="search" class="search-box-input" name="query" aria-label="Global Search" placeholder="What are you looking for?" id="globalquery" autocomplete="off">
+          <input type="search" class="search-box-input" name="query" aria-label="Global Search"
+            placeholder="What are you looking for?" id="globalquery" autocomplete="off">
           <label for="globalquery" class="fas fa-search d-none"><span class="d-none">Search</span></label>
-          <a href="javascript:void(0)" class="fas fa-search gl-search" onclick="globalSearch()"><span class="d-none">Search</span></a>
-      </div>
+          <a href="javascript:void(0)" class="fas fa-search gl-search" onclick="globalSearch()"><span
+              class="d-none">Search</span></a>
+        </div>
         <h4 class="text-center mt-4">Quick Links:</h4>
 
         <hr>
@@ -787,7 +792,147 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="search-filter">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <span class="apply-f">Apply filters</span>
+                <span class="collaspe">Collapse</span>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="">
+                  <div class="row">
+                    <div class="col-xxl-3 col-xl-4 col-md-6">
+                      <label class="py-2">Topics</label>
+                      <select id="example-select" placeholder="Select Topics" name="native-select"
+                        aria-label="Default select example">
+                        <option selected>Select Topic</option>
+                        <option value="1">About Ofcom</option>
+                        <option value="2" selected>Broadband</option>
+                        <option value="3">Post</option>
+                      </select>
+                    </div>
+                    <div class="col-xxl-3 col-xl-4 col-md-6">
+                      <label class="py-2">Sub Topics</label>
+                      <select id="example-select" multiple name="native-select" placeholder="Select Sub Topics"
+                        data-search="false" data-silent-initial-value-set="true">
+                        <option value="1">Phones and broadband</option>
+                        <option value="2" selected>Bills and charges</option>
+                        <option value="3" selected>Landline phones</option>
+                        <option value="4">Mobile phones</option>
+                        <option value="1">Phones and broadband</option>
+                        <option value="2" selected>Bills and charges</option>
+                        <option value="3" selected>Landline phones</option>
+                        <option value="4">Mobile phones</option>
+                      </select>
+                    </div>
+                    <div class="col-xxl-3 col-xl-4 col-md-6">
+                      <label class="py-2">Status</label>
+                      <select id="example-select-2" multiple name="native-select" placeholder="Select Content Type"
+                        data-search="false" data-silent-initial-value-set="true">
+                        <option value="1" selected>Open </option>
+                        <option value="2">Closed (pending statement)</option>
+                        <option value="3">Closed (statement published)</option>
+                        <!-- <option value="4">Advice for businesses</option> -->
+                      </select>
+                    </div>
 
+                    <div class="col-xxl-3 col-xl-4 col-md-6">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="py-2" for="updatedafter">Updated after</label>
+                          <input type="date" class="form-control" value="" name="updatedafter" id="updatedafter">
+                        </div>
+                        <div class="col-md-6">
+                          <label class="py-2" for="updatedbefore">Updated before</label>
+                          <input type="date" class="form-control" value="" name="updatedbefore" id="updatedbefore">
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button type="submit" id="btnsubmit" class="btn btn-secondary" data-bs-dismiss="modal"
+                      aria-label="Apply">
+                      Apply
+                    </button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-xl">
+      <div class="row">
+        <div class="col-12">
+          <p class="text-center my-4" role="status" aria-live="polite">
+            Displaying 1 - 27 of 1625 results for "About Ofcom"
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-9 col-md-12">
+          <div class="showfilters-align results-top pt-2">
+            <strong>About</strong>
+            <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
+              <i class="me-2 fa fa-close"></i> Broadband
+            </a>
+            <strong>in</strong>
+            <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
+              <i class="me-2 fa fa-close"></i> Bills and charges
+            </a>
+            <strong>and</strong>
+            <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
+              <i class="me-2 fa fa-close"></i> Landline phones
+            </a>
+            <strong>in</strong>
+            <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
+              <i class="me-2 fa fa-close"></i> Open
+            </a>
+            <strong>Updated between</strong>
+            <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
+              <i class="me-2 fa fa-close"></i> 01/01/2024
+            </a>
+            <strong>and</strong>
+            <a href="javascript:void(0);" class="btn btn-secondary filters-content btn-small">
+              <i class="me-2 fa fa-close"></i> 01/05/2024
+            </a>
+            <a href="javascript:void(0);" class="filters-content text-nowrap search-filter-clear">
+              <i class="me-1 fa fa-close"></i> Clear all filter
+            </a>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-12">
+          <div class="filter-btn">
+            <div class="dropdown-center sort-list">
+              <button class="btn btn-secondary hover-none dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Sort by: Newest to oldest <i class="fa-solid fa-chevron-down ms-2"></i>
+              </button>
+              <ul class="dropdown-menu" id="ddsort">
+                <li data-value="NewestFirst" select="true"><a href="javascript:void(0);" class="dropdown-item">Newest to
+                    oldest</a></li>
+                <li data-value="OldestFirst"><a href="javascript:void(0);" class="dropdown-item">Oldest to newest</a>
+                </li>
+                <li data-value="AZ"><a href="javascript:void(0);" class="dropdown-item">A to Z</a></li>
+                <li data-value="ZA"><a href="javascript:void(0);" class="dropdown-item">Z to A</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
     <section class=" my-5">
       <h3 class="text-center my-5">Statistic call out (fill)</h3>
 
@@ -1136,116 +1281,19 @@
         </h4>
         <h4 class="h2">
           Slider feature title goes here
-        </h2>
-        <h4 class="h3">
-          Latest news
-        </h3>
-        <h4>
-          Lorem ipsum dolor sit amet
-        </h4>
-        <h5>
-          Lorem ipsum dolor sit amet
-        </h5>
+          </h2>
+          <h4 class="h3">
+            Latest news
+            </h3>
+            <h4>
+              Lorem ipsum dolor sit amet
+            </h4>
+            <h5>
+              Lorem ipsum dolor sit amet
+            </h5>
       </div>
     </section>
-    <section>
-      <h3 class="text-center my-5">Contact Digital Team Form</h3>
-      <div class="row">
-        <div class="col-11 col-md-8 mx-auto gray-bg form-container">
-          <div class="row bullet-list">
-            <!-- <span class="mb-4">You can use this form to tell us about:</span>
-            <ul>
-              <li>broken links;</li>
-              <li>accessibility concerns or request for alternative formats;</li>
-              <li>other issues you find on our website.</li>
-            </ul>
-            <span class="my-4">In your response, please can you provide the following if they are relevant:</span>
-            <ul>
-              <li>The link address (URL)</li>
-              <li>The date and time you noticed the issue</li>
-              <li>What browser you are using (and version)</li>
-
-              <li>
-                What device you are using (iPhone, Android etc.)
-              </li>
-              <li>
-                Your contact details, so we can reply
-              </li>
-              <li>
-                We will only use your name and email address to respond to your query, and will delete them once we
-                have.
-              </li>
-            </ul> -->
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
-            <!-- 
-            <div class="mt-5">
-              <form>
-                <div class="mb-3 form-error">
-                  <label for="aa" class="form-label">Name *</label>
-                  <input type="email" class="form-control" id="aa" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">error message hare</div>
-                </div>
-                <div class="mb-3">
-                  <label for="bb" class="form-label">Comments *</label>
-                  <textarea class="form-control" id="bb" rows="3"></textarea>
-                </div>
-                <div class="mb-3">
-                  <label for="cc" class="form-label">Email *</label>
-                  <input type="text" class="form-control" id="cc">
-                </div>
-                <div class="mb-3">
-                  <label for="dd" class="form-label">Web address (URL). Note: This field is not required, but will help
-                    us identify where the issue is on our site</label>
-                  <input type="text" class="form-control" id="dd">
-                </div>
-                <div class="mb-2 form-check">
-                  <input type="checkbox" class="form-check-input" id="ee" role="checkbox" aria-checked="false"
-                    aria-labelledby="chk1-label">
-                  <label class="form-check-label" for="ee">Default checkbox</label>
-                </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="ff" role="checkbox" aria-checked="false"
-                    aria-labelledby="chk2-label">
-                  <label class="form-check-label" for="ff">Default checkbox</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Default radio
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    Default checked radio
-                  </label>
-                </div>
-                <div class="row">
-                  <div class="col-12">
-                    <img src="assets/img/captcha.png" class="my-4" alt="">
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="submit" class="btn btn-secondary ms-4">Reset</button>
-              </form>
-            </div> -->
-          </div>
-        </div>
-      </div>
-    </section>
+    
     <h3 class="text-center my-5">Page Feedback Form</h3>
     <div id="feedbackform" class="col-8 mx-auto">
 
@@ -1392,7 +1440,8 @@
           <div class="row g-0 mt-5">
             <div class="col-10 col-sm-8 mx-auto tab-content">
               <div class="ratio ratio-16x9 container-xl tab-pane active" id="video-1">
-                <iframe title="video 2" id="youtube-id" src="assets/video/video.mp4" title="YouTube video player" frameborder="0"
+                <iframe title="video 2" id="youtube-id" src="assets/video/video.mp4" title="YouTube video player"
+                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen=""></iframe>
               </div>
@@ -1619,7 +1668,7 @@
       </div>
 
     </section>
-        <section class="my-5">
+    <section class="my-5">
       <h3 class="text-center my-5">Pagination</h3>
       <!-- <nav aria-label="Page navigation">
         <ul class="pagination-block justify-content-center">
@@ -1881,7 +1930,7 @@
         </p>
       </div>
     </section>
-    
+
     <h3 class="text-center my-5">Lookup Table</h3>
     <section class="container-xl my-5">
       <div class="gray-bg p-4">
@@ -2462,7 +2511,7 @@
       <h3 class="text-center my-5">Call out with image</h3>
       <div class="row">
         <div class="col-12">
-          <div class="title-block one">
+          <!-- <div class="title-block one">
             <a href="" class="title-block-link">
               <div class="row g-0">
                 <div class="col-md-7">
@@ -2488,7 +2537,7 @@
                 </div>
               </div>
             </a>
-          </div>
+          </div> -->
 
           <div class="title-block two mt-5">
             <a href="javascript:void(0);" class="title-block-link">
@@ -2572,15 +2621,7 @@
         </div>
       </div>
     </section>
-    <section>
-      <h3 class="text-center my-5">Tooltip</h3>
-      <div class="col-8 mx-auto tooltip-blue">
-        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
-          title="Tooltip text">
-          Tooltip on top
-        </button>
-      </div>
-    </section>
+   
     <section>
       <h3 class="text-center my-5">Column Block (Related Content)</h3>
       <section class="container-xl info">
@@ -2738,7 +2779,7 @@
             <h4>Video Block Title</h4>
             <div class="video-block">
               <div class="ratio ratio-16x9 ">
-                <iframe title="video 1" src="assets/video/video.mp4" frameborder="0" 
+                <iframe title="video 1" src="assets/video/video.mp4" frameborder="0"
                   allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen="">
                 </iframe>
@@ -3047,91 +3088,8 @@
         </div>
       </div>
     </section>
-    <section>
-      <h3 class="text-center my-5">List groups</h3>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-auto-close="true"
-                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown button
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li>
-                  <div class="dropdown-item">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Default checkbox
-                      </label>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="dropdown-item">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
-                      <label class="form-check-label" for="flexCheckDefault1">
-                        Default checkbox
-                      </label>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="dropdown-item">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
-                      <label class="form-check-label" for="flexCheckDefault2">
-                        Default checkbox
-                      </label>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h3 class="text-center my-5">Modal pop up</h3>
-      <div class="container">
-        <div class="row">
-          <div class="col-10 mx-auto">
-            <!-- <div class="modal-backbg"></div> -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              show modal
-            </button>
-            <div class="modal modal-popup fade d-none" id="exampleModal" tabindex="-1"
-              aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">Modal title</h3>
-                    <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-times"
-                        aria-hidden="true"></i></button>
-                  </div>
-                  <div class="modal-body">
-                    This is an example of a standard modal pop-up message. They usually aren't that long. Lorem ipsum
-                    dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut enim ad minim veniam.
-                  </div>
-                  <div class="modal-footer">
-                    <button class="btn btn-secondary me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                      Close
-                    </button>
-                    <button class="btn btn-primary me-3">
-                      Save changes
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   
+    
     <section>
       <h3 class="text-center my-5">Language Notification</h3>
       <div class="container">
@@ -3408,55 +3366,7 @@
 
     </div>
 
-    <section>
-      <h3 class="text-center my-5">Scam MSG</h3>
-      <div class="container-xl">
-        <div class="listing-item col-12 col-lg-6 mx-auto">
-          <h3>2. Find out what broadband speed you need
-            We </h3>
-          <p>We all use our broadband differently. Find out what to look for to get the broadband that suits your
-            needs.
-          </p>
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                <h4 class="mb-0">The basic browsers</h4>
-                <p class="listing-item-desc-top gray-bg">Lorem ipsum dolor sit amet, Atque fugiat officia et ea non
-                  consectetur adipisicing elit. Atque fugiat officia et ea non
-                </p>
-                <img src="assets/img/scams-stop-text.png" alt="" />
-                <p class="listing-item-desc green-bg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-                  fugiat officia et ea non
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                <h4 class="mb-0">The basic browsers</h4>
-                <p class="listing-item-desc-top gray-bg">Lorem ipsum dolor sit amet, <a href="">adipisicing elit.
-                    Atque</a>
-                  fugiat officia et ea non
-                </p>
-                <img src="assets/img/scams-report.png" alt="" />
-                <p class="listing-item-desc red-bg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                <h4 class="mb-0">The basic browsers</h4>
-                <p class="listing-item-desc-top gray-bg">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Atque
-                  fugiat officia et ea non
-                </p>
-                <img src="assets/img/scams-dont-click.png" alt="" />
-                <p class="listing-item-desc blue-bg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a
-                    href="">adipisicing elit. Atque</a> </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  
     <section class="mt-5">
       <div class="row g-0">
         <div class="col-12 d-flex justify-content-center position-relative">
@@ -3625,19 +3535,29 @@
 
 
   </script>
-  <script>
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      // return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  </script>
+ 
   <script>
     var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua & Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia & Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central Arfrican Republic", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauro", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre & Miquelon", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "St Kitts & Nevis", "St Lucia", "St Vincent", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks & Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
 
     autocomplete(document.getElementById("myInput1"), countries);
   </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="js/virtual-select.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    VirtualSelect.init({
+      ele: '#example-select',
+      hideClearButton: true,
+      disableSelectAll: true,
+    });
+  </script>
+  <script>
+    VirtualSelect.init({
+      ele: '#example-select-2',
+      hideClearButton: true,
+      disableSelectAll: true,
+    });
+  </script>
 
   <!-- Initialize Swiper -->
   <script>
@@ -3665,20 +3585,20 @@
     });
   </script>
 
-<script>
-  $(document).ready(function() {
-    var activeAccordionItemIndex = sessionStorage.getItem('activeAccordionItemIndex');
+  <script>
+    $(document).ready(function () {
+      var activeAccordionItemIndex = sessionStorage.getItem('activeAccordionItemIndex');
 
-    if (activeAccordionItemIndex !== null) {
-      $('#collapse' + activeAccordionItemIndex).collapse('show');
-    }
+      if (activeAccordionItemIndex !== null) {
+        $('#collapse' + activeAccordionItemIndex).collapse('show');
+      }
 
-    $('.accordion').on('shown.bs.collapse', function (event) {
-      var activeItemIndex = event.target.id.replace('collapse', '');
-      sessionStorage.setItem('activeAccordionItemIndex', activeItemIndex);
+      $('.accordion').on('shown.bs.collapse', function (event) {
+        var activeItemIndex = event.target.id.replace('collapse', '');
+        sessionStorage.setItem('activeAccordionItemIndex', activeItemIndex);
+      });
     });
-  });
-</script>
+  </script>
   <!-- Initialize Swiper -->
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
