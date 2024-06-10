@@ -270,7 +270,7 @@ $(document).ready(function () {
 
     $('ul.dropdown-menu li').on("click", function () {
         $("#SortBy").val($(this).attr("data-value"));
-        localStorage["ScrollPositionX"] = $(window).scrollTop();
+        filterPostion();
 
         if ($("#contentTypeForm").length > 0) {
             $("#contentTypeForm").trigger("submit");
@@ -291,36 +291,38 @@ $(document).ready(function () {
 
     if ($("#TopicDropdown").length > 0) {
         document.querySelector('#TopicDropdown').addEventListener('change', function () {
-            if ($("#SubtopicDropdown").length > 0) {
-                document.querySelector('#SubtopicDropdown').reset();
-                document.querySelector('#SubtopicDropdown').disable();
-            }
+            var topic = document.querySelector('#TopicDropdown').value;
+            getSubTopicsList(topic);
         });
+    }
+
+    if ($("#showSubTopic").val() != undefined) {
+        $(".subtopic-filter").removeClass("d-none");
     }
 
     // Search Auto complete
     if ($('#globalquery').length > 0) {
-        autoCompleteSearch(document.getElementById("globalquery"), document.getElementById("searchLink"), "#globalSearch")
+        autoCompleteSearch(document.getElementById("globalquery"), $("#searchLink").val(), "#globalSearch")
     }
 
     if ($('#contentTypeForm').length > 0) {
-        autoCompleteSearch(document.getElementById("query"), document.getElementById("pageLink"), "#contentTypeForm")
+        autoCompleteSearch(document.getElementById("query"), $("#pageLink").val(), "#contentTypeForm")
     }
 
     if ($('#searchForm').length > 0) {
-        autoCompleteSearch(document.getElementById("query"), document.getElementById("pageLink"), "#searchForm")
+        autoCompleteSearch(document.getElementById("query"), $("#pageLink").val(), "#searchForm")
     }
 
     if ($('#newsCentreForm').length > 0) {
-        autoCompleteSearch(document.getElementById("query"), document.getElementById("pageLink"), "#newsCentreForm")
+        autoCompleteSearch(document.getElementById("query"), $("#pageLink").val(), "#newsCentreForm")
     }
 
     if ($('#subTopicForm').length > 0) {
-        autoCompleteSearch(document.getElementById("query"), document.getElementById("pageLink"), "#subTopicForm")
+        autoCompleteSearch(document.getElementById("query"), $("#pageLink").val(), "#subTopicForm")
     }
 
     if ($('#collectionForm').length > 0) {
-        autoCompleteSearch(document.getElementById("query"), document.getElementById("pageLink"), "#collectionForm")
+        autoCompleteSearch(document.getElementById("query"), $("#pageLink").val(), "#collectionForm")
     }
 
     // Toast Block
@@ -368,18 +370,27 @@ function carouselCount() {
 
 //********************Filter and Sorting**********************
 
+function filterPostion() {
+    localStorage["ScrollPositionX"] = $(window).scrollTop();
+}
+
 function globalSearch() {
     $("#globalSearch").trigger('submit');
 }
 
-function searchForm() {
-    localStorage["ScrollPositionX"] = $(window).scrollTop();
+function localSearch() {
+    clearAllFilters();
+    submitFilters();
+}
 
+function searchForm() {
+    filterPostion();
+    clearAllFilters();
     $("#searchForm").trigger('submit');
 }
 
 function submitFilters() {
-    localStorage["ScrollPositionX"] = $(window).scrollTop();
+    filterPostion();
 
     if ($("#contentTypeForm").length > 0) {
         $("#contentTypeForm").trigger("submit");
@@ -461,16 +472,7 @@ function removeBeforeDateFilter() {
     submitFilters();
 }
 
-function removeAllFilters() {
-    if ($("#UpdatedAfter").length > 0) {
-        $("#UpdatedAfter").val("");
-    }
-    if ($("#UpdatedBefore").length > 0) {
-        $("#UpdatedBefore").val("");
-    }
-    if ($("#SortBy").length > 0) {
-        $("#SortBy").val("");
-    }
+function clearAllFilters() {
     if ($("#TopicDropdown").length > 0) {
         document.querySelector('#TopicDropdown').reset();
     }
@@ -483,6 +485,19 @@ function removeAllFilters() {
     if ($("#StatusDropdown").length > 0) {
         document.querySelector('#StatusDropdown').reset();
     }
+    if ($("#UpdatedAfter").length > 0) {
+        $("#UpdatedAfter").val("");
+    }
+    if ($("#UpdatedBefore").length > 0) {
+        $("#UpdatedBefore").val("");
+    }
+    if ($("#SortBy").length > 0) {
+        $("#SortBy").val("");
+    }
+}
+
+function removeAllFilters() {
+    clearAllFilters();
     submitFilters();
 }
 
@@ -530,6 +545,64 @@ function updatePageQuery(value) {
     }
 }
 
+//********************Subtopic Dropdown**********************
+
+function getSubTopicsList(topic) {
+    if (topic != null) {
+        if ($("#SubtopicDropdown").length <= 0)
+            return;
+
+        $(".subtopic-filter").addClass("d-none");
+        document.querySelector("#SubtopicDropdown").disable();
+
+        var cnt = 0;
+        var query = "";
+        if ($('#query').val() != undefined)
+            query = $('#query').val();
+
+        var contentId = "";
+        if ($('#contentTypeId').val() != undefined)
+            contentId = $('#contentTypeId').val();
+
+        var pagelink = "";
+        if ($('#pageLink').val() != undefined)
+            pagelink = $('#pageLink').val();
+
+        $.ajax({
+            type: "POST",
+            url: pagelink + 'GetSubTopics?query=' + query + '&topic=' + topic + '&id=' + contentId,
+            data: topic,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                if (response.isSucceed) {
+                    if (response.result == null) {
+                        return;
+                    }
+                    var opt = [];
+                    for (i = 0; i < response.result.length; i++) {
+                        if (response.result[i] != null) {
+                            opt.push({
+                                label: response.result[i].name,
+                                value: response.result[i].value
+                            });
+                            cnt++;
+                        }
+                    }
+                    document.querySelector("#SubtopicDropdown").setOptions(opt);
+                    if (cnt > 0) {
+                        document.querySelector("#SubtopicDropdown").enable();
+                        $(".subtopic-filter").removeClass("d-none");
+                    }
+                }
+            },
+            error: function (xhr, status, errorThrown) {
+                return;
+            }
+        });
+    }
+}
+
 //********************Auto Complete**********************
 
 function autoCompleteSearch(inp, pagelink, formid) {
@@ -551,7 +624,7 @@ function autoCompleteSearch(inp, pagelink, formid) {
             var strval = val.trim().toLowerCase().replace(/[^a-z0-9-\u00A3\s]/gi, '');
             $.ajax({
                 type: "POST",
-                url: pagelink.value + 'GetAutocomplete?term=' + strval + '&id=' + contentId,
+                url: pagelink + 'GetAutocomplete?term=' + strval + '&id=' + contentId,
                 data: strval,
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -570,6 +643,8 @@ function autoCompleteSearch(inp, pagelink, formid) {
                                 b.innerHTML += "<input type='hidden' value='" + suggval + "'>";
                                 b.addEventListener("click", function (e) {
                                     inp.value = this.getElementsByTagName("input")[0].value;
+                                    clearAllFilters();
+                                    filterPostion();
                                     closeAllLists();
                                     $(formid).trigger('submit');
                                 });
@@ -577,12 +652,17 @@ function autoCompleteSearch(inp, pagelink, formid) {
                             }
                         }
                     }
+                },
+                error: function (xhr, status, errorThrown) {
+                    return;
                 }
             });
         });
 
         inp.addEventListener("keyup", function (e) {
             if ($('#' + inp.id).is(":focus") && (e.keyCode == 13)) {
+                clearAllFilters();
+                filterPostion();
                 $(formid).trigger('submit');
             }
         });
@@ -1267,6 +1347,8 @@ $(document).ready(function () {
         }
     });
 });
+
+// Add aria-expanded on menu
 
 $(document).ready(function(){
     function updateSubMenuShow() {
