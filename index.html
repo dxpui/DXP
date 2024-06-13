@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OFCOM website</title>
-  <link rel="icon" href="assets/img/Favicon 2024.ico" />
+  <link rel="icon" href="assets/img/Favicon2024.svg" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,7 +16,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="css/main.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
   <script src="js/jquery-3.7.1.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 
@@ -32,14 +32,17 @@
       <div class="logo me-auto me-lg-0">
         <a href="index.html"> <img class="brand-logo" src="assets/img/logo2023_2.svg" alt="OfCom Logo" /></a>
       </div>
-
+      <a href="javascript:void(0);" id="mobile-menu-trigger" class="mobile-menu-trigger order-3 order-lg-2">
+        <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none fa-solid fa-xmark"></i>
+      </a>
       <!-- menu start here -->
       <div class="header-item ms-auto">
         <div class="menu-overlay">
         </div>
         <nav class="menu">
           <div class="mobile-menu-head">
-            <div class="go-back"><i class="fa fa-angle-left"></i></div>
+            <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
             <div class="current-menu-title"></div>
             <div class="mobile-menu-close">&times;</div>
           </div>
@@ -517,10 +520,10 @@
         </nav>
       </div>
       <!-- menu end here -->
-      <div id="search-icon" class="search-icons d-flex align-items-center order-2 order-lg-1" tabindex="0">
+      <a href="javascript:void(0);" id="search-icon" class="search-icons d-flex align-items-center order-2 order-lg-1">
         <i class="fas fa-search"></i>
         <span class="visually-hidden-focusable">Global Search</span>
-      </div>
+      </a>
       <form action="" class="search-form">
         <div class="search-box mx-auto position-relative">
           <input type="search" class="search-box-input" name="" placeholder="What are looking for?" id="myInput">
@@ -674,24 +677,21 @@
       </form>
       <a href="" class="langauge-change order-1 order-lg-3">Cymraeg</a>
       <!-- mobile menu trigger -->
-      <div class="mobile-menu-trigger order-3 order-lg-2">
-        <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none fa-solid fa-xmark"></i>
-      </div>
+
     </div>
     </div>
   </header>
   <main>
     <div class="visually-hidden">Home page features</div>
     <section class="position-relative">
-      <div id="carouselExampleCaptions" class="carousel slide homepage-carousel-cls">
+      <div id="carouselExampleCaptions" class="carousel slide homepage-carousel-cls" data-bs-touch="true" data-bs-ride="carousel">
 
         <div class="carousel-inner text-white">
           <div class="carousel-item active hero-image-carousel">
             <div
               class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
               <div class="col-md-12 col-lg-5 carousel-heroimg-cls order-lg-0 order-sm-1">
-                <h1 class="carousel-header-cls fw-bold">Slider feature title goes here Slider feature titl</h1>
+                <h2 class="carousel-header-cls fw-bold">Slider feature title goes here Slider feature titl</h2>
                 <p class="carousel-txt-cls">Slider feature title goes here Slider feature titlSlider feature title goes
                   here Slider feature titlSlider feature title goes here Slider feature titlSlider feature title goes
                   here Slider feature titl</p>
@@ -727,7 +727,7 @@
             <div
               class="carousel-caption position-relative start-0 text-start row g-0 flex-sm-row flex-lg-row flex-column-reverse">
               <div class="col-md-12 col-lg-5 carousel-heroimg-cls order-lg-0 order-sm-1">
-                <h1 class="carousel-header-cls fw-bold">Slider3 feature title goes here</h1>
+                <h2 class="carousel-header-cls fw-bold">Slider3 feature title goes here</h2>
                 <p class="carousel-txt-cls">lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod
                   tempor incididunt ut labor.</p>
                 <a href="" class="btn btn-primary-white-border carousel-btn-position">
@@ -861,12 +861,11 @@
 
     </section>
 
-    <section class="news-green-bg news-container-area">
-      <h2 class="text-center my-3 h2-has-h3 position-relative">Latest news
+    <section class="news-green-bg news-container-area position-relative">
+        <h2 class="text-center my-3">Latest news</h2>
         <button class="btn btn-primary">
           Find out more <i class="ms-2 fa-solid fa-arrow-right"></i>
         </button>
-      </h2>
       <div class="swiper-outer container-xl">
         <div class="swiper mySwiper latest-news-swiper">
           <div class="swiper-wrapper">
@@ -1313,10 +1312,25 @@
         </div>
       </div>
     </footer>
-    <a class="back-to-top">
+    <a href="#" class="back-to-top">
       <i class="fa-solid fa-chevron-up"></i>
       <span>Back to top</span>
     </a>
+    <!-- <div class="modal fade" id="onload" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Do You Want Cookie? We Want Yours! 🍪</h5>
+              </div>
+              <div class="modal-body">
+                  This site uses cookies to personalies the content for you.
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div> -->
   </main>
 
 
@@ -1327,7 +1341,12 @@
     crossorigin="anonymous"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
+  <script type="text/javascript">
+    window.onload = () => {
+      const myModal = new bootstrap.Modal('#onload');
+      myModal.show();
+    }
+  </script>
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
