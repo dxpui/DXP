@@ -2765,7 +2765,8 @@ a:focus .info-card.news-center:before {
     margin-left: 10px;
 }
 
-.news-social-icons a:hover {
+.news-social-icons a:hover,
+.news-social-icons a:focus-visible {
     color: var(--color-white);
     background-color: var(--color-default);
 }
@@ -2778,7 +2779,8 @@ a:focus .info-card.news-center:before {
     color: var(--color-white);
 }
 
-:is(.lightblue-bg, .blue-bg, .megenta-bg, .maroon-bg, .red-bg) :is(.news-social-icons) :is(a):hover {
+:is(.lightblue-bg, .blue-bg, .megenta-bg, .maroon-bg, .red-bg) :is(.news-social-icons) :is(a):hover,
+:is(.lightblue-bg, .blue-bg, .megenta-bg, .maroon-bg, .red-bg) :is(.news-social-icons) :is(a):focus-visible {
     color: var(--color-default);
     background-color: var(--color-white);
 }
@@ -3154,7 +3156,7 @@ a:focus .info-card.news-center:before {
     .footer .social-icons {
         display: flex;
         margin-bottom: 0;
-        margin-left: -20px;
+        margin-left: -10px;
     }
 }
 
@@ -3257,6 +3259,7 @@ a:focus .info-card.news-center:before {
     background-color: transparent;
     padding: 5px 20px;
     right: 90px;
+    top: 70px;
     position: absolute;
 }
 
@@ -4065,6 +4068,12 @@ a:focus .pdfdownload {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+}
+
+ul.callout-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0 !important;
 }
 
 .box {
@@ -5044,15 +5053,10 @@ table caption {
 }
 
 .blue-theme table tr th,
-.blue-theme table tr td:first-child,
 .red-theme table tr th,
-.red-theme table tr td:first-child,
 .megenta-theme table tr th,
-.megenta-theme table tr td:first-child,
 .maroon-theme table tr th,
-.maroon-theme table tr td:first-child,
-.lightblue-theme table tr th,
-.lightblue-theme table tr td:first-child {
+.lightblue-theme table tr th {
     border: 1px solid var(--color-white) !important;
 }
 
@@ -5476,7 +5480,7 @@ padding-right: 80px; */
 
 .social-list-group .li-tick::before {
     content: '✓';
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .social-list-group .li-tick {
@@ -6074,12 +6078,14 @@ blockquote cite {
     text-transform: uppercase;
 }
 
-.extra-margin.row {
-    margin-inline: -20px;
-}
+@media (max-width: 992px) {
+    .extra-margin.row {
+        margin-inline: -20px;
+    }
 
-.standared-page .extra-margin.row {
-    margin-inline: -25px;
+    .standared-page .extra-margin.row {
+        margin-inline: -25px;
+    }
 }
 
 .gray-bg .extra-margin.row {
@@ -6643,6 +6649,10 @@ a#purple {
     display: block;
     min-height: 2.5em;
     padding-left: 2.5em;
+}
+
+.decisiontreeblock fieldset legend {
+    font-size: 1rem;
 }
 
 /*********************** About Ofcom page Contact and Case reference section ********************/
