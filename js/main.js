@@ -72,8 +72,8 @@ function showSubMenu(hasChildren) {
     if ($(".menu").hasClass("mobile-menu-head")) {
         $('.header .menu>ul>li> button').attr('tabindex', '-1');
     }
-    
-    
+
+
 }
 
 function hideSubMenu() {
@@ -1357,13 +1357,13 @@ $(document).ready(function () {
 
 // Add aria-expanded on menu
 
-$(document).ready(function(){
+$(document).ready(function () {
     function updateSubMenuShow() {
-        $('li').each(function() {
+        $('li').each(function () {
             var anchor = $(this).find('button');
             var submenuDiv = $(this).find('div.sub-menu-show');
 
-            if(submenuDiv.length) {
+            if (submenuDiv.length) {
                 anchor.attr('aria-expanded', 'true');
             } else {
                 anchor.attr('aria-expanded', 'false');
@@ -1371,8 +1371,8 @@ $(document).ready(function(){
         });
     }
     updateSubMenuShow();
-    var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                 updateSubMenuShow();
             }
@@ -1381,5 +1381,17 @@ $(document).ready(function(){
     observer.observe(document.documentElement, {
         attributes: true,
         subtree: true
+    });
+});
+
+const dateInputs = document.querySelectorAll('input[type="date"]');
+
+dateInputs.forEach(input => {
+    input.addEventListener('input', function () {
+        if (this.value !== '') {
+            this.classList.add('has-value');
+        } else {
+            this.classList.remove('has-value');
+        }
     });
 });
