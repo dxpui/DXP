@@ -14,7 +14,7 @@ function menuMain() {
 // Esc functionality
 $(document).on('keydown', function (e) {
     if (e.keyCode === 27) { // ESC
-        $('.header .menu>ul>li> a').removeAttr('tabindex')
+        $('.header .menu>ul>li> button').removeAttr('tabindex')
         $('.menu').removeClass('active');
         $('.sub-menu').removeClass('active');
         $(".sub-menu").removeClass("sub-menu-show");
@@ -33,7 +33,7 @@ function goBack() {
     $(".go-back").on('click', function (e) {
         e.stopPropagation();
         hideSubMenu();
-        $('.header .menu>ul>li> a').removeAttr('tabindex')
+        $('.header .menu>ul>li> button').removeAttr('tabindex')
     })
 }
 
@@ -46,7 +46,7 @@ function menuTrigger() {
 function closeMenu() {
     $(".mobile-menu-close").click(function () {
         toggleMenu();
-        $('.header .menu>ul>li> a').removeAttr('tabindex')
+        $('.header .menu>ul>li> button').removeAttr('tabindex')
     })
 }
 
@@ -58,6 +58,8 @@ function menuOverlay() {
 function toggleMenu() {
     $(".menu").toggleClass("active");
     $(".menu-overlay").toggleClass("active");
+    $('.search-form').removeClass("active");
+    $("#search-icon i").removeClass("fa-times");
 }
 
 function showSubMenu(hasChildren) {
@@ -68,8 +70,10 @@ function showSubMenu(hasChildren) {
     $(".menu .mobile-menu-head").addClass("active");
     $(".menu .current-menu-title").text(menuTitle);
     if ($(".menu").hasClass("mobile-menu-head")) {
-        $('.header .menu>ul>li> a').attr('tabindex', '-1');
+        $('.header .menu>ul>li> button').attr('tabindex', '-1');
     }
+    
+    
 }
 
 function hideSubMenu() {
@@ -95,6 +99,9 @@ function searchIcon() {
         $('#search-icon i').toggleClass("fa-times");
         $('.search-form').toggleClass("active");
         $(".menu").removeClass("fa-times");
+        $(".menu").removeClass("active");
+        $(".menu-overlay").removeClass("active");
+        $(".mobile-nav-toggle").removeClass("btn-close close-bars");
     })
     $('.search-icons').keypress(function (event) {
         var id = event.keyCode;
@@ -1353,7 +1360,7 @@ $(document).ready(function () {
 $(document).ready(function(){
     function updateSubMenuShow() {
         $('li').each(function() {
-            var anchor = $(this).find('a');
+            var anchor = $(this).find('button');
             var submenuDiv = $(this).find('div.sub-menu-show');
 
             if(submenuDiv.length) {
