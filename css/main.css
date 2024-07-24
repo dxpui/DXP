@@ -6780,3 +6780,7 @@ agendas-container agendas-item agendas-published {
     }
 
 }
+
+input::-webkit-date-and-time-value {
+    text-align: left;
+}
