@@ -6765,12 +6765,22 @@ agendas-container agendas-item agendas-published {
 
     }
 
+    .search-filter input[type="date"].has-value:focus::before {
+        content: none !important;
+
+    }
+
+    .search-filter input[type="date"].has-value::before {
+        content: none !important;
+
+    }
+
     .search-filter input[type="date"] {
         display: flex;
     }
 
 }
 
-.search-filter input::-webkit-date-and-time-value {
+input::-webkit-date-and-time-value {
     text-align: left;
 }

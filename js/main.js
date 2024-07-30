@@ -1386,14 +1386,14 @@ $(document).ready(function () {
     });
 });
 
-// const dateInputs = document.querySelectorAll('input[type="date"]');
+const dateInputs = document.querySelectorAll('input[type="date"]');
 
-// dateInputs.forEach(input => {
-//     input.addEventListener('input', function () {
-//         if (this.value !== '') {
-//             this.classList.add('has-value');
-//         } else {
-//             this.classList.remove('has-value');
-//         }
-//     });
-// });
+dateInputs.forEach(input => {
+    input.addEventListener('input', function () {
+        if (this.value !== '') {
+            this.classList.add('has-value');
+        } else {
+            this.classList.remove('has-value');
+        }
+    });
+});
