@@ -1397,3 +1397,15 @@ dateInputs.forEach(input => {
         }
     });
 });
+
+$(document).ready(function() {
+    $('input[type="date"]').on('focus', function() {
+        // Clear the date value on focus
+        $(this).val('');
+    }).on('blur', function() {
+        if (!$(this).val()) {
+            // If the input is left empty, clear the value again to ensure no default date
+            $(this).val('');
+        }
+    });
+});
