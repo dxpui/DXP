@@ -6753,34 +6753,24 @@ agendas-container agendas-item agendas-published {
 
 @media (max-width: 992px) {
 
-    input[type="date"]::before {
+    .search-filter input[type="date"]::before {
         color: #999;
         content: attr(placeholder);
         margin-right: 3px;
 
     }
 
-    input[type="date"]:focus::before {
+    .search-filter input[type="date"]:focus::before {
         content: attr(placeholder) !important;
 
     }
 
-    input[type="date"].has-value:focus::before {
-        content: none !important;
-
-    }
-
-    input[type="date"].has-value::before {
-        content: none !important;
-
-    }
-
-    input[type="date"] {
+    .search-filter input[type="date"] {
         display: flex;
     }
 
 }
 
-input::-webkit-date-and-time-value {
+.search-filter input::-webkit-date-and-time-value {
     text-align: left;
 }

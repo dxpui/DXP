@@ -174,6 +174,8 @@ $(document).ready(function () {
             $(".menu-item-has-children .fa-angle-down").removeClass("rotate-arrow");
             $(this).find(".fa-angle-down").addClass("rotate-arrow");
         }
+        $(".search-form").removeClass("active");
+        $("#search-icon i").removeClass("fa-times");
     });
     $("#search-icon").click(function () {
         $(".menu-item-has-children .sub-menu").removeClass("sub-menu-show");
@@ -1384,14 +1386,14 @@ $(document).ready(function () {
     });
 });
 
-const dateInputs = document.querySelectorAll('input[type="date"]');
+// const dateInputs = document.querySelectorAll('input[type="date"]');
 
-dateInputs.forEach(input => {
-    input.addEventListener('input', function () {
-        if (this.value !== '') {
-            this.classList.add('has-value');
-        } else {
-            this.classList.remove('has-value');
-        }
-    });
-});
+// dateInputs.forEach(input => {
+//     input.addEventListener('input', function () {
+//         if (this.value !== '') {
+//             this.classList.add('has-value');
+//         } else {
+//             this.classList.remove('has-value');
+//         }
+//     });
+// });
