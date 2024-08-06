@@ -33,6 +33,7 @@
         <a href="index.html"> <img class="brand-logo" src="assets/img/logo2023_2.svg" alt="OfCom Logo" /></a>
       </div>
       <a href="javascript:void(0);" id="mobile-menu-trigger" class="mobile-menu-trigger order-3 order-lg-2">
+        <span class="visually-hidden-focusable">hamburger menu</span>
         <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none fa-solid fa-xmark"></i>
       </a>
@@ -42,13 +43,15 @@
         </div>
         <nav class="menu">
           <div class="mobile-menu-head">
-            <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
+            <a href="javascript:void(0);" class="go-back">
+              <span class="visually-hidden-focusable">Go Back</span>
+              <i class="fa fa-angle-left"></i></a>
             <div class="current-menu-title"></div>
             <div class="mobile-menu-close">&times;</div>
           </div>
           <ul class="menu-main">
             <li class="menu-item-has-children">
-              <a href="javascript:void(0);">Topics <i class="fa fa-angle-down"></i></a>
+              <button type="button">Topics <i class="fa fa-angle-down"></i></button>
               <div class="sub-menu mega-menu mega-menu-column-4">
                 <div class="list-item">
                   <div class="title d-flex justify-content-between align-items-center">
@@ -245,7 +248,7 @@
               </div>
             </li>
             <li class="menu-item-has-children">
-              <a href="#"> Ofcom’s work <i class="fa fa-angle-down"></i></a>
+              <button type="button">Ofcom’s work  <i class="fa fa-angle-down"></i></button>
               <div class="sub-menu mega-menu mega-menu-column-4">
                 <div class="list-item">
                   <h4 class="title d-flex justify-content-between align-items-center">
@@ -370,8 +373,7 @@
               </div>
             </li>
             <li class="menu-item-has-children">
-              <a href="#"> Complaints <i class="fa fa-angle-down"></i></a>
-
+              <button type="button">Complaints  <i class="fa fa-angle-down"></i></button>
               <div class="sub-menu mega-menu mega-menu-column-4">
                 <div class="list-item">
                   <h4 class="title d-flex justify-content-between align-items-center">
@@ -438,7 +440,7 @@
               </div>
             </li>
             <li class="menu-item-has-children">
-              <a href="#"> About Ofcom <i class="fa fa-angle-down"></i></a>
+              <button type="button">About Ofcom  <i class="fa fa-angle-down"></i></button>
               <div class="sub-menu mega-menu mega-menu-column-4">
                 <div class="list-item ">
                   <h4 class="title d-flex justify-content-between align-items-center">
@@ -681,8 +683,17 @@
     </div>
     </div>
   </header>
+  <div class="alert alert-dismissible fade show text-center orange-bg" role="alert">
+    <p>Current langauge is <strong>English</strong></p>
+    <a href="" class="alert-close" data-bs-dismiss="alert" aria-label="Close">
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#000'>
+        <path
+          d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z' />
+      </svg>
+    </a>
+  </div>
   <main>
-    <div class="visually-hidden">Home page features</div>
+    <h1 class="visually-hidden">Home page features</h1>
     <section class="position-relative">
       <div id="carouselExampleCaptions" class="carousel slide homepage-carousel-cls" data-bs-touch="true" data-bs-ride="carousel">
 

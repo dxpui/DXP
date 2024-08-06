@@ -1386,26 +1386,28 @@ $(document).ready(function () {
     });
 });
 
-const dateInputs = document.querySelectorAll('input[type="date"]');
-
-dateInputs.forEach(input => {
-    input.addEventListener('input', function () {
-        if (this.value !== '') {
-            this.classList.add('has-value');
-        } else {
-            this.classList.remove('has-value');
-        }
-    });
-});
-
 $(document).ready(function() {
-    $('input[type="date"]').on('focus', function() {
-        // Clear the date value on focus
-        $(this).val('');
-    }).on('blur', function() {
-        if (!$(this).val()) {
-            // If the input is left empty, clear the value again to ensure no default date
-            $(this).val('');
+    $('input[type="date"]').on('input change', function() {
+        if ($(this).val() !== '') {
+            $(this).addClass('has-value');
+        } else {
+            $(this).removeClass('has-value');
         }
     });
 });
+
+// $(document).ready(function() {
+//     // Check if the device is an iPhone
+//     var isIphone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
+
+//     if (isIphone) {
+//         // Add class to input[type="date"] elements if on iPhone
+//         $('input[type="date"]').on('input change', function() {
+//             if ($(this).val() !== '') {
+//                 $(this).addClass('has-value');
+//             } else {
+//                 $(this).removeClass('has-value');
+//             }
+//         });
+//     }
+// });
