@@ -6751,7 +6751,7 @@ agendas-container agendas-item agendas-published {
     }
 } */
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
 
     .search-filter input[type="date"]::before {
         color: #999;
