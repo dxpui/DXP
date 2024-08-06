@@ -6772,13 +6772,16 @@ agendas-container agendas-item agendas-published {
 
     .search-filter input[type="date"].has-value::before {
         content: none !important;
-
     }
 
     .search-filter input[type="date"] {
         display: flex;
     }
 
+}
+
+.search-filter input[type="date"] {
+    min-height: 47px;
 }
 
 input::-webkit-date-and-time-value {
