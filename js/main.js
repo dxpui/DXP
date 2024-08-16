@@ -1386,14 +1386,25 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function() {
-    $('input[type="date"]').on('input change', function() {
+$(document).ready(function () {
+    $('input[type="date"]').on('input change', function () {
         if ($(this).val() !== '') {
             $(this).addClass('has-value');
         } else {
             $(this).removeClass('has-value');
         }
     });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    var dateInput = document.querySelector('input[type="date"]');
+    dateInput.value = ''; // Ensures the date picker starts empty
+});
+
+
+flatpickr("#eventDate", {
+    allowInput: true,
+    dateFormat: "Y-m-d",
 });
 
 // $(document).ready(function() {
