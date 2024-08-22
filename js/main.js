@@ -1402,11 +1402,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-flatpickr("#eventDate", {
-    allowInput: true,
-    dateFormat: "Y-m-d",
-});
-
 $(document).ready(function() {
     $('#eventDate').on('focus', function() {
         // Store the placeholder text
