@@ -829,12 +829,12 @@
                       <select id="example-select" multiple name="native-select" placeholder="Select Sub Topics"
                         data-search="false" data-silent-initial-value-set="true">
                         <option value="1">Phones and broadband</option>
-                        <option value="2" >Bills and charges</option>
-                        <option value="3" >Landline phones</option>
+                        <option value="2">Bills and charges</option>
+                        <option value="3">Landline phones</option>
                         <option value="4">Mobile phones</option>
                         <option value="1">Phones and broadband</option>
-                        <option value="2" >Bills and charges</option>
-                        <option value="3" >Landline phones</option>
+                        <option value="2">Bills and charges</option>
+                        <option value="3">Landline phones</option>
                         <option value="4">Mobile phones</option>
                       </select>
                     </div>
@@ -853,13 +853,13 @@
                       <div class="row">
                         <div class="col-md-6">
                           <label class="py-2" for="updatedafter">Updated after</label>
-                          <input type="date" class="form-control" value="" name="updatedafter"
-                             id="eventDate" placeholder="dd/mm/yyyy" onfocus="this.value='';">
+                          <input type="date" data-date="" class="form-control" value="" name="updatedafter"
+                          id="eventDate" data-date-format="DD MM YYYY" value="2015-08-09" placeholder="dd/mm/yyyy" onfocus="this.value='date';">
                         </div>
                         <div class="col-md-6">
                           <label class="py-2" for="updatedbefore">Updated before</label>
-                          <input type="date" class="form-control" value="" name="updatedbefore"
-                            id="updatedbefore" placeholder="dd/mm/yyyy" onfocus="(this.type='date')">
+                          <input type="date" data-date=""class="form-control" value="" name="updatedbefore"
+                          id="updatedbefore" data-date-format="DD MM YYYY" value="2015-08-09" placeholder="dd/mm/yyyy" onfocus="(this.type='date')">
                         </div>
                       </div>
 
@@ -1571,47 +1571,54 @@
           <nav aria-label="Page navigation">
             <ul class="pagination-block justify-content-center">
               <li class="page-item">
-                  <a href="javascript:void(0);" onclick="updatePageQuery(1);" class="pagination-icon double-arrow-clear prev-arrow-end" title="First page">
-                    <span class="visually-hidden-focusable"></span>
-                  </a>
+                <a href="javascript:void(0);" onclick="updatePageQuery(1);"
+                  class="pagination-icon double-arrow-clear prev-arrow-end" title="First page">
+                  <span class="visually-hidden-focusable"></span>
+                </a>
               </li>
               <li class="page-item">
-                  <a href="javascript:void(0);" onclick="updatePageQuery(2);" class="pagination-icon single-arrow-clear prev-arrow" title="Previous page">
-                    <span class="visually-hidden-focusable"></span>
-                  </a>
-              </li>
-                <li class="page-item">
-                  <a class="page-link " href="javascript:void(0);"  onclick="updatePageQuery(1);"><span class="visually-hidden-focusable">Results page</span>1</a>
-                  
-                </li>
-                <li class="page-item">
-                  <a class="page-link " href="javascript:void(0);" aria-label="Results page 2" onclick="updatePageQuery(2);">2</a>
-                  <span class="visually-hidden-focusable">Results page 2</span>
-                </li>
-                <li class="page-item">
-                  <a class="page-link active" href="javascript:void(0);" aria-label="Results page 3" aria-current="page" onclick="updatePageQuery(3);">3</a>
-                  <span class="visually-hidden-focusable">Results page 3</span>
-                </li>
-                <li class="page-item">
-                  <a class="page-link " href="javascript:void(0);" onclick="updatePageQuery(4);">4</a>
-                  <span class="visually-hidden-focusable">Results page 4</span>
-                </li>
-                <li class="page-item">
-                  <a class="page-link " href="javascript:void(0);" onclick="updatePageQuery(5);">5</a>
-                  <span class="visually-hidden-focusable">Results page 5</span>
-                </li>
-              <li class="page-item">
-                  <a href="javascript:void(0);" onclick="updatePageQuery(4);" class="pagination-icon single-arrow-clear next-arrow" title="Next page">
-                    <span class="visually-hidden-focusable"></span>
-                  </a>
+                <a href="javascript:void(0);" onclick="updatePageQuery(2);"
+                  class="pagination-icon single-arrow-clear prev-arrow" title="Previous page">
+                  <span class="visually-hidden-focusable"></span>
+                </a>
               </li>
               <li class="page-item">
-                  <a href="javascript:void(0);" onclick="updatePageQuery(12);" class="pagination-icon double-arrow-clear next-arrow-end" title="Last page">
-                    <span class="visually-hidden-focusable"></span>
-                  </a>
+                <a class="page-link " href="javascript:void(0);" onclick="updatePageQuery(1);"><span
+                    class="visually-hidden-focusable">Results page</span>1</a>
+
+              </li>
+              <li class="page-item">
+                <a class="page-link " href="javascript:void(0);" aria-label="Results page 2"
+                  onclick="updatePageQuery(2);">2</a>
+                <span class="visually-hidden-focusable">Results page 2</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link active" href="javascript:void(0);" aria-label="Results page 3" aria-current="page"
+                  onclick="updatePageQuery(3);">3</a>
+                <span class="visually-hidden-focusable">Results page 3</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link " href="javascript:void(0);" onclick="updatePageQuery(4);">4</a>
+                <span class="visually-hidden-focusable">Results page 4</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link " href="javascript:void(0);" onclick="updatePageQuery(5);">5</a>
+                <span class="visually-hidden-focusable">Results page 5</span>
+              </li>
+              <li class="page-item">
+                <a href="javascript:void(0);" onclick="updatePageQuery(4);"
+                  class="pagination-icon single-arrow-clear next-arrow" title="Next page">
+                  <span class="visually-hidden-focusable"></span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a href="javascript:void(0);" onclick="updatePageQuery(12);"
+                  class="pagination-icon double-arrow-clear next-arrow-end" title="Last page">
+                  <span class="visually-hidden-focusable"></span>
+                </a>
               </li>
             </ul>
-              <p class="d-flex justify-content-center mt-3 pagination-count">Showing 21 - 30 of 117</p>
+            <p class="d-flex justify-content-center mt-3 pagination-count">Showing 21 - 30 of 117</p>
           </nav>
         </section>
       </div>
@@ -1768,6 +1775,7 @@
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
   <script src="js/virtual-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
   <script src="js/main.js"></script>
   <script>
     VirtualSelect.init({
@@ -1782,7 +1790,7 @@
       disableSelectAll: false,
     });
   </script>
- 
+
   <!-- <script>
     myOptions = [
   { label: 'Options 1', value: '1', alias: 'custom label for search', classNames: 'customClassNames', },

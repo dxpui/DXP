@@ -119,6 +119,14 @@ window.onscroll = () => {
 //********************Main Menu**********************
 
 $(document).ready(function () {
+    $("input").on("change", function () {
+        this.setAttribute(
+            "data-date",
+            moment(this.value, "YYYY-MM-DD")
+                .format(this.getAttribute("data-date-format"))
+        )
+    }).trigger("change")
+
 
     // Filter Dropdown
     if ($("#TopicDropdown").length > 0) {
@@ -1402,31 +1410,23 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-$(document).ready(function() {
-    $('#eventDate').on('focus', function() {
-        // Store the placeholder text
-        let placeholder = $(this).attr('placeholder');
+// flatpickr("#eventDate", {
+//     allowInput: true,
+//     dateFormat: "Y-m-d",
+// });
 
-        // Change input type to date to show the native date picker
-        $(this).attr('type', 'date');
+// $(document).ready(function() {
+//     // Check if the device is an iPhone
+//     var isIphone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
 
-        // Restore the placeholder text
-        $(this).attr('placeholder', placeholder);
-    }).on('blur', function() {
-        let inputDate = $(this).val();
-        if (inputDate) {
-            // Convert the date to the desired format (DD/MM/YYYY)
-            let dateObj = new Date(inputDate);
-            let day = String(dateObj.getDate()).padStart(2, '0');
-            let month = String(dateObj.getMonth() + 1).padStart(2, '0');
-            let year = dateObj.getFullYear();
-            let formattedDate = `${day}/${month}/${year}`;
-            $(this).val(formattedDate);
-        }
-        // Change input type back to text to display the formatted date
-        $(this).attr('type', 'text');
-    }).on('keydown', function(e) {
-        // Prevent manual typing in the input field
-        e.preventDefault();
-    });
-});
+//     if (isIphone) {
+//         // Add class to input[type="date"] elements if on iPhone
+//         $('input[type="date"]').on('input change', function() {
+//             if ($(this).val() !== '') {
+//                 $(this).addClass('has-value');
+//             } else {
+//                 $(this).removeClass('has-value');
+//             }
+//         });
+//     }
+// });
