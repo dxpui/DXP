@@ -1163,7 +1163,7 @@ header .search-box {
     }
 }
 
-@media(max-width: 991px) {
+@media(max-width: 992px) {
 
     .header .menu>ul>li>button:hover,
     .header .menu>ul>li>button:focus {
@@ -6778,6 +6778,12 @@ agendas-container agendas-item agendas-published {
         display: flex;
     }
 
+}
+
+.search-filter .input-group-text {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-default);
+    padding: .375rem .5rem;
 }
 
 .search-filter input[type="date"] {
