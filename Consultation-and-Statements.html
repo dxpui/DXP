@@ -858,8 +858,12 @@
                         </div>
                         <div class="col-md-6">
                           <label class="py-2" for="updatedbefore">Updated before</label>
-                          <input type="date" class="form-control"  id="myIDDate"   placeholder="dd/mm/yyyy">
+                         
                           <!-- <input class="flatpickr flatpickr-input active" type="text" placeholder="Select Date.." readonly="readonly"> -->
+                          <div class="input-group flatpickr">
+                            <input type="date" class="form-control flatpickr-date"  placeholder="dd/mm/yyyy">
+                            <a href="javascript:void(0);" class="input-group-text flatpickr-date" data-toggle><i class="fa-regular fa-calendar-days"></i></a>
+                          </div>
                         </div>
                       </div>
 
@@ -1792,8 +1796,8 @@
     });
   </script>
   <script>
-    flatpickr("#myIDDate", {
-      enableTime: false,
+    flatpickr(".flatpickr-date", {
+    enableTime: false,
     dateFormat: "d-m-Y",
     });
   </script>
