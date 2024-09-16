@@ -18,6 +18,8 @@
   <link href="css/virtual-select.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker-full.min.js"></script>
   <link href="css/main.css" rel="stylesheet">
 </head>
 
@@ -853,16 +855,18 @@
                       <div class="row">
                         <div class="col-md-6">
                           <label class="py-2" for="updatedafter">Updated after</label>
-                          <input type="date" data-date="" class="form-control" value="" name="updatedafter"
-                          id="eventDate" data-date-format="DD-MM-YYYY"  placeholder="dd/mm/yyyy" onfocus="this.value='date';">
+                          <div class="input-group">
+                            <input type="text" class="form-control filter-datepicker" placeholder="dd/mm/yyyy">
+                            <a href="javascript:void(0);" class="input-group-text addingCalendar"><i
+                                class="fa-regular fa-calendar-days"></i></a>
+                          </div>
                         </div>
                         <div class="col-md-6">
                           <label class="py-2" for="updatedbefore">Updated before</label>
-                         
-                          <!-- <input class="flatpickr flatpickr-input active" type="text" placeholder="Select Date.." readonly="readonly"> -->
                           <div class="input-group">
-                            <input type="text" class="form-control flatpickr-date"  placeholder="dd/mm/yyyy">
-                            <a href="javascript:void(0);" class="input-group-text flatpickr-date"><i class="fa-regular fa-calendar-days"></i></a>
+                            <input type="text" class="form-control filter-datepicker" placeholder="dd/mm/yyyy">
+                            <a href="javascript:void(0);" class="input-group-text"><i
+                                class="fa-regular fa-calendar-days"></i></a>
                           </div>
                         </div>
                       </div>
@@ -1779,7 +1783,7 @@
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
   <script src="js/virtual-select.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="js/main.js"></script>
   <script>
@@ -1797,19 +1801,22 @@
   </script>
   <script>
     flatpickr(".flatpickr-date", {
-    enableTime: false,
-    dateFormat: "d-m-Y",
+      enableTime: false,
+      dateFormat: "d-m-Y",
     });
   </script>
 
-  <!-- <script>
-    myOptions = [
-  { label: 'Options 1', value: '1', alias: 'custom label for search', classNames: 'customClassNames', },
-  { label: 'Options 2', value: '2', description: 'custom description for label', customData: '' },
-  { label: 'Options 3', value: '3' },
-  { label: 'Options 100000', value: '100000' },
-]
-  </script> -->
+  <script>
+    const elem = document.querySelector('.filter-datepicker');
+    const datepicker = new Datepicker(elem, {
+      format: 'dd/mm/yyyy',
+    }); 
+
+    $('.addingCalendar').on("click", function(e){
+    console.log("clicked");
+        $('filter-datepicker').click();
+    });
+  </script>
 </body>
 
 </html>
