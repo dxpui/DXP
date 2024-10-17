@@ -14,7 +14,7 @@ function menuMain() {
 // Esc functionality
 $(document).on('keydown', function (e) {
     if (e.keyCode === 27) { // ESC
-        $('.header .menu>ul>li> button').removeAttr('tabindex')
+        $('.header .menu>ul>li> a').removeAttr('tabindex')
         $('.menu').removeClass('active');
         $('.sub-menu').removeClass('active');
         $(".sub-menu").removeClass("sub-menu-show");
@@ -33,7 +33,7 @@ function goBack() {
     $(".go-back").on('click', function (e) {
         e.stopPropagation();
         hideSubMenu();
-        $('.header .menu>ul>li> button').removeAttr('tabindex')
+        $('.header .menu>ul>li> a').removeAttr('tabindex')
     })
 }
 
@@ -46,7 +46,7 @@ function menuTrigger() {
 function closeMenu() {
     $(".mobile-menu-close").click(function () {
         toggleMenu();
-        $('.header .menu>ul>li> button').removeAttr('tabindex')
+        $('.header .menu>ul>li> a').removeAttr('tabindex')
     })
 }
 
@@ -70,10 +70,8 @@ function showSubMenu(hasChildren) {
     $(".menu .mobile-menu-head").addClass("active");
     $(".menu .current-menu-title").text(menuTitle);
     if ($(".menu").hasClass("mobile-menu-head")) {
-        $('.header .menu>ul>li> button').attr('tabindex', '-1');
+        $('.header .menu>ul>li> a').attr('tabindex', '-1');
     }
-
-
 }
 
 function hideSubMenu() {
@@ -119,14 +117,6 @@ window.onscroll = () => {
 //********************Main Menu**********************
 
 $(document).ready(function () {
-    $("input").on("change", function () {
-        this.setAttribute(
-            "data-date",
-            moment(this.value, "YYYY-MM-DD")
-                .format(this.getAttribute("data-date-format"))
-        )
-    }).trigger("change")
-
 
     // Filter Dropdown
     if ($("#TopicDropdown").length > 0) {
@@ -1367,13 +1357,13 @@ $(document).ready(function () {
 
 // Add aria-expanded on menu
 
-$(document).ready(function () {
+$(document).ready(function(){
     function updateSubMenuShow() {
-        $('li').each(function () {
-            var anchor = $(this).find('button');
+        $('li').each(function() {
+            var anchor = $(this).find('a');
             var submenuDiv = $(this).find('div.sub-menu-show');
 
-            if (submenuDiv.length) {
+            if(submenuDiv.length) {
                 anchor.attr('aria-expanded', 'true');
             } else {
                 anchor.attr('aria-expanded', 'false');
@@ -1381,8 +1371,8 @@ $(document).ready(function () {
         });
     }
     updateSubMenuShow();
-    var observer = new MutationObserver(function (mutations) {
-        mutations.forEach(function (mutation) {
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                 updateSubMenuShow();
             }
@@ -1394,39 +1384,13 @@ $(document).ready(function () {
     });
 });
 
-// $(document).ready(function () {
-//     $('input[type="date"]').on('input change', function () {
-//         if ($(this).val() !== '') {
-//             $(this).addClass('has-value');
-//         } else {
-//             $(this).removeClass('has-value');
-//         }
-//     });
-// });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     var dateInput = document.querySelector('input[type="date"]');
-//     dateInput.value = ''; // Ensures the date picker starts empty
-// });
-
-
-// flatpickr("#eventDate", {
-//     allowInput: true,
-//     dateFormat: "Y-m-d",
-// });
-
-// $(document).ready(function() {
-//     // Check if the device is an iPhone
-//     var isIphone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
-
-//     if (isIphone) {
-//         // Add class to input[type="date"] elements if on iPhone
-//         $('input[type="date"]').on('input change', function() {
-//             if ($(this).val() !== '') {
-//                 $(this).addClass('has-value');
-//             } else {
-//                 $(this).removeClass('has-value');
-//             }
-//         });
-//     }
-// });
+const dateInputs = document.querySelectorAll('input[type="date"]');
+dateInputs.forEach(input => {
+    input.addEventListener('input', function () {
+        if (this.value !== '') {
+            this.classList.add('has-value');
+        } else {
+            this.classList.remove('has-value');
+        }
+    });
+});
