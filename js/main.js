@@ -1357,13 +1357,13 @@ $(document).ready(function () {
 
 // Add aria-expanded on menu
 
-$(document).ready(function(){
+$(document).ready(function () {
     function updateSubMenuShow() {
-        $('li').each(function() {
+        $('li').each(function () {
             var anchor = $(this).find('a');
             var submenuDiv = $(this).find('div.sub-menu-show');
 
-            if(submenuDiv.length) {
+            if (submenuDiv.length) {
                 anchor.attr('aria-expanded', 'true');
             } else {
                 anchor.attr('aria-expanded', 'false');
@@ -1371,8 +1371,8 @@ $(document).ready(function(){
         });
     }
     updateSubMenuShow();
-    var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                 updateSubMenuShow();
             }
@@ -1392,5 +1392,38 @@ dateInputs.forEach(input => {
         } else {
             this.classList.remove('has-value');
         }
+    });
+});
+
+$(document).ready(function () {
+    var vs = VirtualSelect.init({
+        ele: '#TopicDropdown',
+    });
+    $(document).on('keydown', function (event) {
+        if (event.keyCode === 9) {  // 9 is the keyCode for the Tab key
+            var $selectElement = $('#TopicDropdown');
+            if ($(document.activeElement)[0] !== $selectElement[0]) {
+                vs.$ele.close();  // Close the dropdown if it's open and focus has moved away
+            }
+        }
+    });
+});
+
+$(document).ready(function () {
+    // Check if label for CAPTCHA exists; if not, add it
+    if ($("label[for='g-recaptcha-response-100000']").length === 0) {
+        $("<label for='g-recaptcha-response-100000' class='visually-hidden-focusable'>recaptcha</label>").insertBefore("#g-recaptcha-response-100000");
+    }
+});
+
+$(document).ready(function () {
+    swiper.on('slideChange', function () {
+        var bullets = document.querySelectorAll('.swiper-pagination-bullet');
+        bullets.forEach(function (bullet, index) {
+            bullet.classList.remove('swiper-pagination-bullet-active');
+            if (index === swiper.realIndex) {
+                bullet.classList.add('swiper-pagination-bullet-active');
+            }
+        });
     });
 });
