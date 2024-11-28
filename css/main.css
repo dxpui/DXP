@@ -699,6 +699,17 @@ a.purple-btn:focus-visible {
     color: var(--color-megenta);
 }
 
+.btn-tag.red-bg {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+.btn-tag.red-bg:hover,
+.btn-tag.red-bg:focus-visible {
+    background-color: var(--color-light-gray);
+    color: var(--color-red);
+}
+
 .btn-tag:active {
     background-color: var(--color-light-gray) !important;
 }
@@ -1322,7 +1333,7 @@ header .search-box {
 
 /*responsive*/
 
-@media(max-width: 992px) {
+@media(max-width: 991px) {
     .header .menu>ul>li .sub-menu.mega-menu-column-4 {
         padding-left: 5px;
         padding-right: 5px;
@@ -1559,6 +1570,10 @@ header .search-box {
     .menu-overlay.active {
         visibility: hidden;
         opacity: 1;
+    }
+
+    .header .menu>ul>li .sub-menu.mega-menu>.list-item>ul>li>a {
+        text-decoration: underline;
     }
 }
 
@@ -2152,6 +2167,10 @@ header .search-box {
 .search-filter .vscomp-wrapper.focused .vscomp-toggle-button,
 .search-filter .vscomp-wrapper:focus .vscomp-toggle-button {
     box-shadow: none;
+}
+
+.search-filter .vscomp-wrapper:not(.has-value) .vscomp-value{
+    opacity: 1;
 }
 
 .accordion-button .apply-f {
@@ -4871,7 +4890,7 @@ a:focus .pdfdownload {
     margin-bottom: 20px;
 }
 
-@media only screen and (min-width: 390px) {
+@media only screen and (min-width: 320px) {
     .logo-list .logo-list-item {
         flex: 0 0 auto;
         width: 50%;
@@ -5044,6 +5063,12 @@ table {
     caption-side: top;
 }
 
+table tr th,
+table tr td,
+table tr td:first-child{
+    border: 1px solid var(--color-default) !important;
+}
+
 table caption {
     text-align: center;
     color: var(--color-default);
@@ -5063,14 +5088,13 @@ table caption {
 .maroon-theme table tr td:first-child,
 .lightblue-theme table tr th,
 .lightblue-theme table tr td:first-child {
-    border: 1px solid var(--color-white) !important;
+    border: 1px solid var(--color-white);
 }
 
 .blue-theme table tr th,
 .blue-theme table thead tr td {
     background-color: var(--color-primary);
     color: var(--color-white);
-    border: 1px solid var(--color-white) !important;
     vertical-align: middle;
 }
 
@@ -5078,28 +5102,24 @@ table caption {
 .red-theme table thead tr td {
     background-color: var(--color-red);
     color: var(--color-white);
-    border: 1px solid var(--color-white) !important;
 }
 
 .megenta-theme table tr th,
 .megenta-theme table thead tr td {
     background-color: var(--color-megenta);
     color: var(--color-white);
-    border: 1px solid var(--color-white) !important;
 }
 
 .lightblue-theme table tr th,
 .lightblue-theme table thead tr td {
     background-color: var(--color-primary);
     color: var(--color-white);
-    border: 1px solid var(--color-white) !important;
 }
 
 .maroon-theme table tr th,
 .maroon-theme table thead tr td {
     background-color: var(--color-maroon);
     color: var(--color-white);
-    border: 1px solid var(--color-white) !important;
 }
 
 .pink-theme table tr th,
@@ -6798,4 +6818,16 @@ agendas-container agendas-item agendas-published {
 
 input::-webkit-date-and-time-value {
     text-align: left;
+}
+
+@media (min-width: 991px) {
+    .without-search .col-md-6 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+}
+
+.pdf-content{
+    display: block;
+    margin-bottom: 10px;
 }
