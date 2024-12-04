@@ -6408,4 +6408,7 @@ agendas-container agendas-item agendas-published {
     .info-card:hover .svg-arrow path {
       stroke: var(--color-default);
     }
+    .alert .alert-close svg {
+        fill: aliceblue;
+    }
   }

@@ -6843,4 +6843,7 @@ input::-webkit-date-and-time-value {
     .info-card:hover .svg-arrow path {
       stroke: var(--color-default);
     }
+    .alert .alert-close svg {
+        fill: aliceblue;
+    }
   }
