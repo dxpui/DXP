@@ -6396,3 +6396,16 @@ agendas-container agendas-item agendas-name,
 agendas-container agendas-item agendas-published {
     display: block;
 }
+
+@media (forced-colors: active) {
+    .info-card .svg-arrow {
+      fill: aliceblue;
+    }
+    .info-card:hover .svg-arrow {
+      fill: aliceblue;
+      stroke: #000045;
+    }
+    .info-card:hover .svg-arrow path {
+      stroke: var(--color-default);
+    }
+  }

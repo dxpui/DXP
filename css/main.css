@@ -6831,3 +6831,16 @@ input::-webkit-date-and-time-value {
     display: block;
     margin-bottom: 10px;
 }
+
+@media (forced-colors: active) {
+    .info-card .svg-arrow {
+      fill: aliceblue;
+    }
+    .info-card:hover .svg-arrow {
+      fill: aliceblue;
+      stroke: #000045;
+    }
+    .info-card:hover .svg-arrow path {
+      stroke: var(--color-default);
+    }
+  }
