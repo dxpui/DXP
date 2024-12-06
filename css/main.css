@@ -6854,5 +6854,10 @@ input::-webkit-date-and-time-value {
     .step-accordion .accordion-item .accordion-button::after { 
         background-image: url("../assets/img/web-icons/Accordion-contract-contrast-mode.svg") !important;
     }
-    
+
+    /* Customize the appearance of the calendar icon in high contrast mode */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+    }
+   
   }
