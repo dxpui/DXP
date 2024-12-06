@@ -6859,5 +6859,12 @@ input::-webkit-date-and-time-value {
     input[type="date"]::-webkit-calendar-picker-indicator {
         filter: invert(1);
     }
+
+    .vscomp-options-list {
+        border-style: solid !important;
+    }
+    .vscomp-option {
+        border-style: solid 1px !important;
+    } 
    
   }
