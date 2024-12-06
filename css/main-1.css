@@ -6411,6 +6411,7 @@ agendas-container agendas-item agendas-published {
     .alert .alert-close svg {
         fill: aliceblue;
     }
+
     .step-accordion .accordion-item .accordion-button:not(.collapsed)::after {
         background-image: url("../assets/img/web-icons/Accordion-expand-contrast-mode.svg") !important;
     }
@@ -6418,4 +6419,33 @@ agendas-container agendas-item agendas-published {
     .step-accordion .accordion-item .accordion-button::after { 
         background-image: url("../assets/img/web-icons/Accordion-contract-contrast-mode.svg") !important;
     }
+
+    /* Customize the appearance of the calendar icon in high contrast mode */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+    }
+
+    .vscomp-options-list {
+        border-style: solid !important;
+    }
+    .vscomp-option {
+        border-style: solid 1px !important;
+    } 
+
+    .pagination-block .single-arrow-clear {
+        background-image: url(/assets/img/web-icons/single-arrow-clear-dis.svg);
+    }
+    
+    .pagination-block .double-arrow-clear {
+        background-image: url(/assets/img/web-icons/double-arrow-clear-dis.svg);
+    }
+
+    .pagination-block:hover .single-arrow-clear {
+        background-image: url(/assets/img/web-icons/single-arrow-clear-dis.svg);
+    }
+    
+    .pagination-block:hover .double-arrow-clear {
+        background-image: url(/assets/img/web-icons/double-arrow-clear-dis.svg);
+    }
+
   }

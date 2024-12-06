@@ -6866,5 +6866,21 @@ input::-webkit-date-and-time-value {
     .vscomp-option {
         border-style: solid 1px !important;
     } 
-   
+
+    .pagination-block .single-arrow-clear {
+        background-image: url(/assets/img/web-icons/single-arrow-clear-dis.svg);
+    }
+    
+    .pagination-block .double-arrow-clear {
+        background-image: url(/assets/img/web-icons/double-arrow-clear-dis.svg);
+    }
+
+    .pagination-block:hover .single-arrow-clear {
+        background-image: url(/assets/img/web-icons/single-arrow-clear-dis.svg);
+    }
+    
+    .pagination-block:hover .double-arrow-clear {
+        background-image: url(/assets/img/web-icons/double-arrow-clear-dis.svg);
+    }
+
   }
