@@ -6846,4 +6846,13 @@ input::-webkit-date-and-time-value {
     .alert .alert-close svg {
         fill: aliceblue;
     }
+
+    .step-accordion .accordion-item .accordion-button:not(.collapsed)::after {
+        background-image: url("../assets/img/web-icons/Accordion-expand-contrast-mode.svg") !important;
+    }
+
+    .step-accordion .accordion-item .accordion-button::after { 
+        background-image: url("../assets/img/web-icons/Accordion-contract-contrast-mode.svg") !important;
+    }
+    
   }
