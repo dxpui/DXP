@@ -6883,4 +6883,9 @@ input::-webkit-date-and-time-value {
         background-image: url(/assets/img/web-icons/double-arrow-clear-dis.svg);
     }
 
+    .info-card .svg-arrow-info {
+        fill: aliceblue;
+    }
+
+
   }
