@@ -1915,8 +1915,9 @@
         format: 'dd/mm/yyyy',
         autoclose: true,
         keyboardNavigation: true,
-      });
-      $('#datepicker1').datepicker({ format: 'dd/mm/yyyy', autoclose: true, keyboardNavigation: true });
+      }).datepicker('setDate', new Date());
+
+      $('#datepicker1').datepicker({ format: 'dd/mm/yyyy', autoclose: true, keyboardNavigation: true }).datepicker('setDate', new Date());
       $('#calendar-icon').on('click', function () {
         $('#datepicker').datepicker('show');
       });
