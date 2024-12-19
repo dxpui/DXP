@@ -23,6 +23,9 @@
   <link href="css/main.css" rel="stylesheet">
 
   <style>
+    td.day {
+      text-align: center !important;
+    }
     .table-condensed .day:hover {
       cursor: pointer;
       background-color: #818991;
@@ -80,12 +83,12 @@
     /* Reducing font size of the datepicker */
     .datepicker,
     .datepicker table {
-      font-size: 12px;
+      font-size: 14px;
     }
 
     /* Adjust the width of the calendar */
     .datepicker table {
-      width: 180px;
+      width: 200px;
     }
 
     /* Adjust the input field */
@@ -98,19 +101,23 @@
     /* Reduce padding/margin inside calendar cells */
     .datepicker table td,
     .datepicker table th {
-      padding: 3px;
+      padding: 5px;
     }
 
     /* Optional: Adjust header and navigation button sizes */
     .datepicker .datepicker-days th,
     .datepicker .datepicker-months th,
     .datepicker .datepicker-years th {
-      font-size: 12px;
+      font-size: 16px;
     }
 
     .datepicker .datepicker-prev,
     .datepicker .datepicker-next {
       font-size: 14px;
+    }
+
+    .datepicker-dropdown {
+      padding-bottom: 0px !important;
     }
   </style>
 </head>
