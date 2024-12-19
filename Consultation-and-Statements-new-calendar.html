@@ -26,6 +26,7 @@
     td.day {
       text-align: center !important;
     }
+
     .table-condensed .day:hover {
       cursor: pointer;
       background-color: #818991;
@@ -88,7 +89,7 @@
 
     /* Adjust the width of the calendar */
     .datepicker table {
-      width: 200px;
+      width: 250px;
     }
 
     /* Adjust the input field */
@@ -118,6 +119,10 @@
 
     .datepicker-dropdown {
       padding-bottom: 0px !important;
+    }
+
+    td.today.day {
+      background-color: #818991;
     }
   </style>
 </head>
@@ -1915,9 +1920,15 @@
         format: 'dd/mm/yyyy',
         autoclose: true,
         keyboardNavigation: true,
-      }).datepicker('setDate', new Date());
+        todayHighlight: true
+      })
 
-      $('#datepicker1').datepicker({ format: 'dd/mm/yyyy', autoclose: true, keyboardNavigation: true }).datepicker('setDate', new Date());
+      $('#datepicker1').datepicker({
+        format: 'dd/mm/yyyy',
+        autoclose: true,
+        keyboardNavigation: true,
+        todayHighlight: true
+      });
       $('#calendar-icon').on('click', function () {
         $('#datepicker').datepicker('show');
       });
