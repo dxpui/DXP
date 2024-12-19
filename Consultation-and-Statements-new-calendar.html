@@ -1922,12 +1922,45 @@
         todayHighlight: true
       })
 
+      $('#datepicker').datepicker().on('changeDate', function (event) {
+        var selectedDate = $('#datepicker').datepicker('getDate');
+        var today = new Date();
+        if (selectedDate && selectedDate.toDateString() === today.toDateString()) {
+          $('td.today').css({
+            'background-color': '#818991',
+          });
+        } else {
+          $('td.today').css({
+            'background-color': '#FFFFFF',
+            'color': '#212529'
+          });
+        }
+      });
+
+
       $('#datepicker1').datepicker({
         format: 'dd/mm/yyyy',
         autoclose: true,
         keyboardNavigation: true,
         todayHighlight: true
       });
+
+      $('#datepicker1').datepicker().on('changeDate', function (event) {
+        var selectedDate = $('#datepicker1').datepicker('getDate');
+        var today = new Date();
+        if (selectedDate && selectedDate.toDateString() === today.toDateString()) {
+          $('td.today').css({
+            'background-color': '#818991',
+          });
+        } else {
+          $('td.today').css({
+            'background-color': '#FFFFFF',
+            'color': '#212529'
+          });
+        }
+      });
+
+
       $('#calendar-icon').on('click', function () {
         $('#datepicker').datepicker('show');
       });
