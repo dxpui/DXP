@@ -2169,7 +2169,7 @@ header .search-box {
     box-shadow: none;
 }
 
-.search-filter .vscomp-wrapper:not(.has-value) .vscomp-value{
+.search-filter .vscomp-wrapper:not(.has-value) .vscomp-value {
     opacity: 1;
 }
 
@@ -5065,7 +5065,7 @@ table {
 
 table tr th,
 table tr td,
-table tr td:first-child{
+table tr td:first-child {
     border: 1px solid var(--color-default) !important;
 }
 
@@ -6133,7 +6133,7 @@ blockquote cite {
     padding-bottom: 1.5rem;
 }
 
-.teaser-bg-padding{
+.teaser-bg-padding {
     padding-bottom: 2px;
 }
 
@@ -6355,6 +6355,7 @@ blockquote cite {
 .EPiServerForms .ValidationRequired .Form__Element__Caption:after {
     content: none !important;
 }
+
 /******************************************************/
 
 .custom-form label {
@@ -6827,31 +6828,42 @@ input::-webkit-date-and-time-value {
     }
 }
 
-.pdf-content{
+.pdf-content {
     display: block;
     margin-bottom: 10px;
 }
 
 @media (forced-colors: active) {
     .info-card .svg-arrow {
-      fill: aliceblue;
+        fill: aliceblue;
     }
+
     .info-card:hover .svg-arrow {
-      fill: aliceblue;
-      stroke: #000045;
+        fill: aliceblue;
+        stroke: #000045;
     }
+
     .info-card:hover .svg-arrow path {
-      stroke: var(--color-default);
+        stroke: var(--color-default);
     }
+
     .alert .alert-close svg {
         fill: aliceblue;
+    }
+
+    .destination-accordian .accordion-button::after {
+        background-image: url("../assets/img/web-icons/Accordion-expand-contrast-mode.svg") !important;
+    }
+
+    .destination-accordian .accordion-button:not(.collapsed)::after {
+        background-image: url("../assets/img/web-icons/Accordion-contract-contrast-mode.svg") !important;
     }
 
     .step-accordion .accordion-item .accordion-button:not(.collapsed)::after {
         background-image: url("../assets/img/web-icons/Accordion-expand-contrast-mode.svg") !important;
     }
 
-    .step-accordion .accordion-item .accordion-button::after { 
+    .step-accordion .accordion-item .accordion-button::after {
         background-image: url("../assets/img/web-icons/Accordion-contract-contrast-mode.svg") !important;
     }
 
@@ -6863,14 +6875,15 @@ input::-webkit-date-and-time-value {
     .vscomp-options-list {
         border-style: solid !important;
     }
+
     .vscomp-option {
         border-style: solid 1px !important;
-    } 
+    }
 
     .pagination-block .single-arrow-clear {
         background-image: url(/assets/img/web-icons/single-arrow-clear-dis.svg);
     }
-    
+
     .pagination-block .double-arrow-clear {
         background-image: url(/assets/img/web-icons/double-arrow-clear-dis.svg);
     }
@@ -6878,7 +6891,7 @@ input::-webkit-date-and-time-value {
     .pagination-block:hover .single-arrow-clear {
         background-image: url(/assets/img/web-icons/single-arrow-clear-dis.svg);
     }
-    
+
     .pagination-block:hover .double-arrow-clear {
         background-image: url(/assets/img/web-icons/double-arrow-clear-dis.svg);
     }
@@ -6887,5 +6900,16 @@ input::-webkit-date-and-time-value {
         fill: aliceblue;
     }
 
+    .download-svg {
+        width: 24px;
+    }
 
-  }
+    .download-svg path {
+        stroke: #ffc107;
+    }
+
+    .header .menu>ul>li>button {
+        border-bottom: none;
+    }
+
+}
