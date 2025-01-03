@@ -1427,3 +1427,17 @@ $(document).ready(function () {
         });
     });
 });
+
+$(document).ready(function() {
+    // Get the current domain
+    var currentDomain = window.location.hostname;
+    // Iterate over each <a> tag
+    $('a').each(function() {
+        var href = $(this).attr('href');
+        // Check if href is valid and not the same as the current domain
+        if (href && (href.startsWith('http://') || href.startsWith('https://')) && !href.includes(currentDomain)) {
+            // Add the class 'external-link' to the <a> tag itself
+            $(this).addClass('external-link');
+        }
+    });
+});

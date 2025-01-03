@@ -6833,6 +6833,12 @@ input::-webkit-date-and-time-value {
     margin-bottom: 10px;
 }
 
+.external-link::after {
+    content: "\f08e";  
+    font-family: FontAwesome; 
+    padding-left: 3px;
+}
+
 @media (forced-colors: active) {
     .info-card .svg-arrow {
         fill: aliceblue;
