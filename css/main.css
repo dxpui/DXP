@@ -6785,15 +6785,18 @@ agendas-container agendas-item agendas-published {
 
 @media (max-width: 1024px) {
 
+    /* Changes are done for the old calendar issue fix 33260
+    /* content: attr(placeholder); */
+    */
     .search-filter input[type="date"]::before {
         color: #999;
-        content: attr(placeholder);
+        /* content: attr(placeholder); */
         margin-right: 3px;
 
     }
 
     .search-filter input[type="date"]:focus::before {
-        content: attr(placeholder) !important;
+        /* content: attr(placeholder) !important; */
 
     }
 

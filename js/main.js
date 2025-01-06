@@ -1428,11 +1428,11 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     // Get the current domain
     var currentDomain = window.location.hostname;
     // Iterate over each <a> tag
-    $('a').each(function() {
+    $('a').each(function () {
         var href = $(this).attr('href');
         // Check if href is valid and not the same as the current domain
         if (href && (href.startsWith('http://') || href.startsWith('https://')) && !href.includes(currentDomain)) {
@@ -1441,3 +1441,53 @@ $(document).ready(function() {
         }
     });
 });
+
+
+/* Changes are done for the old calendar issue fix 33260
+Issue #1: Current date should not be selected automatically until user select the required date 
+Issue #2: as per the CR- it should take DD/MM/YYYY- but it is accepting DD/MMM/YYYY
+*/
+$(document).ready(function () {
+    var currentDate = new Date().toISOString().split('T')[0];
+    var dateCleared = false;
+
+    $('#updatedbefore').on('focus', function () {
+        var selectedDate = $(this).val();
+        if (selectedDate === currentDate && !dateCleared) {
+            $(this).val('');
+            dateCleared = true;
+        }
+    });
+
+    var updatedBeforeDateInput = $('#updatedbefore');
+    updatedBeforeDateInput.on('input', function () {
+        var value = $(this).val();
+        var datePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+        if (datePattern.test(value)) {
+            return;
+        } else {
+            var parts = value.split('/');
+            if (parts.length === 3) {
+                var day = parts[0].padStart(2, '0');
+                var month = parts[1].padStart(2, '0');
+                var year = parts[2];
+                var formattedDate = day + '/' + month + '/' + year;
+                $(this).val(formattedDate);
+            }
+        }
+    });
+
+    updatedBeforeDateInput.on('focus', function () {
+        var value = $(this).val();
+        if (value) {
+            var parts = value.split('/');
+            if (parts.length === 3) {
+                var day = parts[0].padStart(2, '0');
+                var month = parts[1].padStart(2, '0');
+                var year = parts[2];
+                $(this).val(day + '/' + month + '/' + year);
+            }
+        }
+    });
+});
+
