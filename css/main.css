@@ -6782,6 +6782,19 @@ agendas-container agendas-item agendas-published {
         height: 620px;
     }
 }
+/* added for 33260 bug*/
+@media all and (min-width: 0) and (max-width: 1024px) and (pointer: coarse) {
+    .ios-safari.search-filter input[type="date"]::before {
+        color: #999;
+        content: attr(placeholder);
+        margin-right: 3px;
+
+    }
+
+    .ios-safari.search-filter input[type="date"]:focus::before {
+        content: attr(placeholder) !important;
+    }
+}
 
 @media (max-width: 1024px) {
 
