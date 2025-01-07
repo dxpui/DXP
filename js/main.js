@@ -1531,7 +1531,7 @@ $(document).ready(function () {
                 var day = parts[2].padStart(2, '0');
                 var month = parts[1].padStart(2, '0');
                 var year = parts[0];
-                console.log(formattedDate);
+                console.log(day + '/' + month + '/' + year);
                 $(this).val(day + '/' + month + '/' + year);
             }
         }
