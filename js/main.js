@@ -1458,66 +1458,66 @@ $(document).ready(function () {
     var currentDate = new Date().toISOString().split('T')[0];
     var dateCleared = false;
 
-    $('#updatedbefore').on('focus', function () {
-        var selectedDate = $(this).val();
-        if (selectedDate === currentDate && !dateCleared) {
-            $(this).val('');
-            dateCleared = true;
-        }
-    });
+    // $('#updatedbefore').on('focus', function () {
+    //     var selectedDate = $(this).val();
+    //     if (selectedDate === currentDate && !dateCleared) {
+    //         $(this).val('');
+    //         dateCleared = true;
+    //     }
+    // });
 
-    var updatedBeforeDateInput = $('#updatedbefore');
-    updatedBeforeDateInput.on('input', function () {
-        var value = $(this).val();
-        var datePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
-        if (datePattern.test(value)) {
-            return;
-        } else {
-            var parts = value.split('/');
-            if (parts.length === 3) {
-                var day = parts[0].padStart(2, '0');
-                var month = parts[1].padStart(2, '0');
-                var year = parts[2];
-                var formattedDate = day + '/' + month + '/' + year;
-                $(this).val(formattedDate);
-            }
-        }
-    });
+    // var updatedBeforeDateInput = $('#updatedbefore');
+    // updatedBeforeDateInput.on('input', function () {
+    //     var value = $(this).val();
+    //     var datePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+    //     if (datePattern.test(value)) {
+    //         return;
+    //     } else {
+    //         var parts = value.split('/');
+    //         if (parts.length === 3) {
+    //             var day = parts[0].padStart(2, '0');
+    //             var month = parts[1].padStart(2, '0');
+    //             var year = parts[2];
+    //             var formattedDate = day + '/' + month + '/' + year;
+    //             $(this).val(formattedDate);
+    //         }
+    //     }
+    // });
 
-    updatedBeforeDateInput.on('focus', function () {
-        var value = $(this).val();
-        if (value) {
-            var parts = value.split('/');
-            if (parts.length === 3) {
-                var day = parts[0].padStart(2, '0');
-                var month = parts[1].padStart(2, '0');
-                var year = parts[2];
-                $(this).val(day + '/' + month + '/' + year);
-            }
-        }
-    });
+    // updatedBeforeDateInput.on('focus', function () {
+    //     var value = $(this).val();
+    //     if (value) {
+    //         var parts = value.split('/');
+    //         if (parts.length === 3) {
+    //             var day = parts[0].padStart(2, '0');
+    //             var month = parts[1].padStart(2, '0');
+    //             var year = parts[2];
+    //             $(this).val(day + '/' + month + '/' + year);
+    //         }
+    //     }
+    // });
 
-    var updatedBeforeDateInput = $('#updatedbefore');
-    updatedBeforeDateInput.on('touchstart', function () {
-        var value = '';
-        setTimeout(() => {
-            value = $(this).val();
-        }, 0); 
+    // var updatedBeforeDateInput = $('#updatedbefore');
+    // updatedBeforeDateInput.on('touchstart', function () {
+    //     var value = '';
+    //     setTimeout(() => {
+    //         value = $(this).val();
+    //     }, 0); 
         
-        var datePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
-        if (datePattern.test(value)) {
-            return;
-        } else {
-            var parts = value.split('/');
-            if (parts.length === 3) {
-                var day = parts[0].padStart(2, '0');
-                var month = parts[1].padStart(2, '0');
-                var year = parts[2];
-                var formattedDate = day + '/' + month + '/' + year;
-                $(this).val(formattedDate);
-            }
-        }
-    });
+    //     var datePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+    //     if (datePattern.test(value)) {
+    //         return;
+    //     } else {
+    //         var parts = value.split('/');
+    //         if (parts.length === 3) {
+    //             var day = parts[0].padStart(2, '0');
+    //             var month = parts[1].padStart(2, '0');
+    //             var year = parts[2];
+    //             var formattedDate = day + '/' + month + '/' + year;
+    //             $(this).val(formattedDate);
+    //         }
+    //     }
+    // });
 
     updatedBeforeDateInput.on('touchend', function () {
         var value = $(this).val();
@@ -1525,11 +1525,11 @@ $(document).ready(function () {
             value = $(this).val();
         }, 0); 
         if (value) {
-            var parts = value.split('/');
+            var parts = value.split('-');
             if (parts.length === 3) {
-                var day = parts[0].padStart(2, '0');
+                var day = parts[2].padStart(2, '0');
                 var month = parts[1].padStart(2, '0');
-                var year = parts[2];
+                var year = parts[0];
                 $(this).val(day + '/' + month + '/' + year);
             }
         }
