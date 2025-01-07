@@ -124,7 +124,7 @@ $(document).ready(function () {
         document.body.classList.add('ios-safari');
     }
 
-    
+
     // Filter Dropdown
     if ($("#TopicDropdown").length > 0) {
         VirtualSelect.init({
@@ -1497,13 +1497,13 @@ $(document).ready(function () {
     //     }
     // });
 
-    // var updatedBeforeDateInput = $('#updatedbefore');
+    var updatedBeforeDateInput = $('#updatedbefore');
     // updatedBeforeDateInput.on('touchstart', function () {
     //     var value = '';
     //     setTimeout(() => {
     //         value = $(this).val();
     //     }, 0); 
-        
+
     //     var datePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
     //     if (datePattern.test(value)) {
     //         return;
@@ -1514,6 +1514,7 @@ $(document).ready(function () {
     //             var month = parts[1].padStart(2, '0');
     //             var year = parts[2];
     //             var formattedDate = day + '/' + month + '/' + year;
+                   
     //             $(this).val(formattedDate);
     //         }
     //     }
@@ -1523,13 +1524,14 @@ $(document).ready(function () {
         var value = $(this).val();
         setTimeout(() => {
             value = $(this).val();
-        }, 0); 
+        }, 0);
         if (value) {
             var parts = value.split('-');
             if (parts.length === 3) {
                 var day = parts[2].padStart(2, '0');
                 var month = parts[1].padStart(2, '0');
                 var year = parts[0];
+                console.log(formattedDate);
                 $(this).val(day + '/' + month + '/' + year);
             }
         }
