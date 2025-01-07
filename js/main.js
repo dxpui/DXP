@@ -1497,7 +1497,7 @@ $(document).ready(function () {
     //     }
     // });
 
-    var updatedBeforeDateInput = $('#updatedbefore');
+
     // updatedBeforeDateInput.on('touchstart', function () {
     //     var value = '';
     //     setTimeout(() => {
@@ -1519,7 +1519,7 @@ $(document).ready(function () {
     //         }
     //     }
     // });
-
+    var updatedBeforeDateInput = $('#updatedbefore');
     updatedBeforeDateInput.on('touchend', function () {
         var value = $(this).val();
         setTimeout(() => {
@@ -1531,8 +1531,8 @@ $(document).ready(function () {
                 var day = parts[2].padStart(2, '0');
                 var month = parts[1].padStart(2, '0');
                 var year = parts[0];
-                console.log(day + '/' + month + '/' + year);
-                $(this).val(day + '/' + month + '/' + year);
+                console.log(day + '-' + month + '-' + year);
+                $(this).val(day + '-' + month + '-' + year);
             }
         }
     });
