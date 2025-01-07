@@ -1522,10 +1522,7 @@ $(document).ready(function () {
     var updatedBeforeDateInput = $('#updatedbefore');
     updatedBeforeDateInput.on('touchend', function () {
         var value = $(this).val();
-        setTimeout(() => {
-            value = $(this).val();
-        }, 0);
-        if (value) {
+        if (value && value !== '') {
             var parts = value.split('-');
             if (parts.length === 3) {
                 var day = parts[2].padStart(2, '0');
