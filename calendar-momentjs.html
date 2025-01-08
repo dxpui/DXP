@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,66 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Moment.js -->
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+
+    <style>
+        input {
+            position: relative;
+            width: 150px;
+            height: 20px;
+            color: white;
+        }
+
+        input:before {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            content: attr(data-date);
+            display: inline-block;
+            color: black;
+        }
+
+        input::-webkit-datetime-edit,
+        input::-webkit-inner-spin-button,
+        input::-webkit-clear-button {
+            display: none;
+        }
+
+        input::-webkit-calendar-picker-indicator {
+            position: absolute;
+            top: 3px;
+            right: 0;
+            color: black;
+            opacity: 1;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Select a Date</h1>
     <form>
         <label for="eventDate">Event Date:</label>
+        <input type="date" class="form-control" format="yyyy-mm-dd" name="afterDate" id="eventDate"
+            placeholder="dd/mm/yyyy">
         <input type="date" class="form-control" name="afterDate" id="eventDate" placeholder="dd/mm/yyyy">
+
+        <input type="date" data-date="" data-date-format="DD MM YYYY" value="2015-08-09" />
+
     </form>
 
     <p id="formattedDate"></p>
 
     <script>
-        $(document).ready(function() {
-            $('#eventDate').on('change', function() {
+        $(document).ready(function () {
+
+            $("input").on("change", function () {
+                this.setAttribute(
+                    "data-date",
+                    moment(this.value, "YYYY-MM-DD")
+                        .format(this.getAttribute("data-date-format"))
+                )
+            }).trigger("change")
+
+            $('#eventDate').on('change', function () {
                 var selectedDate = $(this).val();
                 if (selectedDate) {
                     var formattedDate = moment(selectedDate).format('DD-MM-YYYY');
@@ -30,7 +78,7 @@
             });
 
             // Handle focus event (optional, if you want to set placeholder value or perform any logic)
-            $('#eventDate').on('focus', function() {
+            $('#eventDate').on('focus', function () {
                 if (this.value === "") {
                     this.value = 'YYYY-MM-DD'; // Optional: set default value when the field is focused
                 }
@@ -38,4 +86,5 @@
         });
     </script>
 </body>
+
 </html>
