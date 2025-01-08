@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment.js with jQuery and Input Type Date</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+</head>
+<body>
+    <h1>Select a Date</h1>
+    <form>
+        <label for="eventDate">Event Date:</label>
+        <input type="date" class="form-control" name="afterDate" id="eventDate" placeholder="dd/mm/yyyy">
+    </form>
+
+    <p id="formattedDate"></p>
+
+    <script>
+        $(document).ready(function() {
+            $('#eventDate').on('change', function() {
+                var selectedDate = $(this).val();
+                if (selectedDate) {
+                    var formattedDate = moment(selectedDate).format('DD-MM-YYYY');
+                    $('#formattedDate').text('Selected Date: ' + formattedDate);
+                    $(this).val(reformattedDate);
+                }
+            });
+
+            // Handle focus event (optional, if you want to set placeholder value or perform any logic)
+            $('#eventDate').on('focus', function() {
+                if (this.value === "") {
+                    this.value = 'YYYY-MM-DD'; // Optional: set default value when the field is focused
+                }
+            });
+        });
+    </script>
+</body>
+</html>
