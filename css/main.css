@@ -6941,5 +6941,8 @@ input::-webkit-date-and-time-value {
     .bg-expend .info-card:hover:after,.bg-expend .info-card:hover:before {
         border: none !important;
     }
+    .news-green-bg .swiper-pagination-bullet-active, .news-pink-bg .swiper-pagination-bullet-active, .news-orange-bg .swiper-pagination-bullet-active, .news-yellow-bg .swiper-pagination-bullet-active, .news-gray-bg .swiper-pagination-bullet-active {
+        border: 8px solid white !important;
+    }
 
 }
