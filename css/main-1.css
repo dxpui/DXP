@@ -6399,24 +6399,35 @@ agendas-container agendas-item agendas-published {
 
 @media (forced-colors: active) {
     .info-card .svg-arrow {
-      fill: aliceblue;
-    }
-    .info-card:hover .svg-arrow {
-      fill: aliceblue;
-      stroke: #000045;
-    }
-    .info-card:hover .svg-arrow path {
-      stroke: var(--color-default);
-    }
-    .alert .alert-close svg {
         fill: aliceblue;
+    }
+
+    .info-card:hover .svg-arrow {
+        fill: aliceblue;
+        stroke: #000045;
+    }
+
+    .info-card:hover .svg-arrow path {
+        stroke: var(--color-default);
+    }
+
+    .alert .alert-close svg {
+        fill: rgb(56, 143, 220);
+    }
+
+    .destination-accordian .accordion-button::after {
+        background-image: url("../assets/img/web-icons/Accordion-expand-contrast-mode.svg") !important;
+    }
+
+    .destination-accordian .accordion-button:not(.collapsed)::after {
+        background-image: url("../assets/img/web-icons/Accordion-contract-contrast-mode.svg") !important;
     }
 
     .step-accordion .accordion-item .accordion-button:not(.collapsed)::after {
         background-image: url("../assets/img/web-icons/Accordion-expand-contrast-mode.svg") !important;
     }
 
-    .step-accordion .accordion-item .accordion-button::after { 
+    .step-accordion .accordion-item .accordion-button::after {
         background-image: url("../assets/img/web-icons/Accordion-contract-contrast-mode.svg") !important;
     }
 
@@ -6428,14 +6439,15 @@ agendas-container agendas-item agendas-published {
     .vscomp-options-list {
         border-style: solid !important;
     }
+
     .vscomp-option {
         border-style: solid 1px !important;
-    } 
+    }
 
     .pagination-block .single-arrow-clear {
         background-image: url(/assets/img/web-icons/single-arrow-clear-dis.svg);
     }
-    
+
     .pagination-block .double-arrow-clear {
         background-image: url(/assets/img/web-icons/double-arrow-clear-dis.svg);
     }
@@ -6443,9 +6455,34 @@ agendas-container agendas-item agendas-published {
     .pagination-block:hover .single-arrow-clear {
         background-image: url(/assets/img/web-icons/single-arrow-clear-dis.svg);
     }
-    
+
     .pagination-block:hover .double-arrow-clear {
         background-image: url(/assets/img/web-icons/double-arrow-clear-dis.svg);
     }
 
-  }
+    .info-card .svg-arrow-info {
+        fill: aliceblue;
+    }
+
+    .download-svg {
+        width: 24px;
+    }
+
+    .download-svg path {
+        stroke: #ffc107;
+    }
+
+    .header .menu>ul>li>button {
+        border-bottom: none;
+    }
+
+    .homepage-carousel-cls .carousel-indicators button.active {
+        border: 4px solid white !important;
+    }
+    
+    .bg-expend .info-card:hover:after,.bg-expend .info-card:hover:before {
+        border: none !important;
+    }
+
+}
+

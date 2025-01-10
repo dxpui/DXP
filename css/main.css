@@ -6870,7 +6870,7 @@ input::-webkit-date-and-time-value {
     }
 
     .alert .alert-close svg {
-        fill: aliceblue;
+        fill: rgb(56, 143, 220);
     }
 
     .destination-accordian .accordion-button::after {
@@ -6932,6 +6932,14 @@ input::-webkit-date-and-time-value {
 
     .header .menu>ul>li>button {
         border-bottom: none;
+    }
+
+    .homepage-carousel-cls .carousel-indicators button.active {
+        border: 4px solid white !important;
+    }
+    
+    .bg-expend .info-card:hover:after,.bg-expend .info-card:hover:before {
+        border: none !important;
     }
 
 }
