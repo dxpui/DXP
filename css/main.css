@@ -6971,19 +6971,22 @@ input::-webkit-date-and-time-value {
     font-size: 16px;
 }
 
-.postcode-container-left table .blue-text{
+.postcode-container table .blue-text{
     color: var(--color-primary);
     font-weight: 700;
     font-size: 16px;
+    vertical-align: middle;
 }
-.postcode-container-left table .lightblue-text{
+.postcode-container table .lightblue-text{
     color: #b692fe;
     font-weight: 700;
     font-size: 16px;
+    vertical-align:middle;
 }
 
-.postcode-container-left table .darkgreen-text{
+.postcode-container table .darkgreen-text{
     color: #00743e;
     font-weight: 700;
     font-size: 16px;
+    vertical-align:middle;
 }

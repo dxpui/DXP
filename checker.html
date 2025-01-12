@@ -702,7 +702,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="postcode-container">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-5 green-bg">
@@ -723,7 +723,7 @@
                     <p class="postcode-number">LS146LY</p>
                   </div>
                   <div class="col-auto ms-auto">
-                    <button type="submit" class="btn btn-primary mb-3">Change Location</button>
+                    <button type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Change Location</button>
                   </div>
                 </div>
 
@@ -751,35 +751,44 @@
                   different. The table shows the predicted broadband services in your area.
                 </p>
               </div>
-              <h3 class="text-center mt-5">Coverage and Performance</h3>
+              <h3 class="text-center mt-4 mb-3">Coverage and Performance</h3>
               <div class="white-bg">
                 <table class="table">
                   <thead>
                     <tr>
                       <th class="fw-bold" style="color: #000045;">Category</th>
-                      <th class="text-center"><img src="assets/img/EE-Logo-2012.png" style="height: 32px !important"> </th>
-                      <th class="text-center"><img src="assets/img/Three-UK-logo.png" style="height: 32px !important"> </th>
+                      <th class="text-center"><img src="assets/img/EE-Logo-2012.png" style="height: 32px !important">
+                      </th>
+                      <th class="text-center"><img src="assets/img/Three-UK-logo.png" style="height: 32px !important">
+                      </th>
                       <th class="text-center"><img src="assets/img/O2-Logo.png" style="height: 32px !important"> </th>
-                      <th class="text-center"><img src="assets/img/Vodafone_Logo.png" style="height: 32px !important"> </th>
+                      <th class="text-center"><img src="assets/img/Vodafone_Logo.png" style="height: 32px !important">
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Outdoor Coverage</td>
+                      <td>Outdoor Coverage <a href="" id="networkSelect" class="form-text">
+                          <i style="font-size: 16px;" class="fa-solid fa-circle-info"></i>
+                        </a></td>
                       <td class="green-bg">90%</td>
                       <td class="yellow-bg">79%</td>
                       <td class="yellow-bg">81%</td>
                       <td class="yellow-bg">80%</td>
                     </tr>
                     <tr>
-                      <td>Indoor Coverage</td>
+                      <td>Indoor Coverage <a href="" id="networkSelect" class="form-text">
+                          <i style="font-size: 16px;" class="fa-solid fa-circle-info"></i>
+                        </a></td>
                       <td class="green-bg">62%</td>
                       <td class="yellow-bg">50%</td>
                       <td class="yellow-bg">46%</td>
                       <td class="orange-bg">46%</td>
                     </tr>
                     <tr>
-                      <td>Performance</td>
+                      <td>Performance <a href="" id="networkSelect" class="form-text">
+                          <i style="font-size: 16px;" class="fa-solid fa-circle-info"></i>
+                        </a></td>
                       <td class="green-bg">90%</td>
                       <td class="yellow-bg">80%</td>
                       <td class="yellow-bg">78%</td>
@@ -789,18 +798,20 @@
                 </table>
               </div>
 
-              <h3 class="text-center mt-5">Coverage Level </h3>
+              <h3 class="text-center mt-5 mb-3">Coverage Level </h3>
               <div class="white-bg">
                 <table class="table">
                   <thead>
                     <tr>
-                      <th class="text-center" style="width: 100px"><img src="assets/img/EE-Logo-2012.png" style="height: 32px !important"> </th>
-                      <td class="green-text">Likely Outdoor</td>
+                      <th class="text-center" style="width: 100px"><img src="assets/img/EE-Logo-2012.png"
+                          style="height: 32px !important"> </th>
+                      <td class="green-text">Likely Outdoor </td>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th class="text-center"><img src="assets/img/Three-UK-logo.png" style="height: 32px !important"> </th>
+                      <th class="text-center"><img src="assets/img/Three-UK-logo.png" style="height: 32px !important">
+                      </th>
                       <td class="lightblue-text">Limited Indoor </td>
                     </tr>
                     <tr>
@@ -808,7 +819,8 @@
                       <td class="blue-text">Likely Indoor </td>
                     </tr>
                     <tr>
-                      <th class="text-center"><img src="assets/img/Vodafone_Logo.png" style="height: 32px !important"> </th>
+                      <th class="text-center"><img src="assets/img/Vodafone_Logo.png" style="height: 32px !important">
+                      </th>
                       <td class="darkgreen-text">Very Likely Outdoor</td>
                     </tr>
                   </tbody>
@@ -825,22 +837,19 @@
                 </div>
                 <div class="col-8">
                   <select class="form-select" aria-label="Default select example">
-                    <option selected="">Select an Address</option>
-                    <option value="72579156">48, OAK TREE LANE</option>
-                    <option value="72579157">50, OAK TREE LANE</option>
-                    <option value="72579158">52, OAK TREE LANE</option>
-                    <option value="72579159">54, OAK TREE LANE</option>
-                    <option value="72579160">56, OAK TREE LANE</option>
-                    <option value="72579161">58, OAK TREE LANE</option>
-                    <option value="72576223">6, OAK TREE LANE</option>
-                    <option value="72579162">60, OAK TREE LANE</option>
-                    <option value="72576224">8, OAK TREE LANE</option>
+                    <option selected="">EE Network</option>
+                    <option value="72579157">Three</option>
+                    <option value="72579158">O2</option>
+                    <option value="72579159">Vodafone</option>
+                    <option value="72579160">Lebara Mobile</option>
+                    <option value="72579161">Asda Mobile</option>
+                    <option value="72576223">Talk Mobile </option>
                   </select>
                 </div>
                 <div class="col-auto">
-                  <span id="networkSelect" class="form-text">
-                    sf.
-                  </span>
+                  <a href="" id="networkSelect" class="form-text">
+                    <i style="font-size: 24px;" class="fa-solid fa-circle-info"></i>
+                  </a>
                 </div>
               </div>
               <div class="col-md-12 text-center mt-5">
@@ -858,9 +867,38 @@
       </div>
     </section>
 
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Change Location</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <select class="form-select" aria-label="Default select example">
+              <option selected="">Select an Address</option>
+              <option value="72579156">48, OAK TREE LANE</option>
+              <option value="72579157">50, OAK TREE LANE</option>
+              <option value="72579158">52, OAK TREE LANE</option>
+              <option value="72579159">54, OAK TREE LANE</option>
+              <option value="72579160">56, OAK TREE LANE</option>
+              <option value="72579161">58, OAK TREE LANE</option>
+              <option value="72576223">6, OAK TREE LANE</option>
+              <option value="72579162">60, OAK TREE LANE</option>
+              <option value="72576224">8, OAK TREE LANE</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Go to address</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-    <section class="mt-5">
+    <section>
       <div class="row g-0">
         <div class="col-12 d-flex justify-content-center position-relative">
           <button class="btn btn-primary button-subscribe">
