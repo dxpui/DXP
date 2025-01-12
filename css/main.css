@@ -344,6 +344,11 @@ video:focus-visible {
 # Background Color
 --------------------------------------------------------------*/
 
+.white-bg {
+    background-color: var(--color-white);
+    color: var(--color-default);
+}
+
 .gray-bg {
     background-color: var(--color-light-gray);
     color: var(--color-default);
@@ -1573,6 +1578,10 @@ header .search-box {
     }
 
     .header .menu>ul>li .sub-menu.mega-menu>.list-item>ul>li>a {
+        text-decoration: underline;
+    }
+
+    a.sub-menu-link {
         text-decoration: underline;
     }
 }
@@ -5046,7 +5055,8 @@ table td {
     background-color: var(--color-white);
 }
 
-table th {
+table thead tr th,
+table thead tr td {
     background-color: var(--color-primary);
     color: var(--color-white);
 }
@@ -5064,9 +5074,8 @@ table {
 }
 
 table tr th,
-table tr td,
-table tr td:first-child {
-    border: 1px solid var(--color-default) !important;
+table tr td {
+    border: 1px solid var(--color-default);
 }
 
 table caption {
@@ -5079,15 +5088,10 @@ table caption {
 }
 
 .blue-theme table tr th,
-.blue-theme table tr td:first-child,
 .red-theme table tr th,
-.red-theme table tr td:first-child,
 .megenta-theme table tr th,
-.megenta-theme table tr td:first-child,
 .maroon-theme table tr th,
-.maroon-theme table tr td:first-child,
-.lightblue-theme table tr th,
-.lightblue-theme table tr td:first-child {
+.lightblue-theme table tr th {
     border: 1px solid var(--color-white);
 }
 
@@ -5284,6 +5288,8 @@ table caption {
     right: 10px;
     z-index: 2;
     padding: 5px;
+    border: none;
+    background-color: transparent;
 }
 
 .alert.blue-bg {
@@ -5306,6 +5312,16 @@ table caption {
 
 .alert.orange-bg {
     color: var(--color-default);
+}
+
+.alert-close:focus-visible {
+    outline: 3px solid var(--color-outline-focus);
+    outline-offset: 0;
+}
+
+.orange-bg .alert-close:focus-visible {
+    outline: 3px solid var(--color-default);
+    outline-offset: 0;
 }
 
 /*--------------------------------------------------------------
@@ -6782,34 +6798,18 @@ agendas-container agendas-item agendas-published {
         height: 620px;
     }
 }
-/* added for 33260 bug*/
-@media all and (min-width: 0) and (max-width: 1024px) and (pointer: coarse) {
-    .ios-safari.search-filter input[type="date"]::before {
+
+@media (max-width: 1024px) {
+
+    .search-filter input[type="date"]::before {
         color: #999;
         content: attr(placeholder);
         margin-right: 3px;
 
     }
 
-    .ios-safari.search-filter input[type="date"]:focus::before {
-        content: attr(placeholder) !important;
-    }
-}
-
-@media (max-width: 1024px) {
-
-    /* Changes are done for the old calendar issue fix 33260
-    /* content: attr(placeholder); */
-    */
-    .search-filter input[type="date"]::before {
-        color: #999;
-        /* content: attr(placeholder); */
-        margin-right: 3px;
-
-    }
-
     .search-filter input[type="date"]:focus::before {
-        /* content: attr(placeholder) !important; */
+        content: attr(placeholder) !important;
 
     }
 
@@ -6849,12 +6849,6 @@ input::-webkit-date-and-time-value {
     margin-bottom: 10px;
 }
 
-.external-link::after {
-    content: "\f08e";  
-    font-family: FontAwesome; 
-    padding-left: 3px;
-}
-
 @media (forced-colors: active) {
     .info-card .svg-arrow {
         fill: aliceblue;
@@ -6862,7 +6856,7 @@ input::-webkit-date-and-time-value {
 
     .info-card:hover .svg-arrow {
         fill: aliceblue;
-        stroke: #000045;
+        stroke: var(--color-default);
     }
 
     .info-card:hover .svg-arrow path {
@@ -6937,12 +6931,59 @@ input::-webkit-date-and-time-value {
     .homepage-carousel-cls .carousel-indicators button.active {
         border: 4px solid white !important;
     }
-    
-    .bg-expend .info-card:hover:after,.bg-expend .info-card:hover:before {
+
+    .bg-expend .info-card:hover:after,
+    .bg-expend .info-card:hover:before {
         border: none !important;
     }
-    .news-green-bg .swiper-pagination-bullet-active, .news-pink-bg .swiper-pagination-bullet-active, .news-orange-bg .swiper-pagination-bullet-active, .news-yellow-bg .swiper-pagination-bullet-active, .news-gray-bg .swiper-pagination-bullet-active {
+
+    .news-green-bg .swiper-pagination-bullet-active,
+    .news-pink-bg .swiper-pagination-bullet-active,
+    .news-orange-bg .swiper-pagination-bullet-active,
+    .news-yellow-bg .swiper-pagination-bullet-active,
+    .news-gray-bg .swiper-pagination-bullet-active {
         border: 8px solid white !important;
     }
 
+}
+
+
+.postcode-container-left{
+    padding: 30px 40px;
+}
+.postcode-container-right{
+    padding: 30px 40px;
+}
+
+.postcode-container-left table .green-bg{
+    background-color: var(--color-green);
+}
+.postcode-container-left table .yellow-bg{
+    background-color: var(--color-yellow);
+}
+.postcode-container-left table .orange-bg{
+    background-color: var(--color-secondary);
+}
+
+.postcode-container-left table .green-text{
+    color: var(--color-green);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.postcode-container-left table .blue-text{
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 16px;
+}
+.postcode-container-left table .lightblue-text{
+    color: #b692fe;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.postcode-container-left table .darkgreen-text{
+    color: #00743e;
+    font-weight: 700;
+    font-size: 16px;
 }
