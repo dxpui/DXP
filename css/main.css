@@ -6947,9 +6947,10 @@ input::-webkit-date-and-time-value {
 
 }
 
-.postcode-container{
+.postcode-container {
     font-size: 1rem;
 }
+
 .postcode-container-left {
     padding: 40px;
 }
@@ -6961,7 +6962,13 @@ input::-webkit-date-and-time-value {
 }
 
 .postcode-container-right {
-    padding: 30px 40px;
+    padding: 40px;
+}
+
+@media (max-width: 1024px) {
+    .postcode-container-right {
+        padding: 40px 10px;
+    }
 }
 
 .postcode-container-left table .green-bg {
@@ -6974,6 +6981,10 @@ input::-webkit-date-and-time-value {
 
 .postcode-container-left table .orange-bg {
     background-color: var(--color-secondary);
+}
+
+.postcode-container-left .location-text {
+    border: 1px solid var(--color-default);
 }
 
 .postcode-container-left table .green-text {
@@ -7114,4 +7125,12 @@ input::-webkit-date-and-time-value {
 
 .collapse-left i {
     color: var(--color-default);
+}
+
+.megenta-bg .postcode-number {
+    color: var(--color-default);
+}
+
+.megenta-bg .white-bg p{
+    color: var(--color-default) !important;
 }

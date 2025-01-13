@@ -705,12 +705,13 @@
     <section class="postcode-container">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-5 green-bg position-relative">
-            <button  type="submit" class="btn btn-primary collapse-left"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="col-md-5 orange-bg position-relative">
+            <button type="submit" class="btn btn-primary collapse-left"><i
+                class="fa-solid fa-chevron-left"></i></button>
             <div class="postcode-container-left">
-              <h3 class="text-center mb-4">Mobile coverage checker</h3>
+              <h3 class="text-center mb-4">Predicted 4G and 5G coverage results for CT1 </h3>
               <div class="col-12">
-                <form class="row">
+                <!-- <form class="row">
                   <div class="col">
                     <label for="postcode" class="visually-hidden">Enter postcode</label>
                     <input type="text" class="form-control mb-3" id="postcode" placeholder="Enter postcode" style="min-width: 155px;">
@@ -718,8 +719,8 @@
                   <div class="col-auto ms-auto">
                     <button type="submit" class="btn btn-primary mb-3">Submit postcode</button>
                   </div>
-                </form>
-                <div class="row justify-content-end">
+                </form> -->
+                <!-- <div class="row justify-content-end">
                   <div class="col">
                     <p class="postcode-number">LS146LY</p>
                   </div>
@@ -744,16 +745,26 @@
                     </select>
                   </div>
 
-                </form>
-                <p class="mt-4">
+                </form> -->
+                <!-- <p class="mt-4">
                   The speeds indicated on the checker are the fastest estimated speeds predicted by the network
                   operator(s)
                   providing services in this area. Actual service availability at a property or speeds received may be
                   different. The table shows the predicted broadband services in your area.
-                </p>
+                </p> -->
               </div>
-              <h3 class="text-center mt-4 mb-3">Coverage and Performance</h3>
-              <div class="white-bg">
+              <div class="white-bg mb-5">
+                <div class="px-2 py-3 location-text">
+                  <div class="row justify-content-end">
+                    <div class="col">
+                      <p class="postcode-number">CT1</p>
+                    </div>
+                    <div class="col-auto ms-auto">
+                      <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">Change location</button>
+                    </div>
+                  </div>
+                </div>
                 <table class="table">
                   <thead>
                     <tr>
@@ -799,43 +810,11 @@
                 </table>
               </div>
 
-              <h3 class="text-center mt-5 mb-3">Coverage Level </h3>
-              <div class="white-bg mb-5">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th class="text-center" style="width: 100px"><img src="assets/img/EE-Logo-2012.png"
-                          style="height: 32px !important"> </th>
-                      <td class="green-text">Likely Outdoor </td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th class="text-center"><img src="assets/img/Three-UK-logo.png" style="height: 32px !important">
-                      </th>
-                      <td class="lightblue-text">Limited Indoor </td>
-                    </tr>
-                    <tr>
-                      <th class="text-center"><img src="assets/img/O2-Logo.png" style="height: 32px !important"> </th>
-                      <td class="blue-text">Likely Indoor </td>
-                    </tr>
-                    <tr>
-                      <th class="text-center"><img src="assets/img/Vodafone_Logo.png" style="height: 32px !important">
-                      </th>
-                      <td class="darkgreen-text">Very Likely Outdoor</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div>
-                <button class="btn btn-primary mb-3">
-                  My experience is different<i class="ms-4 fa-solid fa-arrow-right"></i>
-                </button>
-                <button class="btn btn-primary">
+                <button class="btn btn-primary d-inline-block">
                   Frequently asked questions <i class="ms-4 fa-solid fa-arrow-right"></i>
                 </button>
               </div>
-
             </div>
           </div>
           <div class="col-md-7">
@@ -888,20 +867,18 @@
           <div class="modal-body">
             <select class="form-select" aria-label="Default select example">
               <option selected="">Select an Address</option>
-              <option value="72579156">48, OAK TREE LANE</option>
-              <option value="72579157">50, OAK TREE LANE</option>
-              <option value="72579158">52, OAK TREE LANE</option>
-              <option value="72579159">54, OAK TREE LANE</option>
-              <option value="72579160">56, OAK TREE LANE</option>
-              <option value="72579161">58, OAK TREE LANE</option>
-              <option value="72576223">6, OAK TREE LANE</option>
-              <option value="72579162">60, OAK TREE LANE</option>
-              <option value="72576224">8, OAK TREE LANE</option>
+               <option value="10033154983">11, THE PRECINCTS</option>
+               <option value="100060825853">14, THE PRECINCTS</option>
+               <option value="100060825851">14B, THE PRECINCTS</option>
+               <option value="100060825852">14C, THE PRECINCTS</option>
+               <option value="100062052449">FLAT 1, STARRS HOUSE, 14D, THE PRECINCTS</option>
+               <option value="100062052450">FLAT 2, STARRS HOUSE, 14D, THE PRECINCTS</option>
+               <option value="100062052454">SECOND FLOOR FLAT, CATHEDRAL HOUSE, THE PRECINCTS</option>
             </select>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Go to address</button>
+            <a href="checker-address.html" class="btn btn-primary">Go to address</a>
           </div>
         </div>
       </div>
