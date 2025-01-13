@@ -18,7 +18,7 @@
   <link href="css/virtual-select.min.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
-  <link href="css/main.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet"> 
 </head>
 
 <body>
@@ -702,33 +702,52 @@
       </div>
     </section>
 
-    <section class="postcode-container">
+    <section class="postcode-container green-bg">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-5 green-bg position-relative">
-            <button  type="submit" class="btn btn-primary collapse-left"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="col-md-6 mx-auto">
+
             <div class="postcode-container-left">
               <h3 class="text-center mb-4">Mobile coverage checker</h3>
+
+              <div class="d-flex justify-content-center mb-5">
+                <label class="container-radio me-5" for="exampleCheck28">View broadband availability
+                  <input type="radio" id="exampleCheck28" name="type" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container-radio" for="exampleCheck9"> View mobile availability
+                  <input type="radio" id="exampleCheck9" name="type">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <p class="my-4">
+                Please enter your postcode to see the broadband services that are present at your location, or click the
+                button to enable the site to find your location
+              </p>
+
               <div class="col-12">
                 <form class="row">
                   <div class="col">
                     <label for="postcode" class="visually-hidden">Enter postcode</label>
-                    <input type="text" class="form-control mb-3" id="postcode" placeholder="Enter postcode" style="min-width: 155px;">
+                    <input type="text" class="form-control" id="postcode" placeholder="Enter postcode">
                   </div>
                   <div class="col-auto ms-auto">
-                    <button type="submit" class="btn btn-primary mb-3">Submit postcode</button>
+                    <a href="checker.html" type="submit" class="btn btn-primary mb-3">Submit postcode</a>
+                    <a href="checker.html" type="submit" class="btn btn-primary mb-3"><i
+                        class="fa-solid fa-location-arrow"></i></a>
                   </div>
                 </form>
-                <div class="row justify-content-end">
+                <!-- <div class="row justify-content-end">
                   <div class="col">
                     <p class="postcode-number">LS146LY</p>
                   </div>
                   <div class="col-auto ms-auto">
-                    <button type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Change location</button>
+                    <button type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop">Change Location</button>
                   </div>
-                </div>
+                </div> -->
 
-                <form class="row g-3">
+                <!-- <form class="row g-3">
                   <div class="col">
                     <select class="form-select" aria-label="Default select example">
                       <option selected="">Select an Address</option>
@@ -744,7 +763,7 @@
                     </select>
                   </div>
 
-                </form>
+                </form> -->
                 <p class="mt-4">
                   The speeds indicated on the checker are the fastest estimated speeds predicted by the network
                   operator(s)
@@ -752,160 +771,17 @@
                   different. The table shows the predicted broadband services in your area.
                 </p>
               </div>
-              <h3 class="text-center mt-4 mb-3">Coverage and Performance</h3>
-              <div class="white-bg">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th class="fw-bold" style="color: #000045;">Category</th>
-                      <th class="text-center"><img src="assets/img/EE-Logo-2012.png" style="height: 32px !important">
-                      </th>
-                      <th class="text-center"><img src="assets/img/Three-UK-logo.png" style="height: 32px !important">
-                      </th>
-                      <th class="text-center"><img src="assets/img/O2-Logo.png" style="height: 32px !important"> </th>
-                      <th class="text-center"><img src="assets/img/Vodafone_Logo.png" style="height: 32px !important">
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Outdoor Coverage <a href="" id="networkSelect" class="form-text">
-                          <i style="font-size: 16px;" class="fa-solid fa-circle-info"></i>
-                        </a></td>
-                      <td class="green-bg">90%</td>
-                      <td class="yellow-bg">79%</td>
-                      <td class="yellow-bg">81%</td>
-                      <td class="yellow-bg">80%</td>
-                    </tr>
-                    <tr>
-                      <td>Indoor Coverage <a href="" id="networkSelect" class="form-text">
-                          <i style="font-size: 16px;" class="fa-solid fa-circle-info"></i>
-                        </a></td>
-                      <td class="green-bg">62%</td>
-                      <td class="yellow-bg">50%</td>
-                      <td class="yellow-bg">46%</td>
-                      <td class="orange-bg">46%</td>
-                    </tr>
-                    <tr>
-                      <td>Performance <a href="" id="networkSelect" class="form-text">
-                          <i style="font-size: 16px;" class="fa-solid fa-circle-info"></i>
-                        </a></td>
-                      <td class="green-bg">90%</td>
-                      <td class="yellow-bg">80%</td>
-                      <td class="yellow-bg">78%</td>
-                      <td class="orange-bg">60%</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
 
-              <h3 class="text-center mt-5 mb-3">Coverage Level </h3>
-              <div class="white-bg mb-5">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th class="text-center" style="width: 100px"><img src="assets/img/EE-Logo-2012.png"
-                          style="height: 32px !important"> </th>
-                      <td class="green-text">Likely Outdoor </td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th class="text-center"><img src="assets/img/Three-UK-logo.png" style="height: 32px !important">
-                      </th>
-                      <td class="lightblue-text">Limited Indoor </td>
-                    </tr>
-                    <tr>
-                      <th class="text-center"><img src="assets/img/O2-Logo.png" style="height: 32px !important"> </th>
-                      <td class="blue-text">Likely Indoor </td>
-                    </tr>
-                    <tr>
-                      <th class="text-center"><img src="assets/img/Vodafone_Logo.png" style="height: 32px !important">
-                      </th>
-                      <td class="darkgreen-text">Very Likely Outdoor</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div>
-                <button class="btn btn-primary mb-3">
-                  My experience is different<i class="ms-4 fa-solid fa-arrow-right"></i>
-                </button>
-                <button class="btn btn-primary">
-                  Frequently asked questions <i class="ms-4 fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
 
             </div>
           </div>
-          <div class="col-md-7">
-            <div class="postcode-container-right">
-              <div class="row g-3 align-items-center mb-5">
-                <div class="col-auto">
-                  <label for="network" class="col-form-label">Network Selected</label>
-                </div>
-                <div class="col-8">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected="">EE Network</option>
-                    <option value="72579157">Three</option>
-                    <option value="72579158">O2</option>
-                    <option value="72579159">Vodafone</option>
-                    <option value="72579160">Lebara Mobile</option>
-                    <option value="72579161">Asda Mobile</option>
-                    <option value="72576223">Talk Mobile </option>
-                  </select>
-                </div>
-                <div class="col-auto">
-                  <a href="" id="networkSelect" class="form-text">
-                    <i style="font-size: 24px;" class="fa-solid fa-circle-info"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-12 text-center">
-                <!-- Embedded UK Map -->
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488796.0730301729!2d-3.276575790001316!3d55.3780510!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cb60d769fc9%3A0xb7e3f0bc174739e7!2sUnited%20Kingdom!5e0!3m2!1sen!2sus!4v1673536922332!5m2!1sen!2sus"
-                  width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-              </div>
 
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Change Location</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <select class="form-select" aria-label="Default select example">
-              <option selected="">Select an Address</option>
-              <option value="72579156">48, OAK TREE LANE</option>
-              <option value="72579157">50, OAK TREE LANE</option>
-              <option value="72579158">52, OAK TREE LANE</option>
-              <option value="72579159">54, OAK TREE LANE</option>
-              <option value="72579160">56, OAK TREE LANE</option>
-              <option value="72579161">58, OAK TREE LANE</option>
-              <option value="72576223">6, OAK TREE LANE</option>
-              <option value="72579162">60, OAK TREE LANE</option>
-              <option value="72576224">8, OAK TREE LANE</option>
-            </select>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Go to address</button>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <section>
       <div class="row g-0">

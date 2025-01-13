@@ -6947,46 +6947,171 @@ input::-webkit-date-and-time-value {
 
 }
 
+.postcode-container{
+    font-size: 1rem;
+}
+.postcode-container-left {
+    padding: 40px;
+}
 
-.postcode-container-left{
+@media (max-width: 1024px) {
+    .postcode-container-left {
+        padding: 40px 10px;
+    }
+}
+
+.postcode-container-right {
     padding: 30px 40px;
 }
-.postcode-container-right{
-    padding: 30px 40px;
-}
 
-.postcode-container-left table .green-bg{
+.postcode-container-left table .green-bg {
     background-color: var(--color-green);
 }
-.postcode-container-left table .yellow-bg{
+
+.postcode-container-left table .yellow-bg {
     background-color: var(--color-yellow);
 }
-.postcode-container-left table .orange-bg{
+
+.postcode-container-left table .orange-bg {
     background-color: var(--color-secondary);
 }
 
-.postcode-container-left table .green-text{
+.postcode-container-left table .green-text {
     color: var(--color-green);
     font-weight: 700;
     font-size: 16px;
 }
 
-.postcode-container table .blue-text{
+.postcode-container table .blue-text {
     color: var(--color-primary);
     font-weight: 700;
     font-size: 16px;
     vertical-align: middle;
 }
-.postcode-container table .lightblue-text{
+
+.postcode-container table .lightblue-text {
     color: #b692fe;
     font-weight: 700;
     font-size: 16px;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
-.postcode-container table .darkgreen-text{
+.postcode-container table .darkgreen-text {
     color: #00743e;
     font-weight: 700;
     font-size: 16px;
-    vertical-align:middle;
+    vertical-align: middle;
+}
+
+.container-input,
+.container-radio {
+    display: block;
+    position: relative;
+    padding-left: 42px;
+    padding-top: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container-input+p {
+    margin-top: -10px !important;
+}
+
+.container-input input,
+.container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.container-input input:focus+.checkmark,
+.container-radio input:focus+.checkmark {
+    box-shadow: 0 0 2px 3px var(--color-focus, #FF8A00);
+    outline: none;
+}
+
+.container-input .checkmark,
+.container-radio .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #eee;
+}
+
+.container-input:hover input~.checkmark {
+    background-color: var(--color-gray);
+}
+
+.container-input input:checked~.checkmark {
+    background-color: var(--color-white);
+}
+
+.container-input .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container-input input:checked~.checkmark:after {
+    display: block;
+}
+
+.container-input .checkmark:after {
+    left: 10px;
+    top: 5px;
+    width: 10px;
+    height: 18px;
+    border: solid var(--color-default);
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+}
+
+.container-radio .checkmark {
+    border-radius: 50%;
+}
+
+.container-radio:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.container-radio input:checked~.checkmark {
+    background-color: var(--color-white);
+}
+
+.container-radio .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    border-radius: 50%;
+}
+
+.container-radio input:checked~.checkmark:after {
+    display: block;
+}
+
+.container-radio .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 18px;
+    height: 18px;
+    background: var(--color-default);
+}
+
+.collapse-left {
+    position: absolute;
+    right: 0;
+    border-radius: 0;
+    background-color: #fff;
+}
+
+.collapse-left i {
+    color: var(--color-default);
 }
