@@ -760,8 +760,7 @@
                       <p class="postcode-number">CT1</p>
                     </div>
                     <div class="col-auto ms-auto">
-                      <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">Change location</button>
+                      <a href="mobile-coverage-checker.html" class="btn btn-primary">Change location</a>
                     </div>
                   </div>
                 </div>
@@ -819,7 +818,7 @@
           </div>
           <div class="col-md-7">
             <div class="postcode-container-right">
-              <div class="row g-3 align-items-center mb-5">
+              <div class="row g-3 align-items-center mb-3">
                 <div class="col-auto">
                   <label for="network" class="col-form-label">Network Selected</label>
                 </div>
@@ -844,10 +843,13 @@
                 <!-- Embedded UK Map -->
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488796.0730301729!2d-3.276575790001316!3d55.3780510!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cb60d769fc9%3A0xb7e3f0bc174739e7!2sUnited%20Kingdom!5e0!3m2!1sen!2sus!4v1673536922332!5m2!1sen!2sus"
-                  width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                  width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
               </div>
+
+              <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-primary my-4">Go
+                to address <i class="ms-4 fa-solid fa-arrow-right"></i></button>
 
             </div>
           </div>
@@ -867,13 +869,13 @@
           <div class="modal-body">
             <select class="form-select" aria-label="Default select example">
               <option selected="">Select an Address</option>
-               <option value="10033154983">11, THE PRECINCTS</option>
-               <option value="100060825853">14, THE PRECINCTS</option>
-               <option value="100060825851">14B, THE PRECINCTS</option>
-               <option value="100060825852">14C, THE PRECINCTS</option>
-               <option value="100062052449">FLAT 1, STARRS HOUSE, 14D, THE PRECINCTS</option>
-               <option value="100062052450">FLAT 2, STARRS HOUSE, 14D, THE PRECINCTS</option>
-               <option value="100062052454">SECOND FLOOR FLAT, CATHEDRAL HOUSE, THE PRECINCTS</option>
+              <option value="10033154983">11, THE PRECINCTS</option>
+              <option value="100060825853">14, THE PRECINCTS</option>
+              <option value="100060825851">14B, THE PRECINCTS</option>
+              <option value="100060825852">14C, THE PRECINCTS</option>
+              <option value="100062052449">FLAT 1, STARRS HOUSE, 14D, THE PRECINCTS</option>
+              <option value="100062052450">FLAT 2, STARRS HOUSE, 14D, THE PRECINCTS</option>
+              <option value="100062052454">SECOND FLOOR FLAT, CATHEDRAL HOUSE, THE PRECINCTS</option>
             </select>
           </div>
           <div class="modal-footer">
