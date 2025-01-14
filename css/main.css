@@ -7131,6 +7131,17 @@ input::-webkit-date-and-time-value {
     color: var(--color-default);
 }
 
-.megenta-bg .white-bg p{
+.megenta-bg .white-bg p {
     color: var(--color-default) !important;
+}
+
+
+.postcode-left-outer.collapsed {
+    width: 50px;
+    transition: width 0.3s ease;
+}
+
+.postcode-right-outer.expend {
+    width: calc(100% - 50px);
+    transition: width 0.3s ease;
 }

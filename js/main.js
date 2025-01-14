@@ -1537,3 +1537,21 @@ $(document).ready(function () {
 
 });
 
+
+$(document).ready(function() {
+    $('.collapse-left').on('click', function() {
+        var $leftDrawer = $('.postcode-left-outer');
+        var $rightContainer = $('.postcode-right-outer');
+
+        if ($leftDrawer.hasClass('collapsed')) {
+            $leftDrawer.removeClass('collapsed').addClass('col-md-5');
+            $rightContainer.addClass('col-md-7').removeClass('expend');
+            $(".postcode-container-left ").css("display", "block");
+
+        } else {
+            $leftDrawer.addClass('collapsed').removeClass('col-md-5');
+            $rightContainer.removeClass('col-md-7').addClass('expend');
+            $(".postcode-container-left ").css("display", "none");
+        }
+    });
+});
