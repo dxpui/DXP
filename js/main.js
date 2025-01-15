@@ -1403,6 +1403,17 @@ dateInputs.forEach(input => {
 });
 
 $(document).ready(function () {
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Tab') {
+            $('.menu > ul > li > button, .search-icons').on('focus', function () {
+                if ($(this).is(':focus-visible')) {
+                    $('.sub-menu-show').removeClass('sub-menu-show');
+                    $(".menu-item-has-children .fa-angle-down").removeClass("rotate-arrow");
+                }
+            });
+        }
+    });
+
     var vs = VirtualSelect.init({
         ele: '#TopicDropdown',
     });
@@ -1514,7 +1525,7 @@ $(document).ready(function () {
     //             var month = parts[1].padStart(2, '0');
     //             var year = parts[2];
     //             var formattedDate = day + '/' + month + '/' + year;
-                   
+
     //             $(this).val(formattedDate);
     //         }
     //     }
