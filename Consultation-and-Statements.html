@@ -28,12 +28,14 @@
   <!-- header start -->
   <header class="header fixed-top d-flex align-items-center">
     <a class="skip-to-content-link" href="#skipToContent" tabindex="0">Skip to main content</a>
+   
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
       <div class="logo me-auto me-lg-0">
         <a href="index.html"> <img class="brand-logo" src="assets/img/logo2023_2.svg" alt="OfCom Logo" /></a>
       </div>
       <a href="javascript:void(0);" id="mobile-menu-trigger" class="mobile-menu-trigger order-3 order-lg-2">
+        <span class="visually-hidden-focusable">hamburger menu</span>
         <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none fa-solid fa-xmark"></i>
       </a>
@@ -43,19 +45,16 @@
         </div>
         <nav class="menu">
           <div class="mobile-menu-head">
-            <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
+            <a href="javascript:void(0);" class="go-back">
+              <span class="visually-hidden-focusable">Go Back</span>
+              <i class="fa fa-angle-left"></i></a>
             <div class="current-menu-title"></div>
             <div class="mobile-menu-close">&times;</div>
           </div>
           <ul class="menu-main">
-            <li class="menu-item-has-children topicmenublock">
-              <button type="button">Topics <i class="fa fa-angle-down"></i></button>
+            <li class="menu-item-has-children">
+              <button type="button">Topics <span class="visually-hidden-focusable">menu</span><i class="fa fa-angle-down"></i></button>
               <div class="sub-menu mega-menu mega-menu-column-4">
-                <!-- <div class="mobile-menu-head">
-                  <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
-                  <div class="current-menu-title"></div>
-                  <div class="mobile-menu-close">&times;</div>
-                </div> -->
                 <div class="list-item">
                   <div class="title d-flex justify-content-between align-items-center">
                     <a href="phone-int.html" class="sub-menu-link">
@@ -250,14 +249,9 @@
 
               </div>
             </li>
-            <li class="menu-item-has-children contenttypemenublock">
-              <button type="button"> Ofcom’s work <i class="fa fa-angle-down"></i></button>
+            <li class="menu-item-has-children">
+              <button type="button">Ofcom’s work <i class="fa fa-angle-down"></i></button>
               <div class="sub-menu mega-menu mega-menu-column-4">
-                <!-- <div class="mobile-menu-head">
-                  <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
-                  <div class="current-menu-title"></div>
-                  <div class="mobile-menu-close">&times;</div>
-                </div> -->
                 <div class="list-item">
                   <h4 class="title d-flex justify-content-between align-items-center">
                     <a href="news-center.html" class="sub-topic">News centre</a>
@@ -380,15 +374,9 @@
 
               </div>
             </li>
-            <li class="menu-item-has-children menublock">
-              <button type="button"> Complaints <i class="fa fa-angle-down"></i></button>
-
+            <li class="menu-item-has-children">
+              <button type="button">Complaints <i class="fa fa-angle-down"></i></button>
               <div class="sub-menu mega-menu mega-menu-column-4">
-                <!-- <div class="mobile-menu-head">
-                  <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
-                  <div class="current-menu-title"></div>
-                  <div class="mobile-menu-close">&times;</div>
-                </div> -->
                 <div class="list-item">
                   <h4 class="title d-flex justify-content-between align-items-center">
                     <a href="complaints.html" class="sub-topic">Complaints</a>
@@ -453,14 +441,9 @@
                 </div>
               </div>
             </li>
-            <li class="menu-item-has-children menublock">
-              <button type="button"> About Ofcom <i class="fa fa-angle-down"></i></button>
+            <li class="menu-item-has-children">
+              <button type="button">About Ofcom <i class="fa fa-angle-down"></i></button>
               <div class="sub-menu mega-menu mega-menu-column-4">
-                <!-- <div class="mobile-menu-head">
-                  <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
-                  <div class="current-menu-title"></div>
-                  <div class="mobile-menu-close">&times;</div>
-                </div> -->
                 <div class="list-item ">
                   <h4 class="title d-flex justify-content-between align-items-center">
                     <a href="" class="sub-topic">About Ofcom</a>
@@ -696,7 +679,10 @@
           </div>
         </div>
       </form>
-      <a href="" class="langauge-change order-1 order-lg-3">Cymraeg</a>
+      <a href="" class="langauge-change order-1 order-lg-3" lang="cy" hreflang="cy">Cymraeg</a>
+      <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+        Tooltip on bottom
+      </button> -->
       <!-- mobile menu trigger -->
 
     </div>

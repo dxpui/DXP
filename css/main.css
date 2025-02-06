@@ -2203,6 +2203,13 @@ header .search-box {
     border-radius: 20px;
     width: 195px;
     text-align: center;
+    display: none;
+     transition: all 0.3s ease-in-out;
+    /* position: absolute;
+    top: 0px;  */
+}
+.social-icons-box.visible {
+    display: block;
 }
 
 @media(max-width: 992px) {
@@ -6853,98 +6860,98 @@ input::-webkit-date-and-time-value {
     .info-card .svg-arrow {
         fill: aliceblue;
     }
-
+ 
     .info-card:hover .svg-arrow {
         fill: aliceblue;
         stroke: var(--color-default);
     }
-
+ 
     .info-card:hover .svg-arrow path {
         stroke: var(--color-default);
     }
-
+ 
     .alert .alert-close svg {
         fill: rgb(56, 143, 220);
     }
-
+ 
     .destination-accordian .accordion-button::after {
         background-image: url("../assets/img/web-icons/Accordion-expand-contrast-mode.svg") !important;
     }
-
+ 
     .destination-accordian .accordion-button:not(.collapsed)::after {
         background-image: url("../assets/img/web-icons/Accordion-contract-contrast-mode.svg") !important;
     }
-
+ 
     .step-accordion .accordion-item .accordion-button:not(.collapsed)::after {
         background-image: url("../assets/img/web-icons/Accordion-expand-contrast-mode.svg") !important;
     }
-
+ 
     .step-accordion .accordion-item .accordion-button::after {
         background-image: url("../assets/img/web-icons/Accordion-contract-contrast-mode.svg") !important;
     }
-
+ 
     /* Customize the appearance of the calendar icon in high contrast mode */
     input[type="date"]::-webkit-calendar-picker-indicator {
         filter: invert(1);
     }
-
+ 
     .vscomp-options-list {
         border-style: solid !important;
     }
-
+ 
     .vscomp-option {
         border-style: solid 1px !important;
     }
-
+ 
     .pagination-block .single-arrow-clear {
         background-image: url(/assets/img/web-icons/single-arrow-clear-dis.svg);
     }
-
+ 
     .pagination-block .double-arrow-clear {
         background-image: url(/assets/img/web-icons/double-arrow-clear-dis.svg);
     }
-
+ 
     .pagination-block:hover .single-arrow-clear {
         background-image: url(/assets/img/web-icons/single-arrow-clear-dis.svg);
     }
-
+ 
     .pagination-block:hover .double-arrow-clear {
         background-image: url(/assets/img/web-icons/double-arrow-clear-dis.svg);
     }
-
+ 
     .info-card .svg-arrow-info {
         fill: aliceblue;
     }
-
+ 
     .download-svg {
         width: 24px;
     }
-
+ 
     .download-svg path {
         stroke: #ffc107;
     }
-
+ 
     .header .menu>ul>li>button {
         border-bottom: none;
     }
-
+ 
     .homepage-carousel-cls .carousel-indicators button.active {
         border: 4px solid white !important;
     }
-
+   
     .bg-expend .info-card:hover:after,
     .bg-expend .info-card:hover:before {
         border: none !important;
     }
 
-    .news-green-bg .swiper-pagination-bullet-active,
-    .news-pink-bg .swiper-pagination-bullet-active,
-    .news-orange-bg .swiper-pagination-bullet-active,
-    .news-yellow-bg .swiper-pagination-bullet-active,
+    .news-green-bg .swiper-pagination-bullet-active, 
+    .news-pink-bg .swiper-pagination-bullet-active, 
+    .news-orange-bg .swiper-pagination-bullet-active, 
+    .news-yellow-bg .swiper-pagination-bullet-active, 
     .news-gray-bg .swiper-pagination-bullet-active {
         border: 8px solid white !important;
     }
-
+ 
 }
 
 .postcode-container {
@@ -7144,4 +7151,32 @@ input::-webkit-date-and-time-value {
 .postcode-right-outer.expend {
     width: calc(100% - 50px);
     transition: width 0.3s ease;
+}
+
+.response-table .response-table-row {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.response-table .response-table-row .column-1 {
+    width: 70%;
+}
+
+.response-table .response-table-row .column-2 {
+    width: 30%;
+}
+
+.response-table .response-table-row .header-col {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.response-table .response-table-row .column-1 a {
+    font-size: 16px;
+}
+
+.response-table .response-table-row .column-1 span {
+    color: gray;
+    margin-left: 10px;
 }

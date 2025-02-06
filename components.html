@@ -26,12 +26,14 @@
   <!-- header start -->
   <header class="header fixed-top d-flex align-items-center">
     <a class="skip-to-content-link" href="#skipToContent" tabindex="0">Skip to main content</a>
+   
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
       <div class="logo me-auto me-lg-0">
         <a href="index.html"> <img class="brand-logo" src="assets/img/logo2023_2.svg" alt="OfCom Logo" /></a>
       </div>
       <a href="javascript:void(0);" id="mobile-menu-trigger" class="mobile-menu-trigger order-3 order-lg-2">
+        <span class="visually-hidden-focusable">hamburger menu</span>
         <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none fa-solid fa-xmark"></i>
       </a>
@@ -41,13 +43,15 @@
         </div>
         <nav class="menu">
           <div class="mobile-menu-head">
-            <a href="javascript:void(0);" class="go-back"><i class="fa fa-angle-left"></i></a>
+            <a href="javascript:void(0);" class="go-back">
+              <span class="visually-hidden-focusable">Go Back</span>
+              <i class="fa fa-angle-left"></i></a>
             <div class="current-menu-title"></div>
             <div class="mobile-menu-close">&times;</div>
           </div>
           <ul class="menu-main">
             <li class="menu-item-has-children">
-              <button type="button">Topics <i class="fa fa-angle-down"></i></button>
+              <button type="button">Topics <span class="visually-hidden-focusable">menu</span><i class="fa fa-angle-down"></i></button>
               <div class="sub-menu mega-menu mega-menu-column-4">
                 <div class="list-item">
                   <div class="title d-flex justify-content-between align-items-center">
@@ -244,7 +248,7 @@
               </div>
             </li>
             <li class="menu-item-has-children">
-              <button type="button">Ofcom’s work  <i class="fa fa-angle-down"></i></button>
+              <button type="button">Ofcom’s work <i class="fa fa-angle-down"></i></button>
               <div class="sub-menu mega-menu mega-menu-column-4">
                 <div class="list-item">
                   <h4 class="title d-flex justify-content-between align-items-center">
@@ -369,7 +373,7 @@
               </div>
             </li>
             <li class="menu-item-has-children">
-              <button type="button">Complaints  <i class="fa fa-angle-down"></i></button>
+              <button type="button">Complaints <i class="fa fa-angle-down"></i></button>
               <div class="sub-menu mega-menu mega-menu-column-4">
                 <div class="list-item">
                   <h4 class="title d-flex justify-content-between align-items-center">
@@ -436,7 +440,7 @@
               </div>
             </li>
             <li class="menu-item-has-children">
-              <button type="button">About Ofcom  <i class="fa fa-angle-down"></i></button>
+              <button type="button">About Ofcom <i class="fa fa-angle-down"></i></button>
               <div class="sub-menu mega-menu mega-menu-column-4">
                 <div class="list-item ">
                   <h4 class="title d-flex justify-content-between align-items-center">
@@ -673,7 +677,10 @@
           </div>
         </div>
       </form>
-      <a href="" class="langauge-change order-1 order-lg-3">Cymraeg</a>
+      <a href="" class="langauge-change order-1 order-lg-3" lang="cy" hreflang="cy">Cymraeg</a>
+      <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+        Tooltip on bottom
+      </button> -->
       <!-- mobile menu trigger -->
 
     </div>
@@ -3205,6 +3212,42 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3 class="text-center mb-4 mt-5">Responses</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <div class="response-table">
+              <div class="response-table-row">
+                <div class="column-1 header-col">Responder Name</div>
+                <div class="column-2 header-col">Type</div>
+              </div>
+              <div class="response-table-row">
+                <div class="column-1"><a href="">BT </a><span>(PDF File, 48.1KB)</span></div>
+                <div class="column-2">Organisation</div>
+              </div>
+              <div class="response-table-row">
+                <div class="column-1"><a href="">Cabinate Office Contact Council </a><span>(PDF File, 22.7KB)</span></div>
+                <div class="column-2">Organisation</div>
+              </div>
+              <div class="response-table-row">
+                <div class="column-1"><a href="">Get Connected </a><span>(PDF File, 18.1KB)</span></div>
+                <div class="column-2">Organisation</div>
+              </div>
+              <div class="response-table-row">
+                <div class="column-1"><a href="">Missing People</a><span>(PDF File, 15.8KB)</span></div>
+                <div class="column-2">Organisation</div>
+              </div>
+              <div class="response-table-row">
+                <div class="column-1"><a href="">Mr Robert O'Donnell</a><span>(PDF File, 12.3KB)</span></div>
+                <div class="column-2">Individual</div>
+              </div>
+            </div>
+            <a href="" class="d-block mt-3">Load More..</a>
           </div>
         </div>
       </div>
