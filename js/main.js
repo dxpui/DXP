@@ -1539,12 +1539,95 @@ $(document).ready(function() {
     });
 });
 
+// $(document).ready(function () {
+//     $("#toggleButton").click(function () {
+//         $(".social-icons-box").fadeToggle();
+//         $("#toggleButton").hide();
+//     });
+// });
+
 $(document).ready(function () {
-    $("#toggleButton").click(function () {
-        $(".social-icons-box").fadeToggle();
+    $("#toggleButton").click(function (event) {
+        event.stopPropagation(); // Prevent click from bubbling to document
+        $(".social-icons-box").toggle();
         $("#toggleButton").hide();
     });
+
+    // Hide when clicking outside
+    $(document).click(function (event) {
+        if (!$(event.target).closest(".social-icons-box, #toggleButton").length) {
+            $(".social-icons-box").hide();
+            $("#toggleButton").show();
+        }
+    });
+
+    // Hide when pressing Esc key
+    $(document).keydown(function (event) {
+        if (event.key === "Escape") {
+            $(".social-icons-box").hide();
+            $("#toggleButton").show();
+        }
+    });
 });
+
+
+$(document).ready(function() {
+    var currentDomain = window.location.hostname;
+    $('a').each(function() {
+        var href = $(this).attr('href');
+        // Check if href is valid and not the same as the current domain
+        if (href && (href.startsWith('http://') || href.startsWith('https://')) && !href.includes(currentDomain)) {
+            $(this).addClass('external-link');
+        }
+    });
+});
+
+
+// $(document).ready(function () {
+//     $("#copyBtn").click(function () {
+//         var copyText = $("#copyInput");
+//         copyText.select();
+//         document.execCommand("copy");
+//         $("#copyToast").fadeIn();
+
+//         setTimeout(function () {
+//             $("#copyToast").fadeOut();
+//         }, 5000);
+//     });
+
+//     $("#closeToast").click(function () {
+//         $("#copyToast").fadeOut();
+//     });
+// });
+
+$(document).ready(function () {
+    $("#copyUrl").click(function () {
+        var currentUrl = window.location.href;
+
+        // Copy URL to clipboard
+        var tempInput = $("<input>");
+        $("body").append(tempInput);
+        tempInput.val(currentUrl).select();
+        document.execCommand("copy");
+        tempInput.remove();
+
+        $("#copyToast").addClass("show");
+
+        // Show toast notification
+        $("#copyToast").fadeIn();
+
+        // Hide toast after 5 seconds
+        setTimeout(function () {
+            $("#copyToast").fadeOut();
+        }, 5000);
+    });
+
+    // Manually close the toast
+    $("#closeToast").click(function () {
+        $("#copyToast").fadeOut();
+    });
+});
+
 // Teaser Swiper
 function initializeSwiper() {
     var swiper = new Swiper(".mySwiper", {
