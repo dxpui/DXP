@@ -2249,6 +2249,7 @@ header .search-box {
 .social-icons-box a {
     padding: 10px 15px;
     display: inline-block;
+    width: 30%;
 }
 
 .social-icons-box a:hover,
@@ -2266,6 +2267,12 @@ header .search-box {
 .social-icons-box a i {
     font-size: 1.375rem;
     color: var(--color-default);
+}
+
+@media(max-width: 992px) {
+    .social-icons-box a {
+        width: auto;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -2774,11 +2781,11 @@ a:focus .info-card.news-center:before {
     flex-wrap: wrap;
 }
 
-.social-share-icon-btn .share-button{
+.social-share-icon-btn .share-button {
     fill: var(--color-white);
 }
 
-.social-share-icon-btn:hover .share-button{
+.social-share-icon-btn:hover .share-button {
     fill: var(--color-default) !important;
 }
 
@@ -7209,10 +7216,21 @@ input::-webkit-date-and-time-value {
     margin-left: 10px;
 }
 
+.external-link {
+    display: inline-flex;
+    align-items: center;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+
 .external-link::after {
     content: "\f08e";
     font-family: FontAwesome;
-    padding-left: 3px;
+    padding-left: 2px;
+    padding-right: 5px;
+    white-space: nowrap;
+    margin-left: 2px;
 }
 
 
