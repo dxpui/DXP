@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Donut Chart</title>
+  <style>
+    /* Donut Chart Container */
+    .donut-chart {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: conic-gradient(gray 0deg 36deg, white 36deg 38deg); /* Default */
+    }
+
+    /* Inner circle to create a donut effect */
+    .donut-chart::before {
+      content: "";
+      width: 100px;
+      height: 100px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    /* Centered Number */
+    .donut-chart span {
+      position: absolute;
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+      z-index: 1;
+    }
+
+    /* Button */
+    .controls {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Donut Chart -->
+  <div class="donut-chart" id="chart">
+    <span id="percentage">30%</span>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <input type="range" min="0" max="100" value="30" id="rangeInput" oninput="updateChart(this.value)">
+  </div>
+
+  <script>
+    function updateChart(percentage) {
+      document.getElementById("percentage").innerText = percentage + "%";
+
+      let totalSegments = 10;
+      let blueSegments = Math.round((percentage / 100) * totalSegments); // How many should be blue?
+      let anglePerSegment = 36; // Each segment is 36 degrees
+      let gap = 2; // White gap of 2 degrees
+      let currentAngle = 0;
+
+      let gradientParts = [];
+
+      for (let i = 0; i < totalSegments; i++) {
+        let color = i < blueSegments ? "blue" : "gray"; // First N segments are blue
+        gradientParts.push(`${color} ${currentAngle}deg ${currentAngle + (anglePerSegment - gap)}deg`);
+        gradientParts.push(`white ${currentAngle + (anglePerSegment - gap)}deg ${currentAngle + anglePerSegment}deg`);
+        currentAngle += anglePerSegment;
+      }
+
+      document.getElementById("chart").style.background = `conic-gradient(${gradientParts.join(", ")})`;
+    }
+
+    // Initialize the chart
+    updateChart(30);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Donut Charts</title>
+  <style>
+    /* Main container */
+    .chart-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      width: 400px;
+      margin: auto;
+      text-align: center;
+    }
+
+    /* Individual Donut Chart */
+    .donut-chart {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: conic-gradient(gray 0deg 36deg, white 36deg 38deg);
+    }
+
+    /* Inner circle for donut effect */
+    .donut-chart::before {
+      content: "";
+      width: 100px;
+      height: 100px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    /* Centered Percentage */
+    .donut-chart span {
+      position: absolute;
+      font-size: 18px;
+      font-weight: bold;
+      color: black;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Donut Charts Container -->
+  <div class="chart-container">
+    <div class="donut-chart" id="chart1">
+      <span id="percent1">30%</span>
+    </div>
+    <div class="donut-chart" id="chart2">
+      <span id="percent2">50%</span>
+    </div>
+    <div class="donut-chart" id="chart3">
+      <span id="percent3">70%</span>
+    </div>
+    <div class="donut-chart" id="chart4">
+      <span id="percent4">90%</span>
+    </div>
+  </div>
+
+  <script>
+    function updateChart(chartId, percentId, percentage) {
+      document.getElementById(percentId).innerText = percentage + "%";
+
+      let totalSegments = 10;
+      let blueSegments = Math.round((percentage / 100) * totalSegments);
+      let anglePerSegment = 36; // Each segment is 36 degrees
+      let gap = 2;
+      let currentAngle = 0;
+
+      let gradientParts = [];
+
+      for (let i = 0; i < totalSegments; i++) {
+        let color = i < blueSegments ? "blue" : "gray"; 
+        gradientParts.push(`${color} ${currentAngle}deg ${currentAngle + (anglePerSegment - gap)}deg`);
+        gradientParts.push(`white ${currentAngle + (anglePerSegment - gap)}deg ${currentAngle + anglePerSegment}deg`);
+        currentAngle += anglePerSegment;
+      }
+
+      document.getElementById(chartId).style.background = `conic-gradient(${gradientParts.join(", ")})`;
+    }
+
+    // Initialize all charts with different values
+    updateChart("chart1", "percent1", 30);
+    updateChart("chart2", "percent2", 50);
+    updateChart("chart3", "percent3", 70);
+    updateChart("chart4", "percent4", 90);
+  </script>
+
+</body>
+</html>
