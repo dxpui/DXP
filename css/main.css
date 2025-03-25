@@ -7309,3 +7309,12 @@ input::-webkit-date-and-time-value {
     z-index: 1;
   }
   
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}

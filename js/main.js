@@ -1571,16 +1571,16 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function() {
-    var currentDomain = window.location.hostname;
-    $('a').each(function() {
-        var href = $(this).attr('href');
-        // Check if href is valid and not the same as the current domain
-        if (href && (href.startsWith('http://') || href.startsWith('https://')) && !href.includes(currentDomain)) {
-            $(this).addClass('external-link');
-        }
-    });
-});
+// $(document).ready(function() {
+//     var currentDomain = window.location.hostname;
+//     $('a').each(function() {
+//         var href = $(this).attr('href');
+//         // Check if href is valid and not the same as the current domain
+//         if (href && (href.startsWith('http://') || href.startsWith('https://')) && !href.includes(currentDomain)) {
+//             $(this).addClass('external-link');
+//         }
+//     });
+// });
 
 
 // $(document).ready(function () {
@@ -1656,6 +1656,35 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
 // end chart script
+
+$(document).ready(function () {
+    let lastScrollTop = 0;
+    let accordion = $("#accordionContainer");
+    let accordionWrapper = $("#accordionWrapper");
+    let originalOffset = accordionWrapper.offset().top;
+
+    $(window).scroll(function () {
+        let currentScroll = $(this).scrollTop();
+
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            if (currentScroll >= originalOffset) {
+                if (!accordion.hasClass("sticky")) {
+                    accordion.addClass("sticky");
+                   // $(".accordion-collapse").collapse("hide"); // Collapse all items
+                }
+            }
+        } else {
+            // Scrolling up
+            if (currentScroll < originalOffset) {
+                accordion.removeClass("sticky");
+               // $(".accordion-collapse").collapse("show");
+            }
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+    });
+});
 
 // Teaser Swiper
 function initializeSwiper() {
