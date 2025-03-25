@@ -1657,34 +1657,34 @@ document.addEventListener("DOMContentLoaded", function () {
   
 // end chart script
 
-$(document).ready(function () {
-    let lastScrollTop = 0;
-    let accordion = $("#accordionContainer");
-    let accordionWrapper = $("#accordionWrapper");
-    let originalOffset = accordionWrapper.offset().top;
+// $(document).ready(function () {
+//     let lastScrollTop = 0;
+//     let accordion = $("#accordionContainer");
+//     let accordionWrapper = $("#accordionWrapper");
+//     let originalOffset = accordionWrapper.offset().top;
 
-    $(window).scroll(function () {
-        let currentScroll = $(this).scrollTop();
+//     $(window).scroll(function () {
+//         let currentScroll = $(this).scrollTop();
 
-        if (currentScroll > lastScrollTop) {
-            // Scrolling down
-            if (currentScroll >= originalOffset) {
-                if (!accordion.hasClass("sticky")) {
-                    accordion.addClass("sticky");
-                   // $(".accordion-collapse").collapse("hide"); // Collapse all items
-                }
-            }
-        } else {
-            // Scrolling up
-            if (currentScroll < originalOffset) {
-                accordion.removeClass("sticky");
-               // $(".accordion-collapse").collapse("show");
-            }
-        }
+//         if (currentScroll > lastScrollTop) {
+//             // Scrolling down
+//             if (currentScroll >= originalOffset) {
+//                 if (!accordion.hasClass("sticky")) {
+//                     accordion.addClass("sticky");
+//                    // $(".accordion-collapse").collapse("hide"); // Collapse all items
+//                 }
+//             }
+//         } else {
+//             // Scrolling up
+//             if (currentScroll < originalOffset) {
+//                 accordion.removeClass("sticky");
+//                // $(".accordion-collapse").collapse("show");
+//             }
+//         }
 
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
-    });
-});
+//         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+//     });
+// });
 
 // Teaser Swiper
 function initializeSwiper() {

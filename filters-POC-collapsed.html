@@ -1946,14 +1946,14 @@
             if (currentScroll >= originalOffset) {
                 if (!accordion.hasClass("sticky")) {
                     accordion.addClass("sticky");
-                   // $(".accordion-collapse").collapse("hide"); // Collapse all items
+                    $(".accordion-collapse").collapse("hide"); // Collapse all items
                 }
             }
         } else {
             // Scrolling up
             if (currentScroll < originalOffset) {
                 accordion.removeClass("sticky");
-               // $(".accordion-collapse").collapse("show");
+                $(".accordion-collapse").collapse("show");
             }
         }
 
