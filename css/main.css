@@ -7267,21 +7267,21 @@ input::-webkit-date-and-time-value {
     width: 375px;
     margin: auto;
     text-align: center;
-  }
-  
-  .chart-wrapper {
+}
+
+.chart-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .chart-icon {
+}
+
+.chart-icon {
     width: auto;
     height: 32px;
     margin-bottom: 10px;
-  }
-  
-  .donut-chart {
+}
+
+.donut-chart {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -7290,31 +7290,52 @@ input::-webkit-date-and-time-value {
     justify-content: center;
     position: relative;
     background: conic-gradient(gray 0deg 36deg, white 36deg 38deg);
-  }
-  
-  .donut-chart::before {
+}
+
+.donut-chart::before {
     content: "";
     width: 80px;
     height: 80px;
     background: white;
     border-radius: 50%;
     position: absolute;
-  }
-  
-  .percent-text {
+}
+
+.percent-text {
     position: absolute;
     font-size: 18px;
     font-weight: bold;
     color: black;
     z-index: 1;
-  }
-  
+}
 
-  .sticky {
+
+.sticky {
     position: fixed;
     top: 0;
     width: 100%;
     background: white;
     z-index: 1000;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* .accordion-button:not(.collapsed) .apply-f {
+    display: none
+} */
+
+.accordion-button:not(.collapsed) .search-filter {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.result-conf {
+    border-left: 1px solid #d1d1d1;
+}
+
+@media (max-width: 768px) {
+    .result-conf {
+        margin-top: 20px;
+        border-top: 1px solid #d1d1d1;
+        border-left: none;
+    }
 }
