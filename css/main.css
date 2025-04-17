@@ -7319,6 +7319,24 @@ input::-webkit-date-and-time-value {
     background: white;
     z-index: 1000;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    .sticky {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+.sticky::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sticky::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
 }
 
 /* .accordion-button:not(.collapsed) .apply-f {
@@ -7359,6 +7377,7 @@ input::-webkit-date-and-time-value {
 
 .custom-switch.form-check .form-check-input {
     float: none;
-    margin-inline: 6px;
+    margin-right: 6px;
+    margin-left: 0;
     margin-top: 0;
 }
