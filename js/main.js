@@ -1629,31 +1629,78 @@ $(document).ready(function () {
 });
 
 // chart script
+// document.addEventListener("DOMContentLoaded", function () {
+//     const charts = document.querySelectorAll(".donut-chart");
+  
+//     charts.forEach(chart => {
+//       let percentage = chart.getAttribute("data-percentage"); 
+//       chart.querySelector(".percent-text").innerText = percentage + "%";
+  
+//       let totalSegments = 10;
+//       let blueSegments = Math.round((percentage / 100) * totalSegments);
+//       let anglePerSegment = 36; // Each segment is 36 degrees
+//       let gap = 2;
+//       let currentAngle = 0;
+  
+//       let gradientParts = [];
+  
+//       for (let i = 0; i < totalSegments; i++) {
+//         let color = i < blueSegments ? "#000045" : "gray";
+//         gradientParts.push(`${color} ${currentAngle}deg ${currentAngle + (anglePerSegment - gap)}deg`);
+//         gradientParts.push(`white ${currentAngle + (anglePerSegment - gap)}deg ${currentAngle + anglePerSegment}deg`);
+//         currentAngle += anglePerSegment;
+//       }
+  
+//       chart.style.background = `conic-gradient(${gradientParts.join(", ")})`;
+//     });
+//   });
+
+
 document.addEventListener("DOMContentLoaded", function () {
+    renderDonutCharts();
+  });
+
+  function renderDonutCharts() {
     const charts = document.querySelectorAll(".donut-chart");
-  
+
     charts.forEach(chart => {
-      let percentage = chart.getAttribute("data-percentage"); 
-      chart.querySelector(".percent-text").innerText = percentage + "%";
-  
+      let rawValue = chart.getAttribute("data-percentage");
+      let percentage = parseFloat(rawValue);
+
+      const textEl = chart.querySelector(".percent-text");
+
+      if (isNaN(percentage) || percentage < 0) {
+        textEl.innerText = "NA";
+        chart.style.background = "conic-gradient(gray 0deg 360deg)";
+        return;
+      }
+
+      textEl.innerText = percentage + "%";
+
       let totalSegments = 10;
       let blueSegments = Math.round((percentage / 100) * totalSegments);
-      let anglePerSegment = 36; // Each segment is 36 degrees
+      let anglePerSegment = 36;
       let gap = 2;
       let currentAngle = 0;
-  
+
       let gradientParts = [];
-  
+
       for (let i = 0; i < totalSegments; i++) {
         let color = i < blueSegments ? "#000045" : "gray";
         gradientParts.push(`${color} ${currentAngle}deg ${currentAngle + (anglePerSegment - gap)}deg`);
         gradientParts.push(`white ${currentAngle + (anglePerSegment - gap)}deg ${currentAngle + anglePerSegment}deg`);
         currentAngle += anglePerSegment;
       }
-  
+
       chart.style.background = `conic-gradient(${gradientParts.join(", ")})`;
     });
-  });
+  }
+
+  // Example of updating via JS (simulate AJAX)
+  setTimeout(() => {
+    document.querySelector(".donut-chart").setAttribute("data-percentage", "60");
+    renderDonutCharts();
+  }, 3000);
   
 // end chart script
 

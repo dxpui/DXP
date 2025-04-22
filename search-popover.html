@@ -1,0 +1,2303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OFCOM website</title>
+  <link rel="icon" href="assets/img/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="css/virtual-select.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker-full.min.js"></script>
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- header start -->
+  <header class="header fixed-top d-flex align-items-center">
+    <a class="skip-to-content-link" href="#skipToContent" tabindex="0">Skip to main content</a>
+
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <div class="logo me-auto me-lg-0">
+        <a href="index.html"> <img class="brand-logo" src="assets/img/logo2023_2.svg" alt="OfCom Logo" /></a>
+      </div>
+      <a href="javascript:void(0);" id="mobile-menu-trigger" class="mobile-menu-trigger order-3 order-lg-2">
+        <span class="visually-hidden-focusable">hamburger menu</span>
+        <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none fa-solid fa-xmark"></i>
+      </a>
+      <!-- menu start here -->
+      <div class="header-item ms-auto">
+        <div class="menu-overlay">
+        </div>
+        <nav class="menu">
+          <div class="mobile-menu-head">
+            <a href="javascript:void(0);" class="go-back">
+              <span class="visually-hidden-focusable">Go Back</span>
+              <i class="fa fa-angle-left"></i></a>
+            <div class="current-menu-title"></div>
+            <div class="mobile-menu-close">&times;</div>
+          </div>
+          <ul class="menu-main">
+            <li class="menu-item-has-children">
+              <button type="button">Topics <span class="visually-hidden-focusable">menu</span><i
+                  class="fa fa-angle-down"></i></button>
+              <div class="sub-menu mega-menu mega-menu-column-4">
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="phone-int.html" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span> Phones and broadband</span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Phones and broadband Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit,
+                        sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="#" class="sub-topic">TV, radio and on-demand</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">TV, radio and on-demand Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Post</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+
+                  <ul>
+                    <li>
+                      <span class="detail-text">Post Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Radio</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Radio Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Managing the airwaves</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Managing the airwaves Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Online safety</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Online safety Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Digital services</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Digital services Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Media use and attitudes</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Media use and attitudes Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation</span>
+                    </li>
+                </div>
+                <div class="w-100 menu-social-icons">
+                  <a href="#" title="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="#" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="#" title="Youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="#" title="Instagram">
+                    <i class="fa-brands fa-square-instagram"></i>
+                  </a>
+                  <a href="#" title="Tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </div>
+                <div class="multicolor-banner">
+                  <div class="row row-cols-auto g-0 multicolor-strip menu-strip-height">
+                    <div class="bg-blue"></div>
+                    <div class="bg-megenta"></div>
+                    <div class="bg-pink"></div>
+                    <div class="bg-yellow"></div>
+                    <div class="bg-green"></div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+            <li class="menu-item-has-children">
+              <button type="button">Ofcom’s work <i class="fa fa-angle-down"></i></button>
+              <div class="sub-menu mega-menu mega-menu-column-4">
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="news-center.html" class="sub-topic">News centre</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">News centre Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit,
+                        sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Licences</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Licences Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit,
+                        sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">Reports and data</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+
+                  <ul>
+                    <li>
+                      <span class="detail-text">Reports and data Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit,
+                        sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="consultations-statements.html" class="sub-topic">Consultations and statements</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="detail-text">Consultations and statements and data Lorem ipsum dolor sit amet,
+                        consectetur adipiscing
+                        elit,
+                        sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation
+                      </span>
+                    </li>
+                </div>
+
+                <div class="w-100 menu-social-icons">
+                  <a href="#" title="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="#" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="#" title="Youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="#" title="Instagram">
+                    <i class="fa-brands fa-square-instagram"></i>
+                  </a>
+                  <a href="#" title="Tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </div>
+                <div class="multicolor-banner">
+                  <div class="row row-cols-auto g-0 multicolor-strip menu-strip-height">
+                    <div class="bg-blue"></div>
+                    <div class="bg-megenta"></div>
+                    <div class="bg-pink"></div>
+                    <div class="bg-yellow"></div>
+                    <div class="bg-green"></div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+            <li class="menu-item-has-children">
+              <button type="button">Complaints <i class="fa fa-angle-down"></i></button>
+              <div class="sub-menu mega-menu mega-menu-column-4">
+                <div class="list-item">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="complaints.html" class="sub-topic">Complaints</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li class="mb-3">Compliants About:</li>
+                    <li><a href="complaints-about.html">TV, radio or on demand services</a></li>
+                    <li><a href="">Mobile, phone or internet services</a></li>
+                    <li><a href="#">Postal services</a></li>
+                    <li><a href="#">Wireless interference</a></li>
+                    <li><a href="#">Video-sharing platform (VSP)</a></li>
+                    <li><a href="#">Complain about something else</a></li>
+                  </ul>
+                </div>
+                <div class="list-item">
+                  <ul>
+                    <li class="mb-3"><span class="detail-text">
+                        We may be able to help you complain about or report issues relating to phone, broadband and
+                        postal services, TV, radio and on-demand programmes, interference to wireless devices, or
+                        something you have seen on a video-sharing platform.
+                      </span></li>
+                    <li><a href="#">Text Text</a></li>
+                    <li><a href="#">Text Text</a></li>
+                  </ul>
+
+                </div>
+                <div class="w-100 menu-social-icons">
+                  <a href="#" title="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="#" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="#" title="Youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="#" title="Instagram">
+                    <i class="fa-brands fa-square-instagram"></i>
+                  </a>
+                  <a href="#" title="Tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </div>
+                <div class="multicolor-banner">
+                  <div class="row row-cols-auto g-0 multicolor-strip menu-strip-height">
+                    <div class="bg-blue"></div>
+                    <div class="bg-megenta"></div>
+                    <div class="bg-pink"></div>
+                    <div class="bg-yellow"></div>
+                    <div class="bg-green"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item-has-children">
+              <button type="button">About Ofcom <i class="fa fa-angle-down"></i></button>
+              <div class="sub-menu mega-menu mega-menu-column-4">
+                <div class="list-item ">
+                  <h4 class="title d-flex justify-content-between align-items-center">
+                    <a href="" class="sub-topic">About Ofcom</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40"
+                      style="fill: white;">
+                      <circle cx="20.2449" cy="19.7964" r="19" stroke="#000045" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke="#000045" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                    </svg>
+                  </h4>
+                  <ul>
+                    <li><a href="#">What is Ofcom?</a></li>
+                    <li><a href="#">How Ofcom is run</a></li>
+                    <li><a href="#">News and updates</a></li>
+                    <li><a href="#">International work</a></li>
+                    <li><a href="#">Contacting Ofcom</a></li>
+                    <li><a href="#">Supplying Ofcom</a></li>
+                    <li><a href="#">Policies and guidelines</a></li>
+                  </ul>
+                </div>
+                <div class="list-item">
+                  <h4 class="title visually-hidden">Accessibility</h4>
+                  <ul>
+                    <li><a href="#">Accessibility and diversity</a></li>
+                    <li><a href="#">Annual reports and plans</a></li>
+                    <li><a href="#">Freedom of Information and Data Protection</a></li>
+                    <li><a href="#">About this website</a></li>
+                    <li><a href="#">Copyright and information re-use</a></li>
+                  </ul>
+
+                </div>
+                <div class="list-item">
+                  <ul>
+                    <li class="mb-3"><span class="detail-text">
+                        Optional explanatory text here and / or quick links to popular or topical content. <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur.</li>
+
+                  </ul>
+                </div>
+                <div class="list-item">
+
+                </div>
+                <div class="w-100 menu-social-icons">
+                  <a href="#" title="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="#" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="#" title="Youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="#" title="Instagram">
+                    <i class="fa-brands fa-square-instagram"></i>
+                  </a>
+                  <a href="#" title="Tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </div>
+                <div class="multicolor-banner">
+                  <div class="row row-cols-auto g-0 multicolor-strip menu-strip-height">
+                    <div class="bg-blue"></div>
+                    <div class="bg-megenta"></div>
+                    <div class="bg-pink"></div>
+                    <div class="bg-yellow"></div>
+                    <div class="bg-green"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- menu end here -->
+      <a href="javascript:void(0);" id="search-icon" class="search-icons d-flex align-items-center order-2 order-lg-1">
+        <i class="fas fa-search"></i>
+        <span class="visually-hidden-focusable">Global Search</span>
+      </a>
+      <form action="" class="search-form">
+        <div class="search-box mx-auto position-relative">
+          <input type="search" class="search-box-input" name="" placeholder="What are looking for?" id="myInput">
+
+          <label for="myInput" class="visually-hidden-focusable"><span class="d-none">Serach</span></label>
+          <a href="javascript:void(0)" class="fas fa-search gl-search"><span class="d-none">Serach</span></a>
+        </div>
+
+        <h4 class="text-center mt-4">Quick Links:</h4>
+
+        <hr>
+        <div class="search-quick-link mx-auto mt-4">
+
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
+                <span>Complaints</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
+                <span>Mobile and Broadband checker </span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
+                <span>What is Ofcom</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-start">
+                <span>Licences</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-center">
+                <span>Newsroom</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="" class="w-100 d-flex justify-content-between align-items-start align-items-center">
+                <span>Consultations</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w-75 mx-auto mt-4">
+          <h4 class="text-center mt-4 mb-5">Suggested searches</h4>
+          <div class="row my-3 d-flex align-items-center">
+            <div class="col-12 col-sm-6 col-md-3 mb-2"><button
+                class="btn btn-primary-white-border w-100 mb-2 px-4">Example
+                search</button></div>
+            <div class="col-12 col-sm-6 col-md-3 mb-2"><button
+                class="btn btn-primary-white-border w-100 mb-2 px-4">Example
+                search</button></div>
+            <div class="col-12 col-sm-6 col-md-3 mb-2"><button
+                class="btn btn-primary-white-border w-100 mb-2 px-4">Example
+                search</button></div>
+            <div class="col-12 col-sm-6 col-md-3 mb-2"><button
+                class="btn btn-primary-white-border w-100 mb-2 px-4">Example
+                search</button></div>
+          </div>
+        </div>
+        <hr>
+        <div class="search-quick-link mx-auto mt-4 mb-5 news-blue">
+          <h4 class="text-center mt-4 mb-3">Latest</h4>
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="" class="">
+                <div class="info-card news-info">
+                  <img src="assets/img/latest-1.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="">
+                <div class="info-card news-info">
+                  <img src="assets/img/latest-2.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="">
+                <div class="info-card news-info">
+                  <img src="assets/img/latest-3.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="">
+                <div class="info-card news-info">
+                  <img src="assets/img/latest-1.png" class="card-img-small mb-3" alt="...">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="info-card-header">Lorem ipsum dolor sit</span>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19" />
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel" />
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel" />
+                    </svg>
+                  </div>
+                  <span class="date">12/12/2022</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </form>
+      <a href="" class="langauge-change order-1 order-lg-3" lang="cy" hreflang="cy">Cymraeg</a>
+      <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+        Tooltip on bottom
+      </button> -->
+      <!-- mobile menu trigger -->
+
+    </div>
+    </div>
+  </header>
+  <main role="main">
+
+
+    <section class="breadcrumb-position">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active ellipsis" aria-current="page"><span>Information for industry</span></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="row g-0">
+        <div class="col-md-12">
+          <div class="hero-banner-full maroon-bg h-100">
+            <div class="row">
+              <div class="col-md-6 col-lg-7">
+                <h1 id="skipToContent">Information for industry</h1>
+                <p class="banner-detail">
+                  Rules, guidance and other information for the industries we regulate.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form action="" class="w-100" id="contentTypeForm" method="get">
+        <div class="row g-0">
+          <div class="col-12 gray-bg">
+            <div class="recommendation-block-outer">
+              <div class="row g-0">
+                <div
+                  class="col-md-12 col-lg-6 d-flex align-items-center search-form blue-bg recommendation-block order-2 order-lg-1">
+                  <div class="search-box position-relative">
+                    <input type="search" class="search-box-input results-input" name="query" id="query"
+                      autocomplete="off" placeholder="Search" value="">
+                    <label for="query" class="visually-hidden-focusable">Search</label>
+                    <a href="javascript:void(0)" class="serach-icon-btn px-1" aria-label="Search"
+                      onclick="localSearch();">
+                      <i class="fas fa-search page-search"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-12 col-lg-6 blue-bg order-1 order-lg-2">
+
+                  <div class="block  ctaquicklinksblock  ">
+
+                    <div class="blue-bg recommendation-block">
+                      <div class="row">
+                        <div class="col-12 mb-2">
+                          <h2 class="recommendation-header"> Quick links </h2>
+                        </div>
+                        <div class="col-md-6">
+                          <a href="/phones-and-broadband/accessibility/general-conditions-of-entitlement/"
+                            class="recommendation-link-block">
+                            <div
+                              class="recommendation-link d-flex justify-content-between align-items-start align-items-start">
+                              <span> General Conditions of Entitlement </span>
+                              <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                                  stroke-linejoin="bevel"></path>
+                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel">
+                                </path>
+                              </svg>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-6">
+                          <a href="/news-and-updates/" class="recommendation-link-block">
+                            <div
+                              class="recommendation-link d-flex justify-content-between align-items-start align-items-start">
+                              <span> News and updates </span>
+                              <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                                  stroke-linejoin="bevel"></path>
+                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel">
+                                </path>
+                              </svg>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-6">
+                          <a href="/consultations-and-statements/" class="recommendation-link-block">
+                            <div
+                              class="recommendation-link d-flex justify-content-between align-items-start align-items-start">
+                              <span> Consultations and statements </span>
+                              <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                                  stroke-linejoin="bevel"></path>
+                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel">
+                                </path>
+                              </svg>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-6">
+                          <a href="/phones-and-broadband/telecoms-infrastructure/" class="recommendation-link-block">
+                            <div
+                              class="recommendation-link d-flex justify-content-between align-items-start align-items-start">
+                              <span> Telecoms infrastructure </span>
+                              <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                                  stroke-linejoin="bevel"></path>
+                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel">
+                                </path>
+                              </svg>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-6">
+                          <a href="/enforcement/" class="recommendation-link-block">
+                            <div
+                              class="recommendation-link d-flex justify-content-between align-items-start align-items-start">
+                              <span> Enforcement </span>
+                              <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                                <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                                  stroke-linejoin="bevel"></path>
+                                <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel">
+                                </path>
+                              </svg>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="results-top">
+          <section class="filter-section">
+            <div class="search-filter">
+              <div class="accordion" id="contentfilter-accordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#contentfilter-collapse" aria-expanded="true"
+                      aria-controls="contentfilter-collapse">
+                      <span class="apply-f">Apply filters</span>
+                      <span class="collaspe">Collapse filters</span>
+                    </button>
+                  </h2>
+                  <div id="contentfilter-collapse" class="accordion-collapse collapse show"
+                    data-bs-parent="#contentfilter-accordion">
+                    <div class="accordion-body">
+                      <div class="row">
+                        <div class="col-xxl-3 col-xl-4 col-md-6">
+                          <label class="py-2">Topic</label>
+                          <div id="TopicDropdown" name="SelectedTopic" placeholder="Select topic"
+                            class="vscomp-ele pop-comp-ele">
+                            <div id="vscomp-ele-wrapper-153"
+                              class="vscomp-ele-wrapper vscomp-wrapper popup-position-center has-value closed"
+                              tabindex="0" role="combobox" aria-haspopup="listbox"
+                              aria-controls="vscomp-dropbox-container-153" aria-expanded="false"
+                              aria-label="Options list">
+                              <input type="hidden" name="SelectedTopic" class="vscomp-hidden-input" value="">
+                              <div class="vscomp-toggle-button">
+                                <div class="vscomp-value" data-tooltip="Select topic" data-tooltip-enter-delay="200"
+                                  data-tooltip-z-index="2" data-tooltip-font-size="14px" data-tooltip-alignment="center"
+                                  data-tooltip-max-width="300px" data-tooltip-ellipsis-only="true"
+                                  data-tooltip-allow-html="true">Select topic</div>
+                                <div class="vscomp-arrow"></div>
+                                <div class="vscomp-clear-button toggle-button-child" data-tooltip="Clear"
+                                  data-tooltip-enter-delay="200" data-tooltip-z-index="2" data-tooltip-font-size="14px"
+                                  data-tooltip-alignment="center" data-tooltip-max-width="300px"
+                                  data-tooltip-ellipsis-only="false" data-tooltip-allow-html="false" tabindex="0"
+                                  aria-label="Clear button">
+                                  <i class="vscomp-clear-icon"></i>
+                                </div>
+                              </div>
+
+                              <div id="vscomp-dropbox-container-153" role="listbox"
+                                class="vscomp-dropbox-container pop-comp-wrapper position-top"
+                                style="z-index: 2; transform: translate3d(0px, -174px, 0px); max-width: 342px;"
+                                data-from-left="0" data-from-top="-174" data-top="-204" data-left="0">
+                                <div class="vscomp-dropbox-container-top" aria-hidden="true" tabindex="0">&nbsp;</div>
+                                <div class="vscomp-dropbox">
+                                  <div class="vscomp-search-wrapper"></div>
+
+                                  <div class="vscomp-options-container" style="max-height: 200px;">
+                                    <div class="vscomp-options-loader"></div>
+
+                                    <div class="vscomp-options-list" style="height: 360px;">
+                                      <div class="vscomp-options" data-top="0"
+                                        style="transform: translate3d(0px, 0px, 0px);">
+                                        <div role="option" aria-selected="true" id="vscomp-option-153-0"
+                                          class="vscomp-option selected" data-value="" data-index="0"
+                                          data-visible-index="0" tabindex="-1" style="height: 40px;">
+
+                                          <span class="vscomp-option-text" data-tooltip="Select topic"
+                                            data-tooltip-enter-delay="200" data-tooltip-z-index="2"
+                                            data-tooltip-font-size="14px" data-tooltip-alignment="center"
+                                            data-tooltip-max-width="300px" data-tooltip-ellipsis-only="true"
+                                            data-tooltip-allow-html="true">
+                                            Select topic
+                                          </span>
+
+
+                                        </div>
+                                        <div role="option" aria-selected="false" id="vscomp-option-153-1"
+                                          class="vscomp-option" data-value="67844" data-index="1" data-visible-index="1"
+                                          tabindex="-1" style="height: 40px;">
+
+                                          <span class="vscomp-option-text" data-tooltip="About Ofcom"
+                                            data-tooltip-enter-delay="200" data-tooltip-z-index="2"
+                                            data-tooltip-font-size="14px" data-tooltip-alignment="center"
+                                            data-tooltip-max-width="300px" data-tooltip-ellipsis-only="true"
+                                            data-tooltip-allow-html="true">
+                                            About Ofcom
+                                          </span>
+
+
+                                        </div>
+                                        <div role="option" aria-selected="false" id="vscomp-option-153-2"
+                                          class="vscomp-option" data-value="67854" data-index="2" data-visible-index="2"
+                                          tabindex="-1" style="height: 40px;">
+
+                                          <span class="vscomp-option-text" data-tooltip="Internet-based services"
+                                            data-tooltip-enter-delay="200" data-tooltip-z-index="2"
+                                            data-tooltip-font-size="14px" data-tooltip-alignment="center"
+                                            data-tooltip-max-width="300px" data-tooltip-ellipsis-only="true"
+                                            data-tooltip-allow-html="true">
+                                            Internet-based services
+                                          </span>
+
+
+                                        </div>
+                                        <div role="option" aria-selected="false" id="vscomp-option-153-3"
+                                          class="vscomp-option" data-value="67860" data-index="3" data-visible-index="3"
+                                          tabindex="-1" style="height: 40px;">
+
+                                          <span class="vscomp-option-text" data-tooltip="Media use and attitudes"
+                                            data-tooltip-enter-delay="200" data-tooltip-z-index="2"
+                                            data-tooltip-font-size="14px" data-tooltip-alignment="center"
+                                            data-tooltip-max-width="300px" data-tooltip-ellipsis-only="true"
+                                            data-tooltip-allow-html="true">
+                                            Media use and attitudes
+                                          </span>
+
+
+                                        </div>
+                                        <div role="option" aria-selected="false" id="vscomp-option-153-4"
+                                          class="vscomp-option" data-value="67866" data-index="4" data-visible-index="4"
+                                          tabindex="-1" style="height: 40px;">
+
+                                          <span class="vscomp-option-text" data-tooltip="Online safety"
+                                            data-tooltip-enter-delay="200" data-tooltip-z-index="2"
+                                            data-tooltip-font-size="14px" data-tooltip-alignment="center"
+                                            data-tooltip-max-width="300px" data-tooltip-ellipsis-only="true"
+                                            data-tooltip-allow-html="true">
+                                            Online safety
+                                          </span>
+
+
+                                        </div>
+                                        <div role="option" aria-selected="false" id="vscomp-option-153-5"
+                                          class="vscomp-option" data-value="67871" data-index="5" data-visible-index="5"
+                                          tabindex="-1" style="height: 40px;">
+
+                                          <span class="vscomp-option-text" data-tooltip="Phones and broadband"
+                                            data-tooltip-enter-delay="200" data-tooltip-z-index="2"
+                                            data-tooltip-font-size="14px" data-tooltip-alignment="center"
+                                            data-tooltip-max-width="300px" data-tooltip-ellipsis-only="true"
+                                            data-tooltip-allow-html="true">
+                                            Phones and broadband
+                                          </span>
+
+
+                                        </div>
+                                        <div role="option" aria-selected="false" id="vscomp-option-153-6"
+                                          class="vscomp-option" data-value="67887" data-index="6" data-visible-index="6"
+                                          tabindex="-1" style="height: 40px;">
+
+                                          <span class="vscomp-option-text" data-tooltip="Post"
+                                            data-tooltip-enter-delay="200" data-tooltip-z-index="2"
+                                            data-tooltip-font-size="14px" data-tooltip-alignment="center"
+                                            data-tooltip-max-width="300px" data-tooltip-ellipsis-only="true"
+                                            data-tooltip-allow-html="true">
+                                            Post
+                                          </span>
+
+
+                                        </div>
+                                        <div role="option" aria-selected="false" id="vscomp-option-153-7"
+                                          class="vscomp-option" data-value="67891" data-index="7" data-visible-index="7"
+                                          tabindex="-1" style="height: 40px;">
+
+                                          <span class="vscomp-option-text" data-tooltip="Spectrum"
+                                            data-tooltip-enter-delay="200" data-tooltip-z-index="2"
+                                            data-tooltip-font-size="14px" data-tooltip-alignment="center"
+                                            data-tooltip-max-width="300px" data-tooltip-ellipsis-only="true"
+                                            data-tooltip-allow-html="true">
+                                            Spectrum
+                                          </span>
+
+
+                                        </div>
+                                        <div role="option" aria-selected="false" id="vscomp-option-153-8"
+                                          class="vscomp-option" data-value="67899" data-index="8" data-visible-index="8"
+                                          tabindex="-1" style="height: 40px;">
+
+                                          <span class="vscomp-option-text" data-tooltip="TV, radio and on-demand"
+                                            data-tooltip-enter-delay="200" data-tooltip-z-index="2"
+                                            data-tooltip-font-size="14px" data-tooltip-alignment="center"
+                                            data-tooltip-max-width="300px" data-tooltip-ellipsis-only="true"
+                                            data-tooltip-allow-html="true">
+                                            TV, radio and on-demand
+                                          </span>
+
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="vscomp-options-bottom-freezer"></div>
+                                  <div class="vscomp-no-options" tabindex="-1" aria-hidden="true">No options found</div>
+                                  <div class="vscomp-no-search-results" tabindex="-1" aria-hidden="true">No results
+                                    found</div>
+
+                                  <span class="vscomp-dropbox-close-button"><i class="vscomp-clear-icon"></i></span>
+                                </div>
+                                <div class="vscomp-dropbox-container-bottom" aria-hidden="true" tabindex="0">&nbsp;
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-4 col-md-6 subtopic-filter d-none">
+                          <label class="py-2">Subtopics</label>
+                          <div id="SubtopicDropdown" multiple="" name="SelectedSubTopics" placeholder="Select subtopic"
+                            data-search="false" class="vscomp-ele pop-comp-ele">
+                            <div id="vscomp-ele-wrapper-2417"
+                              class="vscomp-ele-wrapper vscomp-wrapper multiple popup-position-center has-no-options closed"
+                              tabindex="0" role="combobox" aria-haspopup="listbox"
+                              aria-controls="vscomp-dropbox-container-2417" aria-expanded="false"
+                              aria-label="Options list">
+                              <input type="hidden" name="SelectedSubTopics" class="vscomp-hidden-input" value="">
+                              <div class="vscomp-toggle-button">
+                                <div class="vscomp-value" data-tooltip="Select subtopic" data-tooltip-enter-delay="200"
+                                  data-tooltip-z-index="2" data-tooltip-font-size="14px" data-tooltip-alignment="center"
+                                  data-tooltip-max-width="300px" data-tooltip-ellipsis-only="true"
+                                  data-tooltip-allow-html="true">Select subtopic</div>
+                                <div class="vscomp-arrow"></div>
+                                <div class="vscomp-clear-button toggle-button-child" data-tooltip="Clear"
+                                  data-tooltip-enter-delay="200" data-tooltip-z-index="2" data-tooltip-font-size="14px"
+                                  data-tooltip-alignment="center" data-tooltip-max-width="300px"
+                                  data-tooltip-ellipsis-only="false" data-tooltip-allow-html="false" tabindex="0"
+                                  aria-label="Clear button">
+                                  <i class="vscomp-clear-icon"></i>
+                                </div>
+                              </div>
+
+                              <div id="vscomp-dropbox-container-2417" role="listbox"
+                                class="vscomp-dropbox-container pop-comp-wrapper position-bottom" data-from-left="0"
+                                data-from-top="-30" data-top="0" data-left="0"
+                                style="z-index: 2; transform: translate3d(0px, -30px, 0px); max-width: 0px;">
+                                <div class="vscomp-dropbox-container-top" aria-hidden="true" tabindex="0">&nbsp;</div>
+                                <div class="vscomp-dropbox">
+                                  <div class="vscomp-search-wrapper"></div>
+
+                                  <div class="vscomp-options-container" style="max-height: 200px;">
+                                    <div class="vscomp-options-loader"></div>
+
+                                    <div class="vscomp-options-list" style="height: 0px;">
+                                      <div class="vscomp-options" data-top="0"
+                                        style="transform: translate3d(0px, 0px, 0px);"></div>
+                                    </div>
+                                  </div>
+
+                                  <div class="vscomp-options-bottom-freezer"></div>
+                                  <div class="vscomp-no-options" tabindex="0" aria-hidden="false">No options found</div>
+                                  <div class="vscomp-no-search-results" tabindex="-1" aria-hidden="true">No results
+                                    found</div>
+
+                                  <span class="vscomp-dropbox-close-button"><i class="vscomp-clear-icon"></i></span>
+                                </div>
+                                <div class="vscomp-dropbox-container-bottom" aria-hidden="true" tabindex="0">&nbsp;
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xxl-3 col-xl-4 col-md-6">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <label for="UpdatedAfter" class="py-2"> Updated after </label>
+                              <input type="date" class="form-control" name="UpdatedAfter" id="UpdatedAfter" value=""
+                                placeholder="dd/mm/yyyy" onfocus="(this.type='date')">
+                            </div>
+
+                            <div class="col-md-6">
+                              <label for="UpdatedBefore" class="py-2"> Updated before </label>
+                              <input type="date" class="form-control" name="UpdatedBefore" id="UpdatedBefore" value=""
+                                placeholder="dd/mm/yyyy" onfocus="(this.type='date')">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center mt-4">
+                        <button type="submit" id="btnsubmit" class="btn btn-secondary" data-bs-dismiss="modal"
+                          aria-label="Apply filters">
+                          Apply filters
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="container-xl">
+            <div class="row">
+              <div class="row">
+                <div class="col-xl-9 col-md-12">
+                </div>
+                <div class="col-xl-3 col-md-12">
+                  <input data-val="true"
+                    data-val-required="Ofcom.Cms.Ofc.Pages.ContentTypes.ContentTypesPageViewModel.SortBy-Required"
+                    id="SortBy" name="SortBy" type="hidden" value="Newest">
+                  <div class="filter-btn">
+                    <div class="dropdown-center sort-list">
+                      <button class="btn btn-secondary hover-none dropdown-toggle" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Sort by Newest to oldest <i class="fa-solid fa-chevron-down ms-2"></i>
+                      </button>
+                      <ul class="dropdown-menu" id="ddsort">
+                        <li data-value="Newest" select="true"><a href="javascript:void(0);" class="dropdown-item">Newest
+                            to oldest</a></li>
+                        <li data-value="Oldest"><a href="javascript:void(0);" class="dropdown-item">Oldest to newest</a>
+                        </li>
+                        <li data-value="AZ"><a href="javascript:void(0);" class="dropdown-item">A to Z</a></li>
+                        <li data-value="ZA"><a href="javascript:void(0);" class="dropdown-item">Z to A</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </form>
+    </section>
+
+    <section class="container-xl">
+      <div class="row my-5 extra-margin">
+        <div class="col-md-4 onethird search-results-block">
+          <a
+            href="https://www.ofcom.org.uk/phones-and-broadband/coverage-and-speeds/preparing-for-2g-switch-off---devices-using-international-roaming-sims-2g-network-coverage-data-and-predicted-new-2g-inbound-roaming-not-spots/">
+            <div class="info-card" 
+            data-title="Preparing for 2G switch-off - devices using international" 
+            data-meta=" Apr 20, 2025"
+              data-summary="List of postcodes containing premises where international roaming SIMs are predicted."
+              data-highlights="Proposed Changes to Virgin Media O2’s (O2) 2G Network ;Technical notes;Related content">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Preparing for 2G switch-off - devices using international roaming SIMs: 2G
+                  Network Coverage Data and predicted new ‘2G Inbound Roaming Not-Spots’ </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  17 April 2025
+                </p>
+
+              </div>
+              <p>
+                List of postcodes containing premises where international roaming SIMs are predicted to lose 2G indoor
+                coverage once Virgin Media O2 (O2) restricts inbound roaming on its 2G network, as O2 is the only MNO
+                providing 2G coverage at these locations.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a
+            href="https://www.ofcom.org.uk/phones-and-broadband/coverage-and-speeds/advice-for-iot-and-third-party-device-suppliers/">
+            <div class="info-card"
+            data-title="Switching off 2G and 3G and 2G networks" 
+            data-meta=" 22 January 2024"
+              data-summary="The UK’s mobile network providers will switch off their 3G and then 2G networks over."
+              data-highlights="What’s happening?;Our role and what we expect of mobile providers;Use our 3G ‘not-spot’ data">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Switching off 2G and 3G and 2G networks: advice for IoT and third-party
+                  device suppliers </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  22 January 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  17 April 2025
+                </p>
+
+              </div>
+              <p>
+                The UK’s mobile network providers will switch off their 3G and then 2G networks over the next few years.
+                This page explains how suppliers of Internet of Things (IoT) and third-party devices can help their
+                customers during this period of change.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/tv-radio-and-on-demand/analogue-radio/radio-broadcasters/">
+            <div class="info-card"
+            data-title="Radio operations" 
+            data-meta=" 19 July 2022"
+              data-summary=" Information specific to those working in radio broadcasting and radio communications."
+              data-highlights="Commercial radio">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Radio operations </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  19 July 2022
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  16 April 2025
+                </p>
+
+              </div>
+              <p>
+                Information specific to those working in radio broadcasting and radio communications.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/spectrum/frequencies/spectrum-information/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Information about spectrum frequencies and allocations </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  13 June 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  11 April 2025
+                </p>
+
+              </div>
+              <p>
+                More information about how radio spectrum is allocated in the UK, including links to important
+                documents.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/phones-and-broadband/phone-numbers/numbering/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Telecoms numbering </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  28 April 2010
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  11 April 2025
+                </p>
+
+              </div>
+              <p>
+                This section provides information about UK telephone numbers, and allows communications providers to
+                apply for telephone numbers from the National Numbering Plan.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a
+            href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/how-to-comply-with-the-online-safety-act-responding-to-ofcoms-requests-for-information/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> How to comply with the Online Safety Act: responding to Ofcom’s requests
+                  for information </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  17 October 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  11 April 2025
+                </p>
+
+              </div>
+              <p>
+                The Online Safety Act (OSA) makes businesses, and anyone else who operates a wide range of online
+                services, legally responsible for keeping people (especially children) in the UK safe online.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/codes-of-practice/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Quick guide to illegal content codes of practice </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  9 November 2023
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  9 April 2025
+                </p>
+
+              </div>
+              <p>
+                One way services can keep their users safe is to adopt the measures in our codes of practices. Find out
+                what measures we've proposed in our codes.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a
+            href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/quick-guide-to-online-safety-risk-assessments/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Quick guide to illegal content risk assessments </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  9 November 2023
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  9 April 2025
+                </p>
+
+              </div>
+              <p>
+                Under the Online Safety Act, most regulated services will have to carry out a risk assessment. Find out
+                what this means for you.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/phones-and-broadband/coverage-and-speeds/codes-of-practice/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Codes of practice </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  28 April 2010
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  7 April 2025
+                </p>
+
+              </div>
+              <p>
+                This section is dedicated to information and research for the telecoms industry, including codes of
+                practice.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/phones-and-broadband/telecoms-infrastructure/register/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Register of persons with powers under the Electronic Communications Code
+                </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  15 February 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  2 April 2025
+                </p>
+
+              </div>
+              <p>
+                This register lists companies that have been granted powers under the Electronic Communications Code.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a
+            href="https://www.ofcom.org.uk/phones-and-broadband/telecoms-infrastructure/notifications-communications-act2003/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Electronic Communications Code: Consultations and Final Directions </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  15 February 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  2 April 2025
+                </p>
+
+              </div>
+              <p>
+                Consultation documents and final directions relating to the application and revocation of the Electronic
+                Communications Code.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/first-year-report/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Ofcom's first year of video-sharing platform regulation </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  20 October 2022
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  27 March 2025
+                </p>
+
+              </div>
+              <p>
+                Ofcom’s first report on video-sharing platforms (VSPs) sets out what we found in the first year of
+                regulation.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a
+            href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/notified-video-sharing-platforms/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Notified video-sharing platforms </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  11 January 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  27 March 2025
+                </p>
+
+              </div>
+              <p>
+                A list of video-sharing platform (VSP) services that have notified to Ofcom.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a
+            href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/statement-protecting-people-from-illegal-harms-online/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Statement: Protecting people from illegal harms online </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  16 December 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  24 March 2025
+                </p>
+
+              </div>
+              <p>
+                This is the first of Ofcom’s policy Statements that Ofcom, as regulator of the Online Safety Act, will
+                publish as part of our work to establish the new regulations.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/phones-and-broadband/mobile-phones/operating-a-premium-rate-service/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Operating a premium rate service </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  31 January 2025
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  20 March 2025
+                </p>
+
+              </div>
+              <p>
+                If you are involved in the provision of a premium rate service, you need to check if you are a regulated
+                PRS provider carrying out a regulated activity within the meaning of The Regulation of Premium Rate
+                Services Order 2024 (‘the PRS Order’).
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/phones-and-broadband/telecoms-infrastructure/narrowband-broadband-fixed/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Fixed telecommunications markets </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  14 April 2015
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  20 March 2025
+                </p>
+
+              </div>
+              <p>
+                The fixed telecommunications market is made up of a variety of different markets which we have reviewed
+                in different formats over the years.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/tv-radio-and-on-demand/broadcast-standards/notes-to-broadcasters/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Broadcast and On Demand Bulletin: Notes to broadcasters </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  4 March 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  17 March 2025
+                </p>
+
+              </div>
+              <p>
+                Ofcom occasionally publishes notes to alert broadcasters and on demand service providers to key changes
+                or information.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a
+            href="https://www.ofcom.org.uk/tv-radio-and-on-demand/broadcast-standards/section-five-due-impartiality-accuracy/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Section five: Due impartiality and due accuracy </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  5 January 2021
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  17 March 2025
+                </p>
+
+              </div>
+              <p>
+                This section of the Broadcasting Code relates to the concept of "due impartiality" as it applies to news
+                and other programmes.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/tv-radio-and-on-demand/public-service-broadcasting/annual-report-2024/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Public service broadcasting annual compliance report 2024 </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  31 July 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  7 March 2025
+                </p>
+
+              </div>
+              <p>
+                How well public service broadcasters met their programming quotas in 2024.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/about-ofcom/diversity-and-equality/women-telecoms-tech-roles/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Pledge to recruit more women into senior tech roles </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  23 November 2023
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  7 March 2025
+                </p>
+
+              </div>
+              <p>
+                Ofcom and the UK's major telecoms providers have committed to promoting the role of women in technology
+                roles.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/about-ofcom/international-work/gosrn/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Global Online Safety Regulators Network </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  14 March 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  7 March 2025
+                </p>
+
+              </div>
+              <p>
+                Ofcom has joined forces with international regulators to enhance global efforts to make the online world
+                a safer place.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/tv-radio-and-on-demand/broadcast-standards/programme-guidance/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Programme-related guidance </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  26 May 2010
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  6 March 2025
+                </p>
+
+              </div>
+              <p>
+                This section includes information for the broadcast industry, covering the Broadcasting Code and other
+                programme-related guidance
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/guide-for-services/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Guide for services: complying with the Online Safety Act </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  27 February 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  25 February 2025
+                </p>
+
+              </div>
+              <p>
+                The Online Safety Act makes businesses responsible for keeping people, especially children, safe online.
+                Here’s what you need to know and do now.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a
+            href="https://www.ofcom.org.uk/phones-and-broadband/coverage-and-speeds/2g-and-3g-switch-off-our-expectations-of-mobile-providers/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> 3G and 2G switch-off </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  27 February 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  25 February 2025
+                </p>
+
+              </div>
+              <p>
+                Ofcom has set out what it expects from mobile providers when they switch off their 2G and 3G networks.
+                The switch-off will happen over the next ten years and support the roll-out of 4G and 5G networks, which
+                offer faster and more reliable services for customers.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a
+            href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/important-dates-for-online-safety-compliance/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Important dates for Online Safety compliance </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  17 October 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  25 February 2025
+                </p>
+
+              </div>
+              <p>
+                The Online Safety Act makes companies that operate a wide range of online services legally responsible
+                for keeping people, especially children, safe online. If you provide an online service, there are
+                actions you must take when duties come into force. This page explains the important milestones.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a href="https://www.ofcom.org.uk/tv-radio-and-on-demand/community-radio/award-of-grants-2024-25-round-two/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Award of grants 2024-25: Round 2 </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  24 February 2025
+                </p>
+
+              </div>
+              <p>
+                Results of the second round of community radio funding for the 2024-25 financial year.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 onethird search-results-block">
+          <a
+            href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/check-how-to-comply-with-the-illegal-content-rules/">
+            <div class="info-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="info-card-header"> Check how to comply with the illegal content rules </h3>
+                <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                  <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2" stroke-linejoin="bevel">
+                  </path>
+                  <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                </svg>
+              </div>
+              <div class="serach-date">
+                <p class="mt-0">
+                  Published:
+                  16 December 2024
+                </p>
+                <p class="mt-0">
+                  Last updated:
+                  24 February 2025
+                </p>
+
+              </div>
+              <p>
+                The tool is divided into four steps that follow Ofcom’s risk assessment guidance. Following these steps
+                will help you to comply with the illegal content risk assessment duties, and the linked safety duties
+                and record-keeping and review duties.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div id="card-popover"></div>
+        <section class="mt-5">
+          <nav aria-label="Page navigation">
+            <ul class="pagination-block justify-content-center">
+              <li class="page-item">
+                <div class="pagination-icon double-arrow-clear prev-arrow-end disabled" disabled="" title="First page">
+                  <span class="visually-hidden-focusable"></span>
+                </div>
+              </li>
+              <li class="page-item">
+                <div class="pagination-icon single-arrow-clear prev-arrow disabled" disabled="" title="Previous page">
+                  <span class="visually-hidden-focusable"></span>
+                </div>
+              </li>
+              <li class="page-item">
+                <a class="page-link active" aria-label="Results Page 1" href="javascript:void(0);" aria-current="page"
+                  onclick="updatePageQuery(1);">1</a>
+                <span class="visually-hidden-focusable">Results page 1</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link " aria-label="Results Page 2" href="javascript:void(0);"
+                  onclick="updatePageQuery(2);">2</a>
+                <span class="visually-hidden-focusable">Results page 2</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link " aria-label="Results Page 3" href="javascript:void(0);"
+                  onclick="updatePageQuery(3);">3</a>
+                <span class="visually-hidden-focusable">Results page 3</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link " aria-label="Results Page 4" href="javascript:void(0);"
+                  onclick="updatePageQuery(4);">4</a>
+                <span class="visually-hidden-focusable">Results page 4</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link " aria-label="Results Page 5" href="javascript:void(0);"
+                  onclick="updatePageQuery(5);">5</a>
+                <span class="visually-hidden-focusable">Results page 5</span>
+              </li>
+              <li class="page-item">
+                <a href="javascript:void(0);" onclick="updatePageQuery(2);"
+                  class="pagination-icon single-arrow-clear next-arrow" title="Next page">
+                  <span class="visually-hidden-focusable"></span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a href="javascript:void(0);" onclick="updatePageQuery(12);"
+                  class="pagination-icon double-arrow-clear next-arrow-end" title="Last page">
+                  <span class="visually-hidden-focusable"></span>
+                </a>
+              </li>
+            </ul>
+            <p class="d-flex justify-content-center mt-3 pagination-count">Showing 1 - 27 of 310</p>
+          </nav>
+        </section>
+      </div>
+    </section>
+
+    <input type="hidden" id="contentTypeId" value="67920">
+    <input type="hidden" id="pageLink" value="/information-for-industry/">
+
+    <a href="#" class="back-to-top" id="page-top">
+      <i class="fa-solid fa-chevron-up"></i>
+      <span title="Back to top">Back to top</span>
+    </a>
+  </main>
+
+  <section id="footer-subscription" class="mtop-5" aria-label="subscription">
+    <div class="row g-0">
+      <div class="col-12 d-flex justify-content-center position-relative">
+        <a href="https://www.ofcom.org.uk/email-updates/" class="btn btn-primary button-subscribe">
+          Subscribe to email updates <i class="ms-4 fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="col-12">
+        <div class="row row-cols-auto g-0 multicolor-strip">
+          <div class="col bg-blue"></div>
+          <div class="col bg-megenta"></div>
+          <div class="col bg-pink"></div>
+          <div class="col bg-yellow"></div>
+          <div class="col bg-green"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container-xl">
+      <div class="row">
+
+        <div class="block col-md-12 col-lg-3 socialiconsblock  ">
+
+          <section class="mt-0 mt-lg-5 social">
+            <h2 class="follow">Follow us</h2>
+            <ul class="list-unstyled social-icons">
+              <li class="social-icons-list">
+                <a class="" href="https://x.com/ofcom" title="x-twitter" aria-label="x-twitter (opens in a new tab)"
+                  target="_blank">
+                  <i class="fa-brands fa-x-twitter"></i>
+                  <span class="visually-hidden-focusable">x-twitter</span>
+                </a>
+              </li>
+              <li class="social-icons-list">
+                <a class="" href="https://www.facebook.com/ofcom" title="facebook"
+                  aria-label="facebook (opens in a new tab)" target="_blank">
+                  <i class="fa-brands fa-facebook"></i>
+                  <span class="visually-hidden-focusable">facebook</span>
+                </a>
+              </li>
+              <li class="social-icons-list">
+                <a class="" href="https://www.linkedin.com/company/ofcom" title="linkedin"
+                  aria-label="linkedin (opens in a new tab)" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <span class="visually-hidden-focusable">linkedin</span>
+                </a>
+              </li>
+              <li class="social-icons-list">
+                <a class="" href="https://www.youtube.com/ofcom" title="youtube"
+                  aria-label="youtube (opens in a new tab)" target="_blank">
+                  <i class="fa-brands fa-youtube"></i>
+                  <span class="visually-hidden-focusable">youtube</span>
+                </a>
+              </li>
+              <li class="social-icons-list">
+                <a class="" href="https://www.instagram.com/ofcom.org.uk/" title="instagram"
+                  aria-label="instagram (opens in a new tab)" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                  <span class="visually-hidden-focusable">instagram</span>
+                </a>
+              </li>
+              <li class="social-icons-list">
+                <a class="" href="https://www.tiktok.com/@ofcom.org.uk" title="tiktok"
+                  aria-label="tiktok (opens in a new tab)" target="_blank">
+                  <i class="fa-brands fa-tiktok"></i>
+                  <span class="visually-hidden-focusable">tiktok</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+        </div>
+        <div class="block col-md-12 col-lg-3 linklistblock  ">
+
+          <section class="mt-0 mt-lg-5 about-ofcom">
+            <h2 class="follow h5">About Ofcom</h2>
+            <ul class="list-unstyled">
+              <li>
+                <a class="footer-link" title="What is Ofcom?" href="/about-ofcom/what-we-do/what-is-ofcom/">
+                  What is Ofcom?
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" title="Contact us" href="/about-ofcom/what-we-do/contact-us/">
+                  Contact us
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" title="Ofcom in the nations and regions"
+                  href="/about-ofcom/structure-and-leadership/nations-and-regions/">
+                  Nations and regions
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" title="Jobs at Ofcom" href="https://ofcom.wd3.myworkdayjobs.com/Ofcom_Careers"
+                  target="_blank">
+                  Jobs
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" title="General Privacy Statement"
+                  href="/about-ofcom/corporate-policies/general-privacy-statement/">
+                  General Privacy Statement
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" title="Modern slavery statement"
+                  href="/about-ofcom/corporate-policies/modern-slavery-statement/">
+                  Modern slavery statement
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" title="Our work in the Welsh language"
+                  href="/about-ofcom/structure-and-leadership/welsh-language/">
+                  Our work in Welsh
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="block col-md-12 col-lg-3 linklistblock  ">
+
+          <section class="mt-0 mt-lg-5 about-ofcom">
+            <h2 class="follow h5">About this website</h2>
+            <ul class="list-unstyled">
+              <li>
+                <a class="footer-link" title="Accessibility of Ofcom's website"
+                  href="/about-ofcom/accessibility/accessibility/">
+                  Accessibility
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" title="Cookies policy" href="/about-ofcom/our-website/cookies-policy/">
+                  Cookies policy
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" title="Terms of use" href="/about-ofcom/our-website/terms-of-use/">
+                  Terms of use
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" title="Copyright and information re-use"
+                  href="/about-ofcom/our-website/copyright/">
+                  Copyright and information re-use
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="container-xl">
+      <div class="row copyrights">
+        <div class="copyright-text text-lg-start text-start text-sm-end"> © Ofcom 2025 </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
+  <script src="js/virtual-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="js/main.js"></script>
+  <script>
+    VirtualSelect.init({
+      ele: '#example-select',
+      hideClearButton: true,
+      disableSelectAll: true,
+      showSelectedOptionsFirst: false,
+      autoSelectFirstOption: false,
+      autoSelectFirstOption: false,
+      selectAllText: 'Select all',
+      autofocus: false,
+      disableSelectAll: false,
+      showDropboxAsPopup: false
+    });
+  </script>
+  <script>
+    flatpickr(".flatpickr-date", {
+      enableTime: false,
+      dateFormat: "d-m-Y",
+    });
+  </script>
+
+  <script>
+    const elem = document.querySelector('.filter-datepicker');
+    const datepicker = new Datepicker(elem, {
+      format: 'dd/mm/yyyy',
+    });
+
+    $('.addingCalendar').on("click", function (e) {
+      console.log("clicked");
+      $('filter-datepicker').click();
+    });
+  </script>
+  <script>
+    const elem1 = document.querySelector('.filter-datepicker1');
+    const datepicker1 = new Datepicker(elem1, {
+      format: 'dd/mm/yyyy',
+    }); 
+  </script>
+  <script>
+    $(document).ready(function () {
+      const $popover = $('#card-popover');
+
+      $('.info-card').on('mouseover', function () {
+        const $this = $(this);
+        const title = $this.data('title');
+        const meta = $this.data('meta');
+        const summary = $this.data('summary');
+        const highlights = $this.data('highlights').split(';');
+
+        let content = `
+          <strong>Title:</strong>
+          <h5>${title}</h5>
+          <strong>Summary:</strong>
+          <p>${summary}</p>
+          <strong>Metadata:</strong>
+          <div class="meta">${meta}</div>
+          <strong>Key Highlights:</strong>
+          <ul>${highlights.map(item => `<li>${item}</li>`).join('')}</ul>
+        `;
+
+        $popover.html(content).show();
+      });
+
+      $('.info-card').on('mousemove', function (e) {
+        $popover.css({
+          left: e.pageX + 15 + 'px',
+          top: e.pageY + 15 + 'px'
+        });
+      });
+
+      $('.info-card').on('mouseout', function () {
+        $popover.hide();
+      });
+    });
+  </script>
+</body>
+
+</html>
