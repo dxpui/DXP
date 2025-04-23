@@ -1157,9 +1157,8 @@
         <div class="col-md-4 onethird search-results-block">
           <a
             href="https://www.ofcom.org.uk/phones-and-broadband/coverage-and-speeds/preparing-for-2g-switch-off---devices-using-international-roaming-sims-2g-network-coverage-data-and-predicted-new-2g-inbound-roaming-not-spots/">
-            <div class="info-card" 
-            data-title="Preparing for 2G switch-off - devices using international" 
-            data-meta=" Apr 20, 2025"
+            <div class="info-card" data-title="Preparing for 2G switch-off - devices using international"
+              data-meta=" Apr 20, 2025"
               data-summary="List of postcodes containing premises where international roaming SIMs are predicted."
               data-highlights="Proposed Changes to Virgin Media O2’s (O2) 2G Network ;Technical notes;Related content">
               <div class="d-flex justify-content-between align-items-start">
@@ -1190,9 +1189,7 @@
         <div class="col-md-4 onethird search-results-block">
           <a
             href="https://www.ofcom.org.uk/phones-and-broadband/coverage-and-speeds/advice-for-iot-and-third-party-device-suppliers/">
-            <div class="info-card"
-            data-title="Switching off 2G and 3G and 2G networks" 
-            data-meta=" 22 January 2024"
+            <div class="info-card" data-title="Switching off 2G and 3G and 2G networks" data-meta=" 22 January 2024"
               data-summary="The UK’s mobile network providers will switch off their 3G and then 2G networks over."
               data-highlights="What’s happening?;Our role and what we expect of mobile providers;Use our 3G ‘not-spot’ data">
               <div class="d-flex justify-content-between align-items-start">
@@ -1226,9 +1223,7 @@
         </div>
         <div class="col-md-4 onethird search-results-block">
           <a href="https://www.ofcom.org.uk/tv-radio-and-on-demand/analogue-radio/radio-broadcasters/">
-            <div class="info-card"
-            data-title="Radio operations" 
-            data-meta=" 19 July 2022"
+            <div class="info-card" data-title="Radio operations" data-meta=" 19 July 2022"
               data-summary=" Information specific to those working in radio broadcasting and radio communications."
               data-highlights="Commercial radio">
               <div class="d-flex justify-content-between align-items-start">
@@ -2262,41 +2257,102 @@
     }); 
   </script>
   <script>
-    $(document).ready(function () {
-      const $popover = $('#card-popover');
+    const $popover = $('#card-popover');
 
-      $('.info-card').on('mouseover', function () {
-        const $this = $(this);
-        const title = $this.data('title');
-        const meta = $this.data('meta');
-        const summary = $this.data('summary');
-        const highlights = $this.data('highlights').split(';');
+    $('.info-card').on('mouseenter', function (e) {
+      const $this = $(this);
+      const title = $this.data('title');
+      const meta = $this.data('meta');
+      const summary = $this.data('summary');
+      const highlights = $this.data('highlights').split(';');
 
-        let content = `
-          <strong>Title:</strong>
-          <h5>${title}</h5>
-          <strong>Summary:</strong>
-          <p>${summary}</p>
-          <strong>Metadata:</strong>
-          <div class="meta">${meta}</div>
-          <strong>Key Highlights:</strong>
-          <ul>${highlights.map(item => `<li>${item}</li>`).join('')}</ul>
-        `;
+      const content = `
+    <h5>${title}</h5>
+    <div class="meta">${meta}</div>
+    <p>${summary}</p>
+    <strong>Key Highlights:</strong>
+    <ul>${highlights.map(item => `<li>${item}</li>`).join('')}</ul>
+  `;
 
-        $popover.html(content).show();
-      });
-
-      $('.info-card').on('mousemove', function (e) {
-        $popover.css({
-          left: e.pageX + 15 + 'px',
-          top: e.pageY + 15 + 'px'
-        });
-      });
-
-      $('.info-card').on('mouseout', function () {
-        $popover.hide();
-      });
+      $popover.html(content).css({
+        display: 'block',
+        left: '-9999px',
+        top: '-9999px'
+      }); // render off-screen temporarily to get dimensions
     });
+
+    $('.info-card').on('mousemove', function (e) {
+      const popoverWidth = $popover.outerWidth();
+      const popoverHeight = $popover.outerHeight();
+      const pageWidth = $(window).width();
+      const viewportHeight = $(window).height();
+      const scrollTop = $(window).scrollTop();
+
+      const cursorX = e.pageX;
+      const cursorY = e.pageY;
+
+      let left = cursorX + 15;
+      let top = cursorY + 15;
+
+      const bottomSpace = viewportHeight - (e.clientY + 15);
+      const topSpace = e.clientY - 15;
+
+      // Flip vertically if needed
+      if (bottomSpace < popoverHeight && topSpace > popoverHeight) {
+        top = cursorY - popoverHeight - 15;
+      }
+
+      // Flip horizontally if needed
+      if (left + popoverWidth > pageWidth) {
+        left = cursorX - popoverWidth - 15;
+      }
+
+      // Prevent negative positions
+      left = Math.max(left, 10);
+      top = Math.max(top, 10);
+
+      $popover.css({ left: left + 'px', top: top + 'px' });
+});
+  
+
+    $('.info-card').on('mouseleave', function () {
+      $popover.hide();
+    });
+    // $(document).ready(function () {
+    //   const $popover = $('#card-popover');
+
+    //   $('.info-card').on('mouseover', function () {
+    //     const $this = $(this);
+    //     const title = $this.data('title');
+    //     const meta = $this.data('meta');
+    //     const summary = $this.data('summary');
+    //     const highlights = $this.data('highlights').split(';');
+
+    //     let content = `
+    //       <strong>Title:</strong>
+    //       <h5>${title}</h5>
+    //       <strong>Summary:</strong>
+    //       <p>${summary}</p>
+    //       <strong>Metadata:</strong>
+    //       <div class="meta">${meta}</div>
+    //       <strong>Key Highlights:</strong>
+    //       <ul>${highlights.map(item => `<li>${item}</li>`).join('')}</ul>
+    //     `;
+
+    //     $popover.html(content).show();
+    //   });
+
+    //   $('.info-card').on('mousemove', function (e) {
+    //     $popover.css({
+    //       left: e.pageX + 15 + 'px',
+    //       top: e.pageY + 15 + 'px'
+    //     });
+    //   });
+
+    //   $('.info-card').on('mouseout', function () {
+    //     $popover.hide();
+    //   });
+    // });
   </script>
 </body>
 
