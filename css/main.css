@@ -7360,8 +7360,27 @@ input::-webkit-date-and-time-value {
     }
 }
 
+.custom-checkbox {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 50px;
+}
 
-.custom-switch {
+@media (max-width: 1024px) {
+    .custom-checkbox {
+        margin-top: 20px;
+    }
+}
+
+.custom-checkbox .form-check-input {
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    margin-right: 5px;
+}
+
+/* .custom-switch {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -7380,31 +7399,31 @@ input::-webkit-date-and-time-value {
     margin-right: 6px;
     margin-left: 0;
     margin-top: 0;
-}
+} */
 
-  #card-popover {
+#card-popover {
     position: absolute;
     background-color: white;
     border: 1px solid #dee2e6;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     padding: 15px;
     border-radius: 8px;
     width: 400px;
     display: none;
     z-index: 9999;
-  }
+}
 
-  #card-popover h5 {
+#card-popover h5 {
     margin-bottom: 10px;
-  }
+}
 
-  #card-popover .meta {
+#card-popover .meta {
     font-size: 0.85rem;
     color: #6c757d;
     margin-bottom: 8px;
-  }
+}
 
-  #card-popover ul {
+#card-popover ul {
     padding-left: 18px;
     margin-bottom: 0;
-  }
+}

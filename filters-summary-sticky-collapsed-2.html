@@ -852,9 +852,9 @@
                     data-bs-parent="#contentfilter-accordion">
                     <div class="accordion-body">
                       <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-xl-9 col-md-12">
                           <div class="row">
-                            <div class="col-xxl-4 col-xl-4 col-md-6">
+                            <div class="col-xl-4 col-md-12">
                               <label class="py-2">Topic</label>
                               <select id="example-select" placeholder="Select Topics" name="native-select"
                                 aria-label="Default select example">
@@ -865,7 +865,7 @@
                               </select>
                             </div>
                             <input type="hidden" id="showSubTopic" value="true">
-                            <div class="col-xxl-4 col-xl-4 col-md-6 subtopic-filter">
+                            <div class="col-xl-4 col-md-12 subtopic-filter">
                               <label class="py-2">Subtopics</label>
                               <select id="example-select" multiple name="native-select" placeholder="Select Sub Topics"
                                 data-search="false" data-silent-initial-value-set="true">
@@ -879,7 +879,7 @@
                                 <option value="4">Mobile phones</option>
                               </select>
                             </div>
-                            <div class="col-xxl-4 col-xl-4 col-md-6">
+                            <div class="col-xl-4 col-md-6">
                               <label class="py-2">Status</label>
                               <select id="example-select" placeholder="Select Topics" name="native-select"
                                 aria-label="Default select example">
@@ -890,7 +890,7 @@
                             </div>
 
 
-                            <div class="col-xxl-4 col-xl-4 col-md-6">
+                            <div class="col-xl-4 col-md-6">
                               <div class="row">
                                 <div class="col-md-6">
                                   <label for="UpdatedAfter" class="py-2"> Updated after </label>
@@ -906,13 +906,15 @@
                               </div>
                             </div>
 
-                            <div class="col-xxl-4 col-xl-4 col-md-6">
+                            <div class="col-xl-4 col-md-6">
 
                               <!-- <label class="py-2"></label> -->
-                              <div class="form-check form-switch custom-switch mt-lg-4 pt-lg-3 mt-4 pt-0">
+                              <div class="custom-checkbox">
                                 <!-- <label class="form-check-label" for="flexSwitchCheckDefault">No </label> -->
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">File type include PDF</label>
+                                <!-- <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">File type include PDF</label> -->
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Include PDF</label>
                               </div>
 
                              
@@ -925,7 +927,7 @@
                           </div> -->
                           </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-xl-3 col-md-12">
                           <div class="row result-conf">
                             <div class="col-6 subtopic-filter">
                               <label class="py-2">Results to display</label>
