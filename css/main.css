@@ -7405,25 +7405,90 @@ input::-webkit-date-and-time-value {
     position: absolute;
     background-color: white;
     border: 1px solid #dee2e6;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     padding: 15px;
     border-radius: 8px;
     width: 400px;
     display: none;
     z-index: 9999;
+  }
+
+  @media (max-width: 767.98px) {
+    #card-popover {
+        width: 300px;
+    }
 }
 
-#card-popover h5 {
+  #card-popover h5 {
     margin-bottom: 10px;
-}
+  }
 
-#card-popover .meta {
+  #card-popover .meta {
     font-size: 0.85rem;
     color: #6c757d;
     margin-bottom: 8px;
-}
+  }
 
-#card-popover ul {
+  #card-popover ul {
     padding-left: 18px;
     margin-bottom: 0;
+  }
+  
+  .tooltip-icon {
+    background: var(--color-default);
+    color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    /* position: absolute;
+    top: 10px;
+    left: 50%; */
+    transform: translateX(-50%);
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    margin-left: 15px;
+}
+
+.popover-close {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-size: 30px;
+    color: #6c757d;
+    cursor: pointer;
+    z-index: 10000;
+    background: none;
+    border: none;
+}
+
+.info-card.active-hover {
+  background-color: var(--color-outline-focus);
+}
+
+.info-card:hover .tooltip-icon,
+.info-card.active-hover .tooltip-icon,
+.tooltip-icon:focus {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.tooltip-icon:focus {
+    outline: 3px solid var(--color-outline-focus);
+    outline-offset: 2px;
+}
+
+@media (max-width: 767.98px) {
+    .tooltip-icon {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
 }
