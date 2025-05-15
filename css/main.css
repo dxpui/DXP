@@ -6843,7 +6843,7 @@ agendas-container agendas-item agendas-published {
     }
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
 
     .search-filter input[type="date"]::before {
         color: #999;
@@ -6871,7 +6871,7 @@ agendas-container agendas-item agendas-published {
         display: flex;
     }
 
-}
+} */
 
 .search-filter input[type="date"] {
     height: 47px;
