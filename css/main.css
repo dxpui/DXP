@@ -7435,12 +7435,11 @@ input::-webkit-date-and-time-value {
   }
   
   .tooltip-icon {
-    background: var(--color-default);
-    color: var(--color-white);
-    border: none;
+    background: transparent;
+    color: var(--color-default);
     border-radius: 50%;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -7456,6 +7455,11 @@ input::-webkit-date-and-time-value {
     pointer-events: none;
     transition: opacity 0.2s;
     margin-left: 15px;
+}
+
+.tooltip-icon:hover {
+    background: var(--color-default);
+    color: var(--color-white);
 }
 
 .popover-close {
