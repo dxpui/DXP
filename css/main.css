@@ -7457,7 +7457,8 @@ input::-webkit-date-and-time-value {
     margin-left: 15px;
 }
 
-.tooltip-icon:hover {
+.tooltip-icon:hover,
+.tooltip-icon:focus-visible {
     background: var(--color-default);
     color: var(--color-white);
 }
