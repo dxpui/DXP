@@ -2065,6 +2065,9 @@ header .search-box {
 
 .search-filter .accordion-header .accordion-button {
     font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 0;
 }
 
 .search-filter .accordion-item {
@@ -7304,7 +7307,7 @@ input::-webkit-date-and-time-value {
 
 .sticky {
     position: fixed;
-    top: -1px;
+    top: 0;
     left: 0;
     right: 0;
     max-height: 100vh;
@@ -7355,16 +7358,24 @@ input::-webkit-date-and-time-value {
     }
 }
 
+@media (min-width:768px) and (max-width:1199px) {
+    .result-conf {
+       border-left: none;
+    }
+}
+
 .custom-checkbox {
     display: flex;
     justify-content: start;
     align-items: center;
     margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 1024px) {
     .custom-checkbox {
         margin-top: 20px;
+        margin-bottom: 0;
     }
 }
 
@@ -7400,36 +7411,36 @@ input::-webkit-date-and-time-value {
     position: absolute;
     background-color: white;
     border: 1px solid #dee2e6;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     padding: 15px;
     border-radius: 8px;
     width: 400px;
     display: none;
     z-index: 9999;
-  }
+}
 
-  @media (max-width: 767.98px) {
+@media (max-width: 767.98px) {
     #card-popover {
         width: 300px;
     }
 }
 
-  #card-popover h5 {
+#card-popover h5 {
     margin-bottom: 10px;
-  }
+}
 
-  #card-popover .meta {
+#card-popover .meta {
     font-size: 0.85rem;
     color: #6c757d;
     margin-bottom: 8px;
-  }
+}
 
-  #card-popover ul {
+#card-popover ul {
     padding-left: 18px;
     margin-bottom: 0;
-  }
-  
-  .tooltip-icon {
+}
+
+.tooltip-icon {
     background: transparent;
     color: var(--color-default);
     border-radius: 50%;
@@ -7471,7 +7482,7 @@ input::-webkit-date-and-time-value {
 }
 
 .info-card.active-hover {
-  background-color: var(--color-outline-focus);
+    background-color: var(--color-outline-focus);
 }
 
 .info-card:hover .tooltip-icon,
@@ -7492,3 +7503,7 @@ input::-webkit-date-and-time-value {
         pointer-events: auto !important;
     }
 }
+
+
+
+
