@@ -745,60 +745,90 @@ function autoCompleteSearch(inp, pagelink, formid) {
 }
 
 //********************Lookup Table**********************
-
 function lookupTable() {
     $(document).ready(function () {
-        $('.searchInput').keyup(function () {
-            var blockId = $(this).attr('id');
-            var searchText = $(this).val().toLowerCase();
-            var pattern = /^[A-Za-z0-9]*$/;
-            var table = $('#allsearch-table' + blockId);
-            var rows = table.find('tr').slice(1);
-            if (!pattern.test(searchText)) {
-                searchText = searchText.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
-                $(this).val(searchText);
-                return;
+      // Remove all empty h2.searchResults on page load
+      $('.searchResults').each(function () {
+        if (!$(this).text().trim()) {
+          $(this).remove();
+        }
+      });
+  
+      $('.searchInput').on('input', function () {
+        var blockId = $(this).attr('id');
+        var searchText = $(this).val().toLowerCase();
+        var pattern = /^[A-Za-z0-9\s]*$/; // Allow letters, numbers, spaces
+        var table = $('#allsearch-table' + blockId);
+        var rows = table.find('tr').slice(1); // Skip header
+        var resultHeadingId = 'searchResults' + blockId;
+        var resultHeading = $('#' + resultHeadingId);
+  
+        // Remove special characters
+        if (!pattern.test(searchText)) {
+          searchText = searchText.replace(/[^a-zA-Z0-9\s]/g, '');
+          $(this).val(searchText);
+          return;
+        }
+  
+        var count = 0;
+  
+        // Search all td and th
+        rows.each(function () {
+          var row = $(this);
+          var found = false;
+  
+          row.find('td, th').each(function () {
+            var cellText = $(this).text().toLowerCase();
+            if (cellText.includes(searchText)) {
+              found = true;
+              return false; // Exit loop
             }
-            var count = 0;
-            rows.each(function () {
-                var row = $(this);
-                var found = false;
-
-                row.find('td, th').each(function () {
-                    var cellText = $(this).text().toLowerCase();
-                    if (cellText.includes(searchText)) {
-                        found = true;
-                        return false;
-                    }
-                });
-
-                if (found) {
-                    row.show();
-                    count++;
-                } else {
-                    row.hide();
-                }
-            });
-
-            if (searchText.length == 0) {
-                table.show();
-                $('#searchResults' + blockId).hide();
-                $('#LookUpTableTitle' + blockId).show();
-            }
-            else if (count === 0) {
-                table.hide();
-                $('#searchResults' + blockId).show();
-                $('#searchResults' + blockId).text($("#hiddenNotFoundTextValue" + blockId).val());
-                $('#LookUpTableTitle' + blockId).hide();
-            } else {
-                table.show();
-                $('#searchResults' + blockId).show();
-                $('#LookUpTableTitle' + blockId).show();
-                $('#searchResults' + blockId).text(count + " " + $("#hiddenFoundTextValue" + blockId).val());
-            }
+          });
+  
+          if (found) {
+            row.show();
+            count++;
+          } else {
+            row.hide();
+          }
         });
+  
+        // Clear input: show all and remove heading
+        if (searchText.length === 0) {
+          table.show();
+          $('#' + resultHeadingId).remove(); // Remove h2 completely
+          $('#LookUpTableTitle' + blockId).show();
+        }
+        // No matches found
+        else if (count === 0) {
+          table.hide();
+  
+          // Create h2 if it doesn't exist
+          if (!resultHeading.length) {
+            $(this).parent().append(`<h2 class="h3 searchResults" id="${resultHeadingId}" aria-live="polite"></h2>`);
+            resultHeading = $('#' + resultHeadingId);
+          }
+  
+          resultHeading.text($("#hiddenNotFoundTextValue" + blockId).val()).show();
+          $('#LookUpTableTitle' + blockId).hide();
+        }
+        // Matches found
+        else {
+          table.show();
+  
+          if (!resultHeading.length) {
+            $(this).parent().append(`<h2 class="h3 searchResults" id="${resultHeadingId}" aria-live="polite"></h2>`);
+            resultHeading = $('#' + resultHeadingId);
+          }
+  
+          resultHeading.text(count + " " + $("#hiddenFoundTextValue" + blockId).val()).show();
+          $('#LookUpTableTitle' + blockId).show();
+        }
+      });
     });
-}
+  }
+    
+
 
 //********************Back to top**********************
 
