@@ -4819,7 +4819,7 @@ a:focus .pdfdownload {
     background-color: transparent;
     padding: 0px;
     margin-top: 15px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     color: var(--color-default);
     display: flex;
     justify-content: flex-end;
@@ -4828,11 +4828,7 @@ a:focus .pdfdownload {
 
 .showfilters-align {
     margin-top: 0px;
-    margin-bottom: 30px;
     text-align: center;
-    /* display: flex;
-    justify-content: flex-end;
-    align-items: center; */
 }
 
 @media(max-width: 1200px) {
@@ -7321,12 +7317,12 @@ input::-webkit-date-and-time-value {
     max-width: 1800px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .sticky {
         max-height: 100vh;
         overflow-y: auto;
     }
-}
+} */
 
 .sticky::-webkit-scrollbar {
     width: 6px;
@@ -7348,21 +7344,24 @@ input::-webkit-date-and-time-value {
 
 .result-conf {
     border-left: 1px solid #d1d1d1;
+    padding-bottom: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .result-conf {
         margin-top: 20px;
         border-top: 1px solid #d1d1d1;
         border-left: none;
+        padding-bottom: 0;
+        padding-top: 15px;
     }
 }
 
-@media (min-width:768px) and (max-width:1199px) {
+/* @media (min-width:768px) and (max-width:1199px) {
     .result-conf {
        border-left: none;
     }
-}
+} */
 
 .custom-checkbox {
     display: flex;
@@ -7372,7 +7371,7 @@ input::-webkit-date-and-time-value {
     margin-bottom: 20px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .custom-checkbox {
         margin-top: 20px;
         margin-bottom: 0;
