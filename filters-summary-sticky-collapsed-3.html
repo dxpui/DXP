@@ -855,7 +855,7 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="row">
-                            <div class="col-xxl-3 col-xl-4 col-md-6">
+                            <div class="col-xxl-2 col-xl-4 col-md-6">
                               <label class="py-2">Topic</label>
                               <select id="example-select" placeholder="Select Topics" name="native-select"
                                 aria-label="Default select example">
@@ -865,7 +865,7 @@
                                 <option value="3">Post</option>
                               </select>
                             </div>
-                            <div class="col-xxl-3 col-xl-4 col-md-6 subtopic-filter">
+                            <div class="col-xxl-2 col-xl-4 col-md-6 subtopic-filter">
                               <label class="py-2">Subtopics</label>
                               <select id="example-select" multiple name="native-select" placeholder="Select Sub Topics"
                                 data-search="false" data-silent-initial-value-set="true">
@@ -879,7 +879,7 @@
                                 <option value="4">Mobile phones</option>
                               </select>
                             </div>
-                            <div class="col-xxl-3 col-xl-4 col-md-6">
+                            <div class="col-xxl-2 col-xl-4 col-md-6">
                               <label class="py-2">Status</label>
                               <select id="example-select" placeholder="Select Topics" name="native-select"
                                 aria-label="Default select example">
@@ -890,7 +890,7 @@
                             </div>
 
 
-                            <div class="col-xxl-3 col-xl-4 col-md-6">
+                            <div class="col-xxl-4 col-xl-4 col-md-6">
                               <div class="row">
                                 <div class="col-md-6">
                                   <label for="UpdatedAfter" class="py-2"> Updated after </label>
@@ -905,13 +905,26 @@
                                 </div>
                               </div>
                             </div>
+                            <div class="col-xl-2 col-md-3">
 
+                              <!-- <label class="py-2"></label> -->
+                              <div class="custom-checkbox">
+                                <!-- <label class="form-check-label" for="flexSwitchCheckDefault">No </label> -->
+                                <!-- <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">File type include PDF</label> -->
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Include PDF</label>
+                              </div>
+
+
+                            </div>
 
                             <div class="text-center mt-4">
-                              <button type="submit" id="btnsubmit" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Apply filters">
-                                  Apply filters
+                              <button type="submit" id="btnsubmit" class="btn btn-primary" data-bs-dismiss="modal"
+                                aria-label="Apply filters">
+                                Apply filters
                               </button>
-                          </div>
+                            </div>
                           </div>
                         </div>
                         <!-- <div class="col-xxl-3 col-xl-4 col-md-12">
@@ -967,43 +980,43 @@
                   <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                     <div class="accordion-body" style="padding-bottom: 0;"> -->
                       <section class="container-xl">
-                          <div class="row">
-                            <div class="col-12">
-                              <p class="text-center mt-4" role="status" aria-live="polite">
-                                <span>Showing 1 - 3 of 3</span>
-                              </p>
+                        <div class="row">
+                          <div class="col-12">
+                            <p class="text-center mt-4" role="status" aria-live="polite">
+                              <span>Showing 1 - 3 of 3</span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xl-12 col-md-12">
+                            <div class="showfilters-align">
+                              <strong>About</strong>
+                              <a href="javascript:void(0);" onclick="removeTopicFilter();"
+                                class="btn btn-secondary filters-content btn-small">
+                                <i class="me-2 fa fa-close"></i> About Ofcom
+                              </a>
+                              <strong>and</strong>
+                              <a href="javascript:void(0);" onclick="removeSubTopicFilter('67846');"
+                                class="btn btn-secondary filters-content btn-small">
+                                <i class="me-2 fa fa-close"></i> Annual reports and plans
+                              </a>
+                              <strong>and</strong>
+                              <a href="javascript:void(0);" onclick="removeSubTopicFilter('67848');"
+                                class="btn btn-secondary filters-content btn-small">
+                                <i class="me-2 fa fa-close"></i> Diversity and equality
+                              </a>
+                              <strong>and</strong>
+                              <a href="javascript:void(0);" onclick="removeSubTopicFilter('67850');"
+                                class="btn btn-secondary filters-content btn-small">
+                                <i class="me-2 fa fa-close"></i> International work
+                              </a>
+                              <a href="javascript:void(0);" onclick="removeAllFilters();"
+                                class="filters-content text-nowrap search-filter-clear">
+                                <i class="me-1 fa fa-close"></i> Clear all filters
+                              </a>
                             </div>
                           </div>
-                          <div class="row">
-                            <div class="col-xl-12 col-md-12">
-                              <div class="showfilters-align">
-                                <strong>About</strong>
-                                <a href="javascript:void(0);" onclick="removeTopicFilter();"
-                                  class="btn btn-secondary filters-content btn-small">
-                                  <i class="me-2 fa fa-close"></i> About Ofcom
-                                </a>
-                                <strong>and</strong>
-                                <a href="javascript:void(0);" onclick="removeSubTopicFilter('67846');"
-                                  class="btn btn-secondary filters-content btn-small">
-                                  <i class="me-2 fa fa-close"></i> Annual reports and plans
-                                </a>
-                                <strong>and</strong>
-                                <a href="javascript:void(0);" onclick="removeSubTopicFilter('67848');"
-                                  class="btn btn-secondary filters-content btn-small">
-                                  <i class="me-2 fa fa-close"></i> Diversity and equality
-                                </a>
-                                <strong>and</strong>
-                                <a href="javascript:void(0);" onclick="removeSubTopicFilter('67850');"
-                                  class="btn btn-secondary filters-content btn-small">
-                                  <i class="me-2 fa fa-close"></i> International work
-                                </a>
-                                <a href="javascript:void(0);" onclick="removeAllFilters();"
-                                  class="filters-content text-nowrap search-filter-clear">
-                                  <i class="me-1 fa fa-close"></i> Clear all filters
-                                </a>
-                              </div>
-                            </div>
-                          </div>
+                        </div>
                       </section>
                     </div>
                   </div>
@@ -1018,12 +1031,12 @@
     </section>
     <section class="container-xl">
       <div class="row justify-content-md-end justify-content-center">
-        <div class="col-6 col-xl-2 col-md-4 col-sm-6">
+        <!-- <div class="col-6 col-xl-2 col-md-4 col-sm-6">
           <div class="custom-checkbox justify-content-md-end justify-content-center" style="margin-top: 22px;">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1" style="font-size: 1rem;">Include PDF</label>
           </div>
-        </div>
+        </div> -->
 
         <div class="col-xxl-3 col-xl-4 col-md-4 col-sm-6">
           <div class="filter-btn">
