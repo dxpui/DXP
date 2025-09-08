@@ -96,7 +96,7 @@ function searchIcon() {
     $('#search-icon').click(function () {
         $('#search-icon i').toggleClass("fa-times");
         $('.search-form').toggleClass("active");
-         $(".search-form").hasClass("active") ? $("#globalquery").focus() : $("#query").focus();
+        $(".search-form").hasClass("active") ? $("#globalquery").focus() : $("#query").focus();
         $(".menu").removeClass("fa-times");
         $(".menu").removeClass("active");
         $(".menu-overlay").removeClass("active");
@@ -201,6 +201,7 @@ $(document).ready(function () {
     $(".mobile-menu-trigger").click(function () {
         $(".mobile-nav-toggle").toggleClass("btn-close close-bars");
         $("body").toggleClass("overflow-hidden");
+        $(".header").toggleClass("mobile-header");
     });
 
     $(".filters-content").click(function () {
@@ -237,6 +238,10 @@ $(document).ready(function () {
 
     if ($('.searchInput').length > 0) {
         lookupTable()
+    }
+
+     if ($('#accordionWrapper').length > 0) {
+        stickyChart()
     }
 
     // Video playlist
@@ -747,87 +752,87 @@ function autoCompleteSearch(inp, pagelink, formid) {
 //********************Lookup Table**********************
 function lookupTable() {
     $(document).ready(function () {
-      // Remove all empty h2.searchResults on page load
-      $('.searchResults').each(function () {
-        if (!$(this).text().trim()) {
-          $(this).remove();
-        }
-      });
-  
-      $('.searchInput').on('input', function () {
-        var blockId = $(this).attr('id');
-        var searchText = $(this).val().toLowerCase();
-        var pattern = /^[A-Za-z0-9\s]*$/; // Allow letters, numbers, spaces
-        var table = $('#allsearch-table' + blockId);
-        var rows = table.find('tr').slice(1); // Skip header
-        var resultHeadingId = 'searchResults' + blockId;
-        var resultHeading = $('#' + resultHeadingId);
-  
-        // Remove special characters
-        if (!pattern.test(searchText)) {
-          searchText = searchText.replace(/[^a-zA-Z0-9\s]/g, '');
-          $(this).val(searchText);
-          return;
-        }
-  
-        var count = 0;
-  
-        // Search all td and th
-        rows.each(function () {
-          var row = $(this);
-          var found = false;
-  
-          row.find('td, th').each(function () {
-            var cellText = $(this).text().toLowerCase();
-            if (cellText.includes(searchText)) {
-              found = true;
-              return false; // Exit loop
+        // Remove all empty h2.searchResults on page load
+        $('.searchResults').each(function () {
+            if (!$(this).text().trim()) {
+                $(this).remove();
             }
-          });
-  
-          if (found) {
-            row.show();
-            count++;
-          } else {
-            row.hide();
-          }
         });
-  
-        // Clear input: show all and remove heading
-        if (searchText.length === 0) {
-          table.show();
-          $('#' + resultHeadingId).remove(); // Remove h2 completely
-          $('#LookUpTableTitle' + blockId).show();
-        }
-        // No matches found
-        else if (count === 0) {
-          table.hide();
-  
-          // Create h2 if it doesn't exist
-          if (!resultHeading.length) {
-            $(this).parent().append(`<h2 class="h3 searchResults" id="${resultHeadingId}" aria-live="polite"></h2>`);
-            resultHeading = $('#' + resultHeadingId);
-          }
-  
-          resultHeading.text($("#hiddenNotFoundTextValue" + blockId).val()).show();
-          $('#LookUpTableTitle' + blockId).hide();
-        }
-        // Matches found
-        else {
-          table.show();
-  
-          if (!resultHeading.length) {
-            $(this).parent().append(`<h2 class="h3 searchResults" id="${resultHeadingId}" aria-live="polite"></h2>`);
-            resultHeading = $('#' + resultHeadingId);
-          }
-  
-          resultHeading.text(count + " " + $("#hiddenFoundTextValue" + blockId).val()).show();
-          $('#LookUpTableTitle' + blockId).show();
-        }
-      });
+
+        $('.searchInput').on('input', function () {
+            var blockId = $(this).attr('id');
+            var searchText = $(this).val().toLowerCase();
+            var pattern = /^[A-Za-z0-9\s]*$/; // Allow letters, numbers, spaces
+            var table = $('#allsearch-table' + blockId);
+            var rows = table.find('tr').slice(1); // Skip header
+            var resultHeadingId = 'searchResults' + blockId;
+            var resultHeading = $('#' + resultHeadingId);
+
+            // Remove special characters
+            if (!pattern.test(searchText)) {
+                searchText = searchText.replace(/[^a-zA-Z0-9\s]/g, '');
+                $(this).val(searchText);
+                return;
+            }
+
+            var count = 0;
+
+            // Search all td and th
+            rows.each(function () {
+                var row = $(this);
+                var found = false;
+
+                row.find('td, th').each(function () {
+                    var cellText = $(this).text().toLowerCase();
+                    if (cellText.includes(searchText)) {
+                        found = true;
+                        return false; // Exit loop
+                    }
+                });
+
+                if (found) {
+                    row.show();
+                    count++;
+                } else {
+                    row.hide();
+                }
+            });
+
+            // Clear input: show all and remove heading
+            if (searchText.length === 0) {
+                table.show();
+                $('#' + resultHeadingId).remove(); // Remove h2 completely
+                $('#LookUpTableTitle' + blockId).show();
+            }
+            // No matches found
+            else if (count === 0) {
+                table.hide();
+
+                // Create h2 if it doesn't exist
+                if (!resultHeading.length) {
+                    $(this).parent().append(`<h2 class="h3 searchResults" id="${resultHeadingId}" aria-live="polite"></h2>`);
+                    resultHeading = $('#' + resultHeadingId);
+                }
+
+                resultHeading.text($("#hiddenNotFoundTextValue" + blockId).val()).show();
+                $('#LookUpTableTitle' + blockId).hide();
+            }
+            // Matches found
+            else {
+                table.show();
+
+                if (!resultHeading.length) {
+                    $(this).parent().append(`<h2 class="h3 searchResults" id="${resultHeadingId}" aria-live="polite"></h2>`);
+                    resultHeading = $('#' + resultHeadingId);
+                }
+
+                resultHeading.text(count + " " + $("#hiddenFoundTextValue" + blockId).val()).show();
+                $('#LookUpTableTitle' + blockId).show();
+            }
+        });
     });
-  }
-    
+}
+
 
 
 //********************Back to top**********************
@@ -1005,8 +1010,8 @@ $(document).ready(function () {
             $("#" + "SiteWideAlertBanner").show();
 
             var timer = setInterval(function () {
-                accumulatedTime += 1;  
-                localStorage.setItem('accumulatedTime', accumulatedTime); 
+                accumulatedTime += 1;
+                localStorage.setItem('accumulatedTime', accumulatedTime);
 
                 if (accumulatedTime >= autoCloseTimeout) {
                     createSessionCookie("SiteWideAlertBanner");
@@ -1015,7 +1020,7 @@ $(document).ready(function () {
 
                     localStorage.removeItem('accumulatedTime');
                 }
-            }, 1000);  
+            }, 1000);
         }
         return;
     }
@@ -1023,23 +1028,23 @@ $(document).ready(function () {
     if (cookieExpirationDays > 0 && autoCloseTimeout > 0) {
         $("#" + "SiteWideAlertBanner").show();
         var timer = setInterval(function () {
-            accumulatedTime += 1;  
-            localStorage.setItem('accumulatedTime', accumulatedTime);  
+            accumulatedTime += 1;
+            localStorage.setItem('accumulatedTime', accumulatedTime);
 
             if (accumulatedTime >= autoCloseTimeout) {
                 createSessionCookie("SiteWideAlertBanner");
                 $("#" + "SiteWideAlertBanner").hide();
-                clearInterval(timer); 
+                clearInterval(timer);
 
                 localStorage.removeItem('accumulatedTime');
             }
-        }, 1000);  
+        }, 1000);
     }
 
     $("#alert-close").click(function () {
-        createCookie(cookieExpirationDays, "SiteWideAlertBanner"); 
+        createCookie(cookieExpirationDays, "SiteWideAlertBanner");
         $("#" + "SiteWideAlertBanner").hide();
-        localStorage.removeItem('accumulatedTime');  
+        localStorage.removeItem('accumulatedTime');
     });
 });
 
@@ -1460,13 +1465,13 @@ $(document).ready(function () {
 
 // Add aria-expanded on menu
 
-$(document).ready(function(){
+$(document).ready(function () {
     function updateSubMenuShow() {
-        $('li').each(function() {
+        $('li').each(function () {
             var anchor = $(this).find('button');
             var submenuDiv = $(this).find('div.sub-menu-show');
 
-            if(submenuDiv.length) {
+            if (submenuDiv.length) {
                 anchor.attr('aria-expanded', 'true');
             } else {
                 anchor.attr('aria-expanded', 'false');
@@ -1474,8 +1479,8 @@ $(document).ready(function(){
         });
     }
     updateSubMenuShow();
-    var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                 updateSubMenuShow();
             }
@@ -1502,7 +1507,7 @@ $(document).ready(function () {
     var elementIds = ['#TopicDropdown', '#SubtopicDropdown', '#StatusDropdown', '#NewsTypeDropdown', '#ContentDropdown'];
 
     var existingIds = elementIds.filter(function (id) {
-        return $(id).length > 0; 
+        return $(id).length > 0;
     });
 
     var vsElements = existingIds.map(function (id) {
@@ -1510,9 +1515,9 @@ $(document).ready(function () {
             ele: id,
         });
     });
-    
+
     $(document).on('keydown', function (event) {
-        if (event.keyCode === 9) { 
+        if (event.keyCode === 9) {
             existingIds.forEach(function (id, index) {
                 var $selectElement = $(id);
                 if ($(document.activeElement)[0] !== $selectElement[0]) {
@@ -1548,11 +1553,11 @@ $(document).ready(function () {
             });
         }
     });
-});  
+});
 
 
-$(document).ready(function() {
-    $('.collapse-left').on('click', function() {
+$(document).ready(function () {
+    $('.collapse-left').on('click', function () {
         var $leftDrawer = $('.postcode-left-outer');
         var $rightContainer = $('.postcode-right-outer');
 
@@ -1661,26 +1666,26 @@ $(document).ready(function () {
 // chart script
 // document.addEventListener("DOMContentLoaded", function () {
 //     const charts = document.querySelectorAll(".donut-chart");
-  
+
 //     charts.forEach(chart => {
 //       let percentage = chart.getAttribute("data-percentage"); 
 //       chart.querySelector(".percent-text").innerText = percentage + "%";
-  
+
 //       let totalSegments = 10;
 //       let blueSegments = Math.round((percentage / 100) * totalSegments);
 //       let anglePerSegment = 36; // Each segment is 36 degrees
 //       let gap = 2;
 //       let currentAngle = 0;
-  
+
 //       let gradientParts = [];
-  
+
 //       for (let i = 0; i < totalSegments; i++) {
 //         let color = i < blueSegments ? "#000045" : "gray";
 //         gradientParts.push(`${color} ${currentAngle}deg ${currentAngle + (anglePerSegment - gap)}deg`);
 //         gradientParts.push(`white ${currentAngle + (anglePerSegment - gap)}deg ${currentAngle + anglePerSegment}deg`);
 //         currentAngle += anglePerSegment;
 //       }
-  
+
 //       chart.style.background = `conic-gradient(${gradientParts.join(", ")})`;
 //     });
 //   });
@@ -1688,80 +1693,130 @@ $(document).ready(function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     renderDonutCharts();
-  });
+});
 
-  function renderDonutCharts() {
+function renderDonutCharts() {
     const charts = document.querySelectorAll(".donut-chart");
 
     charts.forEach(chart => {
-      let rawValue = chart.getAttribute("data-percentage");
-      let percentage = parseFloat(rawValue);
+        let rawValue = chart.getAttribute("data-percentage");
+        let percentage = parseFloat(rawValue);
 
-      const textEl = chart.querySelector(".percent-text");
+        const textEl = chart.querySelector(".percent-text");
 
-      if (isNaN(percentage) || percentage < 0) {
-        textEl.innerText = "NA";
-        chart.style.background = "conic-gradient(gray 0deg 360deg)";
-        return;
-      }
+        if (isNaN(percentage) || percentage < 0) {
+            textEl.innerText = "NA";
+            chart.style.background = "conic-gradient(gray 0deg 360deg)";
+            return;
+        }
 
-      textEl.innerText = percentage + "%";
+        textEl.innerText = percentage + "%";
 
-      let totalSegments = 10;
-      let blueSegments = Math.round((percentage / 100) * totalSegments);
-      let anglePerSegment = 36;
-      let gap = 2;
-      let currentAngle = 0;
+        let totalSegments = 10;
+        let blueSegments = Math.round((percentage / 100) * totalSegments);
+        let anglePerSegment = 36;
+        let gap = 2;
+        let currentAngle = 0;
 
-      let gradientParts = [];
+        let gradientParts = [];
 
-      for (let i = 0; i < totalSegments; i++) {
-        let color = i < blueSegments ? "#000045" : "gray";
-        gradientParts.push(`${color} ${currentAngle}deg ${currentAngle + (anglePerSegment - gap)}deg`);
-        gradientParts.push(`white ${currentAngle + (anglePerSegment - gap)}deg ${currentAngle + anglePerSegment}deg`);
-        currentAngle += anglePerSegment;
-      }
+        for (let i = 0; i < totalSegments; i++) {
+            let color = i < blueSegments ? "#000045" : "gray";
+            gradientParts.push(`${color} ${currentAngle}deg ${currentAngle + (anglePerSegment - gap)}deg`);
+            gradientParts.push(`white ${currentAngle + (anglePerSegment - gap)}deg ${currentAngle + anglePerSegment}deg`);
+            currentAngle += anglePerSegment;
+        }
 
-      chart.style.background = `conic-gradient(${gradientParts.join(", ")})`;
+        chart.style.background = `conic-gradient(${gradientParts.join(", ")})`;
     });
-  }
+}
 
-  // Example of updating via JS (simulate AJAX)
-  setTimeout(() => {
+// Example of updating via JS (simulate AJAX)
+setTimeout(() => {
     document.querySelector(".donut-chart").setAttribute("data-percentage", "60");
     renderDonutCharts();
-  }, 3000);
-  
-// end chart script
+}, 3000);
 
-// $(document).ready(function () {
-//     let lastScrollTop = 0;
-//     let accordion = $("#accordionContainer");
-//     let accordionWrapper = $("#accordionWrapper");
-//     let originalOffset = accordionWrapper.offset().top;
+ function stickyFilterTop() {
+      let lastScrollTop = 0;
+      let lastTimestamp = Date.now();
+      let accordion = $("#accordionContainer");
+      let accordionWrapper = $("#accordionWrapper");
+      let originalOffset = accordionWrapper.offset().top;
+      let addPaddingTarget = $("#add-padding-top"); // Target element
 
-//     $(window).scroll(function () {
-//         let currentScroll = $(this).scrollTop();
+      function isAnyAccordionOpen() {
+        return $(".accordion-collapse.show").length > 0;
+      }
 
-//         if (currentScroll > lastScrollTop) {
-//             // Scrolling down
-//             if (currentScroll >= originalOffset) {
-//                 if (!accordion.hasClass("sticky")) {
-//                     accordion.addClass("sticky");
-//                    // $(".accordion-collapse").collapse("hide"); // Collapse all items
-//                 }
-//             }
-//         } else {
-//             // Scrolling up
-//             if (currentScroll < originalOffset) {
-//                 accordion.removeClass("sticky");
-//                // $(".accordion-collapse").collapse("show");
-//             }
-//         }
+      function updateStickyFullscreen() {
+        if (accordion.hasClass("sticky") && isAnyAccordionOpen()) {
+          accordion.css("height", "100vh");
+          $("body").css("overflow-y", "hidden");
+        } else {
+          accordion.css("height", "auto");
+          $("body").css("overflow-y", "auto");
+        }
+      }
 
-//         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
-//     });
-// });
+      $(window).on("scroll", function () {
+        let currentScroll = $(this).scrollTop();
+        let currentTimestamp = Date.now();
+
+        // Calculate scroll speed in px/sec
+        let distance = Math.abs(currentScroll - lastScrollTop);
+        let timeDiff = currentTimestamp - lastTimestamp;
+        let speed = distance / (timeDiff || 1); // px per ms
+
+        // Map speed to animation duration
+        let minDuration = 100;  // Fastest
+        let maxDuration = 500;  // Slowest
+        let duration = Math.max(minDuration, maxDuration - speed * 3);
+        duration = Math.min(duration, maxDuration);
+
+        // Apply smooth transition
+        accordion.css("transition", `all ${duration}ms ease`);
+
+        if (currentScroll > lastScrollTop) {
+          // Scrolling down
+          if (currentScroll >= originalOffset) {
+            if (!accordion.hasClass("sticky")) {
+              accordion.addClass("sticky");
+
+              // ✅ Add 100px top padding to the target
+              addPaddingTarget.css("padding-top", "120px");
+
+              $(".accordion-collapse").collapse("hide"); // Collapse all
+              updateStickyFullscreen();
+            }
+          }
+        } else {
+          // Scrolling up
+          if (currentScroll < originalOffset) {
+            accordion.removeClass("sticky");
+
+            // ✅ Remove 100px padding when sticky is removed
+            addPaddingTarget.css("padding-top", "0px");
+
+            $(".accordion-collapse").collapse("show");
+            accordion.css("height", "auto");
+            $("body").css("overflow-y", "auto");
+          }
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        lastTimestamp = currentTimestamp;
+      });
+
+      // Update fullscreen status when accordion toggles
+      $(".accordion-button").on("click", function () {
+        setTimeout(updateStickyFullscreen, 300);
+      });
+    }
+
+    $(document).ready(function () {
+      stickyFilterTop();
+    });
 
 // Teaser Swiper
 function initializeSwiper() {
