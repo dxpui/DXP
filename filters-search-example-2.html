@@ -1713,11 +1713,25 @@
     let lastTimestamp = Date.now();
     let accordion = $("#accordionContainer");
     let accordionWrapper = $("#accordionWrapper");
-    let originalOffset = accordionWrapper.offset().top;
     let addPaddingTarget = $("#add-padding-top"); // Target element
+    let ariaLive = $("#aria-live"); // Accessibility reader element
+
+    // Get initial filter height & bottom offset
+    let wrapperHeight = accordionWrapper.outerHeight();
+    let originalBottomOffset = accordionWrapper.offset().top + wrapperHeight;
+
+    // Accessibility live region for screen readers
+    if (ariaLive.length === 0) {
+        $("body").append('<div id="aria-live" class="sr-only" aria-live="polite"></div>');
+        ariaLive = $("#aria-live");
+    }
 
     function isAnyAccordionOpen() {
         return $(".accordion-collapse.show").length > 0;
+    }
+
+    function announceForScreenReader(message) {
+        ariaLive.text(message);
     }
 
     function updateStickyFullscreen() {
@@ -1734,42 +1748,44 @@
         let currentScroll = $(this).scrollTop();
         let currentTimestamp = Date.now();
 
-        // Calculate scroll speed in px/sec
+        // Calculate scroll speed
         let distance = Math.abs(currentScroll - lastScrollTop);
         let timeDiff = currentTimestamp - lastTimestamp;
-        let speed = distance / (timeDiff || 1); // px per ms
+        let speed = distance / (timeDiff || 1);
 
-        // Map speed to animation duration
+        // Dynamic animation speed
         let minDuration = 100;  // Fastest
         let maxDuration = 500;  // Slowest
         let duration = Math.max(minDuration, maxDuration - speed * 3);
         duration = Math.min(duration, maxDuration);
 
-        // Apply smooth transition
         accordion.css("transition", `all ${duration}ms ease`);
 
         if (currentScroll > lastScrollTop) {
-            // Scrolling down
-            if (currentScroll >= originalOffset) {
+            // Scrolling down → make sticky when BOTTOM touches top
+            if (currentScroll >= originalBottomOffset) {
                 if (!accordion.hasClass("sticky")) {
                     accordion.addClass("sticky");
 
-                    // ✅ Add 100px top padding to the target
-                    addPaddingTarget.css("padding-top", "120px");
+                    // ✅ Always add dynamic padding equal to filter height
+                    addPaddingTarget.css("padding-top", wrapperHeight + "px");
 
                     $(".accordion-collapse").collapse("hide"); // Collapse all
+                    announceForScreenReader("Filter collapsed");
                     updateStickyFullscreen();
                 }
             }
         } else {
-            // Scrolling up
-            if (currentScroll < originalOffset) {
+            // Scrolling up → unstick when ABOVE original top
+            if (currentScroll < accordionWrapper.offset().top) {
                 accordion.removeClass("sticky");
 
-                // ✅ Remove 100px padding when sticky is removed
+                // ✅ Remove padding when sticky is removed
                 addPaddingTarget.css("padding-top", "0px");
 
                 $(".accordion-collapse").collapse("show");
+                announceForScreenReader("Filter expanded");
+
                 accordion.css("height", "auto");
                 $("body").css("overflow-y", "auto");
             }
@@ -1779,15 +1795,34 @@
         lastTimestamp = currentTimestamp;
     });
 
-    // Update fullscreen status when accordion toggles
+    // Update fullscreen when accordion toggles
     $(".accordion-button").on("click", function () {
-        setTimeout(updateStickyFullscreen, 300);
+        setTimeout(function () {
+            if (isAnyAccordionOpen()) {
+                announceForScreenReader("Filter expanded");
+            } else {
+                announceForScreenReader("Filter collapsed");
+            }
+            updateStickyFullscreen();
+        }, 300);
+    });
+
+    // Update wrapper height on window resize
+    $(window).on("resize", function () {
+        wrapperHeight = accordionWrapper.outerHeight();
+        originalBottomOffset = accordionWrapper.offset().top + wrapperHeight;
+
+        // If already sticky, update padding dynamically
+        if (accordion.hasClass("sticky")) {
+            addPaddingTarget.css("padding-top", wrapperHeight + "px");
+        }
     });
 }
 
 $(document).ready(function () {
     stickyFilterTop();
 });
+
   </script>
 
 
