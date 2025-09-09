@@ -240,7 +240,7 @@ $(document).ready(function () {
         lookupTable()
     }
 
-     if ($('#accordionWrapper').length > 0) {
+    if ($('#accordionWrapper').length > 0) {
         stickyChart()
     }
 
@@ -1737,86 +1737,32 @@ setTimeout(() => {
     renderDonutCharts();
 }, 3000);
 
- function stickyFilterTop() {
-      let lastScrollTop = 0;
-      let lastTimestamp = Date.now();
-      let accordion = $("#accordionContainer");
-      let accordionWrapper = $("#accordionWrapper");
-      let originalOffset = accordionWrapper.offset().top;
-      let addPaddingTarget = $("#add-padding-top"); // Target element
 
-      function isAnyAccordionOpen() {
-        return $(".accordion-collapse.show").length > 0;
-      }
 
-      function updateStickyFullscreen() {
-        if (accordion.hasClass("sticky") && isAnyAccordionOpen()) {
-          accordion.css("height", "100vh");
-          $("body").css("overflow-y", "hidden");
-        } else {
-          accordion.css("height", "auto");
-          $("body").css("overflow-y", "auto");
-        }
-      }
 
-      $(window).on("scroll", function () {
-        let currentScroll = $(this).scrollTop();
-        let currentTimestamp = Date.now();
-
-        // Calculate scroll speed in px/sec
-        let distance = Math.abs(currentScroll - lastScrollTop);
-        let timeDiff = currentTimestamp - lastTimestamp;
-        let speed = distance / (timeDiff || 1); // px per ms
-
-        // Map speed to animation duration
-        let minDuration = 100;  // Fastest
-        let maxDuration = 500;  // Slowest
-        let duration = Math.max(minDuration, maxDuration - speed * 3);
-        duration = Math.min(duration, maxDuration);
-
-        // Apply smooth transition
-        accordion.css("transition", `all ${duration}ms ease`);
-
-        if (currentScroll > lastScrollTop) {
-          // Scrolling down
-          if (currentScroll >= originalOffset) {
-            if (!accordion.hasClass("sticky")) {
-              accordion.addClass("sticky");
-
-              // ✅ Add 100px top padding to the target
-              addPaddingTarget.css("padding-top", "120px");
-
-              $(".accordion-collapse").collapse("hide"); // Collapse all
-              updateStickyFullscreen();
-            }
-          }
-        } else {
-          // Scrolling up
-          if (currentScroll < originalOffset) {
-            accordion.removeClass("sticky");
-
-            // ✅ Remove 100px padding when sticky is removed
-            addPaddingTarget.css("padding-top", "0px");
-
-            $(".accordion-collapse").collapse("show");
-            accordion.css("height", "auto");
-            $("body").css("overflow-y", "auto");
-          }
-        }
-
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        lastTimestamp = currentTimestamp;
-      });
-
-      // Update fullscreen status when accordion toggles
-      $(".accordion-button").on("click", function () {
-        setTimeout(updateStickyFullscreen, 300);
-      });
-    }
-
-    $(document).ready(function () {
-      stickyFilterTop();
+$(document).ready(function () {
+    // When user clicks on Apply Search
+    $('#btnsubmit').on('click', function () {
+        // Set a flag before reloading
+        sessionStorage.setItem('announceResults', 'true');
     });
+
+    // On page load, check the flag
+    if (sessionStorage.getItem('announceResults') === 'true') {
+        // Read message from HTML
+        const message = $('#sr-status').text().trim();
+
+        // Update the live region to force announcement
+        $('#sr-status').text(''); // Clear first to re-trigger screen reader
+        setTimeout(function () {
+            $('#sr-status').text(message);
+        }, 100);
+
+        // Reset the flag so it doesn't announce repeatedly
+        sessionStorage.removeItem('announceResults');
+    }
+});
+
 
 // Teaser Swiper
 function initializeSwiper() {
