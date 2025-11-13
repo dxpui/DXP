@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>We’ll Be Back Soon</title>
+
+<style>
+  :root{
+    --color-default:#000045;
+    --color-primary:#5000F2;
+    --color-secondary:#FF8A00;
+    --color-green:#36C280;
+    --color-yellow:#FFF057;
+    --color-pink:#FF38D1;
+    --color-red:#E30052;
+    --color-megenta:#C400ED;
+    --color-white:#FFFFFF;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  body{
+    font-family:"Segoe UI",Arial,sans-serif;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px 0;
+    background:linear-gradient(135deg,
+      var(--color-primary),
+      var(--color-pink),
+      var(--color-secondary),
+      var(--color-green),
+      var(--color-yellow)
+    );
+    background-size:300% 300%;
+    animation:bgMove 12s ease infinite;
+  }
+
+  @keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+  }
+
+  /* Reduced size white card */
+  .card{
+    background:#fff;
+    width:90%;
+    max-width:640px; /* smaller, cleaner */
+    padding:45px 35px 35px;
+    text-align:center;
+    box-shadow:0 10px 40px rgba(0,0,0,0.15);
+    border-radius:0;
+  }
+
+  .logo{
+    max-width:120px;
+    margin-bottom:20px;
+  }
+
+  h1{
+    color:var(--color-primary);
+    font-size:1.8rem;
+    margin-bottom:12px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+  }
+
+  p{
+    color:var(--color-default);
+    font-size:1rem;
+    margin-bottom:20px;
+    line-height:1.55;
+  }
+
+  a{
+    color:var(--color-primary);
+    text-decoration:none;
+    font-weight:600;
+  }
+
+  /* IMAGE IN CENTER */
+  .illustration{
+    max-width:280px;
+    width:100%;
+    margin:25px auto;
+    display:block;
+    animation:float 4s ease-in-out infinite;
+  }
+
+  @keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+  }
+
+  /* Footer strip INSIDE THE WHITE CARD */
+  .footer-strip{
+    display:flex;
+    width:100%;
+    height:10px;
+    margin-top:35px;
+  }
+  .footer-strip div{flex:1;}
+
+  .c1{background:var(--color-primary);}
+  .c2{background:var(--color-pink);}
+  .c3{background:var(--color-secondary);}
+  .c4{background:var(--color-green);}
+
+  footer{
+    margin-top:15px;
+    color:#666;
+    font-size:0.9rem;
+  }
+
+  @media(max-width:600px){
+    .card{padding:35px 20px 30px;}
+    h1{font-size:1.5rem;}
+    .illustration{max-width:220px;}
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <img src="https://www.ofcom.org.uk/siteassets/images/logonostrap.svg" class="logo" alt="Logo">
+
+    <h1>We’ll Be Back Soon!</h1>
+
+    <p>
+      Our servers are currently undergoing maintenance or experiencing a temporary outage. We’re working hard to restore service as quickly as possible. Thank you for your patience and understanding..
+    </p>
+
+    <!-- CENTER IMAGE (replace with your file) -->
+    <img src="ImageUC.png" class="illustration" alt="Maintenance Illustration">
+
+    <!-- FOOTER STRIP INSIDE WHITE CARD -->
+    <div class="footer-strip">
+      <div class="c1"></div>
+      <div class="c2"></div>
+      <div class="c3"></div>
+      <div class="c4"></div>
+    </div>
+
+    <footer>© Ofcom 2025.</footer>
+
+  </div>
+
+</body>
+</html>
