@@ -1,0 +1,1259 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OFCOM website</title>
+  <link rel="icon" href="assets/img/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link href="css/virtual-select.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker-full.min.js"></script>
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <!-- header start -->
+  <header class="header fixed-top d-flex align-items-center">
+    <a class="skip-to-content-link" href="#skipToContent" tabindex="0">Skip to main content</a>
+
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <div class="logo me-auto me-lg-0">
+        <a href="javascript:void(0);"> <img class="brand-logo" src="assets/img/logo2023_2.svg" alt="OfCom Logo" /></a>
+      </div>
+      <a href="javascript:void(0);" id="mobile-menu-trigger" class="mobile-menu-trigger order-3 order-lg-2">
+        <span class="visually-hidden-focusable">hamburger menu</span>
+        <i class="mobile-nav-toggle mobile-nav-show fa-solid fa-bars"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none fa-solid fa-xmark"></i>
+      </a>
+      <!-- menu start here -->
+      <div class="header-item ms-auto">
+        <div class="menu-overlay">
+        </div>
+        <nav class="menu">
+          <div class="mobile-menu-head">
+            <a href="javascript:void(0);" class="go-back">
+              <span class="visually-hidden-focusable">Go Back</span>
+              <i class="fa fa-angle-left"></i></a>
+            <div class="current-menu-title"></div>
+            <div class="mobile-menu-close">&times;</div>
+          </div>
+          <ul class="menu-main">
+
+            <li class="block menu-item-has-children topicmenublock  ">
+
+              <button type="button">Topics <span class="visually-hidden-focusable">Menu</span> <i
+                  class="fa fa-angle-down"></i></button>
+              <div class="sub-menu mega-menu mega-menu-column-4">
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span> About Ofcom </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      Ofcom is the regulator for the communications services that we use and rely on each day.
+                    </span>
+
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span> Internet-based services </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      As people communicate seamlessly online and offline, we now need to invest our efforts into making
+                      digital communications work for everyone
+                    </span>
+
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span> Media use and attitudes </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      Ofcom wants to understand how adults and children in the UK use media.
+                    </span>
+
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="online-safety.html" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span> Online safety </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      Under the Online Safety Act, Ofcom's job is to make online services safer for the people who use
+                      them. We make sure companies have effective systems in place to protect users from harm.
+                    </span>
+
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="phones-and-broadband.html" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span> Phones and broadband </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      Ofcom is committed to a thriving telecoms sector, where companies can compete fairly and customers
+                      benefit from a broad range of services.
+                    </span>
+
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span> Post </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      Ofcom's job is to make sure there is a universal postal service.
+                    </span>
+
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span> Spectrum </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      You can't see or feel radio spectrum, but we use it every day. Our job is to authorise and manage
+                      the use of spectrum in the UK.
+                    </span>
+
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span> TV, radio and on-demand </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      We make sure that broadcasters provide quality TV, radio and on-demand programmes that appeal to
+                      diverse audiences. We also have rules in place to protect viewers and listeners from harm.
+                    </span>
+
+                  </p>
+                </div>
+
+
+
+                <div class="w-100 menu-social-icons">
+                  <a href="https://x.com/ofcom" title="x-twitter" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <a href="https://www.facebook.com/ofcom" title="facebook" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/company/ofcom" title="linkedin" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="https://www.youtube.com/ofcom" title="youtube" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="https://www.instagram.com/ofcom.org.uk/" title="instagram" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@ofcom.org.uk" title="tiktok" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </div>
+
+                <div class="multicolor-banner">
+                  <div class="row row-cols-auto g-0 multicolor-strip menu-strip-height">
+                    <div class="bg-blue"></div>
+                    <div class="bg-megenta"></div>
+                    <div class="bg-pink"></div>
+                    <div class="bg-yellow"></div>
+                    <div class="bg-green"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="block menu-item-has-children contenttypemenublock  ">
+
+              <button type="button">Ofcom's work <span class="visually-hidden-focusable">Menu</span> <i
+                  class="fa fa-angle-down"></i></button>
+              <div class="sub-menu mega-menu mega-menu-column-4">
+
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span>Advice for businesses </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      How to make the most of communications services as a small business.
+                    </span>
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span>Advice for consumers </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      How to make the most of the services you use, and deal with problems.
+                    </span>
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span>Consultations and statements </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      Proposals we are consulting on and decisions we've made.
+                    </span>
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="enforcement.html" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span>Enforcement </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      How we make sure companies follow our rules, to protect customers and promote competition.
+                    </span>
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span>Information for industry </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      Rules, guidance and other information for the industries we regulate.
+                    </span>
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span>Licence information </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      If you're looking to use certain radio equipment, or broadcast on TV or radio, you'll need a
+                      licence from Ofcom.
+                    </span>
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span>News and updates </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      Our latest news, features, views and information about our work.
+                    </span>
+                  </p>
+                </div>
+                <div class="list-item">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="javascript:void(0);" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span>Research, statistics and data </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <p>
+                    <span class="detail-text">
+                      Evidence we gather to inform our work as a regulator.
+                    </span>
+                  </p>
+                </div>
+
+
+
+                <div class="w-100 menu-social-icons">
+                  <a href="https://x.com/ofcom" title="x-twitter" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <a href="https://www.facebook.com/ofcom" title="facebook" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/company/ofcom" title="linkedin" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="https://www.youtube.com/ofcom" title="youtube" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="https://www.instagram.com/ofcom.org.uk/" title="instagram" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@ofcom.org.uk" title="tiktok" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </div>
+
+                <div class="multicolor-banner">
+                  <div class="row row-cols-auto g-0 multicolor-strip menu-strip-height">
+                    <div class="bg-blue"></div>
+                    <div class="bg-megenta"></div>
+                    <div class="bg-pink"></div>
+                    <div class="bg-yellow"></div>
+                    <div class="bg-green"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="block menu-item-has-children menublock  ">
+
+              <button type="button"> Complaints <span class="visually-hidden-focusable">Menu</span> <i
+                  class="fa fa-angle-down"></i></button>
+              <div class="sub-menu mega-menu mega-menu-column-4">
+                <div class="list-item ">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="complaints.html" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span>Complaints </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+
+                  <ul>
+                    <li><a href="complaints.html">Complain about
+                        mobile, phone or internet services</a></li>
+                    <li><a href="complaints.html">Complain about TV,
+                        radio or on demand services</a></li>
+                    <li><a href="complaints.html">Complain about postal services</a>
+                    </li>
+                  </ul>
+                </div>
+
+
+                <div class="list-item">
+                  <ul>
+                    <li class="mb-3">
+                      <span class="detail-text">
+                        Ofcom may be able to help you complain about or report issues relating to: phone, broadband and
+                        postal services; TV, radio and on-demand programmes; interference to wireless devices; or
+                        something you have seen on an online service, website or app.
+                      </span>
+                    </li>
+
+                    <li>
+                      <a href="javascript:void(0);">
+                        The types of complaint Ofcom deals with
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">
+                        Get in touch by phone or post
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+
+
+                <div class="w-100 menu-social-icons">
+                  <a href="https://x.com/ofcom" title="x-twitter" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <a href="https://www.facebook.com/ofcom" title="facebook" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/company/ofcom" title="linkedin" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="https://www.youtube.com/ofcom" title="youtube" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="https://www.instagram.com/ofcom.org.uk/" title="instagram" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@ofcom.org.uk" title="tiktok" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </div>
+
+                <div class="multicolor-banner">
+                  <div class="row row-cols-auto g-0 multicolor-strip menu-strip-height">
+                    <div class="bg-blue"></div>
+                    <div class="bg-megenta"></div>
+                    <div class="bg-pink"></div>
+                    <div class="bg-yellow"></div>
+                    <div class="bg-green"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="block menu-item-has-children menublock  ">
+
+              <button type="button"> Licences <span class="visually-hidden-focusable">Menu</span> <i
+                  class="fa fa-angle-down"></i></button>
+              <div class="sub-menu mega-menu mega-menu-column-4">
+                <div class="list-item ">
+                  <div class="title d-flex justify-content-between align-items-center">
+                    <a href="licence.html" class="sub-menu-link">
+                      <div class="sub-topic-text d-flex justify-content-between align-items-start align-items-center">
+                        <span>Licences </span>
+                        <svg class="svg-arrow" width="25" height="25" viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                          <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                            stroke-linejoin="bevel"></path>
+                          <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+
+                  <ul>
+                    <li><a href="licence.html">Spectrum licences</a></li>
+                    <li><a href="licence.html">Radio broadcast licences</a></li>
+                    <li><a href="licence.html">TV broadcast licences</a></li>
+                  </ul>
+                </div>
+
+
+                <div class="list-item">
+                  <ul>
+                    <li class="mb-3">
+                      <span class="detail-text">
+                        You need a licence from Ofcom if you’re looking to use certain radio equipment (like amateur or
+                        ships radio), or broadcast on TV or radio.
+                      </span>
+                    </li>
+
+                    <li>
+                      <a href="javascript:void(0);">
+                        Help with your spectrum licence
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">
+                        Help with your broadcast licence
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+
+
+                <div class="w-100 menu-social-icons">
+                  <a href="https://x.com/ofcom" title="x-twitter" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <a href="https://www.facebook.com/ofcom" title="facebook" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/company/ofcom" title="linkedin" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="https://www.youtube.com/ofcom" title="youtube" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="https://www.instagram.com/ofcom.org.uk/" title="instagram" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@ofcom.org.uk" title="tiktok" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </div>
+
+                <div class="multicolor-banner">
+                  <div class="row row-cols-auto g-0 multicolor-strip menu-strip-height">
+                    <div class="bg-blue"></div>
+                    <div class="bg-megenta"></div>
+                    <div class="bg-pink"></div>
+                    <div class="bg-yellow"></div>
+                    <div class="bg-green"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+      <!-- menu end here -->
+      <a href="javascript:void(0);" id="search-icon" class="search-icons d-flex align-items-center order-2 order-lg-1">
+        <i class="fas fa-search"></i>
+        <span class="visually-hidden-focusable">Global Search</span>
+      </a>
+      <form action="global-search.html" class="search-form" id="globalSearch">
+        <div class="search-box mx-auto mb-3 position-relative">
+          <input type="search" class="search-box-input" name="query" aria-label="Global Search" placeholder="Search"
+            id="globalquery" autocomplete="off">
+          <label for="globalquery" class="fas fa-search visually-hidden-focusable">Search</label>
+          <a href="global-search.html" class="fas fa-search gl-search"><span
+              class="visually-hidden-focusable">Search</span></a>
+        </div>
+
+        <h4 class="text-center mt-4">Quick links</h4>
+        <hr>
+        <div class="search-quick-link mx-auto mt-4">
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <a href="javascript:void(0);" class="w-100 d-flex align-items-start align-items-start">
+                <span>Broadband and mobile coverage checker</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="javascript:void(0);" class="w-100 d-flex align-items-start align-items-start">
+                <span>Social tariffs: Cheaper broadband and phone packages</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="javascript:void(0);" class="w-100 d-flex align-items-start align-items-start">
+                <span>Telephone area codes: Find UK dialling codes for numbers starting 01 and 02</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="javascript:void(0);" class="w-100 d-flex align-items-start align-items-start">
+                <span>Ofcom licensing portal for aircraft, amateur and ships radio</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+
+        <div class="search-quick-link news-blue-bg mx-auto mt-4 mb-5">
+          <h4 class="text-center mt-4 mb-3">Latest news</h4>
+          <div class="row extra-margin">
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="javascript:void(0);">
+                <div class="info-card news-info">
+                  <picture>
+                    <source srcset="assets/img/tech-gavel-web.webp" sizes="100vw" type="image/webp">
+                    <source srcset="" sizes="100vw"><img alt="Tech-gavel-web" src="" loading="lazy" decoding="async"
+                      class="w-100 mb-3">
+                  </picture>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h3 class="info-card-header">Ofcom spectrum auction: final results announced</h3>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel"></path>
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                    </svg>
+                  </div>
+                  <span class="date">24 October 2025</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="javascript:void(0);">
+                <div class="info-card news-info">
+                  <picture>
+                    <source srcset="assets/img/delivery-warehouse-workers-hero.webp" sizes="100vw" type="image/webp">
+                    <source srcset="" sizes="100vw"><img alt="Tech-gavel-web" src="" loading="lazy" decoding="async"
+                      class="w-100 mb-3">
+                  </picture>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h3 class="info-card-header">Best and worst parcel firms for customer satisfaction revealed 2024/25
+                    </h3>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel"></path>
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                    </svg>
+                  </div>
+                  <span class="date">22 October 2025</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="javascript:void(0);">
+                <div class="info-card news-info">
+                  <picture>
+                    <source srcset="assets/img/news-centre-hero-1336--560px-6.webp" sizes="100vw" type="image/webp">
+                    <source srcset="" sizes="100vw"><img alt="Tech-gavel-web" src="" loading="lazy" decoding="async"
+                      class="w-100 mb-3">
+                  </picture>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h3 class="info-card-header">Ofcom updates guidance around politicians presenting news</h3>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel"></path>
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                    </svg>
+                  </div>
+                  <span class="date">20 October 2025</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <a href="javascript:void(0);">
+                <div class="info-card news-info">
+                  <picture>
+                    <source srcset="assets/img/bbc-salford.webp" sizes="100vw" type="image/webp">
+                    <source srcset="" sizes="100vw"><img alt="Tech-gavel-web" src="" loading="lazy" decoding="async"
+                      class="w-100 mb-3">
+                  </picture>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h3 class="info-card-header">Ofcom investigation finds BBC Gaza documentary in breach of
+                      Broadcasting Code</h3>
+                    <svg class="svg-arrow" width="40" height="40" viewBox="0 0 40 40"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20.2449" cy="19.7964" r="19"></circle>
+                      <path d="M22.6774 12.2964L30.8422 20.2964L22.6774 28.2964" stroke-width="2"
+                        stroke-linejoin="bevel"></path>
+                      <path d="M30.6472 20.2964L9.64722 20.2964" stroke-width="2" stroke-linejoin="bevel"></path>
+                    </svg>
+                  </div>
+                  <span class="date">17 October 2025</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </form>
+      <a href="javascript:void(0);" class="langauge-change order-1 order-lg-3" lang="cy" hreflang="cy">Cymraeg</a>
+
+
+    </div>
+    </div>
+  </header>
+  <main>
+    <div id="skip" class="visually-hidden">Home page features</div>
+    <section class="breadcrumb-position text-light">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active ellipsis" aria-current="page"><span>StepForm</span></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="hero-banner-narrow blue-bg">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 col-lg-7 col-xl-8 offset-lg-2 offset-xl-2">
+              <h1 id="skipToContent" data-epi-type="title">
+                <strong>stepForm</strong>
+              </h1>
+            </div>
+
+          </div>
+          <div class="toast-container" id="copyToast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-top-header">
+              <span>
+                URL copied!
+              </span>
+
+            </div>
+            <div class="row row-cols-auto g-0 multicolor-strip toast-strip">
+              <div class="col bg-blue"></div>
+              <div class="col bg-megenta"></div>
+              <div class="col bg-pink"></div>
+              <div class="col bg-yellow"></div>
+              <div class="col bg-green"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section>
+      <div class="container-fluid standared-page container-p-0">
+        <div class="row">
+          <div class="col-lg-2">
+          </div>
+          <div class="col-lg-8">
+            <div class="row row-cols-auto g-0 mt-3 mt-lg-5 ml-left">
+              <div class="col-12">
+                Published:
+                11 November 2025
+              </div>
+            </div>
+            <div class="mt-3 mt-lg-5">
+
+
+
+              <div id="feedbackform">
+
+                <div class="block  formcontainerblock  ">
+
+
+
+
+                  <form method="post" novalidate="novalidate" data-f-metadata=""
+                    aria-labelledby="36b3afe9-7fae-4cdb-8340-f128a0984397_label" enctype="multipart/form-data"
+                    class="EPiServerForms ValidationSuccess" data-f-type="form"
+                    id="36b3afe9-7fae-4cdb-8340-f128a0984397">
+
+
+
+                    <script type="text/javascript" nonce="R0E27JCeTwld9qgoSuK/Wbu4rFBX8F+PzFe3P3u+E+g=">
+                      // This view acts as a rendering template to render InitScript(and server-side Form's descriptor) in FormContainerBlock's client-side for Form[36b3afe9-7fae-4cdb-8340-f128a0984397].
+                      // TECHNOTE: all serverside (paths, dynamic values) of EPiServerForms will be transfered to client side here in this section.
+                      (function initializeOnRenderingFormDescriptor() {
+                        // each workingFormInfo is store inside epi.EPiServer.Forms, lookup by its FormGuid
+                        var workingFormInfo = epi.EPiServer.Forms["36b3afe9-7fae-4cdb-8340-f128a0984397"] = {
+                          Id: "36b3afe9-7fae-4cdb-8340-f128a0984397",
+                          Name: "Media Act Form POC",
+                          // whether this Form can be submitted which relates to the visitor's data (cookie, identity) and Form's settings (AllowAnonymous, AllowXXX)
+                          SubmittableStatus: { "submittable": true, "message": "" },
+                          ConfirmMessage: "",
+                          ResetConfirmMessage: "",
+                          ShowNavigationBar: true,
+                          FocusOnForm: false,
+                          ShowSummarizedData: false,
+                          // serialize the dependency configuration of this form to clientside
+                          DependenciesInfo: JSON.parse("[{\"fieldName\":\"__field_194881\",\"action\":{\"displayName\":\"Shown\",\"name\":\"EPiServer.Forms.Core.Internal.Dependency.ShowAction\",\"order\":1,\"clientsideAction\":\"show\"},\"conditionCombination\":\"All\",\"conditions\":[{\"fieldName\":\"__field_194814\",\"operator\":\"Equals\",\"fieldValue\":\"Group A - The Wimbledon Tennis Finals\"}]},{\"fieldName\":\"__field_194838\",\"action\":{\"displayName\":\"Hidden\",\"name\":\"EPiServer.Forms.Core.Internal.Dependency.HideAction\",\"order\":2,\"clientsideAction\":\"hide\"},\"conditionCombination\":\"Any\",\"conditions\":[{\"fieldName\":\"__field_194815\",\"operator\":\"Equals\",\"fieldValue\":\"No\"}]},{\"fieldName\":\"__field_194839\",\"action\":{\"displayName\":\"Hidden\",\"name\":\"EPiServer.Forms.Core.Internal.Dependency.HideAction\",\"order\":2,\"clientsideAction\":\"hide\"},\"conditionCombination\":\"Any\",\"conditions\":[{\"fieldName\":\"__field_194815\",\"operator\":\"Equals\",\"fieldValue\":\"No\"}]},{\"fieldName\":\"__field_194852\",\"action\":{\"displayName\":\"Shown\",\"name\":\"EPiServer.Forms.Core.Internal.Dependency.ShowAction\",\"order\":1,\"clientsideAction\":\"show\"},\"conditionCombination\":\"Any\",\"conditions\":[{\"fieldName\":\"__field_194851\",\"operator\":\"Equals\",\"fieldValue\":\"Neither of the above\"}]}]"),
+                          // keep all fieldName which are not satisfied the field dependency conditions
+                          DependencyInactiveElements: [],
+                          // Validation info, for executing validating on client side
+                          ValidationInfo: JSON.parse("[{\"targetElementName\":\"__field_194814\",\"targetElementId\":\"ac02f079-195a-449b-9a7b-d01f59c93b31\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_194797\",\"targetElementId\":\"1bea1662-a9d9-405b-b371-8d448669e5ca\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}},{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{1,300}$\",\"dotNetPattern\":\"^.{1,300}$\",\"message\":\"This field should be in 300 character limit\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194829\",\"targetElementId\":\"ecb463a5-ff1f-4a19-8c9c-1008e14adf8e\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{0,100}$\",\"dotNetPattern\":\"^.{0,100}$\",\"message\":\"This field should be in 100 char limit\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194831\",\"targetElementId\":\"66984ae8-0561-4037-877f-92651d0819be\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}},{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{1,100}$\",\"dotNetPattern\":\"^.{1,100}$\",\"message\":\"This field should be in \\\"^.{1,100}$\\\" format.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194832\",\"targetElementId\":\"0f9c1733-2a8a-48fc-91d6-9289a2e73d41\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}},{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{1,100}$\",\"dotNetPattern\":\"^.{1,100}$\",\"message\":\"This field should be in \\\"^.{1,100}$\\\" format.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194833\",\"targetElementId\":\"8049b67a-9bf1-4a9e-b9c9-6199c41b6580\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}},{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{1,100}$\",\"dotNetPattern\":\"^.{1,100}$\",\"message\":\"This field should be in \\\"^.{1,100}$\\\" format.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194834\",\"targetElementId\":\"28de448f-42dc-48e3-86e3-b632b934cec3\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}},{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{1,100}$\",\"dotNetPattern\":\"^.{1,100}$\",\"message\":\"This field should be in \\\"^.{1,100}$\\\" format.\",\"validationCssClass\":null,\"additionalAttributes\":null}},{\"type\":\"EPiServer.Forms.Implementation.Validation.EmailValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^((([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+(\\\\.([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+)*)|((\\\\x22)((((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(([\\\\x01-\\\\x08\\\\x0b\\\\x0c\\\\x0e-\\\\x1f\\\\x7f]|\\\\x21|[\\\\x23-\\\\x5b]|[\\\\x5d-\\\\x7e]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(\\\\\\\\([\\\\x01-\\\\x09\\\\x0b\\\\x0c\\\\x0d-\\\\x7f]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF]))))*(((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(\\\\x22)))@((([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.)+(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))$\",\"dotNetPattern\":\"^((([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+(\\\\.([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+)*)|((\\\\x22)((((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(([\\\\x01-\\\\x08\\\\x0b\\\\x0c\\\\x0e-\\\\x1f\\\\x7f]|\\\\x21|[\\\\x23-\\\\x5b]|[\\\\x5d-\\\\x7e]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(\\\\\\\\([\\\\x01-\\\\x09\\\\x0b\\\\x0c\\\\x0d-\\\\x7f]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF]))))*(((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(\\\\x22)))@((([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.)+(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))$\",\"message\":\"Enter a valid email address.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194835\",\"targetElementId\":\"3223f92e-9fa5-4895-a361-2e915d1085bc\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{0,100}$\",\"dotNetPattern\":\"^.{0,100}$\",\"message\":\"This field should be in \\\"^.{0,100}$\\\" format.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194836\",\"targetElementId\":\"e53664e7-2cea-4e50-861c-7da78c08a637\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{0,100}$\",\"dotNetPattern\":\"^.{0,100}$\",\"message\":\"This field should be in 100 Char limit\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194815\",\"targetElementId\":\"afd79bd7-fc24-4392-8dd9-32be31185ac7\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_194838\",\"targetElementId\":\"5481a317-8231-46e6-8727-a75bc4712631\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}},{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{1,3000}$\",\"dotNetPattern\":\"^.{1,3000}$\",\"message\":\"This field should be in 3000 Char limit.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194839\",\"targetElementId\":\"b805da42-849b-41b4-8c1a-a5a415cb0bfa\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{0,100}$\",\"dotNetPattern\":\"^.{0,100}$\",\"message\":\"This field should be in 100 char limit\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194842\",\"targetElementId\":\"89269d40-b3bb-4735-904b-c8007e930c87\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{0,4000}$\",\"dotNetPattern\":\"^.{0,4000}$\",\"message\":\"This field should be in 4000 char limit\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194843\",\"targetElementId\":\"931dfffc-2872-4f27-bdef-39aa9ae6b914\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}},{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{1,4000}$\",\"dotNetPattern\":\"^.{1,4000}$\",\"message\":\"This field should be in 4000 char limit\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194874\",\"targetElementId\":\"1225158c-794f-4945-9c37-7486a6d28ff4\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}},{\"type\":\"EPiServer.Forms.Implementation.Validation.RegularExpressionValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^.{1,4000}$\",\"dotNetPattern\":\"^.{1,4000}$\",\"message\":\"This field should be in 4000 char limit\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194844\",\"targetElementId\":\"2aeab9bb-90d8-4d71-a41c-4f53ce20701b\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_194845\",\"targetElementId\":\"3bb9d2d0-3cf7-4bee-b622-7dc15048a37e\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_194799\",\"targetElementId\":\"c9c039bc-7fc5-40a8-b1bb-25d320b6b423\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.AllowedExtensionsValidator\",\"description\":null,\"model\":{\"accept\":\".jpg,.png,.pdf,.xlsx,.doc,.docx,.csv,.html,.jpeg\",\"message\":\"The upload file format is not allowed or not supported. File format should be: .jpg,.png,.pdf,.xlsx,.doc,.docx,.csv,.html,.jpeg.\",\"validationCssClass\":null,\"additionalAttributes\":null}},{\"type\":\"EPiServer.Forms.Implementation.Validation.MaxFileSizeValidator\",\"description\":null,\"model\":{\"sizeInBytes\":29360128,\"message\":\"The upload file size should be less than 28 MB.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194849\",\"targetElementId\":\"68d6c605-7b4c-4fec-b8db-c70a09132bd7\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_194851\",\"targetElementId\":\"97c15081-6a34-438a-8df6-4a52fca18342\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_194852\",\"targetElementId\":\"81fdefd9-9920-48e9-b7d3-696c18c24441\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"Required\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_194853\",\"targetElementId\":\"ad6aca0f-d6a6-4a5e-b51f-3da02a99701b\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.AllowedExtensionsValidator\",\"description\":null,\"model\":{\"accept\":\"\",\"message\":\"The upload file format is not allowed or not supported.\",\"validationCssClass\":null,\"additionalAttributes\":null}},{\"type\":\"EPiServer.Forms.Implementation.Validation.MaxFileSizeValidator\",\"description\":null,\"model\":{\"sizeInBytes\":29360128,\"message\":\"The upload file size should be less than 28 MB.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_194867\",\"targetElementId\":\"e80142ac-81e3-481f-b6e2-c3f106d6bea4\",\"validators\":[{\"type\":\"EPiServer.Forms.Samples.Implementation.Validation.RecaptchaValidator\",\"description\":null,\"model\":{\"message\":\"Invalid reCAPTCHA value, please try again.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]}]"),
+                          // Steps information for driving multiple-step Forms.
+                          StepsInfo: {
+                            Steps: [{ "index": 0, "attachedUrl": "", "dependField": null, "dependCondition": null, "isActive": true, "attachedContentLink": "", "dependValue": "", "elementName": "__field_", "guid": "00000000-0000-0000-0000-000000000000" }, { "index": 1, "attachedUrl": "", "dependField": null, "dependCondition": null, "isActive": true, "attachedContentLink": "", "dependValue": null, "elementName": "__field_194798", "guid": "ede6cb60-8f3c-4b78-b84c-36c1837934ff" }, { "index": 2, "attachedUrl": "", "dependField": null, "dependCondition": null, "isActive": true, "attachedContentLink": "", "dependValue": null, "elementName": "__field_194856", "guid": "b89b17c9-2907-4f1c-a829-bc00e340c2a1" }]
+                          },
+                          FieldsExcludedInSubmissionSummary: ["__field_194799", "__field_194853"],
+                          ElementsInfo: JSON.parse("{\"__field_194813\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ParagraphTextElementBlock\",\"friendlyName\":\"RTE\",\"customBinding\":false},\"__field_194814\":{\"type\":\"EPiServer.Forms.Implementation.Elements.SelectionElementBlock\",\"friendlyName\":\"Group Selection\",\"customBinding\":false},\"__field_194881\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ChoiceElementBlock\",\"friendlyName\":\"Checkbox for Selection 10\",\"customBinding\":false},\"__field_194797\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"When does the event take place?\",\"customBinding\":false},\"__field_194829\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"When was the contract under which rights to show live coverage were acquired entered into?\",\"customBinding\":false},\"__field_194830\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ParagraphTextElementBlock\",\"friendlyName\":\"RTE 2\",\"customBinding\":false},\"__field_194831\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Service provider\",\"customBinding\":false},\"__field_194832\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Applicant name\",\"customBinding\":false},\"__field_194833\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Applicant job title\",\"customBinding\":false},\"__field_194834\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Applicant email address *\",\"customBinding\":false},\"__field_194835\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Who is the rights owner, or who are the rights sublicensed from?\",\"customBinding\":false},\"__field_194836\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Are there any other contact details you wish to provide? e.g., an alternative contact at your organisation\",\"customBinding\":false},\"__field_194837\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ParagraphTextElementBlock\",\"friendlyName\":\"Rights sharing arrangements\",\"customBinding\":false},\"__field_194815\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ChoiceElementBlock\",\"friendlyName\":\"Multi Choice\",\"customBinding\":false},\"__field_194838\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"Which service provider(s) are you sharing rights with? Please give any information you are able about the type of rights the other service provider has acquired.\",\"customBinding\":false},\"__field_194839\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"If you have permission, please provide contact details for the other service provider(s)\",\"customBinding\":false},\"__field_194841\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ParagraphTextElementBlock\",\"friendlyName\":\"Rights acquisition\",\"customBinding\":false},\"__field_194842\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"Please explain why you are applying for consent, including a short explanation as to why none of the automatic authorisations are met.\",\"customBinding\":false},\"__field_194843\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"Please provide details of the rights arrangements for each edition of the event you are applying for.\",\"customBinding\":false},\"__field_194874\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"Please provide some background information on the acquisition of the live coverage rights. For example, how/when/to who the rights were marketed, any further information about timings (such as how long parties had to respond to any ITT), and when the cont\",\"customBinding\":false},\"__field_194875\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ParagraphTextElementBlock\",\"friendlyName\":\"RTE as Label\",\"customBinding\":false},\"__field_194844\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ChoiceElementBlock\",\"friendlyName\":\"[For Group A Events]  Please confirm that the contract does not grant rights to show live coverage on a relevant service exclusively.  Hover over box on ‘exclusively’ to say[For Group A Events]:   “Contracts for Group A events must not grant rights to sho\",\"customBinding\":false},\"__field_194845\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ChoiceElementBlock\",\"friendlyName\":\"Please also confirm that there are no other agreements or understandings in place outside the contract granting the live coverage rights that were likely to result in provider(s) of services in the other category not acquiring the relevant live rights.\",\"customBinding\":false},\"__field_194799\":{\"type\":\"EPiServer.Forms.Implementation.Elements.FileUploadElementBlock\",\"friendlyName\":\"FileUpload\",\"customBinding\":false},\"__field_194846\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"[For Group A Events]  Please explain how live coverage rights to the event were made available to other service providers. Hover text: Please see section [x] of the Code on listed events for more detail.\",\"customBinding\":false},\"__field_194847\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"[For Group B events]   Please explain how rights to provide adequate alternative coverage were made available to other service providers.\",\"customBinding\":false},\"__field_194848\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ParagraphTextElementBlock\",\"friendlyName\":\"Coverage plans\",\"customBinding\":false},\"__field_194849\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"Which services are you applying for consent to show live coverage on? Please also give further details of your coverage plans.\",\"customBinding\":false},\"__field_194850\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ParagraphTextElementBlock\",\"friendlyName\":\"Other Information\",\"customBinding\":false},\"__field_194851\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ChoiceElementBlock\",\"friendlyName\":\"Which services are you applying for consent to show live coverage on? Please also give further details of your coverage plans.\",\"customBinding\":false},\"__field_194852\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"Please can you provide further information as to why your application has not been made in accordance with the expected timings set out in Ofcom’s code?                                 - Should only appear when ‘neither of the above’ is ticked above\",\"customBinding\":false},\"__field_194853\":{\"type\":\"EPiServer.Forms.Implementation.Elements.FileUploadElementBlock\",\"friendlyName\":\"File Upload 2\",\"customBinding\":false},\"__field_194854\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"Please provide a brief explanation of the documents attached\",\"customBinding\":false},\"__field_194855\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"Is there any other information relevant to your application that you wish to provide?\",\"customBinding\":false},\"__field_194857\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ParagraphTextElementBlock\",\"friendlyName\":\"RTE 4\",\"customBinding\":false},\"__field_194858\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ChoiceElementBlock\",\"friendlyName\":\"Please confirm that the information contained in this application is true, accurate and complete\",\"customBinding\":false},\"__field_194860\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ChoiceElementBlock\",\"friendlyName\":\"Ofcom’s Data Privacy Guidelines:\",\"customBinding\":false},\"__field_194861\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ParagraphTextElementBlock\",\"friendlyName\":\"RTE 5\",\"customBinding\":false},\"__field_194868\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ResetButtonElementBlock\",\"friendlyName\":\"Reset Button\",\"customBinding\":false},\"__field_194800\":{\"type\":\"EPiServer.Forms.Implementation.Elements.SubmitButtonElementBlock\",\"friendlyName\":\"Submit\",\"customBinding\":false}}"),
+                          DataSubmitController: "/EPiServer.Forms/DataSubmit",
+                        };
+                        /// TECHNOTE: Calculation at FormInfo level, and these values will be static input for later processing.
+                        workingFormInfo.StepsInfo.FormHasNoStep_VirtualStepCreated = true; // this FLAG will be true, if Editor does not put any FormStep. Engine will create a virtual step, with empty GUID
+                        workingFormInfo.StepsInfo.FormHasNothing = false; // this FLAG will be true if FormContainer has no element at all
+                        workingFormInfo.StepsInfo.AllStepsAreNotLinked = true; // this FLAG will be true, if all steps all have contentLink= ="" (emptyString)
+
+                        epi.EPiServer.SystemSettings = {
+                          RequestVerification: {
+                            FormFieldName: "__RequestVerificationToken",
+                            HeaderName: "RequestVerificationToken"
+                          }
+                        };
+                      })();
+                    </script>
+                    <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                      name="__FormGuid" value="36b3afe9-7fae-4cdb-8340-f128a0984397" data-f-type="hidden">
+                    <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                      name="__FormHostedPage" value="194794" data-f-type="hidden">
+                    <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                      name="__FormLanguage" value="en" data-f-type="hidden">
+                    <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                      name="__FormCurrentStepIndex" value="0" data-f-type="hidden">
+                    <input type="hidden" class="Form__Element Form__SystemElement FormHidden FormHideInSummarized"
+                      name="__FormSubmissionId" value="746451c5-f629-452a-a2d2-60c95da37dd3" data-f-type="hidden">
+                    <input name="__RequestVerificationToken" type="hidden"
+                      value="CfDJ8EP9w6EkpblLvqYhw5OVlIFhstl5eGHX0fR6XfJLttjbXSHiQmH7t2jG3c76-E-YpIbN8S2JdP-AeOFd9Yv_Cycv_MBz6KRCt7I1_LoIZz3jYxACruNe5tUe4pKmYIHNEuslVfETCdLRX3Qq7P4hQqk">
+                    <div class="Form__Status">
+                      <div role="status" class="Form__Status__Message hide" data-f-form-statusmessage="">
+
+                      </div>
+                    </div>
+                    <div data-f-mainbody="" class="Form__MainBody">
+                      
+                      
+                      <section id="__field_194856" data-f-type="step" data-f-element-name="__field_194856"
+                        class="Form__Element FormStep Form__Element--NonData hide" data-f-stepindex="2"
+                        data-f-element-nondata="">
+
+
+
+                        <h3 class="FormStep__Title">Continue application on next page</h3>
+                        <aside class="FormStep__Description"></aside>
+                        <!-- Each FormStep groups the elements below it til the next FormStep -->
+
+
+
+
+                        <div class="Form__Element FormParagraphText Form__Element--NonData"
+                          data-f-element-name="__field_194857" data-f-element-nondata="">
+                          <!-- <div id="33a9a5ba-2e29-48fe-b58a-1aa493281aea">
+                            <p><span>T<strong>o review the application information before submission, please tab back
+                                  :</strong></span><span><strong></strong></span></p>
+                            <p><span><strong></strong></span></p>
+                            <p><span><button style="background-color: rgb(53, 152, 219); float: right;"> Back to Page
+                                  1</button></span></p>
+                            <p><br><br><br></p>
+                            <h3 style="background-color: rgb(35, 111, 161);"><span style="margin: 10px; display: inline-block; color: white;">Declaration</span></h3>
+                          </div> -->
+                          <div id="33a9a5ba-2e29-48fe-b58a-1aa493281aea__OriginalText"
+                            class="Form__Original__ParagraphText">
+                            <p><span>T<strong>o review the application information before submission, please tab back
+                                  :</strong></span><span><strong></strong></span></p>
+                            <p><span><strong></strong></span></p>
+                            <p><span><a href="stepform.html" class="Form__Element FormResetButton Form__Element--NonData" style=" float: right;"> Back to Page
+                                  1</a></span></p>
+                            <p><br><br><br></p>
+                            <h3 style="background-color: rgb(35, 111, 161);"><span style="margin: 10px; display: inline-block; color: white;">Declaration</span></h3>
+                          </div>
+                        </div>
+
+
+                        <div aria-invalid="false" class="Form__Element FormChoice" data-f-element-name="__field_194858"
+                          data-f-type="choice" id="321263bc-7ce1-4fc3-9352-b5fd5ffc3652">
+                          <fieldset aria-describedby="__field_194858_desc">
+                            <legend class="Form__Element__Caption">Please confirm that the information contained in this
+                              application is true, accurate and complete </legend>
+                            <div>
+                              <input type="checkbox" id="321263bc-7ce1-4fc3-9352-b5fd5ffc3652_0" name="__field_194858"
+                                value="Please confirm that the information contained in this application is true accurate and complete "
+                                class="FormChoice__Input FormChoice__Input--Checkbox" data-f-datainput="">
+                              <label for="321263bc-7ce1-4fc3-9352-b5fd5ffc3652_0" class="FormChoice__Label">
+                                Please confirm that the information contained in this application is true, accurate and
+                                complete
+                              </label>
+                            </div>
+                          </fieldset>
+                          <span class="Form__Element__ValidationError hidden" data-f-linked-name="__field_194858"
+                            data-f-validationerror="" id="__field_194858_desc" role="alert"></span>
+                        </div>
+
+
+                        <div aria-invalid="false" class="Form__Element FormChoice" data-f-element-name="__field_194860"
+                          data-f-type="choice" id="570307ec-0820-46f4-a59a-48c9a63e4f7d"
+                          title="General Privacy Statement – How we handle your personal data - Ofcom">
+                          <fieldset aria-describedby="__field_194860_desc">
+                            <legend class="Form__Element__Caption">Ofcom’s Data Privacy Guidelines: General Privacy
+                              Statement – How we handle your personal data - Ofcom</legend>
+                            <div>
+                              <input type="checkbox" id="570307ec-0820-46f4-a59a-48c9a63e4f7d_0" name="__field_194860"
+                                value="Please confirm that you have read and understood Ofcom’s Data Privacy Guidelines"
+                                class="FormChoice__Input FormChoice__Input--Checkbox" data-f-datainput=""
+                                title="General Privacy Statement – How we handle your personal data - Ofcom">
+                              <label for="570307ec-0820-46f4-a59a-48c9a63e4f7d_0" class="FormChoice__Label">
+                                Please confirm that you have read and understood Ofcom’s Data Privacy Guidelines
+                              </label>
+                            </div>
+                          </fieldset>
+                          <span class="Form__Element__ValidationError hidden" data-f-linked-name="__field_194860"
+                            data-f-validationerror="" id="__field_194860_desc" role="alert"></span>
+                        </div>
+
+
+
+                        <div class="Form__Element FormParagraphText Form__Element--NonData"
+                          data-f-element-name="__field_194861" data-f-element-nondata="">
+                          <!-- <div id="845717c6-e1f0-4280-bbce-950af73b6532">
+                            <h3 style="background-color: rgb(35, 111, 161);"><span style="margin: 10px; display: inline-block; color: white;">Spam prevention</span></h3>
+                          </div> -->
+                          <div id="845717c6-e1f0-4280-bbce-950af73b6532__OriginalText"
+                            class="Form__Original__ParagraphText">
+                            <h3 style="background-color: rgb(35, 111, 161);"><span style="margin: 10px; display: inline-block; color: white;">Spam prevention</span></h3>
+                          </div>
+                        </div>
+
+
+                        <div id="e80142ac-81e3-481f-b6e2-c3f106d6bea4"
+                          class="Form__Element Form__CustomElement FormRecaptcha"
+                          data-epiforms-element-name="__field_194867"
+                          data-epiforms-sitekey="6LcxVZgqAAAAAA5jdSiWf0zricZdAMxTjP28peu4">
+
+                          <span role="alert" aria-live="polite" data-epiforms-linked-name="__field_194867"
+                            class="Form__Element__ValidationError hidden">
+
+                          </span>
+                        </div>
+
+                        <input type="reset" form="36b3afe9-7fae-4cdb-8340-f128a0984397"
+                          class="Form__Element FormResetButton Form__Element--NonData" data-f-element-nondata=""
+                          value="Reset form" data-f-type="resetbutton">
+
+
+
+                        <button id="bb247b42-f824-4c18-a8f0-bb3992fb50b2" name="submit" type="submit"
+                          value="bb247b42-f824-4c18-a8f0-bb3992fb50b2" data-f-is-finalized="false"
+                          data-f-is-progressive-submit="true" data-f-type="submitbutton"
+                          data-f-element-name="__field_194800" style="margin-bottom: 0; margin-left: auto;"
+                          class="Form__Element FormExcludeDataRebind FormSubmitButton btn btn-primary width-md-100">
+                          Submit</button>
+                      </section>
+
+                      <nav role="navigation" class="Form__NavigationBar" data-f-type="navigationbar"
+                        data-f-element-nondata="">
+                        <a href="stepform-s2.html" type="submit" name="submit" value="PreviousStep"
+                          class="Form__NavigationBar__Action FormExcludeDataRebind btnNext"
+                          data-f-navigation-previous="" disabled="">
+                          Previous step
+                    </a>
+                        <style nonce="R0E27JCeTwld9qgoSuK/Wbu4rFBX8F+PzFe3P3u+E+g=">
+
+                        </style>
+                        <div class="Form__NavigationBar__ProgressBar" style="width: 33%;">
+                          <div class="Form__NavigationBar__ProgressBar--Progress Form__NavigationWidth"
+                            data-f-navigation-progress="" style="width: 100%;"></div>
+                          <!-- <div class="Form__NavigationBar__ProgressBar--Text">
+                                    <span class="Form__NavigationBar__ProgressBar__ProgressLabel">Step</span>
+                                    <span class="Form__NavigationBar__ProgressBar__CurrentStep" data-f-navigation-currentstep="">1</span>/
+                                    <span class="Form__NavigationBar__ProgressBar__StepsCount" data-f-navigation-stepcount="">3</span>
+                                </div> -->
+                        </div>
+                        <button type="submit" name="submit" value="NextStep" style="margin-left: -20px;"
+                          class="Form__NavigationBar__Action FormExcludeDataRebind btnPrev" data-f-navigation-next="">
+                          Next step
+                        </button>
+                      </nav>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="row g-0">
+        <div class="col-12 d-flex justify-content-center position-relative">
+          <button class="btn btn-primary button-subscribe">
+            Subscribe to our mailing list <i class="ms-4 fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="col-12">
+          <div class="row row-cols-auto g-0 multicolor-strip">
+            <div class="bg-blue"></div>
+            <div class="bg-megenta"></div>
+            <div class="bg-pink"></div>
+            <div class="bg-yellow"></div>
+            <div class="bg-green"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-12 col-12 text-white d-lg-flex d-sm-block d-block">
+            <section class="mt-lg-4 mt-sm-4  w-100 pt-2 mb-3 social">
+              <div class="follow fw-bold">Follow us </div>
+              <ul class="list-unstyled social-icons">
+                <li class="social-icons-list">
+                  <a class="" href="#" title="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="social-icons-list">
+                  <a class="" href="#" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="social-icons-list">
+                  <a class="" href="#" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="social-icons-list">
+                  <a class="" href="#" title="Youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+                <li class="social-icons-list">
+                  <a class="" href="#" title="Instagram">
+                    <i class="fa-brands fa-square-instagram"></i>
+                  </a>
+                </li>
+                <li class="social-icons-list">
+                  <a class="" href="#" title="Tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </li>
+              </ul>
+
+            </section>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-12 text-white">
+            <section class="mt-lg-4 mt-sm-4 mt-0 pt-lg-2 pt-sm-2 text-lg-start about-ofcom">
+              <div class="follow fw-bold">About Ofcom </div>
+              <ul class="list-unstyled">
+                <li class="">
+                  <a class="text-white " href="#">What is Ofcom?</a>
+                </li>
+                <li class="">
+                  <a class="text-white " href="#">Contact us</a>
+                </li>
+                <li class="">
+                  <a class="text-white " href="#">Nations and regions</a>
+                </li>
+                <li class="">
+                  <a class="text-white " href="#">Jobs</a>
+                </li>
+                <li class="">
+                  <a class="text-white " href="#">Media Center</a>
+                </li>
+                <li class="">
+                  <a class="text-white " href="#">General privacy statement</a>
+                </li>
+                <li class="">
+                  <a class="text-white " href="#">Modern slavery statement</a>
+                </li>
+                <li class="">
+                  <a class="text-white " href="#">Our work in Welsh</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-12 text-white">
+            <section class="mt-lg-4 mt-sm-4 mt-0 pt-2  text-lg-start about-ofcom">
+              <div class="follow fw-bold">Aout this website</div>
+              <ul class="list-unstyled">
+                <li class="">
+                  <a class="text-white " href="#">Accessability</a>
+                </li>
+                <li class="">
+                  <a class="text-white " href="#">Cookiespolicy</a>
+                </li>
+                <li class="">
+                  <a class="text-white " href="#">Terms of use</a>
+                </li>
+                <li class="">
+                  <a class="text-white " href="#">Copyright and information re-use</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-12 text-white">
+            <section class="mt-lg-4 mt-sm-4 mt-0 pt-2  text-lg-start about-ofcom">
+              <div class="follow fw-bold">Advice for business</div>
+              <ul class="list-unstyled">
+                <li class="">
+                  <a class="text-white " href="#">A starter pack for business</a>
+                </li>
+                <li class="">
+                  <a class="text-white " href="#">Knowing your rights</a>
+                </li>
+                <li class="">
+                  <a class="text-white " href="#">All our advise for business</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class=" container ">
+        <div class="row copyrights ">
+          <div class="pb-3 fw-bold text-white text-lg-start text-start text-sm-end">© Ofcom 2023</div>
+        </div>
+      </div>
+    </footer>
+    <a href="" class="back-to-top">
+      <i class="fa-solid fa-chevron-up"></i>
+      <span>Back to top</span>
+    </a>
+  </main>
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="css/bootstrap-ie11.min.css"><script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"><\/script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"><\/script><script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
